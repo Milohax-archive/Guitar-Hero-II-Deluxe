@@ -180,7 +180,19 @@
    (funk1
       (funk1))
    (grim
-      (grim)))
+      (grim))
+   (punkencore
+      (punkencore))
+   (alternaencore
+      (alternaencore))
+   (glamencore
+      (glamencore))
+   (gothencore
+      (gothencore))
+   (metalencore
+      (metalencore))
+   (grimencore
+      (grimencore)))
 (mc
    #include mc.dta)
 (store

@@ -40,6 +40,8 @@
       "%i Note Streak!"})
 (cheat_focusmode
    "Focus Mode")
+(cheat_barf
+   "Roxbury Mode")
 (cheat_neckless
    "Neckless Mode")
 (speed_msg
@@ -596,6 +598,16 @@
    "If you're having problems with timing, try running \qCalibrate Lag\q under Video Settings on the Options menu.")
 (loading_tip12
    "Did you forget to turn on Progressive Scan again?")
+(sel_sqped
+   " ")
+(speed_label4
+   "PLAY SHOW")
+(speed_label5
+   "CHARACTER")
+(speed_label6
+   "GUITAR")
+(speed_label7
+   "VENUE")
 (soft_1
    "Soft part 1")
 (soft_2
