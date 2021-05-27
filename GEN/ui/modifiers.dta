@@ -14,8 +14,8 @@
             {== $modifier_exit multi_vs_selsong_screen}
             {== $modifier_exit multi_coop_selsong_screen}
             {== $modifier_exit multi_fo_selsong_screen}}
-         {gs_sfx.sld set_num_steps 21}
-         {gs_sfx.sld set_num_steps 31}})
+         {gs_sfx.sld set_num_steps 31}
+         {gs_sfx.sld set_num_steps 41}})
    (slider_changed
       {'||'
          {!=
@@ -41,7 +41,9 @@
             {'+'
                0.5
                {/
-                  {- $speedmod 1}
+                  {'+'
+                     {- $speedmod 1}
+                     0.5}
                   5.0e-2}}}}
       {stereo.chk set_check $focusmode}
       {$this display_speed_msg $trackspd $speedmod})
@@ -79,11 +81,13 @@
                   0.5}}
             {set
                $speedmod
-               {'+'
-                  1
-                  {'*'
-                     {gs_sfx.sld current}
-                     5.0e-2}}}
+               {-
+                  {'+'
+                     1
+                     {'*'
+                        {gs_sfx.sld current}
+                        5.0e-2}}
+                  0.5}}
             {$this display_speed_msg $trackspd $speedmod}}})
    (slider_select_cancel
       ($component)
@@ -139,14 +143,14 @@
                {do
                   {play_sfx
                      slider_band
-                     (volume 2)
+                     (volume 1)
                      (stop TRUE)}
                   {$this set_speeds}})
             (gs_sfx.sld
                {do
                   {play_sfx
                      slider_band
-                     (volume 2)
+                     (volume 1)
                      (stop TRUE)}
                   {$this set_speeds}})}})
    (SELECT_START_MSG

@@ -35,5 +35,5 @@
 {set $interval_p0 50}
 {set $interval_p1 50}
 {set $interval_p2 50}
-{set $songtitle FALSE}
+{set $songtitle TRUE}
 {ui goto_screen $first_screen}

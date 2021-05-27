@@ -43,9 +43,27 @@
    {if
       {exists ui}
       {do
-         {set
-            $egg_back
-            {ui current_screen}}
+         {if
+            {!
+               {'||'
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen1}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen2}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen3}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen4}
+                  {==
+                     {ui current_screen}
+                     final_egg_screen}}}
+            {set
+               $egg_back
+               {ui current_screen}}}
          {switch
             $egg_back
             (main_screen
@@ -74,9 +92,27 @@
    {if
       {exists ui}
       {do
-         {set
-            $egg_back
-            {ui current_screen}}
+         {if
+            {!
+               {'||'
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen1}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen2}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen3}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen4}
+                  {==
+                     {ui current_screen}
+                     final_egg_screen}}}
+            {set
+               $egg_back
+               {ui current_screen}}}
          {switch
             $egg_back
             (main_screen
@@ -105,9 +141,27 @@
    {if
       {exists ui}
       {do
-         {set
-            $egg_back
-            {ui current_screen}}
+         {if
+            {!
+               {'||'
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen1}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen2}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen3}
+                  {==
+                     {ui current_screen}
+                     easter_egg_screen4}
+                  {==
+                     {ui current_screen}
+                     final_egg_screen}}}
+            {set
+               $egg_back
+               {ui current_screen}}}
          {switch
             $egg_back
             (main_screen
@@ -153,10 +207,7 @@
                multi_coop_selsong_screen}
             {==
                {ui current_screen}
-               multi_fo_selsong_screen}
-            {==
-               {ui current_screen}
-               practice_selsong_screen}}}
+               multi_fo_selsong_screen}}}
       {set
          $modifier_exit
          {ui current_screen}}
@@ -332,3 +383,22 @@
                {main_screen_egg display_cheat_msg cheat_monkey_head_crowd FALSE}
                {main_screen display_cheat_msg cheat_monkey_head_crowd FALSE}}
             {play_sfx cheat_off}}}})
+((G_ORANGE G_RED G_ORANGE G_RED G_ORANGE G_BLUE)
+   {if
+      CHEATS_ALLOWED
+      {if_else
+         $barf_cheat
+         {do
+            {set $barf_cheat FALSE}
+            {if_else
+               $egg5
+               {main_screen_egg display_cheat_msg cheat_barf FALSE}
+               {main_screen display_cheat_msg cheat_barf FALSE}}
+            {play_sfx cheat_off}}
+         {do
+            {set $barf_cheat TRUE}
+            {if_else
+               $egg5
+               {main_screen_egg display_cheat_msg cheat_barf TRUE}
+               {main_screen display_cheat_msg cheat_barf TRUE}}
+            {play_sfx cheat}}}})
