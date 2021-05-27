@@ -1,0 +1,26 @@
+{dialog
+   'Scale Objects'
+   {milo cur_dir}
+   (editor
+      (pos_scale float)
+      (frame_scale float)
+      (ok
+         script
+         (script
+            {$this on_ok})))
+   (pos_scale 1)
+   (frame_scale 1)
+   (on_ok
+      {{milo cur_dir}
+         iterate
+         Object
+         $obj
+         {print
+            $obj
+            "\n"}
+         {milo record $obj 'scale object'}
+         {rnd
+            scale_object
+            $obj
+            [pos_scale]
+            [frame_scale]}})}

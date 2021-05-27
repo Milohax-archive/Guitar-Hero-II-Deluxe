@@ -1,0 +1,150 @@
+{new
+   HelpBarPanel
+   helpbar
+   (file helpbar.milo)
+   (max_labels 4)
+   (max_buttons 4)
+   (button_spacing 35)
+   (strumbar_spacing 70)
+   (text_spacing 30)}
+{new
+   MetaPanel
+   meta
+   (file
+      "")
+   (won_campaign FALSE)
+   (load
+      {set_loader_period 13})
+   (enter
+      {set_loader_period 5})
+   (set_defaults
+      {set $first_screen main_screen}
+      {set $autosave FALSE}
+      {set $main_entered FALSE}
+      {gamecfg set mode quickplay})}
+#define CUT_SCENE_VIDEO
+(intro.pss)
+{new
+   GHScreen
+   cut_scene_screen
+   (allow_back FALSE)
+   (animate_transition FALSE)
+   (TRANSITION_COMPLETE_MSG
+      {meta play_movie CUT_SCENE_VIDEO}
+      {if_else
+         {>
+            {campaign num_profiles}
+            0}
+         {ui goto_screen splash_screen}
+         {ui goto_screen guitar_help_screen}})}
+#define DELAY_BEFORE_ATTRACT_SEC
+(60)
+{new
+   UIPanel
+   splash_panel
+   (file splash.milo)
+   (player_num 0)
+   (finish_load
+      {splash.view set_frame 0}
+      {splash_legal.view set_showing TRUE})
+   (enter
+      {splash.view
+         animate
+         (period 3.333)
+         (range 0 100)}
+      {set
+         $enter_time
+         {taskmgr ui_seconds}}
+      {game_screen set attract_mode FALSE}
+      {set $entering_attract_mode FALSE}
+      {set $disable_attract_mode FALSE}
+      {synth play_sequence meta_lick})
+   (poll
+      {if
+         {&&
+            {! $entering_attract_mode}
+            {!
+               {ui in_transition}}}
+         {do
+            ($now
+               {-
+                  {taskmgr ui_seconds}
+                  $enter_time})
+            {if
+               {> $now DELAY_BEFORE_ATTRACT_SEC}
+               {if
+                  {! $disable_attract_mode}
+                  {$this enter_attract_mode}}}}})
+   (enter_attract_mode
+      {gamecfg set mode attract}
+      {set $entering_attract_mode TRUE}
+      {game
+         set_song
+         {campaign pick_attract_song}}
+      {{game get_player_config 0}
+         set_difficulty
+         kDifficultyExpert}
+      {game set_quickplay}
+      {game_screen set attract_mode TRUE}
+      {ui goto_screen loading_screen})
+   (BUTTON_DOWN_MSG
+      {if
+         {meta is_any_button $button $player_num}
+         {synth play_sequence button_select}
+         {ui goto_screen main_screen}})}
+{new
+   GHScreen
+   splash_screen
+   (panels meta splash_panel)
+   (focus splash_panel)
+   (allow_back FALSE)
+   (animate_transition FALSE)}
+{new
+   UIPanel
+   guitar_help_panel
+   (file guitar_help.milo)
+   (BUTTON_DOWN_MSG
+      {if
+         {== $button kPad_X}
+         {synth play_sequence button_select}
+         {ui goto_screen splash_screen}})}
+{new
+   GHScreen
+   guitar_help_screen
+   (panels meta guitar_help_panel helpbar)
+   (focus guitar_help_panel)
+   (allow_back FALSE)
+   (animate_transition FALSE)
+   (helpbar
+      (default
+         ((fret1 help_continue))))}
+{func
+   get_text_entry_help_text
+   ($array $ten $back)
+   {resize $array 0}
+   {if
+      {$ten user_can_scroll}
+      {push_back
+         $array
+         (fret1 help_nextletter)}}
+   {if_else
+      {$ten user_can_scroll}
+      {if_else
+         {$ten no_text_entered}
+         {if
+            $back
+            {push_back
+               $array
+               (fret2 help_back)}}
+         {push_back
+            $array
+            (fret2 help_deleteletter)}}
+      {push_back
+         $array
+         (fret2 help_deleteletter)}}
+   {if
+      {$ten user_can_scroll}
+      {push_back
+         $array
+         (strum help_updown)}}
+   {eval $array}}

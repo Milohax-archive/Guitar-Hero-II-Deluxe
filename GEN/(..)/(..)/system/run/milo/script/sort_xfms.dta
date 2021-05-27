@@ -1,0 +1,11 @@
+{{milo cur_cam}
+   get_world_forward
+   $x
+   $y
+   $z}
+{'*=' $x -1}
+{'*=' $y -1}
+{'*=' $z -1}
+{Crowd01_01.mm sort_xfms $x $y $z}
+{Crowd02_01.mm sort_xfms $x $y $z}
+{Crowd03_01.mm sort_xfms $x $y $z}

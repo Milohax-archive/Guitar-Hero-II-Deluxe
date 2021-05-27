@@ -1,0 +1,4 @@
+#include ../char/char_objects.dta
+#include ../world/world_objects.dta
+#include ../ui/ui_objects.dta
+#include ../hud/hud_objects.dta

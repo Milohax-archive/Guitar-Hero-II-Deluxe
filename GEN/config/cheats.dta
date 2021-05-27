@@ -1,0 +1,189 @@
+(keyboard
+   (KB_F1
+      {fake_player1_cheat 0})
+   (KB_F2
+      {fake_player1_cheat 1})
+   (KB_F4
+      {toggle_lights_debug})
+   (KB_F5
+      {cheat_empty_star_power})
+   (KB_F6
+      {track_panel toggle_gems})
+   (KB_F7
+      {track_panel toggle_surface})
+   (KB_F8
+      {track_panel toggle_nowbar})
+   (KB_F10
+      {track_panel toggle_mask})
+   (KB_F9
+      {toggle_scoring_debug})
+   (KB_F11
+      {test_screen_transitions})
+   (0
+      {toggle_time_paused})
+   (2
+      {next_character_driver})
+   (3
+      {toggle_char_lod})
+   (5
+      {if
+         {meta is_up}
+         {sel_song_panel beat_song 1000000}})
+   (6
+      {if
+         {meta is_up}
+         {sel_song_panel gold_song}})
+   (#
+      {if
+         {game is_up}
+         {player0 win 3}})
+   ('$'
+      {if_else
+         {game is_up}
+         {player0 win 4}
+         {cheat_add_cash}})
+   ('%'
+      {if
+         {game is_up}
+         {player0 win 5}})
+   ('+'
+      {game cheat_force_encore})
+   (a
+      {a_cheat})
+   (A
+      {A_cheat})
+   (b
+      {b_cheat})
+   (B
+      {set
+         $barf_cheat
+         {! $barf_cheat}})
+   (C
+      {rnd toggle_overlay camera})
+   (c
+      {if
+         {game is_up}
+         {world cycle_shot}})
+   (V
+      {world toggle_pick_shot})
+   (d
+      {toggle_dual_perspective})
+   (e
+      {adjust_crowd_rating -0.1})
+   (E
+      {adjust_crowd_rating 0.1})
+   (f
+      {toggle_fretboard})
+   (F
+      {cycle_free_camera})
+   (g
+      {waypoint_toggle_show})
+   (G
+      {rnd toggle_overlay guitar})
+   (h
+      {toggle_fretboard}
+      {handle
+         (hud
+            set_showing
+            {!
+               {hud showing}})})
+   (H
+      {handle
+         (hud
+            set_showing
+            {!
+               {hud showing}})})
+   (I
+      {rnd toggle_overlay light_preset})
+   (i
+      {handle
+         (world toggle_lighting_events)})
+   (j
+      {handle
+         ({find_obj world guitarist0}
+            start_walk)})
+   (k
+      {handle
+         ({find_obj world guitarist0}
+            teleport_next)})
+   (J
+      {set
+         $guitarist_debug
+         {mod
+            {'+' $guitarist_debug 1}
+            3}}
+      {if_else
+         {> $guitarist_debug 0}
+         {cheat_display
+            show
+            {sprint
+               "Player "
+               $guitarist_debug
+               " debug"}}
+         {cheat_display
+            show
+            "Player debug off"}})
+   (l
+      {handle
+         (player0 lose)})
+   (m
+      {toggle_crowd_meter})
+   (M
+      {toggle_mute_global})
+   (n
+      {toggle_normalization})
+   (o
+      {toggle_auto_solo})
+   (O
+      {rnd save_objects dump.rnd ui})
+   (p
+      {toggle_auto_play})
+   (P
+      {cycle_music_speed})
+   (q
+      {toggle_solo_quantize})
+   (Q
+      {meta print_current_screen})
+   (r
+      {reload_song})
+   (R
+      {reload_track})
+   (s
+      {if
+         {game is_up}
+         {rnd toggle_overlay score}})
+   (S
+      {fill_star_meter})
+   (t
+      {rnd toggle_overlay time})
+   (T
+      {rnd toggle_timers}
+      {rnd toggle_overlay rate})
+   (u
+      {next_tutorial_lesson})
+   (U
+      {prev_tutorial_lesson})
+   (v
+      {show_version})
+   (w
+      {handle
+         (player0 win 3)})
+   (W
+      {toggle_walks})
+   (x
+      {toggle_cam})
+   (X
+      {toggle_shuttle})
+   (>
+      {tutorial reset_vo}))
+(right
+   (kPad_Square
+      {toggle_auto_play})
+   (kPad_Circle
+      {toggle_shuttle})
+   (kPad_Tri
+      {rnd toggle_overlay camera})
+   (kPad_DLeft
+      {cycle_free_camera})
+   (kPad_DRight
+      {rnd toggle_overlay light_preset}))

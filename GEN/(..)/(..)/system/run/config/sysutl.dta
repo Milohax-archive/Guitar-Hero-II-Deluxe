@@ -1,0 +1,22 @@
+#include macros.dta
+#define TEST
+(two)
+(sysutl
+   (precache
+      (dirs SYSTEM_DIRS)
+      (exclude
+         "facefx"
+         "gen")
+      (exclude_rnd
+         "test")
+      (platforms ps2)
+      (shaders
+         (enabled FALSE)))
+   (test_script
+      {print
+         TEST
+         "\n"}))
+(mem
+   (disable_mgr TRUE))
+(timer precache anims bitmap bank dta rnd wav)
+#merge default.dta

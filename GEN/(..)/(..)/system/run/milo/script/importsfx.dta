@@ -1,0 +1,291 @@
+{func
+   find_or_create
+   ($file $dir)
+   {do
+      ($sampname
+         {sprint
+            {basename $file}
+            ".wav"})
+      ($samp)
+      {if_else
+         {$dir exists $sampname}
+         {set
+            $samp
+            {$dir find $sampname}}
+         {do
+            {set
+               $samp
+               {new SynthSample}}
+            {$samp set_name $sampname $dir}
+            {$samp set file $file}}}
+      $samp}}
+{func
+   new_sfxseq
+   ($dir)
+   {do
+      ($ret 0)
+      ($i 0)
+      {while
+         {! $ret}
+         {set
+            $i
+            {'+' $i 1}}
+         {if
+            {!
+               {$dir
+                  exists
+                  {sprint
+                     "Sequence"
+                     $i}}}
+            {set
+               $ret
+               {new SfxSeq}}
+            {$ret
+               set_name
+               {sprint
+                  "Sequence"
+                  $i}
+               $dir}}}
+      $ret}}
+{if_else
+   {!
+      {milo cur_dir}}
+   {notify
+      "Create a new file before running the import script."}
+   {dialog
+      "Sfx import tool"
+      {milo cur_dir}
+      (editor
+         ('Mono Sfx'
+            (indent
+               (file
+                  file
+                  (wav_dlg TRUE)
+                  (ext
+                     "WAV files"
+                     wav)
+                  (help
+                     "mono WAV file to import"))
+               (name
+                  string
+                  (help
+                     "name of the Sfx object to create"))
+               (import
+                  script
+                  (script
+                     {$this import_mono}))))
+         ('Stereo Sfx'
+            (indent
+               (file_L
+                  file
+                  (wav_dlg TRUE)
+                  (ext
+                     "WAV files"
+                     wav)
+                  (help
+                     "WAV for left channel"))
+               (file_R
+                  file
+                  (wav_dlg TRUE)
+                  (ext
+                     "WAV files"
+                     wav)
+                  (help
+                     "WAV for right channel"))
+               (name_stereo
+                  string
+                  (help
+                     "name of the stereo Sfx object to create"))
+               (import
+                  script
+                  (script
+                     {$this import_stereo}))))
+         ('Batch Importer'
+            (indent
+               (files
+                  (array
+                     file
+                     (wav_dlg TRUE))
+                  (ext
+                     "WAV files"
+                     wav)
+                  (help
+                     "list of WAV files to import"))
+               (open_files
+                  script
+                  (refresh)
+                  (script
+                     {do
+                        ($files)
+                        {if
+                           {milo
+                              wav_dialog
+                              (var $files)
+                              (multi_select TRUE)}
+                           {set
+                              [files]
+                              $files}}}))
+               (top_sequence_type
+                  symbol
+                  (list
+                     (None RandomGroupSeq SerialGroupSeq ParallelGroupSeq))
+                  (help
+                     "type of top-level sequence to create (optional)"))
+               (top_sequence_name
+                  string
+                  (help
+                     "name of top-level sequence to create (optional)"))
+               (import
+                  script
+                  (script
+                     {$this import_batch})))))
+      (file
+         "")
+      (name
+         "mono_sfx.cue")
+      (import_mono
+         {do
+            ($samp)
+            ($dir
+               {milo cur_dir})
+            ($sfx
+               {new Sfx})
+            {set
+               $samp
+               {find_or_create
+                  [file]
+                  $dir}}
+            {if
+               {!
+                  {has_substr
+                     [name]
+                     "."}}
+               {set
+                  [name]
+                  {sprint
+                     [name]
+                     ".cue"}}}
+            {$sfx
+               set_name
+               [name]
+               $dir}
+            {$sfx add_map}
+            {$sfx
+               set
+               (sfxmaps 0 sample)
+               $samp}})
+      (file_L
+         "")
+      (file_R
+         "")
+      (name_stereo
+         "stereo_sfx.cue")
+      (import_stereo
+         {do
+            ($samp_L)
+            ($samp_R)
+            ($dir
+               {milo cur_dir})
+            ($sfx
+               {new Sfx})
+            {set
+               $samp_L
+               {find_or_create
+                  [file_L]
+                  $dir}}
+            {set
+               $samp_R
+               {find_or_create
+                  [file_R]
+                  $dir}}
+            {if
+               {!
+                  {has_substr
+                     [name_stereo]
+                     "."}}
+               {set
+                  [name_stereo]
+                  {sprint
+                     [name_stereo]
+                     ".cue"}}}
+            {$sfx
+               set_name
+               [name_stereo]
+               $dir}
+            {$sfx add_map}
+            {$sfx add_map}
+            {$sfx
+               set
+               (sfxmaps 0 sample)
+               $samp_L}
+            {$sfx
+               set
+               (sfxmaps 0 pan)
+               -1}
+            {$sfx
+               set
+               (sfxmaps 1 sample)
+               $samp_R}
+            {$sfx
+               set
+               (sfxmaps 1 pan)
+               1}})
+      (files
+         ())
+      (top_sequence_type None)
+      (top_sequence_name
+         "top_sequence.cue")
+      (import_batch
+         {do
+            ($samp)
+            ($sfx)
+            ($sfxname)
+            ($sfxseq)
+            ($dir
+               {milo cur_dir})
+            ($topseq 0)
+            {if
+               {!=
+                  [top_sequence_type]
+                  None}
+               {set
+                  $topseq
+                  {new
+                     [top_sequence_type]}}
+               {$topseq
+                  set_name
+                  [top_sequence_name]
+                  $dir}}
+            {foreach
+               $file
+               [files]
+               {set
+                  $samp
+                  {find_or_create $file $dir}}
+               {search_replace
+                  {$samp name}
+                  ".wav"
+                  ".cue"
+                  $sfxname}
+               {set
+                  $sfx
+                  {new Sfx}}
+               {$sfx set_name $sfxname $dir}
+               {$sfx add_map}
+               {$sfx
+                  set
+                  (sfxmaps 0 sample)
+                  $samp}
+               {if
+                  $topseq
+                  {set
+                     $sfxseq
+                     {new_sfxseq $dir}}
+                  {$topseq
+                     insert
+                     (children
+                        {$topseq
+                           size
+                           (children)})
+                     $sfxseq}
+                  {$sfxseq set sfx $sfx}}}})}}

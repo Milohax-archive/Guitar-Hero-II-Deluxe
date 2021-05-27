@@ -1,0 +1,19 @@
+(heaps
+   #ifdef HX_EE
+   (main
+      (size 19630000))
+   (rnd
+      (size 5900000)
+      (handle TRUE))
+   #else
+   #ifdef HX_PC
+   (main
+      (size 326000000))
+   #else
+   (main
+      (size 326000000))
+   #endif
+   #endif)
+(pool
+   (big_hunk 3100000)
+   (small_hunk 50000))

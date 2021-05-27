@@ -1,0 +1,93 @@
+#include macros.dta
+(joypad
+   (deadzone 40))
+(mem
+   (heaps
+      #ifdef HX_EE
+      (main
+         (size 40000000))
+      (rnd
+         (size 8000000)
+         (handle TRUE))
+      #else
+      (main
+         (size 268435456))
+      #endif)
+   (ps2_clamp_32 FALSE)
+   (enable_tracking TRUE)
+   (track_stl TRUE)
+   #ifdef HX_PC
+   (disable_mgr TRUE)
+   #endif)
+(rnd
+   (overlays
+      (render_test
+         (lines 1)
+         (showing FALSE)
+         (color 0 0 0 0.6)))
+   (title
+      "System Test"))
+(ui
+   (init
+      #include ../systest/start.dta
+      #include ../systest/beatmatch.dta
+      #include ../systest/cam_filter.dta
+      #include ../systest/rndobj.dta
+      #include ../systest/image.dta
+      #include ../systest/draw_rect.dta
+      #include ../systest/streamtest.dta
+      #include ../systest/sfxtest.dta
+      #include ../systest/scratchtest.dta
+      #include ../systest/world.dta
+      #include ../systest/ipu.dta
+      #include ../systest/render.dta
+      #include ../systest/console.dta
+      #include ../systest/joypad.dta
+      #include ../systest/brakeley.dta
+      #ifdef HX_PC
+      #include ../systest/midiio.dta
+      #endif
+      {ui goto_screen $start_screen}))
+(timer anim draw cpu gs facefx)
+(spew)
+(synth
+   (use_null_synth FALSE))
+(systest
+   (arena
+      (memtrack
+         (rnd mFacePacket mEdgePacket)
+         (main '*Mesh' Vert RndBones TransListNode BSPNode Resource Bitmap_buf PsMat PsTex Particle ParticleSys '*Key' '*Rnd' '*Anim' View Cam Light Environ))
+      (duets FALSE))
+   (beatmatch
+      (audio
+         (multiplayer_scale 0.33)
+         (multiplayer_attenuation 1.5)
+         (multiplayer_common_attenuation 1.5))
+      (beatmatcher)
+      (controller
+         (joypad
+            (slots kPad_L2 0 kPad_L1 1 kPad_R1 2 kPad_R2 3)))
+      (graphics
+         (slot_width -7.0e-2)
+         (track_offset 0))
+      (song morethanafeeling)
+      (songs
+         (morethanafeeling
+            (name
+               "systest/audio/morethanafeeling")
+            (midi_file
+               "systest/audio/morethanafeeling.mid")
+            (tracks
+               ((guitar
+                     (2 3))))
+            (pans
+               (-1.0 1.0 -1.0 1.0))
+            (vols
+               (-1.0 -1.0 -1.0 -1.0))
+            (cores
+               (-1 -1 1 1))))
+      (triggers
+         (60 kick_drum 90)
+         (61 bass_hit 50)))
+   (char_test))
+#merge default.dta

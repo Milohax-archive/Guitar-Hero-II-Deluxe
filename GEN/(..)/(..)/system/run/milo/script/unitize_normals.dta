@@ -1,0 +1,5 @@
+{rnd
+   iterate
+   Mesh
+   $obj
+   {$obj unitize_normals}}

@@ -1,0 +1,6 @@
+(track_graphics
+   (slot_colors green red yellow blue orange))
+(objects
+   #include ../hud/hud_objects.dta
+   #include ../ui/ui_objects.dta)
+#merge ../../../system/run/config/default.dta

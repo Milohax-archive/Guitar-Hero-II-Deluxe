@@ -1,0 +1,40 @@
+{set
+   $pairs
+   {array 0}}
+{rnd
+   iterator
+   $obj
+   {if
+      {==
+         {$obj class_name}
+         Mesh}
+      {set $index 0}
+      {set
+         $num
+         {$obj num_verts}}
+      {set
+         $size
+         {size $pairs}}
+      {while
+         {&&
+            {< $index $size}
+            {<
+               $num
+               {elem
+                  {elem $pairs $index}
+                  1}}}
+         {set
+            $index
+            {'+' $index 1}}}
+      {set
+         $pair
+         {array 2}}
+      {set_elem $pair 1 $num}
+      {set_elem
+         $pair
+         0
+         {name $obj}}
+      {insert_elem $pairs $index $pair}}}
+{print
+   $pairs
+   "\n"}

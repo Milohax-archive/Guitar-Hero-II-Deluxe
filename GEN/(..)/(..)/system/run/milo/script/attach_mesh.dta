@@ -1,0 +1,30 @@
+{dialog
+   'Attach Mesh'
+   {milo cur_dir}
+   (editor
+      ('Main mesh'
+         object
+         (class Mesh))
+      ('Attach mesh'
+         object
+         (class Mesh))
+      ('Do attach'
+         script
+         (script
+            {$this attach})))
+   ('Main mesh'
+      "")
+   ('Attach mesh'
+      "")
+   (attach
+      {do
+         ($main
+            {$this get 'Main mesh'})
+         ($attach
+            {$this get 'Attach mesh'})
+         {if
+            {&& $main $attach}
+            {milo attach_mesh $main $attach}
+            {script_task
+               (script
+                  {milo delete_object $attach})}}})}

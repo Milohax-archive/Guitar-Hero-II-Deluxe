@@ -1,0 +1,269 @@
+{dialog
+   'Milo Preferences'
+   (editor
+      ('Graphics mode'
+         int
+         (list
+            ("kOldGfx"
+               "kNewGfx"))
+         (help
+            "Render like PS2 or 360")
+         (post_sync
+            {rnd
+               set_gfx_mode
+               ['Graphics mode']}))
+      ('Aspect ratio'
+         int
+         (list
+            ("kSquareAspect"
+               "kRegularAspect"
+               "kWidescreenAspect"))
+         (help
+            "Physical ratio of screen width to height")
+         (post_sync
+            {milo
+               set_aspect
+               ['Aspect ratio']}))
+      ('Beats per minute'
+         int
+         (help
+            "Tempo of beat-related animations")
+         (post_sync
+            {milo
+               set_bpm
+               ['Beats per minute']}))
+      ('Background color'
+         color
+         (help
+            "Background color of rendering window")
+         (post_sync
+            {milo
+               set_clear_packed
+               ['Background color']}))
+      ('List by class'
+         bool
+         (help
+            "Sort object lists by class")
+         (post_sync
+            {milo
+               set_list_by_class
+               ['List by class']}))
+      ('Highlight spheres'
+         bool
+         (help
+            "Highlight with bounding spheres")
+         (post_sync
+            {rnd
+               set_highlight_spheres
+               ['Highlight spheres']}))
+      ('Camera rates'
+         (indent
+            ('Pan rate'
+               float
+               (help
+                  "Camera panning speed")
+               (range 1.0e-3 10)
+               (post_sync
+                  {milo
+                     set_pan_rate
+                     ['Pan rate']}))
+            ('Rotation rate'
+               float
+               (help
+                  "Camera rotation speed")
+               (range 1.0e-3 10)
+               (post_sync
+                  {milo
+                     set_rot_rate
+                     ['Rotation rate']}))
+            ('Zoom rate'
+               float
+               (help
+                  "Camera zoom speed")
+               (range 1.0e-3 10)
+               (post_sync
+                  {milo
+                     set_zoom_rate
+                     ['Zoom rate']}))))
+      (Grid
+         (indent
+            ('Show grid'
+               bool
+               (help
+                  "Display home grid")
+               (post_sync
+                  {milo
+                     set_grid
+                     ['Show grid']}))
+            ('Grid spacing'
+               float
+               (help
+                  "Grid spacing is the size of the grid's smallest square")
+               (post_sync
+                  {$this update_grid}))
+            ('Grid major lines'
+               int
+               (range 2 1000)
+               (help
+                  "Displays heavier or 'major' lines to mark groups of grid squares")
+               (post_sync
+                  {$this update_grid}))
+            ('Grid extent'
+               int
+               (help
+                  "Length of grid in one quadrant")
+               (post_sync
+                  {$this update_grid}))))
+      ('Property Level Color'
+         (indent
+            ('Property Level Color Coding'
+               bool
+               (help
+                  "Color code each property sub-level")
+               (post_sync
+                  {milo
+                     set_prop_colors
+                     ['Property Level Color Coding']}))
+            ('Property Level Colors'
+               (array
+                  color
+                  (help
+                     "property sub-level colors")
+                  (post_sync
+                     {$this update_prop_colors})))))
+      ('Preserve World Xfm'
+         bool
+         (help
+            "Preserve world transform when reparenting")
+         (post_sync
+            {milo
+               set_preserve_world_xfm
+               ['Preserve World Xfm']}))
+      ('Update open editor'
+         bool
+         (help
+            "Update open editor when new object highlighted")
+         (post_sync
+            {$this set_update_open}))
+      ('Subdir object color'
+         color
+         (help
+            "Color of subdir objects in Object Lister, tree views, etc.")
+         (post_sync
+            {milo
+               set_subdir_color
+               ['Subdir object color']}))
+      (Language
+         symbol
+         (list LANGUAGES)
+         (help
+            "Localization language")
+         (post_sync
+            {milo
+               set_language
+               [Language]}))
+      ('Auto Backup'
+         (indent
+            ('Enable auto backup'
+               bool
+               (help
+                  "Turn on automatic file backup to system/run/autobackup")
+               (post_sync
+                  {$this update_autobackup}))
+            ('Number of auto backup files'
+               int
+               (range 1 9)
+               (help
+                  "Determines how many backup files to write before overwriting the first one")
+               (post_sync
+                  {$this update_autobackup}))
+            ('Backup interval (minutes)'
+               int
+               (range 1 60)
+               (help
+                  "Determines the number of minutes between backup file generation")
+               (post_sync
+                  {$this update_autobackup}))))
+      ('Max frame rate'
+         int
+         (help
+            "Clamps frame rate if non-zero, if zero will clamp to monitor sync")
+         (post_sync
+            {rnd
+               set_max_frame_rate
+               ['Max frame rate']})))
+   ('Graphics mode' $gfx_mode)
+   ('Aspect ratio'
+      {milo get_aspect})
+   ('Beats per minute'
+      {milo bpm})
+   ('Background color'
+      {rnd clear_color_packed})
+   ('List by class'
+      {milo list_by_class})
+   ('Highlight spheres'
+      {rnd highlight_spheres})
+   ('Pan rate'
+      {milo pan_rate})
+   ('Rotation rate'
+      {milo rot_rate})
+   ('Zoom rate'
+      {milo zoom_rate})
+   ('Show grid'
+      {milo grid})
+   ('Grid spacing'
+      {milo grid_spacing})
+   ('Grid major lines'
+      {milo grid_major_lines})
+   ('Grid extent'
+      {milo grid_extent})
+   ('Property Level Color Coding'
+      {milo use_prop_colors})
+   ('Property Level Colors'
+      {milo get_prop_colors})
+   ('Preserve World Xfm'
+      {milo get_preserve_world_xfm})
+   ('Update open editor'
+      {milo get_update_open_edit})
+   ('Subdir object color'
+      {milo get_subdir_color})
+   (Language
+      {system_language})
+   ('Enable auto backup'
+      {milo get_autobackup})
+   ('Number of auto backup files'
+      {milo get_autobackup_files})
+   ('Backup interval (minutes)'
+      {milo get_autobackup_time})
+   ('Max frame rate'
+      {rnd max_frame_rate})
+   (update_autobackup
+      {milo
+         set_autobackup
+         ['Enable auto backup']
+         ['Number of auto backup files']
+         ['Backup interval (minutes)']})
+   (update_grid
+      {milo
+         set_grid_params
+         ['Grid spacing']
+         ['Grid major lines']
+         ['Grid extent']})
+   (get_prop_idx
+      {elem
+         $milo.prop_path
+         {-
+            {size $milo.prop_path}
+            1}})
+   (update_prop_colors
+      {do
+         ($idx
+            {$this get_prop_idx})
+         {milo
+            set_a_prop_color
+            $idx
+            ['Property Level Colors' $idx]}})
+   (set_update_open
+      {milo
+         set_update_open_edit
+         ['Update open editor']})}

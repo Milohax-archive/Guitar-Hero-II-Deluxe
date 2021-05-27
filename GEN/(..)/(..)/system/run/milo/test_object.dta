@@ -1,0 +1,262 @@
+#define MILO_TEST_01
+(1)
+#define MILO_TEST_02
+(2)
+#define MILO_TEST_04
+(4)
+#define MILO_TEST_08
+(8)
+#define MILO_TEST_16
+(16)
+#define MILO_TEST_32
+(32)
+#define MILO_TEST_STATES
+(("MILO_TEST_32"
+      "MILO_TEST_16"
+      "MILO_TEST_08"
+      "MILO_TEST_02"
+      "MILO_TEST_04"
+      "MILO_TEST_01"))
+#define MILO_TEST_STATES_GROUPED
+((("MILO_TEST_32"
+         "MILO_TEST_16"
+         "MILO_TEST_08")
+      ("MILO_TEST_02"
+         "MILO_TEST_04")
+      "MILO_TEST_01"))
+#define MILO_TEST_SYMBOLS
+(('Flying V' SG Explorer))
+(TestProperties
+   (superclasses Anim Draw)
+   (ext test)
+   (init
+      (type test1)
+      (macro MILO_TEST_32)
+      (symbol SG))
+   (editor
+      (height int)
+      (weight float)
+      (name string)
+      (classname symbol)
+      (movable bool)
+      (macro
+         int
+         (list MILO_TEST_STATES))
+      (symbol
+         symbol
+         (list MILO_TEST_SYMBOLS))
+      (drawable
+         object
+         (class Draw))
+      (flags
+         bitfield
+         (list MILO_TEST_STATES_GROUPED))
+      (file file)
+      (path
+         file
+         (dir TRUE))
+      (color color)
+      (mystruct
+         (struct
+            (type string)
+            (number int)
+            ('Beat Track Editing'
+               (indent
+                  (edit_beat_track
+                     bool
+                     (refresh mystruct))
+                  (move_right
+                     script
+                     (hide
+                        {!
+                           [mystruct edit_beat_track]})
+                     (script
+                        {print
+                           "blah blah\n"}))
+                  (fpoint
+                     float
+                     (hide
+                        [mystruct edit_beat_track]))
+                  (order
+                     int
+                     (hide
+                        {!
+                           [mystruct edit_beat_track]}))))))
+      (employees
+         (array
+            (struct
+               (name string)
+               (id int)
+               (objects
+                  (array
+                     object
+                     (class Object))))
+            (header
+               {sprint
+                  "element "
+                  {-
+                     {size $milo.prop_path}
+                     2}}))))
+   (types
+      (test0
+         (editor
+            (print_this
+               script
+               (script
+                  {print
+                     $this
+                     "\n"})
+               (label
+                  "print $this"))))
+      (test1
+         (editor
+            (myobjarray
+               (array
+                  object
+                  (class Object)))
+            (mysymarray
+               (array symbol))
+            (mystrarray
+               (array string))
+            (mybitfields
+               (array
+                  bitfield
+                  (list MILO_TEST_STATES)))
+            (val
+               int
+               (refresh doubleval)
+               (post_sync
+                  {$this
+                     set
+                     (doubleval)
+                     {'*'
+                        {$this
+                           get
+                           (val)}
+                        2}}))
+            (doubleval
+               int
+               (refresh val)
+               (post_sync
+                  {$this
+                     set
+                     (val)
+                     {int
+                        {/
+                           {$this
+                              get
+                              (doubleval)}
+                           2}}}))
+            (myint
+               int
+               (range -100 100)
+               (help
+                  "range -100 100"))
+            (myfloat
+               float
+               (range -200 200)
+               (help
+                  "range -200 200"))
+            (mystring string)
+            (mysym symbol)
+            (mybool bool)
+            (mystringlist
+               string
+               (list
+                  ("abc"
+                     "def"
+                     "ghi")))
+            (mysymlist
+               symbol
+               (list MILO_TEST_SYMBOLS)
+               (alias list))
+            (myintlist
+               int
+               (list MILO_TEST_STATES))
+            (mybitfield
+               bitfield
+               (list MILO_TEST_STATES)
+               (help
+                  "enter test states"))
+            (myfile file)
+            (myfiledir
+               file
+               (dir TRUE))
+            (mycolor color)
+            ('Hide Some Props'
+               bool
+               (refresh thehidden))
+            (thehidden
+               (indent
+                  (hide1 int)
+                  (hide2 int))
+               (hide
+                  ['Hide Some Props']))
+            (print_mystring
+               script
+               (script
+                  {print
+                     "mystring is "
+                     {$this
+                        get
+                        (mystring)}
+                     "\n"}))
+            (print_mystring2
+               script
+               (script
+                  {print
+                     "mystring is "
+                     [mystring]
+                     "\n"})
+               (label
+                  "print mystring"))
+            (test_myint
+               script
+               (script
+                  {print
+                     "myint is "
+                     {$this
+                        get
+                        (myint)}
+                     "\n"})
+               (label
+                  "print myint"))
+            (test_proppath
+               script
+               (script
+                  {print
+                     "milo.prop_path is "
+                     $milo.prop_path
+                     "\n"})))
+         (myobjarray
+            ())
+         (mysymarray
+            ())
+         (mystrarray
+            ())
+         (mybitfields
+            ())
+         (myint
+            {'+' 1 2})
+         (myfloat 64.0)
+         (mystring
+            "this is mystring")
+         (mysym SG)
+         (mybool TRUE)
+         (mystringlist
+            "abc")
+         (mysymlist 'Flying V')
+         (myintlist MILO_TEST_02)
+         (mybitfield 21)
+         (myfile
+            "")
+         (myfiledir
+            "")
+         (mycolor 65535)
+         (myints
+            (3 5 6))
+         (val 10)
+         (doubleval 20)
+         ('Hide Some Props' FALSE)
+         (hide1 1)
+         (hide2 2))))

@@ -1,0 +1,67 @@
+{dialog
+   'set selected charbone'
+   {milo cur_dir}
+   (editor
+      (set_pos
+         bool
+         (help
+            "set position value?"))
+      (position
+         bool
+         (help
+            "animate position or not"))
+      (set_rot
+         bool
+         (help
+            "set the rotation value?"))
+      (rotation
+         int
+         (list
+            ("kRotNone"
+               "kRotFull"
+               "kRotX"
+               "kRotY"
+               "kRotZ"))
+         (help
+            "what axis or axes to animate"))
+      (set_scale
+         bool
+         (help
+            "set scale value?"))
+      (scale
+         bool
+         (help
+            "animate scale or not"))
+      (Go
+         script
+         (script
+            {$this go})))
+   (set_pos FALSE)
+   (set_rot FALSE)
+   (position FALSE)
+   (rotation kRotNone)
+   (set_scale FALSE)
+   (scale FALSE)
+   (go
+      {do
+         {milo
+            iterate_highlit
+            $obj
+            {if
+               {$this get set_pos}
+               {$obj
+                  set
+                  position
+                  {$this get position}}}
+            {if
+               {$this get set_rot}
+               {$obj
+                  set
+                  rotation
+                  {$this get rotation}}}
+            {if
+               {$this get set_scale}
+               {$obj
+                  set
+                  scale
+                  {$this get scale}}}}})}

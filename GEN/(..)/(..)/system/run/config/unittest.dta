@@ -1,0 +1,4 @@
+#include macros.dta
+(objects
+   #merge ../m2/m2_objects.dta)
+#merge default.dta

@@ -1,0 +1,31 @@
+{dialog
+   'Raise MultiMesh'
+   {milo cur_dir}
+   (editor
+      (multimesh
+         object
+         (class MultiMesh))
+      (raise_by float)
+      (ok
+         script
+         (script
+            {$this on_ok})))
+   (on_ok
+      {do
+         ($mm
+            [multimesh])
+         ($num
+            {$mm num_xfms})
+         {while
+            $num
+            {$mm get_pos $num $x $y $z}
+            {milo record $mm 'multimesh set_pos'}
+            {$mm
+               set_pos
+               $num
+               $x
+               $y
+               {'+' $raise $z}}
+            {set
+               $num
+               {- $num 1}}}})}

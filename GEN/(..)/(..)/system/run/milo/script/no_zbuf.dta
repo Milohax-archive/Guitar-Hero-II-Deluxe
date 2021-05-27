@@ -1,0 +1,5 @@
+{rnd
+   iterate
+   Mat
+   $obj
+   {$obj set zmode kZModeDisable}}
