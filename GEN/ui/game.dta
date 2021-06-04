@@ -199,7 +199,9 @@
          {! $focusmode}}
 	  {if $focusmode 
 	  {world do_force_shot lighter}}
-	  {world toggle_pick_shot}
+	  {if ({gamecfg get mode}
+         (career quickplay multi_coop))
+	  {world toggle_pick_shot}}
       {if
          {&&
             {! $neckless}
@@ -271,7 +273,12 @@
       kDataUnhandled)
    (game_won_msg
       ($encore)
-	  {world toggle_pick_shot}
+      {if {||
+         {== {gamecfg get mode} career}
+         {== {gamecfg get mode} quickplay}
+         {== {gamecfg get mode} multi_coop}}
+         {if {exists world}
+            {world toggle_pick_shot}}}
       {world_panel set_showing TRUE}
       {if_else
          {gamecfg get game_over_sequence}
@@ -304,7 +311,9 @@
             kDataUnhandled}
          0})
    (game_lost
-      {world toggle_pick_shot}
+	  {if ({gamecfg get mode}
+         (career quickplay multi_coop))
+	  {world toggle_pick_shot}}
       {world_panel set_showing TRUE}
       {track_panel set_showing FALSE}
       {game set_realtime TRUE}
