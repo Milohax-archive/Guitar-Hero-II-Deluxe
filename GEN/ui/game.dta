@@ -13,6 +13,8 @@
          {$this setup_text}})
    (setup_text
       {do
+         ($song
+            {gamecfg get_song})
          ($song_text
             {game get_song_text})
          ($artist_text
@@ -48,7 +50,31 @@
                         "%)"}}}
                {$this set_line $prefix 1 $song_text}}
             {$this set_line $prefix 2 $song_caption}
-            {$this set_line $prefix 3 $artist_text}}})
+            {$this set_line $prefix 3 $artist_text}
+            {mtv_campaign_line4.lbl set_wrap_width 540}
+            {mtv_campaign_line4_shadow.lbl set_wrap_width 540}
+            {if_else
+               {!=
+                  ""
+                  {localize
+                     {sprint
+                        $song
+                        "_author"}}}
+               {$this
+                  set_line
+                  $prefix
+                  4
+                  {sprint
+                     "Author: "
+                     {localize
+                        {sprint
+                           $song
+                           "_author"}}}}
+               {$this
+                  set_line
+                  $prefix
+                  4
+                  {localize mtv_chart_authr}}}}})
    (set_line
       ($prefix $i $text)
       {{sprint
@@ -171,6 +197,9 @@
       {world_panel
          set_showing
          {! $focusmode}}
+	  {if $focusmode 
+	  {world do_force_shot lighter}}
+	  {world toggle_pick_shot}
       {if
          {&&
             {! $neckless}
@@ -242,6 +271,7 @@
       kDataUnhandled)
    (game_won_msg
       ($encore)
+	  {world toggle_pick_shot}
       {world_panel set_showing TRUE}
       {if_else
          {gamecfg get game_over_sequence}
@@ -274,6 +304,7 @@
             kDataUnhandled}
          0})
    (game_lost
+      {world toggle_pick_shot}
       {world_panel set_showing TRUE}
       {track_panel set_showing FALSE}
       {game set_realtime TRUE}

@@ -374,6 +374,52 @@
    "Dear ______________________,\n\nAnd that's it! Guitar Hero II Deluxe on Expert SLAIN.\n\nThat expanded setlist takes a bit longer to work though, but there's some gems in there, ain't there? And speaking of gems, you should have enough money now to buy a whole 'nother beast, the infamous \qSpeed Test\q. Makes good use of that uncapped strumming, to say the least. Check for it in the store!\n\nAnd keep an eye out for the GH2DX expansion disc if you like strumming. There will be MUCH strumming.\n\nLove,\nThe GH2 Deluxe Team")
 (speedtest
    "Speed Test")
+(punkencore
+   "Johnny Napalm 80's")
+(alternaencore
+   "Judy Nails 80's")
+(glamencore
+   "Izzy Sparks 80's")
+(gothencore
+   "Pandora 80's")
+(metalencore
+   "Axel Steel 80's")
+(grimencore
+   "Grim Ripper 80's")
+(alternaencore_blurb
+   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
+(gothencore_blurb
+   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q")
+(glamencore_blurb
+   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
+(grimencore_blurb
+   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
+(metalencore_blurb
+   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
+(punkencore_blurb
+   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary.")
+(alternaencore_outfit_blurb
+   "Likes: Perfect spelling, boast-worthy bruises, strawberries\n\nDislikes: Rudeness, fake strawberry-flavored things")
+(gothencore_outfit_blurb
+   "Likes: make-up, hailstorms, leather\n\nDislikes: Small talk, the beach")
+(glamencore_outfit_blurb
+   "Likes: Zebra print, arenas, pouting\n\nDislikes: irony, tour managers, alimony")
+(metalencore_outfit_blurb
+   "Likes: Metal\n\nDislikes: Un-metal")
+(punkencore_outfit_blurb
+   "Likes: live shows, smashing stuff, kicking stuff, amps\n\nDislikes: wake-up calls, authority")
+(grimencore_shop_desc
+   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
+(alternaencore_shop_desc
+   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
+(gothencore_shop_desc
+   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q")
+(glamencore_shop_desc
+   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
+(metalencore_shop_desc
+   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
+(punkencore_shop_desc
+   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary.")
 (speedtest_shop_desc
    "The real test of the strum limit fix.\n\nThink you can accurately rake in this engine?\n\nGET SMOKED")
 (loading_tip_speedtest
@@ -598,6 +644,152 @@
    "If you're having problems with timing, try running \qCalibrate Lag\q under Video Settings on the Options menu.")
 (loading_tip12
    "Did you forget to turn on Progressive Scan again?")
+(arterialblack_author
+   "Harmonix")
+(badreputation_author
+   "Harmonix")
+(beastandtheharlot_author
+   "Harmonix")
+(billiondollar_author
+   "Harmonix")
+(carrymehome_author
+   "Harmonix")
+(carryonwayward_author
+   "Harmonix")
+(cherrypie_author
+   "Harmonix")
+(collide_author
+   "Harmonix")
+(crazyonyou_author
+   "Harmonix")
+(dead_author
+   "Harmonix")
+(drinkup_author
+   "Harmonix")
+(elephantbones_author
+   "Harmonix")
+(fallofpangea_author
+   "Harmonix")
+(freebird_author
+   "Harmonix")
+(freya_author
+   "Harmonix")
+(ftk_author
+   "Harmonix")
+(gemini_author
+   "Harmonix")
+(girlfriend_author
+   "Harmonix")
+(hangar18_author
+   "Harmonix")
+(heartshapedbox_author
+   "Harmonix")
+(hush_author
+   "Harmonix")
+(institutionalized_author
+   "Harmonix")
+(jessica_author
+   "Harmonix")
+(johnthefisherman_author
+   "Harmonix")
+(jordan_author
+   "Harmonix")
+(kicked_author
+   "Harmonix")
+(killinginthenameof_author
+   "Harmonix")
+(ladylightning_author
+   "Harmonix")
+(laidtorest_author
+   "Harmonix")
+(lastchild_author
+   "Harmonix")
+(laughtrack_author
+   "Harmonix")
+(lesstalkmorerokk_author
+   "Harmonix")
+(lifewasted_author
+   "Harmonix")
+(madhouse_author
+   "Harmonix")
+(messageinabottle_author
+   "Harmonix")
+(misirlou_author
+   "Harmonix")
+(monkeywrench_author
+   "Harmonix")
+(mother_author
+   "Harmonix")
+(mrfixit_author
+   "Harmonix")
+(newblack_author
+   "Harmonix")
+(onefortheroad_author
+   "Harmonix")
+(parasite_author
+   "Harmonix")
+(possum_author
+   "Harmonix")
+(psychobilly_author
+   "Harmonix")
+(radiumeyes_author
+   "Harmonix")
+(rawdog_author
+   "Harmonix")
+(redlottery_author
+   "Harmonix")
+(rockandroll_author
+   "Harmonix")
+(rockthistown_author
+   "Harmonix")
+(searchanddestroy_author
+   "Harmonix")
+(shoutatthedevil_author
+   "Harmonix")
+(six_author
+   "Harmonix")
+(soybomb_author
+   "Harmonix")
+(speedtest_author
+   "Exilelord, Mariteaux")
+(stop_author
+   "Harmonix")
+(strutter_author
+   "Harmonix")
+(surrender_author
+   "Harmonix")
+(sweetchild_author
+   "Harmonix")
+(tattooedloveboys_author
+   "Harmonix")
+(thelightthatblinds_author
+   "Harmonix")
+(thembones_author
+   "Harmonix")
+(thunderhorse_author
+   "Harmonix")
+(tonightimgonna_author
+   "Harmonix")
+(trippinonahole_author
+   "Harmonix")
+(trogdor_author
+   "Harmonix")
+(trooper_author
+   "Harmonix")
+(warpigs_author
+   "Harmonix")
+(whowasinmyroom_author
+   "Harmonix")
+(woman_author
+   "Harmonix")
+(xstream_author
+   "Harmonix")
+(yeswecan_author
+   "Harmonix")
+(youreallygotme_author
+   "Harmonix")
+(yyz_author
+   "Harmonix")
 (sel_sqped
    " ")
 (speed_label4

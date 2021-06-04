@@ -695,18 +695,6 @@
    "Pandora")
 (grim
    "Grim Ripper")
-(punkencore
-   "Johnny Napalm 80's")
-(alternaencore
-   "Judy Nails 80's")
-(glamencore
-   "Izzy Sparks 80's")
-(gothencore
-   "Pandora 80's")
-(metalencore
-   "Axel Steel 80's")
-(grimencore
-   "Grim Ripper 80's")
 (metal
    {if_else
       $egg5
@@ -741,40 +729,6 @@
       $egg5
       "Dax Deville"
       "Eddie Knox"})
-(alternaencore_blurb
-   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
-(gothencore_blurb
-   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q")
-(glamencore_blurb
-   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
-(grimencore_blurb
-   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
-(metalencore_blurb
-   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
-(punkencore_blurb
-   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary.")
-(alternaencore_outfit_blurb
-   "Likes: Perfect spelling, boast-worthy bruises, strawberries\n\nDislikes: Rudeness, fake strawberry-flavored things")
-(gothencore_outfit_blurb
-   "Likes: make-up, hailstorms, leather\n\nDislikes: Small talk, the beach")
-(glamencore_outfit_blurb
-   "Likes: Zebra print, arenas, pouting\n\nDislikes: irony, tour managers, alimony")
-(metalencore_outfit_blurb
-   "Likes: Metal\n\nDislikes: Un-metal")
-(punkencore_outfit_blurb
-   "Likes: live shows, smashing stuff, kicking stuff, amps\n\nDislikes: wake-up calls, authority")
-(grimencore_shop_desc
-   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
-(alternaencore_shop_desc
-   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
-(gothencore_shop_desc
-   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q")
-(glamencore_shop_desc
-   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
-(metalencore_shop_desc
-   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
-(punkencore_shop_desc
-   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary.")
 (alterna_blurb
    "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage.")
 (classic_blurb
