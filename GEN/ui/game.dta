@@ -197,11 +197,17 @@
       {world_panel
          set_showing
          {! $focusmode}}
-	  {if $focusmode 
-	  {world do_force_shot lighter}}
-	  {if ({gamecfg get mode}
-         (career quickplay multi_coop))
-	  {world toggle_pick_shot}}
+      {if
+         $focusmode
+         {world do_force_shot lighter}}
+      {if {&&
+	  $focusmode
+	  {||
+         {== {gamecfg get mode} career}
+         {== {gamecfg get mode} quickplay}
+         {== {gamecfg get mode} multi_coop}}}
+         {if {exists world}
+            {world toggle_pick_shot}}}
       {if
          {&&
             {! $neckless}
@@ -273,10 +279,12 @@
       kDataUnhandled)
    (game_won_msg
       ($encore)
-      {if {||
+      {if {&&
+	  $focusmode
+	  {||
          {== {gamecfg get mode} career}
          {== {gamecfg get mode} quickplay}
-         {== {gamecfg get mode} multi_coop}}
+         {== {gamecfg get mode} multi_coop}}}
          {if {exists world}
             {world toggle_pick_shot}}}
       {world_panel set_showing TRUE}
@@ -311,9 +319,14 @@
             kDataUnhandled}
          0})
    (game_lost
-	  {if ({gamecfg get mode}
-         (career quickplay multi_coop))
-	  {world toggle_pick_shot}}
+      {if {&&
+	  $focusmode
+	  {||
+         {== {gamecfg get mode} career}
+         {== {gamecfg get mode} quickplay}
+         {== {gamecfg get mode} multi_coop}}}
+         {if {exists world}
+            {world toggle_pick_shot}}}
       {world_panel set_showing TRUE}
       {track_panel set_showing FALSE}
       {game set_realtime TRUE}
