@@ -83,16 +83,12 @@
 (quickplay
    (continue_screen qp_selsong_screen)
    (hud_file hud_sp.milo)
-   (track_surface_override
-      {if_else $focusmode streamer ''})
    (win_preload_panel endgame_panel))
 (career
    (main_screen career_screen)
    (continue_screen sel_song_screen)
    (win_preload_panel endgame_panel)
    (hud_file hud_sp.milo)
-   (track_surface_override
-      {if_else $focusmode streamer ''})
    (encore_fx TRUE))
 (multi_vs
    (num_players 2)
@@ -101,8 +97,6 @@
    (win_screen multi_compete_screen)
    (win_preload_panel multi_compete_panel)
    (hud_file hud_vs.milo)
-   (track_surface_override
-      {if_else $focusmode streamer ''})
    (song_block song_vs)
    (midi_suffix VS))
 (multi_fo
@@ -112,17 +106,13 @@
    (win_screen multi_compete_fo_screen)
    (win_preload_panel multi_compete_fo_panel)
    (separate_parts FALSE)
-   (hud_file hud_vs.milo)
-   (track_surface_override
-      {if_else $focusmode streamer ''}))
+   (hud_file hud_vs.milo))
 (multi_coop
    (num_players 2)
    (shared_star_meter TRUE)
    (separate_parts FALSE)
    (score_config coop_config)
    (hud_file hud_coop.milo)
-   (track_surface_override
-      {if_else $focusmode streamer ''})
    (continue_screen multi_coop_selsong_screen)
    (win_screen multi_compete_coop_screen)
    (win_preload_panel multi_compete_coop_panel)

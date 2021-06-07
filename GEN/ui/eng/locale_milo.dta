@@ -63,7 +63,7 @@
 (cheat_mtv_overlay
    "Song Title Always")
 (cheat_awesomeness
-   "Awesomeness Detection")
+   "Sorry no cheats here")
 (EASTER_EGG1
    "MiloHax Community")
 (EASTER_EGG3
@@ -386,6 +386,8 @@
    "Axel Steel 80's")
 (grimencore
    "Grim Ripper 80's")
+(streamer
+   "Streamer")
 (alternaencore_blurb
    "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
 (gothencore_blurb
@@ -394,6 +396,8 @@
    "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
 (grimencore_blurb
    "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
+(streamer_blurb
+   "Emerging from shadows after a 28 hour marathon live stream, Streamer brings forth the gift of darkness to those who check the link in the description. Also don't forget to follow and subscribe.")
 (metalencore_blurb
    "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
 (punkencore_blurb
@@ -800,6 +804,8 @@
    "GUITAR")
 (speed_label7
    "VENUE")
+(speed_label8
+   "EXTRAS")
 (soft_1
    "Soft part 1")
 (soft_2
@@ -904,3 +910,27 @@
    "PRACTICE")
 (ADUIO_SETTINGS
    "AUDIO SETTINGS")
+(LEFT_PAYYER_1
+   "SONG TITLE ALWAYS")
+(LEFT_PAYYER_2
+   "HORSE HEAD")
+(LEFT_PAYYER_3
+   "ROXBURY MODE")
+(LEFT_PAYYER_4
+   "PERFORMANCE MODE")
+(LEFT_PAYYER_5
+   "AWESOMENESS")
+(LEFT_PAYYER_6
+   "EYEBALL CROWD")
+(LEFT_PAYYER_7
+   "MONKEY CROWD")
+(LEFT_PAYYER_8
+   "AIR GUITAR")
+(vs_titty
+   "EXTRAS")
+(vs_bag
+   "SET BLACK HIGHWAY")
+(vs_bscan
+   "FLAMING HEAD")
+(vs_wodescreen
+   "NECKLESS MODE")

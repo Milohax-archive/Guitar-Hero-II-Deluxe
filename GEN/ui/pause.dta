@@ -52,9 +52,9 @@
             {ui goto_screen pause_video_settings_screen})
          (newsong.btn
             {gamecfg set mode practice}
-      {gamecfg set_track 0 0}
-      {practice_sel_section_screen set career_mode TRUE}
-      {meta_loading_goto practice_sel_section_screen})
+            {gamecfg set_track 0 0}
+            {practice_sel_section_screen set career_mode TRUE}
+            {meta_loading_goto practice_sel_section_screen})
          (quit.btn
             {if
                {==
