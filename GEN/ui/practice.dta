@@ -545,9 +545,9 @@
    (keep_section_text FALSE)
    (ignore_section '')}
 #define PRACTICE_PANELS
-(practice_panel game hud track_panel mtv_overlay_panel)
+(practice_panel game hud streak_overlay_panel track_panel mtv_overlay_panel)
 #define PRACTICE_FOCUS_PANELS
-(practice_focus_panel game hud track_panel mtv_overlay_panel)
+(practice_focus_panel game hud streak_overlay_panel track_panel mtv_overlay_panel)
 {new
    GHScreen
    practice_game_screen

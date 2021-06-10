@@ -1,3 +1,5 @@
+(stk_format {sprint $player0_streak})
+(stk_zero "0")
 (note_streak_popup_p0
    {if_else
       $egg5
