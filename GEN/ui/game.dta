@@ -16,7 +16,8 @@
       {stk_campaign_line2.lbl set_showing FALSE}
       {set $streakline 1}
       {$this set_line stk_campaign_line 1 {localize stk_zero}}
-      {$this set_line stk_campaign_line 2 {localize stk_zero}})
+      {$this set_line stk_campaign_line 2 {localize stk_zero}}
+      {set $beforefirstnote TRUE})
    (setup_text
       {do
          {do

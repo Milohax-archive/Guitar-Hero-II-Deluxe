@@ -36,6 +36,7 @@
  note_streak_callback_p0
  (gem_hit_callback
   ($slot $hopoable $hopoed)
+  {set $beforefirstnote FALSE}
   {switch
    {gamecfg get mode}
    (career {note_streak_p0})
@@ -49,16 +50,21 @@
   ($slot_hit $real_slot $timing_error)
   {set $player0_streak 0}
   {set $interval_p0 50}
-  {streak_overlay_panel not_an_fc}
+  {if {! $beforefirstnote} {streak_overlay_panel not_an_fc}}
   {streak_overlay_panel set_line stk_campaign_line $streakline {localize stk_zero}}
   {if {== {gamecfg get mode} multi_coop}
      {set $player2_streak 0}
      {set $interval_p2 50}}
   )
  (gem_pass_callback
+  {set $beforefirstnote FALSE}
+  {set $player0_streak 0}
+  {set $interval_p0 50}
   {streak_overlay_panel not_an_fc}
   {streak_overlay_panel set_line stk_campaign_line $streakline {localize stk_zero}}
-  )}
+  {if {== {gamecfg get mode} multi_coop}
+     {set $player2_streak 0}
+     {set $interval_p2 50}})}
 {new
  Object
  note_streak_callback_p1
@@ -87,7 +93,7 @@
          "../hud/"
          {gamecfg get hud_file}})
    (enter
-      {game add_sinks $this intro_start_msg intro_skip slide_meter_in streak_overlay_panel star_power_ready game_won_msg game_lost game_outro_complete star_power_start star_power_stop sp_engage start}
+      {game add_sinks $this intro_start_msg intro_skip slide_meter_in star_power_ready game_won_msg game_lost game_outro_complete star_power_start star_power_stop sp_engage start}
       {player_matcher0 add_sink note_streak_callback_p0}
       {if {exists player_matcher1}
          {player_matcher1 add_sink note_streak_callback_p1}}
