@@ -181,18 +181,6 @@
       (funk1))
    (grim
       (grim))
-   (punkencore
-      (punkencore))
-   (alternaencore
-      (alternaencore))
-   (glamencore
-      (glamencore))
-   (gothencore
-      (gothencore))
-   (metalencore
-      (metalencore))
-   (grimencore
-      (grimencore))
    (streamer
       (streamer)))
 (mc
