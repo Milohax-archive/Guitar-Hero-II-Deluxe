@@ -5,7 +5,7 @@
 (metamusic
    (volume -6.0)
    (fade_rate 1.0)
-   (music metaloop1_warpigs metaloop2_psycho metaloop3_whowas metaloop4_youreally metaloop5_arterial metaloop6_trogdor metaloop_artillery metaloop_crowns metaloop_ftk metaloop_hoods metaloop_rawdog metaloop_voivod metaloop_bangyourhead metaloop_holydiver metaloop_iran metaloop_noonelikeyou metaloop_radarlove metaloop_shakin metaloop_wegotthebeat meta_loop1a meta_loop1b meta_loop1c meta_loop1d meta_loop1e meta_loop1f meta_loop1g meta_loop2 meta_loop3)
+   (music metaloop1_warpigs metaloop2_psycho metaloop3_whowas metaloop4_youreally metaloop5_arterial metaloop6_trogdor metaloop_artillery metaloop_crowns metaloop_ftk metaloop_hoods metaloop_rawdog metaloop_voivod)
    (background_sfx
       (sequence meta_people)
       (min_delay_sec 10)
