@@ -187,7 +187,7 @@
 (lp_zakk_desc
    "Based on Wylde's trademark \qGrail\q bullseye-design Les Paul, this signature model combines bold visual elements with \qshred-ready\q custom mods, including two EMG humbuckers and an oiled, raw maple neck.")
 (sg_desc
-   "For those about to rock, we... give you the Gibson SG. Embraced by the likes of Angus Young, Tony Iommi, and Ian MacKaye, this slim-bodied \qdevil horns\q double-cutaway has become an iconic instrument of heavy rock.")
+   "For those about to rock, we...give you the Gibson SG. Embraced by the likes of Angus Young, Tony Iommi, and Ian MacKaye, this slim-bodied \qdevil horns\q double-cutaway has become an iconic instrument of heavy rock.")
 (sg_cherry_desc
    {if_else
       $egg5
@@ -206,7 +206,7 @@
 (fv_white_desc
    "The avant-garde shape of the Gibson Flying V makes it well-suited to playing onstage and its aggressive design makes it a natural fit for Heavy Metal shredders.")
 (fv_v2_desc
-   "By the late seventies, high profile usage of the Flying V via the likes of Jimi Hendrix and Dave Davies had prompted numerous reissues of the model. The second-generation V2 featured two distinctive Boomerang pickups.")
+   "By the late '70s, high profile usage of the Flying V via the likes of Jimi Hendrix and Dave Davies had prompted numerous reissues of the model. The second-generation V2 featured two distinctive Boomerang pickups.")
 (fv_century_desc
    "Bask in the reflected (literally) glory of this iconic guitar, presented here in new-millennium fashion complete with full body mirrored pick guard.")
 (fv_red_desc
@@ -226,7 +226,7 @@
 (exp_sun_desc
    {if_else
       $egg5
-      "Matthias Jabs of the Scorpions uses the Gibson Explorer to create metal madness. This particular finish was made specially for Hair Matheson."
+      "Oh mercy me, I do believe this guitar's got the Vapors. Get it? Because The Vapors did \qTurning Japanese\q and this Explorer's sporting a rising sun motif? Whatever...good song, hot guitar."
       "Matthias Jabs of the Scorpions uses the Gibson Explorer to create metal madness. This particular finish was made specially for Izzy Sparks."})
 (exp_swirl_desc
    "This eye-catching black and red finish augments one of Gibson's most recognized and daring guitar designs.")
@@ -287,9 +287,9 @@
 (cor_yellow_desc
    "A pairing of \qclassic vintage\q with \qambitiously futuristic\q - it may seem odd to match a timeless finish such as TV Yellow with the purposefully bizarre Corvus, but somehow it works.")
 (cor_white_desc
-   "The mysterious shape of the Gibson Corvus attracted Xavier Stone at an early age. One of his first guitars, it has accompanied him on more than 7 world tours.")
+   "The mysterious shape of the Gibson Corvus attracted Xavier Stone at an early age. One of his first guitars, it has accompanied him on more than seven world tours.")
 (cor_nat_desc
-   "\qBottle-opener\q guitar, au naturel. The Corvus, with its offset v-type cut, rosewood fingerboard, and bolt-on maple neck, was discontinued in 1984.")
+   "\qBottle-opener\q guitar, au naturel. The Corvus, with its offset V-type cut, rosewood fingerboard, and bolt-on maple neck, was discontinued in 1984.")
 (cor_snake_desc
    "Reptilian rockers love the Custom Snakeskin Gibson Corvus. Shed your conventional skin and slither your way into rock-stardom with this distinctive take on an already unique guitar.")
 (es335_desc
@@ -319,7 +319,7 @@
 (lespaul_marauder_desc
    "Gibson's mid-'70s \qbudget\q solid body offering, the Marauder was an amalgam of design elements, boasting a \qLes Paul-ish\q alder body, a V-series headstock, and featuring both a humbucker and single coil pickup.")
 (epiphone_casino_desc
-   "As one of John Lennon's favored guitars, the archtop Epiphone Casino played a significant role in shaping the soundtrack of the sixties.")
+   "As one of John Lennon's favored guitars, the archtop Epiphone Casino played a significant role in shaping the soundtrack of the '60s.")
 (epiphone_sheraton_desc
    "A more upscale semi-acoustic known for its warm tone, the double-cutaway Sheraton features an inlayed headstock, block/triangle fretboard inlays, and neck and body binding.")
 (chet_atkins_desc
@@ -344,36 +344,20 @@
    "Scythe")
 (fish_reward_desc
    "This is a highly practical and efficient guitar design. Because it looks like a fish.")
-(fish_reward_locked_desc
-   "Beat the game on EASY first, champ. Then you can buy this bad boy.")
 (usa_reward_desc
    "Sometimes people think that it'd be a good idea to make guitars in funny shapes. Sometimes people mistakenly drink a tall glass of apple vinegar thinking that it's apple juice. Things happen like that.")
-(usa_reward_locked_desc
-   "Get five stars on every song on EASY first and then we'll talk deal.")
 (coffin_reward_desc
    "Coffins are kinda cool in a creepy, Misfits way. Guitars are cool. You'd think this could work.")
-(coffin_reward_locked_desc
-   "Yeah, you gotta beat the game on MEDIUM before we'll sell you this one. Sorry.")
 (viking_reward_desc
    "The Vikings were a Nordic seafaring people noted for their violent raids along the coasts of France and the British Isles in the 8th through 11th Centuries. All of this history culminates in a guitar shaped like a viking with a sword in his head.")
-(viking_reward_locked_desc
-   "If you can get five stars on every song on MEDIUM, you might be worthy of this guitar.")
 (snaketapus_reward_desc
    "\qWhat's a 'snaketapus'?\q you ask? Well, it's a skull with snakes coming out of it and it's...um...a guitar.")
-(snaketapus_reward_locked_desc
-   "Oh man. You SO want to beat the game on HARD for this one. For serious.")
 (eyeball_reward_desc
    "Once a guy said to me, \qThank goodness nobody's ever made a 'wacky' guitar designed to look like an eyeball.\q Somewhere, that man is crying now.")
-(eyeball_reward_locked_desc
-   "Get five stars on every song on HARD. I know, it's scary. You can do it, cap'n.")
 (battleaxe_reward_desc
    "It's likely a guy in Manowar actually plays a guitar like this, so I guess that's something.")
-(battleaxe_reward_locked_desc
-   "Beat EXPERT. You have to. Because this thing is so freakin' righteous.")
 (log_reward_desc
    "Les Paul's first solidbody guitar, built in 1941, was called \qThe Log,\q due to its impractical weight and crude construction. This guitar, on the other hand, is an actual log.")
-(log_reward_locked_desc
-   "If you take the time to get five stars on every song on EXPERT, this guitar will make up for the fact that you've lost all your friends.")
 (scythe_desc
    "On second thought, you probably should fear the reaper. Equally suited for über-fast shredding or deadly combat, this literal axe is a dangerous mother.")
 (redoctane

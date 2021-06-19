@@ -38,6 +38,8 @@
             "%i Rhythm Streak!")
          "%i Note Streak!"}
       "%i Note Streak!"})
+(stk_format {sprint $player0_streak})
+(stk_zero "0")
 (cheat_focusmode
    "Focus Mode")
 (cheat_neckless
@@ -61,7 +63,9 @@
 (cheat_mtv_overlay
    "Song Title Always")
 (cheat_awesomeness
-   "Awesomeness Detection")
+   "Sorry no cheats here")
+(cheat_barf
+   "Roxbury Mode")
 (EASTER_EGG1
    "MiloHax Community")
 (EASTER_EGG3
@@ -112,3 +116,49 @@
    "YOU FOUND ALL THE EGGS")
 (finaleggtxt3
    "Thank you so much for playing our special version of\nGuitar Hero II.")
+(sel_sqped
+   " ")
+(speed_label4
+   "PLAY SHOW")
+(speed_label5
+   "CHARACTER")
+(speed_label6
+   "GUITAR")
+(speed_label7
+   "VENUE")
+(speed_label8
+   "EXTRAS")
+(CAHNGE_SEPED
+   "FREE PLAY")
+(CHANGE_SEPED
+   "FREE PLAY")
+(CAHNGE_SECTION
+   "VIDEO SETTINGS")
+(NWE_SONG
+   "PRACTICE")
+(ADUIO_SETTINGS
+   "AUDIO SETTINGS")
+(LEFT_PAYYER_1
+   "SONG TITLE ALWAYS")
+(LEFT_PAYYER_2
+   "HORSE HEAD")
+(LEFT_PAYYER_3
+   "ROXBURY MODE")
+(LEFT_PAYYER_4
+   "PERFORMANCE MODE")
+(LEFT_PAYYER_5
+   "AWESOMENESS")
+(LEFT_PAYYER_6
+   "EYEBALL CROWD")
+(LEFT_PAYYER_7
+   "MONKEY CROWD")
+(LEFT_PAYYER_8
+   "AIR GUITAR")
+(vs_titty
+   "EXTRAS")
+(vs_bag
+   "SET BLACK HIGHWAY")
+(vs_bscan
+   "FLAMING HEAD")
+(vs_wodescreen
+   "NECKLESS MODE")

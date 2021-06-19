@@ -66,23 +66,48 @@
       $egg5
       "Dax Deville"
       "Eddie Knox"})
+(punkencore
+   "Johnny Napalm 80's")
+(alternaencore
+   "Judy Nails 80's")
+(glamencore
+   "Izzy Sparks 80's")
+(gothencore
+   "Pandora 80's")
+(metalencore
+   "Axel Steel 80's")
+(grimencore
+   "Grim Ripper 80's")
+(streamer
+   "Streamer")
 (alterna_blurb
-   "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage.")
+   {if_else
+      $egg5
+      "A fan of roller derby and distorted feedback, Judy Nails has been a pioneer of alternative rock since her first tour at age 17. Known for her diverse collection of LP's, Nails brings an experimental twist to heavy guitar riffs with a sly smirk."
+      "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage."})
 (classic_blurb
-   "Having abandoned his fascination with the sitar (an interest developed during a court-ordered \qmeditation retreat\q), Clive returns to the forefront of classic rock with his guitar wizardry and iconic status.")
+   {if_else
+      $egg5
+      "Having abandoned his fascination with the sitar, an interest developed during a 3-year, court-ordered \qmeditation retreat,\q Winston sashays boldly back to the forefront of classic rock with his guitar wizardry and iconic status."
+      "Having abandoned his fascination with the sitar (an interest developed during a court-ordered \qmeditation retreat\q), Clive returns to the forefront of classic rock with his guitar wizardry and iconic status."})
 (deathmetal_blurb
-   "Lock the doors and board the windows, Lars Ümlaüt is coming for you! An intimidating presence, the Norwegian-born Ümlaüt describes himself as \qa force for you to be doing the reckoning with!\q")
+   {if_else
+      $egg5
+      "Lock the doors and board the windows, Lars Ümlaüt is soon to storm a town near you. An intimidating presence, the Norwegian-born Ümlaüt describes himself as \qa force for you to be doing the reckoning with!\q"
+      "Lock the doors and board the windows, Lars Ümlaüt is coming for you! An intimidating presence, the Norwegian-born Ümlaüt describes himself as \qa force for you to be doing the reckoning with!\q"})
 (funk1_blurb
    "Raised in suburban Connecticut, Xavier Stone broke from his pampered upbringing after realizing he preferred rock clubs to country clubs. Weaving slick '70s style with chunky grooves, Xavier does it right every time.")
 (goth_blurb
-   "Pandora's youth is shrouded in mystery.  Some say she was born in a dimension of pure darkness. Others say she was raised in a duplex near Boise. With her blazing solos and chaotic melodies, Pandora is the Dark Princess of Rock.")
+   "Pandora's youth is shrouded in mystery. Some say she was born in a dimension of pure darkness. Others say she was raised in a duplex near Boise. With her blazing solos and chaotic melodies, Pandora is the Dark Princess of Rock.")
 (glam_blurb
    {if_else
       $egg5
       "A real crowd pleaser, Hair thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Hair's fan base is even bigger than, well, his hair."
       "A real crowd pleaser, Izzy thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Izzy's fan base is even bigger than his hair."})
 (grim_blurb
-   "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's... you know... right.")
+      $egg5
+      "This rock star is bad to the bone. Grim's riffs are so huge, fans are lucky just to leave the show with their souls intact. At his latest killer performance, an awestruck fan gushed, \qThe curtains flew, then he appeared!\q"
+      "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."})
 (metal_blurb
    {if_else
       $egg5
@@ -93,13 +118,27 @@
 (rock_blurb
    {if_else
       $egg5
-      "A veteran of the tour circuit, Gina's dirty, low-end growl and ultra-heavy riffs have influenced budding shredders from Maine to Alaska. She's tough, she's brash, and she'll break your heart faster than an E string."
+      "A veteran of the tour circuit, Gina's dirty, bass-driven sound and ultra-heavy riffs have influenced budding shredders from Maine to Alaska. She's tough, she's brash, and she'll break your heart faster than an A string."
       "A veteran of the tour circuit, Casey's dirty, low-end growl and ultra-heavy riffs have influenced budding shredders from Maine to Alaska. She's tough, she's brash, and she'll break your heart faster than an E string."})
 (rockabill_blurb
    {if_else
       $egg5
-      "When he's not cruisin' in his '55 Chevy, Dax brings his hard-working rock to any stage he sets foot on. A real \qroad dog,\q Dax Deville claims that as long as he's got his hollow body and his pomade, he \qain't too far from home.\q"
+      "When he's not cruisin' around Reno in his '53 Ford, Dax Deville brings his brand of hard-working rock to any stage he sets foot on. A real \qroad dog,\q Deville claims that as long as he's got his hollow body and a tin of pomade, he \qain't too far from home.\q"
       "When he's not cruisin' in his '55 Chevy, Eddie brings his hard-working rock to any stage he sets foot on. A real \qroad dog,\q Eddie Knox claims that as long as he's got his hollow body and his pomade, he \qain't too far from home.\q"})
+(punkencore_blurb
+   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary.")
+(alternaencore_blurb
+   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
+(glamencore_blurb
+   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
+(gothencore_blurb
+   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q")
+(metalencore_blurb
+   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
+(grimencore_blurb
+   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
+(streamer_blurb
+   "Emerging from shadows after a 28 hour marathon live stream, Streamer brings forth the gift of darkness to those who check the link in the description. Also don't forget to follow and subscribe.")
 (alterna_outfit_blurb
    "Likes: Perfect spelling, boast-worthy bruises, strawberries\n\nDislikes: Rudeness, fake strawberry-flavored things")
 (deathmetal_outfit_blurb
@@ -116,40 +155,16 @@
    "Likes: the van, vintage guitars, Led Zeppelin\n\nDislikes: You, probably")
 (rockabill_outfit_blurb
    "Likes: car shows, feelin' broken-hearted over redheads, tattoos\n\nDislikes: wardens, high society")
-(alterna2_shop_desc
-   "The queen of alternative rock, through and through, Judy is always seen in the latest styles. Keep her on the cutting edge with this cute get-up.")
-(deathmetal2_shop_desc
-   "Asked about his gauntlets-to-gargoyles style, Lars responds, \qLARS HAS A REPUTATION OF STRENGTH OF WHICH HE NEEDS TO BE DOING THE UPHOLDING!\q")
-(goth1_shop_desc
-   "The consummate chameleon, Pandora is admired almost as much for her unique and ever-changing personal style as for her incomparable shredding skills.")
-(glam2_shop_desc
-   {if_else
-      $egg5
-      "Not everybody can pull off a top hat and feather boa. Hair is not afraid to subvert the dominant paradigm in this ultra-glam ensemble."
-      "Not everybody can pull off a top hat and feather boa. Izzy is not afraid to subvert the dominant paradigm in this ultra-glam ensemble."})
-(metal2_shop_desc
-   {if_else
-      $egg5
-      "Since they don't make you play better and you can't drink 'em, Hazzard has zero interest in clothes. But even Hazzard needs a change once in awhile."
-      "Since they don't make you play better and you can't drink 'em, Axel has zero interest in clothes. But even Axel needs a change once in awhile."})
-(rock1_shop_desc
-   {if_else
-      $egg5
-      "Gina's look is designed for backbreaking life on the road; if she can't pass out in the van wearing it, she's not interested."
-      "Casey's look is designed for backbreaking life on the road; if she can't pass out in the van wearing it, she's not interested."})
-(rockabill2_shop_desc
-   {if_else
-      $egg5
-      "Dax Deville is one cat who ain't afraid to look his best. As long as his hair is in place, he's as comfortable in old jeans as he is in these swanky duds."
-      "Eddie Knox is one cat who ain't afraid to look his best. As long as his hair is in place, he's as comfortable in old jeans as he is in these swanky duds."})
-(punk2_shop_desc
-   "Johnny has a couple of different looks, but neither of them involves bathing. With liberty spikes and a bullet belt, Johnny makes sordid, degenerate behavior look pretty good.")
-(classic_shop_desc
-   "Having abandoned his fascination with the sitar (an interest developed during a court-ordered \qmeditation retreat\q), Clive returns to the forefront of classic rock with his guitar wizardry and iconic status.")
-(funk1_shop_desc
-   "Raised in suburban Connecticut, Xavier Stone broke from his pampered upbringing after realizing he preferred rock clubs to country clubs. Weaving slick '70s style with chunky grooves, Xavier does it right every time.")
-(grim_shop_desc
-   "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's... you know... right.")
+(punkencore_outfit_blurb
+   "Likes: live shows, smashing stuff, kicking stuff, amps\n\nDislikes: wake-up calls, authority")
+(alternaencore_outfit_blurb
+   "Likes: Perfect spelling, boast-worthy bruises, strawberries\n\nDislikes: Rudeness, fake strawberry-flavored things")
+(glamencore_outfit_blurb
+   "Likes: Zebra print, arenas, pouting\n\nDislikes: irony, tour managers, alimony")
+(gothencore_outfit_blurb
+   "Likes: make-up, hailstorms, leather\n\nDislikes: Small talk, the beach")
+(metalencore_outfit_blurb
+   "Likes: Metal\n\nDislikes: Un-metal")
 (alterna1_outfit
    "SKULLS")
 (alterna2_outfit
@@ -159,9 +174,15 @@
 (deathmetal2_outfit
    "GARGOYLES")
 (goth2_outfit
-   "LEATHERS")
+   {if_else
+      $egg5
+      "LONG JACKET"
+      "LEATHERS"})
 (goth1_outfit
-   "FEATHERS")
+   {if_else
+      $egg5
+      "SILVER WINGS"
+      "FEATHERS"})
 (glam1_outfit
    "CODPIECE")
 (glam2_outfit

@@ -77,7 +77,7 @@
 (lespaul_marauder_shop_desc
    "Gibson's mid-'70s \qbudget\q solid body offering, the Marauder was an amalgam of design elements, boasting a \qLes Paul-ish\q alder body, a V-series headstock, and featuring both a humbucker and single coil pickup.")
 (epiphone_casino_shop_desc
-   "As one of John Lennon's favored guitars, the archtop Epiphone Casino played a significant role in shaping the soundtrack of the sixties.")
+   "As one of John Lennon's favored guitars, the archtop Epiphone Casino played a significant role in shaping the soundtrack of the '60s.")
 (epiphone_sheraton_shop_desc
    "A more upscale semi-acoustic known for its warm tone, the double-cutaway Sheraton features an inlayed headstock, block/triangle fretboard inlays, and neck and body binding.")
 (chet_atkins_shop_desc
@@ -98,6 +98,22 @@
    "It's likely a guy in Manowar actually plays a guitar like this, so I guess that's something.")
 (log_reward_shop_desc
    "Les Paul's first solidbody guitar, built in 1941, was called \qThe Log,\q due to its impractical weight and crude construction. This guitar, on the other hand, is an actual log.")
+(fish_reward_locked_desc
+   "Beat the game on EASY first, champ. Then you can buy this bad boy.")
+(usa_reward_locked_desc
+   "Get five stars on every song on EASY first and then we'll talk deal.")
+(coffin_reward_locked_desc
+   "Yeah, you gotta beat the game on MEDIUM before we'll sell you this one. Sorry.")
+(viking_reward_locked_desc
+   "If you can get five stars on every song on MEDIUM, you might be worthy of this guitar.")
+(snaketapus_reward_locked_desc
+   "Oh man. You SO want to beat the game on HARD for this one. For serious.")
+(eyeball_reward_locked_desc
+   "Get five stars on every song on HARD. I know, it's scary. You can do it, cap'n.")
+(battleaxe_reward_locked_desc
+   "Beat EXPERT. You have to. Because this thing is so freakin' righteous.")
+(log_reward_locked_desc
+   "If you take the time to get five stars on every song on EXPERT, this guitar will make up for the fact that you've lost all your friends.")
 (redoctane_shop_desc
    "This 3/4 scale SG replica - one you might very well recognize - was initially featured in the first Guitar Hero by way of a cheat code. Harmonix thankfully thought to leave the files on-disc for the second game so we could sell it to you proper.")
 (lp_ebony_shop_desc
@@ -121,7 +137,7 @@
 (sg_flames_shop_desc
    "You'll presumably be playing an SG while on the Highway to Hell - may as well anticipate your end-point with this tricked out custom finish.")
 (fv_v2_shop_desc
-   "By the late seventies, high profile usage of the Flying V via the likes of Jimi Hendrix and Dave Davies had prompted numerous reissues of the model. The second-generation V2 featured two distinctive Boomerang pickups.")
+   "By the late '70s, high profile usage of the Flying V via the likes of Jimi Hendrix and Dave Davies had prompted numerous reissues of the model. The second-generation V2 featured two distinctive Boomerang pickups.")
 (fv_century_shop_desc
    "Bask in the reflected (literally) glory of this iconic guitar, presented here in new-millennium fashion complete with full body mirrored pick guard.")
 (fv_red_shop_desc
@@ -143,7 +159,7 @@
 (lp_dbl_yellow_shop_desc
    "Thanks to the debauched, low-slung guitar exploits of one Johnny Thunders, the TV Yellow double-cutaway has become the quintessential trash-punk Gibson.")
 (lp_dbl_green_shop_desc
-   "Lightning strikes 3 times with this custom finished Gibson Les Paul Special.")
+   "Lightning strikes three times with this custom finished Gibson Les Paul Special.")
 (lp_dbl_resin_shop_desc
    "Gibson goes Jurassic with this unique amber LP double-cutaway - complete with prehistoric mosquito trapped within the fossilized resin.")
 (fb_ebony_shop_desc
@@ -153,7 +169,7 @@
 (fb_copper_shop_desc
    "This sleek copper finish compliments the unconventional shape of the Gibson Firebird.")
 (fb_leopard_shop_desc
-   "Reowrr! This little kitten's got claws, my friend. Saucer of milk - table three! Um... point made? Good.")
+   "Reowrr! This little kitten's got claws, my friend. Saucer of milk - table three! Um...point made? Good.")
 (fb_hippie_shop_desc
    "Trade in your hard earned cash for this crazy cool custom finish on this Gibson Firebird.")
 (coronet_cherry_shop_desc
@@ -163,7 +179,7 @@
 (coronet_green_shop_desc
    "Maximize the Coronet's retro-cool factor with this radiant green sparkle finish.")
 (van_yellow_shop_desc
-   "Bust out the hairspray and pour yourself into some spandex - this brilliant yellow Vanguard is taking you back to the time when hair-metal ruled the charts, whether you like it or not.")
+   "Bust out the hairspray and pour yourself into some spandex - this brilliant yellow Vanguard is taking you back to the time when hair metal ruled the charts, whether you like it or not.")
 (mod_ebony_shop_desc
    "Make a statement with the Gibson Moderne. The postmodern design will get you noticed.")
 (mod_cherry_shop_desc
@@ -261,13 +277,13 @@
 (drinkup_shop_desc
    "OUNCE of SELF is ready to out-heavy the entire face of this planet! Keeping everything heavy, sludgy, and earth-shaking, the band tends to leave their mark on the metal scene.")
 (elephantbones_shop_desc
-   "That Handsome Devil: Born of chemicals and lightning spark, just in time to kick the world's teeth in.")
+   "Inflatable mattress, afloat in scattered paper, paddling pens past distractions, stranded on my island screaming at passersby, so far away it sounds like music...gOdFoRbId...That Handsome Devil.")
 (fallofpangea_shop_desc
-   "Valient Thorr wrote this song about the beginning of the Earth, to explain what really happened... how the dinos
+   "Valient Thorr wrote this song about the beginning of the Earth, to explain what really happened...how the dinosaurs were killed by weather and how Earth was seeded by the Venusians in search of a new home."
 (ftk_shop_desc
    "VAGIANT is composed of 3 HMX miscreants (Elena, The Hellion, and Leeanne) and one scrappy drummer (LoWreck). When not writing heavily edited anthems like this one, they spend their free time hating stuff.")
 (gemini_shop_desc
-   "\qKahanek lets loose (on 'Real Life') with one vivid demonstration after another of the pure joy of playing the electric guitar as if your life depended on it.\q\n- Jason Warburg\n- \qThe Daily Vault\q (not to be confused with Jason Warburg of HMX)")
+   "\qKahanek lets loose (on \qReal Life\q) with one vivid demonstration after another of the pure joy of playing the electric guitar as if your life depended on it.\q\n- Jason Warburg\n- \qThe Daily Vault\q (not to be confused with Jason Warburg of HMX)")
 (jordan_shop_desc
    "Buckethead wrote and recorded \qJordan\q specifically for Guitar Hero II (in a special chicken coop, no less!)")
 (kicked_shop_desc
@@ -303,8 +319,60 @@
 (thunderhorse_shop_desc
    "Extreme METAL band DETHKLOK - \qthe biggest act in the universe\q - brings forth the ultimate metal Armageddon. Prepare to be crushed. On \nHBO Max.")
 (trogdor_shop_desc
-   "The Trogdor song from the Strong Bad Email 'dragon' was actually an afterthought that was added at the last minute. Mike was finishing up the cartoon and Matt suddenly started screaming the chorus while making eggs.")
+   "The Trogdor song from the Strong Bad Email \qdragon\q was actually an afterthought that was added at the last minute. Mike was finishing up the cartoon and Matt suddenly started screaming the chorus while making eggs.")
 (xstream_shop_desc
-   "This track is off the highly anticipated 14th album by Voivod, entitled 'Katorz' on The End Records.")
+   "This track is off the highly anticipated 14th album by Voivod, entitled \qKatorz\q on The End Records.")
 (yeswecan_shop_desc
    "Made In Mexico was made in Providence, Rhode Island while eating stuffies off a Red. The smallest state in the nation actually has over 4000 miles of ocean coastline, and all Rhode Islanders live within a 12 minute drive of the Atlantic.")
+(classic_shop_desc
+   "Having abandoned his fascination with the sitar (an interest developed during a court-ordered \qmeditation retreat\q), Clive returns to the forefront of classic rock with his guitar wizardry and iconic status.")
+(funk1_shop_desc
+   "Raised in suburban Connecticut, Xavier Stone broke from his pampered upbringing after realizing he preferred rock clubs to country clubs. Weaving slick '70s style with chunky grooves, Xavier does it right every time.")
+(grim_shop_desc
+   "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right.")
+(punkencore_shop_desc
+   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary.")
+(alternaencore_shop_desc
+   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
+(glamencore_shop_desc
+   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
+(gothencore_shop_desc
+   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q")
+(metalencore_shop_desc
+   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
+(grimencore_shop_desc
+   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
+(punk2_shop_desc
+   "Johnny has a couple of different looks, but neither of them involves bathing. With liberty spikes and a bullet belt, Johnny makes sordid, degenerate behavior look pretty good.")
+(alterna2_shop_desc
+   "The queen of alternative rock, through and through, Judy is always seen in the latest styles. Keep her on the cutting edge with this cute get-up.")
+(glam2_shop_desc
+   {if_else
+      $egg5
+      "Not everybody can pull off a top hat and feather boa. Hair is not afraid to subvert the dominant paradigm in this ultra-glam ensemble."
+      "Not everybody can pull off a top hat and feather boa. Izzy is not afraid to subvert the dominant paradigm in this ultra-glam ensemble."})
+(deathmetal2_shop_desc
+   {if_else
+      $egg5
+      "Feathers and facepaint? Only Pandora could pull that off."
+      "The consummate chameleon, Pandora is admired almost as much for her unique and ever-changing personal style as for her incomparable shredding skills."})
+(metal2_shop_desc
+   {if_else
+      $egg5
+      "Having spent most of his life stuck in one place or another, Hazzard loves nothing more than to hit the open road. Some people hate to tour. Hazzard lives for it."
+      "Since they don't make you play better and you can't drink 'em, Axel has zero interest in clothes. But even Axel needs a change once in awhile."})
+(rockabill2_shop_desc
+   {if_else
+      $egg5
+      "Dax Deville is one cat who ain't afraid to look his best. As long as his hair is in place, he's as comfortable in old jeans as he is in these swanky duds."
+      "Eddie Knox is one cat who ain't afraid to look his best. As long as his hair is in place, he's as comfortable in old jeans as he is in these swanky duds."})
+(rock1_shop_desc
+   {if_else
+      $egg5
+      "Gina's look is designed for backbreaking life on the road; if she can't pass out in the van wearing it, she's not interested."
+      "Casey's look is designed for backbreaking life on the road; if she can't pass out in the van wearing it, she's not interested."})
+(deathmetal2_shop_desc
+   {if_else
+      $egg5
+      "The Norse shredding master keeps this in the back of his closet for when he really needs to command an audience."
+      "Asked about his gauntlets-to-gargoyles style, Lars responds, \qLARS HAS A REPUTATION OF STRENGTH OF WHICH HE NEEDS TO BE DOING THE UPHOLDING!\q"})
