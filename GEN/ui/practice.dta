@@ -34,6 +34,7 @@
    practice_selpart_screen
    (panels meta selpart_bg_panel practice_selpart_panel helpbar)
    (focus practice_selpart_panel)
+   (back_screen practice_selsong_screen)
    (helpbar
       (default
          ((fret1 help_continue)
@@ -54,6 +55,7 @@
    practice_diff_screen
    (panels meta sel_diff_practice_panel helpbar)
    (focus sel_diff_practice_panel)
+   (back_screen practice_selpart_screen)
    (helpbar
       (default
          ((fret1 help_continue)
@@ -185,6 +187,7 @@
    practice_sel_section_screen
    (panels meta midi_loader_panel practice_sel_section_panel helpbar)
    (focus practice_sel_section_panel)
+   (back_screen practice_diff_screen)
    (career_mode FALSE)
    (helpbar
       (default
