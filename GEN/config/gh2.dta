@@ -180,7 +180,9 @@
    (funk1
       (funk1))
    (grim
-      (grim)))
+      (grim))
+   (streamer
+      (streamer)))  
 (mc
    #include mc.dta)
 (store
