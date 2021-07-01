@@ -1,0 +1,164 @@
+(note_streak_popup_p0
+   {if_else
+      $egg5
+      {sprint
+         $player0_streak
+         " NOTES IN A ROW!"}
+      {sprint
+         $player0_streak
+         " NOTE STREAK!"}})
+(note_streak_popup_p1
+   {if_else
+      $egg5
+      {sprint
+         $player1_streak
+         " NOTES IN A ROW!"}
+      {sprint
+         $player1_streak
+         " NOTE STREAK!"}})
+(note_streak_popup_p2
+   {if_else
+      $egg5
+      {sprint
+         $player2_streak
+         " NOTES IN A ROW!"}
+      {sprint
+         $player2_streak
+         " NOTE STREAK!"}})
+(eg_streak_format
+   {if_else
+      {==
+         {gamecfg get mode}
+         quickplay}
+      {switch
+         {game get_track_type 0}
+         (kTrackBass
+            "%i Bass Streak!")
+         (kTrackRhythm
+            "%i Rhythm Streak!")
+         "%i Note Streak!"}
+      "%i Note Streak!"})
+(stk_format {sprint $player0_streak})
+(stk_zero "0")
+(cheat_focusmode
+   "Focus Mode")
+(cheat_neckless
+   "Neckless Mode")
+(speed_msg
+   "NOTES: %d%%  SONG: %d%%")
+(gm_tspd
+   "UNUSED")
+(gm_sngspd
+   "NOTE SPEED")
+(gm_unusedsl
+   "SONG SPEED")
+(GM_BLACK_BACKGD
+   "FOCUS MODE")
+(GAME_MODIFIER
+   "GAME MODIFIERS")
+(help_adjspd
+   "ADJUST SPEED")
+(conceived_by
+   "as diabolically conceived by")
+(cheat_mtv_overlay
+   "Song Title Always")
+(cheat_awesomeness
+   "Sorry no cheats here")
+(cheat_barf
+   "Roxbury Mode")
+(EASTER_EGG1
+   "MiloHax Community")
+(EASTER_EGG3
+   "DISCORD, INTERNET")
+(EASTER_EGGa
+   "\qFriends Don't Let Friends Clon\q")
+(EASTER_EGGb
+   "\qCALL ATTENDANT\q")
+(EASTER_EGGc
+   "\qlord help my poor soul\q")
+(EASTER_EGGd
+   "\qweekly old man psa\q")
+(unlockeasteregg1_1
+   "Dear Valued GH2 Deluxe Player,")
+(unlockeasteregg1_2
+   "GUESS WHAT?")
+(unlockeasteregg1_3
+   "You have unlocked an EASTER EGG!")
+(unlockeasteregg1_4
+   "\nIt seems like you wanted to activate hyperspeed. We're sorry to inform you that hyperspeed no longer exists as a code.\n\nPress SELECT, SELECT on any setlist screen to access the new modifiers screen!\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. This isn't the only easter egg...try OBOYOBOY in other places in this video game...")
+(unlockeasteregg2_1
+   "Dear Valued GH2 Deluxe Player,")
+(unlockeasteregg2_2
+   "EASTER EGG!")
+(unlockeasteregg2_3
+   "You found another one! Hell yeah!")
+(unlockeasteregg2_4
+   "\nIf you want to keep the song title on, press YELLOW, ORANGE, RED, YELLOW, ORANGE, RED on the main menu! Apologies for the occasional text blur, that's a leftover from the venue rendering that I couldn't disable.\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. It shouldn't be too difficult to find the other eggs, and you really want to find them all...")
+(unlockeasteregg3_1
+   "Dear Valued GH2 Deluxe Player,")
+(unlockeasteregg3_2
+   "EASTER EGG!")
+(unlockeasteregg3_3
+   "How many more are there?")
+(unlockeasteregg3_4
+   "\nEver want to play performance mode, but still want to see your score? Press YELLOW, RED, RED, YELLOW on the main menu for neckless mode! For minimalist play, enable this and focus mode at the same time.\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. Have you fired your band manager yet? That guy's a real asshole...")
+(unlockeasteregg4_1
+   "Dear Awesome GH2 Deluxe Player,")
+(unlockeasteregg4_2
+   "AWESOME EGG!")
+(unlockeasteregg4_3
+   "awesome awesome awesome awesome")
+(unlockeasteregg4_4
+   "\nWe infused this game with the very same Awesomeness Detection that you know and love from the Rock Band series! Press YELLOW, BLUE, ORANGE, YELLOW, BLUE, ORANGE, YELLOW, BLUE, ORANGE on the main menu to enable it!\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. Have you found all four easter eggs? If you have, then I really have to give you credit...")
+(finaleggtxt1
+   "CONGRATULATIONS")
+(finaleggtxt2
+   "YOU FOUND ALL THE EGGS")
+(finaleggtxt3
+   "Thank you so much for playing our special version of\nGuitar Hero II.")
+(sel_sqped
+   " ")
+(speed_label4
+   "PLAY SHOW")
+(speed_label5
+   "CHARACTER")
+(speed_label6
+   "GUITAR")
+(speed_label7
+   "VENUE")
+(speed_label8
+   "EXTRAS")
+(CAHNGE_SEPED
+   "FREE PLAY")
+(CHANGE_SEPED
+   "FREE PLAY")
+(CAHNGE_SECTION
+   "VIDEO SETTINGS")
+(NWE_SONG
+   "PRACTICE")
+(ADUIO_SETTINGS
+   "AUDIO SETTINGS")
+(LEFT_PAYYER_1
+   "SONG TITLE ALWAYS")
+(LEFT_PAYYER_2
+   "HORSE HEAD")
+(LEFT_PAYYER_3
+   "ROXBURY MODE")
+(LEFT_PAYYER_4
+   "PERFORMANCE MODE")
+(LEFT_PAYYER_5
+   "AWESOMENESS")
+(LEFT_PAYYER_6
+   "EYEBALL CROWD")
+(LEFT_PAYYER_7
+   "MONKEY CROWD")
+(LEFT_PAYYER_8
+   "AIR GUITAR")
+(vs_titty
+   "EXTRAS")
+(vs_bag
+   "SET BLACK HIGHWAY")
+(vs_bscan
+   "FLAMING HEAD")
+(vs_wodescreen
+   "NECKLESS MODE")
