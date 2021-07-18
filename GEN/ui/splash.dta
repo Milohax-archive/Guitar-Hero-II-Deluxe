@@ -38,7 +38,7 @@
          {ui goto_screen splash_screen}
          {ui goto_screen guitar_help_screen}})}
 #define DELAY_BEFORE_ATTRACT_SEC
-(60)
+(20)
 {new
    UIPanel
    splash_panel
