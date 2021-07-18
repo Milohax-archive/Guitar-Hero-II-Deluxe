@@ -98,15 +98,6 @@
          {!
             [already_entered]}
          {synth play_sequence meta_lick}
-         {if
-            {&&
-               {==
-                  {game get_controller 0}
-                  guitar}
-               {==
-                  {campaign tutorials_done}
-                  0}}
-            {$this set_focus main_tutorial.btn}}
          {$this set already_entered TRUE}}
       {game set_tutorial_running FALSE}
       {main_msg.view set_showing FALSE}
