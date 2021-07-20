@@ -112,9 +112,195 @@
       {if_else
          $focusmode
          {do
-            {game set_career}
-            {ui goto_screen loading_screen}}
-         {ui goto_screen sel_character_new_screen_qp}}
+            {if_else
+               {campaign new_campaign}
+               {game set_character metal1 TRUE}
+               {do
+                  {game set_career}
+                  {campaign get_character_info}
+                  {ui goto_screen practice_sel_speed_screen_qp}}}
+            {ui goto_screen practice_sel_speed_screen_qp}}
+         {ui goto_screen practice_sel_speed_screen_qp}}
+      kDataUnhandled)}
+{new
+   GHPanel
+   sel_speed_panel_qp
+   (file sel_speed_qp.milo)
+   (focus speed0.btn)
+   (SELECT_START_MSG
+      {switch
+         $component
+         (speed0.btn
+            {ui goto_screen loading_screen})
+         (speed1.btn
+            {ui goto_screen sel_character_new_screen_qp})
+         (speed2.btn
+            {ui goto_screen sel_guitar_edit_screen_qp})
+         (speed3.btn
+            {ui goto_screen sel_venue_screen_qp})
+         (speed4.btn
+            {ui goto_screen video_settings_gig_screen})})}
+{new
+   GHScreen
+   practice_sel_speed_screen_qp
+   (panels meta sel_speed_panel_qp helpbar)
+   (focus sel_speed_panel_qp)
+   (helpbar
+      (default
+         ((fret1 help_continue)
+            (fret2 help_back)
+            (strum help_updown))))
+   (BUTTON_DOWN_MSG
+      {if
+         {== $button kPad_Tri}
+         {$this backwards_anim}
+         {synth play_sequence button_back.cue}
+         {ui goto_screen qp_diff_screen}}
+      kDataUnhandled)}
+#define VIDEO_SETTINGS_GIG_PANEL_HANDLERS
+((focus gs_left_p1.btn)
+   (focus_component
+      "")
+   (orig_sync 0)
+(enter
+      {lefty1.chk set_check $songtitle}
+      {fuck.chk set_check $cheat_enabled_horse_head_mode}
+      {lefty3.chk set_check $barf_cheat}
+      {lefty4.chk set_check $cheat_enabled_performance_mode}
+      {lefty5.chk set_check $awesomeness}
+      {widescreen.chk set_check $neckless}
+      {p_scan.chk set_check $cheat_enabled_flaming_head}
+      {switch $cheat_crowd_heads
+         (eyeball_crowd_heads {do
+                                 {lefty6.chk set_check TRUE}
+                                 {lefty7.chk set_check FALSE}})
+         (monkey_crowd_heads {do 
+                                {lefty7.chk set_check TRUE}
+                                {lefty6.chk set_check FALSE}})
+         (0 {do
+               {lefty6.chk set_check FALSE}
+               {lefty7.chk set_check FALSE}})}
+      {if_else {== $cheat_guitar air_guitar}
+         {lefty8.chk set_check TRUE}
+         {lefty8.chk set_check FALSE}}
+      {$this update_help_display})
+   (update_help_display
+         {helpbar
+            set_display
+            ((fret1 help_onoff)
+               (fret2 help_back)
+               (strum help_updown))})
+   (FOCUS_MSG
+      {$this
+         set
+         focus_component
+         {$new_focus name}}
+      {$this update_help_display})
+   (slider_start_msg
+      ($component)
+      {synth play_sequence button_toggle})
+   (slider_select_cancel
+      ($component)
+      {$this update_help_display}
+      kDataUnhandled)
+   (SELECT_START_MSG
+      {switch
+         $component
+         (p_scan.btn
+            {p_scan.chk toggle}
+            {if_else {p_scan.chk get_check}
+               {do
+                  {set $cheat_enabled_flaming_head TRUE}
+                  {fuck.chk set_check FALSE}
+                  {set $cheat_enabled_horse_head_mode FALSE}}
+               {set $cheat_enabled_flaming_head FALSE}})
+
+         (widescreen.btn
+            {widescreen.chk toggle}
+            {if_else {widescreen.chk get_check}
+               {do
+                  {set $neckless TRUE}
+                  {lefty4.chk set_check FALSE}
+                  {set $cheat_enabled_performance_mode FALSE}}
+               {set $neckless FALSE}})
+
+         (gs_left_p1.btn
+            {lefty1.chk toggle}
+            {set $songtitle {lefty1.chk get_check}})
+
+         (gs_left_p2.btn
+            {fuck.chk toggle}
+            {if_else {fuck.chk get_check}
+               {do
+                  {set $cheat_enabled_horse_head_mode TRUE}
+                  {p_scan.chk set_check FALSE}
+                  {set $cheat_enabled_flaming_head FALSE}}
+               {set $cheat_enabled_horse_head_mode FALSE}})
+
+         (gs_left_p3.btn
+            {lefty3.chk toggle}
+            {set $barf_cheat {lefty3.chk get_check}})
+
+         (gs_left_p4.btn
+            {lefty4.chk toggle}
+            {if_else {lefty4.chk get_check}
+               {do
+                  {set $cheat_enabled_performance_mode TRUE}
+                  {widescreen.chk set_check FALSE}
+                  {set $neckless FALSE}}
+               {set $cheat_enabled_performance_mode FALSE}})
+
+         (gs_left_p5.btn
+            {lefty5.chk toggle}
+            {set $awesomeness {lefty5.chk get_check}})
+
+         (gs_left_p6.btn
+            {lefty6.chk toggle}
+            {if_else {lefty6.chk get_check}
+               {do
+                  {set $cheat_crowd_heads eyeball_crowd_heads}
+                  {lefty7.chk set_check FALSE}}
+               {set $cheat_crowd_heads 0}})
+
+         (gs_left_p7.btn
+            {lefty7.chk toggle}
+            {if_else {lefty7.chk get_check}
+               {do
+                  {set $cheat_crowd_heads monkey_crowd_heads}
+                  {lefty6.chk set_check FALSE}}
+               {set $cheat_crowd_heads 0}})
+
+         (gs_left_p8.btn
+            {lefty8.chk toggle}
+            {if_else {lefty7.chk get_check}
+               {set $cheat_guitar air_guitar}
+               {set $cheat_guitar 0}})
+         (calibrate_lag.btn
+                      {game set_character streamer TRUE})
+                  kDataUnhandled}
+      {$this update_help_display}))
+{new
+   SliderPanel
+   video_settings_gig_panel
+   (file video_settings_gig.milo)
+   VIDEO_SETTINGS_GIG_PANEL_HANDLERS
+   (pscan_warning pscan_warning_screen)}
+{new
+   GHScreen
+   video_settings_gig_screen
+   (panels meta video_settings_gig_panel helpbar)
+   (focus video_settings_gig_panel)
+   (allow_back FALSE)
+   (enter
+      {$this
+         enable
+         {video_settings_gig_panel find gs_left_p2.btn}})
+   (BUTTON_DOWN_MSG
+      {if
+         {== $button kPad_Tri}
+         {$this backwards_anim}
+         {synth play_sequence button_back.cue}
+         {ui goto_screen practice_sel_speed_screen_qp}}
       kDataUnhandled)}
 {new
    GHPanel
@@ -405,15 +591,15 @@
 {new
    GHScreen
    sel_character_new_screen_qp
-   (done_screen sel_guitar_new_screen_qp)
-   (back_screen qp_diff_screen)
+   (done_screen practice_sel_speed_screen_qp)
+   (back_screen practice_sel_speed_screen_qp)
    SEL_CHARACTER_COMMON_QP
    (SELECT_START_MSG SEL_CHARACTER_SELECT_HANDLER_QP kDataUnhandled)}
 {new
    GHScreen
    sel_character_edit_screen_qp
-   (done_screen sel_guitar_new_screen_qp)
-   (back_screen qp_diff_screen)
+   (done_screen practice_sel_speed_screen_qp)
+   (back_screen practice_sel_speed_screen_qp)
    SEL_CHARACTER_COMMON_QP
    (SELECT_START_MSG SEL_CHARACTER_SELECT_HANDLER_QP kDataUnhandled)}
 {new
@@ -534,7 +720,7 @@
          set_guitar
          {sel_guitar_panel_qp get_selected_guitar 0}
          {sel_guitar_panel_qp get_selected_skin 0}}
-      {ui goto_screen sel_venue_screen_qp})
+      {ui goto_screen practice_sel_speed_screen_qp})
    (BUTTON_DOWN_MSG
       {switch
          $button
@@ -552,7 +738,7 @@
                set_guitar
                {sel_guitar_panel_qp get_selected_guitar 0}
                {sel_guitar_panel_qp get_selected_skin 0}}
-            {ui goto_screen sel_venue_screen_qp}
+            {ui goto_screen practice_sel_speed_screen_qp}
             TRUE}
          FALSE})
    (guitar_selected
@@ -583,7 +769,7 @@
    (go_back
       {$this backwards_anim}
       {synth play_sequence button_back.cue}
-      {ui goto_screen sel_character_new_screen_qp})}
+      {ui goto_screen practice_sel_speed_screen_qp})}
 {new
    GHScreen
    sel_guitar_edit_screen_qp
@@ -591,7 +777,7 @@
    (go_back
       {$this backwards_anim}
       {synth play_sequence button_back.cue}
-      {ui goto_screen sel_character_new_screen_qp})}
+      {ui goto_screen practice_sel_speed_screen_qp})}
 #define SEL_VENUE_SCREEN_HANDLERS_QP
 ((panels meta sel_venue_panel_qp helpbar)
    (focus sel_venue_panel_qp)
@@ -680,7 +866,7 @@
                {game set_venue stone})}})
    (SELECT_START_MSG
       {game set_career}
-      {ui goto_screen loading_screen}
+      {ui goto_screen practice_sel_speed_screen_qp}
       kDataUnhandled))
 {new
    GHPanel
@@ -691,12 +877,12 @@
    GHScreen
    sel_venue_screen_qp
    (allow_back FALSE)
-   (next_screen loading_screen)
+   (next_screen practice_sel_speed_screen_qp)
    SEL_VENUE_SCREEN_HANDLERS
    (BUTTON_DOWN_MSG
       {cond
          ({== $button kPad_Tri}
             {$this backwards_anim}
             {synth play_sequence button_back.cue}
-            {ui goto_screen sel_guitar_new_screen_qp})}
+            {ui goto_screen practice_sel_speed_screen_qp})}
       kDataUnhandled)}

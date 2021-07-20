@@ -4,6 +4,51 @@
 (3.0)
 {new
    GHPanel
+   streak_overlay_panel
+   (file streak_overlay.milo)
+   (enter
+      {if_else
+         {game is_tutorial_running}
+         {$this show_overlay FALSE}
+         {$this setup_text}})
+   (setup_streak
+      {stk_campaign_line1.lbl set_showing TRUE}
+      {stk_campaign_line2.lbl set_showing FALSE}
+      {set $streakline 1}
+      {$this set_line stk_campaign_line 1 {localize stk_zero}}
+      {$this set_line stk_campaign_line 2 {localize stk_zero}}
+      {set $beforefirstnote TRUE})
+   (setup_text
+      {do
+         {do
+            ($prefix
+               "stk_campaign_line")
+            {stk_campaign_song_id.view set_showing TRUE}
+            {$this set_line $prefix 1 {localize stk_format}}
+            {stk_campaign_line1.lbl set_wrap_width 200}
+         }})
+   (not_an_fc
+      {set $streakline 2}
+      {stk_campaign_line1.lbl set_showing FALSE}
+      {stk_campaign_line2.lbl set_showing TRUE})
+   (set_line
+      ($prefix $i $text)
+      {{sprint
+            $prefix
+            $i
+            ".lbl"}
+         set_localized_text
+         $text})
+   (show_overlay
+      ($show)
+      {$this set_showing $show}
+      {$this
+         set_paused
+         {! $show}})}
+
+
+{new
+   GHPanel
    mtv_overlay_panel
    (file mtv_overlay.milo)
    (enter
@@ -13,6 +58,8 @@
          {$this setup_text}})
    (setup_text
       {do
+         ($song
+            {gamecfg get_song})
          ($song_text
             {game get_song_text})
          ($artist_text
@@ -48,7 +95,32 @@
                         "%)"}}}
                {$this set_line $prefix 1 $song_text}}
             {$this set_line $prefix 2 $song_caption}
-            {$this set_line $prefix 3 $artist_text}}})
+            {$this set_line $prefix 3 $artist_text}
+            {mtv_campaign_line4.lbl set_wrap_width 540}
+            {mtv_campaign_line4_shadow.lbl set_wrap_width 540}
+            {if_else
+               {!=
+                  ""
+                  {localize
+                     {sprint
+                        $song
+                        "_author"}}}
+               {$this
+                  set_line
+                  $prefix
+                  4
+                  {sprint
+                     "Author: "
+                     {localize
+                        {sprint
+                           $song
+                           "_author"}}}}
+               {$this
+                  set_line
+                  $prefix
+                  4
+                  {localize mtv_chart_authr}}}
+   }})
    (set_line
       ($prefix $i $text)
       {{sprint
@@ -91,6 +163,8 @@
       {set $player0_streak 0}
       {set $player1_streak 0}
       {set $player2_streak 0}
+      {streak_overlay_panel setup_streak}
+      {streak_overlay_panel set_line stk_campaign_line $streakline {localize stk_zero}}
       {set_loader_period 5}
       {set
          [encore_unlock_check]
@@ -128,6 +202,7 @@
       ($fast $encore)
       {track_panel intro_start_msg}
       {mtv_overlay_panel show_overlay FALSE}
+      {streak_overlay_panel show_overlay FALSE}
       {if
          $encore
          {do
@@ -172,6 +247,17 @@
          set_showing
          {! $focusmode}}
       {if
+         $focusmode
+         {world do_force_shot lighter}}
+      {if {&&
+	  $focusmode
+	  {||
+         {== {gamecfg get mode} career}
+         {== {gamecfg get mode} quickplay}
+         {== {gamecfg get mode} multi_coop}}}
+         {if {exists world}
+            {world toggle_pick_shot}}}
+      {if
          {&&
             {! $neckless}
             {! $cheat_enabled_performance_mode}}
@@ -188,7 +274,8 @@
          (units kTaskSeconds)
          (script
             {handle
-               ($this intro_end)})}
+               ($this intro_end)}
+            {streak_overlay_panel show_overlay TRUE})}
       {set
          [intro_complete]
          TRUE})
@@ -239,9 +326,18 @@
       {stop_sfx sp_deployed}
       {stop_sfx sp_deployed_multi}
       {stop_sfx sp_deploystart.cue}
+      {streak_overlay_panel show_overlay FALSE}
       kDataUnhandled)
    (game_won_msg
       ($encore)
+      {if {&&
+	  $focusmode
+	  {||
+         {== {gamecfg get mode} career}
+         {== {gamecfg get mode} quickplay}
+         {== {gamecfg get mode} multi_coop}}}
+         {if {exists world}
+            {world toggle_pick_shot}}}
       {world_panel set_showing TRUE}
       {if_else
          {gamecfg get game_over_sequence}
@@ -274,6 +370,14 @@
             kDataUnhandled}
          0})
    (game_lost
+      {if {&&
+	  $focusmode
+	  {||
+         {== {gamecfg get mode} career}
+         {== {gamecfg get mode} quickplay}
+         {== {gamecfg get mode} multi_coop}}}
+         {if {exists world}
+            {world toggle_pick_shot}}}
       {world_panel set_showing TRUE}
       {track_panel set_showing FALSE}
       {game set_realtime TRUE}
@@ -433,7 +537,7 @@
 ()
 #endif
 #define GAME_PANELS
-(midi_loader_panel game TRACK_MASK world_panel track_panel hud mtv_overlay_panel)
+(midi_loader_panel game TRACK_MASK world_panel track_panel hud mtv_overlay_panel streak_overlay_panel)
 {new
    GHScreen
    game_screen

@@ -11,9 +11,9 @@
 (classic
    "Clive Winston")
 (deathmetal
-   "Lars Ümlaüt")
+   "Lars ÃœmlaÃ¼t")
 (deathmetal2
-   "Lars Ümlaüt")
+   "Lars ÃœmlaÃ¼t")
 (funk1
    "Xavier Stone")
 (glam
@@ -78,6 +78,22 @@
    "Axel Steel 80's")
 (grimencore
    "Grim Ripper 80's")
+(alternagh1
+   "Judy Nails GH1")
+(gothgh1
+   "Pandora GH1")
+(punkgh1
+   "Johnny Napalm GH1")
+(glamgh1
+   "Izzy Sparks GH1")
+(metalgh1
+   "Axel Steel GH1")
+(funkgh1
+   "Xavier Stone GH1")
+(classicgh1
+   "Clive Wilson GH1")
+(grimgh1
+   "Grim Ripper GH1")
 (streamer
    "Streamer")
 (alterna_blurb
@@ -93,8 +109,8 @@
 (deathmetal_blurb
    {if_else
       $egg5
-      "Lock the doors and board the windows, Lars Ümlaüt is soon to storm a town near you. An intimidating presence, the Norwegian-born Ümlaüt describes himself as \qa force for you to be doing the reckoning with!\q"
-      "Lock the doors and board the windows, Lars Ümlaüt is coming for you! An intimidating presence, the Norwegian-born Ümlaüt describes himself as \qa force for you to be doing the reckoning with!\q"})
+      "Lock the doors and board the windows, Lars ÃœmlaÃ¼t is soon to storm a town near you. An intimidating presence, the Norwegian-born ÃœmlaÃ¼t describes himself as \qa force for you to be doing the reckoning with!\q"
+      "Lock the doors and board the windows, Lars ÃœmlaÃ¼t is coming for you! An intimidating presence, the Norwegian-born ÃœmlaÃ¼t describes himself as \qa force for you to be doing the reckoning with!\q"})
 (funk1_blurb
    "Raised in suburban Connecticut, Xavier Stone broke from his pampered upbringing after realizing he preferred rock clubs to country clubs. Weaving slick '70s style with chunky grooves, Xavier does it right every time.")
 (goth_blurb
@@ -105,6 +121,7 @@
       "A real crowd pleaser, Hair thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Hair's fan base is even bigger than, well, his hair."
       "A real crowd pleaser, Izzy thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Izzy's fan base is even bigger than his hair."})
 (grim_blurb
+   {if_else
       $egg5
       "This rock star is bad to the bone. Grim's riffs are so huge, fans are lucky just to leave the show with their souls intact. At his latest killer performance, an awestruck fan gushed, \qThe curtains flew, then he appeared!\q"
       "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."})

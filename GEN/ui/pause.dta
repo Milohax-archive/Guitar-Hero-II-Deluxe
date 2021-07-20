@@ -46,10 +46,15 @@
             {$this resume})
          (restart.btn
             {$this restart})
-         (audio_options.btn
+         (change_speed.btn
             {ui goto_screen pause_audio_settings_screen})
-         (video_options.btn
+         (section.btn
             {ui goto_screen pause_video_settings_screen})
+         (newsong.btn
+            {gamecfg set mode practice}
+            {gamecfg set_track 0 0}
+            {practice_sel_section_screen set career_mode FALSE}
+            {meta_loading_goto practice_sel_section_screen})
          (quit.btn
             {if
                {==
@@ -57,34 +62,7 @@
                   {gamecfg get mode}}
                {gamecfg set continue_screen sel_song_screen}}
             {meta_loading_goto
-               {gamecfg get continue_screen}})
-         (reset.btn
-            {switch
-               [lefty_switch]
-               (0
-                  {options
-                     set_lefty
-                     0
-                     {!
-                        {options get_lefty 0}}})
-               (1
-                  {options
-                     set_lefty
-                     1
-                     {!
-                        {options get_lefty 1}}})
-               (2
-                  {options
-                     set_lefty
-                     0
-                     {!
-                        {options get_lefty 0}}}
-                  {options
-                     set_lefty
-                     1
-                     {!
-                        {options get_lefty 1}}})}
-            {ui goto_screen pause_video_settings_screen})}))
+               {gamecfg get continue_screen}})}))
 {new
    GHScreen
    pause_screen
@@ -143,11 +121,15 @@
          (section_career.btn
             {meta_loading_goto practice_sel_section_screen})
          (change_speed.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {gamecfg set mode quickplay}
+            {gamecfg set_track 0 0}
+            {meta_loading_goto
+               {gamecfg get continue_screen}})
          (change_speed_career.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {gamecfg set mode quickplay}
+            {gamecfg set_track 0 0}
+            {meta_loading_goto
+               {gamecfg get continue_screen}})
          (newsong.btn
             {meta_loading_nosave_goto practice_selsong_screen})
          (quit_career.btn
@@ -185,11 +167,15 @@
          (section_career.btn
             {meta_loading_goto practice_sel_section_screen})
          (change_speed.btn
-            {practice_change_speed_screen set back_screen pract_pause_focus_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {gamecfg set mode quickplay}
+            {gamecfg set_track 0 0}
+            {meta_loading_goto
+               {gamecfg get continue_screen}})
          (change_speed_career.btn
-            {practice_change_speed_screen set back_screen pract_pause_focus_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {gamecfg set mode quickplay}
+            {gamecfg set_track 0 0}
+            {meta_loading_goto
+               {gamecfg get continue_screen}})
          (newsong.btn
             {meta_loading_nosave_goto practice_selsong_screen})
          (quit_career.btn

@@ -10,20 +10,7 @@
    (enter
       {set $main_entered TRUE}
       {$this reset_player_settings}
-      {if
-         {!
-            [already_entered]}
-         {synth play_sequence meta_lick}
-         {if
-            {&&
-               {==
-                  {game get_controller 0}
-                  guitar}
-               {==
-                  {campaign tutorials_done}
-                  0}}
-            {$this set_focus main_tutorial.btn}}
-         {$this set already_entered TRUE}}
+      {$this set_focus main_quickspin.btn}
       {game set_tutorial_running FALSE}
       {main_msg.view set_showing FALSE}
       {set
@@ -111,15 +98,6 @@
          {!
             [already_entered]}
          {synth play_sequence meta_lick}
-         {if
-            {&&
-               {==
-                  {game get_controller 0}
-                  guitar}
-               {==
-                  {campaign tutorials_done}
-                  0}}
-            {$this set_focus main_tutorial.btn}}
          {$this set already_entered TRUE}}
       {game set_tutorial_running FALSE}
       {main_msg.view set_showing FALSE}
@@ -164,11 +142,11 @@
    (reset_player_settings
       {{game get_player_config 0}
          set_difficulty
-         kDifficultyMedium}
-      {game set_venue small2}
+         kDifficultyExpert}
+      {game set_venue fest}
       {game set_song_index 0}
-      {game set_character punk1 TRUE}
-      {game set_guitar_index 0}
+      {game set_character metal1 TRUE}
+      {game set_guitar_index 1}
       {do
          ($player2_config
             {game get_player_config 1})
