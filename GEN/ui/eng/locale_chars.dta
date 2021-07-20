@@ -11,9 +11,9 @@
 (classic
    "Clive Winston")
 (deathmetal
-   "Lars Ümlaüt")
+   "Lars ÃœmlaÃ¼t")
 (deathmetal2
-   "Lars Ümlaüt")
+   "Lars ÃœmlaÃ¼t")
 (funk1
    "Xavier Stone")
 (glam
@@ -109,8 +109,8 @@
 (deathmetal_blurb
    {if_else
       $egg5
-      "Lock the doors and board the windows, Lars Ümlaüt is soon to storm a town near you. An intimidating presence, the Norwegian-born Ümlaüt describes himself as \qa force for you to be doing the reckoning with!\q"
-      "Lock the doors and board the windows, Lars Ümlaüt is coming for you! An intimidating presence, the Norwegian-born Ümlaüt describes himself as \qa force for you to be doing the reckoning with!\q"})
+      "Lock the doors and board the windows, Lars ÃœmlaÃ¼t is soon to storm a town near you. An intimidating presence, the Norwegian-born ÃœmlaÃ¼t describes himself as \qa force for you to be doing the reckoning with!\q"
+      "Lock the doors and board the windows, Lars ÃœmlaÃ¼t is coming for you! An intimidating presence, the Norwegian-born ÃœmlaÃ¼t describes himself as \qa force for you to be doing the reckoning with!\q"})
 (funk1_blurb
    "Raised in suburban Connecticut, Xavier Stone broke from his pampered upbringing after realizing he preferred rock clubs to country clubs. Weaving slick '70s style with chunky grooves, Xavier does it right every time.")
 (goth_blurb
