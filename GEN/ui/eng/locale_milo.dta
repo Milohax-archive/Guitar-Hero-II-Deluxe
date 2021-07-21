@@ -38,7 +38,9 @@
             "%i Rhythm Streak!")
          "%i Note Streak!"}
       "%i Note Streak!"})
-(stk_format {sprint $player0_streak})
+(stk_format_0 {sprint $player0_streak})
+(stk_format_1 {sprint $player1_streak})
+(stk_format_2 {sprint $player2_streak})
 (stk_zero "0")
 (cheat_focusmode
    "Focus Mode")
