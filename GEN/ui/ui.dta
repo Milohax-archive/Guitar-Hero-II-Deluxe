@@ -1,7 +1,7 @@
 #define CHARACTERS
 ((punk alterna glam goth metal rockabill rock deathmetal classic funk1 grim))
 #define LOAD_CHARACTERS
-((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim streamer))
+((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
 #define STORE_CHARACTERS
 (classic funk1 grim)
 #define STORE_OUTFITS
