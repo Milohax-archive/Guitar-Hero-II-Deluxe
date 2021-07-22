@@ -94,6 +94,11 @@
    (enter
       {set $main_entered TRUE}
       {$this reset_player_settings}
+      {if
+         {!
+            [already_entered]}
+         {synth play_sequence meta_lick}
+         {$this set already_entered TRUE}}
       {game set_tutorial_running FALSE}
       {main_msg.view set_showing FALSE}
       {set
