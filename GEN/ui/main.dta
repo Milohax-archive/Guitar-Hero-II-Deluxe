@@ -1,89 +1,5 @@
 {new
    GHPanel
-   main_panel_egg
-   (file main_egg.milo)
-   (focus main_quickspin.btn)
-   (msg_last_frame 0)
-   (already_entered FALSE)
-   (memcard_flow_entered FALSE)
-   (retain_last_focus FALSE)
-   (enter
-      {set $main_entered TRUE}
-      {$this reset_player_settings}
-      {$this set_focus main_quickspin.btn}
-      {game set_tutorial_running FALSE}
-      {main_msg.view set_showing FALSE}
-      {set
-         [msg_last_frame]
-         0})
-   (SELECT_START_MSG
-      {switch
-         $component
-         (main_career.btn
-            {gamecfg set mode career}
-            {if_else
-               {>
-                  {campaign num_profiles}
-                  0}
-               {ui goto_screen chooseprof_screen}
-               {do
-                  {if_else
-                     $egg5
-                     {nameprof_screen set back_screen main_screen_egg}
-                     {nameprof_screen set back_screen main_screen}}
-                  {nameprof_screen set is_editing FALSE}
-                  {nameprof_screen set profile_slot 0}
-                  {nameprof_screen set next_screen sel_difficulty_screen}
-                  {ui goto_screen nameprof_screen}}})
-         (main_quickspin.btn
-            {gamecfg set mode quickplay}
-            {ui goto_screen qp_selsong_screen})
-         (main_multiplayer.btn
-            {ui goto_screen multi_screen})
-         (main_tutorial.btn
-            {ui goto_screen training_screen})
-         (main_options.btn
-            {ui goto_screen options_screen})})
-   (poll
-      {if_else
-         {game is_missing_multi_controller}
-         {$this disable main_multiplayer.btn}
-         {$this enable main_multiplayer.btn}}
-      {main_msg.view
-         set_showing
-         {<
-            {taskmgr ui_seconds}
-            {$this get msg_last_frame}}})
-   (reset_player_settings
-      {{game get_player_config 0}
-         set_difficulty
-         kDifficultyMedium}
-      {game set_venue small2}
-      {game set_song_index 0}
-      {game set_character punk1 TRUE}
-      {game set_guitar_index 0}
-      {do
-         ($player2_config
-            {game get_player_config 1})
-         {$player2_config set_character rockabill1 TRUE}
-         {$player2_config set_guitar_index 0}
-         {$player2_config set_difficulty kDifficultyMedium}})
-   (display_cheat_msg
-      ($cheat $enable)
-      {mm_msg.lbl
-         set_localized_text
-         {sprintf
-            {localize
-               {if_else $enable cheat_enabled_fmt cheat_disabled_fmt}}
-            {localize $cheat}}}
-      {$this
-         set
-         msg_last_frame
-         {'+'
-            {taskmgr ui_seconds}
-            5}})}
-{new
-   GHPanel
    main_panel
    (file main.milo)
    (focus main_quickspin.btn)
@@ -180,6 +96,96 @@
       {main_panel reset_player_settings})
    (enter
       {$this turn_off_ambient})}
+;
+;
+;
+;
+;
+; Below this line are the egg panels
+{new
+   GHPanel
+   main_panel_egg
+   (file main_egg.milo)
+   (focus main_quickspin.btn)
+   (msg_last_frame 0)
+   (already_entered FALSE)
+   (memcard_flow_entered FALSE)
+   (retain_last_focus FALSE)
+   (enter
+      {set $main_entered TRUE}
+      {$this reset_player_settings}
+      {$this set_focus main_quickspin.btn}
+      {game set_tutorial_running FALSE}
+      {main_msg.view set_showing FALSE}
+      {set
+         [msg_last_frame]
+         0})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (main_career.btn
+            {gamecfg set mode career}
+            {if_else
+               {>
+                  {campaign num_profiles}
+                  0}
+               {ui goto_screen chooseprof_screen}
+               {do
+                  {if_else
+                     $egg5
+                     {nameprof_screen set back_screen main_screen_egg}
+                     {nameprof_screen set back_screen main_screen}}
+                  {nameprof_screen set is_editing FALSE}
+                  {nameprof_screen set profile_slot 0}
+                  {nameprof_screen set next_screen sel_difficulty_screen}
+                  {ui goto_screen nameprof_screen}}})
+         (main_quickspin.btn
+            {gamecfg set mode quickplay}
+            {ui goto_screen qp_selsong_screen})
+         (main_multiplayer.btn
+            {ui goto_screen multi_screen})
+         (main_tutorial.btn
+            {ui goto_screen training_screen})
+         (main_options.btn
+            {ui goto_screen options_screen})})
+   (poll
+      {if_else
+         {game is_missing_multi_controller}
+         {$this disable main_multiplayer.btn}
+         {$this enable main_multiplayer.btn}}
+      {main_msg.view
+         set_showing
+         {<
+            {taskmgr ui_seconds}
+            {$this get msg_last_frame}}})
+   (reset_player_settings
+      {{game get_player_config 0}
+         set_difficulty
+         kDifficultyMedium}
+      {game set_venue small2}
+      {game set_song_index 0}
+      {game set_character punk1 TRUE}
+      {game set_guitar_index 0}
+      {do
+         ($player2_config
+            {game get_player_config 1})
+         {$player2_config set_character rockabill1 TRUE}
+         {$player2_config set_guitar_index 0}
+         {$player2_config set_difficulty kDifficultyMedium}})
+   (display_cheat_msg
+      ($cheat $enable)
+      {mm_msg.lbl
+         set_localized_text
+         {sprintf
+            {localize
+               {if_else $enable cheat_enabled_fmt cheat_disabled_fmt}}
+            {localize $cheat}}}
+      {$this
+         set
+         msg_last_frame
+         {'+'
+            {taskmgr ui_seconds}
+            5}})}
 {new
    GHScreen
    main_screen_egg
