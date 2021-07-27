@@ -662,10 +662,7 @@
          (new_song.btn
             {meta_loading_nosave_goto practice_selsong_screen})
          (quit.btn
-            {if_else
-               $egg5
-               {meta_loading_nosave_goto main_screen_egg}
-               {meta_loading_nosave_goto main_screen}})
+               {meta_loading_nosave_goto main_screen})
          (quit_career.btn
             {career_screen resume_from_practice}
             {meta_loading_goto career_screen})})}

@@ -208,8 +208,7 @@
    (allow_back FALSE)
    (animate_transition FALSE)
    (autosave TRUE)
-   (next_screen
-      {if_else $egg5 main_screen_egg main_screen})
+   (next_screen main_screen)
    (TRANSITION_COMPLETE_MSG
       {{game get_bank_loader}
          reset}

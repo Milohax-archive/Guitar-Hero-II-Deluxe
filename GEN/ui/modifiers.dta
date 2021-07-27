@@ -193,8 +193,5 @@
          {if_else
             {exists $modifier_exit}
             {ui goto_screen $modifier_exit}
-            {if_else
-               $egg5
-               {ui goto_screen main_screen_egg}
-               {ui goto_screen main_screen}}}}
+               {ui goto_screen main_screen}}}
       kDataUnhandled)}

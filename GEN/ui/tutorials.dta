@@ -691,10 +691,7 @@
             {ui pop_screen tutorial_quit_screen})
          (quit.btn
             {tutorial_quit_screen set next_screen meta_loading_screen}
-            {if_else
-               $egg5
-               {meta_loading_screen set next_screen main_screen_egg}
-               {meta_loading_screen set next_screen main_screen}}
+               {meta_loading_screen set next_screen main_screen}
             {ui pop_screen tutorial_quit_screen})})
    (BUTTON_DOWN_MSG
       {if_else
@@ -733,10 +730,7 @@
             {$this resume})
          (pause_controller_exit.btn
             {tutorial_quit_screen set next_screen meta_loading_screen}
-            {if_else
-               $egg5
-               {meta_loading_screen set next_screen main_screen_egg}
-               {meta_loading_screen set next_screen main_screen}}
+               {meta_loading_screen set next_screen main_screen}
             {ui pop_screen tutorial_quit_screen})})}
 {new
    GHScreen
@@ -770,7 +764,4 @@
       {{tut_script find tut_script.view}
          set_showing
          FALSE}
-      {if_else
-         $egg5
-         {meta_loading_goto main_screen_egg}
-         {meta_loading_goto main_screen}})}
+         {meta_loading_goto main_screen})}

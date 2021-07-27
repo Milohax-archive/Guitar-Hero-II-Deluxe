@@ -77,10 +77,7 @@
          {== $button kPad_Tri}
          {$this backwards_anim}
          {synth play_sequence button_back.cue}
-         {if_else
-            $egg5
-            {ui goto_screen main_screen_egg}
-            {ui goto_screen main_screen}}}
+            {ui goto_screen main_screen}}
       kDataUnhandled)}
 {new
    GHScreen

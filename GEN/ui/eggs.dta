@@ -127,4 +127,4 @@
          {== $button kPad_X}
          {synth play_sequence button_select}
          {song_provider init_data}
-         {ui goto_screen main_screen_egg}})}
+         {ui goto_screen main_screen}})}
