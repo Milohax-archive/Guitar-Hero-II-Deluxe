@@ -1,0 +1,59 @@
+;
+;
+;
+;
+;
+;
+;
+;
+; Easy Tips
+(easy_tip1
+   "You don't get any cash in EASY, but you do in MEDIUM, HARD and EXPERT.")
+(easy_tip2
+   "If you're getting 5 stars on every song without breaking a sweat, it's time for MEDIUM.")
+(easy_tip3
+   "Try MEDIUM or harder if you want to be able to buy new guitars, songs, videos, and more.")
+;
+;
+;
+;
+;
+;
+;
+;
+; Advanced Tips
+(advanced_tip1
+   "Stuck on a song?  Try getting 5 stars on an easier one.")
+(advanced_tip2
+   "Save your Star Power for note-heavy sections, for more points and bigger crowd boosts.")
+(advanced_tip3
+   "Chords are worth more points than regular notes!")
+(advanced_tip4
+   "Strum up and down to keep your arm from wearing out during fast passages.")
+(advanced_tip5
+   "Pick up characters, outfits, guitars, bonus songs, and more at The Store.")
+;
+;
+;
+;
+;
+;
+; Multiplayer tips
+(multi_coop_tip1
+   "In Cooperative Mode, both players need to tilt their guitars TOGETHER to engage Star Power.")
+(multi_coop_tip2
+   "You both need to engage Star Power together.")
+(multi_coop_tip3
+   "In Cooperative Mode, you both are working together to achieve maximum high score.")
+(multi_coop_tip4
+   "In Cooperative Mode, everyone's a winner. Unless you're both losers.")
+(multi_coop_tip5
+   "Your streaks are combined in Cooperative Mode - you lose your multiplier if one of you screws up.")
+(multi_coop_tip6
+   "Be careful in Cooperative Mode - if the Rock Meter gets too far into the red, you'll lose.")
+(multi_coop_tip7
+   "We aren't responsible if you end up hating each other.")
+(multi_coop_tip8
+   "Shouting \qSTAR POWER!\q is as good a method as any.")
+(multi_coop_tip9
+   "When someone calls a \qBand Meeting\q it's usually not a good thing.")

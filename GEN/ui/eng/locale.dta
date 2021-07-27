@@ -306,6 +306,10 @@
    "Select Your Guitar")
 (SELECTYOURSKIN
    "Select Your Finish")
+(METALOADING
+   "LOADING")
+(LOADING
+   "LOADING....")
 (mtv_made_famous
    {if_else
       $egg5
