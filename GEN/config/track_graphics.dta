@@ -1,4 +1,28 @@
-(slot_colors red orange yellow green blue)
+(slot_colors
+{if_else
+      $egg5
+      green
+      red} 
+	  
+{if_else
+      $egg5
+      red
+      orange}
+	  
+{if_else
+      $egg5
+      yellow
+      yellow}
+	  
+{if_else
+      $egg5
+      blue
+      green}
+
+{if_else
+      $egg5
+      orange
+      blue})
 (smasher
    (mats
       (normal gem_smasher)
@@ -18,7 +42,32 @@
       (bonus 20)))
 #define STRING_SET
 ((gems
-      (red orange yellow green blue)))
+({if_else
+      $egg5
+      green
+      red} 
+	  
+	  
+{if_else
+      $egg5
+      red
+      orange}
+	  
+{if_else
+      $egg5
+      yellow
+      yellow}
+	  
+{if_else
+      $egg5
+      blue
+      green}
+
+{if_else
+      $egg5
+      orange
+      blue})
+	  ))
 (gem
    (fps 60)
    (mat_formats

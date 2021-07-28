@@ -1,5 +1,34 @@
 (order
-   (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
+   (battle 
+	{if_else
+      $egg5
+	  iwantcandy
+      surrender}
+	  
+	  {if_else
+      $egg5
+	  wegotthebeat
+      possum}
+
+	  {if_else
+      $egg5
+	  iran
+      heartshapedbox}
+
+	  {if_else
+      $egg5
+	  ballstothewall
+      salvation}
+
+	  {if_else
+      $egg5
+	  18andlife
+      strutter}
+
+	  {if_else
+      $egg5
+	  noonelikeyou
+      shoutatthedevil})
    (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
    (small2 carryonwayward searchanddestroy messageinabottle billiondollar thembones warpigs)
    (big monkeywrench hush girlfriend whowasinmyroom cantyouhearme sweetchild)

@@ -4,8 +4,8 @@
    (file
 	{if_else
       $egg5
-      main.milo
-      main_egg.milo})
+      main_egg2.milo
+      main.milo})
    (focus main_quickspin.btn)
    (msg_last_frame 0)
    (already_entered FALSE)
@@ -46,7 +46,10 @@
          (main_multiplayer.btn
             {ui goto_screen multi_screen})
          (main_tutorial.btn
-            {ui goto_screen training_screen})
+   {if_else
+      $egg5
+	    {set $egg5 FALSE}
+	    {set $egg5 TRUE}})
          (main_options.btn
             {ui goto_screen options_screen})})
    (poll
