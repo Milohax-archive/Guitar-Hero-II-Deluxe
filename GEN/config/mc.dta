@@ -1,7 +1,13 @@
 (base_dir
-   "BAGHCE-00001")
+   {if_else
+      $egg5
+	    "BAGHCE-16384"
+	    "BAGHCE-16380"})
 (elf_name
-   "GHCE_000.01")
+   {if_else
+      $egg5
+	    "GHCE_000.02"
+	    "GHCE_000.01"})
 (ps2_icon
    (file
       "gh.icn")

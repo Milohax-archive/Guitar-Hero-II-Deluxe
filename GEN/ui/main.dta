@@ -51,7 +51,7 @@
 	    {set $egg5 FALSE}
 	    {set $egg5 TRUE}})
          (main_options.btn
-            {ui goto_screen options_screen})})
+            {ui goto_screen bootup_load})})
    (poll
       {if_else
          {game is_missing_multi_controller}
