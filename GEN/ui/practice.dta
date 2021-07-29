@@ -17,7 +17,11 @@
 {new
    GHPanel
    practice_selpart_panel
-   (file practice_selpart.milo)
+   (file
+	{if_else
+      $egg5
+      practice_selpart_80s.milo
+      practice_selpart.milo})
    (focus part0.btn)
    MULTISELECT_PART_HANDLERS
    (enter
@@ -43,7 +47,11 @@
 {new
    GHPanel
    sel_diff_practice_panel
-   (file sel_diff_practice.milo)
+   (file
+	{if_else
+      $egg5
+      sel_diff_practice_80s.milo
+      sel_diff_practice.milo})
    SEL_DIFFICULTY_COMMON
    (enter
       {$this update_focus})
@@ -67,7 +75,11 @@
 {new
    MultiSelectListPanel
    practice_sel_section_panel
-   (file practice_sel_section.milo)
+   (file
+	{if_else
+      $egg5
+      practice_sel_section_80s.milo
+      practice_sel_section.milo})
    (focus sel_section.lst)
    (enter
       {gamecfg
@@ -197,7 +209,11 @@
 {new
    SliderPanel
    modifiers_panel_pract
-   (file game_modifiers.milo)
+   (file
+	{if_else
+      $egg5
+      game_modifiers_80s.milo
+      game_modifiers.milo})
    (focus gs_guitar.sld)
    (focus_component
       "")
@@ -391,7 +407,11 @@
 {new
    GHPanel
    sel_speed_panel
-   (file sel_speed.milo)
+   (file
+	{if_else
+      $egg5
+      sel_speed_80s.milo
+      sel_speed.milo})
    (focus speed0.btn)
    (SELECT_START_MSG
       {switch
@@ -420,7 +440,11 @@
 {new
    GHPanel
    practice_panel
-   (file practice_panel.milo)
+   (file
+	{if_else
+      $egg5
+      practice_panel_80s.milo
+      practice_panel.milo})
    (enter
       {events_parser add_sink $this section}
       {game add_sink $this intro_skip}

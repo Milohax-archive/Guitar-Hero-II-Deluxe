@@ -1,7 +1,11 @@
 {new
    SliderPanel
    modifiers_panel
-   (file game_modifiers.milo)
+   (file
+	{if_else
+      $egg5
+      game_modifiers_80s.milo
+      game_modifiers.milo})
    (focus gs_guitar.sld)
    (focus_component
       "")

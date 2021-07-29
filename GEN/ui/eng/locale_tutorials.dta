@@ -1,5 +1,5 @@
 (TRAINING
-   "secret toggle")
+   "training")
 (practice
    "practice")
 (sel_speed
@@ -31,7 +31,7 @@
 (gems_hit_pattern
    "notes hit: %i%% (%i/%i)")
 (tutorials
-   "Tutorials")
+   "Change Game")
 (TUTORIAL_1
    "Basic Lessons")
 (TUTORIAL_2

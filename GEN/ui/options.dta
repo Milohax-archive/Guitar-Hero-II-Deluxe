@@ -1,7 +1,11 @@
 {new
    UIPanel
    options_panel
-   (file options.milo)
+   (file
+	{if_else
+      $egg5
+      options_80s.milo
+      options.milo})
    (focus op_audio.btn)
    (poll
       {if
@@ -184,7 +188,11 @@
 {new
    SliderPanel
    audio_settings_panel
-   (file game_settings.milo)
+   (file
+	{if_else
+      $egg5
+      game_settings_80s.milo
+      game_settings.milo})
    AUDIO_SETTINGS_PANEL_HANDLERS}
 {new
    GHScreen
@@ -228,7 +236,11 @@
 {new
    GHPanel
    mem_card_panel
-   (file mem_card.milo)
+   (file
+	{if_else
+      $egg5
+      mem_card_80s.milo
+      mem_card.milo})
    (focus save_bands.btn)}
 {new
    GHScreen
@@ -820,7 +832,11 @@
 {new
    GHPanel
    pscan_warning_panel
-   (file pscan_warning.milo)
+   (file
+	{if_else
+      $egg5
+      pscan_warning_80s.milo
+      pscan_warning.milo})
    (focus pscan_ok.btn)}
 #define PSCAN_WARNING_SCREEN_HANDLERS
 ((allow_back FALSE)
@@ -868,7 +884,11 @@
 {new
    GHPanel
    pscan_switching_panel
-   (file pscan_switching.milo)
+   (file
+	{if_else
+      $egg5
+      pscan_switching_80s.milo
+      pscan_switching.milo})
    (focus pscan_yes.btn)}
 #define PSCAN_SWITCH_SCREEN_HANDLERS
 ((allow_back FALSE)

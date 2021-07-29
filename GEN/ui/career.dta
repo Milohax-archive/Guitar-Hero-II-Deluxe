@@ -48,7 +48,11 @@
 {new
    UIPanel
    sel_difficulty_panel
-   (file sel_difficulty.milo)
+   (file
+	{if_else
+      $egg5
+      sel_difficulty_80s.milo
+      sel_difficulty.milo})
    SEL_DIFFICULTY_COMMON
    (enter
       {$this update_focus})
@@ -58,7 +62,11 @@
 {new
    UIPanel
    sel_diff_career_panel
-   (file sel_diff_career.milo)
+   (file
+	{if_else
+      $egg5
+      sel_diff_career_80s.milo
+      sel_diff_career.milo})
    SEL_DIFFICULTY_COMMON
    (enter
       {sd_easy_status.lbl
@@ -144,7 +152,11 @@
 {new
    GHPanel
    career_panel
-   (file career.milo)
+    (file
+	{if_else
+      $egg5
+      career_80s.milo
+      career.milo})
    (focus cm_letsrock.btn)
    (enter
       {cm_char.lbl

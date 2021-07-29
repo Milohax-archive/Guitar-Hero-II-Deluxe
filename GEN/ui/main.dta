@@ -46,12 +46,9 @@
          (main_multiplayer.btn
             {ui goto_screen multi_screen})
          (main_tutorial.btn
-   {if_else
-      $egg5
-	    {set $egg5 FALSE}
-	    {set $egg5 TRUE}})
+            {ui goto_screen training_screen})
          (main_options.btn
-            {ui goto_screen bootup_load})})
+            {ui goto_screen options_screen})})
    (poll
       {if_else
          {game is_missing_multi_controller}

@@ -1,13 +1,17 @@
 {new
    GHPanel
    training_panel
-   (file training.milo)
+   (file
+	{if_else
+      $egg5
+      training_80s.milo
+      training.milo})
    (focus tutorials.btn)
    (SELECT_START_MSG
       {switch
          $component
          (tutorials.btn
-            {ui goto_screen tutorials_screen})
+            {ui goto_screen bootup_load})
          (practice.btn
             {gamecfg set mode practice}
             {ui goto_screen practice_selsong_screen})})}

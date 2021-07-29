@@ -1,7 +1,11 @@
 {new
    UIPanel
    loading_panel
-   (file loading.milo)
+   (file
+	{if_else
+      $egg5
+      loading_80s.milo
+      loading.milo})
    (enter
       {tip.lbl
          set_localized_text

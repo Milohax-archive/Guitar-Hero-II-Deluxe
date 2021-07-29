@@ -22,11 +22,19 @@
 {new
    UIPanel
    qp_selpart_bg_panel
-   (file selpart_bg.milo)}
+   (file
+	{if_else
+      $egg5
+      selpart_bg_80s.milo
+      selpart_bg.milo})}
 {new
    GHPanel
    qp_selpart_panel
-   (file practice_selpart.milo)
+   (file
+	{if_else
+      $egg5
+      practice_selpart_80s.milo
+      practice_selpart.milo})
    (focus part0.btn)
    (sel_buttons part0.btn part1.btn)
    (set_button_text
@@ -80,7 +88,11 @@
 {new
    GHPanel
    sel_diff_qp_panel
-   (file sel_diff_qp.milo)
+   (file
+	{if_else
+      $egg5
+      sel_diff_qp_80s.milo
+      sel_diff_qp.milo})
    SEL_DIFFICULTY_COMMON
    (enter
       {$this update_focus})
@@ -122,7 +134,11 @@
 {new
    GHPanel
    sel_speed_panel_qp
-   (file sel_speed_qp.milo)
+   (file
+	{if_else
+      $egg5
+      sel_speed_qp_80s.milo
+      sel_speed_qp.milo})
    (focus speed0.btn)
    (SELECT_START_MSG
       {switch
@@ -279,7 +295,11 @@
 {new
    SliderPanel
    video_settings_gig_panel
-   (file video_settings_gig.milo)
+   (file
+	{if_else
+      $egg5
+      video_settings_gig_80s.milo
+      video_settings_gig.milo})
    VIDEO_SETTINGS_GIG_PANEL_HANDLERS
    (pscan_warning pscan_warning_screen)}
 {new
@@ -868,7 +888,11 @@
 {new
    GHPanel
    sel_venue_panel_qp
-   (file sel_venue.milo)
+   (file
+	{if_else
+      $egg5
+      sel_venue_80s.milo
+      sel_venue.milo})
    (focus sv_battle.btn)}
 {new
    GHScreen
