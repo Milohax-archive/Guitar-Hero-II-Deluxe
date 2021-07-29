@@ -1,40 +1,17 @@
 (order
-   (battle 
-	{if_else
-      $egg5
-	  iwantcandy
-      surrender}
-	  
-	  {if_else
-      $egg5
-	  wegotthebeat
-      possum}
-
-	  {if_else
-      $egg5
-	  iran
-      heartshapedbox}
-
-	  {if_else
-      $egg5
-	  ballstothewall
-      salvation}
-
-	  {if_else
-      $egg5
-	  18andlife
-      strutter}
-
-	  {if_else
-      $egg5
-	  noonelikeyou
-      shoutatthedevil})
+   (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
+   (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
    (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
+   (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
    (small2 carryonwayward searchanddestroy messageinabottle billiondollar thembones warpigs)
+   (small4 bangyourhead turningjapanese holdonloosely thewarrior iwannarock)
    (big monkeywrench hush girlfriend whowasinmyroom cantyouhearme sweetchild)
    (theatre rockandroll tattooedloveboys johnthefisherman jessica badreputation lastchild)
+   (theatre2 whatilikeaboutyou synchronicity2 ballroomblitz onlyalad roundandround)
    (fest crazyonyou trippinonahole dead killinginthenameof freya stop)
+   (fest2 aintnothinbut lonelyisthenight bathroomwall losangeles wrathchild)
    (arena madhouse trooper rockthistown laidtorest psychobilly yyz)
+   (arena2 electriceye policetruck seventeen caughtinamosh playwithme)
    (stone beastandtheharlot carrymehome institutionalized misirlou hangar18 freebird))
 (required_songs
    (kDifficultyEasy 4 5)

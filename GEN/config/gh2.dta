@@ -126,7 +126,7 @@
 ../ui/eng/locale_sections.dta ../ui/eng/locale_shop.dta ../ui/eng/locale_tiers.dta
 ../ui/eng/locale_tutorials.dta ../ui/eng/locale_rb1-sections.dta ../ui/eng/locale_rb2-sections.dta
 ../ui/eng/locale_rb3-sections.dta)
-(venues battle small1 small2 big theatre fest arena stone)
+(venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
 (default_band metal_singer metal_bass metal_drummer)
 (quick_cheats
    #include cheats.dta)

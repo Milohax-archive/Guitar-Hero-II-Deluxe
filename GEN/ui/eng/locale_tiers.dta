@@ -1,18 +1,30 @@
 (song_header_battle
-   "1. Opening Licks")
+   "1. GH2 Opening Licks")
+(song_header_battle2
+   "2. 80s Opening Licks")
 (song_header_small1
-   "2. Amp-Warmers")
+   "3. GH2 Amp-Warmers")
+(song_header_small3
+   "4. 80s Amp-Warmers")
 (song_header_small2
-   "3. String Snappers")
+   "5. GH2 String Snappers")
+(song_header_small4
+   "6. 80s String Snappers")
 (song_header_big
-   "4. Thrash and Burn")
+   "7. GH2 Thrash and Burn")
 (song_header_theatre
-   "5. Return of the Shred")
+   "8. GH2 Return of the Shred")
+(song_header_theatre2
+   "9. 80s Return of the Shred")
 (song_header_fest
-   "6. Relentless Riffs")
+   "10. GH2 Relentless Riffs")
+(song_header_fest2
+   "11. 80s Relentless Riffs")
 (song_header_arena
-   "7. Furious Fretwork")
+   "12. GH2 Furious Fretwork")
+(song_header_arena2
+   "13. 80s Furious Fretwork")
 (song_header_stone
-   "8. Face-Melters")
+   "14. Face-Melters")
 (song_header_store
    "Bonus Tracks")
