@@ -1,9 +1,23 @@
 ;
 ;
 ;
-;
-;
-;
+; Milo Tips
+(milo_tip1
+   "Use the new Modifiers Menu to pick exactly how fast you prefer the notes to scroll.")
+(milo_tip2
+   "More a bassist? Go it alone with bass quickplay, available in the Free Play menu!")
+(milo_tip3
+   "Note streak popups appear at 50, 100, 200, and every 100 notes after that.")
+(milo_tip4
+   "In the new Free Play mode, you can hop into any song with the guitar and guitarist of your choice.")
+(milo_tip5
+   "We've reordered the setlist to match the 360 GHII. It should be a bit easier to progress now.")
+(milo_tip6
+   "The Extras menu in Free Play can be used to set certain cheats without memorizing their codes.")
+(milo_tip7
+   "In our testing, the Warped Tour is the venue that runs the best on both console and emulator.")
+(milo_tip7
+   "The new note counter will glow orange when you've yet to miss a note and turn white when your full combo is ruined.")
 ;
 ;
 ; Easy Tips
@@ -13,12 +27,6 @@
    "If you're getting 5 stars on every song without breaking a sweat, it's time for MEDIUM.")
 (easy_tip3
    "Try MEDIUM or harder if you want to be able to buy new guitars, songs, videos, and more.")
-;
-;
-;
-;
-;
-;
 ;
 ;
 ; Advanced Tips
@@ -32,10 +40,16 @@
    "Strum up and down to keep your arm from wearing out during fast passages.")
 (advanced_tip5
    "Pick up characters, outfits, guitars, bonus songs, and more at The Store.")
-;
-;
-;
-;
+(advanced_tip6
+   "The debug executable adds a ton of fun and useful toys, if you're a nerdly, tinkerer type.")
+(advanced_tip7
+   "Hit a note extra late after activating Star Power, you'll \qsqueeze\q it and gain extra points.")
+(advanced_tip8
+   "Focus Mode replaces the stage with a black void, upping performance if you need a boost.")
+(advanced_tip9
+   "Each song has a \qpath\q of when to activate Star Power; following it is the key to optimal scores.")
+(advanced_tip10
+   "If you're clutch enough, during fast solos, strum with your elbow and use both hands for the frets.")
 ;
 ;
 ; Multiplayer tips
