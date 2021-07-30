@@ -65,7 +65,12 @@
          kDifficultyExpert}
       {game set_venue fest}
       {game set_song_index 0}
-      {game set_character metal1 TRUE}
+      {game set_character 
+   	  	{if_else
+			$egg5
+				metalencore
+				metal1}
+				TRUE}
       {game set_guitar_index 1}
       {do
          ($player2_config

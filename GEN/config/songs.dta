@@ -3210,9 +3210,9 @@
    (anim_tempo kTempoMedium)
    (preview 58200 85800)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar flying_v)
-      (venue arena))
+      (venue arena2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3275,9 +3275,9 @@
    (anim_tempo kTempoMedium)
    (preview 65500 82000)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar flying_v)
-      (venue fest)))
+      (venue fest2)))
 (ballstothewall
    (name
       "Balls to the Wall")
@@ -3299,9 +3299,9 @@
    (anim_tempo kTempoMedium)
    (preview 87200 110000)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar flying_v)
-      (venue fest))
+      (venue fest2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3365,9 +3365,9 @@
    (anim_tempo kTempoFast)
    (preview 62900 83200)
    (quickplay
-      (character_outfit alterna1)
+      (character_outfit alternaencore)
       (guitar lespaul)
-      (venue battle))
+      (venue battle2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3434,9 +3434,9 @@
    (anim_tempo kTempoFast)
    (preview 62900 83200)
    (quickplay
-      (character_outfit alterna1)
+      (character_outfit alternaencore)
       (guitar lespaul)
-      (venue battle))
+      (venue battle2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3502,9 +3502,9 @@
    (anim_tempo kTempoMedium)
    (preview 76500 93400)
    (quickplay
-      (character_outfit alterna1)
+      (character_outfit alternaencore)
       (guitar flying_v)
-      (venue arena)))
+      (venue arena2)))
 (bathroomwall
    (name
       "Bathroom Wall")
@@ -3526,9 +3526,9 @@
    (anim_tempo kTempoFast)
    (preview 84000 102000)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar flying_v)
-      (venue battle))
+      (venue battle2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3592,9 +3592,9 @@
    (anim_tempo kTempoFast)
    (preview 76500 97200)
    (quickplay
-      (character_outfit punk1)
+      (character_outfit punkencore)
       (guitar flying_v)
-      (venue fest))
+      (venue fest2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3662,9 +3662,9 @@
    (anim_tempo kTempoFast)
    (preview 83700 103500)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar sg)
-      (venue theatre))
+      (venue theatre2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3730,9 +3730,9 @@
    (anim_tempo kTempoMedium)
    (preview 54500 69700)
    (quickplay
-      (character_outfit goth2)
+      (character_outfit gothencore)
       (guitar lespaul)
-      (venue theatre))
+      (venue theatre2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3795,9 +3795,9 @@
    (anim_tempo kTempoMedium)
    (preview 87000 110200)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar flying_v)
-      (venue fest))
+      (venue fest2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3860,9 +3860,9 @@
    (anim_tempo kTempoMedium)
    (preview 56430 76430)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar flying_v)
-      (venue arena))
+      (venue arena2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3926,9 +3926,9 @@
    (anim_tempo kTempoMedium)
    (preview 80000 100800)
    (quickplay
-      (character_outfit goth2)
+      (character_outfit gothencore)
       (guitar sg)
-      (venue small2))
+      (venue small4))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -3991,9 +3991,9 @@
    (anim_tempo kTempoMedium)
    (preview 45000 63300)
    (quickplay
-      (character_outfit goth2)
+      (character_outfit gothencore)
       (guitar lespaul)
-      (venue battle))
+      (venue battle2))
    (band metal_bass metal_drummer female_singer))
 (iwannarock
    (name
@@ -4017,9 +4017,9 @@
    (anim_tempo kTempoMedium)
    (preview 44400 66600)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar flying_v)
-      (venue fest))
+      (venue fest2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4082,9 +4082,9 @@
    (anim_tempo kTempoMedium)
    (preview 15500 40700)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar lespaul)
-      (venue theatre))
+      (venue theatre2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4148,9 +4148,9 @@
    (anim_tempo kTempoFast)
    (preview 11700 33600)
    (quickplay
-      (character_outfit punk1)
+      (character_outfit punkencore)
       (guitar flying_v)
-      (venue arena))
+      (venue arena2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4216,9 +4216,9 @@
    (anim_tempo kTempoMedium)
    (preview 71700 106000)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar lespaul)
-      (venue arena))
+      (venue arena2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4282,9 +4282,9 @@
    (anim_tempo kTempoMedium)
    (preview 84500 114200)
    (quickplay
-      (character_outfit goth2)
+      (character_outfit gothencore)
       (guitar sg)
-      (venue small2))
+      (venue small4))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4351,9 +4351,9 @@
    (anim_tempo kTempoFast)
    (preview 43800 73000)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar flying_v)
-      (venue fest))
+      (venue fest2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4420,9 +4420,9 @@
    (anim_tempo kTempoFast)
    (preview 21500 41400)
    (quickplay
-      (character_outfit punk1)
+      (character_outfit punkencore)
       (guitar lespaul)
-      (venue small1))
+      (venue small3))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4490,9 +4490,9 @@
    (anim_tempo kTempoFast)
    (preview 71000 94000)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar flying_v)
-      (venue small2))
+      (venue small4))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4558,9 +4558,9 @@
    (anim_tempo kTempoMedium)
    (preview 66500 83200)
    (quickplay
-      (character_outfit metal1)
+      (character_outfit metalencore)
       (guitar flying_v)
-      (venue arena))
+      (venue arena2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4623,9 +4623,9 @@
    (anim_tempo kTempoMedium)
    (preview 49800 69500)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar flying_v)
-      (venue battle))
+      (venue battle2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4688,9 +4688,9 @@
    (anim_tempo kTempoMedium)
    (preview 37200 55000)
    (quickplay
-      (character_outfit goth2)
+      (character_outfit gothencore)
       (guitar lespaul)
-      (venue small2))
+      (venue small4))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4753,9 +4753,9 @@
    (anim_tempo kTempoFast)
    (preview 56430 76430)
    (quickplay
-      (character_outfit alterna1)
+      (character_outfit alternaencore)
       (guitar lespaul)
-      (venue theatre))
+      (venue theatre2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4820,9 +4820,9 @@
    (anim_tempo kTempoFast)
    (preview 72000 93700)
    (quickplay
-      (character_outfit punk1)
+      (character_outfit punkencore)
       (guitar flying_v)
-      (venue small1))
+      (venue small3))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4889,9 +4889,9 @@
    (anim_tempo kTempoFast)
    (preview 56430 80200)
    (quickplay
-      (character_outfit goth2)
+      (character_outfit gothencore)
       (guitar sg)
-      (venue fest))
+      (venue fest2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -4955,9 +4955,9 @@
    (anim_tempo kTempoFast)
    (preview 22000 44000)
    (quickplay
-      (character_outfit alterna1)
+      (character_outfit alternaencore)
       (guitar lespaul)
-      (venue battle))
+      (venue battle2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -5022,9 +5022,9 @@
    (anim_tempo kTempoFast)
    (preview 25500 49500)
    (quickplay
-      (character_outfit alterna1)
+      (character_outfit alternaencore)
       (guitar sg)
-      (venue small1))
+      (venue small3))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -5090,9 +5090,9 @@
    (anim_tempo kTempoFast)
    (preview 51500 75800)
    (quickplay
-      (character_outfit punk1)
+      (character_outfit punkencore)
       (guitar flying_v)
-      (venue fest))
+      (venue fest2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -5157,9 +5157,9 @@
    (anim_tempo kTempoMedium)
    (preview 29000 42400)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar lespaul)
-      (venue arena))
+      (venue arena2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1
@@ -5224,9 +5224,9 @@
    (anim_tempo kTempoMedium)
    (preview 29000 42400)
    (quickplay
-      (character_outfit glam1)
+      (character_outfit glamencore)
       (guitar lespaul)
-      (venue arena))
+      (venue arena2))
    (practice_speeds
       (100 85 65 50))
    (song_practice_1

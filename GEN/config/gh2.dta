@@ -159,20 +159,50 @@
 (guitars
    #include guitars.dta)
 (characters
-   (punk
-      (punk1)
+   ({if_else
+      $egg5
+      punkencore
+      punkencore}
+      ({if_else
+      $egg5
+      punkencore
+      punk1})
       (punk2))
-   (alterna
-      (alterna1)
+   ({if_else
+      $egg5
+      alternaencore
+      alternaencore}
+      ({if_else
+      $egg5
+      alternaencore
+      alterna1})
       (alterna2))
-   (glam
-      (glam1)
+   ({if_else
+      $egg5
+      glamencore
+      glamencore}
+      ({if_else
+      $egg5
+      glamencore
+      glam1})
       (glam2))
-   (goth
-      (goth2)
+   ({if_else
+      $egg5
+      gothencore
+      gothencore}
+      ({if_else
+      $egg5
+      gothencore
+      goth2})
       (goth1))
-   (metal
-      (metal1)
+   ({if_else
+      $egg5
+      metalencore
+      metalencore}
+      ({if_else
+      $egg5
+      metalencore
+      metal1})
       (metal2))
    (rockabill
       (rockabill1)
@@ -187,8 +217,14 @@
       (classic))
    (funk1
       (funk1))
-   (grim
-      (grim)))  
+   ({if_else
+      $egg5
+      grimencore
+      grimencore}
+      ({if_else
+      $egg5
+      grimencore
+      grim})))  
 (mc
    #include mc.dta)
 (store
