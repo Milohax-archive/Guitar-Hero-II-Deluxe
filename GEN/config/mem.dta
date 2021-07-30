@@ -1,7 +1,7 @@
 (heaps
    #ifdef HX_EE
    (main
-      (size 19630000))
+      (size 19730000))
    (rnd
       (size 5900000)
       (handle TRUE))
