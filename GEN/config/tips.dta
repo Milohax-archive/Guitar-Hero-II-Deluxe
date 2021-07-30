@@ -1,4 +1,11 @@
 (tips_general
+   (milo_tip_1)
+   (milo_tip_2)
+   (milo_tip_3)
+   (milo_tip_4)
+   (milo_tip_5)
+   (milo_tip_6)
+   (milo_tip_7)
    (loading_tip_gh2_1)
    (loading_tip_gh2_2)
    (loading_tip_gh2_3)
@@ -43,6 +50,16 @@
    (advanced_tip4
       (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
    (advanced_tip5
+      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip6
+      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip7
+      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip8
+      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip9
+      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip10
       (diff kDifficultyMedium kDifficultyHard kDifficultyExpert)))
 (tips_multi_coop
    (multi_coop_tip1)
