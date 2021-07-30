@@ -77,7 +77,7 @@
 (song_old_venue
    "Play in the latest venue to continue your career")
 (song_current_venue
-   "Beat %i/5 songs to continue")
+   "Beat %i songs to continue")
 (song_current_venue_encore
    "Beat the encore to continue")
 (song_win_easy

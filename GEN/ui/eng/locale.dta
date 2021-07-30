@@ -236,6 +236,20 @@
    "The Blackout Bar")
 (battle
    "Battle of the Bands")
+(arena2
+   "The Arena")
+(fest2
+   "Vans Warped Tour")
+(theatre2
+   "Rock City Theater")
+(stone2
+   "Stonehenge")
+(small3
+   "The Rat Cellar")
+(small4
+   "The Blackout Bar")
+(battle2
+   "Battle of the Bands")
 (battle_address
    "Nilbog High")
 (small1_address

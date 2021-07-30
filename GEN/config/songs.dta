@@ -6693,12 +6693,19 @@
    (band metal_bass metal_drummer))
 (speedtest
    (name
-      "Speed Test")
+   	  	{if_else
+			$egg5
+				"Speed Test (HalfDuck Cover)"
+				"Speed Test"})
    (artist
       "ExileLord")
    (caption conceived_by)
    (song
-      (name songs/speedtest/speedtest)
+      (name 
+	  	{if_else
+			$egg5
+				songs/speedtesthalfduck/speedtesthalfduck
+				songs/speedtest/speedtest})
       (tracks
          ((guitar
                (2 3))
@@ -6710,7 +6717,11 @@
          (0.0 0.0 0.0 0.0 0.0 0.0))
       (cores
          (-1 -1 1 1 -1 -1))
-      (midi_file songs/speedtest/speedtest.mid))
+      (midi_file 
+		{if_else
+			$egg5
+				songs/speedtesthalfduck/speedtesthalfduck.mid
+				songs/speedtest/speedtest.mid}))
    (anim_tempo kTempoFast)
    (preview 58886 77105)
    (quickplay
