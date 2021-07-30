@@ -18,6 +18,8 @@
    "In our testing, the Warped Tour is the venue that runs the best on both console and emulator.")
 (milo_tip7
    "The new note counter will glow orange when you've yet to miss a note and turn white when your full combo is ruined.")
+(milo_tip8
+   "This is a sample tip.")
 ;
 ;
 ; Easy Tips
