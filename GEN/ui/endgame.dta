@@ -634,7 +634,7 @@
    GHPanel
    endgame_encore_panel
    (file endgame_encore.milo)
-   (focus yes.btn)
+   (focus no.btn)
    (cash_award 0)
    (freebird 0)
    (enter
@@ -642,7 +642,8 @@
       {freebird1.grp set_showing FALSE}
       {freebird2.grp set_showing FALSE}
       {freebird3.grp set_showing FALSE}
-      {$this set_focus yes.btn}
+      {$this disable yes.btn}
+      {$this set_focus no.btn}
       {set
          [cash_award]
          {cashaward_screen get new_cash}}
@@ -687,7 +688,6 @@
                   {$this set_focus yes_freebird1.btn}}
                {do START_ENCORE}})
          ((no.btn no_freebird1.btn no_freebird2.btn no_freebird3.btn)
-            {world play_meta_sfx encore_no}
             {encore_stream stop}
             {ui goto_screen endgame_screen})
          (yes_freebird1.btn

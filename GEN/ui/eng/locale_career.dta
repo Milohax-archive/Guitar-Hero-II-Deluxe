@@ -286,3 +286,9 @@
    "You have unlocked PRO FACE-OFF Mode!")
 (unlock_profaceoff4
    "You know how whenever you play FACE-OFF Mode, your buddy screams about how you got the easier track and less notes and blah blah, out comes the waaahmbulance? No more, my shredding friend.\n\nCheck out PRO FACE-OFF Mode in the Multiplayer menu and go note-for-note in the ultimate guitarmageddon.\n\nHave fun,\nThe Management")
+   (unlock_song1
+   "Congratulations")
+(unlock_song2
+   "You have unlocked:")
+(unlock_song3
+   "This song is now available in your set list.")
