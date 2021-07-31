@@ -18,13 +18,13 @@
    "In our testing, the Warped Tour is the venue that runs the best on both console and emulator.")
 (milo_tip8
    "The new note counter will glow orange when you've yet to miss a note and turn white when your full combo is ruined.")
-(milo_tip10
+(milo_tip9
    "This is a sample tip.")
-(milo_tip11
+(milo_tip10
    "Did you forget to turn on Progressive Scan again?")
-(milo_tip12
+(milo_tip11
    "We fixed the strum limit so you don't have to. Go check out Trogdor and see how it feels.")
-(milo_tip13
+(milo_tip12
    "We also fixed the HOPO bug. You can quick-restart again!")
 ;
 ;

@@ -103,7 +103,7 @@
 #define kTrackGuitar
 (2)
 #define TRACK_SYMBOLS
-(bass rhythm guitar)
+(bass rhythm guitar drum)
 #define kSoloFeedback
 (0)
 #define kSoloMayhem

@@ -525,6 +525,8 @@
    "GUITAR")
 (sg_bass
    "BASS")
+(sg_drum
+   "DRUMS")
 (multiplier_format
    "%dX")
 (star_ready
