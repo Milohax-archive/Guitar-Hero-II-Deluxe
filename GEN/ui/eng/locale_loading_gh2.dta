@@ -31,13 +31,7 @@
 (loading_tip_gh2_10
    "If you're having problems with timing, try running \qCalibrate Lag\q under Video Settings on the Options menu.")
 (loading_tip_gh2_11
-   "Visit Practice Mode from the Training menu to really nail those tough sections.")
-(loading_tip_gh2_12
-   "Did you forget to turn on Progressive Scan again?")
-(loading_tip_gh2_13
-   "We fixed the strum limit so you don't have to. Go check out Trogdor and see how it feels.")
-(loading_tip_gh2_14
-   "We also fixed the HOPO bug. You can quick-restart again!")
+   "Visit Practice Mode from the Pause menu to really nail those tough sections.")
 ;
 ;
 ;

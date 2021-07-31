@@ -16,10 +16,16 @@
    "The Extras menu in Free Play can be used to set certain cheats without memorizing their codes.")
 (milo_tip7
    "In our testing, the Warped Tour is the venue that runs the best on both console and emulator.")
-(milo_tip7
-   "The new note counter will glow orange when you've yet to miss a note and turn white when your full combo is ruined.")
 (milo_tip8
+   "The new note counter will glow orange when you've yet to miss a note and turn white when your full combo is ruined.")
+(milo_tip10
    "This is a sample tip.")
+(milo_tip11
+   "Did you forget to turn on Progressive Scan again?")
+(milo_tip12
+   "We fixed the strum limit so you don't have to. Go check out Trogdor and see how it feels.")
+(milo_tip13
+   "We also fixed the HOPO bug. You can quick-restart again!")
 ;
 ;
 ; Easy Tips
@@ -43,7 +49,7 @@
 (advanced_tip5
    "Pick up characters, outfits, guitars, bonus songs, and more at The Store.")
 (advanced_tip6
-   "The debug executable adds a ton of fun and useful toys, if you're a nerdly, tinkerer type.")
+   "The debug executable adds a ton of fun and useful toys, if you're a nerdy, tinkerer type.")
 (advanced_tip7
    "Hit a note extra late after activating Star Power, you'll \qsqueeze\q it and gain extra points.")
 (advanced_tip8
