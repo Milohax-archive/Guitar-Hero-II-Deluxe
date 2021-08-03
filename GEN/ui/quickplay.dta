@@ -51,11 +51,9 @@
             {sprint
                "sg_"
                {song_provider get_instrument $song 1}}}
-         {part2.btn
-            set_text
-            {sprint
-               "sg_"
-               {song_provider get_instrument $song 2}}}
+            {part2.btn
+               set_text
+               "sg_drum"}
          {if
             {==
                {song_provider get_instrument $song 1}
@@ -95,8 +93,8 @@
          {gamecfg set_track 0 0}
 				      {if_else
 						{== $component part1.btn}
-							{gamecfg set_track 0 2}
-							{gamecfg set_track 0 1}}
+							{gamecfg set_track 0 1}
+							{gamecfg set_track 0 2}}
          {gamecfg set_track 0 1}}
       {ui goto_screen qp_diff_screen})}
 {new
