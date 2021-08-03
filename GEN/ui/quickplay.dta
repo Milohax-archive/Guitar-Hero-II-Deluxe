@@ -68,7 +68,7 @@
             {part2.btn
                set_text
                "sg_drum"}
-               {$this disable part2.btn}}
+               {part2.btn set_showing FALSE}}
 })
    (enter
       {do
