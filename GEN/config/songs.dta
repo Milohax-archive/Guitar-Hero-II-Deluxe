@@ -2401,7 +2401,9 @@
       (tracks
          ((guitar
                (2 3))
-            (bass 4)))
+            (bass 4)
+	    (drum
+               (0 1))))
       (pans
          (-1.0 1.0 -1.0 1.0 0.0))
       (vols
