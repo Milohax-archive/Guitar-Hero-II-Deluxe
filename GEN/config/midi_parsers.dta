@@ -294,7 +294,12 @@
      (guitar 'PART GUITAR COOP')
      (rhythm 'PART RHYTHM')}}
    ''}
-  'PART GUITAR')
+  {switch
+   {game get_track_sym 0}
+   (bass 'PART BASS')
+   (guitar 'PART GUITAR')
+   (lead 'PART GUITAR')
+   (rhythm 'PART RHYTHM')})
  GUITARFRETMAPPINGS)
 (player1_fret
  (type gem)
@@ -334,7 +339,12 @@
      (guitar 'PART GUITAR COOP')
      (rhythm 'PART RHYTHM')}}
    ''}
-  'PART GUITAR')
+  {switch
+   {game get_track_sym 0}
+   (bass 'PART BASS')
+   (guitar 'PART GUITAR')
+   (lead 'PART GUITAR')
+   (rhythm 'PART RHYTHM')})
  GUITARSTRUMMAPPINGS)
 (player1_strum
  (type gem)
@@ -397,7 +407,12 @@
      (rhythm 'PART RHYTHM')
      (guitar 'PART GUITAR COOP')}}
    ''}
-  'PART GUITAR')
+  {switch
+   {game get_track_sym 0}
+   (bass 'PART BASS')
+   (guitar 'PART GUITAR')
+   (lead 'PART GUITAR')
+   (rhythm 'PART RHYTHM')})
  (min_gap 0.22)
  (mappings
   (default
@@ -476,7 +491,12 @@
      (rhythm 'PART RHYTHM')
      (guitar 'PART GUITAR COOP')}}
    ''}
-  'PART GUITAR')
+  {switch
+   {game get_track_sym 0}
+   (bass 'PART BASS')
+   (guitar 'PART GUITAR')
+   (lead 'PART GUITAR')
+   (rhythm 'PART RHYTHM')})
  (start_offset -1))
 (player1_parser
  (type echo)
