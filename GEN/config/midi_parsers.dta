@@ -291,12 +291,14 @@
     {switch
      {game get_track_sym 0}
      (bass 'PART BASS')
+     (drum 'PART DRUM')
      (guitar 'PART GUITAR COOP')
      (rhythm 'PART RHYTHM')}}
    ''}
   {switch
    {game get_track_sym 0}
    (bass 'PART BASS')
+   (drum 'PART DRUM')
    (guitar 'PART GUITAR')
    (lead 'PART GUITAR')
    (rhythm 'PART RHYTHM')})
@@ -316,6 +318,7 @@
     {switch
      {game get_track_sym 1}
      (bass 'PART BASS')
+     (drum 'PART DRUM')
      (guitar 'PART GUITAR COOP')
      (rhythm 'PART RHYTHM')}}
    ''}
@@ -336,6 +339,7 @@
     {switch
      {game get_track_sym 0}
      (bass '')
+     (drum 'PART DRUM')
      (guitar 'PART GUITAR COOP')
      (rhythm 'PART RHYTHM')}}
    ''}
@@ -343,6 +347,7 @@
    {game get_track_sym 0}
    (bass 'PART BASS')
    (guitar 'PART GUITAR')
+   (drum 'PART DRUM')
    (lead 'PART GUITAR')
    (rhythm 'PART RHYTHM')})
  GUITARSTRUMMAPPINGS)
@@ -361,6 +366,7 @@
     {switch
      {game get_track_sym 1}
      (bass '')
+     (drum 'PART DRUM')
      (guitar 'PART GUITAR COOP')
      (rhythm 'PART RHYTHM')}}
    ''}
@@ -404,6 +410,7 @@
     {switch
      {game get_track_sym 0}
      (bass 'PART BASS')
+     (drum 'PART DRUM')
      (rhythm 'PART RHYTHM')
      (guitar 'PART GUITAR COOP')}}
    ''}
@@ -411,6 +418,7 @@
    {game get_track_sym 0}
    (bass 'PART BASS')
    (guitar 'PART GUITAR')
+   (drum 'PART DRUM')
    (lead 'PART GUITAR')
    (rhythm 'PART RHYTHM')})
  (min_gap 0.22)
@@ -449,6 +457,7 @@
     {switch
      {game get_track_sym 1}
      (bass 'PART BASS')
+     (drum 'PART DRUM')
      (rhythm 'PART RHYTHM')
      (guitar 'PART GUITAR COOP')}}
    ''}
@@ -488,12 +497,14 @@
     {switch
      {game get_track_sym 0}
      (bass 'PART BASS')
+     (drum 'PART DRUM')
      (rhythm 'PART RHYTHM')
      (guitar 'PART GUITAR COOP')}}
    ''}
   {switch
    {game get_track_sym 0}
    (bass 'PART BASS')
+   (drum 'PART DRUM')
    (guitar 'PART GUITAR')
    (lead 'PART GUITAR')
    (rhythm 'PART RHYTHM')})
@@ -509,6 +520,7 @@
     {switch
      {game get_track_sym 1}
      (bass 'PART BASS')
+     (drum 'PART DRUM')
      (rhythm 'PART RHYTHM')
      (guitar 'PART GUITAR COOP')}}
    ''}
