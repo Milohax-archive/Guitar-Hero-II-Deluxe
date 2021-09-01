@@ -259,17 +259,29 @@
    "Battle of the Bands")
 (battle_address
    "Nilbog High")
+(battle2_address
+   "Nilbog High")
 (small1_address
    "675 Mass Ave")
 (small2_address
+   "677 Flatbush Ave")
+(small3_address
+   "675 Mass Ave")
+(small4_address
    "677 Flatbush Ave")
 (big_address
    "720 Landsdowne St")
 (theatre_address
    "Downtown")
+(theatre2_address
+   "Downtown")
 (fest_address
    "Randall Field")
+(fest2_address
+   "Randall Field")
 (arena_address
+   "1 City Place")
+(arena2_address
    "1 City Place")
 (stone_address
    "jolly Old England")
