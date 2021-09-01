@@ -158,15 +158,11 @@
    (speedtest
       (price 0))
    (becauseitsmidnite
-      (price 0))
+      (price 550))
    (rawdog
       (price 550))
    (arterialblack
       (price 550))
-   (becauseitsmidnite_demo
-      (price 0))
-   (ballroomblitz_final
-      (price 0))
    (collide
       (price 550))
    (drinkup
