@@ -263,7 +263,10 @@
 (freebird_confirm3
    "Okay, last chance... \nYou really want to play Free Bird?")
 (win_diff
-   "You beat Guitar Hero II Deluxe on the %s difficulty")
+	{if_else
+      $game80s
+   "You beat Guitar Hero Encore Deluxe on the %s difficulty"
+   "You beat Guitar Hero II Deluxe on the %s difficulty"})
 (win_congrats
    "Congratulations!")
 (win_legendary
@@ -271,13 +274,25 @@
 (win_stardom
    "Rock Stardom beckons...")
 (win_easy
-   "Dear ______________________,\n\nCongrats on beating Guitar Hero II Deluxe on Easy. Pretty cool, more songs to play, yeah?\n\nRegardless, you've only just begun. Easy players don't get paid--MEDIUM, HARD, and EXPERT players do. And I think you know what cash gets ya...\n\nIt takes some pinky dexterity, but I'm sure you'll be fine. Use that Practice Mode to your advantage.\n\nKisses,\nThe GH2 Deluxe Team")
+	{if_else
+      $game80s
+   "Dear ______________________,\n\nCongrats on beating Guitar Hero Encore Deluxe on Easy. Pretty cool, more songs to play, yeah?\n\nRegardless, you've only just begun. Easy players don't get paid--MEDIUM, HARD, and EXPERT players do. And I think you know what cash gets ya...\n\nIt takes some pinky dexterity, but I'm sure you'll be fine. Use that Practice Mode to your advantage.\n\nKisses,\nThe GH2 Deluxe Team"
+   "Dear ______________________,\n\nCongrats on beating Guitar Hero II Deluxe on Easy. Pretty cool, more songs to play, yeah?\n\nRegardless, you've only just begun. Easy players don't get paid--MEDIUM, HARD, and EXPERT players do. And I think you know what cash gets ya...\n\nIt takes some pinky dexterity, but I'm sure you'll be fine. Use that Practice Mode to your advantage.\n\nKisses,\nThe GH2 Deluxe Team"})
 (win_medium
-   "Dear ______________________,\n\nCongrats on beating Guitar Hero II Deluxe on Medium. Making some headroom now.\n\nIf you're still hard up for money (and we know you rock star types always are), get working on the HARD and EXPERT difficulties. We're throwing one more color at you for it! Still, if you can handle it, there's more to unlock and more cash in it for you.\n\nSmooches,\nThe GH2 Deluxe Team")
+	{if_else
+      $game80s
+   "Dear ______________________,\n\nCongrats on beating Guitar Hero Encore Deluxe on Medium. Making some headroom now.\n\nIf you're still hard up for money (and we know you rock star types always are), get working on the HARD and EXPERT difficulties. We're throwing one more color at you for it! Still, if you can handle it, there's more to unlock and more cash in it for you.\n\nSmooches,\nThe GH2 Deluxe Team"
+   "Dear ______________________,\n\nCongrats on beating Guitar Hero II Deluxe on Medium. Making some headroom now.\n\nIf you're still hard up for money (and we know you rock star types always are), get working on the HARD and EXPERT difficulties. We're throwing one more color at you for it! Still, if you can handle it, there's more to unlock and more cash in it for you.\n\nSmooches,\nThe GH2 Deluxe Team"})
 (win_hard
-   "Dear ______________________,\n\nCongrats, you beat Guitar Hero II Deluxe on Hard. Not bad at all.\n\nI think you know what's next, kiddo. EXPERT awaits. No new colors, but the notes come at you faster and more furiously than ever before. It's where the gunslingers ascend to rock GODS. And lordy, it's RIGHTEOUS if you can make it work.\n\nGodspeed, pilgrim.\n\nHugs,\nThe GH2 Deluxe Team")
+	{if_else
+      $game80s
+   "Dear ______________________,\n\nCongrats, you beat Guitar Hero Encore Deluxe on Hard. Not bad at all.\n\nI think you know what's next, kiddo. EXPERT awaits. No new colors, but the notes come at you faster and more furiously than ever before. It's where the gunslingers ascend to rock GODS. And lordy, it's RIGHTEOUS if you can make it work.\n\nGodspeed, pilgrim.\n\nHugs,\nThe GH2 Deluxe Team"
+   "Dear ______________________,\n\nCongrats, you beat Guitar Hero II Deluxe on Hard. Not bad at all.\n\nI think you know what's next, kiddo. EXPERT awaits. No new colors, but the notes come at you faster and more furiously than ever before. It's where the gunslingers ascend to rock GODS. And lordy, it's RIGHTEOUS if you can make it work.\n\nGodspeed, pilgrim.\n\nHugs,\nThe GH2 Deluxe Team"})
 (win_expert
-   "Dear ______________________,\n\nAnd that's it! Guitar Hero II Deluxe on Expert SLAIN.\n\nThat expanded setlist takes a bit longer to work though, but there's some gems in there, ain't there? And speaking of gems, you should have enough money now to buy a whole 'nother beast, the infamous \qSpeed Test\q. Makes good use of that uncapped strumming, to say the least. Check for it in the store!\n\nAnd keep an eye out for the GH2DX expansion disc if you like strumming. There will be MUCH strumming.\n\nLove,\nThe GH2 Deluxe Team")
+	{if_else
+      $game80s
+   "Dear ______________________,\n\nAnd that's it! Guitar Hero Encore Deluxe on Expert SLAIN.\n\nThat expanded setlist takes a bit longer to work though, but there's some gems in there, ain't there? And speaking of gems, you should have enough money now to buy a whole 'nother beast, the infamous \qSpeed Test\q. Makes good use of that uncapped strumming, to say the least. Check for it in the store!\n\nAnd keep an eye out for the GH2DX expansion disc if you like strumming. There will be MUCH strumming.\n\nLove,\nThe GH2 Deluxe Team"
+   "Dear ______________________,\n\nAnd that's it! Guitar Hero II Deluxe on Expert SLAIN.\n\nThat expanded setlist takes a bit longer to work though, but there's some gems in there, ain't there? And speaking of gems, you should have enough money now to buy a whole 'nother beast, the infamous \qSpeed Test\q. Makes good use of that uncapped strumming, to say the least. Check for it in the store!\n\nAnd keep an eye out for the GH2DX expansion disc if you like strumming. There will be MUCH strumming.\n\nLove,\nThe GH2 Deluxe Team"})
 (unlock_profaceoff1
    "Dear ____________________,")
 (unlock_profaceoff2

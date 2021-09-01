@@ -1,7 +1,10 @@
 (splash_anybutton
    "PRESS ANY BUTTON TO BEGIN")
 (splash_legal
-   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems.")
+	{if_else
+      $game80s
+   "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
+   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."})
 (guitar_help_using
    "USING THE GUITAR CONTROLLER")
 (guitar_help_plugin
@@ -168,6 +171,8 @@
    "rename band")
 (autosave_band
    "autosave band")
+(autosave_mem
+   "autosave")
 (new_band
    "new band")
 (save_band
