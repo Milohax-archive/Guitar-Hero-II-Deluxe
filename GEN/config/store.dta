@@ -217,9 +217,7 @@
    (classic
       (price 5000))
    (funk1
-      (price 5000))
-   (grim
-      (price 7000)))
+      (price 5000)))
 (outfit
    (punk2
       (price 2000))

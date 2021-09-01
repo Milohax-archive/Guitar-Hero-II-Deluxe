@@ -67,17 +67,17 @@
       "Dax Deville"
       "Eddie Knox"})
 (punkencore
-   "Johnny Napalm 80's")
+   "Johnny Napalm")
 (alternaencore
-   "Judy Nails 80's")
+   "Judy Nails")
 (glamencore
-   "Izzy Sparks 80's")
+   "Izzy Sparks")
 (gothencore
-   "Pandora 80's")
+   "Pandora")
 (metalencore
-   "Axel Steel 80's")
+   "Axel Steel")
 (grimencore
-   "Grim Ripper 80's")
+   "Grim Ripper")
 (alternagh1
    "Judy Nails GH1")
 (gothgh1
@@ -143,17 +143,35 @@
       "When he's not cruisin' around Reno in his '53 Ford, Dax Deville brings his brand of hard-working rock to any stage he sets foot on. A real \qroad dog,\q Deville claims that as long as he's got his hollow body and a tin of pomade, he \qain't too far from home.\q"
       "When he's not cruisin' in his '55 Chevy, Eddie brings his hard-working rock to any stage he sets foot on. A real \qroad dog,\q Eddie Knox claims that as long as he's got his hollow body and his pomade, he \qain't too far from home.\q"})
 (punkencore_blurb
-   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary.")
+{if_else
+      $game80s
+   "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary."
+   "Johnny embodies the true spirit of punk rock with his signature stomp and swagger. Released from lockup for \qalmost tolerable behavior,\q Johnny lurches back into the spotlight, rough and ready for action."})
 (alternaencore_blurb
-   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board.")
+{if_else
+      $game80s
+   "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board."
+   "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage."})
 (glamencore_blurb
-   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses.")
+{if_else
+      $game80s
+   "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses."
+   "A real crowd pleaser, Izzy thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Izzy's fan base is even bigger than his hair."})
 (gothencore_blurb
-   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q")
+{if_else
+      $game80s
+   "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q"
+   "Pandora's youth is shrouded in mystery. Some say she was born in a dimension of pure darkness. Others say she was raised in a duplex near Boise. With her blazing solos and chaotic melodies, Pandora is the Dark Princess of Rock."})
 (metalencore_blurb
-   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse.")
+{if_else
+      $game80s
+   "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse."
+   "Famous for his driving riffs and up-front attitude, Axel Steel first picked up a guitar in an attempt to quell his boredom during suspension from elementary school. The rest is history. Metal history."})
 (grimencore_blurb
-   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills.")
+{if_else
+      $game80s
+   "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills."
+   "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."})
 (streamer_blurb
    "Emerging from shadows after a 28 hour marathon live stream, Streamer brings forth the gift of darkness to those who check the link in the description. Also don't forget to follow and subscribe.")
 (alterna_outfit_blurb
