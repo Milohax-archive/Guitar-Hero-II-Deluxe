@@ -210,7 +210,7 @@
       {fuck.chk set_check $cheat_enabled_horse_head_mode}
       {lefty3.chk set_check $barf_cheat}
       {lefty4.chk set_check $cheat_enabled_performance_mode}
-      {lefty5.chk set_check $awesomeness}
+      {lefty5.chk set_check $nofail}
       {widescreen.chk set_check $neckless}
       {p_scan.chk set_check $cheat_enabled_flaming_head}
       {switch $cheat_crowd_heads
@@ -295,7 +295,7 @@
 
          (gs_left_p5.btn
             {lefty5.chk toggle}
-            {set $awesomeness {lefty5.chk get_check}})
+            {set $nofail {lefty5.chk get_check}})
 
          (gs_left_p6.btn
             {lefty6.chk toggle}
@@ -315,7 +315,7 @@
 
          (gs_left_p8.btn
             {lefty8.chk toggle}
-            {if_else {lefty7.chk get_check}
+            {if_else {lefty8.chk get_check}
                {set $cheat_guitar air_guitar}
                {set $cheat_guitar 0}})
          (calibrate_lag.btn
