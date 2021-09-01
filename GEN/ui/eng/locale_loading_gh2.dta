@@ -10,15 +10,15 @@
 (loading_tip_gh2_1
    "Try the new and improved Hammer-ons and Pull-offs. They're easier this time around.")
 (loading_tip_gh2_2
-   "Hit 10 notes in a row for a x2 multiplier. Longer streaks are rewarded with higher multipliers.")
+   "Hit 10 notes in a row for a x2 score multiplier. Longer note streaks are rewarded with higher multipliers.")
 (loading_tip_gh2_3
    "Just like a real guitar, you don't need to release lower Fret Buttons when you play higher ones.")
 (loading_tip_gh2_4
    "Wait until you have a x4 multiplier going, and then use Star Power to max out your score.")
 (loading_tip_gh2_5
-   "Star Power can be a life saver! If you're deep in the red, use it to win the crowd back.")
+   "Star Power can be a life saver! If you're deep in the red, use Star Power to win the crowd back.")
 (loading_tip_gh2_6
-   "Use Star Power to drive the crowd wild. Learn how to control it in the Star Power Tutorial.")
+   "Use Star Power to drive the crowd wild. Learn how to control this awesome energy in the Star Power Tutorial.")
 (loading_tip_gh2_7
    "Get a streak multiplier by playing perfectly for a few notes.")
 (loading_tip_gh2_8
@@ -27,11 +27,11 @@
    {if_else
       $egg5
       "You found all the eggs! Much love to everyone <3"
-      "You can slow down or speed up specific sections in Practice Mode."})
+      "You can slow down songs and individual song sections in Practice Mode. Nail solos that have been kicking your butt!"})
 (loading_tip_gh2_10
-   "If you're having problems with timing, try running \qCalibrate Lag\q under Video Settings on the Options menu.")
+   "Some HDTVs have an audio/visual lag that may affect your ability to play the game. If you're having problems, try running \qCalibrate Lag\q under Video Settings on the Options menu.")
 (loading_tip_gh2_11
-   "Visit Practice Mode from the Pause menu to really nail those tough sections.")
+   "Visit Practice Mode from the Training menu to really nail those tough sections.")
 ;
 ;
 ;
@@ -66,14 +66,14 @@
 (comedy_tip_gh2_7
    {if_else
       $egg5
-      "If you ever come across suspicious looking Harmonix binders call LocalH immediately."
+      "If you ever come across suspicious looking Harmonix binders, call LocalH immediately."
       "It takes a REALLY long time to drive the van through Nebraska."})
 (comedy_tip_gh2_8
-   "If you have a road crew, it's called \qhauling\q gear. Otherwise it's \qschlepping.\q")
+   "If you have a road crew, it's called \qhauling\q equipment. Otherwise it's called \qschlepping.\q")
 (comedy_tip_gh2_9
    {if_else
       $egg5
-      "Damnit Harmonix, why did you hardcode some of this stuff?"
+      "Dammit Harmonix, why did you hardcode some of this stuff?"
       "It all comes out on the road."})
 (comedy_tip_gh2_10
    "A band is the dysfunctional family you choose.")
@@ -87,7 +87,7 @@
 (comedy_tip_gh2_13
    "Dropping your pants onstage does not deploy Star Power.")
 (comedy_tip_gh2_14
-   "If your neighbors keep complaining, turn it up until they move away.")
+   "If your neighbors keep complaining about the noise, turn up the volume until they move away.")
 (comedy_tip_gh2_15
    {if_else
       $egg5
@@ -107,13 +107,13 @@
 (encore_tip_gh2_2
    "If the staff is already flipping the stools, you missed your chance for an encore.")
 (encore_tip_gh2_3
-   "Be sure they WANT you to come back out before you save your best song for last.")
+   "You better be sure they WANT you to come back out before you save your best song for the encore.")
 (encore_tip_gh2_4
-   "If your drummer is too tired for an encore, then they're too tired for the after-party.")
+   "If your drummer is too tired for an encore, then your drummer is too tired for the after-party.")
 (encore_tip_gh2_5
-   "If they want an encore but you're out of songs, do NOT try to just JAM.")
+   "If they want an encore but you're out of songs, do NOT, under any circumstances, try to just JAM.")
 (encore_tip_gh2_6
-   "If the crowd is screaming for more but the sound dude is shaking his head, ignore him and play.")
+   "If the crowd is screaming for more but the sound dude is shaking his head angrily, just ignore him and play anyway.")
 ;
 ;
 ;
@@ -125,7 +125,7 @@
 (freebird_tip1
    "You're looking for \qGtr solo i\q in Practice Mode.")
 (freebird_tip2
-   "Master Free Bird in Practice Mode before trying your hand at the full version on stage.")
+   "Save yourself a whole world of pain. Master Free Bird in Practice Mode before trying your hand at the full version on stage.")
 (freebird_tip3
    "FINE. They AREN'T just heckling you this time. SIGH.")
 (freebird_tip4
@@ -143,23 +143,23 @@
 ;
 ; Guitar Hero II Bonus Song Tips
 (loading_tip_arterialblack
-   "Marcus Henderson contributed another tune for Guitar Hero II before splitting Drist to play lead guitar for the Grim Ripper.")
+   "Guitarist Marcus Henderson contributed another tune for Guitar Hero II before splitting Drist to play lead guitar for the Grim Ripper.")
 (loading_tip_collide
-   "When Anarchy Club isn't fighting rival Kung Fu gangs, frontman Keith Smith smashes guitars for HMX QA.")
+   "When Anarchy Club isn't breaking things or fighting rival Kung Fu gangs, frontman Keith Smith smashes guitars for the HMX QA team. Adam Buhler prefers the darkness of the Anar-Cave, except when the moon is full...")
 (loading_tip_drinkup
-   "\qDrink Up\q has become the anthem for the messed-up masses.")
+   "OUNCE of SELF is one of the most original bands out of L.A.'s heavy music scene. \qDrink Up\q has become the anthem for the messed-up masses.")
 (loading_tip_elephantbones
-   "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal.")
+   "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal. That Handsome Devil.")
 (loading_tip_fallofpangea
-   "Valient Thorr is from Venus. Their message is your tool to further the knowledgement of the human consciousness.")
+   "Valient Thorr is from the planet Venus. Their message is your tool to further the knowledgement of the human consciousness.")
 (loading_tip_ftk
-   "If they weren't so busy starting fights and smashing things, these girls would probably take over the world.")
+   "Boston-based VAGIANT plays loud, fast, and sloppy. If they weren't so busy starting fights and smashing things, these girls would probably take over the world.")
 (loading_tip_gemini
    "Brian Kahanek says, \qPlay it from the bottom of your heart to the tips of your toes - every time.\q")
 (loading_tip_jordan
    "Wearing a bucket on your head will not improve your chances of beating this song. Or maybe it will.")
 (loading_tip_kicked
-   "Right now, Noble Rot is hitting on your sister. And if she doesn't take the bait, your mom is on hold.")
+   "Right now, as you're waiting for their song to load, Noble Rot is hitting on your sister. And if she doesn't take the bait, your mom is on hold.")
 (loading_tip_ladylightning
    "Half man, half machine, Bang Camaro runs on dude power.")
 (loading_tip_laughtrack
@@ -169,25 +169,25 @@
 (loading_tip_mrfixit
    "Live to tour, tour to live! The Crowns remain, now and forever, royal to the loyal.")
 (loading_tip_newblack
-   "\qWhen playing shows, it's not ok to start a chant for your own band. That's like giving yourself a nickname.\q")
+   "\qWhen playing shows, it's not ok to start a chant for your own band. That's like giving yourself a nickname.\q - Keith Buckley - Every Time I Die")
 (loading_tip_onefortheroad
-   "Breaking Wheel would love to play in your basement, funeral or bar mitzvah. Donations to our van fund also welcome.")
+   "Breaking Wheel would love to play in your basement, funeral or bar mitzvah.  Incidentally, donations to our van fund are welcome.")
 (loading_tip_parasite
    "The Neighborhoods were presented with the Hall of Fame award at the 2005 Boston Music Awards.")
 (loading_tip_radiumeyes
-   "Think you can you play a proto-retro-roboto-organico soldier's love song set during the Phillippines-American War?")
+   "Wow. Like 50 million others, you can play metal. Big deal.  Think you can you play a proto-retro-roboto-organico soldier's love song set during the Phillippines-American War?  Doubt it.")
 (loading_tip_rawdog
-   "For best results, play at maximum volume, especially in the presence of authority figures or the elderly.")
+   "The following song is by The Last Vegas. For best results, play at maximum volume, especially in the presence of authority figures or the elderly.")
 (loading_tip_redlottery
    "Riding forth like thunderbolts cast from the hammer of Thor, the eight hooves of MEGASUS burn a trail of fire 'cross the winter sky.")
 (loading_tip_soybomb
-   "Honest Bob and the Factory-to-Dealer Incentives return with their hit \qSoy Bomb\q, Spanish for \qI am bomb\q.")
+   "Honest Bob and the Factory-to-Dealer Incentives return with their smash hit \qSoy Bomb\q, which is Spanish for \qI am bomb\q.")
 (loading_tip_six
-   "Guitarist Mike Martin recommended Oli Herbert to All That Remains prior to joining the band a few years later.")
+   "Guitarist Mike Martin recommended his teacher, Oli Herbert, to All That Remains prior to joining the band a few years later.")
 (loading_tip_thelightthatblinds
-   "SHADOWS FALL at their very best proving, once again, they are the undeniable leaders of the current hard rock/metal scene.")
+   "This is SHADOWS FALL at their very best proving, once again, that they are the undeniable leaders of the current hard rock/metal scene.")
 (loading_tip_thunderhorse
-   "DETHKLOK - \qthe biggest act in the universe\q - brings forth the ultimate metal Armageddon. Prepare to be crushed.")
+   "Extreme METAL band DETHKLOK - \qthe biggest act in the universe\q - brings forth the ultimate metal Armageddon. Prepare to be crushed.")
 (loading_tip_trogdor
    "\qFor squeadlies, mash on the trembalo. For meadlies, tone up on your chord surpassers. Oh, and I'm awesome.\q\n - Stongbad")
 (loading_tip_xstream

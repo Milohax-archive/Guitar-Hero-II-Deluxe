@@ -14,7 +14,7 @@
    {if_else
       $egg5
       "Stop fucking asking to buy Deluxe. That would be illegal."
-   "When you are famous, you will have assistants remove your leather pants for you.  Until then, use talcum powder."})
+   "When you are famous, you will have assistants remove your leather pants for you. Until then, use talcum powder."})
 (comedy_tip_80s_3
    {if_else
       $egg5
@@ -32,14 +32,14 @@
 (comedy_tip_80s_7
    {if_else
       $egg5
-      "If you ever come across suspicious looking Harmonix binders call LocalH immediately."
+      "If you ever come across suspicious looking Harmonix binders, call LocalH immediately."
    "Live the life. Stonewash your underpants."})
 (comedy_tip_80s_8
    "If your hair still moves while you're headbanging, you aren't using enough hairspray.")
 (comedy_tip_80s_9
    {if_else
       $egg5
-      "Damnit Harmonix, why did you hardcode some of this stuff?"
+      "Dammit Harmonix, why did you hardcode some of this stuff?"
    "Smell the new cassette tape. This is the scent of rock."})
 (comedy_tip_80s_10
    "Beware: country bands, too, wear fringed jackets.")
@@ -53,7 +53,7 @@
 (comedy_tip_80s_13
    "A proper modern hard rock solo requires 3 whammies per note. Minimum.")
 (comedy_tip_80s_14
-   "If your neighbors keep complaining, turn it up until they move away.")
+   "If your neighbors keep complaining about the noise, turn up the volume until they move away.")
 (comedy_tip_80s_15
    {if_else
       $egg5
