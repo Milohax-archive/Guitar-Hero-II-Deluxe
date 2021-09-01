@@ -98,6 +98,8 @@
    "It's likely a guy in Manowar actually plays a guitar like this, so I guess that's something.")
 (log_reward_shop_desc
    "Les Paul's first solidbody guitar, built in 1941, was called \qThe Log,\q due to its impractical weight and crude construction. This guitar, on the other hand, is an actual log.")
+(scythe_shop_desc
+   "On second thought, you probably should fear the reaper. Equally suited for über-fast shredding or deadly combat, this literal axe is a dangerous mother.")
 (fish_reward_locked_desc
    "Beat the game on EASY first, champ. Then you can buy this bad boy.")
 (usa_reward_locked_desc

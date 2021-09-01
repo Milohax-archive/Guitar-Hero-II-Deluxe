@@ -35,6 +35,8 @@
       (price 700))
    (air_guitar
       (price 300))
+   (scythe
+      (price 7000))
    (fish_reward
       (price 500))
    (usa_reward

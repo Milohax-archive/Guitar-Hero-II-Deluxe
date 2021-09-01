@@ -339,7 +339,7 @@
          (outfit log)
          (mat log.mat))))
 (scythe
-   (type grim)
+   (type guitar)
    (skins
       (scythe
          (outfit scythe)
