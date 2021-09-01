@@ -3,7 +3,13 @@
 {new
    TrackPanel
    track_panel
-   (file ../track/track.milo)
+   (file 
+    {switch
+     {game get_track_sym 0}
+     (bass '../track/track.milo')
+     (drum '../track/track_drum.milo')
+     (rhythm '../track/track.milo')
+     (guitar '../track/track.milo')})
    (set_track_out
       {$this set_frame TRACK_END_FRAME})
    (set_track_in
