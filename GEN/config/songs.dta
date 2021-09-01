@@ -3424,99 +3424,68 @@
          (-1 -1 -1))
       (midi_file songs/ballroomblitz/ballroomblitz.mid)
       (hopo_threshold 250)))
-(ballroomblitz_final
-   (name
-      "Ballroom Blitz (Final Chart)")
-   (artist
-      "Krokus")
-   (song
-      (name songs/ballroomblitz/ballroomblitz)
-      (tracks
-         ((guitar
-               (2 3))
-            (bass 4)))
-      (pans
-         (-1.0 1.0 -1.0 1.0 0.0))
-      (vols
-         (-2.5 -2.5 -3.5 -3.5 -2.0))
-      (cores
-         (-1 -1 1 1 -1))
-      (midi_file songs/ballroomblitz/ballroomblitz_final.mid)
-      (hopo_threshold 250))
-   (anim_tempo kTempoFast)
-   (preview 62900 83200)
-   (quickplay
-      (character_outfit alternaencore)
-      (guitar lespaul)
-      (venue battle2))
-   (practice_speeds
-      (100 85 65 50))
-   (song_practice_1
-      (name songs/ballroomblitz/ballroomblitz_p85)
-      (tracks
-         ((guitar
-               (0 1))
-            (bass 2)))
-      (pans
-         (-1.0 1.0 0.0))
-      (vols
-         (-1.5 -1.5 0.0))
-      (cores
-         (-1 -1 -1))
-      (midi_file songs/ballroomblitz/ballroomblitz_final.mid)
-      (hopo_threshold 250))
-   (song_practice_2
-      (name songs/ballroomblitz/ballroomblitz_p65)
-      (tracks
-         ((guitar
-               (0 1))
-            (bass 2)))
-      (pans
-         (-1.0 1.0 0.0))
-      (vols
-         (-1.5 -1.5 0.0))
-      (cores
-         (-1 -1 -1))
-      (midi_file songs/ballroomblitz/ballroomblitz_final.mid)
-      (hopo_threshold 250))
-   (song_practice_3
-      (name songs/ballroomblitz/ballroomblitz_p50)
-      (tracks
-         ((guitar
-               (0 1))
-            (bass 2)))
-      (pans
-         (-1.0 1.0 0.0))
-      (vols
-         (-1.5 -1.5 0.0))
-      (cores
-         (-1 -1 -1))
-      (midi_file songs/ballroomblitz/ballroomblitz_final.mid)
-      (hopo_threshold 250)))
 (bangyourhead
-   (name
-      "Bang Your Head (Metal Health)")
-   (artist
-      "Quiet Riot")
-   (song
-      (name songs/bangyourhead/bangyourhead)
-      (tracks
-         ((guitar
-               (2 3))
-            (bass 4)))
-      (pans
-         (-1.0 1.0 -1.0 1.0 0.0))
-      (vols
-         (-3.5 -3.5 -3.0 -3.0 -0.0))
-      (cores
-         (-1 -1 1 1 -1))
-      (midi_file songs/bangyourhead/bangyourhead.mid))
-   (anim_tempo kTempoMedium)
-   (preview 76500 93400)
-   (quickplay
-      (character_outfit alternaencore)
-      (guitar flying_v)
-      (venue arena2)))
+ (name
+  "(Bang Your Head) Metal Health")
+ (artist
+  "Quiet Riot")
+ (song
+  (name songs/bangyourhead/bangyourhead)
+  (tracks
+   ((guitar
+     (2 3))
+    (bass 4)))
+  (pans
+   (-1.0 1.0 -1.0 1.0 0.0))
+  (vols
+   (-2.5 -2.5 -2.0 -2.0 -0.0))
+  (cores
+   (-1 -1 1 1 -1))
+  (midi_file songs/bangyourhead/bangyourhead.mid))
+ (anim_tempo kTempoMedium)
+ (preview 11400 32000)
+ (quickplay
+  (character_outfit metal1)
+  (guitar sg)
+  (venue battle))
+ (practice_speeds
+  (100 85 65 50))
+ (song_practice_1
+  (name songs/bangyourhead/bangyourhead_p85)
+  (tracks
+   ((guitar 0)
+    (bass 1)))
+  (pans
+   (0.0 0.0))
+  (vols
+   (0.0 0.0))
+  (cores
+   (-1 -1))
+  (midi_file songs/bangyourhead/bangyourhead.mid))
+ (song_practice_2
+  (name songs/bangyourhead/bangyourhead_p65)
+  (tracks
+   ((guitar 0)
+    (bass 1)))
+  (pans
+   (0.0 0.0))
+  (vols
+   (0.0 0.0))
+  (cores
+   (-1 -1))
+  (midi_file songs/bangyourhead/bangyourhead.mid))
+ (song_practice_3
+  (name songs/bangyourhead/bangyourhead_p50)
+  (tracks
+   ((guitar 0)
+    (bass 1)))
+  (pans
+   (0.0 0.0))
+  (vols
+   (0.0 0.0))
+  (cores
+   (-1 -1))
+  (midi_file songs/bangyourhead/bangyourhead.mid)))
 (bathroomwall
    (name
       "Bathroom Wall")
@@ -5213,73 +5182,6 @@
       (cores
          (-1 -1 -1))
       (midi_file songs/becauseitsmidnite/becauseitsmidnite.mid)))
-(becauseitsmidnite_demo
-   (name
-      "Because, It's Midnite (Proto Chart)")
-   (artist
-      "Limozeen")
-   (caption performed_by)
-   (song
-      (name songs/becauseitsmidnite/becauseitsmidnite)
-      (tracks
-         ((guitar
-               (2 3))
-            (bass
-               (4 5))))
-      (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
-      (vols
-         (-2.5 -2.5 -2.0 -2.0 -2.5 -2.5))
-      (cores
-         (-1 -1 1 1 -1 -1))
-      (midi_file songs/becauseitsmidnite/becauseitsmidnite_demo.mid))
-   (anim_tempo kTempoMedium)
-   (preview 29000 42400)
-   (quickplay
-      (character_outfit glamencore)
-      (guitar lespaul)
-      (venue arena2))
-   (practice_speeds
-      (100 85 65 50))
-   (song_practice_1
-      (name songs/becauseitsmidnite/becauseitsmidnite_p85)
-      (tracks
-         ((guitar
-               (0 1))
-            (bass 2)))
-      (pans
-         (-1.0 1.0 0.0))
-      (vols
-         (-1.5 -1.5 0.0))
-      (cores
-         (-1 -1 -1))
-      (midi_file songs/becauseitsmidnite/becauseitsmidnite_demo.mid))
-   (song_practice_2
-      (name songs/becauseitsmidnite/becauseitsmidnite_p65)
-      (tracks
-         ((guitar
-               (0 1))
-            (bass 2)))
-      (pans
-         (-1.0 1.0 0.0))
-      (vols
-         (-1.5 -1.5 0.0))
-      (cores
-         (-1 -1 -1))
-      (midi_file songs/becauseitsmidnite/becauseitsmidnite_demo.mid))
-   (song_practice_3
-      (name songs/becauseitsmidnite/becauseitsmidnite_p50)
-      (tracks
-         ((guitar
-               (0 1))
-            (bass 2)))
-      (pans
-         (-1.0 1.0 0.0))
-      (vols
-         (-1.5 -1.5 0.0))
-      (cores
-         (-1 -1 -1))
-      (midi_file songs/becauseitsmidnite/becauseitsmidnite_demo.mid)))
 ;
 ;
 ;
