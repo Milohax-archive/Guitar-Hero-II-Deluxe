@@ -424,6 +424,22 @@
    "Natural Sunburst Gibson Thunderbird Bass")
 (bass_hofner
    "Sunburst Classic Höfner Bass")
+(bass_music_black
+   "Black MusicMan StingRay Bass")
+(bass_music_lava
+   "Lava Pearl MusicMan StingRay Bass")
+(bass_sg_mahog
+   "Cherry Gibson SG Bass")
+(bass_grab_cherry
+   "Cherry Gibson Grabber Bass")
+(bass_grab_maple
+   "Natural Maple Gibson Grabber Bass")
+(bass_tb_ebony
+   "Ebony Gibson Thunderbird Bass")
+(bass_tb_burst
+   "Natural Sunburst Gibson Thunderbird Bass")
+(bass_hofner
+   "Sunburst Classic Höfner Bass")
 (bass_musicman_desc
    "Introduced in 1976, StingRays are renowned among bassists for their high build quality and bright sound. The latter makes them especially ideal for dense styles of music like hard rock and shoegazing, where the bass is likely to be lost in all the din.")
 (bass_musicman_lava_desc

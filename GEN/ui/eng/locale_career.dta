@@ -45,7 +45,7 @@
 (CM_SELECT_CHARACTER
    "CHANGE CHARACTER")
 (CM_SEL_GUITAR
-   "CHANGE GUITAR")
+   "INSTRUMENT")
 (CM_UNLOCK_SHOP
    "THE STORE")
 (CM_BAND_TITLE
@@ -61,7 +61,7 @@
 (cm_char_title
    "GUITARIST:")
 (cm_guitar_title
-   "GUITAR:")
+   "INSTRUMENT:")
 (career_cash_format
    "$%d")
 (career_score_format

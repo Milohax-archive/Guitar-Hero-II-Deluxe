@@ -1409,6 +1409,102 @@
          {ui goto_screen sel_venue_screen}}
       kDataUnhandled)
    (SELECT_START_MSG
-      {sel_song_panel set metamusic_on_exit FALSE}
-      {ui goto_screen loading_screen}
+      {sel_song_panel set metamusic_on_exit TRUE}
+      {ui goto_screen career_selpart_screen}
       kDataUnhandled)}
+{new
+   UIPanel
+   career_selpart_bg_panel
+   (file
+	{if_else
+      $egg5
+      selpart_bg_80s.milo
+      selpart_bg.milo})}
+{new
+   GHPanel
+   career_selpart_panel
+   (file
+	{if_else
+      $egg5
+      practice_selpart_80s.milo
+      practice_selpart.milo})
+   (focus part0.btn)
+   (sel_buttons part0.btn part1.btn part2.btn)
+   (set_button_text
+      {do
+         ($song
+            {gamecfg get_song})
+         {part0.btn
+            set_text
+            {sprint
+               "sg_"
+               {song_provider get_instrument $song 0}}}
+         {part1.btn
+            set_text
+            {sprint
+               "sg_"
+               {song_provider get_instrument $song 1}}}
+            {part2.btn
+               set_text
+               "sg_drum"}
+         {if
+            {==
+               {song_provider get_instrument $song 1}
+               "rhythm"}
+            {part0.btn
+               set_text
+               "sg_lead"}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+				{part2.btn set_state kDisabled}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+               {part2.btn set_showing FALSE}}
+})
+   (enter
+      {do
+         ($song
+            {gamecfg get_song})
+         {switch
+            {song_provider get_instrument $song 1}
+            (bass
+               {gamecfg set_track_type bass})
+            (rhythm
+               {gamecfg set_track_type rhythm})}
+			(drum		        
+				{if
+				{==
+					{song_provider get_instrument $song 2}
+					"drum"}
+			   {gamecfg set_track_type drum}})
+         {$this set_button_text}})
+   (SELECT_START_MSG
+      {if_else
+         {== $component part0.btn}
+         {gamecfg set_track 0 0}
+				      {if_else
+						{== $component part1.btn}
+							{gamecfg set_track 0 1}
+							{gamecfg set_track 0 2}}
+         {gamecfg set_track 0 1}}
+      {ui goto_screen loading_screen})}
+{new
+   GHScreen
+   career_selpart_screen
+   (panels meta career_selpart_bg_panel career_selpart_panel helpbar)
+   (focus career_selpart_panel)
+   (helpbar
+      (default
+         ((fret1 help_continue)
+            (fret2 help_back)
+            (strum help_updown))))}
