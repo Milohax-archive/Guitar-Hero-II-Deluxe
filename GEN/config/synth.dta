@@ -5,7 +5,55 @@
 (metamusic
    (volume -6.0)
    (fade_rate 1.0)
-   (music metaloop1_warpigs metaloop2_psycho metaloop3_whowas metaloop4_youreally metaloop5_arterial metaloop6_trogdor metaloop_artillery metaloop_crowns metaloop_ftk metaloop_hoods metaloop_rawdog metaloop_voivod)
+   (music 
+{if_else
+      $game80s
+      metaloop_shakin
+      metaloop_voivod}
+{if_else
+      $game80s
+      metaloop_iran
+      metaloop_rawdog}
+{if_else
+      $game80s
+      metaloop_bangyourhead
+      metaloop_hoods}
+{if_else
+      $game80s
+      metaloop_holydiver
+      metaloop_ftk}
+{if_else
+      $game80s
+      metaloop_wegotthebeat
+      metaloop_crowns}
+{if_else
+      $game80s
+      metaloop_wegotthebeat
+      metaloop_artillery}
+{if_else
+      $game80s
+      metaloop_shakin
+      metaloop6_trogdor}
+{if_else
+      $game80s
+      metaloop_radarlove
+      metaloop5_arterial}
+{if_else
+      $game80s
+      metaloop_noonelikeyou
+      metaloop4_youreally}
+{if_else
+      $game80s
+      metaloop_iran
+      metaloop3_whowas}
+{if_else
+      $game80s
+      metaloop_holydiver
+      metaloop2_psycho}
+{if_else
+      $game80s
+      metaloop_bangyourhead
+      metaloop1_warpigs})
    (background_sfx
       (sequence meta_people)
       (min_delay_sec 10)
