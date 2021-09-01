@@ -48,7 +48,7 @@
    "GenericMadScientist")
 ("DTA Scripting"
    "LocalH")
-("Graphics"
+("Milo Hacking + Graphics"
    "jnack")
 ("MIDI Authoring"
    "mariteaux")
@@ -64,6 +64,15 @@
    "PikminGuts92")
 (""
    "Onyxite")
+()
+("Additional haxxors"
+   "ihatecompvir")
+(""
+   "Addymills")
+(""
+   "Zedek The Plague Doctor")
+(""
+   "Nataniel")
 ()
 ("TESTERS")
 ()
