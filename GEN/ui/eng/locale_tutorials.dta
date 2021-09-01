@@ -31,7 +31,7 @@
 (gems_hit_pattern
    "notes hit: %i%% (%i/%i)")
 (tutorials
-   "Change Game")
+   "Tutorials")
 (TUTORIAL_1
    "Basic Lessons")
 (TUTORIAL_2

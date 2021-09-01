@@ -7,11 +7,21 @@
       training_80s.milo
       training.milo})
    (focus tutorials.btn)
+   (poll
+      {if_else
+         {&&
+            {!
+               {campaign tutorial_access}}
+            {==
+               {game get_controller 0}
+               joypad_guitar}}
+         {$this disable tutorials.btn}
+         {$this enable tutorials.btn}})
    (SELECT_START_MSG
       {switch
          $component
          (tutorials.btn
-            {ui goto_screen bootup_load})
+            {ui goto_screen tutorials_screen})
          (practice.btn
             {gamecfg set mode practice}
             {ui goto_screen practice_selsong_screen})})}

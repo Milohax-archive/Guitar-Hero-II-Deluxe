@@ -190,6 +190,8 @@
    "PROGRESSIVE SCAN")
 (vs_widescreen
    "WIDESCREEN DISPLAY")
+(vs_80s
+   "CHANGE GAME")
 (vs_lag
    "CALIBRATE LAG")
 (warning

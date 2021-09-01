@@ -798,6 +798,8 @@
                set_lefty
                1
                {lefty2.chk get_check}})
+         (game80s.btn
+               {ui goto_screen bootup_load})
          (calibrate_lag.btn
             {lag_panel set from_panel $this}
             {if_else
