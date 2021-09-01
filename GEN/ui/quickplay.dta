@@ -68,6 +68,14 @@
             {part2.btn
                set_text
                "sg_drum"}
+				{part2.btn set_state kDisabled}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
                {part2.btn set_showing FALSE}}
 })
    (enter
