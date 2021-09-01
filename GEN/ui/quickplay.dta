@@ -223,9 +223,7 @@
          (0 {do
                {lefty6.chk set_check FALSE}
                {lefty7.chk set_check FALSE}})}
-      {if_else {== $cheat_guitar air_guitar}
-         {lefty8.chk set_check TRUE}
-         {lefty8.chk set_check FALSE}}
+	   {lefty8.chk set_check $roygb}
       {$this update_help_display})
    (update_help_display
          {helpbar
@@ -315,9 +313,8 @@
 
          (gs_left_p8.btn
             {lefty8.chk toggle}
-            {if_else {lefty8.chk get_check}
-               {set $cheat_guitar air_guitar}
-               {set $cheat_guitar 0}})
+            {set $roygb {lefty8.chk get_check}})
+			
          (calibrate_lag.btn
                       {game set_character streamer TRUE})
                   kDataUnhandled}

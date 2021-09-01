@@ -1,4 +1,24 @@
-(slot_colors green red yellow blue orange)
+(slot_colors 
+   	  	{if_else
+			$roygb
+				green
+				red}
+   	  	{if_else
+			$roygb
+				red
+				orange}
+   	  	{if_else
+			$roygb
+				yellow
+				yellow}
+   	  	{if_else
+			$roygb
+				blue
+				green}
+   	  	{if_else
+			$roygb
+				orange
+				blue})
 (smasher
  (mats
   (normal gem_smasher)
@@ -18,10 +38,29 @@
   (bonus 20)))
 #define STRING_SET
 ((gems
-  (green red yellow blue orange)))
+	   ({if_else
+			$roygb
+				green
+				red}
+   	  	{if_else
+			$roygb
+				red
+				orange}
+   	  	{if_else
+			$roygb
+				yellow
+				yellow}
+   	  	{if_else
+			$roygb
+				blue
+				green}
+   	  	{if_else
+			$roygb
+				orange
+				blue})))
 #define DRUM_SET
 ((gems
-  (kicklongnotch snare_red cymbal_yellow tom_blue cymbal_orange)))
+  (kicklongnotch snare_red cymbal_yellow cymbal_blue cymbal_orange)))
 (gem
  (fps 30)
  (mat_formats
