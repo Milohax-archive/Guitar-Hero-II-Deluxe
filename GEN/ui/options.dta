@@ -799,7 +799,11 @@
                1
                {lefty2.chk get_check}})
          (game80s.btn
-               {ui goto_screen bootup_load})
+			{if_else
+				$game80s
+					{set $game80s FALSE}
+					{set $game80s TRUE}}
+               {ui goto_screen bootup_load_new})
          (calibrate_lag.btn
             {lag_panel set from_panel $this}
             {if_else
