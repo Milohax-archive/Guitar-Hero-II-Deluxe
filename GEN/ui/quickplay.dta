@@ -226,11 +226,20 @@
 	   {lefty8.chk set_check $roygb}
       {$this update_help_display})
    (update_help_display
+      {if_else
+         {==
+            [focus_component]
+            "calibrate_lag.btn"}
+         {helpbar
+            set_display
+            ((fret1 help_select)
+               (fret2 help_back)
+               (strum help_updown))}
          {helpbar
             set_display
             ((fret1 help_onoff)
                (fret2 help_back)
-               (strum help_updown))})
+               (strum help_updown))}})
    (FOCUS_MSG
       {$this
          set
