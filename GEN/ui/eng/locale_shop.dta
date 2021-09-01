@@ -216,6 +216,8 @@
    "An odd hybrid of parts scavenged from other toy guitars, this all-white Signature SG is truly one of a kind - for better or worse.")
 (redoctane_jnack_shop_desc
    "Legend says jnack broke into Activision's break room to steal their guitars, but since Activision already killed the franchise twice, no one seemed to care.")
+(air_guitar_shop_desc
+   "This one came to the shop when we needed more space on the Extras menu. True story.")
 (arterialblack
    "Arterial Black")
 (collide

@@ -400,6 +400,12 @@
    "Local H, the (other) Mad Scientist of Guitar Hero II, has a habit of Frankensteining together toy guitars. (Ask him about his \qXG\q sometime - he could use the reminder to go fix it.) White on white, with a ROYOR array of fret buttons; it's unique, if nothing else.")
 (redoctane_jnack_desc
    "Legend says jnack broke into Activision's break room to steal their guitars, but since Activision already killed the franchise twice, no one seemed to care.")
+(air_guitar
+   "Air Guitar")
+(empty_void
+   "Empty Void Finish")
+(air_guitar_desc
+   "The Annual Air Guitar World Championship Contest has been held every year in Oulu, Finland since 1996. Contestants are judged based on their stage presence, technical merit, and \qairness\q. The competition's goal is to promote world peace, as in the organizers' eyes, \qwars will end and all bad things will vanish when people play the air guitar instead\q.")
 (bass_musicman
    "Black MusicMan StingRay Bass")
 (bass_musicman_lava

@@ -33,6 +33,8 @@
       (price 850))
    (redoctane
       (price 700))
+   (air_guitar
+      (price 300))
    (fish_reward
       (price 500))
    (usa_reward
