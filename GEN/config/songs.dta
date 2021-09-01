@@ -517,84 +517,47 @@
       (midi_file songs/crazyonyou/crazyonyou.mid))
    (band metal_bass metal_drummer female_singer))
 (dead
-   (name
-      "Dead!")
-   (artist
-      "My Chemical Romance")
-   (caption performed_by)
-   (song
-      (name songs/dead/dead)
-      (tracks
-         ((guitar
-               (2 3))
-            (rhythm
-               (4 5))))
-      (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
-      (vols
-         (-2.5 -2.5 -5.0 -5.0 -4.5 -4.5))
-      (cores
-         (-1 -1 1 1 -1 -1))
-      (midi_file songs/dead/dead.mid)
-      (hopo_threshold 250))
-   (song_coop
-      (name songs/dead/dead_coop)
-      (tracks
-         ((guitar 2 3)
-            (rhythm 4 5)))
-      (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
-      (vols
-         (-1.5 -1.5 -4.0 -4.0 -3.5 -3.5))
-      (cores
-         (-1 -1 1 1 -1 -1))
-      (midi_file songs/dead/dead.mid)
-      (hopo_threshold 250))
-   (anim_tempo kTempoFast)
-   (preview 41300 63600)
-   (quickplay
-      (character_outfit goth2)
-      (guitar flying_v)
-      (venue battle))
-   (song_practice_1
-      (name songs/dead/dead_p85)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/dead/dead.mid)
-      (hopo_threshold 250))
-   (song_practice_2
-      (name songs/dead/dead_p65)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/dead/dead.mid)
-      (hopo_threshold 250))
-   (song_practice_3
-      (name songs/dead/dead_p50)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/dead/dead.mid)
-      (hopo_threshold 250)))
+ (name
+  "Dead!")
+ (artist
+  "My Chemical Romance")
+ (caption performed_by)
+ (song
+  (name songs/dead/dead)
+  (tracks
+   ((guitar
+      (2 3))
+    (rhythm
+	  (4 5))))
+  (pans
+   (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+  (vols
+   (-1.5 -1.5 -4.0 -4.0 -3.5 -3.5))
+  (cores
+   (-1 -1 1 1 -1 -1))
+  (midi_file songs/dead/dead.mid)
+  (hopo_threshold 250))
+ (song_coop
+  (name songs/dead/dead_coop)
+  (tracks
+   ((guitar
+      (2 3))
+    (rhythm
+	  (4 5))))
+  (pans
+   (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+  (vols
+   (-1.5 -1.5 -4.0 -4.0 -3.5 -3.5))
+  (cores
+   (-1 -1 1 1 -1 -1))
+  (midi_file songs/dead/dead_coop.mid)
+  (hopo_threshold 250))
+ (anim_tempo kTempoFast)
+ (preview 41300 63600)
+ (quickplay
+  (character_outfit goth2)
+  (guitar flying_v)
+  (venue battle)))
 (freebird
    (name
       "Free Bird")
