@@ -3,7 +3,7 @@
    loading_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       loading_80s.milo
       loading.milo})
    (enter

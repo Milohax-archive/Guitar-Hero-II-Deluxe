@@ -3,7 +3,7 @@
    modifiers_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       game_modifiers_80s.milo
       game_modifiers.milo})
    (focus gs_guitar.sld)

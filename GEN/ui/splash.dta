@@ -44,7 +44,7 @@
    splash_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       splash_80s.milo
       splash.milo})
    (player_num 0)

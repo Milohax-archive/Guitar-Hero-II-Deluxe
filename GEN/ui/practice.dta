@@ -19,7 +19,7 @@
    practice_selpart_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       practice_selpart_80s.milo
       practice_selpart.milo})
    (focus part0.btn)
@@ -49,7 +49,7 @@
    sel_diff_practice_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       sel_diff_practice_80s.milo
       sel_diff_practice.milo})
    SEL_DIFFICULTY_COMMON
@@ -77,7 +77,7 @@
    practice_sel_section_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       practice_sel_section_80s.milo
       practice_sel_section.milo})
    (focus sel_section.lst)
@@ -211,7 +211,7 @@
    modifiers_panel_pract
    (file
 	{if_else
-      $egg5
+      $game80s
       game_modifiers_80s.milo
       game_modifiers.milo})
    (focus gs_guitar.sld)
@@ -409,7 +409,7 @@
    sel_speed_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       sel_speed_80s.milo
       sel_speed.milo})
    (focus speed0.btn)
@@ -442,7 +442,7 @@
    practice_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       practice_panel_80s.milo
       practice_panel.milo})
    (enter

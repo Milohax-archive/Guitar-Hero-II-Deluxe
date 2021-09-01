@@ -3,7 +3,7 @@
    options_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       options_80s.milo
       options.milo})
    (focus op_audio.btn)
@@ -190,7 +190,7 @@
    audio_settings_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       game_settings_80s.milo
       game_settings.milo})
    AUDIO_SETTINGS_PANEL_HANDLERS}
@@ -238,7 +238,7 @@
    mem_card_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       mem_card_80s.milo
       mem_card.milo})
    (focus save_bands.btn)}
@@ -834,7 +834,7 @@
    pscan_warning_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       pscan_warning_80s.milo
       pscan_warning.milo})
    (focus pscan_ok.btn)}
@@ -886,7 +886,7 @@
    pscan_switching_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       pscan_switching_80s.milo
       pscan_switching.milo})
    (focus pscan_yes.btn)}

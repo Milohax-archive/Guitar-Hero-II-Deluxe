@@ -3,7 +3,7 @@
    multi_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       multi_80s.milo
       multi.milo})
    (focus coop.btn)
@@ -674,7 +674,7 @@
    seldiff_bg_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       sel_diff_bg_80s.milo
       sel_diff_bg.milo})}
 {new
@@ -779,7 +779,7 @@
    selpart_bg_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       sel_part_bg_80s.milo
       sel_part_bg.milo})}
 {new

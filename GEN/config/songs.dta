@@ -6729,7 +6729,7 @@
 (speedtest
    (name
    	  	{if_else
-			$egg5
+			$game80s
 				"Speed Test (HalfDuck Cover)"
 				"Speed Test"})
    (artist
@@ -6738,7 +6738,7 @@
    (song
       (name 
 	  	{if_else
-			$egg5
+			$game80s
 				songs/speedtesthalfduck/speedtesthalfduck
 				songs/speedtest/speedtest})
       (tracks
@@ -6754,7 +6754,7 @@
          (-1 -1 1 1 -1 -1))
       (midi_file 
 		{if_else
-			$egg5
+			$game80s
 				songs/speedtesthalfduck/speedtesthalfduck.mid
 				songs/speedtest/speedtest.mid}))
    (anim_tempo kTempoFast)

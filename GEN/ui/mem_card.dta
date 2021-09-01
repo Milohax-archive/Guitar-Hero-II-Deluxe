@@ -7,10 +7,10 @@
       {switch
          $component
          (tutorials.btn
-		 {set $egg5 FALSE}
+		 {set $game80s FALSE}
             {ui goto_screen bootup_load_new})
          (practice.btn
-		 {set $egg5 TRUE}
+		 {set $game80s TRUE}
             {ui goto_screen bootup_load_new})})}
 {new
    GHScreen
@@ -55,7 +55,7 @@
    dialog
    (file
 	{if_else
-      $egg5
+      $game80s
       dialog_80s.milo
       dialog.milo})
    (force_exit TRUE)

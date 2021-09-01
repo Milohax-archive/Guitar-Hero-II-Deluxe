@@ -3,7 +3,7 @@
    main_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       main_egg2.milo
       main.milo})
    (focus main_quickspin.btn)
@@ -67,7 +67,7 @@
       {game set_song_index 0}
       {game set_character 
    	  	{if_else
-			$egg5
+			$game80s
 				metalencore
 				metal1}
 				TRUE}

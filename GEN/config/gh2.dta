@@ -160,47 +160,47 @@
    #include guitars.dta)
 (characters
    ({if_else
-      $egg5
+      $game80s
       punkencore
       punkencore}
       ({if_else
-      $egg5
+      $game80s
       punkencore
       punk1})
       (punk2))
    ({if_else
-      $egg5
+      $game80s
       alternaencore
       alternaencore}
       ({if_else
-      $egg5
+      $game80s
       alternaencore
       alterna1})
       (alterna2))
    ({if_else
-      $egg5
+      $game80s
       glamencore
       glamencore}
       ({if_else
-      $egg5
+      $game80s
       glamencore
       glam1})
       (glam2))
    ({if_else
-      $egg5
+      $game80s
       gothencore
       gothencore}
       ({if_else
-      $egg5
+      $game80s
       gothencore
       goth2})
       (goth1))
    ({if_else
-      $egg5
+      $game80s
       metalencore
       metalencore}
       ({if_else
-      $egg5
+      $game80s
       metalencore
       metal1})
       (metal2))
@@ -218,11 +218,11 @@
    (funk1
       (funk1))
    ({if_else
-      $egg5
+      $game80s
       grimencore
       grimencore}
       ({if_else
-      $egg5
+      $game80s
       grimencore
       grim})))  
 (mc
