@@ -2850,20 +2850,32 @@
       "Black Sabbath")
    (song
       (name songs/warpigs/warpigs)
-      (tracks
-         ((guitar
-               (2 3))
-            (bass
-               (4 5))))
+      (
+         'tracks'
+         (
+            (
+               'guitar'
+               (2)
+            )
+            (
+               'bass'
+               (3)
+            )
+            (
+               'drum'
+               (4 5)
+            )
+         )
+      )
       (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+         (-1.0 1.0 0.0 0.0 -1.0 1.0))
       (vols
-         (-3.0 -3.0 -3.0 -3.0 -1.0 -1.0))
+         (0.0 0.0 0.0 0.0 0.0 0.0))
       (cores
          (-1 -1 1 1 -1 -1))
       (midi_file songs/warpigs/warpigs.mid))
    (anim_tempo kTempoMedium)
-   (preview 83150 103150)
+   (preview 67826 97826)
    (quickplay
       (character_outfit metal1)
       (guitar sg)
@@ -5373,20 +5385,32 @@
    (caption performed_by)
    (song
       (name songs/collide/collide)
-      (tracks
-         ((guitar
-               (2 3))
-            (bass
-               (4 5))))
+      (
+         'tracks'
+         (
+            (
+               'guitar'
+               (2)
+            )
+            (
+               'bass'
+               (3)
+            )
+            (
+               'drum'
+               (4 5)
+            )
+         )
+      )
       (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+         (-1.0 1.0 0.0 0.0 -1.0 1.0))
       (vols
-         (-3.0 -3.0 -3.5 -3.5 -2.0 -2.0))
+         (0.0 0.0 0.0 0.0 0.0 0.0))
       (cores
-         (-1 -1 1 1 -1 -1))
+         (-1 -1 1 -1 -1 -1))
       (midi_file songs/collide/collide.mid))
    (anim_tempo kTempoMedium)
-   (preview 30700 50000)
+   (preview 41000 71000)
    (quickplay
       (character_outfit rock2)
       (guitar flying_v)
@@ -5885,19 +5909,32 @@
    (caption performed_by)
    (song
       (name songs/ladylightning/ladylightning)
-      (tracks
-         ((guitar
-               (2 3))
-            (bass 4)))
+      (
+         'tracks'
+         (
+            (
+               'guitar'
+               (2)
+            )
+            (
+               'bass'
+               (3)
+            )
+            (
+               'drum'
+               (4 5)
+            )
+         )
+      )
       (pans
-         (-1.0 1.0 -1.0 1.0 0.0))
+         (-1.0 1.0 0.0 0.0 -1.0 1.0))
       (vols
-         (-3.0 -3.0 -3.0 -3.0 0.0))
+         (0.0 0.0 0.0 0.0 0.0 0.0))
       (cores
-         (-1 -1 1 1 -1))
+         (-1 -1 1 -1 -1 -1))
       (midi_file songs/ladylightning/ladylightning.mid))
    (anim_tempo kTempoFast)
-   (preview 64000 84500)
+   (preview 55000 85000)
    (quickplay
       (character_outfit rock2)
       (guitar lespaul)
@@ -6025,34 +6062,32 @@
    (caption performed_by)
    (song
       (name songs/lesstalkmorerokk/lesstalkmorerokk)
-      (tracks
-         ((guitar
-               (2 3))
-            (rhythm
-               (4 5))))
+      (
+         'tracks'
+         (
+            (
+               'guitar'
+               (2)
+            )
+            (
+               'bass'
+               (3)
+            )
+            (
+               'drum'
+               (4 5)
+            )
+         )
+      )
       (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+         (-1.0 1.0 0.0 0.0 -1.0 1.0))
       (vols
-         (0.0 0.0 -1.0 -1.0 -1.0 -1.0))
+         (0.0 0.0 0.0 0.0 0.0 0.0))
       (cores
-         (-1 -1 1 1 -1 -1))
-      (midi_file songs/lesstalkmorerokk/lesstalkmorerokk.mid))
-   (song_coop
-      (name songs/lesstalkmorerokk/lesstalkmorerokk_coop)
-      (tracks
-         ((guitar
-               (2 3))
-            (rhythm
-               (4 5))))
-      (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
-      (vols
-         (-3.0 -3.0 -4.0 -4.0 -4.0 -4.0))
-      (cores
-         (-1 -1 1 1 -1 -1))
+         (-1 -1 1 -1 -1 -1))
       (midi_file songs/lesstalkmorerokk/lesstalkmorerokk.mid))
    (anim_tempo kTempoFast)
-   (preview 101000 121000)
+   (preview 90000 120000)
    (quickplay
       (character_outfit goth2)
       (guitar lespaul)
@@ -6647,7 +6682,7 @@
          (-1 -1 1 -1 -1 -1))
       (midi_file songs/soybomb/soybomb.mid))
    (anim_tempo kTempoFast)
-   (preview 23000 43000)
+   (preview 92000 122000)
    (quickplay
       (character_outfit rockabill1)
       (guitar lespaul)
