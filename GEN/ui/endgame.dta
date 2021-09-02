@@ -91,8 +91,10 @@
                   {cashaward_screen get new_cash}
                   0}
                cashaward_screen)
-            ({campaign has_unlocked_song}
-               unlock_song_screen)
+;;;;;;;;;;;;;;;;;;;80s debug only;;;;;;;;;;;;;;;;;;;
+;            ({campaign has_unlocked_song}
+;               unlock_song_screen)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
             ({campaign num_guitar_awards}
                unlock_guitar_screen)
             (TRUE complete_screen)}

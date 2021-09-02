@@ -11,11 +11,7 @@
    char_single
    (num_placers 1)
    (load_order LOAD_CHARACTERS)
-   (enter
-      {$this
-         show_char
-         0
-         {game get_character_outfit}})}
+   (enter)}
 #define SEL_DIFFICULTY_COMMON
 ((update_focus
       {$this
@@ -1454,22 +1450,33 @@
             {part0.btn
                set_text
                "sg_lead"}}
-      {if_else
-            {==
-               {song_provider get_instrument $song 2}
-               "drum"}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			   
             {part2.btn
-               set_text
-               "sg_drum"}
-				{part2.btn set_state kDisabled}}
-      {if_else
-            {==
-               {song_provider get_instrument $song 2}
-               "drum"}
+               set_state
+               kDisabled}
             {part2.btn
-               set_text
-               "sg_drum"}
-               {part2.btn set_showing FALSE}}
+               set_showing
+               FALSE}
+;;;;;;;;;;;;;;;;Use above for debug elf;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;Use below for retail elf;;;;;;;;;;;;;;;;;;;
+;      {if_else
+;            {==
+;               {song_provider get_instrument $song 2}
+;               "drum"}
+;            {part2.btn
+;               set_text
+;               "sg_drum"}
+;				{part2.btn set_state kDisabled}}
+;      {if_else
+;            {==
+;               {song_provider get_instrument $song 2}
+;               "drum"}
+;            {part2.btn
+;               set_text
+;               "sg_drum"}
+;               {part2.btn set_showing FALSE}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 })
    (enter
       {do
@@ -1481,22 +1488,17 @@
                {gamecfg set_track_type bass})
             (rhythm
                {gamecfg set_track_type rhythm})}
-			(drum		        
-				{if
-				{==
-					{song_provider get_instrument $song 2}
-					"drum"}
-			   {gamecfg set_track_type drum}})
          {$this set_button_text}})
    (SELECT_START_MSG
-      {if_else
+      {if
          {== $component part0.btn}
-         {gamecfg set_track 0 0}
-				      {if_else
-						{== $component part1.btn}
-							{gamecfg set_track 0 1}
-							{gamecfg set_track 0 2}}
+         {gamecfg set_track 0 0}}
+      {if
+         {== $component part1.btn}
          {gamecfg set_track 0 1}}
+      {if
+         {== $component part2.btn}
+         {gamecfg set_track 0 2}}
       {ui goto_screen loading_screen})}
 {new
    GHScreen
