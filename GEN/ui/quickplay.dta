@@ -61,7 +61,7 @@
             {part0.btn
                set_text
                "sg_lead"}}
-
+#ifndef _SHIP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			   
             {part2.btn
                set_state
@@ -70,24 +70,26 @@
                set_showing
                FALSE}
 ;;;;;;;;;;;;;;;;Use above for debug elf;;;;;;;;;;;;;;;;;;;;
+#else
 ;;;;;;;;;;;;;;;;Use below for retail elf;;;;;;;;;;;;;;;;;;;
-;      {if_else
-;            {==
-;               {song_provider get_instrument $song 2}
-;               "drum"}
-;            {part2.btn
-;               set_text
-;               "sg_drum"}
-;				{part2.btn set_state kDisabled}}
-;      {if_else
-;            {==
-;               {song_provider get_instrument $song 2}
-;               "drum"}
-;            {part2.btn
-;               set_text
-;               "sg_drum"}
-;               {part2.btn set_showing FALSE}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+				{part2.btn set_state kDisabled}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+               {part2.btn set_showing FALSE}}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#endif
 })
    (enter
       {do
