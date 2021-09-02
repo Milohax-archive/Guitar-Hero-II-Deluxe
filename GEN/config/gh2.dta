@@ -158,6 +158,39 @@
    (sp_deploy_repeat_delay 7))
 (guitars
    #include guitars.dta)
+#ifndef _SHIP
+(characters
+   (punk
+      (punk1)
+      (punk2))
+   (alterna
+      (alterna1)
+      (alterna2))
+   (glam
+      (glam1)
+      (glam2))
+   (goth
+      (goth2)
+      (goth1))
+   (metal
+      (metal1)
+      (metal2))
+   (rockabill
+      (rockabill1)
+      (rockabill2))
+   (rock
+      (rock2)
+      (rock1))
+   (deathmetal
+      (deathmetal1)
+      (deathmetal2))
+   (classic
+      (classic))
+   (funk1
+      (funk1))
+   (grim
+      (grim)))
+#else
 (characters
    ({if_else
       $game80s
@@ -224,7 +257,8 @@
       ({if_else
       $game80s
       grimencore
-      grim})))  
+      grim})))
+#endif
 (mc
    #include mc.dta)
 (store

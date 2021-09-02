@@ -366,11 +366,15 @@
 {new
    GHPanel
    sel_character_panel_qp
+#ifndef _SHIP
+   (file sel_character_debug.milo)
+#else
    (file
 	{if_else
       $game80s
       sel_character_80s.milo
       sel_character.milo})
+#endif
    (char_focus rockabill)
    (char_outfit rockabill1)
    (old_scroll_pos 0)
