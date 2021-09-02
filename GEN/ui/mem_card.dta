@@ -1,3 +1,27 @@
+{new
+   GHPanel
+   training_panel_boot
+   (file training_boot.milo)
+   (focus tutorials.btn)
+   (SELECT_START_MSG
+      {switch
+         $component
+         (tutorials.btn
+		 {set $game80s FALSE}
+            {ui goto_screen bootup_load_new})
+         (practice.btn
+		 {set $game80s TRUE}
+            {ui goto_screen bootup_load_new})})}
+{new
+   GHScreen
+   bootup_load
+   (panels meta training_panel_boot helpbar)
+   (focus training_panel_boot)
+   (helpbar
+      (default
+         ((fret1 help_continue)
+            (fret2 help_back)
+            (strum help_updown))))}
 #define kMCNoError
 (0)
 #define kMCNoCard
@@ -29,7 +53,11 @@
 {new
    UIPanel
    dialog
-   (file dialog.milo)
+   (file
+	{if_else
+      $game80s
+      dialog_80s.milo
+      dialog.milo})
    (force_exit TRUE)
    (enter
       {{ui current_screen}
@@ -106,7 +134,7 @@
       {$this setup '' '' none $msg $title})}
 {new
    GHScreen
-   bootup_load
+   bootup_load_new
    DIALOG_SCREEN
    (enter
       {set $autosave TRUE}
@@ -120,7 +148,7 @@
             (units kTaskUISeconds)
             (script
                {dialog set_message load_loading}
-               {memcard load_data bootup_load})}})
+               {memcard load_data bootup_load_new})}})
    (MEMCARD_RESULT_MSG
       {switch
          $result
@@ -157,7 +185,7 @@
          (dl_button1.btn
             {ui goto_screen bootup_caution})
          (dl_button2.btn
-            {ui goto_screen bootup_load})})}
+            {ui goto_screen bootup_load_new})})}
 {new
    GHScreen
    bootup_create_save_check
@@ -202,13 +230,13 @@
             {ui goto_screen bootup_nospace})
          (kMCFileExists
             {set $mc_replace_screen $this}
-            {set $mc_load_screen bootup_load}
+            {set $mc_load_screen bootup_load_new}
             {ui goto_screen bootup_replace_save_check})
          (kMCNotFormatted
             {set $nfw_retry_screen $this}
             {set $nfw_continue_screen bootup_caution_format_cancelled}
             {set $mc_format_done bootup_create_save}
-            {set $mc_save_failed_screen bootup_load}
+            {set $mc_save_failed_screen bootup_load_new}
             {set $mc_no_screen bootup_caution_format_cancelled}
             {set $mc_yes_screen mc_format}
             {ui goto_screen bootup_format_check})
@@ -243,7 +271,7 @@
          (dl_button1.btn
             {ui goto_screen autosave_disable_check})
          (dl_button2.btn
-            {ui goto_screen bootup_load})})}
+            {ui goto_screen bootup_load_new})})}
 {new
    GHScreen
    bootup_save_nocard
@@ -269,7 +297,7 @@
          (dl_button1.btn
             {ui goto_screen bootup_caution})
          (dl_button2.btn
-            {ui goto_screen bootup_load})})}
+            {ui goto_screen bootup_load_new})})}
 {new
    GHScreen
    bootup_corrupt_data
@@ -310,7 +338,7 @@
          (dl_button1.btn
             {ui goto_screen autosave_disable_check})
          (dl_button2.btn
-            {ui goto_screen bootup_load})})}
+            {ui goto_screen bootup_load_new})})}
 {new
    GHScreen
    autosave_disable_check

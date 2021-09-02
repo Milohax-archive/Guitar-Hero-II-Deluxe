@@ -42,7 +42,11 @@
 {new
    UIPanel
    splash_panel
-   (file splash.milo)
+   (file
+	{if_else
+      $game80s
+      splash_80s.milo
+      splash.milo})
    (player_num 0)
    (finish_load
       {splash.view set_frame 0}

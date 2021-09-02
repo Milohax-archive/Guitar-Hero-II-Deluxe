@@ -1,7 +1,10 @@
 (splash_anybutton
    "PRESS ANY BUTTON TO BEGIN")
 (splash_legal
-   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems.")
+	{if_else
+      $game80s
+   "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
+   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."})
 (guitar_help_using
    "USING THE GUITAR CONTROLLER")
 (guitar_help_plugin
@@ -168,6 +171,8 @@
    "rename band")
 (autosave_band
    "autosave band")
+(autosave_mem
+   "autosave")
 (new_band
    "new band")
 (save_band
@@ -190,6 +195,8 @@
    "PROGRESSIVE SCAN")
 (vs_widescreen
    "WIDESCREEN DISPLAY")
+(vs_80s
+   "CHANGE GAME")
 (vs_lag
    "CALIBRATE LAG")
 (warning
@@ -236,19 +243,45 @@
    "The Blackout Bar")
 (battle
    "Battle of the Bands")
+(arena2
+   "The Arena")
+(fest2
+   "Vans Warped Tour")
+(theatre2
+   "Rock City Theater")
+(stone2
+   "Stonehenge")
+(small3
+   "The Rat Cellar")
+(small4
+   "The Blackout Bar")
+(battle2
+   "Battle of the Bands")
 (battle_address
+   "Nilbog High")
+(battle2_address
    "Nilbog High")
 (small1_address
    "675 Mass Ave")
 (small2_address
    "677 Flatbush Ave")
+(small3_address
+   "675 Mass Ave")
+(small4_address
+   "677 Flatbush Ave")
 (big_address
    "720 Landsdowne St")
 (theatre_address
    "Downtown")
+(theatre2_address
+   "Downtown")
 (fest_address
    "Randall Field")
+(fest2_address
+   "Randall Field")
 (arena_address
+   "1 City Place")
+(arena2_address
    "1 City Place")
 (stone_address
    "jolly Old England")
@@ -511,6 +544,8 @@
    "GUITAR")
 (sg_bass
    "BASS")
+(sg_drum
+   "DRUMS")
 (multiplier_format
    "%dX")
 (star_ready

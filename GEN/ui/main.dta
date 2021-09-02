@@ -3,9 +3,9 @@
    main_panel
    (file
 	{if_else
-      $egg5
-      main.milo
-      main_egg.milo})
+      $game80s
+      main_egg2.milo
+      main.milo})
    (focus main_quickspin.btn)
    (msg_last_frame 0)
    (already_entered FALSE)
@@ -65,7 +65,16 @@
          kDifficultyExpert}
       {game set_venue fest}
       {game set_song_index 0}
+#ifndef _SHIP
       {game set_character metal1 TRUE}
+#else
+      {game set_character 
+   	  	{if_else
+			$game80s
+				metalencore
+				metal1}
+				TRUE}
+#endif
       {game set_guitar_index 1}
       {do
          ($player2_config

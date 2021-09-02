@@ -268,6 +268,12 @@
       (redoctane_jnack
          (outfit guitar_redoctane)
          (mat redoctane_jnack.mat))))
+(air_guitar
+   (type guitar)
+   (skins
+      (empty_void
+	     (outfit air_guitar)
+		 (mat guitar_lespaul_burst.mat))))
 (fish_reward
    (type guitar)
    (require tour_passed)
@@ -333,7 +339,7 @@
          (outfit log)
          (mat log.mat))))
 (scythe
-   (type grim)
+   (type guitar)
    (skins
       (scythe
          (outfit scythe)

@@ -126,7 +126,7 @@
 ../ui/eng/locale_sections.dta ../ui/eng/locale_shop.dta ../ui/eng/locale_tiers.dta
 ../ui/eng/locale_tutorials.dta ../ui/eng/locale_rb1-sections.dta ../ui/eng/locale_rb2-sections.dta
 ../ui/eng/locale_rb3-sections.dta)
-(venues battle small1 small2 big theatre fest arena stone)
+(venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
 (default_band metal_singer metal_bass metal_drummer)
 (quick_cheats
    #include cheats.dta)
@@ -158,6 +158,7 @@
    (sp_deploy_repeat_delay 7))
 (guitars
    #include guitars.dta)
+#ifndef _SHIP
 (characters
    (punk
       (punk1)
@@ -188,7 +189,76 @@
    (funk1
       (funk1))
    (grim
-      (grim)))  
+      (grim)))
+#else
+(characters
+   ({if_else
+      $game80s
+      punkencore
+      punkencore}
+      ({if_else
+      $game80s
+      punkencore
+      punk1})
+      (punk2))
+   ({if_else
+      $game80s
+      alternaencore
+      alternaencore}
+      ({if_else
+      $game80s
+      alternaencore
+      alterna1})
+      (alterna2))
+   ({if_else
+      $game80s
+      glamencore
+      glamencore}
+      ({if_else
+      $game80s
+      glamencore
+      glam1})
+      (glam2))
+   ({if_else
+      $game80s
+      gothencore
+      gothencore}
+      ({if_else
+      $game80s
+      gothencore
+      goth2})
+      (goth1))
+   ({if_else
+      $game80s
+      metalencore
+      metalencore}
+      ({if_else
+      $game80s
+      metalencore
+      metal1})
+      (metal2))
+   (rockabill
+      (rockabill1)
+      (rockabill2))
+   (rock
+      (rock2)
+      (rock1))
+   (deathmetal
+      (deathmetal1)
+      (deathmetal2))
+   (classic
+      (classic))
+   (funk1
+      (funk1))
+   ({if_else
+      $game80s
+      grimencore
+      grimencore}
+      ({if_else
+      $game80s
+      grimencore
+      grim})))
+#endif
 (mc
    #include mc.dta)
 (store

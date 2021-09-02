@@ -1,7 +1,11 @@
 {new
    UIPanel
    loading_panel
-   (file loading.milo)
+   (file
+	{if_else
+      $game80s
+      loading_80s.milo
+      loading.milo})
    (enter
       {tip.lbl
          set_localized_text

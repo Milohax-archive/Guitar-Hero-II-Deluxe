@@ -48,7 +48,11 @@
 {new
    UIPanel
    sel_difficulty_panel
-   (file sel_difficulty.milo)
+   (file
+	{if_else
+      $egg5
+      sel_difficulty_80s.milo
+      sel_difficulty.milo})
    SEL_DIFFICULTY_COMMON
    (enter
       {$this update_focus})
@@ -58,7 +62,11 @@
 {new
    UIPanel
    sel_diff_career_panel
-   (file sel_diff_career.milo)
+   (file
+	{if_else
+      $egg5
+      sel_diff_career_80s.milo
+      sel_diff_career.milo})
    SEL_DIFFICULTY_COMMON
    (enter
       {sd_easy_status.lbl
@@ -144,7 +152,11 @@
 {new
    GHPanel
    career_panel
-   (file career.milo)
+    (file
+	{if_else
+      $egg5
+      career_80s.milo
+      career.milo})
    (focus cm_letsrock.btn)
    (enter
       {cm_char.lbl
@@ -242,7 +254,15 @@
 {new
    GHPanel
    sel_character_panel
-   (file sel_character.milo)
+#ifndef _SHIP
+   (file sel_character_debug.milo)
+#else
+   (file
+	{if_else
+      $game80s
+      sel_character_80s.milo
+      sel_character.milo})
+#endif
    (char_focus rockabill)
    (char_outfit rockabill1)
    (old_scroll_pos 0)
@@ -1206,24 +1226,42 @@
             (sv_battle.btn
                {$this set_venue_map_frame 1}
                {game set_venue battle})
+            (sv_battle2.btn
+               {$this set_venue_map_frame 1}
+               {game set_venue battle2})
             (sv_small1.btn
                {$this set_venue_map_frame 2}
                {game set_venue small1})
+            (sv_small3.btn
+               {$this set_venue_map_frame 2}
+               {game set_venue small3})
             (sv_small2.btn
                {$this set_venue_map_frame 3}
                {game set_venue small2})
+            (sv_small4.btn
+               {$this set_venue_map_frame 3}
+               {game set_venue small4})
             (sv_big.btn
                {$this set_venue_map_frame 4}
                {game set_venue big})
             (sv_theatre.btn
                {$this set_venue_map_frame 5}
                {game set_venue theatre})
+            (sv_theatre2.btn
+               {$this set_venue_map_frame 5}
+               {game set_venue theatre2})
             (sv_fest.btn
                {$this set_venue_map_frame 6}
                {game set_venue fest})
+            (sv_fest2.btn
+               {$this set_venue_map_frame 6}
+               {game set_venue fest2})
             (sv_arena.btn
                {$this set_venue_map_frame 7}
                {game set_venue arena})
+            (sv_arena2.btn
+               {$this set_venue_map_frame 7}
+               {game set_venue arena2})
             (sv_stone.btn
                {$this set_venue_map_frame 8}
                {game set_venue stone})}})
@@ -1375,6 +1413,111 @@
          {ui goto_screen sel_venue_screen}}
       kDataUnhandled)
    (SELECT_START_MSG
-      {sel_song_panel set metamusic_on_exit FALSE}
-      {ui goto_screen loading_screen}
+      {sel_song_panel set metamusic_on_exit TRUE}
+      {ui goto_screen career_selpart_screen}
       kDataUnhandled)}
+{new
+   UIPanel
+   career_selpart_bg_panel
+   (file
+	{if_else
+      $egg5
+      selpart_bg_80s.milo
+      selpart_bg.milo})}
+{new
+   GHPanel
+   career_selpart_panel
+   (file
+	{if_else
+      $egg5
+      practice_selpart_80s.milo
+      practice_selpart.milo})
+   (focus part0.btn)
+   (sel_buttons part0.btn part1.btn part2.btn)
+   (set_button_text
+      {do
+         ($song
+            {gamecfg get_song})
+         {part0.btn
+            set_text
+            {sprint
+               "sg_"
+               {song_provider get_instrument $song 0}}}
+         {part1.btn
+            set_text
+            {sprint
+               "sg_"
+               {song_provider get_instrument $song 1}}}
+            {part2.btn
+               set_text
+               "sg_drum"}
+         {if
+            {==
+               {song_provider get_instrument $song 1}
+               "rhythm"}
+            {part0.btn
+               set_text
+               "sg_lead"}}
+
+#ifndef _SHIP
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			   
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+;;;;;;;;;;;;;;;;Use above for debug elf;;;;;;;;;;;;;;;;;;;;
+#else
+;;;;;;;;;;;;;;;;Use below for retail elf;;;;;;;;;;;;;;;;;;;
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+				{part2.btn set_state kDisabled}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+               {part2.btn set_showing FALSE}}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#endif
+})
+   (enter
+      {do
+         ($song
+            {gamecfg get_song})
+         {switch
+            {song_provider get_instrument $song 1}
+            (bass
+               {gamecfg set_track_type bass})
+            (rhythm
+               {gamecfg set_track_type rhythm})}
+         {$this set_button_text}})
+   (SELECT_START_MSG
+      {if
+         {== $component part0.btn}
+         {gamecfg set_track 0 0}}
+      {if
+         {== $component part1.btn}
+         {gamecfg set_track 0 1}}
+      {if
+         {== $component part2.btn}
+         {gamecfg set_track 0 2}}
+      {ui goto_screen loading_screen})}
+{new
+   GHScreen
+   career_selpart_screen
+   (panels meta career_selpart_bg_panel career_selpart_panel helpbar)
+   (focus career_selpart_panel)
+   (helpbar
+      (default
+         ((fret1 help_continue)
+            (fret2 help_back)
+            (strum help_updown))))}

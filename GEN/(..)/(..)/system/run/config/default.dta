@@ -134,8 +134,8 @@
          {rnd toggle_overlay rate})
       (kPad_DDown
          {rnd toggle_heap})
-      (kPad_Select
-         {rnd screen_dump screendump})
+      ; (kPad_Select
+      ;   {rnd screen_dump screendump})
       (kPad_Circle
          {rnd toggle_overlay stats})
       (kPad_X

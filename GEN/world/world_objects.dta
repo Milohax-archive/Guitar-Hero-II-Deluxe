@@ -592,9 +592,15 @@
          #include camshot.dta)))
 #merge arena/arena.dta
 #merge battle/battle.dta
+#merge arena2/arena2.dta
+#merge battle2/battle2.dta
 #merge big/big.dta
 #merge fest/fest.dta
+#merge fest2/fest2.dta
 #merge small1/small1.dta
 #merge small2/small2.dta
+#merge small3/small3.dta
+#merge small4/small4.dta
 #merge stone/stone.dta
 #merge theatre/theatre.dta
+#merge theatre2/theatre2.dta

@@ -33,6 +33,10 @@
       (price 850))
    (redoctane
       (price 700))
+   (air_guitar
+      (price 300))
+   (scythe
+      (price 7000))
    (fish_reward
       (price 500))
    (usa_reward
@@ -152,7 +156,9 @@
       (price 550)))
 (song
    (speedtest
-      (price 500000))
+      (price 0))
+   (becauseitsmidnite
+      (price 550))
    (rawdog
       (price 550))
    (arterialblack
@@ -209,9 +215,7 @@
    (classic
       (price 5000))
    (funk1
-      (price 5000))
-   (grim
-      (price 7000)))
+      (price 5000)))
 (outfit
    (punk2
       (price 2000))
