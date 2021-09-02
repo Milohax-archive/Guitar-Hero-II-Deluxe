@@ -359,7 +359,7 @@
 (log_reward_desc
    "Les Paul's first solidbody guitar, built in 1941, was called \qThe Log,\q due to its impractical weight and crude construction. This guitar, on the other hand, is an actual log.")
 (scythe_desc
-   "On second thought, you probably should fear the reaper. Equally suited for über-fast shredding or deadly combat, this literal axe is a dangerous mother.")
+   "On second thought, you probably should fear the reaper. Equally suited for Ã¼ber-fast shredding or deadly combat, this literal axe is a dangerous mother.")
 (redoctane
    "Harmonix Signature SG")
 (redoctane_cherry
@@ -369,7 +369,7 @@
 (redoctane_pink
    "Pink Finish")
 (redoctane_target
-   "Target® Special Finish")
+   "TargetÂ® Special Finish")
 (redoctane_walnut
    "Walnut Finish")
 (redoctane_yellow
@@ -381,7 +381,7 @@
 (redoctane_jnack
    "jnack Special Finish")
 (redoctane_desc
-   "Gibson's daring foray into the world of toy guitars led to this compact little beauty. Connecting not through a 1/4\q output jack but through a common nine-pin PlayStation®2 controller port, you might still be able to make music with it, if you're insane.")
+   "Gibson's daring foray into the world of toy guitars led to this compact little beauty. Connecting not through a 1/4\q output jack but through a common nine-pin PlayStationÂ®2 controller port, you might still be able to make music with it, if you're insane.")
 (redoctane_cherry_desc
    "Perhaps the most iconic of the Harmonix lineup, this model stands as the go-to guitar of choice for PS2 players of all stripes. (Protip, if the whammy bar goes limp, rubber-band it to the strap peg.)")
 (redoctane_white_desc
@@ -389,7 +389,7 @@
 (redoctane_pink_desc
    "Where or when this finish was offered at retail is still up for debate. Word has it they very rarely surface on internet auction sites.")
 (redoctane_target_desc
-   "Exclusively sold at Target® retailers in a guitar bundle, this one shares the store's red on white color scheme. It also manages to escape its dull, corporate trappings by just plain looking clean.")
+   "Exclusively sold at TargetÂ® retailers in a guitar bundle, this one shares the store's red on white color scheme. It also manages to escape its dull, corporate trappings by just plain looking clean.")
 (redoctane_walnut_desc
    "Who said only real guitars can be made out of wood? Okay, so this one's not REALLY made from wood - but hey, it's still pretty classy.")
 (redoctane_yellow_desc
@@ -423,7 +423,7 @@
 (bass_thunderbird_burst
    "Natural Sunburst Gibson Thunderbird Bass")
 (bass_hofner
-   "Sunburst Classic Höfner Bass")
+   "Sunburst Classic HÃ¶fner Bass")
 (bass_music_black
    "Black MusicMan StingRay Bass")
 (bass_music_lava
@@ -439,7 +439,7 @@
 (bass_tb_burst
    "Natural Sunburst Gibson Thunderbird Bass")
 (bass_hofner
-   "Sunburst Classic Höfner Bass")
+   "Sunburst Classic HÃ¶fner Bass")
 (bass_musicman_desc
    "Introduced in 1976, StingRays are renowned among bassists for their high build quality and bright sound. The latter makes them especially ideal for dense styles of music like hard rock and shoegazing, where the bass is likely to be lost in all the din.")
 (bass_musicman_lava_desc
@@ -457,4 +457,4 @@
 (bass_thunderbird_ebony_desc
    "Launched as a companion to the Gibson Firebird in 1963, the Thunderbird also featured neck-through construction and a high output, good for the thick, heavy low-end the Thunderbird is prized for.")
 (bass_thunderbird_burst_desc
-   "The Who, Aerosmith, Cheap Trick, Mötley Crüe - what do they all have in common? They've all made the growl, the rumble, the - er, THUNDER of the Thunderbird a key part of their sound.")
+   "The Who, Aerosmith, Cheap Trick, MÃ¶tley CrÃ¼e - what do they all have in common? They've all made the growl, the rumble, the - er, THUNDER of the Thunderbird a key part of their sound.")
