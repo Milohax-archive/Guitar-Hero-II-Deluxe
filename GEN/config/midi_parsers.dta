@@ -30,6 +30,18 @@
       {> $mp.length 0.3}
       (strum_long_01 strum_long_02 strum_long_03 strum_long_04)
       strum_short_01})))
+      (StrumMap_Open
+         (events
+            (default
+               {if_else
+                  {> $mp.length 0.25}
+                  (strum_open)
+                  (strum_open)})
+            (()
+               {if_else
+                  {> $mp.length 0.3}
+                  (strum_open)
+                  (strum_open)})))
   (StrumMap_softpick
    (events
     (default strum_short_04)
@@ -157,6 +169,19 @@
      finger_powerchord_1)
     (()
      finger_powerchord_2)))
+      (HandMap_Chord_D
+         (events
+            (1 finger_chord_dmajor)
+            (2 finger_chord_dmajor)
+            (3 finger_chord_dmajor)
+            (4 finger_chord_dmajor)
+            (5 finger_chord_dmajor)
+            ((1)
+               finger_chord_dmajor)
+            ((2)
+               finger_chord_dmajor)
+            (()
+               finger_chord_dmajor)))
   (HandMap_DropD
    (events
     (1 finger_open)
@@ -193,6 +218,349 @@
       {> $mp.length 0.3}
       (finger_vibrato_index finger_vibrato_ring)
       finger_hold_pinky})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Open
+         (events
+            (1 finger_open)
+            (2 finger_open)
+            (3 finger_open)
+            (4 finger_open)
+            (5 finger_open)
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Index
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index
+                  finger_hold_index})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index
+                  finger_hold_index})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index
+                  finger_hold_index})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index
+                  finger_hold_index})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index
+                  finger_hold_index})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Middle
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle
+                  finger_hold_middle})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle
+                  finger_hold_middle})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle
+                  finger_hold_middle})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle
+                  finger_hold_middle})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle
+                  finger_hold_middle})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Ring
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring
+                  finger_hold_ring})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring
+                  finger_hold_ring})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring
+                  finger_hold_ring})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring
+                  finger_hold_ring})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring
+                  finger_hold_ring})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Pinky
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky
+                  finger_hold_pinky})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky
+                  finger_hold_pinky})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky
+                  finger_hold_pinky})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky
+                  finger_hold_pinky})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky
+                  finger_hold_pinky})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Index_Hi
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Middle_Hi
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle_hi
+                  finger_hold_middle_hi})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle_hi
+                  finger_hold_middle_hi})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle_hi
+                  finger_hold_middle_hi})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle_hi
+                  finger_hold_middle_hi})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_middle_hi
+                  finger_hold_middle_hi})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Ring_Hi
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring_hi
+                  finger_hold_ring_hi})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring_hi
+                  finger_hold_ring_hi})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring_hi
+                  finger_hold_ring_hi})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring_hi
+                  finger_hold_ring_hi})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_ring_hi
+                  finger_hold_ring_hi})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Pinky_Hi
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Octave
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            ((1)
+               finger_powerchord_1)
+            ((2)
+               finger_powerchord_1)
+            (()
+               finger_powerchord_2)))
+      (HandMap_Octave2
+         (events
+            (1
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (2
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_index_hi
+                  finger_hold_index_hi})
+            (3
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            (4
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
+            (5
+               {if_else
+                  {> $mp.length 0.3}
+                  finger_vibrato_pinky_hi
+                  finger_hold_pinky_hi})
     ((1)
      finger_powerchord_1)
     ((2)
@@ -392,12 +760,50 @@
     (default kBassPluck)
     (()
      kBassPluck)))
+      (StrumMap_Open
+         (idle_event bass_pluck_open)
+         (events
+            (default bass_pluck_open)
+            (()
+               bass_pluck_open)))
   (StrumMap_SlapBass
    (idle_event bass_slap_open)
    (events
     (default kBassSlap)
     (()
-     kBassSlap)))))
+               kBassSlap)))
+      (StrumMap_SlapBassOpen
+         (idle_event bass_slap_open)
+         (events
+            (default bass_slap_open)
+            (()
+               bass_slap_open)))
+      (StrumMap_Pick
+		(idle_event strum_open)
+         (events
+            (default
+               {if_else
+                  {> $mp.length 0.25}
+                  (strum_short_01 strum_short_02 strum_short_03 strum_short_04)
+                  (strum_pick_01 strum_pick_02)})
+            (()
+               {if_else
+                  {> $mp.length 0.3}
+                  (strum_long_01 strum_long_02 strum_long_03 strum_long_04)
+                  (strum_short_01 strum_short_02 strum_short_03 strum_short_04)})))
+      (StrumMap_PickOpen
+		(idle_event strum_open)
+         (events
+            (default
+               {if_else
+                  {> $mp.length 0.25}
+                  (strum_open)
+                  (strum_open)})
+            (()
+               {if_else
+                  {> $mp.length 0.3}
+                  (strum_open)
+                  (strum_open)})))))
 (player0_fret_pos
  (type midi)
  (inverted TRUE)
