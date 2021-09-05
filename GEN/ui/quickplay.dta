@@ -61,7 +61,7 @@
             {part0.btn
                set_text
                "sg_lead"}}
-#ifndef _SHIP
+#ifndef _DRUM
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			   
             {part2.btn
                set_state
@@ -71,7 +71,7 @@
                FALSE}
 ;;;;;;;;;;;;;;;;Use above for debug elf;;;;;;;;;;;;;;;;;;;;
 #else
-;;;;;;;;;;;;;;;;Use below for retail elf;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;Use below for drum elf;;;;;;;;;;;;;;;;;;;
       {if_else
             {==
                {song_provider get_instrument $song 2}
