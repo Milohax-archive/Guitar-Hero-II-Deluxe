@@ -65,15 +65,51 @@
          kDifficultyExpert}
       {game set_venue fest}
       {game set_song_index 0}
-#ifndef _SHIP
-      {game set_character metal1 TRUE}
-#else
+;;;;;;;;if gh2 retail Elf
+#ifdef _SHIP
       {game set_character 
    	  	{if_else
 			$game80s
 				metalencore
 				metal1}
 				TRUE}
+#endif
+;;;;;;;;if 80's retail Elf
+#ifdef _ENCO
+      {game set_character 
+   	  	{if_else
+			$game80s
+				metalencore
+				metal1}
+				TRUE}
+#endif
+;;;;;;;;if Mega Elf
+#ifdef _MEGA
+      {game set_character 
+   	  	{if_else
+			$game80s
+				metalencore
+				metal1}
+				TRUE}
+#endif
+;;;;;;;;if gh2 retail Elf
+#ifdef _DRUM
+      {game set_character 
+   	  	{if_else
+			$game80s
+				metalencore
+				metal1}
+				TRUE}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _MEGA
+      {game set_character metal1 TRUE}
+#endif
+#endif
+#endif
 #endif
       {game set_guitar_index 1}
       {do

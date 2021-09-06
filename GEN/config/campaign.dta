@@ -1,3 +1,67 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if GH2 Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _SHIP
+(order
+   (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
+   (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
+   (small2 carryonwayward searchanddestroy messageinabottle billiondollar thembones warpigs)
+   (big monkeywrench hush girlfriend whowasinmyroom cantyouhearme sweetchild)
+   (theatre rockandroll tattooedloveboys johnthefisherman jessica badreputation lastchild)
+   (fest crazyonyou trippinonahole dead killinginthenameof freya stop)
+   (arena madhouse trooper rockthistown laidtorest psychobilly yyz)
+   (stone beastandtheharlot carrymehome institutionalized misirlou hangar18 freebird))
+(required_songs
+   (kDifficultyEasy 4 5)
+   (kDifficultyMedium 5 6)
+   (kDifficultyHard 6 6)
+   (kDifficultyExpert 6 6))
+(cash
+   (starting 50)
+   (star_awards
+      (kDifficultyEasy 0 0 0)
+      (kDifficultyMedium 150 200 250)
+      (kDifficultyHard 150 200 250)
+      (kDifficultyExpert 200 250 300))
+   (status_awards
+      (kDifficultyEasy 0 0 0 0 0 0 0 0)
+      (kDifficultyMedium 100 200 300 400 500 700 800 1000 0)
+      (kDifficultyHard 100 200 300 400 500 700 800 1000 0)
+      (kDifficultyExpert 100 200 300 400 500 700 800 501000 0)))
+(unlock_game_modes multi_fo)
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if 80s Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _ENCO
+(order
+   (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
+   (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
+   (small4 bangyourhead turningjapanese holdonloosely thewarrior iwannarock)
+   (theatre2 whatilikeaboutyou synchronicity2 ballroomblitz onlyalad roundandround)
+   (fest2 aintnothinbut lonelyisthenight bathroomwall losangeles wrathchild)
+   (arena2 electriceye policetruck seventeen caughtinamosh playwithme))
+(required_songs
+   (kDifficultyEasy 3 4)
+   (kDifficultyMedium 4 5)
+   (kDifficultyHard 5 5)
+   (kDifficultyExpert 5 5))
+(cash
+   (starting 50)
+   (star_awards
+      (kDifficultyEasy 0 0 0)
+      (kDifficultyMedium 150 200 250)
+      (kDifficultyHard 150 200 250)
+      (kDifficultyExpert 150 200 250))
+   (status_awards
+      (kDifficultyEasy 0 0 0 0 0 0)
+      (kDifficultyMedium 100 300 400 500 1000 1200 0)
+      (kDifficultyHard 100 300 400 500 1000 1200 0)
+      (kDifficultyExpert 100 300 400 500 1000 1200 0)))
+(unlock_game_modes multi_fo)
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if mega Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _MEGA
 (order
    (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
@@ -27,8 +91,87 @@
       (kDifficultyExpert 200 250 300))
    (status_awards
       (kDifficultyEasy 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-      (kDifficultyMedium 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1600 0)
-      (kDifficultyHard 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1600 0)
-      (kDifficultyExpert 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1600 0)))
+      (kDifficultyMedium 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)
+      (kDifficultyHard 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)
+      (kDifficultyExpert 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)))
 (unlock_game_modes multi_fo)
-(unlock_song becauseitsmidnite speedtest becauseitsmidnite_demo)
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if Drum Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _MEGA
+(order
+   (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
+   (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
+   (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
+   (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
+   (small2 carryonwayward searchanddestroy messageinabottle billiondollar thembones warpigs)
+   (small4 bangyourhead turningjapanese holdonloosely thewarrior iwannarock)
+   (big monkeywrench hush girlfriend whowasinmyroom cantyouhearme sweetchild)
+   (theatre rockandroll tattooedloveboys johnthefisherman jessica badreputation lastchild)
+   (theatre2 whatilikeaboutyou synchronicity2 ballroomblitz onlyalad roundandround)
+   (fest crazyonyou trippinonahole dead killinginthenameof freya stop)
+   (fest2 aintnothinbut lonelyisthenight bathroomwall losangeles wrathchild)
+   (arena madhouse trooper rockthistown laidtorest psychobilly yyz)
+   (arena2 electriceye policetruck seventeen caughtinamosh playwithme)
+   (stone beastandtheharlot carrymehome institutionalized misirlou hangar18 freebird))
+(required_songs
+   (kDifficultyEasy 4 5)
+   (kDifficultyMedium 5 6)
+   (kDifficultyHard 5 6)
+(kDifficultyExpert 5 6))
+(cash
+   (starting 50)
+   (star_awards
+      (kDifficultyEasy 0 0 0)
+      (kDifficultyMedium 150 200 250)
+      (kDifficultyHard 150 200 250)
+      (kDifficultyExpert 200 250 300))
+   (status_awards
+      (kDifficultyEasy 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
+      (kDifficultyMedium 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)
+      (kDifficultyHard 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)
+      (kDifficultyExpert 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)))
+(unlock_game_modes multi_fo)
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if DEBUG Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _MEGA
+(order
+   (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
+   (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
+   (small2 carryonwayward searchanddestroy messageinabottle billiondollar thembones warpigs)
+   (big monkeywrench hush girlfriend whowasinmyroom cantyouhearme sweetchild)
+   (theatre rockandroll tattooedloveboys johnthefisherman jessica badreputation lastchild)
+   (fest crazyonyou trippinonahole dead killinginthenameof freya stop)
+   (arena madhouse trooper rockthistown laidtorest psychobilly yyz)
+   (stone beastandtheharlot carrymehome institutionalized misirlou hangar18 freebird))
+(required_songs
+   (kDifficultyEasy 4 5)
+   (kDifficultyMedium 5 6)
+   (kDifficultyHard 6 6)
+   (kDifficultyExpert 6 6))
+(cash
+   (starting 50)
+   (star_awards
+      (kDifficultyEasy 0 0 0)
+      (kDifficultyMedium 150 200 250)
+      (kDifficultyHard 150 200 250)
+      (kDifficultyExpert 200 250 300))
+   (status_awards
+      (kDifficultyEasy 0 0 0 0 0 0 0 0)
+      (kDifficultyMedium 100 200 300 400 500 700 800 1000 0)
+      (kDifficultyHard 100 200 300 400 500 700 800 1000 0)
+      (kDifficultyExpert 100 200 300 400 500 700 800 501000 0)))
+(unlock_game_modes multi_fo)
+#endif
+#endif
+#endif
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
