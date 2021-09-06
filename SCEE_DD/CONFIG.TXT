@@ -1,0 +1,125 @@
+*disc=DISC
+INTROLINE=MiloHax Presents<BR>GHIIDX Bootloader...
+TRAYOPEN=Close the tray ya fuckin chump.
+# NOINTROMOVIE=1
+SELECT=SELECT
+BACK=BACK
+ATTRACTTIMEOUT=600
+ATTRACT=DISCS
+ROOTMENU=DISCS
+
+*sections=DISCS
+HEADER2=GHIIDX Bootloader
+HEADER1=GHIIDX Bootloader
+AUDIOSTREAM=1
+GFX_DRAWBLOBS=0 (Bubbles Lights)
+GFX_DRAWSCANLINES=0 (Scanlines)
+#GFX_DRAWVU=0(Music Bars)
+#GFX_BLACKPLAY=1 
+#(Man face)
+GFX_BG=7
+# GFX BG EFFECTS:
+# 0 - Standart Arrow
+# 1 - Big W
+# 2 - Curved Arrow
+# 3 - Submarine Fish
+# 4 - Three Dots
+# 5 - Arrow 2
+# 6 - Slow Arrow
+# 7 - Toxic Dots
+# 8 - Big Circle
+# 9 - Fire Flower
+# 10 - Milky Way
+# 11 - Circle and Cross
+# 12 - Big S
+TOPBAR_ARGBLEFT=FF3B2B75
+TOPBAR_ARGBRIGHT=FF000F18
+BG_ARGBTOPLEFT=D5000023
+BG_ARGBTOPRIGHT=FF3B2B75
+BG_ARGBBOTTOMLEFT=D5000023
+BG_ARGBBOTTOMRIGHT=FF3B2B75
+
+# Define Main Menu Items Below (can be OPTION or HIDDEN_OPTION) :
+
+OPTION=01
+OPTION=02
+OPTION=03
+OPTION=04
+OPTION=05
+OPTION=06
+
+# Define Main Menu Shortcuts And Links For Each Item Below :
+
+*option=01
+NAME=Guitar Hero II Deluxe 2.0
+LINK=LINK_1
+
+*link=LINK_1
+NAME=The game Clone Hero kids can't hit notes in!
+TYPE=PLAYABLE
+FILENAME=GH20_DX.03
+IOPIMAGE=300
+SPLASH=Loading Guitar Hero II Deluxe 2.0...
+
+*option=02
+NAME=Guitar Hero Encore Deluxe
+LINK=LINK_2
+
+*link=LINK_2
+NAME=Melt faces and steal wallets in GH80's
+TYPE=PLAYABLE
+FILENAME=80S_DX.02
+IOPIMAGE=300
+SPLASH=Loading Guitar Hero Encore Deluxe...
+
+*option=03
+NAME=Guitar Hero II + Encore Deluxe
+LINK=LINK_3
+
+*link=LINK_3
+NAME=14 tiers of pure GHII and 80's Pleasure (Pleasure)
+TYPE=PLAYABLE
+FILENAME=MEGA_DX.03
+IOPIMAGE=300
+SPLASH=Loading Guitar Hero II + Encore Deluxe...
+
+*option=04
+NAME=Guitar Hero II Deluxe Drum Enabled
+LINK=LINK_4
+
+*link=LINK_4
+NAME=Emulator only. Guitar, Rhythm, Bass, Drums. All playable.
+TYPE=PLAYABLE
+FILENAME=DRUM_DX.04
+IOPIMAGE=300
+SPLASH=Loading Guitar Hero II Drums Deluxe...
+
+*option=05
+NAME=Guitar Hero II Debug
+LINK=LINK_5
+
+*link=LINK_5
+NAME=Debug mode for when shit hits the fan
+TYPE=PLAYABLE
+FILENAME=GH2_DBUG.01
+IOPIMAGE=300
+SPLASH=Loading Guitar Hero II Debug...
+
+*option=06
+NAME=Guitar Hero II OPM Demo
+LINK=LINK_6
+
+*link=LINK_6
+NAME=Ayo I heard you like OPM
+TYPE=PLAYABLE
+INACTIVITY=5
+FILENAME=GH2\GH2.ELF
+IOPIMAGE=300
+SPLASH=Loading Guitar Hero II OPM Demo...
+
+# CREDITS
+*link=CREDITS
+NAME=MiloHax:
+TYPE=CREDITS
+TEXT=GHIIDX Bootloader
+TEXT=Made with love from the MiloHax Team
