@@ -1,5 +1,5 @@
 *disc=DISC
-INTROLINE=MiloHax Presents<BR>GHIIDX Bootloader...
+#INTROLINE=MiloHax Presents<BR>GHIIDX Bootloader...
 TRAYOPEN=Close the tray ya fuckin chump.
 # NOINTROMOVIE=1
 SELECT=SELECT
