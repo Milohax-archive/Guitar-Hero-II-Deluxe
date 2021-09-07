@@ -61,17 +61,31 @@
             {part0.btn
                set_text
                "sg_lead"}}
-#ifndef _DRUM
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;			   
+;;;;;;;;if gh2 retail Elf
             {part2.btn
                set_state
                kDisabled}
             {part2.btn
                set_showing
                FALSE}
-;;;;;;;;;;;;;;;;Use above for debug elf;;;;;;;;;;;;;;;;;;;;
-#else
-;;;;;;;;;;;;;;;;Use below for drum elf;;;;;;;;;;;;;;;;;;;
+;;;;;;;;if gh80s retail Elf
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+;;;;;;;;if mega Elf
+#ifdef _MEGA
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+;;;;;;;;if drum Elf
+#ifdef _DRUM
       {if_else
             {==
                {song_provider get_instrument $song 2}
@@ -88,7 +102,32 @@
                set_text
                "sg_drum"}
                {part2.btn set_showing FALSE}}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#endif
+;;;;;;;;if ONYX Elf
+#ifdef _ONYX
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+#endif
+#endif
+#endif
 #endif
 })
    (enter
