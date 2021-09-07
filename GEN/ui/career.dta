@@ -1442,24 +1442,24 @@
             {ui in_transition}}
          {switch
             $new_focus
-            (sv_battle2.btn
+            (sv_battle.btn
                {$this set_venue_map_frame 1}
-               {game set_venue battle2})
-            (sv_small3.btn
+               {game set_venue battle})
+            (sv_small1.btn
                {$this set_venue_map_frame 2}
-               {game set_venue small3})
-            (sv_small4.btn
+               {game set_venue small1})
+            (sv_small2.btn
                {$this set_venue_map_frame 3}
-               {game set_venue small4})
-            (sv_theatre2.btn
+               {game set_venue small2})
+            (sv_theatre.btn
                {$this set_venue_map_frame 4}
-               {game set_venue theatre2})
-            (sv_fest2.btn
+               {game set_venue theatre})
+            (sv_fest.btn
                {$this set_venue_map_frame 5}
-               {game set_venue fest2})
-            (sv_arena2.btn
+               {game set_venue fest})
+            (sv_arena.btn
                {$this set_venue_map_frame 6}
-               {game set_venue arena2})}})
+               {game set_venue arena})}})
 #endif
 #endif
 #endif
