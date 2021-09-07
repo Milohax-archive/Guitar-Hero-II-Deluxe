@@ -217,6 +217,17 @@
 #ifdef _MEGA
    bootup_load_new
 #endif
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+   bootup_load
+#endif
+#endif
+#endif
+#endif
+#endif
    DIALOG_SCREEN
    (enter
       {set $autosave TRUE}
