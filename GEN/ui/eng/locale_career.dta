@@ -78,11 +78,11 @@
    "Play in the latest venue to continue your career")
 #ifdef _SHIP
 (song_current_venue
-   "Beat %i/6 songs to continue")
+   "Beat %i/5 songs to continue")
 #endif
 #ifdef _ENCO
 (song_current_venue
-   "Beat %i/5 songs to continue")
+   "Beat %i/4 songs to continue")
 #endif
 #ifdef _DRUM
 (song_current_venue
@@ -103,7 +103,7 @@
 #ifndef _ONYX
 #ifndef _MEGA
 (song_current_venue
-   "Beat %i/6 songs to continue")
+   "Beat %i/5 songs to continue")
 #endif
 #endif
 #endif
