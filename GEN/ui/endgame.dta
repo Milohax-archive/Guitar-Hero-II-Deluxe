@@ -51,7 +51,7 @@
                      {campaign profile_slot}}
                   $score}}}}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;If GH2 elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifndef _ENCO
+#ifdef _SHIP
       {do
          ($win_screen $freebird)
          {set
@@ -76,9 +76,11 @@
             {== $win_screen endgame_encore_screen}
             {endgame_encore_panel set freebird $freebird}}
          {ui goto_screen $win_screen}}
+#endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#else
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;If 80s elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _ENCO
       {do
          ($win_screen $is_final_song)
          {set
@@ -103,8 +105,133 @@
             {== $win_screen endgame_encore_screen}
             {endgame_encore_panel set is_final_song $is_final_song}}
          {ui goto_screen $win_screen}}
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;If mega elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _MEGA
+      {do
+         ($win_screen $is_final_song)
+         {set
+            $win_screen
+            {if_else
+               {meta get won_campaign}
+               win_game_screen
+               {if_else
+                  {'||'
+                     {game get force_encore}
+                     {&&
+                        {game get encore_unlock_check}
+                        {campaign encore_newly_unlocked $is_final_song}}}
+                  endgame_encore_screen
+                  {gamecfg get win_screen}}}}
+         {script_task
+            (units kTaskUISeconds)
+            (delay 0.3)
+            (script
+               {play_sfx postshow_loop})}
+         {if
+            {== $win_screen endgame_encore_screen}
+            {endgame_encore_panel set is_final_song $is_final_song}}
+         {ui goto_screen $win_screen}}
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;If drum elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _DRUM
+      {do
+         ($win_screen $is_final_song)
+         {set
+            $win_screen
+            {if_else
+               {meta get won_campaign}
+               win_game_screen
+               {if_else
+                  {'||'
+                     {game get force_encore}
+                     {&&
+                        {game get encore_unlock_check}
+                        {campaign encore_newly_unlocked $is_final_song}}}
+                  endgame_encore_screen
+                  {gamecfg get win_screen}}}}
+         {script_task
+            (units kTaskUISeconds)
+            (delay 0.3)
+            (script
+               {play_sfx postshow_loop})}
+         {if
+            {== $win_screen endgame_encore_screen}
+            {endgame_encore_panel set is_final_song $is_final_song}}
+         {ui goto_screen $win_screen}}
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;If onyx elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _ONYX
+      {do
+         ($win_screen $is_final_song)
+         {set
+            $win_screen
+            {if_else
+               {meta get won_campaign}
+               win_game_screen
+               {if_else
+                  {'||'
+                     {game get force_encore}
+                     {&&
+                        {game get encore_unlock_check}
+                        {campaign encore_newly_unlocked $is_final_song}}}
+                  endgame_encore_screen
+                  {gamecfg get win_screen}}}}
+         {script_task
+            (units kTaskUISeconds)
+            (delay 0.3)
+            (script
+               {play_sfx postshow_loop})}
+         {if
+            {== $win_screen endgame_encore_screen}
+            {endgame_encore_panel set is_final_song $is_final_song}}
+         {ui goto_screen $win_screen}}
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if GH2 DEBUG Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _MEGA
+#ifndef _ONYX
+      {do
+         ($win_screen $freebird)
+         {set
+            $win_screen
+            {if_else
+               {meta get won_campaign}
+               win_game_screen
+               {if_else
+                  {'||'
+                     {game get force_encore}
+                     {&&
+                        {game get encore_unlock_check}
+                        {campaign encore_newly_unlocked $freebird}}}
+                  endgame_encore_screen
+                  {gamecfg get win_screen}}}}
+         {script_task
+            (units kTaskUISeconds)
+            (delay 0.3)
+            (script
+               {play_sfx postshow_loop})}
+         {if
+            {== $win_screen endgame_encore_screen}
+            {endgame_encore_panel set freebird $freebird}}
+         {ui goto_screen $win_screen}}
+#endif
+#endif
+#endif
+#endif
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 )}
 {func
    goto_endgame_complete

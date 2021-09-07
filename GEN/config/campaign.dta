@@ -141,6 +141,7 @@
 #ifndef _ENCO
 #ifndef _DRUM
 #ifndef _MEGA
+#ifndef _ONYX
 (order
    (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
    (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
@@ -171,6 +172,32 @@
 #endif
 #endif
 #endif
+#endif
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if ONYX Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef _ONYX
+(order
+   (battle speedtest))
+(required_songs
+   (kDifficultyEasy 1 1)
+   (kDifficultyMedium 1 1)
+   (kDifficultyHard 1 1)
+(kDifficultyExpert 1 1))
+(cash
+   (starting 50)
+   (star_awards
+      (kDifficultyEasy 0 0 0)
+      (kDifficultyMedium 150 200 250)
+      (kDifficultyHard 150 200 250)
+      (kDifficultyExpert 200 250 300))
+   (status_awards
+      (kDifficultyEasy 0 0)
+      (kDifficultyMedium 1500 0)
+      (kDifficultyHard 1500 0)
+      (kDifficultyExpert 1500 0)))
+(unlock_game_modes multi_fo)
 #endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

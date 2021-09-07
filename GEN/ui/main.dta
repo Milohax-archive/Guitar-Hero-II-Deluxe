@@ -12,7 +12,16 @@
    (memcard_flow_entered FALSE)
    (retain_last_focus FALSE)
    (enter
+#ifndef _ONYX
       {set $main_entered TRUE}
+#else
+      {set $main_entered TRUE}
+      {$this disable main_career.btn}
+      {set $cheat_enabled_unlock_all 1}
+      {campaign set_all_access 1}
+      {set $disable_save 1}
+      {set $disable_career 1}
+#endif
       {$this reset_player_settings}
       {if
          {!
@@ -92,8 +101,17 @@
 				metal1}
 				TRUE}
 #endif
-;;;;;;;;if gh2 retail Elf
+;;;;;;;;if drum Elf
 #ifdef _DRUM
+      {game set_character 
+   	  	{if_else
+			$game80s
+				metalencore
+				metal1}
+				TRUE}
+#endif
+;;;;;;;;if ONYX Elf
+#ifdef _ONYX
       {game set_character 
    	  	{if_else
 			$game80s
@@ -105,8 +123,10 @@
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _DRUM
+#ifndef _ONYX
 #ifndef _MEGA
       {game set_character metal1 TRUE}
+#endif
 #endif
 #endif
 #endif

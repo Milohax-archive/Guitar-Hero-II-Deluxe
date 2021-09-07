@@ -14,17 +14,22 @@
 (base_dir
    "BAGHCE-08008")
 #endif
+#ifdef _ONYX
+(base_dir
+   "BAGHCE-68878")
+#endif
 
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _DRUM
+#ifndef _ONYX
 #ifndef _MEGA
 (base_dir “BAGHCE-01001”)
 #endif
 #endif
 #endif
 #endif
-
+#endif
 
 #ifdef _SHIP
 (elf_name
@@ -42,13 +47,19 @@
 (elf_name
    "MEGA_DX.03")
 #endif
+#ifdef _ONYX
+(elf_name
+   "MEGA_DX.03")
+#endif
 
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _DRUM
+#ifndef _ONYX
 #ifndef _MEGA
 (elf_name
    "GH2_DBUG.01")
+#endif
 #endif
 #endif
 #endif
