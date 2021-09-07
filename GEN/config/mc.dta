@@ -65,121 +65,16 @@
 #endif
 #endif
 
+#ifdef _SHIP
 (ps2_icon
-   #ifdef _SHIP
    (file
       "2dx.icn")
-   #endif
-   #ifdef _ONYX
-   (file
-      "2dx.icn")
-   #endif
-   #ifdef _ENCO
-   (file
-      "80sdx.icn")
-   #endif
-   #ifdef _DRUM
-   (file
-      "drum.icn")
-   #endif
-   #ifdef _MEGA
-   (file
-      "mega.icn")
-   #endif
-   #ifdef _MEGA
-   (file
-      "mega.icn")
-   #endif
-   #ifndef _SHIP
-   #ifndef _ENCO
-   #ifndef _DRUM
-   #ifndef _ONYX
-   #ifndef _MEGA
-   (file
-      "debug.icn")
-   #endif
-   #endif
-   #endif
-   #endif
-   #endif
-
-   #ifdef _SHIP
    (bg_transparency 128)
-   #endif
-   #ifdef _ONYX
-   (bg_transparency 128)
-   #endif
-   #ifdef _ENCO
-   (bg_transparency 128)
-   #endif
-   #ifdef _DRUM
-   (bg_transparency 128)
-   #endif
-   #ifdef _MEGA
-   (bg_transparency 128)
-   #endif
-   #ifndef _SHIP
-   #ifndef _ENCO
-   #ifndef _DRUM
-   #ifndef _ONYX
-   #ifndef _MEGA
-   (bg_transparency 0)
-   #endif
-   #endif
-   #endif
-   #endif
-   #endif
-
-   #ifdef _SHIP
    (bg_colors
       (0 0 0)
       (0 0 0)
       (119 102 163)
       (119 102 163))
-   #endif
-   #ifdef _ONYX
-   (bg_colors
-      (0 0 0)
-      (0 0 0)
-      (119 102 163)
-      (119 102 163))
-   #endif
-   #ifdef _ENCO
-   (bg_colors
-      (255 255 0)
-      (0 191 255)
-      (255 105 180)
-      (0 238 2))
-   #endif
-   #ifdef _DRUM
-   (bg_colors
-      (0 0 0)
-      (0 0 0)
-      (174 91 164)
-      (174 91 164))
-   #endif
-   #ifdef _MEGA
-   (bg_colors
-      (0 0 0)
-      (0 0 0)
-      (160 69 69)
-      (160 69 69))
-   #endif
-   #ifndef _SHIP
-   #ifndef _ENCO
-   #ifndef _DRUM
-   #ifndef _ONYX
-   #ifndef _MEGA
-   (bg_colors
-      (1 1 86)
-      (1 1 86)
-      (1 1 86)
-      (1 1 86))
-   #endif
-   #endif
-   #endif
-   #endif
-   #endif
    (lit_dirs
       (0.2 1 0)
       (1 0 1)
@@ -190,3 +85,122 @@
       (0.7 0.7 0.7))
    (ambient 0.7 0.7 0.7))
 (testing FALSE)
+#endif
+
+#ifdef _ONYX
+(ps2_icon
+   (file
+      "2dx.icn")
+   (bg_transparency 128)
+   (bg_colors
+      (0 0 0)
+      (0 0 0)
+      (119 102 163)
+      (119 102 163))
+   (lit_dirs
+      (0.2 1 0)
+      (1 0 1)
+      (1 -1 0))
+   (lit_colors
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7))
+   (ambient 0.7 0.7 0.7))
+(testing FALSE)
+#endif
+
+#ifdef _ENCO
+(ps2_icon
+   (file
+      "80sdx.icn")
+   (bg_transparency 128)
+   (bg_colors
+      (255 255 0)
+      (0 191 255)
+      (255 105 180)
+      (0 238 2))
+   (lit_dirs
+      (0.2 1 0)
+      (1 0 1)
+      (1 -1 0))
+   (lit_colors
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7))
+   (ambient 0.7 0.7 0.7))
+(testing FALSE)
+#endif
+
+#ifdef _DRUM
+(ps2_icon
+   (file
+      "drum.icn")
+   (bg_transparency 128)
+   (bg_colors
+      (0 0 0)
+      (0 0 0)
+      (174 91 164)
+      (174 91 164))
+   (lit_dirs
+      (0.2 1 0)
+      (1 0 1)
+      (1 -1 0))
+   (lit_colors
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7))
+   (ambient 0.7 0.7 0.7))
+(testing FALSE)
+#endif
+
+#ifdef _MEGA
+(ps2_icon
+   (file
+      "mega.icn")
+   (bg_transparency 128)
+   (bg_colors
+      (0 0 0)
+      (0 0 0)
+      (160 69 69)
+      (160 69 69))
+   (lit_dirs
+      (0.2 1 0)
+      (1 0 1)
+      (1 -1 0))
+   (lit_colors
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7))
+   (ambient 0.7 0.7 0.7))
+(testing FALSE)
+#endif
+
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+(ps2_icon
+   (file
+      "debug.icn")
+   (bg_transparency 0)
+   (bg_colors
+      (1 1 86)
+      (1 1 86)
+      (1 1 86)
+      (1 1 86))
+   (lit_dirs
+      (0.2 1 0)
+      (1 0 1)
+      (1 -1 0))
+   (lit_colors
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7))
+   (ambient 0.7 0.7 0.7))
+(testing FALSE)
+#endif
+#endif
+#endif
+#endif
+#endif
