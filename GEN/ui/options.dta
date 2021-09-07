@@ -803,7 +803,34 @@
 				$game80s
 					{set $game80s FALSE}
 					{set $game80s TRUE}}
-               {ui goto_screen bootup_load_new})
+#ifdef _SHIP
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _DRUM
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {ui goto_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {ui goto_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+)
          (calibrate_lag.btn
             {lag_panel set from_panel $this}
             {if_else
@@ -1040,5 +1067,32 @@
    (focus pscan_warning_panel)
    PSCAN_WARNING_SCREEN_HANDLERS
    (animate_transition FALSE)
+#ifdef _SHIP
    (done_screen bootup_load)
+#endif
+#ifdef _ENCO
+   (done_screen bootup_load)
+#endif
+#ifdef _DRUM
+   (done_screen bootup_load_new)
+#endif
+#ifdef _ONYX
+   (done_screen bootup_load_new)
+#endif
+#ifdef _MEGA
+   (done_screen bootup_load_new)
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+   (done_screen bootup_load)
+#endif
+#endif
+#endif
+#endif
+#endif
+
    (switch_screen pscan_switch_screen)}

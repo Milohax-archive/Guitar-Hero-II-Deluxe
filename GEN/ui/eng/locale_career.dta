@@ -76,14 +76,45 @@
    "*****")
 (song_old_venue
    "Play in the latest venue to continue your career")
+#ifdef _SHIP
+(song_current_venue
+   "Beat %i/6 songs to continue")
+#endif
+#ifdef _ENCO
+(song_current_venue
+   "Beat %i/5 songs to continue")
+#endif
+#ifdef _DRUM
 (song_current_venue
    "Beat %i songs to continue")
+#endif
+#ifdef _MEGA
+(song_current_venue
+   "Beat %i songs to continue")
+#endif
+#ifdef _ONYX
+(song_current_venue
+   " ")
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+(song_current_venue
+   "Beat %i/6 songs to continue")
+#endif
+#endif
+#endif
+#endif
+#endif
 (song_current_venue_encore
    "Beat the encore to continue")
 (song_win_easy
    "Beat %i/%i songs to win")
 (song_win_other
-   "Beat Free Bird to win")
+   "Beat the final song to win")
 (ca_reason
    "Congratulations on the killer show, amazing write-up, and perfect review score! Here's your cut.")
 (ca_blurb1
@@ -246,6 +277,30 @@
    "%d stars")
 (endgame_encore_money
    "$%d earned")
+#ifndef _SHIP
+(endgame_encore_letter3
+   "Oh my God, the crowd, like, totally worships you. You, like, HAVE to play an encore or they'll just DIE. You can play one more, right?")
+(endgame_encore_letter4
+   "This is, like, the most righteous show EVER. You have the stamina to give 'em one more song, dontcha? Like, please?")
+(endgame_encore_letter5
+   "Whoa, the crowd just will NOT stop chanting your name! Seriously, you gotta play another song! Can you pull it together for a big finish?")
+(endgame_encore_letter6
+   "The audience is flippin' out! Come on, chief, give 'em what they want! You got time for one more?")
+(endgame_encore_finalsong1
+   "The crowd is goin' insane. You know what they wanna hear: the MOST EXCELLENT super-shredder track, Play With Me. You ready?")
+(finalsong_confirm1
+   "This ain't for the faint of heart, buddy. \nYou really want to try Play With Me?")
+(finalsong_confirm2
+   "Seriously, it's, like, TOTALLY hard. \nYou still game?")
+(finalsong_confirm3
+   "Okay, last chance... \nYou really want to rock Play With Me?")
+(freebird_confirm1
+   "Wait, you really want to play Free Bird?")
+(freebird_confirm2
+   "This move can only be pulled off by a TRUE hero! \nYou still game?")
+(freebird_confirm3
+   "Okay, last chance... \nYou really want to play Free Bird?")
+#else
 (endgame_encore_letter3
    "The crowd is goin' nuts, you'd better play an encore. Think you can buck up and give it all you've got with one more?")
 (endgame_encore_letter4
@@ -262,6 +317,14 @@
    "This move can only be pulled off by a TRUE hero! \nYou still game?")
 (freebird_confirm3
    "Okay, last chance... \nYou really want to play Free Bird?")
+(finalsong_confirm1
+   "This ain't for the faint of heart, buddy. \nYou really want to try Play With Me?")
+(finalsong_confirm2
+   "Seriously, it's, like, TOTALLY hard. \nYou still game?")
+(finalsong_confirm3
+   "Okay, last chance... \nYou really want to rock Play With Me?")
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (win_diff
 	{if_else
       $game80s

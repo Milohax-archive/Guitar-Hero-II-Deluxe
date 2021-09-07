@@ -33,7 +33,7 @@
 
 #ifdef _SHIP
 (elf_name
-   "GH2_DX.01")
+   "GH20_DX.03")
 #endif
 #ifdef _ENCO
 (elf_name
@@ -49,7 +49,7 @@
 #endif
 #ifdef _ONYX
 (elf_name
-   "MEGA_DX.03")
+   "ONYX.01")
 #endif
 
 #ifndef _SHIP

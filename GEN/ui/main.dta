@@ -72,10 +72,10 @@
       {{game get_player_config 0}
          set_difficulty
          kDifficultyExpert}
-      {game set_venue fest}
-      {game set_song_index 0}
 ;;;;;;;;if gh2 retail Elf
 #ifdef _SHIP
+      {game set_venue fest}
+      {game set_song_index 0}
       {game set_character 
    	  	{if_else
 			$game80s
@@ -85,6 +85,8 @@
 #endif
 ;;;;;;;;if 80's retail Elf
 #ifdef _ENCO
+      {game set_venue fest2}
+      {game set_song_index 0}
       {game set_character 
    	  	{if_else
 			$game80s
@@ -94,6 +96,8 @@
 #endif
 ;;;;;;;;if Mega Elf
 #ifdef _MEGA
+      {game set_venue fest}
+      {game set_song_index 0}
       {game set_character 
    	  	{if_else
 			$game80s
@@ -103,6 +107,8 @@
 #endif
 ;;;;;;;;if drum Elf
 #ifdef _DRUM
+      {game set_venue fest}
+      {game set_song_index 0}
       {game set_character 
    	  	{if_else
 			$game80s
@@ -112,6 +118,8 @@
 #endif
 ;;;;;;;;if ONYX Elf
 #ifdef _ONYX
+      {game set_venue fest}
+      {game set_song_index 0}
       {game set_character 
    	  	{if_else
 			$game80s
@@ -125,6 +133,8 @@
 #ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
+      {game set_venue fest2}
+      {game set_song_index 0}
       {game set_character metal1 TRUE}
 #endif
 #endif

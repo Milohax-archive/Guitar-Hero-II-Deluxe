@@ -155,10 +155,9 @@
    (redoctane_jnack
       (price 550)))
 (song
+#ifndef _ENCO
    (speedtest
       (price 0))
-   (becauseitsmidnite
-      (price 550))
    (rawdog
       (price 550))
    (arterialblack
@@ -210,7 +209,12 @@
    (xstream
       (price 550))
    (yeswecan
-      (price 550)))
+      (price 550))
+#else
+   (becauseitsmidnite
+      (price 550))
+#endif
+)
 (character
    (classic
       (price 5000))

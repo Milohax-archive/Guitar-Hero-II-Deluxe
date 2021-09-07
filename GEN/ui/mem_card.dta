@@ -8,13 +8,81 @@
          $component
          (tutorials.btn
 		 {set $game80s FALSE}
-            {ui goto_screen bootup_load_new})
+#ifdef _SHIP
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _DRUM
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {ui goto_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {ui goto_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+)
          (practice.btn
 		 {set $game80s TRUE}
-            {ui goto_screen bootup_load_new})})}
+#ifdef _SHIP
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _DRUM
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {ui goto_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {ui goto_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
 {new
    GHScreen
+#ifdef _SHIP
+   bootup_load_new
+#endif
+#ifdef _ENCO
+   bootup_load_new
+#endif
+#ifdef _DRUM
    bootup_load
+#endif
+#ifdef _ONYX
+   bootup_load
+#endif
+#ifdef _MEGA
+   bootup_load
+#endif
    (panels meta training_panel_boot helpbar)
    (focus training_panel_boot)
    (helpbar
@@ -134,9 +202,29 @@
       {$this setup '' '' none $msg $title})}
 {new
    GHScreen
+#ifdef _SHIP
+   bootup_load
+#endif
+#ifdef _ENCO
+   bootup_load
+#endif
+#ifdef _DRUM
    bootup_load_new
+#endif
+#ifdef _ONYX
+   bootup_load_new
+#endif
+#ifdef _MEGA
+   bootup_load_new
+#endif
    DIALOG_SCREEN
    (enter
+#ifdef _SHIP
+		 {set $game80s FALSE}
+#endif
+#ifdef _ENCO
+		 {set $game80s TRUE}
+#endif
       {set $autosave TRUE}
       {dialog message mc_checking mc_title_loading}
       {switch
@@ -148,7 +236,35 @@
             (units kTaskUISeconds)
             (script
                {dialog set_message load_loading}
-               {memcard load_data bootup_load_new})}})
+#ifdef _SHIP
+               {memcard load_data bootup_load}
+#endif
+#ifdef _ENCO
+               {memcard load_data bootup_load}
+#endif
+#ifdef _DRUM
+               {memcard load_data bootup_load_new}
+#endif
+#ifdef _ONYX
+               {memcard load_data bootup_load_new}
+#endif
+#ifdef _MEGA
+               {memcard load_data bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+               {memcard load_data bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+
+)}})
    (MEMCARD_RESULT_MSG
       {switch
          $result
@@ -185,7 +301,35 @@
          (dl_button1.btn
             {ui goto_screen bootup_caution})
          (dl_button2.btn
-            {ui goto_screen bootup_load_new})})}
+#ifdef _SHIP
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _DRUM
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {ui goto_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {ui goto_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+
+)})}
 {new
    GHScreen
    bootup_create_save_check
@@ -230,13 +374,67 @@
             {ui goto_screen bootup_nospace})
          (kMCFileExists
             {set $mc_replace_screen $this}
+#ifdef _SHIP
+            {set $mc_load_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {set $mc_load_screen bootup_load}
+#endif
+#ifdef _DRUM
             {set $mc_load_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {set $mc_load_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {set $mc_load_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {set $mc_load_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+
             {ui goto_screen bootup_replace_save_check})
          (kMCNotFormatted
             {set $nfw_retry_screen $this}
             {set $nfw_continue_screen bootup_caution_format_cancelled}
             {set $mc_format_done bootup_create_save}
+#ifdef _SHIP
+            {set $mc_save_failed_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {set $mc_save_failed_screen bootup_load}
+#endif
+#ifdef _DRUM
             {set $mc_save_failed_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {set $mc_save_failed_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {set $mc_save_failed_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {set $mc_save_failed_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+
             {set $mc_no_screen bootup_caution_format_cancelled}
             {set $mc_yes_screen mc_format}
             {ui goto_screen bootup_format_check})
@@ -271,7 +469,34 @@
          (dl_button1.btn
             {ui goto_screen autosave_disable_check})
          (dl_button2.btn
-            {ui goto_screen bootup_load_new})})}
+#ifdef _SHIP
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _DRUM
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {ui goto_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {ui goto_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
 {new
    GHScreen
    bootup_save_nocard
@@ -297,7 +522,35 @@
          (dl_button1.btn
             {ui goto_screen bootup_caution})
          (dl_button2.btn
-            {ui goto_screen bootup_load_new})})}
+#ifdef _SHIP
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _DRUM
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {ui goto_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {ui goto_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+
+)})}
 {new
    GHScreen
    bootup_corrupt_data
@@ -338,7 +591,34 @@
          (dl_button1.btn
             {ui goto_screen autosave_disable_check})
          (dl_button2.btn
-            {ui goto_screen bootup_load_new})})}
+#ifdef _SHIP
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _ENCO
+            {ui goto_screen bootup_load}
+#endif
+#ifdef _DRUM
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _ONYX
+            {ui goto_screen bootup_load_new}
+#endif
+#ifdef _MEGA
+            {ui goto_screen bootup_load_new}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {ui goto_screen bootup_load}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
 {new
    GHScreen
    autosave_disable_check
