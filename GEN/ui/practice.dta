@@ -23,15 +23,121 @@
       practice_selpart_80s.milo
       practice_selpart.milo})
    (focus part0.btn)
-   MULTISELECT_PART_HANDLERS
-   (enter
-      {gamecfg set_track_type rhythm}
-      {$this set_button_text})
-   (SELECT_START_MSG
+   (sel_buttons part0.btn part1.btn part2.btn)
+   (set_button_text
+      {do
+         ($song
+            {gamecfg get_song})
+         {part0.btn
+            set_text
+            {sprint
+               "sg_"
+               {song_provider get_instrument $song 0}}}
+         {part1.btn
+            set_text
+            {sprint
+               "sg_"
+               {song_provider get_instrument $song 1}}}
+            {part2.btn
+               set_text
+               "sg_drum"}
+         {if
+            {==
+               {song_provider get_instrument $song 1}
+               "rhythm"}
+            {part0.btn
+               set_text
+               "sg_lead"}}
+;;;;;;;;if gh2 retail Elf
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+;;;;;;;;if gh80s retail Elf
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+;;;;;;;;if mega Elf
+#ifdef _MEGA
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+;;;;;;;;if drum Elf
+#ifdef _DRUM
       {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+				{part2.btn set_state kDisabled}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+               {part2.btn set_showing FALSE}}
+#endif
+;;;;;;;;if ONYX Elf
+#ifdef _ONYX
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+#endif
+#endif
+#endif
+#endif
+})
+   (enter
+      {do
+         ($song
+            {gamecfg get_song})
+         {switch
+            {song_provider get_instrument $song 1}
+            (bass
+               {gamecfg set_track_type bass})
+            (rhythm
+               {gamecfg set_track_type rhythm})}
+         {$this set_button_text}})
+   (SELECT_START_MSG
+      {if
          {== $component part0.btn}
-         {gamecfg set_track 0 0}
+         {gamecfg set_track 0 0}}
+      {if
+         {== $component part1.btn}
          {gamecfg set_track 0 1}}
+      {if
+         {== $component part2.btn}
+         {gamecfg set_track 0 2}}
       {ui goto_screen practice_diff_screen})}
 {new
    GHScreen
