@@ -66,8 +66,26 @@
 #endif
 
 (ps2_icon
+   #ifdef _SHIP
    (file
-      "gh.icn")
+      "2dx.icn")
+   #endif
+   #ifdef _ONYX
+   (file
+      "2dx.icn")
+   #endif
+   #ifdef _ENCO
+   (file
+      "80sdx.icn")
+   #endif
+   #ifdef _DRUM
+   (file
+      "drum.icn")
+   #endif
+   #ifdef _MEGA
+   (file
+      "mega.icn")
+   #endif
    (bg_transparency 128)
    (bg_colors
       (0 0 0)
