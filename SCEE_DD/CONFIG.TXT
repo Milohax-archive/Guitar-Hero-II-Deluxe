@@ -101,7 +101,7 @@ LINK=LINK_5
 *link=LINK_5
 NAME=Debug mode for when shit hits the fan
 TYPE=PLAYABLE
-FILENAME=GH2_DBUG.01
+FILENAME=DEBUG.ELF
 IOPIMAGE=300
 SPLASH=Loading Guitar Hero II Debug...
 
