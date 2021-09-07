@@ -219,12 +219,6 @@
 #endif
    DIALOG_SCREEN
    (enter
-#ifdef _SHIP
-		 {set $game80s FALSE}
-#endif
-#ifdef _ENCO
-		 {set $game80s TRUE}
-#endif
       {set $autosave TRUE}
       {dialog message mc_checking mc_title_loading}
       {switch

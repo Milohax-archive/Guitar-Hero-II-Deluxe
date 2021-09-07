@@ -36,4 +36,10 @@
 {set $interval_p1 50}
 {set $interval_p2 50}
 {set $songtitle FALSE}
+#ifdef _SHIP
+		 {set $game80s FALSE}
+#endif
+#ifdef _ENCO
+		 {set $game80s TRUE}
+#endif
 {ui goto_screen $first_screen}
