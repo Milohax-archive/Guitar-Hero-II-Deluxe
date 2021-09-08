@@ -15,6 +15,14 @@
       {ui goto_screen practice_selpart_screen}
       kDataUnhandled)}
 {new
+   UIPanel
+   selpart_bg_panel
+   (file
+	{if_else
+      $game80s
+      selpart_bg_80s.milo
+      selpart_bg.milo})}
+{new
    GHPanel
    practice_selpart_panel
    (file

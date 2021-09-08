@@ -675,8 +675,8 @@
    (file
 	{if_else
       $game80s
-      sel_diff_bg_80s.milo
-      sel_diff_bg.milo})}
+      seldiff_bg_80s.milo
+      seldiff_bg.milo})}
 {new
    MultiSelectPanel
    seldiff0
@@ -776,17 +776,17 @@
       {$this set_button_text})}
 {new
    UIPanel
-   selpart_bg_panel
+   mp_selpart_bg_panel
    (file
 	{if_else
       $game80s
-      sel_part_bg_80s.milo
-      sel_part_bg.milo})}
+      selpart_bg_80s.milo
+      selpart_bg.milo})}
 {new
    MultiSelectScreen
    selpart_screen
-   (panels meta selpart_bg_panel selpart0 selpart1 helpbar)
-   (focus selpart_bg_panel)
+   (panels meta mp_selpart_bg_panel selpart0 selpart1 helpbar)
+   (focus mp_selpart_bg_panel)
    (panel_base_name selpart)
    (helpbar
       (default
