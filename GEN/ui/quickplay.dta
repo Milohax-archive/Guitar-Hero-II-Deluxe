@@ -409,14 +409,52 @@
 {new
    GHPanel
    sel_character_panel_qp
-#ifndef _SHIP
-   (file sel_character_debug.milo)
-#else
+#ifdef _SHIP
    (file
 	{if_else
       $game80s
       sel_character_80s.milo
       sel_character.milo})
+#endif
+#ifdef _ENCO
+   (file
+	{if_else
+      $game80s
+      sel_character_80s.milo
+      sel_character.milo})
+#endif
+#ifdef _DRUM
+   (file
+	{if_else
+      $game80s
+      sel_character_80s.milo
+      sel_character.milo})
+#endif
+#ifdef _MEGA
+   (file
+	{if_else
+      $game80s
+      sel_character_80s.milo
+      sel_character.milo})
+#endif
+#ifdef _ONYX
+   (file
+	{if_else
+      $game80s
+      sel_character_80s.milo
+      sel_character.milo})
+#endif
+
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
+   (file sel_character_debug.milo)
+#endif
+#endif
+#endif
+#endif
 #endif
    (char_focus rockabill)
    (char_outfit rockabill1)

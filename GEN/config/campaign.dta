@@ -99,7 +99,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if Drum Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifdef _MEGA
+#ifdef _DRUM
 (order
    (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)

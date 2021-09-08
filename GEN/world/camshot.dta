@@ -18,7 +18,11 @@
    {handle
       (world post_switch_cam)})
 (start_shot
-   #ifndef _SHIP
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _MEGA
+#ifndef _ONYX
    {rnd
       reflect
       camera
@@ -70,6 +74,10 @@
                   {$waypoint name}}}}}
       {print
          "\n"}}
+   #endif
+   #endif
+   #endif
+   #endif
    #endif
    {if
       {&&

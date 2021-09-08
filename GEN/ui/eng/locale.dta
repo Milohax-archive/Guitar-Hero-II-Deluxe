@@ -196,7 +196,7 @@
 (vs_widescreen
    "WIDESCREEN DISPLAY")
 (vs_80s
-   "CHANGE GAME")
+   "CHANGE SKIN")
 (vs_lag
    "CALIBRATE LAG")
 (warning

@@ -7259,6 +7259,10 @@
       (venue small2))
    (validate_ignore TRUE))
 #ifndef _SHIP
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef _ONYX
+#ifndef _MEGA
 (budget_two_note_chords
    (name
       "Techniques: Speed")
@@ -7459,4 +7463,8 @@
       (guitar sg)
       (venue small2))
    (validate_ignore TRUE))
+#endif
+#endif
+#endif
+#endif
 #endif
