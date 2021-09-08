@@ -1696,19 +1696,23 @@
                set_text
                "sg_lead"}}
 ;;;;;;;;if gh2 retail Elf
+#ifdef _SHIP
             {part2.btn
                set_state
                kDisabled}
             {part2.btn
                set_showing
                FALSE}
+#endif
 ;;;;;;;;if gh80s retail Elf
+#ifdef _ENCO
             {part2.btn
                set_state
                kDisabled}
             {part2.btn
                set_showing
                FALSE}
+#endif
 ;;;;;;;;if mega Elf
 #ifdef _MEGA
             {part2.btn
