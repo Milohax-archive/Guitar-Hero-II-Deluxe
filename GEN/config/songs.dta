@@ -972,12 +972,12 @@
       (pans
          (-1.0 1.0 -1.0 1.0 -1.0 1.0))
       (vols
-         (2.0 2.0 1.0 1.0 1.0 1.0))
+         (-3.0 -3.0 -3.0 -3.0 -3.0 -3.0))
       (cores
          (-1 -1 1 1 -1 -1))
       (midi_file songs/institutionalized/institutionalized.mid))
    (song_coop
-      (name songs/institutionalized/institutionalized_coop)
+      (name songs/institutionalized/institutionalized)
       (tracks
          ((guitar
                (2 3))
@@ -995,45 +995,7 @@
    (quickplay
       (character_outfit punk1)
       (guitar sg)
-      (venue small1))
-   (practice_speeds
-      (100 85 65 50))
-   (song_practice_1
-      (name songs/institutionalized/institutionalized_p85)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/institutionalized/institutionalized.mid))
-   (song_practice_2
-      (name songs/institutionalized/institutionalized_p65)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/institutionalized/institutionalized.mid))
-   (song_practice_3
-      (name songs/institutionalized/institutionalized_p50)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/institutionalized/institutionalized.mid)))
+      (venue small1)))
 (jessica
    (name
       "Jessica")
