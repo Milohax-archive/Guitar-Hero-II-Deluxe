@@ -1646,16 +1646,14 @@
    (song
       (name songs/mother/mother)
       (tracks
-         ((guitar
-               (2 3))
-            (rhythm
-               (4 5))))
+         ((guitar 2)
+            (rhythm 3)))
       (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+         (-1.0 1.0 0.0 0.0))
       (vols
-         (2.5 2.5 2.0 2.0 2.0 2.0))
+         (0.0 0.0 -0.5 -0.5))
       (cores
-         (-1 -1 1 1 -1 -1))
+         (-1 -1 1 -1))
       (midi_file songs/mother/mother.mid))
    (song_coop
       (name songs/mother/mother_coop)
@@ -1668,51 +1666,13 @@
          (-3.0 -3.0 -2.0 -2.0))
       (cores
          (-1 -1 1 -1))
-      (midi_file songs/mother/mother.mid))
+      (midi_file songs/mother/mother_coop.mid))
    (anim_tempo kTempoFast)
    (preview 61100 81500)
    (quickplay
       (character_outfit metal1)
       (guitar lespaul)
-      (venue battle))
-   (practice_speeds
-      (100 85 65 50))
-   (song_practice_1
-      (name songs/mother/mother_p85)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/mother/mother.mid))
-   (song_practice_2
-      (name songs/mother/mother_p65)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/mother/mother.mid))
-   (song_practice_3
-      (name songs/mother/mother_p50)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/mother/mother.mid)))
+      (venue battle)))
 (monkeywrench
    (name
       "Monkey Wrench")
