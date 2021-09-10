@@ -61,9 +61,9 @@
             {part0.btn
                set_text
                "sg_lead"}}
-;;;;;;;;if not debug elf Elf
-#ifndef 8DBUG
+;;;;;;;;if not debug Elf
 #ifndef 2DBUG
+#ifndef 8DBUG
       {if_else
             {==
                {song_provider get_instrument $song 2}
