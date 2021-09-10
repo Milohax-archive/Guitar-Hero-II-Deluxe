@@ -336,6 +336,8 @@
    "Raised in suburban Connecticut, Xavier Stone broke from his pampered upbringing after realizing he preferred rock clubs to country clubs. Weaving slick '70s style with chunky grooves, Xavier does it right every time.")
 (grim_shop_desc
    "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right.")
+(becauseitsmidnite_shop_desc
+   "While on tour, Limozeen used to demand leather sheets from the hotels they stayed at until the rashes and animal rights activists became a problem.")
 (punkencore_shop_desc
 {if_else
       $game80s
