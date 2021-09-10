@@ -6665,20 +6665,6 @@
    (song
       (name songs/trogdor/trogdor)
       (tracks
-         ((guitar
-               (2 3))
-            (rhythm
-               (4 5))))
-      (pans
-         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
-      (vols
-         (0.0 0.0 0.0 0.0 0.0 0.0))
-      (cores
-         (-1 -1 1 1 -1 -1))
-      (midi_file songs/trogdor/trogdor.mid))
-   (song_coop
-      (name songs/trogdor/trogdor_coop)
-      (tracks
          ((guitar 2)
             (rhythm 3)))
       (pans
@@ -6693,45 +6679,7 @@
    (quickplay
       (character_outfit glam1)
       (guitar lespaul)
-      (venue small2))
-   (practice_speeds
-      (100 85 65 50))
-   (song_practice_1
-      (name songs/trogdor/trogdor_p85)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/trogdor/trogdor.mid))
-   (song_practice_2
-      (name songs/trogdor/trogdor_p65)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/trogdor/trogdor.mid))
-   (song_practice_3
-      (name songs/trogdor/trogdor_p50)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/trogdor/trogdor.mid)))
+      (venue small2)))
 (xstream
    (name
       "The X-Stream")
