@@ -60,7 +60,7 @@
 				blue})))
 #define DRUM_SET
 ((gems
-  (kicklongnotch snare_red cymbal_yellow cymbal_blue cymbal_orange)))
+  (kicklongnotch snare_red tom_yellow tom_blue tom_orange)))
 (gem
  (fps 30)
  (mat_formats
