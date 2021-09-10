@@ -46,7 +46,6 @@ OPTION=02
 OPTION=03
 OPTION=04
 OPTION=05
-OPTION=06
 
 # Define Main Menu Shortcuts And Links For Each Item Below :
 
@@ -84,38 +83,27 @@ IOPIMAGE=300
 SPLASH=Loading Guitar Hero II + Encore Deluxe...
 
 *option=04
-NAME=Guitar Hero II Deluxe Drum Enabled
+NAME=Guitar Hero II Debug
 LINK=LINK_4
 
 *link=LINK_4
-NAME=Emulator only. Guitar, Rhythm, Bass, Drums. All playable.
-TYPE=PLAYABLE
-FILENAME=DRUM_DX.04
-IOPIMAGE=300
-SPLASH=Loading Guitar Hero II Drums Deluxe...
-
-*option=05
-NAME=Guitar Hero II Debug
-LINK=LINK_5
-
-*link=LINK_5
 NAME=Debug mode for when shit hits the fan
 TYPE=PLAYABLE
 FILENAME=DEBUG.ELF
 IOPIMAGE=300
 SPLASH=Loading Guitar Hero II Debug...
 
-*option=06
-NAME=Guitar Hero II OPM Demo
-LINK=LINK_6
+*option=05
+NAME=Guitar Hero Encore Debug
+LINK=LINK_5
 
-*link=LINK_6
-NAME=Ayo I heard you like OPM
+*link=LINK_5
+NAME=Debug mode for when shit hits the fan
 TYPE=PLAYABLE
-INACTIVITY=69
-FILENAME=GH2\GH2.ELF
+#INACTIVITY=69
+FILENAME=80S_DBUG.01
 IOPIMAGE=300
-SPLASH=Loading Guitar Hero II OPM Demo...
+SPLASH=Loading Guitar Hero Encore Debug Demo...
 
 # CREDITS
 *link=CREDITS

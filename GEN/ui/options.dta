@@ -809,9 +809,6 @@
 #ifdef _ENCO
             {ui goto_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {ui goto_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {ui goto_screen bootup_load_new}
 #endif
@@ -821,11 +818,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {ui goto_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -1073,9 +1068,6 @@
 #ifdef _ENCO
    (done_screen bootup_load)
 #endif
-#ifdef _DRUM
-   (done_screen bootup_load_new)
-#endif
 #ifdef _ONYX
    (done_screen bootup_load_new)
 #endif
@@ -1085,11 +1077,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
    (done_screen bootup_load)
-#endif
 #endif
 #endif
 #endif

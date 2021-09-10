@@ -268,13 +268,6 @@
       sel_character_80s.milo
       sel_character.milo})
 #endif
-#ifdef _DRUM
-   (file
-	{if_else
-      $game80s
-      sel_character_80s.milo
-      sel_character.milo})
-#endif
 #ifdef _MEGA
    (file
 	{if_else
@@ -1366,57 +1359,6 @@
                {$this set_venue_map_frame 8}
                {game set_venue stone})}})
 #endif
-;;;;;;;;if drum Elf
-#ifdef _DRUM
-   (FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle})
-            (sv_battle2.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle2})
-            (sv_small1.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small1})
-            (sv_small3.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small3})
-            (sv_small2.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small2})
-            (sv_small4.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small4})
-            (sv_big.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue big})
-            (sv_theatre.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre})
-            (sv_theatre2.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre2})
-            (sv_fest.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest})
-            (sv_fest2.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest2})
-            (sv_arena.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena})
-            (sv_arena2.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena2})
-            (sv_stone.btn
-               {$this set_venue_map_frame 8}
-               {game set_venue stone})}})
-#endif
 ;;;;;;;;if ONYX Elf
 #ifdef _ONYX
    (FOCUS_MSG
@@ -1523,11 +1465,6 @@
 #endif
 ;;;;;;;;if mega Elf
 #ifdef _MEGA
-   (file sel_venue_mega.milo)
-   (focus sv_battle.btn)
-#endif
-;;;;;;;;if drum Elf
-#ifdef _DRUM
    (file sel_venue_mega.milo)
    (focus sv_battle.btn)
 #endif
@@ -1733,35 +1670,9 @@
             {part0.btn
                set_text
                "sg_lead"}}
-;;;;;;;;if gh2 retail Elf
-#ifdef _SHIP
-            {part2.btn
-               set_state
-               kDisabled}
-            {part2.btn
-               set_showing
-               FALSE}
-#endif
-;;;;;;;;if gh80s retail Elf
-#ifdef _ENCO
-            {part2.btn
-               set_state
-               kDisabled}
-            {part2.btn
-               set_showing
-               FALSE}
-#endif
-;;;;;;;;if mega Elf
-#ifdef _MEGA
-            {part2.btn
-               set_state
-               kDisabled}
-            {part2.btn
-               set_showing
-               FALSE}
-#endif
-;;;;;;;;if drum Elf
-#ifdef _DRUM
+;;;;;;;;if not debug Elf
+#ifndef 2DBUG
+#ifndef 8DBUG
       {if_else
             {==
                {song_provider get_instrument $song 2}
@@ -1779,19 +1690,10 @@
                "sg_drum"}
                {part2.btn set_showing FALSE}}
 #endif
-;;;;;;;;if ONYX Elf
-#ifdef _ONYX
-            {part2.btn
-               set_state
-               kDisabled}
-            {part2.btn
-               set_showing
-               FALSE}
 #endif
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {part2.btn
@@ -1800,7 +1702,6 @@
             {part2.btn
                set_showing
                FALSE}
-#endif
 #endif
 #endif
 #endif

@@ -14,9 +14,6 @@
 #ifdef _ENCO
             {ui goto_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {ui goto_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {ui goto_screen bootup_load_new}
 #endif
@@ -26,11 +23,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {ui goto_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -44,9 +39,6 @@
 #ifdef _ENCO
             {ui goto_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {ui goto_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {ui goto_screen bootup_load_new}
 #endif
@@ -56,11 +48,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {ui goto_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -73,9 +63,6 @@
 #endif
 #ifdef _ENCO
    bootup_load_new
-#endif
-#ifdef _DRUM
-   bootup_load
 #endif
 #ifdef _ONYX
    bootup_load
@@ -208,9 +195,6 @@
 #ifdef _ENCO
    bootup_load
 #endif
-#ifdef _DRUM
-   bootup_load_new
-#endif
 #ifdef _ONYX
    bootup_load_new
 #endif
@@ -219,11 +203,9 @@
 #endif
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
    bootup_load
-#endif
 #endif
 #endif
 #endif
@@ -247,9 +229,6 @@
 #ifdef _ENCO
                {memcard load_data bootup_load}
 #endif
-#ifdef _DRUM
-               {memcard load_data bootup_load_new}
-#endif
 #ifdef _ONYX
                {memcard load_data bootup_load_new}
 #endif
@@ -259,11 +238,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
                {memcard load_data bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -312,9 +289,6 @@
 #ifdef _ENCO
             {ui goto_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {ui goto_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {ui goto_screen bootup_load_new}
 #endif
@@ -324,11 +298,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {ui goto_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -385,9 +357,6 @@
 #ifdef _ENCO
             {set $mc_load_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {set $mc_load_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {set $mc_load_screen bootup_load_new}
 #endif
@@ -397,11 +366,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {set $mc_load_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -418,9 +385,6 @@
 #ifdef _ENCO
             {set $mc_save_failed_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {set $mc_save_failed_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {set $mc_save_failed_screen bootup_load_new}
 #endif
@@ -430,11 +394,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {set $mc_save_failed_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -480,9 +442,6 @@
 #ifdef _ENCO
             {ui goto_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {ui goto_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {ui goto_screen bootup_load_new}
 #endif
@@ -492,11 +451,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {ui goto_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -533,9 +490,6 @@
 #ifdef _ENCO
             {ui goto_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {ui goto_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {ui goto_screen bootup_load_new}
 #endif
@@ -545,11 +499,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {ui goto_screen bootup_load}
-#endif
 #endif
 #endif
 #endif
@@ -602,9 +554,6 @@
 #ifdef _ENCO
             {ui goto_screen bootup_load}
 #endif
-#ifdef _DRUM
-            {ui goto_screen bootup_load_new}
-#endif
 #ifdef _ONYX
             {ui goto_screen bootup_load_new}
 #endif
@@ -614,11 +563,9 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
             {ui goto_screen bootup_load}
-#endif
 #endif
 #endif
 #endif

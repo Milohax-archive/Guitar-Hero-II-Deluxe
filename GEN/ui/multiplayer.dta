@@ -680,7 +680,11 @@
 {new
    MultiSelectPanel
    seldiff0
-   (file seldiff0.milo)
+(file 
+	{if_else
+      $game80s
+      seldiff0_80s.milo
+      seldiff0.milo})
    (player_num 0)
    (ready_label
       "ready.lbl")
@@ -689,7 +693,11 @@
 {new
    MultiSelectPanel
    seldiff1
-   (file seldiff1.milo)
+(file 
+	{if_else
+      $game80s
+      seldiff1_80s.milo
+      seldiff1.milo})
    (player_num 1)
    (ready_label
       "ready.lbl")
@@ -757,7 +765,11 @@
 {new
    MultiSelectPanel
    selpart0
-   (file selpart0.milo)
+(file 
+	{if_else
+      $game80s
+      selpart0_80s.milo
+      selpart0.milo})
    (player_num 0)
    (ready_label
       "ready.lbl")
@@ -767,7 +779,11 @@
 {new
    MultiSelectPanel
    selpart1
-   (file selpart1.milo)
+(file 
+	{if_else
+      $game80s
+      selpart1_80s.milo
+      selpart1.milo})
    (player_num 1)
    (ready_label
       "ready.lbl")
