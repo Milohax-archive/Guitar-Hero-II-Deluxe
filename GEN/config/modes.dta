@@ -16,7 +16,13 @@
    (encore_fx FALSE)
    (track_surface_override '')
    (crowd_audio TRUE)
-   (star_power_disable FALSE)
+   (star_power_disable
+    {switch
+     {game get_track_sym 0}
+     (bass 'FALSE')
+     (drum 'TRUE')
+     (rhythm 'FALSE')
+     (guitar 'FALSE')})
    (shared_star_meter FALSE)
    (main_screen main_screen)
    (continue_screen qp_selsong_screen)
