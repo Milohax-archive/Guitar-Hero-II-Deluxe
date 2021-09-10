@@ -36,8 +36,23 @@
             "%i Bass Streak!")
          (kTrackRhythm
             "%i Rhythm Streak!")
+         (kTrackDrum
+            "%i Drum Streak!")
          "%i Note Streak!"}
-      "%i Note Streak!"})
+   {if_else
+      {==
+         {gamecfg get mode}
+         career}
+      {switch
+         {game get_track_type 0}
+         (kTrackBass
+            "%i Bass Streak!")
+         (kTrackRhythm
+            "%i Rhythm Streak!")
+         (kTrackDrum
+            "%i Drum Streak!")
+         "%i Note Streak!"}
+      "%i Note Streak!"}})
 (stk_format_0 {sprint $player0_streak})
 (stk_format_1 {sprint $player1_streak})
 (stk_format_2 {sprint $player2_streak})
