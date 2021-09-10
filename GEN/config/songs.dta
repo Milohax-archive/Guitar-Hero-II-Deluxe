@@ -204,7 +204,7 @@
       (pans
          (-1.0 1.0 -1.0 1.0 -1.0 1.0))
       (vols
-         (2.5 2.5 0.0 0.0 0.0 0.0))
+         (-2.0 -2.0 -2.0 -2.0 -2.0 -2.0))
       (cores
          (-1 -1 1 1 -1 -1))
       (midi_file songs/cantyouhearme/cantyouhearme.mid))
@@ -221,7 +221,7 @@
          (-2.0 -2.0 -2.0 -2.0 -2.0 -2.0))
       (cores
          (-1 -1 1 1 -1 -1))
-      (midi_file songs/cantyouhearme/cantyouhearme.mid))
+      (midi_file songs/cantyouhearme/cantyouhearme_coop.mid))
    (anim_tempo kTempoMedium)
    (preview 49000 69700)
    (quickplay
@@ -229,43 +229,7 @@
       (guitar lespaul)
       (venue theatre))
    (practice_speeds
-      (100 90 75 60))
-   (song_practice_1
-      (name songs/cantyouhearme/cantyouhearme_p90)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/cantyouhearme/cantyouhearme.mid))
-   (song_practice_2
-      (name songs/cantyouhearme/cantyouhearme_p75)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/cantyouhearme/cantyouhearme.mid))
-   (song_practice_3
-      (name songs/cantyouhearme/cantyouhearme_p60)
-      (tracks
-         ((guitar 0)
-            (rhythm 1)))
-      (pans
-         (0.0 0.0))
-      (vols
-         (0.0 0.0))
-      (cores
-         (-1 -1))
-      (midi_file songs/cantyouhearme/cantyouhearme.mid)))
+      (100 90 75 60)))
 (carrymehome
    (name
       "Carry Me Home")
