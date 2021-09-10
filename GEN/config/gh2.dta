@@ -133,9 +133,6 @@
 #ifdef _ENCO
 (venues battle2 small3 small4 theatre2 fest2 arena2)
 #endif
-#ifdef _DRUM
-(venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
-#endif
 #ifdef _MEGA
 (venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
 #endif
@@ -145,11 +142,9 @@
 
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
 (venues battle small1 small2 big theatre fest arena stone)
-#endif
 #endif
 #endif
 #endif
@@ -256,75 +251,6 @@
       grim})))
 #endif
 #ifdef _ENCO
-(characters
-   ({if_else
-      $game80s
-      punkencore
-      punkencore}
-      ({if_else
-      $game80s
-      punkencore
-      punk1})
-      (punk2))
-   ({if_else
-      $game80s
-      alternaencore
-      alternaencore}
-      ({if_else
-      $game80s
-      alternaencore
-      alterna1})
-      (alterna2))
-   ({if_else
-      $game80s
-      glamencore
-      glamencore}
-      ({if_else
-      $game80s
-      glamencore
-      glam1})
-      (glam2))
-   ({if_else
-      $game80s
-      gothencore
-      gothencore}
-      ({if_else
-      $game80s
-      gothencore
-      goth2})
-      (goth1))
-   ({if_else
-      $game80s
-      metalencore
-      metalencore}
-      ({if_else
-      $game80s
-      metalencore
-      metal1})
-      (metal2))
-   (rockabill
-      (rockabill1)
-      (rockabill2))
-   (rock
-      (rock2)
-      (rock1))
-   (deathmetal
-      (deathmetal1)
-      (deathmetal2))
-   (classic
-      (classic))
-   (funk1
-      (funk1))
-   ({if_else
-      $game80s
-      grimencore
-      grimencore}
-      ({if_else
-      $game80s
-      grimencore
-      grim})))
-#endif
-#ifdef _DRUM
 (characters
    ({if_else
       $game80s

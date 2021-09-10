@@ -6,10 +6,6 @@
 (base_dir
    "BAGHCE-00080")
 #endif
-#ifdef _DRUM
-(base_dir
-   "BAGHCE-01234")
-#endif
 #ifdef _MEGA
 (base_dir
    "BAGHCE-08008")
@@ -21,11 +17,9 @@
 
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
 (base_dir “BAGHCE-01001”)
-#endif
 #endif
 #endif
 #endif
@@ -39,10 +33,6 @@
 (elf_name
    "80S_DX.02")
 #endif
-#ifdef _DRUM
-(elf_name
-   "DRUM_DX.04")
-#endif
 #ifdef _MEGA
 (elf_name
    "MEGA_DX.03")
@@ -54,12 +44,10 @@
 
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
 (elf_name
    "GH2_DBUG.01")
-#endif
 #endif
 #endif
 #endif
@@ -131,28 +119,6 @@
 (testing FALSE)
 #endif
 
-#ifdef _DRUM
-(ps2_icon
-   (file
-      "drum.icn")
-   (bg_transparency 128)
-   (bg_colors
-      (0 0 0)
-      (0 0 0)
-      (174 91 164)
-      (174 91 164))
-   (lit_dirs
-      (0.2 1 0)
-      (1 0 1)
-      (1 -1 0))
-   (lit_colors
-      (0.7 0.7 0.7)
-      (0.7 0.7 0.7)
-      (0.7 0.7 0.7))
-   (ambient 0.7 0.7 0.7))
-(testing FALSE)
-#endif
-
 #ifdef _MEGA
 (ps2_icon
    (file
@@ -177,7 +143,6 @@
 
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
 (ps2_icon
@@ -199,7 +164,6 @@
       (0.7 0.7 0.7))
    (ambient 0.7 0.7 0.7))
 (testing FALSE)
-#endif
 #endif
 #endif
 #endif

@@ -1,19 +1,29 @@
 (heaps
-   #ifdef HX_EE
+      #ifdef HX_EE
    (main
       (size 19730000))
    (rnd
       (size 5900000)
       (handle TRUE))
-   #else
-   #ifdef HX_PC
+	  #endif
+      #ifdef 8DBUG
+   (main
+      (size 19730000))
+   (rnd
+      (size 5900000)
+      (handle TRUE))
+	  #endif
+      #ifdef 2DBUG
+   (main
+      (size 19730000))
+   (rnd
+      (size 5900000)
+      (handle TRUE))
+	  #endif
+      #ifdef HX_PC
    (main
       (size 326000000))
-   #else
-   (main
-      (size 326000000))
-   #endif
-   #endif)
+	  #endif)
 (pool
    (big_hunk 3100000)
    (small_hunk 50000))

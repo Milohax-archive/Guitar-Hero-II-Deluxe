@@ -34,20 +34,31 @@
    #include objects.dta)
 (mem
    (heaps
-      #ifdef HX_EE
+       #ifdef HX_EE
       (main
          (size 18000000))
       (rnd
          (size 8000000)
          (handle TRUE))
-      #else
+	  #endif
+      #ifdef 8DBUG
       (main
-         (size 26000000))
-      #endif
+         (size 18000000))
+      (rnd
+         (size 8000000)
+         (handle TRUE))
+	  #endif
+      #ifdef 2DBUG
+      (main
+         (size 18000000))
+      (rnd
+         (size 8000000)
+         (handle TRUE))
+	  #endif
       #ifdef HX_PC
       (synth
          (size 10000000))
-      #endif)
+	  #endif)
    (pool
       (big_hunk 3100000)
       (small_hunk 50000))
@@ -151,6 +162,24 @@
             {rnd reset 512 448 16 0 0}
             {rnd reset 640 448 16 0 1}})
       #endif
+      #ifdef 2DBUG
+      (kPad_Tri
+         {if_else
+            {==
+               {rnd screen_width}
+               640}
+            {rnd reset 512 448 16 0 0}
+            {rnd reset 640 448 16 0 1}})
+      #endif
+      #ifdef 8DBUG
+      (kPad_Tri
+         {if_else
+            {==
+               {rnd screen_width}
+               640}
+            {rnd reset 512 448 16 0 0}
+            {rnd reset 640 448 16 0 1}})
+      #endif
       (kPad_Start
          {synth toggle_hud}))
    (right)
@@ -180,13 +209,22 @@
    (bsp_max_depth 40))
 (timer task draw 'task+draw' cpu gs light)
 (rnd
-   #ifdef HX_EE
+      #ifdef HX_EE
    (width 512)
    (height 448)
-   #else
+	  #endif
+      #ifdef 8DBUG
+   (width 512)
+   (height 448)
+	  #endif
+      #ifdef 2DBUG
+   (width 512)
+   (height 448)
+	  #endif
+      #ifdef HX_PC
    (width 640)
    (height 480)
-   #endif
+	  #endif
    (bpp 16)
    (sync TRUE)
    (guard_band 0 0)
@@ -204,11 +242,18 @@
          (lines 1)
          (showing FALSE))
       (stats
-         #ifdef HX_EE
+      #ifdef HX_EE
          (lines 10)
-         #else
+	  #endif
+      #ifdef 8DBUG
+         (lines 10)
+	  #endif
+      #ifdef 2DBUG
+         (lines 10)
+	  #endif
+      #ifdef HX_PC
          (lines 1)
-         #endif
+	  #endif
          (showing FALSE))
       (input
          (lines 1)

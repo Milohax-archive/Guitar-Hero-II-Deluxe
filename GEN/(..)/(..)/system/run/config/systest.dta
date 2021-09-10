@@ -9,10 +9,25 @@
       (rnd
          (size 8000000)
          (handle TRUE))
-      #else
+	  #endif
+      #ifdef 8DBUG
+      (main
+         (size 40000000))
+      (rnd
+         (size 8000000)
+         (handle TRUE))
+	  #endif
+      #ifdef 2DBUG
+      (main
+         (size 40000000))
+      (rnd
+         (size 8000000)
+         (handle TRUE))
+	  #endif
+      #ifdef HX_PC
       (main
          (size 268435456))
-      #endif)
+	  #endif)
    (ps2_clamp_32 FALSE)
    (enable_tracking TRUE)
    (track_stl TRUE)

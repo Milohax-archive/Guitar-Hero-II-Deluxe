@@ -31,6 +31,38 @@
       (detect
          (type kJoypadDualShock))))
 #endif
+#ifdef 2DBUG
+(controllers
+   (ro_guitar
+      (detect
+         (type kJoypadAnalog)
+         (button kPad_DLeft)))
+   (digital
+      (detect
+         (type kJoypadDigital)))
+   (analog
+      (detect
+         (type kJoypadAnalog)))
+   (dualshock
+      (detect
+         (type kJoypadDualShock))))
+#endif
+#ifdef 8DBUG
+(controllers
+   (ro_guitar
+      (detect
+         (type kJoypadAnalog)
+         (button kPad_DLeft)))
+   (digital
+      (detect
+         (type kJoypadDigital)))
+   (analog
+      (detect
+         (type kJoypadAnalog)))
+   (dualshock
+      (detect
+         (type kJoypadDualShock))))
+#endif
 #ifdef HX_PC
 (controllers
    (midi

@@ -102,6 +102,8 @@
 (1)
 #define kTrackGuitar
 (2)
+#define kTrackDrum
+(3)
 #define TRACK_SYMBOLS
 (bass rhythm guitar drum)
 #define kSoloFeedback

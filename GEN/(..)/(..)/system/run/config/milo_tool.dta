@@ -25,14 +25,39 @@
       (rnd
          (size 8000000)
          (handle TRUE))
-      #else
+	  #endif
+      #ifdef 8DBUG
+      (main
+         (size 40000000))
+      (rnd
+         (size 8000000)
+         (handle TRUE))
+	  #endif
+      #ifdef 2DBUG
+      (main
+         (size 40000000))
+      (rnd
+         (size 8000000)
+         (handle TRUE))
+	  #endif
+      #ifdef HX_PC
       (main
          (size 268435456))
-      #endif)
+	  #endif)
    (pool
       (big_hunk 3100000)
       (small_hunk 50000))
    #ifdef HX_EE
+   (ps2_clamp_32 FALSE)
+   (track_stl TRUE)
+   (enable_tracking TRUE)
+   #endif
+   #ifdef 2DBUG
+   (ps2_clamp_32 FALSE)
+   (track_stl TRUE)
+   (enable_tracking TRUE)
+   #endif
+   #ifdef 8DBUG
    (ps2_clamp_32 FALSE)
    (track_stl TRUE)
    (enable_tracking TRUE)

@@ -84,10 +84,6 @@
 (song_current_venue
    "Beat %i/4 songs to continue")
 #endif
-#ifdef _DRUM
-(song_current_venue
-   "Beat %i songs to continue")
-#endif
 #ifdef _MEGA
 (song_current_venue
    "Beat %i songs to continue")
@@ -99,12 +95,10 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
 (song_current_venue
    "Beat %i/5 songs to continue")
-#endif
 #endif
 #endif
 #endif
