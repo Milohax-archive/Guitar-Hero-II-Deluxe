@@ -60,7 +60,7 @@
 				blue})))
 #define DRUM_SET
 ((gems
-  (kicklongnotch snare_red tom_yellow tom_blue tom_orange)))
+  (kick4 snare_red tom_yellow tom_blue tom_orange)))
 (gem
  (fps 30)
  (mat_formats
@@ -86,7 +86,7 @@
     (type 	{switch
      {game get_track_sym 0}
      (bass 'kMeshHopoTop')
-     (drum 'kMeshStarTop')
+     (drum 'kMeshTop')
      (rhythm 'kMeshHopoTop')
      (guitar 'kMeshHopoTop')})
     (default 

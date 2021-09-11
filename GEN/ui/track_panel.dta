@@ -60,7 +60,8 @@
                {! $neckless}}}}
       {$this set_track_out})
    (enter
-      {game add_sink $this blow_streak})
+      {game add_sink $this blow_streak}
+	  {$this set_smasher_glowing 0 TRUE})
    (exit
       {game remove_sink $this})
    (do_extend_sequence
