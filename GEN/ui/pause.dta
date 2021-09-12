@@ -117,9 +117,9 @@
          (restart_career.btn
             {$this restart})
          (section.btn
-            {meta_loading_nosave_goto practice_sel_section_screen})
+            {meta_loading_nosave_goto practice_selpart_screen})
          (section_career.btn
-            {meta_loading_goto practice_sel_section_screen})
+            {meta_loading_goto practice_selpart_screen})
          (change_speed.btn
             {gamecfg set mode quickplay}
             {gamecfg set_track 0 0}
@@ -163,9 +163,9 @@
          (restart_career.btn
             {$this restart})
          (section.btn
-            {meta_loading_nosave_goto practice_sel_section_screen})
+            {meta_loading_nosave_goto practice_selpart_screen})
          (section_career.btn
-            {meta_loading_goto practice_sel_section_screen})
+            {meta_loading_goto practice_selpart_screen})
          (change_speed.btn
             {gamecfg set mode quickplay}
             {gamecfg set_track 0 0}
