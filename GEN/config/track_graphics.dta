@@ -83,19 +83,8 @@
     (type kMeshGemMiss)
     (default kMeshGem))
    (hopo
-    (type 	{switch
-     {game get_track_sym 0}
-     (bass 'kMeshHopoTop')
-     (drum 'kMeshTop')
-     (rhythm 'kMeshHopoTop')
-     (guitar 'kMeshHopoTop')})
-    (default 
-	{switch
-     {game get_track_sym 0}
-     (bass 'kMeshTop')
-     (drum 'kMeshTop')
-     (rhythm 'kMeshTop')
-     (guitar 'kMeshTop')}))
+    (type kMeshHopoTop)
+    (default kMeshTop))
    (star
     (type kMeshStar)
     (default kMeshGem))
