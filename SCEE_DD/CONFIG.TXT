@@ -46,6 +46,7 @@ OPTION=02
 OPTION=03
 OPTION=04
 OPTION=05
+OPTION=06
 
 # Define Main Menu Shortcuts And Links For Each Item Below :
 
@@ -56,7 +57,7 @@ LINK=LINK_1
 *link=LINK_1
 NAME=The game Clone Hero kids can't hit notes in!
 TYPE=PLAYABLE
-FILENAME=GH20_DX.03
+FILENAME=GH2DX_00.03
 IOPIMAGE=300
 SPLASH=Loading Guitar Hero II Deluxe 2.0...
 
@@ -67,7 +68,7 @@ LINK=LINK_2
 *link=LINK_2
 NAME=Melt faces and steal wallets in GH80's
 TYPE=PLAYABLE
-FILENAME=80S_DX.02
+FILENAME=80SDX_00.02
 IOPIMAGE=300
 SPLASH=Loading Guitar Hero Encore Deluxe...
 
@@ -78,7 +79,7 @@ LINK=LINK_3
 *link=LINK_3
 NAME=14 tiers of pure GHII and 80's Pleasure (Pleasure)
 TYPE=PLAYABLE
-FILENAME=MEGA_DX.03
+FILENAME=\SCEE_DD\MEGA_AB.ELF
 IOPIMAGE=300
 SPLASH=Loading Guitar Hero II + Encore Deluxe...
 
@@ -89,7 +90,7 @@ LINK=LINK_4
 *link=LINK_4
 NAME=Debug mode for when shit hits the fan
 TYPE=PLAYABLE
-FILENAME=DEBUG.ELF
+FILENAME=\SCEE_DD\2DBUG_AB.ELF
 IOPIMAGE=300
 SPLASH=Loading Guitar Hero II Debug...
 
@@ -101,9 +102,21 @@ LINK=LINK_5
 NAME=Debug mode for when shit hits the fan
 TYPE=PLAYABLE
 #INACTIVITY=69
-FILENAME=80S_DBUG.01
+FILENAME=\SCEE_DD\8DBUG_AB.ELF
 IOPIMAGE=300
 SPLASH=Loading Guitar Hero Encore Debug Demo...
+
+*option=06
+NAME=Guitar Hero Custom Edition
+LINK=LINK_6
+
+*link=LINK_6
+NAME=Custom Edition for sweet sweet imports
+TYPE=PLAYABLE
+#INACTIVITY=69
+FILENAME=\SCEE_DD\CUST_AB.ELF
+IOPIMAGE=300
+SPLASH=Loading Guitar Hero Custom Edition...
 
 # CREDITS
 *link=CREDITS

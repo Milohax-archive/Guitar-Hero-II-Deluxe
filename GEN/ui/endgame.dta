@@ -115,7 +115,6 @@
 #endif
 #endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 )}
 {func
    goto_endgame_complete
@@ -677,7 +676,7 @@
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
-#ifndef _8DBUG
+#ifndef 8DBUG
 #define ENDGAME_ENCORE_LETTERS
 ((endgame_encore_letter3 endgame_encore_letter4 endgame_encore_letter5 endgame_encore_letter6))
 {new
@@ -779,7 +778,7 @@
 #endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if gh2 Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if not gh2 Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #ifndef _SHIP
 #ifndef 2DBUG
 #define ENDGAME_ENCORE_LETTERS

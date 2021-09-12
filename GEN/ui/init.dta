@@ -42,4 +42,7 @@
 #ifdef _ENCO
 		 {set $game80s TRUE}
 #endif
+#ifdef 8DBUG
+		 {set $game80s TRUE}
+#endif
 {ui goto_screen $first_screen}
