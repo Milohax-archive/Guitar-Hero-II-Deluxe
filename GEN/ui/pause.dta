@@ -53,8 +53,8 @@
          (newsong.btn
             {gamecfg set mode practice}
             {gamecfg set_track 0 0}
-            {practice_sel_section_screen set career_mode FALSE}
-            {meta_loading_goto practice_sel_section_screen})
+            {practice_selpart_screen set career_mode FALSE}
+            {meta_loading_goto practice_selpart_screen})
          (quit.btn
             {if
                {==
@@ -84,7 +84,7 @@
    (enter
       {do
          ($career
-            {practice_sel_section_screen get career_mode})
+            {practice_selpart_screen get career_mode})
          {tut_pause_career_buttons.view set_showing $career}
          {tut_pause_buttons.view
             set_showing
@@ -117,15 +117,15 @@
          (restart_career.btn
             {$this restart})
          (section.btn
-            {meta_loading_nosave_goto practice_selpart_screen})
+            {meta_loading_nosave_goto practice_sel_section_screen})
          (section_career.btn
-            {meta_loading_goto practice_selpart_screen})
+            {meta_loading_nosave_goto practice_sel_section_screen})
          (change_speed.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {modifiers_screen_pract set back_screen pract_pause_screen}
+            {meta_loading_nosave_goto modifiers_screen_pract})
          (change_speed_career.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {modifiers_screen_pract set back_screen pract_pause_screen}
+            {meta_loading_nosave_goto modifiers_screen_pract})
          (newsong.btn
             {meta_loading_nosave_goto practice_selsong_screen})
          (quit_career.btn
@@ -159,15 +159,15 @@
          (restart_career.btn
             {$this restart})
          (section.btn
-            {meta_loading_nosave_goto practice_selpart_screen})
+            {meta_loading_nosave_goto practice_sel_section_screen})
          (section_career.btn
-            {meta_loading_goto practice_selpart_screen})
+            {meta_loading_nosave_goto practice_sel_section_screen})
          (change_speed.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {modifiers_screen_pract set back_screen pract_pause_screen}
+            {meta_loading_nosave_goto modifiers_screen_pract})
          (change_speed_career.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {modifiers_screen_pract set back_screen pract_pause_screen}
+            {meta_loading_nosave_goto modifiers_screen_pract})
          (newsong.btn
             {meta_loading_nosave_goto practice_selsong_screen})
          (quit_career.btn

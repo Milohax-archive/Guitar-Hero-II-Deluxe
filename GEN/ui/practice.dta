@@ -242,7 +242,7 @@
                {==
                   [section]
                   0}
-               {practice_sel_section_screen get career_mode}}
+               {practice_selpart_screen get career_mode}}
             {career_screen resume_from_practice}
             {ui goto_screen career_screen}
             TRUE)
@@ -745,7 +745,7 @@
             {sprintf $pat $perc $hits $tot}}}
       {do
          ($career
-            {practice_sel_section_screen get career_mode})
+            {practice_selpart_screen get career_mode})
          {pause_buttons_career.view set_showing $career}
          {pause_buttons.view
             set_showing
@@ -761,15 +761,15 @@
          (restart_career.btn
             {game_restart})
          (change_speed.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {modifiers_screen_pract set back_screen pract_pause_screen}
+            {meta_loading_nosave_goto modifiers_screen_pract})
          (change_speed_career.btn
-            {practice_change_speed_screen set back_screen pract_pause_screen}
-            {ui goto_screen practice_change_speed_screen})
+            {modifiers_screen_pract set back_screen pract_pause_screen}
+            {meta_loading_nosave_goto modifiers_screen_pract})
          (new_sec.btn
-            {meta_loading_nosave_goto practice_selpart_screen})
+            {meta_loading_nosave_goto practice_sel_section_screen})
          (new_sec_career.btn
-            {meta_loading_goto practice_selpart_screen})
+            {meta_loading_nosave_goto practice_sel_section_screen})
          (new_song.btn
             {meta_loading_nosave_goto practice_selsong_screen})
          (quit.btn
