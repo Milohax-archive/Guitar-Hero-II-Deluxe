@@ -753,19 +753,15 @@
          (restart_career.btn
             {game_restart})
          (change_speed.btn
-            {gamecfg set mode quickplay}
-            {gamecfg set_track 0 0}
-            {meta_loading_goto
-               {gamecfg get continue_screen}})
+            {practice_change_speed_screen set back_screen pract_pause_screen}
+            {ui goto_screen practice_change_speed_screen})
          (change_speed_career.btn
-            {gamecfg set mode quickplay}
-            {gamecfg set_track 0 0}
-            {meta_loading_goto
-               {gamecfg get continue_screen}})
+            {practice_change_speed_screen set back_screen pract_pause_screen}
+            {ui goto_screen practice_change_speed_screen})
          (new_sec.btn
-            {meta_loading_nosave_goto practice_sel_section_screen})
+            {meta_loading_nosave_goto practice_selpart_screen})
          (new_sec_career.btn
-            {meta_loading_goto practice_sel_section_screen})
+            {meta_loading_goto practice_selpart_screen})
          (new_song.btn
             {meta_loading_nosave_goto practice_selsong_screen})
          (quit.btn
