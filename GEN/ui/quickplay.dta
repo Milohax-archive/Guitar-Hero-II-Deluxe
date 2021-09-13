@@ -186,6 +186,16 @@
       sel_speed_qp_80s.milo
       sel_speed_qp.milo})
    (focus speed0.btn)
+   (set_button_text
+	{if_else $focusmode
+		{speed1.btn set_state kDisabled}
+		{speed1.btn set_showing TRUE}}
+	{if_else $focusmode
+		{speed2.btn set_state kDisabled}
+		{speed2.btn set_showing TRUE}}
+	{if_else $focusmode
+		{speed3.btn set_state kDisabled}
+		{speed3.btn set_showing TRUE}})
    (SELECT_START_MSG
       {switch
          $component
@@ -204,6 +214,8 @@
    practice_sel_speed_screen_qp
    (panels meta sel_speed_panel_qp helpbar)
    (focus sel_speed_panel_qp)
+   (enter
+	  {$this set_button_text})
    (helpbar
       (default
          ((fret1 help_continue)
