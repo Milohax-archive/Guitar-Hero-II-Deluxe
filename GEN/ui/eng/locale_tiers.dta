@@ -120,5 +120,5 @@
 (song_header_stone
    " ")
 (song_header_store
-   " ")
+   "Custom Songs")
 #endif
