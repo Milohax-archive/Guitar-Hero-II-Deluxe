@@ -9,7 +9,7 @@
             main_screen}
          {==
             {ui current_screen}
-            main_screen_egg}}})
+            main_screen}}})
 #define G_GREEN
 (kPad_R2)
 #define G_RED

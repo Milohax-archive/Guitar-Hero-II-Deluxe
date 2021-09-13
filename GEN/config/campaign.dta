@@ -21,14 +21,14 @@
    (starting 50)
    (star_awards
       (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 150 200 250)
+      (kDifficultyMedium 100 150 250)
       (kDifficultyHard 150 200 250)
-      (kDifficultyExpert 200 250 300))
+      (kDifficultyExpert 200 250 350))
    (status_awards
       (kDifficultyEasy 0 0 0 0 0 0 0 0)
-      (kDifficultyMedium 100 200 300 400 500 700 800 1000 0)
-      (kDifficultyHard 100 200 300 400 500 700 800 1000 0)
-      (kDifficultyExpert 100 200 300 400 500 700 800 501000 0)))
+      (kDifficultyMedium 100 200 300 400 500 600 700 800 0)
+      (kDifficultyHard 200 300 400 500 600 700 800 900 0)
+      (kDifficultyExpert 600 700 800 900 1000 1200 1500 500000 0)))
 (unlock_game_modes multi_fo)
 #endif
 #endif
@@ -54,17 +54,17 @@
    (kDifficultyHard 5 5)
    (kDifficultyExpert 5 5))
 (cash
-   (starting 50)
+   (starting 250)
    (star_awards
       (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 150 200 250)
-      (kDifficultyHard 150 200 250)
-      (kDifficultyExpert 150 200 250))
+      (kDifficultyMedium 100 150 300)
+      (kDifficultyHard 150 200 350)
+      (kDifficultyExpert 200 250 500))
    (status_awards
       (kDifficultyEasy 0 0 0 0 0 0)
-      (kDifficultyMedium 100 300 400 500 1000 1200 0)
-      (kDifficultyHard 100 300 400 500 1000 1200 0)
-      (kDifficultyExpert 100 300 400 500 1000 1200 0)))
+      (kDifficultyMedium 500 600 700 800 900 1000 0)
+      (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
+      (kDifficultyExpert 1000 1200 2000 2550 3000 3500 0)))
 (unlock_game_modes multi_fo)
 #endif
 #endif
@@ -99,17 +99,17 @@
    (kDifficultyHard 5 6)
 (kDifficultyExpert 5 6))
 (cash
-   (starting 50)
+   (starting 500)
    (star_awards
       (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 150 200 250)
-      (kDifficultyHard 150 200 250)
-      (kDifficultyExpert 200 250 300))
+      (kDifficultyMedium 0 50 100)
+      (kDifficultyHard 0 100 150)
+      (kDifficultyExpert 100 150 250))
    (status_awards
       (kDifficultyEasy 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-      (kDifficultyMedium 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)
-      (kDifficultyHard 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)
-      (kDifficultyExpert 100 200 300 400 500 700 800 900 1000 1100 1200 1300 1400 1500 0)))
+      (kDifficultyMedium 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 0)
+      (kDifficultyHard 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 0)
+      (kDifficultyExpert 350 450 550 650 750 800 900 1000 1100 1200 1300 1400 1500 500000 0)))
 (unlock_game_modes multi_fo)
 #endif
 #endif
@@ -128,17 +128,17 @@
    (kDifficultyHard 1 1)
 (kDifficultyExpert 1 1))
 (cash
-   (starting 50)
+   (starting 0)
    (star_awards
       (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 150 200 250)
-      (kDifficultyHard 150 200 250)
-      (kDifficultyExpert 200 250 300))
+      (kDifficultyMedium 0 0 0)
+      (kDifficultyHard 0 0 0)
+      (kDifficultyExpert 0 0 0))
    (status_awards
       (kDifficultyEasy 0 0)
-      (kDifficultyMedium 1500 0)
-      (kDifficultyHard 1500 0)
-      (kDifficultyExpert 1500 0)))
+      (kDifficultyMedium 0 0)
+      (kDifficultyHard 0 0)
+      (kDifficultyExpert 0 0)))
 (unlock_game_modes multi_fo)
 #endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
