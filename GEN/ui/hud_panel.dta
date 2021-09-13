@@ -150,13 +150,13 @@
             {$this show_overlay FALSE}
             {set $do_streak FALSE}} ;if this is false, skip all streak script
          {$this setup_streak}}
-	{script_task
-         (units kTaskSeconds)
-         (script
-			{score_slide_in.tnm
-         animate
-         (period 0.5)
-         (units kTaskSeconds)})}
+;	{script_task
+;         (units kTaskSeconds)
+;         (script
+;			{score_slide_in.tnm
+;         animate
+;         (period 0.5)
+;         (units kTaskSeconds)})}
       )
    (setup_streak
       {set $do_streak TRUE} ;if this is true, run all streak script
