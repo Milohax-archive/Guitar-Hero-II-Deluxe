@@ -3,9 +3,24 @@
    main_panel
    (file
 	{if_else
-      $game80s
-      main_egg2.milo
-      main.milo})
+      $egg5
+      main_egg_final.milo
+		{if_else
+			$egg4
+			main_egg3.milo
+			{if_else
+				$egg3
+				main_egg2.milo
+				{if_else
+					$egg2
+					main_egg1.milo
+					{if_else
+						$egg1
+						main_egg0.milo
+							{if_else
+								$game80s
+								main_egg2.milo
+								main.milo}}}}}})
    (focus main_quickspin.btn)
    (msg_last_frame 0)
    (already_entered FALSE)
