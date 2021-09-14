@@ -582,14 +582,15 @@
       (name songs/laidtorest/laidtorest_coop)
       (tracks
          ((guitar 2)
-          (rhythm 3)))
+          (rhythm 3)
+          (fake 0)))
       (pans
          (-1.0 1.0 0.0 0.0))
       (vols
          (-3.0 -3.0 -2.0 -2.0))
       (cores
          (-1 -1 1 -1))
-      (midi_file songs/laidtorest/laidtorest.mid))
+      (midi_file songs/laidtorest/laidtorest_coop.mid))
    (anim_tempo kTempoFast)
    (preview 44600 72500)
    (quickplay
