@@ -338,12 +338,33 @@
       (log
          (outfit log)
          (mat log.mat))))
+
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _ONYX
+#ifndef _MEGA
+(scythe
+   (type grim)
+   (skins
+      (scythe
+         (outfit scythe)
+         (mat scythe.mat))))
+#endif
+#endif
+#endif
+#endif
+
+#ifndef 2DBUG
+#ifndef 8DBUG
 (scythe
    (type guitar)
    (skins
       (scythe
          (outfit scythe)
          (mat scythe.mat))))
+#endif
+#endif
+
 (bass_musicman
    (type bass)
    (skins

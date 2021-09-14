@@ -35,8 +35,12 @@
       (price 700))
    (air_guitar
       (price 300))
+#ifndef 2DBUG
+#ifndef 8DBUG
    (scythe
       (price 7000))
+#endif
+#endif
    (fish_reward
       (price 500))
    (usa_reward
@@ -157,7 +161,7 @@
 (song
 #ifndef _ENCO
    (speedtest
-      (price 0))
+      (price 500000))
    (rawdog
       (price 550))
    (arterialblack
@@ -219,7 +223,18 @@
    (classic
       (price 5000))
    (funk1
-      (price 5000)))
+      (price 5000))
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _ONYX
+#ifndef _MEGA
+   (grim
+      (price 7000))
+#endif
+#endif
+#endif
+#endif
+)
 (outfit
    (punk2
       (price 2000))
