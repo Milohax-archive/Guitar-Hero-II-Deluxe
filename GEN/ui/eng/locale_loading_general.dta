@@ -42,7 +42,7 @@
 (easy_tip1
    "You don't get any cash in EASY, but you do in MEDIUM, HARD and EXPERT.")
 (easy_tip2
-   "If you're getting 5 stars on every song without breaking a sweat, it's time for MEDIUM.")
+   "If you're getting 5 stars on every song without breaking a sweat, it's time to move up to MEDIUM.")
 (easy_tip3
    "Try MEDIUM or harder if you want to be able to buy new guitars, songs, videos, and more.")
 ;
@@ -51,7 +51,7 @@
 (advanced_tip1
    "Stuck on a song? Try getting 5 stars on an easier one.")
 (advanced_tip2
-   "Save your Star Power for note-heavy sections, for more points and bigger crowd boosts.")
+   "Save your Star Power for sections with many notes. You'll get more points and bigger Rock Meter boosts.")
 (advanced_tip3
    "Chords are worth more points than regular notes!")
 (advanced_tip4
