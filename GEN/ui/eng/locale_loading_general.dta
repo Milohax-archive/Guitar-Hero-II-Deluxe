@@ -33,7 +33,7 @@
 (milo_tip15
    "As someone somewhere once requested, you can now quit directly to Practice Mode in the middle of a song, right from the Pause menu. Don't try that during a real show.")
 (milo_tip16
-   "Some songs are also available to play on drums, if you've got a way to map a drumkit to a DualShock controller.")
+   "Some songs are also available to play on drums, if you've got a way to map a drumkit to a DualShock controller. Check in the Part Select menus in Free Play!")
 (milo_tip17
    "When playing on a DualShock instead of a guitar, you don't need to strum, and you use the shoulder buttons and X for the frets.")
 ;
