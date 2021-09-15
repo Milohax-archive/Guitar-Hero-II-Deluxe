@@ -747,7 +747,7 @@
                (strum help_updown))}
          {helpbar
             set_display
-            ((fret1 help_onoff)
+            ((fret1 help_select)
                (fret2 help_back)
                (strum help_updown))}})
    (FOCUS_MSG
