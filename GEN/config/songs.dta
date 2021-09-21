@@ -2532,7 +2532,7 @@
       (cores
          (-1 -1 1 -1 -1 -1))
       (midi_file songs/ladylightning/ladylightning.mid))
-   (anim_tempo kTempoFast)
+   (anim_tempo kTempoMedium)
    (preview 55000 85000)
    (quickplay
       (character_outfit rock2)
@@ -2608,7 +2608,7 @@
       (cores
          (-1 -1 1 -1 -1 -1))
       (midi_file songs/lesstalkmorerokk/lesstalkmorerokk.mid))
-   (anim_tempo kTempoFast)
+   (anim_tempo kTempoMedium)
    (preview 90000 120000)
    (quickplay
       (character_outfit goth2)
