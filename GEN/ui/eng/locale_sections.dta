@@ -528,3 +528,7 @@
    "Break 5")
 (blackout
    "Blackout")
+(what_you_wanna_do
+   "What you wanna do?")
+(wanna_rock
+   "Wanna rock?")
