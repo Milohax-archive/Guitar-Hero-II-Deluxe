@@ -3,8 +3,8 @@
 (splash_legal
 	{if_else
       $game80s
-   "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
-   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. Big thanks to GenericMadScientist\nfor the strum limit and HOPO bug fixes.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."})
+   "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
+   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."})
 (guitar_help_using
    "USING THE GUITAR CONTROLLER")
 (guitar_help_plugin
