@@ -1012,6 +1012,33 @@
                {$this set_venue_map_frame 6}
                {game set_venue arena2})}})
 #endif
+;;;;;;;;if 80's debug Elf
+#ifdef 8DBUG
+   (FOCUS_MSG
+      {if
+         {!
+            {ui in_transition}}
+         {switch
+            $new_focus
+            (sv_battle2.btn
+               {$this set_venue_map_frame 1}
+               {game set_venue battle2})
+            (sv_small3.btn
+               {$this set_venue_map_frame 2}
+               {game set_venue small3})
+            (sv_small4.btn
+               {$this set_venue_map_frame 3}
+               {game set_venue small4})
+            (sv_theatre2.btn
+               {$this set_venue_map_frame 4}
+               {game set_venue theatre2})
+            (sv_fest2.btn
+               {$this set_venue_map_frame 5}
+               {game set_venue fest2})
+            (sv_arena2.btn
+               {$this set_venue_map_frame 6}
+               {game set_venue arena2})}})
+#endif
 ;;;;;;;;if Mega Elf
 #ifdef _MEGA
    (FOCUS_MSG
@@ -1119,6 +1146,7 @@
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef 8DBUG
    (FOCUS_MSG
       {if
          {!
@@ -1134,21 +1162,16 @@
             (sv_small2.btn
                {$this set_venue_map_frame 3}
                {game set_venue small2})
-            (sv_big.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue big})
             (sv_theatre.btn
-               {$this set_venue_map_frame 5}
+               {$this set_venue_map_frame 4}
                {game set_venue theatre})
             (sv_fest.btn
-               {$this set_venue_map_frame 6}
+               {$this set_venue_map_frame 5}
                {game set_venue fest})
             (sv_arena.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena})
-            (sv_stone.btn
-               {$this set_venue_map_frame 8}
-               {game set_venue stone})}})
+               {$this set_venue_map_frame 6}
+               {game set_venue arena})}})
+#endif
 #endif
 #endif
 #endif
@@ -1170,12 +1193,17 @@
    (file sel_venue_80s.milo)
    (focus sv_battle2.btn)
 #endif
+;;;;;;;;if gh80s debug Elf
+#ifdef 8DBUG
+   (file sel_venue_80s.milo)
+   (focus sv_battle2.btn)
+#endif
 ;;;;;;;;if mega Elf
 #ifdef _MEGA
    (file sel_venue_mega.milo)
    (focus sv_battle.btn)
 #endif
-;;;;;;;;if onyx Elf
+;;;;;;;;if ONYX Elf
 #ifdef _ONYX
    (file sel_venue_mega.milo)
    (focus sv_battle.btn)
@@ -1183,10 +1211,12 @@
 ;;;;;;;;if debug Elf
 #ifndef _SHIP
 #ifndef _ENCO
+#ifndef 8DBUG
 #ifndef _ONYX
 #ifndef _MEGA
    (file sel_venue_gh2.milo)
    (focus sv_battle.btn)
+#endif
 #endif
 #endif
 #endif
