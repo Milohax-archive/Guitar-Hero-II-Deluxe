@@ -28,7 +28,7 @@
       metaloop_crowns}
 {if_else
       $game80s
-      metaloop_wegotthebeat
+      metaloop_iwantcandy
       metaloop_artillery}
 {if_else
       $game80s
