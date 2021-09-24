@@ -12,7 +12,7 @@
 (loading_tip_gh2_2
    "Hit 10 notes in a row for a x2 score multiplier. Longer note streaks are rewarded with higher multipliers.")
 (loading_tip_gh2_3
-   "Just like a real guitar, you don't need to release lower Fret Buttons when you play higher ones.")
+   "Just like with a real guitar, you don't need to release Fret Buttons on lower notes when you play higher notes.")
 (loading_tip_gh2_4
    "Wait until you have a x4 multiplier going, and then use Star Power to max out your score.")
 (loading_tip_gh2_5
@@ -22,7 +22,7 @@
 (loading_tip_gh2_7
    "Get a streak multiplier by playing perfectly for a few notes.")
 (loading_tip_gh2_8
-   "Series of notes on the same fret coming up?  Keep the fret button held down.")
+   "Series of notes on the same fret coming up? Keep the fret button held down.")
 (loading_tip_gh2_9
    {if_else
       $egg5
@@ -47,7 +47,7 @@
 (comedy_tip_gh2_2
    {if_else
       $egg5
-      "Stop fucking asking to buy Deluxe. That would be illegal."
+      "If you see Deluxe for sale, it's not us. But you should join MiloHax and tell us anyway so we can laugh about it."
       "If your singer ain't happy, ain't nobody happy."})
 (comedy_tip_gh2_3
    {if_else
@@ -55,10 +55,7 @@
       "Don't get it confused, jnack can't actually draw. Professional rip-off artist."
       "You need a mini-fridge in your practice space. It's more important than a bassist."})
 (comedy_tip_gh2_4
-   {if_else
-      $egg5
-      "Go put the fret colors back yourself if it bothers you so much."
-      "You only need one person with a mohawk in your band."})
+   "You only need one person with a mohawk in your band.")
 (comedy_tip_gh2_5
    "Remember, NO STAIRWAY!")
 (comedy_tip_gh2_6
@@ -149,7 +146,10 @@
 (loading_tip_drinkup
    "OUNCE of SELF is one of the most original bands out of L.A.'s heavy music scene. \qDrink Up\q has become the anthem for the messed-up masses.")
 (loading_tip_elephantbones
-   "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal. That Handsome Devil.")
+   {if_else
+      $egg5
+      "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal. That Handsome Devil."
+      "Inflatable mattress, afloat in scattered paper, paddling pens past distractions, stranded on my island screaming at passersby, so far away it sounds like music...gOdFoRbId...That Handsome Devil."})
 (loading_tip_fallofpangea
    "Valient Thorr is from the planet Venus. Their message is your tool to further the knowledgement of the human consciousness.")
 (loading_tip_ftk
@@ -175,7 +175,7 @@
 (loading_tip_parasite
    "The Neighborhoods were presented with the Hall of Fame award at the 2005 Boston Music Awards.")
 (loading_tip_radiumeyes
-   "Wow. Like 50 million others, you can play metal. Big deal.  Think you can you play a proto-retro-roboto-organico soldier's love song set during the Phillippines-American War?  Doubt it.")
+   "Wow. Like 50 million others, you can play metal. Big deal. Think you can you play a proto-retro-roboto-organico soldier's love song set during the Phillippines-American War?  Doubt it.")
 (loading_tip_rawdog
    "The following song is by The Last Vegas. For best results, play at maximum volume, especially in the presence of authority figures or the elderly.")
 (loading_tip_redlottery
