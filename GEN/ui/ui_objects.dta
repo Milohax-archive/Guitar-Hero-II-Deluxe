@@ -294,6 +294,14 @@
          (texts
             (text
                "helveticablackcondensed.txt")))
+      (gh3veticablackcondensed
+         (name
+            "gh3vetica Black Condensed")
+         (resource_file
+            "gh3veticablackcondensed.milo")
+         (texts
+            (text
+               "gh3veticablackcondensed.txt")))
       (receipt
          (name
             "Receipt")
@@ -558,6 +566,14 @@
          (texts
             (text
                "helveticablackcondensed.txt")))
+      (gh3veticablackcondensed
+         (name
+            "gh3vetica Black Condensed")
+         (resource_file
+            "gh3veticablackcondensed.milo")
+         (texts
+            (text
+               "gh3veticablackcondensed.txt")))
       (receipt
          (name
             "Receipt")
