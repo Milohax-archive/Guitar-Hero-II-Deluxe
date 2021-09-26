@@ -289,6 +289,8 @@
    "They're really chanting out there! They're demanding one more. Can you pull it together for a big finish?"})
 (endgame_encore_letter6
    "The audience is flippin' out! Come on, chief, give 'em what they want! You got time for one more?")
+(endgame_encore_freebird1
+   "Looks like the time has come. They're chanting for Free Bird. You knew it would happen one day. You wanna do this?")
 (endgame_encore_finalsong1
    "The crowd is goin' insane. You know what they wanna hear: the MOST EXCELLENT super-shredder track, Play With Me. You ready?")
 (finalsong_confirm1
