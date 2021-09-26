@@ -135,23 +135,13 @@
 #ifdef 8DBUG
       {game set_venue fest2}
       {game set_song_index 0}
-      {game set_character 
-   	  	{if_else
-			$game80s
-				metalencore
-				metal1}
-				TRUE}
+      {game set_character metal1 TRUE}
 #endif
 ;;;;;;;;if gh2dbug Elf
 #ifdef _2DBUG
       {game set_venue fest}
       {game set_song_index 0}
-      {game set_character 
-   	  	{if_else
-			$game80s
-				metalencore
-				metal1}
-				TRUE}
+      {game set_character metal1 TRUE}
 #endif
       {game set_guitar_index 1}
       {do
