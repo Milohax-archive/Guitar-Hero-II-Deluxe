@@ -803,23 +803,7 @@
 				$game80s
 					{set $game80s FALSE}
 					{set $game80s TRUE}}
-;;;;;if gh2 or 80s standalone or debugs
-#ifndef _MEGA
-#ifndef _ONYX
-            {ui goto_screen bootup_load}
-#endif
-#endif
-;;;;;if mega or onyx
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef 8DBUG
-#ifndef 2DBUG
-            {ui goto_screen bootup_load_new}
-#endif
-#endif
-#endif
-#endif
-)
+            {meta_loading_nosave_goto splash_screen})
          (calibrate_lag.btn
             {lag_panel set from_panel $this}
             {if_else
