@@ -76,32 +76,37 @@
    "*****")
 (song_old_venue
    "Play in the latest venue to continue your career")
-#ifdef _SHIP
+;;;;;if 8 tiers (gh2/gh2debug)
+#ifndef 8DBUG
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
 (song_current_venue
    "Beat %i/5 songs to continue")
 #endif
-#ifdef _ENCO
+#endif
+#endif
+#endif
+;;;;;if 6 tiers (gh80s/gh80sdebug)
+#ifndef _SHIP
+#ifndef 2DBUG
+#ifndef _MEGA
+#ifndef _ONYX
 (song_current_venue
    "Beat %i/4 songs to continue")
 #endif
+#endif
+#endif
+#endif
+;;;;;if mega
 #ifdef _MEGA
 (song_current_venue
    "Beat %i songs to continue")
 #endif
+;;;;;if onyx
 #ifdef _ONYX
 (song_current_venue
    " ")
-#endif
-;;;;;;;;if debug Elf
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-(song_current_venue
-   "Beat %i/5 songs to continue")
-#endif
-#endif
-#endif
 #endif
 (song_current_venue_encore
    "Beat the encore to continue")

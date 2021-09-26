@@ -126,11 +126,16 @@
 ../ui/eng/locale_sections.dta ../ui/eng/locale_sections_rb1.dta ../ui/eng/locale_sections_rb2.dta
 ../ui/eng/locale_sections_rb3.dta ../ui/eng/locale_shop.dta ../ui/eng/locale_tiers.dta
 ../ui/eng/locale_tutorials.dta )
-
 #ifdef _SHIP
 (venues battle small1 small2 big theatre fest arena stone)
 #endif
+#ifdef 2DBUG
+(venues battle small1 small2 big theatre fest arena stone)
+#endif
 #ifdef _ENCO
+(venues battle2 small3 small4 theatre2 fest2 arena2)
+#endif
+#ifdef 8DBUG
 (venues battle2 small3 small4 theatre2 fest2 arena2)
 #endif
 #ifdef _MEGA
@@ -139,17 +144,6 @@
 #ifdef _ONYX
 (venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
 #endif
-
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-(venues battle small1 small2 big theatre fest arena stone)
-#endif
-#endif
-#endif
-#endif
-
 (default_band metal_singer metal_bass metal_drummer)
 (quick_cheats
    #include cheats.dta)
@@ -181,7 +175,8 @@
    (sp_deploy_repeat_delay 7))
 (guitars
    #include guitars.dta)
-#ifdef _SHIP
+#ifndef 2DBUG
+#ifndef 8DBUG
 (characters
    ({if_else
       $game80s
@@ -250,217 +245,10 @@
       grimencore
       grim})))
 #endif
-#ifdef _ENCO
-(characters
-   ({if_else
-      $game80s
-      punkencore
-      punkencore}
-      ({if_else
-      $game80s
-      punkencore
-      punk1})
-      (punk2))
-   ({if_else
-      $game80s
-      alternaencore
-      alternaencore}
-      ({if_else
-      $game80s
-      alternaencore
-      alterna1})
-      (alterna2))
-   ({if_else
-      $game80s
-      glamencore
-      glamencore}
-      ({if_else
-      $game80s
-      glamencore
-      glam1})
-      (glam2))
-   ({if_else
-      $game80s
-      gothencore
-      gothencore}
-      ({if_else
-      $game80s
-      gothencore
-      goth2})
-      (goth1))
-   ({if_else
-      $game80s
-      metalencore
-      metalencore}
-      ({if_else
-      $game80s
-      metalencore
-      metal1})
-      (metal2))
-   (rockabill
-      (rockabill1)
-      (rockabill2))
-   (rock
-      (rock2)
-      (rock1))
-   (deathmetal
-      (deathmetal1)
-      (deathmetal2))
-   (classic
-      (classic))
-   (funk1
-      (funk1))
-   ({if_else
-      $game80s
-      grimencore
-      grimencore}
-      ({if_else
-      $game80s
-      grimencore
-      grim})))
 #endif
-#ifdef _MEGA
-(characters
-   ({if_else
-      $game80s
-      punkencore
-      punkencore}
-      ({if_else
-      $game80s
-      punkencore
-      punk1})
-      (punk2))
-   ({if_else
-      $game80s
-      alternaencore
-      alternaencore}
-      ({if_else
-      $game80s
-      alternaencore
-      alterna1})
-      (alterna2))
-   ({if_else
-      $game80s
-      glamencore
-      glamencore}
-      ({if_else
-      $game80s
-      glamencore
-      glam1})
-      (glam2))
-   ({if_else
-      $game80s
-      gothencore
-      gothencore}
-      ({if_else
-      $game80s
-      gothencore
-      goth2})
-      (goth1))
-   ({if_else
-      $game80s
-      metalencore
-      metalencore}
-      ({if_else
-      $game80s
-      metalencore
-      metal1})
-      (metal2))
-   (rockabill
-      (rockabill1)
-      (rockabill2))
-   (rock
-      (rock2)
-      (rock1))
-   (deathmetal
-      (deathmetal1)
-      (deathmetal2))
-   (classic
-      (classic))
-   (funk1
-      (funk1))
-   ({if_else
-      $game80s
-      grimencore
-      grimencore}
-      ({if_else
-      $game80s
-      grimencore
-      grim})))
-#endif
-#ifdef _ONYX
-(characters
-   ({if_else
-      $game80s
-      punkencore
-      punkencore}
-      ({if_else
-      $game80s
-      punkencore
-      punk1})
-      (punk2))
-   ({if_else
-      $game80s
-      alternaencore
-      alternaencore}
-      ({if_else
-      $game80s
-      alternaencore
-      alterna1})
-      (alterna2))
-   ({if_else
-      $game80s
-      glamencore
-      glamencore}
-      ({if_else
-      $game80s
-      glamencore
-      glam1})
-      (glam2))
-   ({if_else
-      $game80s
-      gothencore
-      gothencore}
-      ({if_else
-      $game80s
-      gothencore
-      goth2})
-      (goth1))
-   ({if_else
-      $game80s
-      metalencore
-      metalencore}
-      ({if_else
-      $game80s
-      metalencore
-      metal1})
-      (metal2))
-   (rockabill
-      (rockabill1)
-      (rockabill2))
-   (rock
-      (rock2)
-      (rock1))
-   (deathmetal
-      (deathmetal1)
-      (deathmetal2))
-   (classic
-      (classic))
-   (funk1
-      (funk1))
-   ({if_else
-      $game80s
-      grimencore
-      grimencore}
-      ({if_else
-      $game80s
-      grimencore
-      grim})))
-#endif
-
+;;;;;;;;;;;;;;; if debug
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
 (characters
@@ -498,8 +286,6 @@
 #endif
 #endif
 #endif
-#endif
-
 (mc
    #include mc.dta)
 (store

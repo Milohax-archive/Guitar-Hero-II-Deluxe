@@ -386,39 +386,21 @@
 {new
    GHPanel
    sel_character_panel_qp
-#ifdef _SHIP
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
    (file
 	{if_else
       $game80s
       sel_character_80s.milo
       sel_character.milo})
 #endif
-#ifdef _ENCO
-   (file
-	{if_else
-      $game80s
-      sel_character_80s.milo
-      sel_character.milo})
 #endif
-#ifdef _MEGA
-   (file
-	{if_else
-      $game80s
-      sel_character_80s.milo
-      sel_character.milo})
-#endif
-#ifdef _ONYX
-   (file
-	{if_else
-      $game80s
-      sel_character_80s.milo
-      sel_character.milo})
-#endif
-
+;;;;;if debug
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
 #ifndef _MEGA
+#ifndef _ONYX
    (file sel_character_debug.milo)
 #endif
 #endif
@@ -952,201 +934,11 @@
          (dest $frame)
          (period VENUE_MAP_SCROLL_SEC)
          (units kTaskUISeconds)})
-;;;;;;;;if gh2 retail Elf
-#ifdef _SHIP
-   (FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle})
-            (sv_small1.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small1})
-            (sv_small2.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small2})
-            (sv_big.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue big})
-            (sv_theatre.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre})
-            (sv_fest.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest})
-            (sv_arena.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena})
-            (sv_stone.btn
-               {$this set_venue_map_frame 8}
-               {game set_venue stone})}})
-#endif
-;;;;;;;;if 80's retail Elf
-#ifdef _ENCO
-   (FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle2.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle2})
-            (sv_small3.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small3})
-            (sv_small4.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small4})
-            (sv_theatre2.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue theatre2})
-            (sv_fest2.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue fest2})
-            (sv_arena2.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue arena2})}})
-#endif
-;;;;;;;;if 80's debug Elf
-#ifdef 8DBUG
-   (FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle2.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle2})
-            (sv_small3.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small3})
-            (sv_small4.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small4})
-            (sv_theatre2.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue theatre2})
-            (sv_fest2.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue fest2})
-            (sv_arena2.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue arena2})}})
-#endif
-;;;;;;;;if Mega Elf
-#ifdef _MEGA
-   (FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle})
-            (sv_battle2.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle2})
-            (sv_small1.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small1})
-            (sv_small3.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small3})
-            (sv_small2.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small2})
-            (sv_small4.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small4})
-            (sv_big.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue big})
-            (sv_theatre.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre})
-            (sv_theatre2.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre2})
-            (sv_fest.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest})
-            (sv_fest2.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest2})
-            (sv_arena.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena})
-            (sv_arena2.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena2})
-            (sv_stone.btn
-               {$this set_venue_map_frame 8}
-               {game set_venue stone})}})
-#endif
-;;;;;;;;if ONYX Elf
-#ifdef _ONYX
-   (FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle})
-            (sv_battle2.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle2})
-            (sv_small1.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small1})
-            (sv_small3.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small3})
-            (sv_small2.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small2})
-            (sv_small4.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small4})
-            (sv_big.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue big})
-            (sv_theatre.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre})
-            (sv_theatre2.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre2})
-            (sv_fest.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest})
-            (sv_fest2.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest2})
-            (sv_arena.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena})
-            (sv_arena2.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena2})
-            (sv_stone.btn
-               {$this set_venue_map_frame 8}
-               {game set_venue stone})}})
-#endif
-;;;;;;;;if debug Elf
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
+;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
    (FOCUS_MSG
       {if
          {!
@@ -1162,16 +954,111 @@
             (sv_small2.btn
                {$this set_venue_map_frame 3}
                {game set_venue small2})
-            (sv_theatre.btn
+            (sv_big.btn
                {$this set_venue_map_frame 4}
+               {game set_venue big})
+            (sv_theatre.btn
+               {$this set_venue_map_frame 5}
                {game set_venue theatre})
             (sv_fest.btn
-               {$this set_venue_map_frame 5}
+               {$this set_venue_map_frame 6}
                {game set_venue fest})
             (sv_arena.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue arena})}})
+               {$this set_venue_map_frame 7}
+               {game set_venue arena})
+            (sv_stone.btn
+               {$this set_venue_map_frame 8}
+               {game set_venue stone})}})
 #endif
+#endif
+#endif
+#endif
+;;;;;if 6 tiers (gh80s/gh80sdebug)
+#ifndef _SHIP
+#ifndef 2DBUG
+#ifndef _MEGA
+#ifndef _ONYX
+   (FOCUS_MSG
+      {if
+         {!
+            {ui in_transition}}
+         {switch
+            $new_focus
+            (sv_battle2.btn
+               {$this set_venue_map_frame 1}
+               {game set_venue battle2})
+            (sv_small3.btn
+               {$this set_venue_map_frame 2}
+               {game set_venue small3})
+            (sv_small4.btn
+               {$this set_venue_map_frame 3}
+               {game set_venue small4})
+            (sv_theatre2.btn
+               {$this set_venue_map_frame 4}
+               {game set_venue theatre2})
+            (sv_fest2.btn
+               {$this set_venue_map_frame 5}
+               {game set_venue fest2})
+            (sv_arena2.btn
+               {$this set_venue_map_frame 6}
+               {game set_venue arena2})}})
+#endif
+#endif
+#endif
+#endif
+;;;;;if 14 tiers (mega/onyx)
+#ifndef _SHIP
+#ifndef 2DBUG
+#ifndef 8DBUG
+#ifndef _ENCO
+   (FOCUS_MSG
+      {if
+         {!
+            {ui in_transition}}
+         {switch
+            $new_focus
+            (sv_battle.btn
+               {$this set_venue_map_frame 1}
+               {game set_venue battle})
+            (sv_battle2.btn
+               {$this set_venue_map_frame 1}
+               {game set_venue battle2})
+            (sv_small1.btn
+               {$this set_venue_map_frame 2}
+               {game set_venue small1})
+            (sv_small3.btn
+               {$this set_venue_map_frame 2}
+               {game set_venue small3})
+            (sv_small2.btn
+               {$this set_venue_map_frame 3}
+               {game set_venue small2})
+            (sv_small4.btn
+               {$this set_venue_map_frame 3}
+               {game set_venue small4})
+            (sv_big.btn
+               {$this set_venue_map_frame 4}
+               {game set_venue big})
+            (sv_theatre.btn
+               {$this set_venue_map_frame 5}
+               {game set_venue theatre})
+            (sv_theatre2.btn
+               {$this set_venue_map_frame 5}
+               {game set_venue theatre2})
+            (sv_fest.btn
+               {$this set_venue_map_frame 6}
+               {game set_venue fest})
+            (sv_fest2.btn
+               {$this set_venue_map_frame 6}
+               {game set_venue fest2})
+            (sv_arena.btn
+               {$this set_venue_map_frame 7}
+               {game set_venue arena})
+            (sv_arena2.btn
+               {$this set_venue_map_frame 7}
+               {game set_venue arena2})
+            (sv_stone.btn
+               {$this set_venue_map_frame 8}
+               {game set_venue stone})}})
 #endif
 #endif
 #endif
@@ -1183,40 +1070,35 @@
 {new
    GHPanel
    sel_venue_panel_qp
-;;;;;;;;if gh2 retail Elf
-#ifdef _SHIP
-   (file sel_venue_gh2.milo)
-   (focus sv_battle.btn)
-#endif
-;;;;;;;;if gh80s retail Elf
-#ifdef _ENCO
-   (file sel_venue_80s.milo)
-   (focus sv_battle2.btn)
-#endif
-;;;;;;;;if gh80s debug Elf
-#ifdef 8DBUG
-   (file sel_venue_80s.milo)
-   (focus sv_battle2.btn)
-#endif
-;;;;;;;;if mega Elf
-#ifdef _MEGA
-   (file sel_venue_mega.milo)
-   (focus sv_battle.btn)
-#endif
-;;;;;;;;if ONYX Elf
-#ifdef _ONYX
-   (file sel_venue_mega.milo)
-   (focus sv_battle.btn)
-#endif
-;;;;;;;;if debug Elf
-#ifndef _SHIP
-#ifndef _ENCO
+;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
-#ifndef _ONYX
+#ifndef _ENCO
 #ifndef _MEGA
+#ifndef _ONYX
    (file sel_venue_gh2.milo)
    (focus sv_battle.btn)
 #endif
+#endif
+#endif
+#endif
+;;;;;if 6 tiers (gh80s/gh80sdebug)
+#ifndef _SHIP
+#ifndef 2DBUG
+#ifndef _MEGA
+#ifndef _ONYX
+   (file sel_venue_80s.milo)
+   (focus sv_battle2.btn)
+#endif
+#endif
+#endif
+#endif
+;;;;;if 14 tiers (mega/onyx)
+#ifndef _SHIP
+#ifndef 2DBUG
+#ifndef 8DBUG
+#ifndef _ENCO
+   (file sel_venue_mega.milo)
+   (focus sv_battle.btn)
 #endif
 #endif
 #endif

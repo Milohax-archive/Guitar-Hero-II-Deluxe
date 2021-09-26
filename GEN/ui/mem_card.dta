@@ -8,24 +8,18 @@
          $component
          (tutorials.btn
 		 {set $game80s FALSE}
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {ui goto_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {ui goto_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {ui goto_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {ui goto_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {ui goto_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {ui goto_screen bootup_load_new}
 #endif
 #endif
 #endif
@@ -33,24 +27,18 @@
 )
          (practice.btn
 		 {set $game80s TRUE}
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {ui goto_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {ui goto_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {ui goto_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {ui goto_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {ui goto_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {ui goto_screen bootup_load_new}
 #endif
 #endif
 #endif
@@ -58,17 +46,21 @@
 )})}
 {new
    GHScreen
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
    bootup_load_new
 #endif
-#ifdef _ENCO
-   bootup_load_new
 #endif
-#ifdef _ONYX
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
    bootup_load
 #endif
-#ifdef _MEGA
-   bootup_load
+#endif
+#endif
 #endif
    (panels meta training_panel_boot helpbar)
    (focus training_panel_boot)
@@ -189,23 +181,18 @@
       {$this setup '' '' none $msg $title})}
 {new
    GHScreen
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
    bootup_load
 #endif
-#ifdef _ENCO
-   bootup_load
 #endif
-#ifdef _ONYX
-   bootup_load_new
-#endif
-#ifdef _MEGA
-   bootup_load_new
-#endif
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-   bootup_load
+#ifndef 8DBUG
+#ifndef 2DBUG
+   bootup_load_new
 #endif
 #endif
 #endif
@@ -223,29 +210,22 @@
             (units kTaskUISeconds)
             (script
                {dialog set_message load_loading}
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
                {memcard load_data bootup_load}
 #endif
-#ifdef _ENCO
-               {memcard load_data bootup_load}
 #endif
-#ifdef _ONYX
-               {memcard load_data bootup_load_new}
-#endif
-#ifdef _MEGA
-               {memcard load_data bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-               {memcard load_data bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+               {memcard load_data bootup_load_new}
 #endif
 #endif
 #endif
 #endif
-
 )}})
    (MEMCARD_RESULT_MSG
       {switch
@@ -283,29 +263,22 @@
          (dl_button1.btn
             {ui goto_screen bootup_caution})
          (dl_button2.btn
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {ui goto_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {ui goto_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {ui goto_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {ui goto_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {ui goto_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {ui goto_screen bootup_load_new}
 #endif
 #endif
 #endif
 #endif
-
 )})}
 {new
    GHScreen
@@ -351,57 +324,43 @@
             {ui goto_screen bootup_nospace})
          (kMCFileExists
             {set $mc_replace_screen $this}
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {set $mc_load_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {set $mc_load_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {set $mc_load_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {set $mc_load_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {set $mc_load_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {set $mc_load_screen bootup_load_new}
 #endif
 #endif
 #endif
 #endif
-
             {ui goto_screen bootup_replace_save_check})
          (kMCNotFormatted
             {set $nfw_retry_screen $this}
             {set $nfw_continue_screen bootup_caution_format_cancelled}
             {set $mc_format_done bootup_create_save}
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {set $mc_save_failed_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {set $mc_save_failed_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {set $mc_save_failed_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {set $mc_save_failed_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {set $mc_save_failed_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {set $mc_save_failed_screen bootup_load_new}
 #endif
 #endif
 #endif
 #endif
-
             {set $mc_no_screen bootup_caution_format_cancelled}
             {set $mc_yes_screen mc_format}
             {ui goto_screen bootup_format_check})
@@ -436,24 +395,18 @@
          (dl_button1.btn
             {ui goto_screen autosave_disable_check})
          (dl_button2.btn
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {ui goto_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {ui goto_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {ui goto_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {ui goto_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {ui goto_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {ui goto_screen bootup_load_new}
 #endif
 #endif
 #endif
@@ -484,29 +437,22 @@
          (dl_button1.btn
             {ui goto_screen bootup_caution})
          (dl_button2.btn
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {ui goto_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {ui goto_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {ui goto_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {ui goto_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {ui goto_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {ui goto_screen bootup_load_new}
 #endif
 #endif
 #endif
 #endif
-
 )})}
 {new
    GHScreen
@@ -548,24 +494,18 @@
          (dl_button1.btn
             {ui goto_screen autosave_disable_check})
          (dl_button2.btn
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {ui goto_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {ui goto_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {ui goto_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {ui goto_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {ui goto_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {ui goto_screen bootup_load_new}
 #endif
 #endif
 #endif

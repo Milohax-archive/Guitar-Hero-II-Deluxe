@@ -1,4 +1,4 @@
-;;;;;;;;if gh2 retail Elf
+;;;;;;;;if 8 tiers (gh2)
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
@@ -25,7 +25,7 @@
 #endif
 #endif
 #endif
-;;;;;;;;if gh80s retail Elf
+;;;;;;;;if 6 tiers (gh80s)
 #ifndef _SHIP
 #ifndef _MEGA
 #ifndef _ONYX
@@ -48,7 +48,7 @@
 #endif
 #endif
 #endif
-;;;;;;;;if mega Elf
+;;;;;;;;if 14 tiers (mega)
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX

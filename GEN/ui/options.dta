@@ -803,24 +803,18 @@
 				$game80s
 					{set $game80s FALSE}
 					{set $game80s TRUE}}
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
             {ui goto_screen bootup_load}
 #endif
-#ifdef _ENCO
-            {ui goto_screen bootup_load}
 #endif
-#ifdef _ONYX
-            {ui goto_screen bootup_load_new}
-#endif
-#ifdef _MEGA
-            {ui goto_screen bootup_load_new}
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-            {ui goto_screen bootup_load}
+#ifndef 8DBUG
+#ifndef 2DBUG
+            {ui goto_screen bootup_load_new}
 #endif
 #endif
 #endif
@@ -1062,27 +1056,20 @@
    (focus pscan_warning_panel)
    PSCAN_WARNING_SCREEN_HANDLERS
    (animate_transition FALSE)
-#ifdef _SHIP
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
    (done_screen bootup_load)
 #endif
-#ifdef _ENCO
-   (done_screen bootup_load)
 #endif
-#ifdef _ONYX
-   (done_screen bootup_load_new)
-#endif
-#ifdef _MEGA
-   (done_screen bootup_load_new)
-#endif
-;;;;;;;;if debug Elf
+;;;;;if mega or onyx
 #ifndef _SHIP
 #ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-   (done_screen bootup_load)
+#ifndef 8DBUG
+#ifndef 2DBUG
+   (done_screen bootup_load_new)
 #endif
 #endif
 #endif
 #endif
-
    (switch_screen pscan_switch_screen)}

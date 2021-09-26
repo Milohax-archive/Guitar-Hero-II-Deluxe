@@ -2,55 +2,58 @@
 (base_dir
    "BAGHCE-00020")
 #endif
+
 #ifdef _ENCO
 (base_dir
    "BAGHCE-00080")
 #endif
+
 #ifdef _MEGA
 (base_dir
    "BAGHCE-08008")
 #endif
+
 #ifdef _ONYX
 (base_dir
    "BAGHCE-68878")
 #endif
 
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
+#ifdef 2DBUG
 (base_dir “BAGHCE-01001”)
 #endif
-#endif
-#endif
+
+#ifdef 8DBUG
+(base_dir “BAGHCE-01801”)
 #endif
 
 #ifdef _SHIP
 (elf_name
-   "GH20_DX.03")
+   "GH2DX_00.03")
 #endif
+
 #ifdef _ENCO
 (elf_name
-   "80S_DX.02")
+   "80SDX_00.02")
 #endif
+
 #ifdef _MEGA
 (elf_name
    "MEGA_DX.03")
 #endif
+
 #ifdef _ONYX
 (elf_name
-   "ONYX.01")
+   "CUST_DX.01")
 #endif
 
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
+#ifdef 2DBUG
 (elf_name
    "GH2_DBUG.01")
 #endif
-#endif
-#endif
+
+#ifdef 8DBUG
+(elf_name
+   "80S_DBUG.01")
 #endif
 
 #ifdef _SHIP
