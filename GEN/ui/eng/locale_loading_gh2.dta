@@ -148,8 +148,8 @@
 (loading_tip_elephantbones
    {if_else
       $egg5
-      "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal. That Handsome Devil."
-      "Inflatable mattress, afloat in scattered paper, paddling pens past distractions, stranded on my island screaming at passersby, so far away it sounds like music...gOdFoRbId...That Handsome Devil."})
+      "Inflatable mattress, afloat in scattered paper, paddling pens past distractions, stranded on my island screaming at passersby, so far away it sounds like music...gOdFoRbId...That Handsome Devil."
+      "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal. That Handsome Devil."})
 (loading_tip_fallofpangea
    "Valient Thorr is from the planet Venus. Their message is your tool to further the knowledgement of the human consciousness.")
 (loading_tip_ftk
