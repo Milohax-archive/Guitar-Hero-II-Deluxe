@@ -2588,7 +2588,10 @@
    (name
       "Less Talk More Rokk")
    (artist
-      "Freezepop")
+      {if_else
+         $egg5
+         "The Freezerpop"
+         "Freezepop"})
    (caption performed_by)
    (song
       (name songs/lesstalkmorerokk/lesstalkmorerokk)
