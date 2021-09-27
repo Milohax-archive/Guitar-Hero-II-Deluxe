@@ -218,6 +218,10 @@
    (becauseitsmidnite
       (price 550))
 #endif
+#ifdef 8DBUG
+   (becauseitsmidnite
+      (price 1000000))
+#endif
 )
 (character
    (classic

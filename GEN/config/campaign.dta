@@ -29,7 +29,6 @@
       (kDifficultyMedium 100 200 300 400 500 600 700 800 0)
       (kDifficultyHard 200 300 400 500 600 700 800 900 0)
       (kDifficultyExpert 600 700 800 900 1000 1200 1500 500000 0)))
-(unlock_game_modes multi_fo)
 #endif
 #endif
 #endif
@@ -65,7 +64,6 @@
       (kDifficultyMedium 500 600 700 800 900 1000 0)
       (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
       (kDifficultyExpert 1000 1200 2000 2550 3000 3500 0)))
-(unlock_game_modes multi_fo)
 #endif
 #endif
 #endif
@@ -110,7 +108,6 @@
       (kDifficultyMedium 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 0)
       (kDifficultyHard 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 0)
       (kDifficultyExpert 350 450 550 650 750 800 900 1000 1100 1200 1300 1400 1500 500000 0)))
-(unlock_game_modes multi_fo)
 #endif
 #endif
 #endif
@@ -139,8 +136,11 @@
       (kDifficultyMedium 0 0)
       (kDifficultyHard 0 0)
       (kDifficultyExpert 0 0)))
-(unlock_game_modes multi_fo)
 #endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+#ifdef 8DBUG
+(unlock_song becauseitsmidnite)
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(unlock_game_modes multi_fo)
 

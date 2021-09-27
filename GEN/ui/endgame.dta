@@ -1,6 +1,7 @@
 {new
    GHScreen
    post_show_screen
+   (clear_vram TRUE)
    (panels GAME_PANELS fade_panel)
    (allow_back FALSE)
    (animate_transition FALSE)
@@ -133,10 +134,10 @@
                   {cashaward_screen get new_cash}
                   0}
                cashaward_screen)
-;;;;;;;;;;;;;;;;;;;80s debug only;;;;;;;;;;;;;;;;;;;
-;            ({campaign has_unlocked_song}
-;               unlock_song_screen)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef 8DBUG
+            ({campaign has_unlocked_song}
+               unlock_song_screen)
+#endif
             ({campaign num_guitar_awards}
                unlock_guitar_screen)
             (TRUE complete_screen)}
@@ -841,7 +842,6 @@
                   {$this set_focus yes_finalsong1.btn}}
                {do START_ENCORE}})
          ((no.btn no_finalsong1.btn no_finalsong2.btn no_finalsong3.btn)
-            {world play_meta_sfx encore_no}
             {encore_stream stop}
             {ui goto_screen endgame_screen})
          (yes_finalsong1.btn
