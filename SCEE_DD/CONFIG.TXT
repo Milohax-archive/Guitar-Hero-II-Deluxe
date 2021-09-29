@@ -15,15 +15,15 @@ OPT=INTROMOV
 SPLASH1=cdrom0:\VIDEO\INTROMOV.PSS;1
 SPLASH1_TYPE=VIDEO
 ATTRACT_TIMEOUT=240
-MENU_TIMEOUT=90
+MENU_TIMEOUT=60
 HELP_TIMEOUT=120
 INTERACTIVE_TIMEOUT=300
 
 
 
 *0:GLOBAL
-DISCLAIM=Guitar Hero II Deluxe and all its variants are free mods, available from<br> gh2-deluxe.neocities.org.<p>If you paid for this game, you got scammed.
-RELOADMSG=Initializing menu system...
+DISCLAIM=Guitar Hero II Deluxe and all its variants are free mods, available from<br>gh2-deluxe.neocities.org.<p>If you paid for this game, you got scammed.
+RELOADMSG=Guitar Hero II Deluxe and all its variants are free mods, available from<br>gh2-deluxe.neocities.org.<p>If you paid for this game, you got scammed.
 RESET=Please reset your console after playing this demo.
 BACK=Back
 QUIT=Quit
@@ -90,7 +90,7 @@ PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe meshes the II and 80's campaigns into a big, 14-tier rock marathon. Exercise caution; this setlist is quite endless.
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=4
+INT_SPLASH1_TIME=8
 
 
 
@@ -112,7 +112,7 @@ PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe includes debugging utilities through the standard controller and through a USB keyboard, if one is plugged in. Consult the readme that came with your download of Deluxe for details.<p>Please note that drums are disabled in debug, thanks to some extra sanity checking that the normal executable doesn't do.
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=8
+INT_SPLASH1_TIME=12
 
 
 
@@ -134,7 +134,7 @@ PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe features both the 80's campaign and debugging utilities through the standard controller or a USB keyboard, if one is plugged in. Consult the readme that came with your download of Deluxe for details.<p>Please note that drums are disabled in debug, thanks to some extra sanity checking that the normal executable doesn't do.
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=8
+INT_SPLASH1_TIME=12
 
 
 
@@ -156,7 +156,7 @@ PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe integrates with the Onyx Music Game Toolkit to provide easy import of other game's charts into Deluxe.<p>But of course, we're taking this out of the loader when we ship, so all that typing doesn't matter.
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=6
+INT_SPLASH1_TIME=8
 
 
 
@@ -167,7 +167,7 @@ FILETYPE=VIDEO
 TYPE=VIDEO
 
 *0:INTROMOV
-RELOADMSG=Initializing menu system...
+RELOADMSG=Guitar Hero II Deluxe and all its variants are free mods, available from<br>gh2-deluxe.neocities.org.<p>If you paid for this game, you got scammed.
 
 
 
