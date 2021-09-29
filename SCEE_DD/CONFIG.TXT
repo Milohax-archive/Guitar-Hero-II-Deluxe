@@ -1,126 +1,174 @@
-*disc=DISC
-#INTROLINE=MiloHax Presents<BR>GHIIDX Bootloader...
-TRAYOPEN=Close the tray ya fuckin chump.
-NOINTROMOVIE=1
-SELECT=SELECT
-BACK=BACK
-ATTRACTTIMEOUT=600
-ATTRACT=DISCS
-ROOTMENU=DISCS
 
-*sections=DISCS
-HEADER2=GHIIDX Bootloader
-HEADER1=GHIIDX Bootloader
-AUDIOSTREAM=1
-GFX_DRAWBLOBS=0 (Bubbles Lights)
-GFX_DRAWSCANLINES=0 (Scanlines)
-#GFX_DRAWVU=0(Music Bars)
-#GFX_BLACKPLAY=1 
-#(Man face)
-GFX_BG=7
-# GFX BG EFFECTS:
-# 0 - Standart Arrow
-# 1 - Big W
-# 2 - Curved Arrow
-# 3 - Submarine Fish
-# 4 - Three Dots
-# 5 - Arrow 2
-# 6 - Slow Arrow
-# 7 - Toxic Dots
-# 8 - Big Circle
-# 9 - Fire Flower
-# 10 - Milky Way
-# 11 - Circle and Cross
-# 12 - Big S
-TOPBAR_ARGBLEFT=FF3B2B75
-TOPBAR_ARGBRIGHT=FF000F18
-BG_ARGBTOPLEFT=D5000023
-BG_ARGBTOPRIGHT=FF3B2B75
-BG_ARGBBOTTOMLEFT=D5000023
-BG_ARGBBOTTOMRIGHT=FF3B2B75
 
-# Define Main Menu Items Below (can be OPTION or HIDDEN_OPTION) :
+*x:MENU
+OPT=GH2DX
+OPT=ENCORE_DX
+OPT=MEGA_DX
+OPT=DX_DEBUG
+OPT=ENCORE_DEBUG
+OPT=CUSTOMS
 
-OPTION=01
-OPTION=02
-OPTION=03
-OPTION=04
-OPTION=05
-OPTION=06
+*x:ATTRACT
+OPT=INTROMOV
 
-# Define Main Menu Shortcuts And Links For Each Item Below :
+*x:GLOBAL
+SPLASH1=cdrom0:\VIDEO\INTROMOV.PSS;1
+SPLASH1_TYPE=VIDEO
+ATTRACT_TIMEOUT=240
+MENU_TIMEOUT=90
+HELP_TIMEOUT=120
+INTERACTIVE_TIMEOUT=300
 
-*option=01
-NAME=Guitar Hero II Deluxe 2.0
-LINK=LINK_1
 
-*link=LINK_1
-NAME=The game Clone Hero kids can't hit notes in!
-TYPE=PLAYABLE
-FILENAME=GH2DX_00.03
-IOPIMAGE=300
-SPLASH=Loading Guitar Hero II Deluxe 2.0...
 
-*option=02
-NAME=Guitar Hero Encore Deluxe
-LINK=LINK_2
+*0:GLOBAL
+DISCLAIM=Guitar Hero II Deluxe and all its variants are free mods, available from<br> gh2-deluxe.neocities.org.<p>If you paid for this game, you got scammed.
+RELOADMSG=Initializing menu system...
+RESET=Please reset your console after playing this demo.
+BACK=Back
+QUIT=Quit
+PLAY=Play
+GAME=GAME
+EXTRA=EXTRA
+VIDEO=VIDEO
 
-*link=LINK_2
-NAME=Melt faces and steal wallets in GH80's
-TYPE=PLAYABLE
-FILENAME=80SDX_00.02
-IOPIMAGE=300
-SPLASH=Loading Guitar Hero Encore Deluxe...
 
-*option=03
-NAME=Guitar Hero II + Encore Deluxe
-LINK=LINK_3
 
-*link=LINK_3
-NAME=14 tiers of pure GHII and 80's Pleasure (Pleasure)
-TYPE=PLAYABLE
-FILENAME=\SCEE_DD\MEGA_AB.ELF
-IOPIMAGE=300
-SPLASH=Loading Guitar Hero II + Encore Deluxe...
+*x:GH2DX
+FILE=cdrom0:\GH2DX.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
 
-*option=04
-NAME=Guitar Hero II Debug
-LINK=LINK_4
+*0:GH2DX
+LONGTITLE=Guitar Hero II Deluxe
+SHORTTITLE=GH2 Deluxe
+PAD_L2=First fret/Kick
+PAD_L1=Second fret/Snare
+PAD_R1=Third fret/Hi-hat
+PAD_R2=Fourth fret/Tom
+PAD_CROSS=Fifth fret/Cymbal
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
 
-*link=LINK_4
-NAME=Debug mode for when shit hits the fan
-TYPE=PLAYABLE
-FILENAME=\SCEE_DD\2DBUG_AB.ELF
-IOPIMAGE=300
-SPLASH=Loading Guitar Hero II Debug...
 
-*option=05
-NAME=Guitar Hero Encore Debug
-LINK=LINK_5
 
-*link=LINK_5
-NAME=Debug mode for when shit hits the fan
-TYPE=PLAYABLE
-#INACTIVITY=69
-FILENAME=\SCEE_DD\8DBUG_AB.ELF
-IOPIMAGE=300
-SPLASH=Loading Guitar Hero Encore Debug Demo...
+*x:ENCORE_DX
+FILE=cdrom0:\GH80SDX.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
 
-*option=06
-NAME=Guitar Hero Custom Edition
-LINK=LINK_6
+*0:ENCORE_DX
+LONGTITLE=Guitar Hero Encore Deluxe
+SHORTTITLE=GH:80's Deluxe
+PAD_L2=First fret/Kick
+PAD_L1=Second fret/Snare
+PAD_R1=Third fret/Hi-hat
+PAD_R2=Fourth fret/Tom
+PAD_CROSS=Fifth fret/Cymbal
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
 
-*link=LINK_6
-NAME=Custom Edition for sweet sweet imports
-TYPE=PLAYABLE
-#INACTIVITY=69
-FILENAME=\SCEE_DD\CUST_AB.ELF
-IOPIMAGE=300
-SPLASH=Loading Guitar Hero Custom Edition...
 
-# CREDITS
-*link=CREDITS
-NAME=MiloHax:
-TYPE=CREDITS
-TEXT=GHIIDX Bootloader
-TEXT=Made with love from the MiloHax Team
+
+*x:MEGA_DX
+FILE=cdrom0:\GHMEGADX.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
+
+*0:MEGA_DX
+LONGTITLE=Guitar Hero Mega Deluxe
+SHORTTITLE=Mega Deluxe
+PAD_L2=First fret/Kick
+PAD_L1=Second fret/Snare
+PAD_R1=Third fret/Hi-hat
+PAD_R2=Fourth fret/Tom
+PAD_CROSS=Fifth fret/Cymbal
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
+INT_SPLASH1=This flavor of Deluxe meshes the II and 80's campaigns into a big, 14-tier rock marathon. Exercise caution; this setlist is quite endless.
+INT_SPLASH1_TYPE=TEXT
+INT_SPLASH1_TIME=4
+
+
+
+*x:DX_DEBUG
+FILE=cdrom0:\GH2DEBUG.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
+
+*0:DX_DEBUG
+LONGTITLE=GH2 Deluxe (Debug)
+SHORTTITLE=GH2DX Debug
+PAD_L2=First fret
+PAD_L1=Second fret
+PAD_R1=Third fret
+PAD_R2=Fourth fret
+PAD_CROSS=Fifth fret
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
+INT_SPLASH1=This flavor of Deluxe includes debugging utilities through the standard controller and through a USB keyboard, if one is plugged in. Consult the readme that came with your download of Deluxe for details.<p>Please note that drums are disabled in debug, thanks to some extra sanity checking that the normal executable doesn't do.
+INT_SPLASH1_TYPE=TEXT
+INT_SPLASH1_TIME=8
+
+
+
+*x:ENCORE_DEBUG
+FILE=cdrom0:\80SDEBUG.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
+
+*0:ENCORE_DEBUG
+LONGTITLE=GH Encore Deluxe (Debug)
+SHORTTITLE=80sDX Debug
+PAD_L2=First fret
+PAD_L1=Second fret
+PAD_R1=Third fret
+PAD_R2=Fourth fret
+PAD_CROSS=Fifth fret
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
+INT_SPLASH1=This flavor of Deluxe features both the 80's campaign and debugging utilities through the standard controller or a USB keyboard, if one is plugged in. Consult the readme that came with your download of Deluxe for details.<p>Please note that drums are disabled in debug, thanks to some extra sanity checking that the normal executable doesn't do.
+INT_SPLASH1_TYPE=TEXT
+INT_SPLASH1_TIME=8
+
+
+
+*x:CUSTOMS
+FILE=cdrom0:\CUSTOMDX.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
+
+*0:CUSTOMS
+LONGTITLE=Guitar Hero Customs Edition
+SHORTTITLE=DX Customs
+PAD_L2=First fret/Kick
+PAD_L1=Second fret/Snare
+PAD_R1=Third fret/Hi-hat
+PAD_R2=Fourth fret/Tom
+PAD_CROSS=Fifth fret/Cymbal
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
+INT_SPLASH1=This flavor of Deluxe integrates with the Onyx Music Game Toolkit to provide easy import of other game's charts into Deluxe.<p>But of course, we're taking this out of the loader when we ship, so all that typing doesn't matter.
+INT_SPLASH1_TYPE=TEXT
+INT_SPLASH1_TIME=6
+
+
+
+*x:INTROMOV
+ATTRACT_TIMEOUT=120
+FILE=cdrom0:\VIDEO\INTROMOV.PSS;1
+FILETYPE=VIDEO
+TYPE=VIDEO
+
+*0:INTROMOV
+RELOADMSG=Initializing menu system...
+
+
+
+#EOF

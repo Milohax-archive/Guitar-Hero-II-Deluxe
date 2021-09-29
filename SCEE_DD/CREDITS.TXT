@@ -1,0 +1,71 @@
+Menu graphics and video design
+Pete Johnson
+
+Menu music and sound effects
+Pete Johnson
+Jason Page
+
+Demo SDK design and programming
+Mike Dean
+
+Menu and font system programming
+Phil Rogers
+
+'Find My Own Way' design and programming
+SCEA R&amp;D
+
+'Find My Own Way' music
+No Other Medicine
+
+YABASIC implementation for PlayStation®2
+Mike Dean
+Phil Rogers
+James Russell
+
+Intro video edit
+onedotzero/state
+
+Intro music
+Nick Ryan
+
+Translations testers
+Britta Kuhnen
+Gaëlle Leysour
+Nadège Josa
+Domenico Visone
+Susana Paredes
+Miguel Ataz
+Soledad Marco
+
+Translation management
+Elodie Hummel
+
+Quality Assurance testers
+Terri Harrison
+Martin Hill
+Dave Jenions
+Nick Jones
+John Walker
+
+Technical Co-ordinator
+Miranda Latham
+
+Technical Assistant
+Mark Magill
+
+QA team leaders
+John Conway
+Miles Rotherham
+
+Product management
+Claire Brookes
+Simon Cheung
+
+Producer
+Richard Milner
+
+
+Copyright 2000
+Sony Computer Entertainment Europe
+
+A 'Special' Production
