@@ -64,7 +64,7 @@
    sel_diff_career_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       sel_diff_career_80s.milo
       sel_diff_career.milo})
    SEL_DIFFICULTY_COMMON
