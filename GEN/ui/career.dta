@@ -154,7 +154,7 @@
    career_panel
     (file
 	{if_else
-      $egg5
+      $game80s
       career_80s.milo
       career.milo})
    (focus cm_letsrock.btn)
