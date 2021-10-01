@@ -815,7 +815,11 @@
 {new
    SliderPanel
    video_settings_panel
-   (file video_settings.milo)
+   (file
+	{if_else
+      $game80s
+      video_settings_80s.milo
+      video_settings.milo})
    VIDEO_SETTINGS_PANEL_HANDLERS
    (pscan_warning pscan_warning_screen)}
 {new
