@@ -23,7 +23,10 @@
       {set $main_entered FALSE}
       {gamecfg set mode quickplay})}
 #define CUT_SCENE_VIDEO
-(intro.pss)
+({if_else
+      $game80s
+      intro2.pss
+      intro.pss})
 {new
    GHScreen
    cut_scene_screen
