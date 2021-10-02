@@ -701,13 +701,14 @@
    (animate_transition FALSE)
    (in_game TRUE)
    (BUTTON_DOWN_MSG
-      {if
-         {&&
-            {== $button kPad_Start}
-            {!
-               {game get game_over}}}
-         {game set_paused TRUE}
-         {ui goto_screen pract_pause_focus_screen}})
+      {switch
+         $button
+         (kPad_Select
+            {game_restart_fast})
+         (kPad_Start
+            {if {! {game get game_over}}
+               {game set_paused TRUE}
+               {ui goto_screen pract_pause_focus_screen}})})
    (enter
       {practice_focus_panel update})
    (TRANSITION_COMPLETE_MSG
