@@ -112,7 +112,7 @@ PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe includes debugging utilities through the standard controller and through a USB keyboard, if one is plugged in. Consult the readme that came with your download of Deluxe for details.<p>Please note that drums are disabled in debug, thanks to some extra sanity checking that the normal executable doesn't do.
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=12
+INT_SPLASH1_TIME=15
 
 
 
@@ -134,7 +134,7 @@ PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe features both the 80's campaign and debugging utilities through the standard controller or a USB keyboard, if one is plugged in. Consult the readme that came with your download of Deluxe for details.<p>Please note that drums are disabled in debug, thanks to some extra sanity checking that the normal executable doesn't do.
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=12
+INT_SPLASH1_TIME=15
 
 
 
@@ -156,7 +156,7 @@ PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe integrates with the Onyx Music Game Toolkit to provide easy import of other game's charts into Deluxe.<p>But of course, we're taking this out of the loader when we ship, so all that typing doesn't matter.
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=8
+INT_SPLASH1_TIME=10
 
 
 
