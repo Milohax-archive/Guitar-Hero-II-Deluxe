@@ -11,11 +11,17 @@
 (milo_tip4
    "In the new Free Play mode, you can hop into any song with the guitar, guitarist, and venue of your choice.")
 (milo_tip5
-   "We've reordered the setlist to match the 360 version of Guitar Hero II. It should be a bit easier to progress now.")
+   {if_else
+      $game80s
+      "No worries - \qBecause, It's Midnite\q isn't a campaign song anymore. Pays to use cut songs."
+      "We've reordered the setlist to match the 360 version of Guitar Hero II. It should be a bit easier to progress now."})
 (milo_tip6
    "The Extras menu in Free Play can be used to set certain cheats or game behavior without memorizing lengthy button codes.")
 (milo_tip7
-   "In our testing, the Warped Tour is the venue that runs the best on both console and emulator.")
+   {if_else
+      $game80s
+      "In our testing, the Rock for Safety tour is the venue that runs the best on both console and emulator."
+      "In our testing, the Warped Tour is the venue that runs the best on both console and emulator."})
 (milo_tip8
    "The new note counter will glow orange when you've yet to miss a note and turn white when your full combo is ruined.")
 (milo_tip9
@@ -23,7 +29,10 @@
 (milo_tip10
    "Did you forget to turn on Progressive Scan again?")
 (milo_tip11
-   "We fixed the strum limit so you don't have to. Go check out Trogdor and see how it feels.")
+   {if_else
+      $game80s
+      "We fixed the strum limit so you don't have to. Go check out Trogdor on the OTHER setlist and see how it feels."
+      "We fixed the strum limit so you don't have to. Go check out Trogdor and see how it feels."})
 (milo_tip12
    "We also fixed the HOPO bug. You can quick-restart again!")
 (milo_tip13
@@ -44,14 +53,14 @@
 (easy_tip1
    "You don't get any cash in EASY, but you do in MEDIUM, HARD and EXPERT.")
 (easy_tip2
-   "If you're getting 5 stars on every song without breaking a sweat, it's time to move up to MEDIUM.")
+   "If you're getting five stars on every song without breaking a sweat, it's time to move up to MEDIUM.")
 (easy_tip3
    "Try MEDIUM or harder if you want to be able to buy new guitars, songs, videos, and more.")
 ;
 ;
 ; Advanced Tips
 (advanced_tip1
-   "Stuck on a song? Try getting 5 stars on an easier one.")
+   "Stuck on a song? Try getting five stars on an easier one.")
 (advanced_tip2
    "Save your Star Power for sections with many notes. You'll get more points and bigger Rock Meter boosts.")
 (advanced_tip3
@@ -59,7 +68,10 @@
 (advanced_tip4
    "Strum up and down to keep your arm from wearing out during fast passages.")
 (advanced_tip5
-   "Pick up characters, outfits, guitars, bonus songs, and more at The Store.")
+   {if_else
+      $game80s
+      "Pick up characters, guitars, bonus songs, and more at The Store."
+      "Pick up characters, outfits, guitars, bonus songs, and more at The Store."})
 (advanced_tip6
    "Try the debug executable if you're so inclined - it adds a ton of fun and useful diagnostic tools and cheats for testing your mods and getting around the game quickly.")
 (advanced_tip7
