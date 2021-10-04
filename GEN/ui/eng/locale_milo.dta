@@ -80,7 +80,7 @@
 (cheat_mtv_overlay
    "Song Title Always")
 (cheat_awesomeness
-   "Cheats moved to extras menu")
+   "Cheats moved to Extras menu")
 (cheat_barf
    "Roxbury Mode")
 (EASTER_EGG1
@@ -102,7 +102,7 @@
 (unlockeasteregg1_3
    "You have unlocked an EASTER EGG!")
 (unlockeasteregg1_4
-   "\nIt seems like you wanted to activate hyperspeed. We're sorry to inform you that hyperspeed no longer exists as a code.\n\nPress SELECT, SELECT on any setlist screen to access the new modifiers screen!\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. This isn't the only easter egg...try OBOYOBOY in other places in this video game...")
+   "\nHyperspeed as you know it no longer exists in GH2 Deluxe. Instead, ADJUSTABLE HYPERSPEED can be set exactly to your tastes by pressing SELECT, SELECT on any setlist screen!\n\nWhile you're here though, did we mention there's other easter eggs to find? Try the hyperspeed code on other menus if you're brave enough. Here's a hint: Progressive scan...\n\nHave fun,\nThe GH2 Deluxe Team")
 (unlockeasteregg2_1
    "Dear Valued GH2 Deluxe Player,")
 (unlockeasteregg2_2
@@ -110,23 +110,23 @@
 (unlockeasteregg2_3
    "You found another one! Hell yeah!")
 (unlockeasteregg2_4
-   "\nIf you want to keep the song title on, press YELLOW, ORANGE, RED, YELLOW, ORANGE, RED on the main menu! Apologies for the occasional text blur, that's a leftover from the venue rendering that I couldn't disable.\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. It shouldn't be too difficult to find the other eggs, and you really want to find them all...")
+   "\nThat was the easy one, but you should've already started to see and hear some things shift here and there, yeah? There's a lot more, trust me.\n\nHere's your next hint: it's got four and only four options on it. There's a couple menus like that.\n\nHappy hunting,\nThe GH2 Deluxe Team")
 (unlockeasteregg3_1
    "Dear Valued GH2 Deluxe Player,")
 (unlockeasteregg3_2
    "EASTER EGG!")
 (unlockeasteregg3_3
-   "How many more are there?")
+   "Quickplay did it! Another found!")
 (unlockeasteregg3_4
-   "\nEver want to play performance mode, but still want to see your score? Press YELLOW, RED, RED, YELLOW on the main menu for neckless mode! For minimalist play, enable this and focus mode at the same time.\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. Have you fired your band manager yet? That guy's a real asshole...")
+   "\nCheck that MAIN MENU! But you're not done yet. (Remember, you're trying the hyperspeed code on other menus that aren't the main menu. Stay focused.)\n\nNext hint: where band disputes are remediated. And occasionally where bands break up.\n\nGame on,\nThe GH2 Deluxe Team")
 (unlockeasteregg4_1
-   "Dear Awesome GH2 Deluxe Player,")
+   "Dear Valued GH2 Deluxe Player,")
 (unlockeasteregg4_2
-   "AWESOME EGG!")
+   "EASTER EGG!")
 (unlockeasteregg4_3
-   "awesome awesome awesome awesome")
+   "How many more are there?")
 (unlockeasteregg4_4
-   "\nWe infused this game with the very same Awesomeness Detection that you know and love from the Rock Band series! Press YELLOW, BLUE, ORANGE, YELLOW, BLUE, ORANGE, YELLOW, BLUE, ORANGE on the main menu to enable it!\n\nHave fun,\nThe GH2 Deluxe Team\n\nP.S. Have you found all four easter eggs? If you have, then I really have to give you credit...")
+   "\nYou're at the home stretch. You're seeing what not a lot of people have seen before. But you are. Not. Done. Yet.\n\nHere's your very final hint: you've never gone on this screen before. And if you have, never more than once. (R.I.P. our egos.)\n\nGot that? (And once you find it, send us a picture in MiloHax and gloat.)\n\nGood luck, The GH2 Deluxe Team")
 (finaleggtxt1
    "CONGRATULATIONS")
 (finaleggtxt2
