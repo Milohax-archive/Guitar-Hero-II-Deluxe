@@ -692,8 +692,7 @@
       {freebird1.grp set_showing FALSE}
       {freebird2.grp set_showing FALSE}
       {freebird3.grp set_showing FALSE}
-      {$this disable yes.btn}
-      {$this set_focus no.btn}
+      {$this set_focus yes.btn}
       {set
          [cash_award]
          {cashaward_screen get new_cash}}
@@ -796,8 +795,7 @@
       {finalsong1.grp set_showing FALSE}
       {finalsong2.grp set_showing FALSE}
       {finalsong3.grp set_showing FALSE}
-      {$this disable yes.btn}
-      {$this set_focus no.btn}
+      {$this set_focus yes.btn}
       {set
          [cash_award]
          {cashaward_screen get new_cash}}
