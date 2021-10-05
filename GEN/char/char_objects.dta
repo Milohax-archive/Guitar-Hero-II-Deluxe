@@ -485,7 +485,7 @@
                (dw_small4_drums)
                (dw_stone_drums)
                (dw_theatre_drums)
-               (dw_theatre_drums))))))
+               (dw_theatre2_drums))))))
 #define VISEMES_LIST
 ((Neutral Eat Earth If Ox Oat Wet Size Church Fave Though Told Bump New Roar Cage))
 #define CHAR_COMMON
