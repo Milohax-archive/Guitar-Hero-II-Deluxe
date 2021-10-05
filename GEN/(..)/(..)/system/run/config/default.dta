@@ -132,56 +132,8 @@
       #include scratcher.dta))
 (disable_cheats FALSE)
 (quick_cheats
-   (left
-      (kPad_DLeft
-         {if
-            {exists heap_report}
-            {heap_report}})
-      (kPad_DRight
-         {if
-            {exists heap_dump}
-            {heap_dump}})
-      (kPad_DUp
-         {rnd toggle_overlay rate})
-      (kPad_DDown
-         {rnd toggle_heap})
-      ; (kPad_Select
-      ;   {rnd screen_dump screendump})
-      (kPad_Circle
-         {rnd toggle_overlay stats})
-      (kPad_X
-         {rnd toggle_timers})
-      (kPad_Square
-         {print_symbol_table})
-      #ifdef HX_EE
-      (kPad_Tri
-         {if_else
-            {==
-               {rnd screen_width}
-               640}
-            {rnd reset 512 448 16 0 0}
-            {rnd reset 640 448 16 0 1}})
-      #endif
-      #ifdef 2DBUG
-      (kPad_Tri
-         {if_else
-            {==
-               {rnd screen_width}
-               640}
-            {rnd reset 512 448 16 0 0}
-            {rnd reset 640 448 16 0 1}})
-      #endif
-      #ifdef 8DBUG
-      (kPad_Tri
-         {if_else
-            {==
-               {rnd screen_width}
-               640}
-            {rnd reset 512 448 16 0 0}
-            {rnd reset 640 448 16 0 1}})
-      #endif
-      (kPad_Start
-         {synth toggle_hud}))
+   ; left cheats moved to cheats.dta for ease of access
+   (left)
    (right)
    (keyboard
       (KB_LEFT

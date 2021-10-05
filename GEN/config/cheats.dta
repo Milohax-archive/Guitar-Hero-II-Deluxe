@@ -176,14 +176,58 @@
       {toggle_shuttle})
    (>
       {tutorial reset_vo}))
-(right
-   (kPad_Square
-      {toggle_auto_play})
-   (kPad_Circle
-      {toggle_shuttle})
-   (kPad_Tri
-      {rnd toggle_overlay camera})
+(left
    (kPad_DLeft
       {cycle_free_camera})
+   (kPad_DUp
+      {rnd toggle_overlay light_preset})
+    (kPad_DRight
+       {rnd toggle_overlay camera})
+   (kPad_DDown
+      {rnd toggle_heap})
+    (kPad_Square
+	   {b_cheat}
+       {set
+          $barf_cheat
+          {! $barf_cheat}})
+   (kPad_Tri
+      {if_else
+         {==
+            {rnd screen_width}
+            640}
+         {rnd reset 512 448 16 0 0}
+         {rnd reset 640 448 16 0 1}})
+   (kPad_Circle
+      {rnd toggle_overlay stats})
+   (kPad_X
+      {rnd toggle_timers})
+   (kPad_Start
+      {synth toggle_hud})
+   (kPad_Select
+      {handle
+         (player0 lose)}))
+(right
+   (kPad_DLeft
+      {adjust_crowd_rating -0.1})
+   (kPad_DUp
+      {fill_star_meter})
    (kPad_DRight
-      {rnd toggle_overlay light_preset}))
+      {adjust_crowd_rating 0.1})
+   (kPad_DDown
+      {cheat_empty_star_power})
+   (kPad_Square
+      {toggle_auto_play})
+   (kPad_Tri
+      {toggle_crowd_meter})
+   (kPad_Circle
+      {reload_track})
+   (kPad_X
+      {handle
+         ({find_obj world guitarist0}
+            teleport_next)})
+   (kPad_Start
+      {a_cheat})
+   (kPad_Select
+      {if
+         {game is_up}
+         {player0 win 5}}))
