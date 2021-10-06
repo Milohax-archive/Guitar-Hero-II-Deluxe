@@ -184,7 +184,7 @@
     (kPad_DRight
        {rnd toggle_overlay camera})
    (kPad_DDown
-      {rnd toggle_heap})
+      {rnd toggle_timers})
     (kPad_Square
 	   {b_cheat}
        {set
@@ -199,13 +199,8 @@
          {rnd reset 640 448 16 0 1}})
    (kPad_Circle
       {rnd toggle_overlay stats})
-   (kPad_X
-      {rnd toggle_timers})
    (kPad_Start
-      {synth toggle_hud})
-   (kPad_Select
-      {handle
-         (player0 lose)}))
+      {a_cheat}))
 (right
    (kPad_DLeft
       {adjust_crowd_rating -0.1})
@@ -218,16 +213,8 @@
    (kPad_Square
       {toggle_auto_play})
    (kPad_Tri
-      {toggle_crowd_meter})
-   (kPad_Circle
-      {reload_track})
-   (kPad_X
-      {handle
-         ({find_obj world guitarist0}
-            teleport_next)})
-   (kPad_Start
-      {a_cheat})
-   (kPad_Select
       {if
          {game is_up}
-         {player0 win 5}}))
+         {player0 win 5}})
+   (kPad_Circle
+      {reload_track}))
