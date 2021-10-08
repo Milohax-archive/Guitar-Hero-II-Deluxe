@@ -1,31 +1,11 @@
 #include macros.dta
 (mem ; originally from config/mem.dta
    (heaps
-         #ifdef HX_EE
       (main
          (size 19730000))
       (rnd
          (size 5900000)
-         (handle TRUE))
-   	  #endif
-         #ifdef 8DBUG
-      (main
-         (size 19730000))
-      (rnd
-         (size 5900000)
-         (handle TRUE))
-   	  #endif
-         #ifdef 2DBUG
-      (main
-         (size 19730000))
-      (rnd
-         (size 5900000)
-         (handle TRUE))
-   	  #endif
-         #ifdef HX_PC
-      (main
-         (size 326000000))
-   	  #endif)
+         (handle TRUE)))
    (pool
       (big_hunk 3100000)
       (small_hunk 50000)))
