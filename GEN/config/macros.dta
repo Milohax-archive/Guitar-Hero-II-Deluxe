@@ -2,7 +2,18 @@
 #else
 #define APP_MACROS_DTA
 (1)
-#include sfx_macros.dta
+
+; originally from config/sfx.macros.dta
+#define CLAP_SEQUENCE
+(claps)
+#define CLAP_DELAY_BEATS
+(0.9)
+#define TRACK_EXTEND_SFX
+(track_unfurl)
+#define TRACK_EXPLODE_SFX
+(track_exp)
+; end manual include
+
 #include ../../../system/run/config/macros.dta
 #define kTempoMedium
 (1)

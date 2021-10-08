@@ -1,3 +1,5 @@
+; File originally named cheats_funcs.dta
+; Renamed for clarity
 {new
    Object
    cheat_display

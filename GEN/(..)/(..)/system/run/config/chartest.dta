@@ -1,21 +1,8 @@
 #include macros.dta
 (mem
    (heaps
-      #ifdef HX_EE
       (main 22470000)
-      (rnd 4450000 TRUE)
-	  #endif
-      #ifdef 8DBUG
-      (main 22470000)
-      (rnd 4450000 TRUE)
-	  #endif
-      #ifdef 2DBUG
-      (main 22470000)
-      (rnd 4450000 TRUE)
-	  #endif
-      #ifdef HX_PC
-      (main 27070000)
-	  #endif))
+      (rnd 4450000 TRUE)))
 (handlers
    (start_game
       {next_character 0}))

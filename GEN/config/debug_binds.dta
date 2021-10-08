@@ -1,3 +1,5 @@
+; File originally named cheats.dta
+; Renamed for clarity
 (keyboard
    (KB_F1
       {fake_player1_cheat 0})
