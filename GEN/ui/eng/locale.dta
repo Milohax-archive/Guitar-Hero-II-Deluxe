@@ -479,13 +479,13 @@
 (stat_section_no_notes
    "N/A")
 (highscore_dummy_0
-   "GMS")
-(highscore_dummy_1
-   "Scott")
-(highscore_dummy_2
-   "Cam")
-(highscore_dummy_3
    "jnack")
+(highscore_dummy_1
+   "marf")
+(highscore_dummy_2
+   "Scott")
+(highscore_dummy_3
+   "GMS")
 (highscore_dummy_4
    "Cisco")
 (highscore_score_fmt
