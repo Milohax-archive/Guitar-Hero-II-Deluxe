@@ -34,31 +34,11 @@
    #include objects.dta)
 (mem
    (heaps
-       #ifdef HX_EE
       (main
          (size 18000000))
       (rnd
          (size 8000000)
-         (handle TRUE))
-	  #endif
-      #ifdef 8DBUG
-      (main
-         (size 18000000))
-      (rnd
-         (size 8000000)
-         (handle TRUE))
-	  #endif
-      #ifdef 2DBUG
-      (main
-         (size 18000000))
-      (rnd
-         (size 8000000)
-         (handle TRUE))
-	  #endif
-      #ifdef HX_PC
-      (synth
-         (size 10000000))
-	  #endif)
+         (handle TRUE)))
    (pool
       (big_hunk 3100000)
       (small_hunk 50000))
@@ -128,8 +108,7 @@
       (fade_rate 1.0)
       (play_from_memory TRUE)
       (use_rnd_heap FALSE))
-   (scratcher
-      #include scratcher.dta))
+   (scratcher))  ; include to dotdot/system/runconfig/scratcher.dta removed
 (disable_cheats FALSE)
 (quick_cheats
    ; left cheats moved to cheats.dta for ease of access
@@ -161,22 +140,8 @@
    (bsp_max_depth 40))
 (timer task draw 'task+draw' cpu gs light)
 (rnd
-      #ifdef HX_EE
    (width 512)
    (height 448)
-	  #endif
-      #ifdef 8DBUG
-   (width 512)
-   (height 448)
-	  #endif
-      #ifdef 2DBUG
-   (width 512)
-   (height 448)
-	  #endif
-      #ifdef HX_PC
-   (width 640)
-   (height 480)
-	  #endif
    (bpp 16)
    (sync TRUE)
    (guard_band 0 0)
@@ -194,18 +159,7 @@
          (lines 1)
          (showing FALSE))
       (stats
-      #ifdef HX_EE
          (lines 10)
-	  #endif
-      #ifdef 8DBUG
-         (lines 10)
-	  #endif
-      #ifdef 2DBUG
-         (lines 10)
-	  #endif
-      #ifdef HX_PC
-         (lines 1)
-	  #endif
          (showing FALSE))
       (input
          (lines 1)
@@ -329,7 +283,13 @@
             ((EBRR EBRL)))
          (bones BROL BROR BRIL BRIR))))
 (charsys
-   #include charsys.dta)
+   (CharEyes ; block originally from dotdot/system/run/config/charsys.dta
+      (camera_max_offset 12)
+      (camera_interval 1920 3840)
+      (forward_distance 80)
+      (forward_max_offset 12)
+      (forward_interval 960 2000)
+      (crowd_interval 960 1920)))
 (audio_analysis
    (num_slots
       (2 2 3 4))

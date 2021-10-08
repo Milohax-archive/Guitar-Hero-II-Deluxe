@@ -108,4 +108,4 @@
             {options get_fx_volume})
          (pan
             {player_pan $player})}}}
-#include cheats_funcs.dta
+#include debug_funcs.dta

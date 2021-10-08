@@ -1,6 +1,14 @@
 #include macros.dta
-(mem
-   #include mem.dta)
+(mem ; originally from config/mem.dta
+   (heaps
+      (main
+         (size 19730000))
+      (rnd
+         (size 5900000)
+         (handle TRUE)))
+   (pool
+      (big_hunk 3100000)
+      (small_hunk 50000)))
 (system
    (init
       #include system_script.dta)
@@ -44,8 +52,7 @@
    (ignore)
    (hold_ms 1000)
    (repeat_ms 80))
-(spew
-   #include spew.dta)
+(spew) ; include to config/spew.dta removed
 #define NON_GAME_TIMERS
 (world hud track file_read end_draw tasks)
 (timer NON_GAME_TIMERS game cpu gs)
@@ -115,8 +122,11 @@
                $tot}}}))
 (ui
    #include ../ui/ui.dta)
-(objects
-   #include objects.dta)
+(objects  ; block originally from config/objects.dta
+   #include ../char/char_objects.dta
+   #include ../world/world_objects.dta
+   #include ../ui/ui_objects.dta
+   #include ../hud/hud_objects.dta)
 (locale
 ../ui/eng/locale_milo.dta ../ui/eng/locale.dta ../ui/eng/locale_authors.dta
 ../ui/eng/locale_career.dta ../ui/eng/locale_chars.dta ../ui/eng/locale_drums.dta
@@ -146,27 +156,139 @@
 #endif
 (default_band metal_singer metal_bass metal_drummer)
 (quick_cheats
-   #include cheats.dta)
+   #include debug_binds.dta)
 (long_cheats
    #include long_cheats.dta)
 (beatmatcher
    #include beatmatcher.dta)
-(beatmatch
-   #include beatmatch.dta)
+(beatmatch ; block originally from config/beatmatch.dta
+   (player_matcher_handlers
+      (hit
+         ($slot $star $hopoable $hopoed $player_num)
+         {if
+            $star
+            {play_game_sequence_player sp_gemhit sp_gemhit $player_num}})
+      (hopo
+         {handle
+            ($this hopo_callback)})
+      (swingAtHopo
+         {handle
+            ($this swingAtHopo_callback)})
+      (miss
+         ($player_num)
+         {do
+            ($seq
+               {switch
+                  {game get_track_type $player_num}
+                  (kTrackBass miss_bass)
+                  miss_gtr})
+            {play_game_sequence_player $seq $seq $player_num}})
+      (swing))
+   (solo_handlers
+      (pick_done
+         {print
+            "pick_done\n"})
+      (all_done
+         {print
+            "all_done\n"})))
 (modes
    #include modes.dta)
-(player
-   #include player.dta)
+(player ; block originally from config/player.dta
+   (handlers
+      (end_streak)
+      (whammy_start
+         {handle
+            ($this whammy_start_callback)})
+      (whammy_end
+         {handle
+            ($this whammy_end_callback)})
+      (star_gem_hit
+         {handle
+            ($this star_gem_hit_callback)})
+      (phrase_captured
+         ($player_num)
+         {script_task
+            (delay 0.2)
+            (script
+               {play_game_sequence_player sp_awarded sp_awarded_multi $player_num})}
+         {handle
+            ($this star_phrase_captured_callback)})
+      (phrase_miss
+         ($gem_id)
+         {{$this track}
+            on_miss_phrase
+            $gem_id}
+         {handle
+            ($this star_phrase_miss_callback)})
+      (start_using
+         ($player_num)
+         {{{$this track}
+               extend_anim}
+            animate
+            (range 2000 2025)
+            (period 0.8)}
+         {{$this player_matcher}
+            on_start_starpower}
+         {play_game_sfx_player sp_deployed sp_deployed_multi $player_num}
+         {handle
+            (world stop_sfx crowd_upto_good)}
+         {handle
+            (world play_sfx crowd_upto_good)}
+         {{$this track}
+            set_bonus_gems
+            TRUE}
+         {handle
+            (game star_power_start $player_num)})
+      (stop_using
+         ($player_num)
+         {play_game_sfx_player sp_depleted sp_depleted_multi $player_num}
+         {{$this player_matcher}
+            on_stop_starpower}
+         {{$this track}
+            set_bonus_gems
+            FALSE}
+         {handle
+            (game star_power_stop $player_num)})
+      (depleted)))
 (track
-   #include track.dta)
+   (handlers)) ; originally from config/track.dta
 (scoring
    #include scoring.dta)
 (track_graphics
    #include track_graphics.dta)
 (songs
    #include songs.dta)
-(sound
-   #include sound.dta)
+(sound ; block originally from config/sound.dta
+   (banks
+      (game sfx/ingame_bank)
+      (meta sfx/metagame_bank)
+      (tutorial tutorial/tutorial_bank))
+   (crowd_volume -2)
+   (crowd_reactions TRUE)
+   (crowd_audio_delay 1)
+   (tutorial
+      (streaming_vo
+         (volume 0.0)
+         (dir tutorial/streams)
+         (events
+            #include ../tutorial/tutorial_vo.dta)))
+   (master_volume -1.5)
+   (master_volume_mono -4.0)
+   (options_screen
+      (slider -96 -28 -24 -20 -16 -12 -10 -8 -6 -4 -2 0))
+   (practice_mode
+      (default_speeds
+         (100 90 80 60))
+      (pitch_correct
+         (slice_frames 3)
+         (attack_ms 5)
+         (release_ms 5)
+         (linear_attack FALSE)
+         (linear_release FALSE)))
+   (song_select
+      (loop_forever TRUE)
+      (fade_rate 1.0)
+      (attenuation 6.0)))
 (hud
    (lead_meter
       (max_lead 10000))
@@ -295,5 +417,5 @@
 (tips
    #include tips.dta)
 (version
-   #include gh2_version.dta)
+   "Build: 210404") ; originally from config/gh2_version.dta
 #merge ../../../system/run/config/default.dta

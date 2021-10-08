@@ -15,7 +15,6 @@
    (thresholds
       (36 50))
    (come_first FALSE))
-#ifdef HX_EE
 (controllers
    (ro_guitar
       (detect
@@ -30,57 +29,6 @@
    (dualshock
       (detect
          (type kJoypadDualShock))))
-#endif
-#ifdef 2DBUG
-(controllers
-   (ro_guitar
-      (detect
-         (type kJoypadAnalog)
-         (button kPad_DLeft)))
-   (digital
-      (detect
-         (type kJoypadDigital)))
-   (analog
-      (detect
-         (type kJoypadAnalog)))
-   (dualshock
-      (detect
-         (type kJoypadDualShock))))
-#endif
-#ifdef 8DBUG
-(controllers
-   (ro_guitar
-      (detect
-         (type kJoypadAnalog)
-         (button kPad_DLeft)))
-   (digital
-      (detect
-         (type kJoypadDigital)))
-   (analog
-      (detect
-         (type kJoypadAnalog)))
-   (dualshock
-      (detect
-         (type kJoypadDualShock))))
-#endif
-#ifdef HX_PC
-(controllers
-   (midi
-      (detect
-         (type kJoypadMidi)))
-   (ro_guitar
-      (detect
-         (stick kLeftAnalog X -1)
-         (stick kLeftAnalog Y 0)))
-   (digital
-      (detect
-         (button kPad_RStickRight)
-         (button kPad_RStickDown)))
-   (analog
-      (detect))
-   (dualshock
-      (detect)))
-#endif
 (adapters
    (map
       ('4 axis 16 button joystick' default)
