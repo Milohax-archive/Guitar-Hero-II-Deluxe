@@ -57,17 +57,24 @@
    (b
       {b_cheat})
    (B
-      {set
-         $barf_cheat
-         {! $barf_cheat}})
-   (C
-      {rnd toggle_overlay camera})
+      {if_else
+	     $barf_cheat
+		    {do
+			   {set $barf_cheat FALSE}
+			   {cheat_display
+			      show
+				  "Quick Roxbury: OFF"}}
+			{do
+			   {set $barf_cheat TRUE}
+			   {cheat_display
+			      show
+				  "Quick Roxbury: ON"}}})
    (c
       {if
          {game is_up}
          {world cycle_shot}})
-   (V
-      {world toggle_pick_shot})
+   (C
+      {rnd toggle_overlay camera})
    (d
       {toggle_dual_perspective})
    (e
@@ -79,7 +86,10 @@
    (F
       {cycle_free_camera})
    (g
-      {waypoint_toggle_show})
+      {waypoint_toggle_show}
+      {cheat_display
+         show
+         "Waypoint visibility toggled"})
    (G
       {rnd toggle_overlay guitar})
    (h
@@ -95,19 +105,21 @@
             set_showing
             {!
                {hud showing}})})
-   (I
-      {rnd toggle_overlay light_preset})
    (i
       {handle
-         (world toggle_lighting_events)})
+         (world toggle_lighting_events)}
+      {cheat_display
+	     show
+		 "World lighting toggled, starting on next lighting call"})
+   (I
+      {rnd toggle_overlay light_preset})
    (j
       {handle
          ({find_obj world guitarist0}
-            start_walk)})
-   (k
-      {handle
-         ({find_obj world guitarist0}
-            teleport_next)})
+            start_walk)}
+      {cheat_display
+         show
+         "Walking to next waypoint (if supported by venue)"})
    (J
       {set
          $guitarist_debug
@@ -124,7 +136,14 @@
                " debug"}}
          {cheat_display
             show
-            "Player debug off"}})
+            "Player debug: OFF"}})
+   (k
+      {handle
+         ({find_obj world guitarist0}
+            teleport_next)}
+      {cheat_display
+         show
+         "Teleporting to next waypoint (if supported by venue)"})
    (l
       {handle
          (player0 lose)})
@@ -167,6 +186,11 @@
       {prev_tutorial_lesson})
    (v
       {show_version})
+   (V
+      {world toggle_pick_shot}
+	  {cheat_display
+	     show
+		 "Static camera toggled"})
    (w
       {handle
          (player0 win 3)})
@@ -187,18 +211,38 @@
        {rnd toggle_overlay camera})
    (kPad_DDown
       {rnd toggle_timers})
-    (kPad_Square
-	   {b_cheat}
-       {set
-          $barf_cheat
-          {! $barf_cheat}})
+   (kPad_Square
+      {if
+         {game is_up}
+             {if_else
+                $debug.beep
+                {do
+                   {set $debug.beep FALSE}
+                   {set $barf_cheat FALSE}
+                   {cheat_display
+                      show
+                      "Tempomap debug: OFF"}}
+                {do
+                   {set $debug.beep TRUE}
+                   {set $barf_cheat TRUE}
+                   {cheat_display 
+                      show
+                      "Tempomap debug: ON"}}}})
    (kPad_Tri
       {if_else
          {==
             {rnd screen_width}
             640}
-         {rnd reset 512 448 16 0 0}
-         {rnd reset 640 448 16 0 1}})
+         {do
+		    {rnd reset 512 448 16 0 0}
+			{cheat_display
+			   show
+			   "Quick Progressive: OFF"}}
+         {do
+		    {rnd reset 640 448 16 0 1}
+			{cheat_display
+			   show
+			   "Quick Progressive: ON"}}})
    (kPad_Circle
       {rnd toggle_overlay stats})
    (kPad_Start
@@ -219,4 +263,4 @@
          {game is_up}
          {player0 win 5}})
    (kPad_Circle
-      {reload_track}))
+      {toggle_crowd_meter}))

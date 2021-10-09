@@ -91,10 +91,15 @@
    a_cheat
    {if
       {find_obj world}
-      {world_panel
-         set_showing
-         {!
-            {world_panel showing}}}}}
+      {do
+	     ($quickfocus
+		    {!
+			   {world_panel showing}})
+		 {world_panel set_showing $quickfocus}
+         {cheat_display
+            show_bool
+            "World rendering"
+            $quickfocus}}}}
 {func
    A_cheat
    {if_else
@@ -533,12 +538,28 @@
          {switch
             {fake_player1}
             (2
-               {player2 fill_star_power})
+               {do
+			      {player2 fill_star_power}
+                  {cheat_display
+                     show
+                     "Filling Star Power for Player 2..."}})
             (1
-               {player1 fill_star_power})
+               {do
+			      {player1 fill_star_power}
+                  {cheat_display
+                     show
+                     "Filling Star Power for Player 1..."}})
             (0
-               {player0 fill_star_power})}
-         {player0 fill_star_power}}}}
+               {do
+			      {player0 fill_star_power}
+                  {cheat_display
+                     show
+                     "Filling Star Power for Player 0..."}})}
+         {do
+		    {player0 fill_star_power}
+            {cheat_display
+               show
+               "Filling Star Power..."}}}}}
 {func
    cheat_empty_star_power
    {if
@@ -549,12 +570,28 @@
          {switch
             {fake_player1}
             (2
-               {player2 empty_star_power})
+               {do
+			      {player2 empty_star_power}
+                  {cheat_display
+                     show
+                     "Emptying Star Power for Player 2..."}})
             (1
-               {player1 empty_star_power})
+               {do
+			      {player1 empty_star_power}
+                  {cheat_display
+                     show
+                     "Emptying Star Power for Player 1..."}})
             (0
-               {player0 empty_star_power})}
-         {player0 empty_star_power}}}}
+               {do
+			      {player0 empty_star_power}
+                  {cheat_display
+                     show
+                     "Emptying Star Power for Player 0..."}})}
+         {do
+		    {player0 empty_star_power}
+            {cheat_display
+               show
+               "Emptying Star Power..."}}}}}
 {func
    print_transition_test_status
    {if
