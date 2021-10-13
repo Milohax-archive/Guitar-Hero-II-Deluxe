@@ -1,3 +1,10 @@
+; Chose what main menu to display based off egg screen
+;main.milo - GH2DX
+;main_egg0.milo - GH2DXCE
+;main_egg1.milo - GH1
+;main_egg2.milo - GH80SDX
+;main_egg3.milo - GH3
+;main_egg_final.milo - ???????
 {new
    GHPanel
    main_panel
@@ -16,11 +23,19 @@
 					main_egg1.milo
 					{if_else
 						$egg1
+						#ifndef _ONYX
 						main_egg0.milo
+						#else
+						main.milo
+						#endif
 							{if_else
 								$game80s
 								main_egg2.milo
-								main.milo}}}}}})
+								#ifndef _MEGA
+								main.milo
+								#else
+								main_egg0.milo
+								#endif}}}}}})
    (focus main_quickspin.btn)
    (msg_last_frame 0)
    (already_entered FALSE)
