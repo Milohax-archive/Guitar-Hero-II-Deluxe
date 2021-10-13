@@ -111,7 +111,26 @@
 {new
    MultiCharSelPanel
    multi_sel_character_panel
-   (file multi_sel_character.milo)
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
+   (file
+	{if_else
+      $game80s
+      multi_sel_character80s.milo
+      multi_sel_character.milo})
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+   (file multi_sel_character_debug.milo)
+#endif
+#endif
+#endif
+#endif
    (skin_select1 FALSE)
    (skin_select2 FALSE)
    (enter
@@ -133,7 +152,22 @@
          (units kTaskUISeconds)}
       {foreach
          $c
-         CHARACTERS
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
+		 MULTCHARACTERS
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+		 CHARACTERS
+#endif
+#endif
+#endif
+#endif
          {do
             ($mesh
                {sprint
@@ -161,13 +195,47 @@
             {set
                [skin_select2]
                TRUE}}})
-   (char_navigator CHARACTERS)}
+   (char_navigator
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
+		 MULTCHARACTERS
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+		 CHARACTERS
+#endif
+#endif
+#endif
+#endif)}
 {new
    CharsysPanel
    char_multi
    (file char_multi.milo)
    (num_placers 2)
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
+   (load_order 
+   {if_else $game80s
+   80SMULT_LOAD_CHARACTERS
+   MULT_LOAD_CHARACTERS})
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
    (load_order LOAD_CHARACTERS)
+#endif
+#endif
+#endif
+#endif
    (enter
       {$this
          show_char

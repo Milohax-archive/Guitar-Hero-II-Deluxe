@@ -26,6 +26,14 @@
 #endif
 #endif
 
+((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
+#define MULTCHARACTERS ; use these characters specifically for multiplayer
+((punkencore alternaencore glamencore gothencore metalencore rockabill rock deathmetal classic funk1 grimencore))
+#define 80SMULT_LOAD_CHARACTERS
+((punkencore punk2 alternaencore alterna2 glamencore glam2 gothencore goth1 metalencore metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grimencore))
+#define MULT_LOAD_CHARACTERS
+((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
+
 #define STORE_OUTFITS
 (punk2 alterna2 glam2 goth1 metal2 rockabill2 rock1 deathmetal2)
 #define SKIN_ANIM_TIME
