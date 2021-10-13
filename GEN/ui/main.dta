@@ -31,7 +31,7 @@
 							{if_else
 								$game80s
 								main_egg2.milo
-								#ifndef _MEGA
+								#ifndef _ONYX
 								main.milo
 								#else
 								main_egg0.milo
