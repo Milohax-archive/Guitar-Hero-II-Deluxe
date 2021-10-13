@@ -146,14 +146,14 @@
             (gs_guitar.sld
                {do
                   {play_sfx
-                     slider_band
+                     button_error
                      (volume 1)
                      (stop TRUE)}
                   {$this set_speeds}})
             (gs_sfx.sld
                {do
                   {play_sfx
-                     slider_band
+                     button_error
                      (volume 1)
                      (stop TRUE)}
                   {$this set_speeds}})}})
