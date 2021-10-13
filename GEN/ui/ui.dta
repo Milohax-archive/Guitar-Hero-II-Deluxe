@@ -1,27 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Use these characters for various ELFs;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifndef 2DBUG
-#ifndef 8DBUG
-#define CHARACTERS
-((punk punkencore alterna alternaencore glam glamencore goth gothencore metal metalencore rockabill rock deathmetal classic funk1 grim grimencore))
-#define LOAD_CHARACTERS
-((punk1 punk2 punkencore alterna1 alterna2 alternaencore glam1 glam2 glamencore goth2 goth1 gothencore metal1 metal2 metalencore rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim grimencore))
-#define STORE_CHARACTERS
-(classic funk1)
-#define STORE_OUTFITS
-(punk2 alterna2 glam2 goth1 metal2 rockabill2 rock1 deathmetal2)
-#define SKIN_ANIM_TIME
-(0.4)
-(init
-   #include init.dta)
-(my_init)
-(music_start)
-#include sfx.dta
-#include defaults.dta
-#endif
-#endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Use These characters if using Debug Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Use these characters for debug ELFs (ifndef = if not def)
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
@@ -32,6 +9,23 @@
 ((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
 #define STORE_CHARACTERS
 (classic funk1 grim)
+#endif
+#endif
+#endif
+#endif
+
+; Use these characters for retail ELFs
+#ifndef 2DBUG
+#ifndef 8DBUG
+#define CHARACTERS
+((punk punkencore alterna alternaencore glam glamencore goth gothencore metal metalencore rockabill rock deathmetal classic funk1 grim grimencore))
+#define LOAD_CHARACTERS
+((punk1 punk2 punkencore alterna1 alterna2 alternaencore glam1 glam2 glamencore goth2 goth1 gothencore metal1 metal2 metalencore rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim grimencore))
+#define STORE_CHARACTERS
+(classic funk1)
+#endif
+#endif
+
 #define STORE_OUTFITS
 (punk2 alterna2 glam2 goth1 metal2 rockabill2 rock1 deathmetal2)
 #define SKIN_ANIM_TIME
@@ -40,10 +34,73 @@
    #include init.dta)
 (my_init)
 (music_start)
-#include sfx.dta
-#include defaults.dta
-#endif
-#endif
-#endif
-#endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; originally from ui/sfx.dta
+(SELECT_START_MSG
+   {if_else
+      {'||'
+         {==
+            {{ui current_screen}
+               name}
+            sel_song_screen}
+         {==
+            {{ui current_screen}
+               name}
+            multi_seldiff_screen}
+         {==
+            {{ui current_screen}
+               name}
+            seldiff_screen}
+         {== $component pause_restart.btn}
+         {== $component pause_controller_resume.btn}
+         {== $component lose_restart.btn}
+         {== $component comp_restart.btn}}
+      {synth play_sequence button_play}
+      {synth play_sequence button_select}}
+   kDataUnhandled)
+(SCROLL_MSG
+   {if
+      {&&
+         {!=
+            {ui focus_panel}
+            credits_panel}
+         {!=
+            {ui focus_panel}
+            sel_character_panel}}
+      {synth play_sequence button_toggle}}
+   kDataUnhandled)
+(FOCUS_MSG
+   {if
+      {&&
+         {!
+            {ui in_transition}}
+         {!=
+            {{ui current_screen}
+               name}
+            sel_character_new_screen}
+         {!=
+            {{ui current_screen}
+               name}
+            sel_character_edit_screen}}
+      {synth play_sequence button_toggle}}
+   kDataUnhandled)
+(BAD_SELECT_MSG
+   {if
+      {!=
+         {ui focus_panel}
+         nameprof_panel}
+      {play_sfx button_error}}
+   kDataUnhandled)
+(SCREEN_BACK_MSG
+   {if
+      {meta is_up}
+      {synth play_sequence button_back.cue}}
+   kDataUnhandled)
+; end manual merge
+
+; originally from ui/defaults.dta
+(cam
+   (near 250)
+   (far 1000)
+   (z-range 0 2.0e-2))
+; end manual merge
