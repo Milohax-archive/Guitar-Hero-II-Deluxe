@@ -57,6 +57,7 @@
 (stk_format_1 {sprint $player1_streak})
 (stk_format_2 {sprint $player2_streak})
 (stk_zero "0")
+(blank_message "")
 (cheat_focusmode
    "Focus Mode")
 (cheat_neckless

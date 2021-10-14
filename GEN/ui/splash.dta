@@ -64,7 +64,7 @@
          {taskmgr ui_seconds}}
       {game_screen set attract_mode FALSE}
       {set $entering_attract_mode FALSE}
-      {set $disable_attract_mode TRUE}
+      {set $disable_attract_mode FALSE}
       {synth play_sequence meta_lick})
    (poll
       {if

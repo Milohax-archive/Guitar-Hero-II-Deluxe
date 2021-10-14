@@ -119,7 +119,7 @@
       {set $player0_streak 0}
       {set $player1_streak 0}
       {set $player2_streak 0}
-      {streak_overlay_panel setup_streak}
+;      {streak_overlay_panel setup_streak} - shouldn't need this here, I call this conditionally in the panel enter
       {set_loader_period 5}
       {set
          [encore_unlock_check]
@@ -218,19 +218,19 @@
             {! $cheat_enabled_performance_mode}}
          {track_panel do_extend_sequence}}
       {beatmatch set_music_speed $speedmod}
-      {script_task
+	  {script_task
          (delay 1.8)
          (units kTaskSeconds)
          (script
             {handle
+			   (streak_overlay_panel show_overlay $do_streak)
                ($this slide_meter_in)})}
       {script_task
          (delay 2)
          (units kTaskSeconds)
          (script
             {handle
-               ($this intro_end)}
-            {streak_overlay_panel show_overlay TRUE})}
+               ($this intro_end)})}
       {set
          [intro_complete]
          TRUE})

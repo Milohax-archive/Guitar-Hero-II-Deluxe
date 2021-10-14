@@ -49,41 +49,58 @@
          {if_else {== {gamecfg get mode} multi_coop}
             {streak_overlay_panel update_streak 2}
             {streak_overlay_panel update_streak 0}}
-         {set $beforefirstnote FALSE}
+         {set $beforefirstnote_p0 FALSE}
       }
    }
  )
  (gem_miss_callback
   ($slot_hit $real_slot $timing_error)
-  {set $player0_streak 0}
-  {set $interval_p0 50}
-  {if {== {gamecfg get mode} multi_coop}
-     {set $player2_streak 0}
-     {set $interval_p2 50}}
-  {if $do_streak
-     {do
-        {if {! $beforefirstnote_p0} {streak_overlay_panel not_an_fc 0}}
-        {if_else {== {gamecfg get mode} multi_coop}
-           {streak_overlay_panel zero_streak 2}
-           {streak_overlay_panel zero_streak 0}}}}
-  )
+  {if_else $do_streak
+    {if_else {== {gamecfg get mode} multi_coop}
+	    {do
+		    {if {&& {! $beforefirstnote_p0} $player2_fc}
+			    {streak_overlay_panel not_an_fc 2}
+				{streak_overlay_panel zero_streak 2}
+				{streak_overlay_panel update_streak 2}
+				{set $player2_streak 0}
+				{set $interval_p2 50}
+			}}
+		{do
+			{if {&& {! $beforefirstnote_p0} $player0_fc}
+			    {streak_overlay_panel not_an_fc 0}
+				{streak_overlay_panel zero_streak 0}
+				{streak_overlay_panel update_streak 0}
+				{set $player0_streak 0}
+				{set $interval_p0 50}
+			}}}
+	{if_else {== {gamecfg get mode} multi_coop}
+	    {do
+		    {set $player2_streak 0}
+			{set $interval_p2 50}}
+		{do
+			{set $player0_streak 0}
+			{set $interval_p1 50}}}})
+
  (gem_pass_callback
-  {set $player0_streak 0}
-  {set $interval_p0 50}
-  {if {== {gamecfg get mode} multi_coop}
-     {set $player2_streak 0}
-     {set $interval_p2 50}}
   {if $do_streak
-     {do
-        {if {! $player0_fc} {streak_overlay_panel not_an_fc 0}}
-        {if_else {== {gamecfg get mode} multi_coop}
-           {streak_overlay_panel zero_streak 2}
-           {streak_overlay_panel zero_streak 0}}
-          {set $beforefirstnote_p0 FALSE}
-     }
-  }
- )
-}
+    {if_else {== {gamecfg get mode} multi_coop}
+	    {do
+		    {if $player2_fc
+			   {do
+			      {streak_overlay_panel not_an_fc 2}
+				  {streak_overlay_panel zero_streak 2}
+				  {streak_overlay_panel update_streak 2}
+				  {set $player2_streak 0}
+				  {set $interval_p2 50}}}}
+		{do
+			{if $player0_fc
+				{do
+					{streak_overlay_panel not_an_fc 0}
+					{streak_overlay_panel zero_streak 0}
+					{streak_overlay_panel update_streak 0}
+					{set $player0_streak 0}
+					{set $interval_p0 50}}}}}}
+	{set $beforefirstnote_p0 FALSE})}
 {new
  Object
  note_streak_callback_p1
@@ -95,43 +112,73 @@
    (multi_fo {note_streak_p1})
    (multi_coop {note_streak_p2})
   }
- {if $do_streak
-    {if_else {== {gamecfg get mode} multi_coop} 
-       {streak_overlay_panel update_streak 2}
-       {streak_overlay_panel update_streak 1}}}
+  {if $do_streak
+    {do
+       {if_else {== {gamecfg get mode} multi_coop} 
+          {streak_overlay_panel update_streak 2}
+          {streak_overlay_panel update_streak 1}}
+	   {set $beforefirstnote_p1 FALSE}
+	}
+  }
  )
  (gem_miss_callback
   ($slot_hit $real_slot $timing_error)
-  {set $player1_streak 0}
-  {set $interval_p1 50}
-   {if $do_streak
-      {do
-         {if_else {== {gamecfg get mode} multi_coop} 
-            {streak_overlay_panel zero_streak 2}
-            {streak_overlay_panel zero_streak 1}}
-         {if {! $player1_fc}
-            {if {! $beforefirstnote_p1} {streak_overlay_panel not_an_fc 1}}}}}
-  {if 
-     {== {gamecfg get mode} multi_coop}
-        {set $player2_streak 0}
-        {set $interval_p2 50}
-        {if {! $player1_fc} {streak_overlay_panel not_an_fc 0}}
-  })
+   {if_else $do_streak
+      {if_else {== {gamecfg get mode} multi_coop}
+	    {do
+            {if {&& {! $beforefirstnote_p1} $player2_fc}
+			   {streak_overlay_panel not_an_fc 2}
+               {streak_overlay_panel zero_streak 2}
+			   {streak_overlay_panel update_streak 2}
+               {set $player2_streak 0}
+			   {set $interval_p2 50}
+			}}
+		{do
+            {if {&& {! $beforefirstnote_p1} $player1_fc}
+               {streak_overlay_panel not_an_fc 1}
+			   {streak_overlay_panel zero_streak 1}
+			   {streak_overlay_panel update_streak 1}
+			   {set $player1_streak 0}
+			   {set $interval_p1 50}
+			}}}
+	  {if_else {== {gamecfg get mode} multi_coop}
+	    {do
+	        {set $player2_streak 0}
+			{set $interval_p2 50}}
+	    {do
+		    {set $player1_streak 0}
+			{set $interval_p1 50}}}})
+
  (gem_pass_callback
-  {set $beforefirstnote_p1 FALSE}
-  {set $player1_streak 0}
-  {set $interval_p1 50}
-   {if $do_streak
-      {do
-         {if {! player1_fc} {streak_overlay_panel not_an_fc 1}}
-         {if_else {== {gamecfg get mode} multi_coop} 
-         {streak_overlay_panel zero_streak 2}
-         {streak_overlay_panel zero_streak 1}}}}
-  {if {== {gamecfg get_mode} multi_coop}
-     {set $player2_streak 0}
-     {set $interval_p2 50}
-  }
- )
+    {set $beforefirstnote_p1 FALSE}
+	{if $do_streak
+	    {if_else {== {gamecfg get mode} multi_coop}
+		    {do
+			    {if $player2_fc
+			        {do
+				        {streak_overlay_panel not_an_fc 2}
+					    {streak_overlay_panel zero_streak 2}
+						{streak_overlay_panel update_streak 2}
+					    {set $player2_streak 0}
+					    {set $interval_p2 50}}}}
+			{do
+			    {if $player1_fc
+					{do
+						{streak_overlay_panel not_an_fc 1}
+						{streak_overlay_panel zero_streak 1}
+						{streak_overlay_panel update_streak 1}
+						{set $player1_streak 0}
+						{set $interval_p1 50}}}}}
+		{do
+			{if_else {== {gamecfg get mode} multi_coop}
+				{do
+					{set $player2_streak 0}
+					{set $interval_p2 50}}
+				{do
+					{set $player1_streak 0}
+					{set $interval_p1 50}}}}})
+			
+
 }
 
 ;stk_campaign_song_id.view - stk_campaign_lineX.lbl (Single player)
@@ -140,16 +187,19 @@
 ;stk_campaign_song_id_vs2p.view - stk_campaign_line_vs2pX.lbl (VS Player 2)
 
 {new
-   GHPanel
-   streak_overlay_panel
-   (file "../hud/streak_overlay.milo")
-   (enter
-      {if_else
-         {game is_tutorial_running}
-         {do
-            {$this show_overlay FALSE}
-            {set $do_streak FALSE}} ;if this is false, skip all streak script
-         {$this setup_streak}}
+	GHPanel
+	streak_overlay_panel
+	(file "../hud/streak_overlay.milo")
+	(enter
+		{if_else
+			{||
+				{game is_tutorial_running} ;check for tutorial mode
+				{== {gamecfg get mode} attract} ;check for attract mode
+				$cheat_enabled_performance_mode} ;check for performance mode
+			{do
+				{$this show_overlay FALSE}
+				{set $do_streak FALSE}} ;if any above conditions are true, skip all streak script
+		{$this setup_streak}} ;otherwise initialize streak counters
 ;	{script_task
 ;         (units kTaskSeconds)
 ;         (script
@@ -165,14 +215,14 @@
       {stk_campaign_song_id_vers.view set_showing FALSE} ;vs p1 streak view
       {stk_campaign_song_id_vs2p.view set_showing FALSE} ;vs p2 streak view
 
-      {stk_campaign_line1.lbl set_showing FALSE}
-      {stk_campaign_line2.lbl set_showing FALSE}
-      {stk_campaign_line_coop1.lbl set_showing FALSE}
-      {stk_campaign_line_coop2.lbl set_showing FALSE}
-      {stk_campaign_line_vers1.lbl set_showing FALSE}
-      {stk_campaign_line_vers2.lbl set_showing FALSE}
-      {stk_campaign_line_vs2p1.lbl set_showing FALSE}
-      {stk_campaign_line_vs2p2.lbl set_showing FALSE}
+      {stk_campaign_line1.lbl set_showing FALSE} ;single player FC label
+      {stk_campaign_line2.lbl set_showing FALSE} ;single player non-FC label
+      {stk_campaign_line_coop1.lbl set_showing FALSE} ;coop FC label
+      {stk_campaign_line_coop2.lbl set_showing FALSE} ;coop non-FC label
+      {stk_campaign_line_vers1.lbl set_showing FALSE} ;vs p1 FC label
+      {stk_campaign_line_vers2.lbl set_showing FALSE} ;vs p1 non-FC label
+      {stk_campaign_line_vs2p1.lbl set_showing FALSE} ;vs p2 FC label
+      {stk_campaign_line_vs2p2.lbl set_showing FALSE} ;vs p2 non-FC label
       
       {switch
          {gamecfg get mode}
@@ -215,7 +265,15 @@
                {set $stk_view_p1 "stk_campaign_song_id_vs2p.view"}
                {set $stk_prefix_p1 "stk_campaign_line_vs2p"}
             }
-         )}
+         )
+		 (practice
+		    {do
+				{set $stk_view_p0 "stk_campaign_song_id.view"} ;treat practice like single player
+				{set $stk_prefix_p0 "stk_campaign_line"}
+				{set $stk_view_p1 ""}
+				{set $stk_prefix_p1 ""}}
+		 )
+		 }
       {set $streakline_p0 1} ;we're initially on an FC run, so use FC line
       {set $streakline_p1 1} ;same for P1
       {set $streakline_p2 1} ;same for coop
@@ -237,14 +295,20 @@
       {set $beforefirstnote_p1 TRUE} ;same for P1
       {set $player0_fc TRUE} ;player0 is FCing
       {set $player1_fc TRUE} ;player1 is FCing
-      {{sprint $stk_prefix_p0 "1.lbl"} set_wrap_width 200} ;not sure if this is absolutely needed but I've been doing it, so I'm still doing it lol
-      {{sprint $stk_prefix_p0 "2.lbl"} set_wrap_width 200}
-      {if {!= $stk_prefix_p1 ""}
+	  {set $player2_fc TRUE} ;coop and both players are FCing
+;      {{sprint $stk_prefix_p0 "1.lbl"} set_wrap_width 200} ;not sure if this is absolutely needed but I've been doing it, so I'm still doing it lol
+;      {{sprint $stk_prefix_p0 "2.lbl"} set_wrap_width 200}
+;      {{sprint $stk_prefix_p0 "1.lbl"} set_color (color 0.87 0.46 0 1)} ;hopefully sets FC line to gold
+;	  {{sprint $stk_prefix_p0 "2.lbl"} set_color (color 0.9 0.9 0.9 1)} ;hopefully sets non-FC line to white
+	  {if {!= $stk_prefix_p1 ""}
          {do
             {{sprint $stk_prefix_p1 "1.lbl"} set_wrap_width 200} ;if P2 prefix is set, do some shit
             {{sprint $stk_prefix_p1 "2.lbl"} set_wrap_width 200}
             {{sprint $stk_view_p1} set_showing TRUE}
-            {{sprint $stk_prefix_p1 $streakline_p1 ".lbl"} set_showing TRUE}}}
+            {{sprint $stk_prefix_p1 $streakline_p1 ".lbl"} set_showing TRUE}
+;			{{sprint $stk_prefix_p1 "1.lbl"} set_color (color 0.87 0.46 0 1)} ;hopefully sets P2 FC line to gold
+;			{{sprint $stk_prefix_p1 "2.lbl"} set_color (color 0.9 0.9 0.9 1)} ;hopefully sets P2 non-FC line to white
+			}}
       {{sprint $stk_view_p0} set_showing TRUE} ;don't worry, panel is still invisible at this point
       {{sprint $stk_prefix_p0 $streakline_p0 ".lbl"} set_showing TRUE}
    )

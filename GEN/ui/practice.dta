@@ -122,6 +122,7 @@
    (panels meta selpart_bg_panel practice_selpart_panel helpbar)
    (focus practice_selpart_panel)
    (back_screen practice_selsong_screen)
+   (career_mode FALSE)
    (helpbar
       (default
          ((fret1 help_continue)
@@ -726,7 +727,8 @@
    practice_end_panel
    (file practice_end.milo)
    (enter
-      {$this set_focus restart.btn}
+      {hud show_message 0 blank_message}
+	  {$this set_focus restart.btn}
       {do
          ($pat
             {localize gems_hit_pattern})
