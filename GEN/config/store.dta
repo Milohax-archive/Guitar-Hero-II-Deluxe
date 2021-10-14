@@ -217,6 +217,12 @@
 #else
    (becauseitsmidnite
       (price 550))
+   (speedtest
+      (price 500000))
+#endif
+#ifdef _MEGA
+   (becauseitsmidnite
+      (price 550))
 #endif
 #ifdef 8DBUG
    (becauseitsmidnite

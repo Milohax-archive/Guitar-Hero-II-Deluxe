@@ -63,7 +63,7 @@
       (kDifficultyEasy 0 0 0 0 0 0)
       (kDifficultyMedium 500 600 700 800 900 1000 0)
       (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
-      (kDifficultyExpert 1000 1200 2000 2550 3000 3500 0)))
+      (kDifficultyExpert 1700 1900 2700 3250 3700 500000 0)))
 #endif
 #endif
 #endif
@@ -107,7 +107,7 @@
       (kDifficultyEasy 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
       (kDifficultyMedium 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 0)
       (kDifficultyHard 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 0)
-      (kDifficultyExpert 350 450 550 650 750 800 900 1000 1100 1200 1300 1400 1500 500000 0)))
+      (kDifficultyExpert 460 560 660 760 860 800 900 1000 1100 1200 1300 1400 1500 500000 0)))
 #endif
 #endif
 #endif
