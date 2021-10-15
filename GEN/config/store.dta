@@ -159,7 +159,10 @@
    (redoctane_jnack
       (price 550)))
 (song
+;;;;;;if GH2 Elf, but also mega elf
 #ifndef _ENCO
+#ifndef _ONYX
+#ifndef 8DBUG
    (speedtest
       (price 500000))
    (rawdog
@@ -214,21 +217,29 @@
       (price 550))
    (yeswecan
       (price 550))
-#else
+#endif
+#endif
+#endif
+;;;;;;if 80s Elf
+#ifndef _SHIP
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef 2DBUG
    (becauseitsmidnite
       (price 550))
    (speedtest
       (price 500000))
 #endif
+#endif
+#endif
+#endif
+;;;;;;if mega Elf
 #ifdef _MEGA
    (becauseitsmidnite
       (price 550))
 #endif
-#ifdef 8DBUG
-   (becauseitsmidnite
-      (price 1000000))
-#endif
-)
+) ; dont forget to close your parenth 
+
 (character
    (classic
       (price 5000))
