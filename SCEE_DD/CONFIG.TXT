@@ -28,9 +28,7 @@ RESET=Please reset your console after playing this demo.
 BACK=Back
 QUIT=Quit
 PLAY=Play
-GAME=GAME
-EXTRA=EXTRA
-VIDEO=VIDEO
+GAME=MILOHAX
 
 
 
