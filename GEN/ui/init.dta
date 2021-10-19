@@ -49,4 +49,8 @@
 #ifdef 8DBUG
 		 {set $game80s TRUE}
 #endif
+#ifdef _ONYX
+		 {set $game80s FALSE}
+		 {set $nofail TRUE}
+#endif
 {ui goto_screen $first_screen}
