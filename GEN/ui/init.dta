@@ -39,7 +39,6 @@
 {set $interval_p0 50}
 {set $interval_p1 50}
 {set $interval_p2 50}
-{set $songtitle FALSE}
 #ifdef _SHIP
 		 {set $game80s FALSE}
 #endif
@@ -52,5 +51,11 @@
 #ifdef _ONYX
 		 {set $game80s FALSE}
 		 {set $nofail TRUE}
+		 {set $focusmode TRUE}
+#endif
+#ifndef _ONYX
+		 {set $songtitle FALSE}
+#else
+		 {set $songtitle TRUE}
 #endif
 {ui goto_screen $first_screen}
