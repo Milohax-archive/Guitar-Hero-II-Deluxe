@@ -257,7 +257,10 @@
                $p
                {if
                   {$p in_star_mode}
-                  {set $clap TRUE}}}
+			{if_else
+				$focusmode
+                  {set $clap FALSE}
+				  {set $clap TRUE}}}}
             {if
                $clap
                {script_task
@@ -462,6 +465,7 @@
          world
          main})
    (enter
+	  {if $focusmode {crowd_audio set_enabled FALSE}}
       {if_else
          {game multiplayer}
          {handle
