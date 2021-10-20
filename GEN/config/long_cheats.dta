@@ -70,21 +70,25 @@
                {do
                   {set $egg1 TRUE}
                   {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen1}})
             (video_settings_screen
                {do
                   {set $egg2 TRUE}
                   {set $game80s FALSE}
+				  {set $gamegh1 TRUE}
                   {ui goto_screen easter_egg_screen2}})
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
 				  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
                {do
                   {set $egg4 TRUE}
 				  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen4}})
             (credits_screen
                {if
@@ -92,6 +96,7 @@
                   {do
                      {set $egg5 TRUE}
 					 {set $game80s FALSE}
+					 {set $gamegh1 FALSE}
                      {ui goto_screen final_egg_screen}}})}}})
 ((G_YELLOW G_ORANGE G_BLUE G_ORANGE G_YELLOW G_ORANGE G_BLUE G_ORANGE)
    {if
@@ -123,22 +128,26 @@
             (main_screen
                {do
                   {set $egg1 TRUE}
-				  {set $game80s FALSE}
+                  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen1}})
             (video_settings_screen
                {do
                   {set $egg2 TRUE}
-				  {set $game80s FALSE}
+                  {set $game80s FALSE}
+				  {set $gamegh1 TRUE}
                   {ui goto_screen easter_egg_screen2}})
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
 				  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
                {do
                   {set $egg4 TRUE}
 				  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen4}})
             (credits_screen
                {if
@@ -146,6 +155,7 @@
                   {do
                      {set $egg5 TRUE}
 					 {set $game80s FALSE}
+					 {set $gamegh1 FALSE}
                      {ui goto_screen final_egg_screen}}})}}})
 ((G_BLUE G_ORANGE G_YELLOW G_ORANGE G_BLUE G_ORANGE G_YELLOW G_YELLOW)
    {if
@@ -177,28 +187,34 @@
             (main_screen
                {do
                   {set $egg1 TRUE}
-				  {set $game80s FALSE}
+                  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen1}})
             (video_settings_screen
                {do
                   {set $egg2 TRUE}
-				  {set $game80s FALSE}
+                  {set $game80s FALSE}
+				  {set $gamegh1 TRUE}
                   {ui goto_screen easter_egg_screen2}})
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
 				  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
                {do
                   {set $egg4 TRUE}
 				  {set $game80s FALSE}
+				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen4}})
             (credits_screen
                {if
                   {&& $egg1 $egg2 $egg3 $egg4}
                   {do
                      {set $egg5 TRUE}
+					 {set $game80s FALSE}
+					 {set $gamegh1 FALSE}
                      {ui goto_screen final_egg_screen}}})}}})
 ((kPad_Select kPad_Select)
    {if

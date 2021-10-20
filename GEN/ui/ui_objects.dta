@@ -927,8 +927,10 @@
 (UIList
    (types
       (song
-         (resource_file
-            "list_song.milo")
+   (resource_file 
+   {if_else $gamegh1
+   list_song_gh1.milo
+   list_song.milo})
          (vertical TRUE)
          (element
             ((text
@@ -1066,8 +1068,10 @@
                "checkmark.mat"
                "blurb")))
       (song2
-         (resource_file
-            "list_song2.milo")
+   (resource_file 
+   {if_else $gamegh1
+   list_song2_gh1.milo
+   list_song2.milo})
          (vertical TRUE)
          (element
             ((text

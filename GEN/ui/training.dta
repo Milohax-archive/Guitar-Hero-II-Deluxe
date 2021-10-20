@@ -2,10 +2,13 @@
    GHPanel
    training_panel
    (file
+       {if_else
+	  $gamegh1
+	  training_gh1.milo
 	{if_else
       $game80s
       training_80s.milo
-      training.milo})
+      training.milo}})
    (focus tutorials.btn)
    (poll
       {if_else

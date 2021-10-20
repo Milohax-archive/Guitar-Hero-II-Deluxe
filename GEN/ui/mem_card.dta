@@ -101,10 +101,13 @@
    UIPanel
    dialog
    (file
+    {if_else
+	  $gamegh1
+	  dialog_gh1.milo
 	{if_else
       $game80s
       dialog_80s.milo
-      dialog.milo})
+      dialog.milo}})
    (force_exit TRUE)
    (enter
       {{ui current_screen}

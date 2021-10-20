@@ -468,8 +468,10 @@
 {new
    UIPanel
    tutorials_panel
-   (file
-      "tutorials.milo")
+   (file 
+   {if_else $gamegh1
+   tutorials_gh1.milo
+   tutorials.milo})
    (enter
       {gamecfg set mode tutorial}
       {$this set_focus tut_1.btn}

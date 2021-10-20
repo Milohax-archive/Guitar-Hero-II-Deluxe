@@ -2,10 +2,13 @@
    UIPanel
    options_panel
    (file
+    {if_else
+	  $gamegh1
+	  options_gh1.milo
 	{if_else
       $game80s
       options_80s.milo
-      options.milo})
+      options.milo}})
    (focus op_audio.btn)
    (poll
       {if
@@ -189,10 +192,13 @@
    SliderPanel
    audio_settings_panel
    (file
+    {if_else
+	  $gamegh1
+	  game_settings_gh1.milo
 	{if_else
       $game80s
       game_settings_80s.milo
-      game_settings.milo})
+      game_settings.milo}})
    AUDIO_SETTINGS_PANEL_HANDLERS}
 {new
    GHScreen
@@ -214,7 +220,10 @@
 {new
    SliderPanel
    pause_audio_settings_panel
-   (file pause_audio_settings.milo)
+   (file 
+   {if_else $gamegh1
+   pause_audio_settings_gh1.milo
+   pause_audio_settings.milo})
    AUDIO_SETTINGS_PANEL_HANDLERS}
 {new
    GHScreen
@@ -237,10 +246,13 @@
    GHPanel
    mem_card_panel
    (file
+    {if_else
+	  $gamegh1
+	  mem_card_gh1.milo
 	{if_else
       $game80s
       mem_card_80s.milo
-      mem_card.milo})
+      mem_card.milo}})
    (focus save_bands.btn)}
 {new
    GHScreen
@@ -282,7 +294,10 @@
 {new
    GHPanel
    bonus_material_panel
-   (file bonus_material.milo)
+   (file 
+   {if_else $gamegh1
+   bonus_material_gh1.milo
+   bonus_material.milo})
    (focus bm_video3.btn)}
 {new
    GHScreen
@@ -843,10 +858,13 @@
    GHPanel
    pscan_warning_panel
    (file
+       {if_else
+	  $gamegh1
+	  pscan_warning_gh1.milo
 	{if_else
       $game80s
       pscan_warning_80s.milo
-      pscan_warning.milo})
+      pscan_warning.milo}})
    (focus pscan_ok.btn)}
 #define PSCAN_WARNING_SCREEN_HANDLERS
 ((allow_back FALSE)
@@ -895,10 +913,13 @@
    GHPanel
    pscan_switching_panel
    (file
+    {if_else
+	  $gamegh1
+	  pscan_switching_gh1.milo
 	{if_else
       $game80s
       pscan_switching_80s.milo
-      pscan_switching.milo})
+      pscan_switching.milo}})
    (focus pscan_yes.btn)}
 #define PSCAN_SWITCH_SCREEN_HANDLERS
 ((allow_back FALSE)
@@ -963,7 +984,10 @@
 {new
    SliderPanel
    pause_video_settings_panel
-   (file pause_video_settings.milo)
+   (file 
+   {if_else $gamegh1
+   pause_video_settings_gh1.milo
+   pause_video_settings.milo})
    VIDEO_SETTINGS_PANEL_HANDLERS
    (pscan_warning pause_pscan_warning_screen)}
 {new

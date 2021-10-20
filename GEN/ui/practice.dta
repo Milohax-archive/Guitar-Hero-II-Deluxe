@@ -725,7 +725,10 @@
 {new
    GHPanel
    practice_end_panel
-   (file practice_end.milo)
+   (file 
+   {if_else $gamegh1
+   practice_end_gh1.milo
+   practice_end.milo})
    (enter
       {hud show_message 0 blank_message}
 	  {$this set_focus restart.btn}

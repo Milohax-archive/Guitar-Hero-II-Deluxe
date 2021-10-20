@@ -49,10 +49,13 @@
    UIPanel
    sel_difficulty_panel
    (file
+    {if_else
+	  $gamegh1
+	  sel_difficulty_gh1.milo
 	{if_else
       $egg5
       sel_difficulty_80s.milo
-      sel_difficulty.milo})
+      sel_difficulty.milo}})
    SEL_DIFFICULTY_COMMON
    (enter
       {$this update_focus})
@@ -63,10 +66,13 @@
    UIPanel
    sel_diff_career_panel
    (file
+    {if_else
+	  $gamegh1
+	  sel_diff_career_gh1.milo
 	{if_else
       $game80s
       sel_diff_career_80s.milo
-      sel_diff_career.milo})
+      sel_diff_career.milo}})
    SEL_DIFFICULTY_COMMON
    (enter
       {sd_easy_status.lbl
@@ -153,10 +159,13 @@
    GHPanel
    career_panel
     (file
+    {if_else
+	  $gamegh1
+	  career_gh1.milo
 	{if_else
       $game80s
       career_80s.milo
-      career.milo})
+      career.milo}})
    (focus cm_letsrock.btn)
    (enter
       {cm_char.lbl
@@ -1419,8 +1428,12 @@
       {switch
          {gamecfg get mode}
          ((career multi_coop)
-            sel_song.milo)
-         sel_song_quickplay.milo})
+		 {if_else $gamegh1
+            sel_song_gh1.milo
+            sel_song.milo})
+			{if_else $gamegh1
+         sel_song_quickplay_gh1.milo
+         sel_song_quickplay.milo}})
    (metamusic_on_exit TRUE)
    (focus ss_song.lst)
    (joypad

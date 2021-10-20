@@ -385,7 +385,10 @@
 {new
    EndGamePanel
    endgame_panel
-   (file endgame.milo)
+   (file 
+   {if_else $gamegh1
+   endgame_gh1.milo
+   endgame.milo})
    (focus me_continue.btn)
    (reset_focus TRUE)
    HEADLINE_HANDLERS
@@ -1304,7 +1307,10 @@
 {new
    UIPanel
    highscore_panel
-   (file highscore.milo)
+   (file 
+   {if_else $gamegh1
+   highscore_gh1.milo
+   highscore.milo})
    (active_ten 0)
    (auto_add TRUE)
    (flushed FALSE)
@@ -1554,7 +1560,10 @@
 {new
    GHPanel
    complete_panel
-   (file complete.milo)
+   (file 
+   {if_else $gamegh1
+   complete_gh1.milo
+   complete.milo})
    (enter
       {$this set_focus comp_selsong.btn}
       {if_else
