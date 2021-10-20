@@ -103,3 +103,63 @@
    "Shouting \qSTAR POWER!\q is as good a method as any.")
 (multi_coop_tip9
    "When someone calls a \qBand Meeting\q it's usually not a good thing.")
+;
+;
+; GH1 tips
+(loading_tip_gh1_1
+   "Take a break to rest your hands.  Rocking out is hard work!")
+(loading_tip_gh1_2
+   "Don't let your drummer handle the money.")
+(loading_tip_gh1_3
+   "Don't let your lead singer steal all the attention. Singers are egomaniacs.")
+(loading_tip_gh1_4
+   "Don't eat anything that gets tossed onto the stage.")
+(loading_tip_gh1_5
+   "Eleven IS louder than ten.")
+(loading_tip_gh1_6
+   "Always keep an empty bottle in the van.  You'll see.")
+(loading_tip_gh1_7
+   "Don't let the drummer have an \qextended solo\q unless you really have to go to the bathroom.")
+(loading_tip_gh1_8
+   "If anyone insists on wearing a white belt, kick them out of the band.")
+(loading_tip_gh1_9
+   "Don't wear your guitar higher than your belt - you're not in The Beatles.")
+(loading_tip_gh1_10
+   "Don't let the drummer have a microphone.  It'll just end in tears.")
+;
+;
+; GH1 Bonus Songs
+(loading_tip_allofthis
+   "Shaimus Singer Phil Beaudreau and Bassist Johannes \qRash\q Raasina work on the Harmonix QA team.  Phil is gullible, Rash is less so.")
+(loading_tip_behindthemask
+   "A member of the Harmonix QA staff, former C60 frontman Keith Smith, belts out the vocals for Behind the Mask.")
+(loading_tip_breakingwheel
+   "When not working for the Harmonix audio staff, Jeff Allen beats the skins for his band Artillery.")
+(loading_tip_callout
+   "The Acro-brats are the most brattiest band in Boston.  Guitarist Daniel Sussman will steal your lunch money.")
+(loading_tip_cavemanrejoice
+   "Traffickers of meaty, aggressive rock, The Bags have successfully avoided fame and fortune for over 20 years.")
+(loading_tip_cheatonthechurch
+   "The WINNERS of the Be A Guitar Hero contest supply you with slippery red-hot slingin' Quality American Dirtcore. All Hail the Graveyard BBQ!")
+(loading_tip_decontrol
+   "Marcus Henderson, guitarist for Drist, pulls out the solos for a bunch of Guitar Hero songs, including \qBark at the Moon\q and \qGodzilla.\q")
+(loading_tip_evenrats
+   "Ah, the soothing sounds of The Slip.  Accessible Boston Rock.  What's not to love?")
+(loading_tip_eureka
+   "Boston's Upper Crust are a tribute to men who wear tights all over the world.")
+(loading_tip_farewellmyth
+   "Made In Mexico is from Providence, Rhode Island, home to H.P. Lovecraft's body.")
+(loading_tip_fireitup
+   "Before Black Label Society, Zakk tore it up as the guitarist for Ozzy Osbourne.")
+(loading_tip_flyonthewall
+   "A band of destiny, Din features two siblings of Boston rock legends, Tribe.")
+(loading_tip_getready2rokk
+   "Fans of previous Harmonix games will recognize synth pop masters Freezepop - bet you didn't expect them in this game!")
+(loading_tip_guitarhero
+   "Monkey Steals the Peach is a Harmonix super group.  It is made up of 3 artists and a producer: Swid Swiderek, Ryan Lesser, Jason Kendall, Daniel Sussman.")
+(loading_tip_hey
+   "Veteran Harmonix programmer Dan Schmidt sings and strums for Honest Bob and the Factory-to-Dealer Incentives.")
+(loading_tip_sailyourshipby
+   "Izzy \qSparks\q Maxwell plays bass for Count Zero.  He's also a member of the crack Harmonix audio team.")
+(loading_tip_storyofmylove
+   "Venue artist, Scott Sinclair, is the bass player for The Model Sons.")

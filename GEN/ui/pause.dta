@@ -1,7 +1,9 @@
 {new
    GHPanel
    pause_panel
-   (file pause.milo)
+   (file {if_else $gamegh1
+   pause_gh1.milo
+   pause.milo})
    (focus resume.btn)
    (reset_focus TRUE)}
 #define PAUSE_SCREEN_HANDLERS
@@ -80,7 +82,9 @@
 {new
    GHPanel
    pract_pause_panel
-   (file pract_pause.milo)
+   (file {if_else $gamegh1
+   pract_pause_gh1.milo
+   pract_pause.milo})
    (enter
       {do
          ($career

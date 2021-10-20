@@ -2,9 +2,12 @@
    "PRESS ANY BUTTON TO BEGIN")
 (splash_legal
 	{if_else
+	  $gamegh1
+	     "Guitar Hero I Re-DX. 2021. Port by jnack. Modifications @ MiloHax.\nBig thanks to mariteaux for charts and diy stems. Also shout out to Local H the OG.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc."
+	{if_else
       $game80s
    "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
-   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."})
+   "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."}})
 (guitar_help_using
    "USING THE GUITAR CONTROLLER")
 (guitar_help_plugin
@@ -228,39 +231,61 @@
 (E3_MULTI_COOP
    "E3 MULTI CO-OP")
 (big
-   "RedOctane Club")
+{$if_else $gamegh1
+   "Red Octane"
+   "RedOctane Club"})
 (arena
-   "The Arena")
+{$if_else $gamegh1
+   "The Garden"
+   "The Arena"})
 (fest
-   "Vans Warped Tour")
+{$if_else $gamegh1
+   "Toxic Summer Tour"
+   "Vans Warped Tour"})
 (theatre
-   "Rock City Theater")
+{$if_else $gamegh1
+   "Republik Theater"
+   "Rock City Theater"})
 (stone
    "Stonehenge")
 (small1
-   "The Rat Cellar")
+{$if_else $gamegh1
+   "Freak Pit"
+   "The Rat Cellar"})
 (small2
    "The Blackout Bar")
 (battle
    "Battle of the Bands")
 (arena2
-   "The Arena")
+{$if_else $gamegh1
+   "The Garden"
+   "The Arena"})
 (fest2
-   "Vans Warped Tour")
+{$if_else $gamegh1
+   "Toxic Summer Tour"
+   "Vans Warped Tour"})
 (theatre2
-   "Rock City Theater")
+{$if_else $gamegh1
+   "Republik Theater"
+   "Rock City Theater"})
 (stone2
    "Stonehenge")
 (small3
-   "The Rat Cellar")
+{$if_else $gamegh1
+   "Freak Pit"
+   "The Rat Cellar"})
 (small4
    "The Blackout Bar")
 (battle2
    "Battle of the Bands")
 (battle_address
-   "Nilbog High")
+{$if_else $gamegh1
+   "34 Winship St"
+   "Nilbog High"})
 (battle2_address
-   "Nilbog High")
+{$if_else $gamegh1
+   "34 Winship St"
+   "Nilbog High"})
 (small1_address
    "675 Mass Ave")
 (small2_address
@@ -271,6 +296,10 @@
    "677 Flatbush Ave")
 (big_address
    "720 Landsdowne St")
+(BIG_CLUB_ADDRESS
+   "720 Landsdowne St")
+(BASEMENT_ADDRESS
+   "Basement")
 (theatre_address
    "Downtown")
 (theatre2_address

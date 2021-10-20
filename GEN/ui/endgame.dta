@@ -387,7 +387,7 @@
    endgame_panel
    (file 
    {if_else $gamegh1
-   endgame_gh1.milo
+   endgame.milo
    endgame.milo})
    (focus me_continue.btn)
    (reset_focus TRUE)
