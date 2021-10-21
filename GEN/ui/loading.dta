@@ -1,11 +1,14 @@
 {new
    UIPanel
    loading_panel
+   #ifndef GH1RX
    (file
 	{if_else
       $game80s
       loading_80s.milo
       loading.milo})
+	#else
+	(file loading_gh1.milo)
    (enter
       {tip.lbl
          set_localized_text
@@ -16,8 +19,17 @@
       {script_task
          (units kTaskUISeconds)
          (script
+			#ifndef GH1RX
             {animate_forever_30fps $this flyingtape2.grp}
-            {animate_forever_30fps $this loading_word.grp})})}
+            {animate_forever_30fps $this loading_word.grp}
+			#else
+            {animate_forever_30fps $this flyingtape2.grp}
+			{loading_word.mnm
+				animate
+				(period 1.75)
+				(units kTaskUISeconds)}
+			#endif
+			)})} ;dont forget to close parenth
 {new
    GHScreen
    loading_screen

@@ -40,7 +40,7 @@
 (classicgh1 funkgh1 grim)
 #endif
 
-; Specifically handle gh1 characters for demo
+; MULTIPLAYER Specifically handle gh1 characters for demo
 #ifndef GH1RX
 ((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funkgh1 grim))
 #define MULTCHARACTERS ; use these characters specifically for multiplayer
@@ -50,7 +50,7 @@
 #define MULT_LOAD_CHARACTERS
 ((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
 
-; use below characters for everything but the gh1 demo
+; MULTIPLAYER use below characters for everything but the gh1 demo
 #else
 ((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classicgh1 funkgh1 grim))
 #define MULTCHARACTERS ; use these characters specifically for multiplayer
