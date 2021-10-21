@@ -3,6 +3,7 @@
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 8DBUG
+#ifndef GH1RX
 (song_header_battle
    "1. Opening Licks")
 (song_header_small1
@@ -25,11 +26,13 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;;;;if 6 tiers (gh80s)
 #ifndef _SHIP
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 2DBUG
+#ifndef GH1RX
 (song_header_battle2
    "1. Opening Licks")
 (song_header_small3
@@ -48,12 +51,14 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;;;;if 14 tiers (mega)
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef 2DBUG
 #ifndef 8DBUG
+#ifndef GH1RX
 (song_header_battle
    "1. GH2 Opening Licks")
 (song_header_battle2
@@ -84,6 +89,7 @@
    "14. Face-Melters")
 (song_header_store
    "Bonus Tracks")
+#endif
 #endif
 #endif
 #endif
@@ -121,4 +127,21 @@
    " ")
 (song_header_store
    "Custom Songs")
+#endif
+;;;;;;;;if 6 tiers (gh1)
+#ifdef GH1RX
+(song_header_battle
+   "Guitar Hero Redux Demo")
+(song_header_small1
+   " ")
+(song_header_small2
+   " ")
+(song_header_theatre
+   " ")
+(song_header_fest
+   " ")
+(song_header_arena
+   " ")
+(song_header_store
+   "Bonus Tracks")
 #endif

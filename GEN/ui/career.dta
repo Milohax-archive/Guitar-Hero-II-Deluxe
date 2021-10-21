@@ -278,7 +278,9 @@
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
    (file sel_character_debug.milo)
+#endif
 #endif
 #endif
 #endif
@@ -1202,6 +1204,11 @@
             "sv_%s.btn"
             $venue}})
    (enter
+	; disable 2 stages if gh1rdx
+	#ifdef GH1RX
+      {$this disable {sel_venue_panel find sv_small2.btn}}														  
+      {$this disable {sel_venue_panel find sv_stone.btn}}
+	#endif
       {campaign
          foreach_venue
          $venue
@@ -1242,6 +1249,7 @@
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
    (FOCUS_MSG
       {if
          {!
@@ -1276,11 +1284,13 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;if 6 tiers (gh80s/gh80sdebug)
 #ifndef _SHIP
 #ifndef 2DBUG
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
    (FOCUS_MSG
       {if
          {!
@@ -1309,11 +1319,13 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;if 14 tiers (mega/onyx)
 #ifndef _SHIP
 #ifndef 2DBUG
 #ifndef 8DBUG
 #ifndef _ENCO
+#ifndef GH1RX
    (FOCUS_MSG
       {if
          {!
@@ -1366,6 +1378,39 @@
 #endif
 #endif
 #endif
+#endif
+;;;;;if 6 tiers (gh1rdx)
+#ifdef GH1RX
+ (FOCUS_MSG
+  {if
+   {'!'
+    {ui in_transition}}
+   {switch
+    $new_focus
+    (sv_battle.btn
+     {$this set_venue_map_frame 1}
+     {game set_venue battle})
+    (sv_small1.btn
+     {$this set_venue_map_frame 2}
+     {game set_venue small1})
+    (sv_small2.btn
+     {$this set_venue_map_frame 4}
+     {game set_venue small2})
+    (sv_big.btn
+     {$this set_venue_map_frame 4}
+     {game set_venue small2})
+    (sv_theatre.btn
+     {$this set_venue_map_frame 5}
+     {game set_venue theatre})
+    (sv_fest.btn
+     {$this set_venue_map_frame 6}
+     {game set_venue fest})
+    (sv_arena.btn
+     {$this set_venue_map_frame 7}
+     {game set_venue arena})}})
+#endif
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; DONT MISS THIS, THIS HAS NO IFDEF
    (SELECT_START_MSG
       {ui
          goto_screen
@@ -1374,13 +1419,17 @@
 {new
    GHPanel
    sel_venue_panel
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
    (file sel_venue_gh2.milo)
    (focus sv_battle.btn)
+#endif
 #endif
 #endif
 #endif
@@ -1390,8 +1439,10 @@
 #ifndef 2DBUG
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
    (file sel_venue_80s.milo)
    (focus sv_battle2.btn)
+#endif
 #endif
 #endif
 #endif
@@ -1401,11 +1452,18 @@
 #ifndef 2DBUG
 #ifndef 8DBUG
 #ifndef _ENCO
+#ifndef GH1RX
    (file sel_venue_mega.milo)
    (focus sv_battle.btn)
 #endif
 #endif
 #endif
+#endif
+#endif
+;;;;;if gh1rdx
+#ifdef GH1RX
+   (file sel_venue_gh1.milo)
+   (focus sv_battle.btn)
 #endif
 }
 {new
@@ -1621,12 +1679,14 @@
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
             {part2.btn
                set_state
                kDisabled}
             {part2.btn
                set_showing
                FALSE}
+#endif
 #endif
 #endif
 #endif

@@ -730,6 +730,10 @@
       "")
    (orig_sync 0)
    (enter
+	  ;disable change skin button if in gh1 demo
+		#ifdef GH1RX
+		{$this disable game80s.btn}
+		#endif
       {lefty1.chk
          set_check
          {options get_lefty 0}}
@@ -1079,7 +1083,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
    (done_screen bootup_load_new)
+#endif
 #endif
 #endif
 #endif

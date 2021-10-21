@@ -146,6 +146,12 @@
 				metal1}
 				TRUE}
 #endif
+;;;;;;;;if gh1 redux demo
+#ifdef GH1RX
+      {game set_venue fest}
+      {game set_song_index 0}
+      {game set_character punkgh1 TRUE}
+#endif
 ;;;;;;;;if 80's debug Elf
 #ifdef 8DBUG
       {game set_venue fest2}

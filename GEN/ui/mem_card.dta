@@ -19,7 +19,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {ui goto_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -38,7 +40,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {ui goto_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -57,7 +61,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
    bootup_load
+#endif
 #endif
 #endif
 #endif
@@ -195,7 +201,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
    bootup_load_new
+#endif
 #endif
 #endif
 #endif
@@ -224,7 +232,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
                {memcard load_data bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -277,7 +287,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {ui goto_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -338,7 +350,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {set $mc_load_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -359,7 +373,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {set $mc_save_failed_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -409,7 +425,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {ui goto_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -451,7 +469,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {ui goto_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif
@@ -508,7 +528,9 @@
 #ifndef _ENCO
 #ifndef 8DBUG
 #ifndef 2DBUG
+#ifndef GH1RX
             {ui goto_screen bootup_load_new}
+#endif
 #endif
 #endif
 #endif

@@ -126,7 +126,9 @@
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
    (file multi_sel_character_debug.milo)
+#endif
 #endif
 #endif
 #endif
@@ -163,7 +165,9 @@
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
 		 CHARACTERS
+#endif
 #endif
 #endif
 #endif
@@ -207,11 +211,14 @@
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef _ONYX
 		 CHARACTERS
 #endif
 #endif
 #endif
-#endif)}
+#endif
+#endif
+)} ; Don't forget to close parenth
 {new
    CharsysPanel
    char_multi
@@ -231,7 +238,9 @@
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
    (load_order LOAD_CHARACTERS)
+#endif
 #endif
 #endif
 #endif

@@ -3,6 +3,7 @@
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 8DBUG
+#ifndef GH1RX
 (order
    (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
    (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
@@ -33,6 +34,7 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if 80s Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -40,6 +42,7 @@
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 2DBUG
+#ifndef GH1RX
 (order
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
    (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
@@ -68,6 +71,7 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if mega Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -76,6 +80,7 @@
 #ifndef _ONYX
 #ifndef 2DBUG
 #ifndef 8DBUG
+#ifndef GH1RX
 (order
    (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
@@ -113,6 +118,7 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if ONYX Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -136,6 +142,35 @@
       (kDifficultyMedium 0 0)
       (kDifficultyHard 0 0)
       (kDifficultyExpert 0 0)))
+#endif
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if GH1 Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#ifdef GH1RX
+(order
+   (battle allofthis behindthemask thunderkiss65 graveyardshift spanishcastlemagic)
+   (small1)
+   (small2)
+   (theatre)
+   (fest)
+   (arena))
+(required_songs
+   (kDifficultyEasy 3 4)
+   (kDifficultyMedium 4 5)
+   (kDifficultyHard 5 5)
+   (kDifficultyExpert 5 5))
+(cash
+   (starting 250)
+   (star_awards
+      (kDifficultyEasy 0 0 0)
+      (kDifficultyMedium 100 150 300)
+      (kDifficultyHard 150 200 350)
+      (kDifficultyExpert 200 250 500))
+   (status_awards
+      (kDifficultyEasy 0 0 0 0 0 0)
+      (kDifficultyMedium 500 600 700 800 900 1000 0)
+      (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
+      (kDifficultyExpert 1500000 1900 2700 3250 3700 500000 0)))
 #endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #ifdef 8DBUG

@@ -76,7 +76,7 @@
    "*****")
 (song_old_venue
    "Play in the latest venue to continue your career")
-;;;;;if 8 tiers (gh2/gh2debug)
+;;;;;if 8 tiers (gh2/gh2debug gh1rdx)
 #ifndef 8DBUG
 #ifndef _ENCO
 #ifndef _MEGA
@@ -92,8 +92,10 @@
 #ifndef 2DBUG
 #ifndef _MEGA
 #ifndef _ONYX
+#ifndef GH1RX
 (song_current_venue
    "Beat %i/4 songs to continue")
+#endif
 #endif
 #endif
 #endif

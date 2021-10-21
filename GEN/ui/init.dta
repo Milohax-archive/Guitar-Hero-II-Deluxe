@@ -45,6 +45,10 @@
 #ifdef _ENCO
 		 {set $game80s TRUE}
 #endif
+#ifdef GH1RX
+		 {set $egg2 TRUE}
+		 {set $gamegh1 GH1}
+#endif
 #ifdef 8DBUG
 		 {set $game80s TRUE}
 #endif

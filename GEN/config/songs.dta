@@ -3059,7 +3059,158 @@
 ;
 ;
 ;
-;
+; GH1 Redux Demo
+(allofthis
+   (name
+      "All of This")
+   (artist
+      "Shaimus")
+   (song
+      (name songs/allofthis/allofthis)
+      (tracks
+         ((guitar
+               (2 3))
+            (bass
+               (4 5))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (0.9 0.9 0.8 0.8))
+      (cores
+         (-1 -1 1 1))
+      (midi_file songs/allofthis/allofthis.mid))
+   (anim_tempo kTempoFast)
+   (preview 42213 70000)
+   (quickplay
+      (character_outfit goth2)
+      (guitar flying_v)
+      (venue theatre)))
+(behindthemask
+   (name
+      "Behind The Mask")
+   (artist
+      "Anarchy Club")
+   (caption performed_by)
+   (song
+      (name songs/behindthemask/behindthemask)
+      (tracks
+         ((guitar
+               (2 3))
+            (bass
+               (4))))
+      (pans
+         (-1.0 1.0 -1.0 1.0 0.0))
+      (vols
+         (0.0 0.0 0.0 0.0 0.0))
+      (cores
+         (-1 -1 1 1 1))
+      (midi_file songs/behindthemask/behindthemask.mid))
+   (anim_tempo kTempoMedium)
+   (preview 44768 76000)
+   (quickplay
+      (character_outfit goth2)
+      (guitar flying_v)
+      (venue theatre)))
+(graveyardshift
+   (name
+      "Graveyard Shift")
+   (artist
+      "Gurney")
+   (caption performed_by)
+   (song
+      (name songs/graveyardshift/graveyardshift)
+      (tracks
+         ((guitar
+               (2 3))
+            (bass 4)))
+      (pans
+         (-1.0 1.0 -1.0 1.0 0.0))
+      (vols
+         (1.0 1.0 0.0 0.0 -1.0))
+      (cores
+         (-1 -1 1 1 -1))
+      (midi_file songs/graveyardshift/graveyardshift.mid))
+   (anim_tempo kTempoFast)
+   (preview 27850 45350)
+   (quickplay
+      (character_outfit punk1)
+      (guitar flying_v)
+      (venue small1)))
+(trippolette
+   (name
+      "Trippolette")
+   (artist
+      "Andrew Buch")
+   (caption performed_by)
+   (song
+      (name songs/speedtest/speedtest)
+      (tracks
+         ((guitar
+               (2 3))
+            (bass 4)))
+      (pans
+         (-1.0 1.0 -1.0 1.0 0.0))
+      (vols
+         (1.0 1.0 0.0 0.0 -1.0))
+      (cores
+         (-1 -1 1 1 -1))
+      (midi_file songs/speedtest/speedtest.mid))
+   (anim_tempo kTempoFast)
+   (preview 44854 67277)
+   (quickplay
+      (character_outfit goth2)
+      (guitar flying_v)
+      (venue arena)))
+(spanishcastlemagic
+   (name
+      "Spanish Castle Magic")
+   (artist
+      "Jimi Hendrix")
+   (song
+      (name songs/spanishcastlemagic/spanishcastlemagic)
+      (tracks
+         ((guitar
+               (2 3))
+            (rhythm
+               (0 1))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (1.0 1.0 1.0 1.0))
+      (cores
+         (-1 -1 1 1))
+   (midi_file songs/spanishcastlemagic/spanishcastlemagic.mid))
+   (anim_tempo kTempoMedium)
+   (preview 45789 75000)
+   (quickplay
+      (character_outfit goth2)
+      (guitar flying_v)
+      (venue theatre)))
+(thunderkiss65
+   (name
+      "Thunder Kiss 65")
+   (artist
+      "White Zombie")
+   (song
+      (name songs/thunderkiss65/thunderkiss65)
+      (tracks
+         ((guitar
+               (2 3))
+            (bass
+               (4))))
+      (pans
+         (-1.0 1.0 -1.0 1.0 0.0))
+      (vols
+         (0.0 0.0 0.0 0.0 0.0))
+      (cores
+         (-1 -1 1 1 1))
+   (midi_file songs/thunderkiss65/thunderkiss65.mid))
+   (anim_tempo kTempoMedium)
+   (preview 34644 66343)
+   (quickplay
+      (character_outfit goth2)
+      (guitar flying_v)
+      (venue theatre)))
 ;
 ;
 ;
@@ -3300,6 +3451,7 @@
 #ifndef _DRUM
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
 (budget_two_note_chords
    (name
       "Techniques: Speed")
@@ -3500,6 +3652,7 @@
       (guitar sg)
       (venue small2))
    (validate_ignore TRUE))
+#endif
 #endif
 #endif
 #endif

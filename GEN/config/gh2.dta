@@ -154,6 +154,9 @@
 #ifdef _ONYX
 (venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
 #endif
+#ifdef GH1RX
+(venues battle small1 small2 big theatre fest arena stone)
+#endif
 (default_band metal_singer metal_bass metal_drummer)
 (quick_cheats
    #include debug_binds.dta)
@@ -299,6 +302,7 @@
    #include guitars.dta)
 #ifndef 2DBUG
 #ifndef 8DBUG
+#ifndef GH1RX
 (characters
    ({if_else
       $game80s
@@ -368,11 +372,13 @@
       grim})))
 #endif
 #endif
+#endif
 ;;;;;;;;;;;;;;; if debug
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
 (characters
    (punk
       (punk1)
@@ -407,6 +413,41 @@
 #endif
 #endif
 #endif
+#endif
+#endif
+;;;;;;;;;;;;;;; if gh1 demo
+#ifdef GH1RX
+(characters
+   (punkgh1
+      (punkgh1)
+      (punk2))
+   (alternagh1
+      (alternagh1)
+      (alterna2))
+   (glamgh1
+      (glamgh1)
+      (glam2))
+   (gothgh1
+      (gothgh1)
+      (goth1))
+   (metalgh1
+      (metalgh1)
+      (metal2))
+   (rockabill
+      (rockabill1)
+      (rockabill2))
+   (rock
+      (rock2)
+      (rock1))
+   (deathmetal
+      (deathmetal1)
+      (deathmetal2))
+   (classicgh1
+      (classicgh1))
+   (funkgh1
+      (funkgh1))
+   (grim
+      (grim)))
 #endif
 (mc
    #include mc.dta)

@@ -343,12 +343,14 @@
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
 (scythe
    (type grim)
    (skins
       (scythe
          (outfit scythe)
          (mat scythe.mat))))
+#endif
 #endif
 #endif
 #endif

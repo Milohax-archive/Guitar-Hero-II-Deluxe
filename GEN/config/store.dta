@@ -163,6 +163,7 @@
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef 8DBUG
+#ifndef GH1RX
    (speedtest
       (price 500000))
    (rawdog
@@ -220,11 +221,13 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;;if 80s Elf
 #ifndef _SHIP
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 2DBUG
+#ifndef GH1RX
    (becauseitsmidnite
       (price 550))
    (speedtest
@@ -233,10 +236,16 @@
 #endif
 #endif
 #endif
+#endif
 ;;;;;;if mega Elf
 #ifdef _MEGA
    (becauseitsmidnite
       (price 550))
+#endif
+;;;;;;if mega Elf
+#ifdef GH1RX
+   (trippolette
+      (price 500000))
 #endif
 ) ; dont forget to close your parenth 
 
@@ -249,8 +258,10 @@
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
    (grim
       (price 7000))
+#endif
 #endif
 #endif
 #endif

@@ -56,6 +56,7 @@
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 8DBUG
+#ifndef GH1RX
       {do
          ($win_screen $freebird)
          {set
@@ -80,6 +81,7 @@
             {== $win_screen endgame_encore_screen}
             {endgame_encore_panel set freebird $freebird}}
          {ui goto_screen $win_screen}}
+#endif
 #endif
 #endif
 #endif
@@ -681,6 +683,7 @@
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 8DBUG
+#ifndef GH1RX
 #define ENDGAME_ENCORE_LETTERS
 ((endgame_encore_letter3 endgame_encore_letter4 endgame_encore_letter5 endgame_encore_letter6))
 {new
@@ -775,6 +778,7 @@
    (enter
       {world_panel set_showing FALSE}
       {$this set_focus_panel endgame_encore_panel})}
+#endif
 #endif
 #endif
 #endif

@@ -3,6 +3,7 @@
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
 #define CHARACTERS
 ((punk alterna glam goth metal rockabill rock deathmetal classic funk1 grim))
 #define LOAD_CHARACTERS
@@ -13,10 +14,12 @@
 #endif
 #endif
 #endif
+#endif
 
 ; Use these characters for retail ELFs
 #ifndef 2DBUG
 #ifndef 8DBUG
+#ifndef GH1RX
 #define CHARACTERS
 ((punk punkencore alterna alternaencore glam glamencore goth gothencore metal metalencore rockabill rock deathmetal classic funk1 grim grimencore))
 #define LOAD_CHARACTERS
@@ -25,14 +28,38 @@
 (classic funk1)
 #endif
 #endif
+#endif
 
-((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
+; Use these characters for gh1 demo
+#ifdef GH1RX
+#define CHARACTERS
+((punkgh1 alternagh1 glam gothgh1 metalgh1 rockabill rock deathmetal classicgh1 funkgh1 grim))
+#define LOAD_CHARACTERS
+((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classicgh1 funkgh1 grim))
+#define STORE_CHARACTERS
+(classicgh1 funkgh1 grim)
+#endif
+
+; Specifically handle gh1 characters for demo
+#ifndef GH1RX
+((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funkgh1 grim))
 #define MULTCHARACTERS ; use these characters specifically for multiplayer
 ((punkencore alternaencore glamencore gothencore metalencore rockabill rock deathmetal classic funk1 grimencore))
 #define 80SMULT_LOAD_CHARACTERS
 ((punkencore punk2 alternaencore alterna2 glamencore glam2 gothencore goth1 metalencore metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grimencore))
 #define MULT_LOAD_CHARACTERS
 ((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
+
+; use below characters for everything but the gh1 demo
+#else
+((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classicgh1 funkgh1 grim))
+#define MULTCHARACTERS ; use these characters specifically for multiplayer
+((punkgh1 alterngh1 glamgh1 gothgh1 metalgh1 rockabill rock deathmetal classicgh1 funkgh1 grimencore))
+#define 80SMULT_LOAD_CHARACTERS
+((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classicgh1 funkgh1 grim))
+#define MULT_LOAD_CHARACTERS
+((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classicgh1 funkgh1 grim))
+#endif
 
 #define STORE_OUTFITS
 (punk2 alterna2 glam2 goth1 metal2 rockabill2 rock1 deathmetal2)

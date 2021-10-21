@@ -25,7 +25,7 @@
 #define CUT_SCENE_VIDEO
 (
 {if_else
-	  $game_gh1
+	  $gamegh1
 	  intro1.pss
 {if_else
       $game80s

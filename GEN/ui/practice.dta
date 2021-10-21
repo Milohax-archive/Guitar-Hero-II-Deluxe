@@ -82,12 +82,14 @@
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
             {part2.btn
                set_state
                kDisabled}
             {part2.btn
                set_showing
                FALSE}
+#endif
 #endif
 #endif
 #endif

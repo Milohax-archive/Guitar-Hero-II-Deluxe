@@ -928,9 +928,12 @@
    (types
       (song
    (resource_file 
-   {if_else $gamegh1
-   list_song_gh1.milo
-   list_song.milo})
+	#ifndef GH1RX
+		list_song.milo
+	#else
+		list_song_gh1.milo
+	#endif
+	) ; Don't forget to close parenth
          (vertical TRUE)
          (element
             ((text
@@ -1069,9 +1072,12 @@
                "blurb")))
       (song2
    (resource_file 
-   {if_else $gamegh1
-   list_song2_gh1.milo
-   list_song2.milo})
+	#ifndef GH1RX
+		list_song2.milo
+	#else
+		list_song2_gh1.milo
+	#endif
+	) ; Don't forget to close parenth
          (vertical TRUE)
          (element
             ((text

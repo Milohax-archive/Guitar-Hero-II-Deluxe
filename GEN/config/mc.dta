@@ -18,42 +18,54 @@
    "BAGHCE-68878")
 #endif
 
+#ifdef GH1RX
+(base_dir
+   "BAGHCE-11111")
+#endif
+
 #ifdef 2DBUG
-(base_dir “BAGHCE-01001”)
+(base_dir
+	“BAGHCE-01001”)
 #endif
 
 #ifdef 8DBUG
-(base_dir “BAGHCE-01801”)
+(base_dir
+	“BAGHCE-01801”)
 #endif
 
 #ifdef _SHIP
 (elf_name
-   "GH2DX_00.03")
+   "GH2DX.ELF")
 #endif
 
 #ifdef _ENCO
 (elf_name
-   "80SDX_00.02")
+   "GH80SDX.ELF")
 #endif
 
 #ifdef _MEGA
 (elf_name
-   "MEGA_DX.03")
+   "GHMEGADX.ELF")
 #endif
 
 #ifdef _ONYX
 (elf_name
-   "CUST_DX.01")
+   "CUSTOMDX.ELF")
+#endif
+
+#ifdef GH1RX
+(elf_name
+   "GH1RDX.ELF")
 #endif
 
 #ifdef 2DBUG
 (elf_name
-   "GH2_DBUG.01")
+   "GH2DEBUG.ELF")
 #endif
 
 #ifdef 8DBUG
 (elf_name
-   "80S_DBUG.01")
+   "80SDEBUG.ELF")
 #endif
 
 #ifdef _SHIP
@@ -144,10 +156,33 @@
 (testing FALSE)
 #endif
 
+#ifdef GH1RX
+(ps2_icon
+   (file
+      "debug.icn")
+   (bg_transparency 128)
+   (bg_colors
+      (0 0 0)
+      (0 0 0)
+      (160 69 69)
+      (160 69 69))
+   (lit_dirs
+      (0.2 1 0)
+      (1 0 1)
+      (1 -1 0))
+   (lit_colors
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7))
+   (ambient 0.7 0.7 0.7))
+(testing FALSE)
+#endif
+
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef _MEGA
+#ifndef GH1RX
 (ps2_icon
    (file
       "debug.icn")
@@ -167,6 +202,7 @@
       (0.7 0.7 0.7))
    (ambient 0.7 0.7 0.7))
 (testing FALSE)
+#endif
 #endif
 #endif
 #endif

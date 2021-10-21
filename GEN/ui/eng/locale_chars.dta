@@ -4,6 +4,8 @@
    "SELECT YOUR OUTFIT")
 (select_character
    "Select a Character")
+
+;;; Character Names
 (alterna
    "Judy Nails")
 (alterna2
@@ -79,23 +81,25 @@
 (grimencore
    "Grim Ripper")
 (alternagh1
-   "Judy Nails GH1")
+   "Judy Nails")
 (gothgh1
-   "Pandora GH1")
+   "Pandora")
 (punkgh1
-   "Johnny Napalm GH1")
+   "Johnny Napalm")
 (glamgh1
-   "Izzy Sparks GH1")
+   "Izzy Sparks")
 (metalgh1
-   "Axel Steel GH1")
+   "Axel Steel")
 (funkgh1
-   "Xavier Stone GH1")
+   "Xavier Stone")
 (classicgh1
-   "Clive Wilson GH1")
+   "Clive Wilson")
 (grimgh1
-   "Grim Ripper GH1")
+   "Grim Ripper")
 (streamer
    "Streamer")
+
+;;; Character Blurbs
 (alterna_blurb
    {if_else
       $egg5
@@ -174,6 +178,26 @@
    "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."})
 (streamer_blurb
    "Emerging from shadows after a 28 hour marathon live stream, Streamer brings forth the gift of darkness to those who check the link in the description. Also don't forget to follow and subscribe.")
+
+;;; GH1 char blurbs
+(metalgh1_blurb
+   "No frills, no fluff.  Axel Steel is a shredder from the old school.  He was put on this planet for two things, to drink beer and to play some Rock N' Roll.  Looks like he's almost out of beer.")
+(gothgh1_blurb
+   "The Girl Scouts didn't want her, the ballet school couldn't handle her, but the world can't get enough of Pandora's awesome guitar! She plays fast and wild, and UberSound Magazine recently dubbed her the Dark Princess of Rock.")
+(punkgh1_blurb
+   "Raw is the word that describes Johnny Napalm best.  That goes for his guitar playing and his abuse of the English language.  His energy onstage is unmatched. He's the true successor to the Punk Era and an awesome talent.")
+(classicgh1_blurb
+   "Inspired by the 70s British guitar gods, Clive Winston is a precious session commodity - everything he plays on goes gold.  He's got a unique and virtuosic guitar style and knows just how far you can bend a string before it breaks.")
+(glamgh1_blurb
+   "A wild man on and off the stage, Izzy is famous for his guitar playing and infamous for his hard partying ways.  The press can't get enough of this bad boy, who never leaves a crowd unhappy or a hotel room un-trashed.")
+(alternagh1_blurb
+   "Known for her experiments with unconventional guitar tunings and stunning solos, Judy Nails has been touring since she was 17.  She claims that Alternative Rock \qsaved her life\q, and she hopes to return the favor some day.")
+(funkgh1_blurb
+   "A musical prodigy, Xavier Stone's time in Egypt exposed him to African and Middle Eastern techniques which he weaves into his sound. In a recent interview he claimed to rock so hard \qthere's nothing left of a guitar when I'm done with it.\q")
+(grimgh1_blurb
+   "Tearing it up from the beyond, Grim is a full-on rocker.  Grim has abandoned the stealing of souls for the rush of stealing the show and now tours the world laying down monster riffs.")
+
+;;; Outfit Blurbs
 (alterna_outfit_blurb
    "Likes: Perfect spelling, boast-worthy bruises, strawberries\n\nDislikes: Rudeness, fake strawberry-flavored things")
 (deathmetal_outfit_blurb
@@ -200,6 +224,8 @@
    "Likes: make-up, hailstorms, leather\n\nDislikes: Small talk, the beach")
 (metalencore_outfit_blurb
    "Likes: Metal\n\nDislikes: Un-metal")
+
+;;; Outfit Names
 (alterna1_outfit
    "SKULLS")
 (alterna2_outfit
@@ -248,3 +274,13 @@
    "SKINNY TIE")
 (metalencore_outfit
    "FANCY SHIRT")
+(punkgh1_outfit
+   "REDUX")
+(alternagh1_outfit
+   "REDUX")
+(glamgh1_outfit
+   "REDUX")
+(gothgh1_outfit
+   "REDUX")
+(metalgh1_outfit
+   "REDUX")

@@ -1,3 +1,4 @@
+;;; GH2 Authors
 (arterialblack_author
    "Harmonix")
 (badreputation_author
@@ -150,13 +151,8 @@
    "Harmonix")
 (yyz_author
    "Harmonix")
-;
-;
-;
-;
-;
-;
-; GH80s Authors
+
+;;; GH80s Authors
 (18andlife_author
    "Harmonix")
 (aintnothinbut_author
@@ -219,3 +215,17 @@
    "Harmonix")
 (wrathchild_author
    "Harmonix")
+
+;;; GH1 Redux Authors
+(allofthis_author
+   "Harmonix Mariteaux")
+(behindthemask_author
+   "Harmonix, Mariteaux")
+(spanishcastlemagic_author
+   "Harmonix, Mariteaux")
+(thunderkiss65_author
+   "Harmonix, Mariteaux")
+(trippolette_author
+   "Harmonix, Mariteaux")
+(graveyardshift_author
+   "Harmonix, Mariteaux")

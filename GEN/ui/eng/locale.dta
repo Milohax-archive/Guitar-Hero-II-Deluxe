@@ -3,7 +3,7 @@
 (splash_legal
 	{if_else
 	  $gamegh1
-	     "Guitar Hero I Re-DX. 2021. Port by jnack. Modifications @ MiloHax.\nBig thanks to mariteaux for charts and diy stems. Also shout out to Local H the OG.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc."
+	     "Guitar Hero Redux. 2021. Port by jnack. Modifications @ MiloHax.\nBig thanks to mariteaux for charts and diy stems. Also shout out to Local H the OG.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc."
 	{if_else
       $game80s
    "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
@@ -294,6 +294,22 @@
    "675 Mass Ave")
 (small4_address
    "677 Flatbush Ave")
+; Yes these need to be here. it's case sensitive and I don't feel like fixing the gh1 sel venue milo
+(BATTLE_ADDRESS
+   "34 Winship St")
+(SMALL1_ADDRESS
+   "675 Mass Ave")
+(BIG_CLUB_ADDRESS
+   "720 Landsdowne St")
+(ARENA_ADDRESS
+   "1 City Place")
+(FEST_ADDRESS
+   "Randall Field")
+(BASEMENT_ADDRESS
+   "Basement")
+(THEATRE_ADDRESS
+   "Downtown")
+;
 (big_address
    "720 Landsdowne St")
 (BIG_CLUB_ADDRESS
