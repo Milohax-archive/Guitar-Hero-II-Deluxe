@@ -209,14 +209,26 @@
       (dpad_for_navigation FALSE))
    (lefty_joypad_guitar
       (slots
+;comments are wrong. it's the same thing as above but flipped fuck you
+; use r1 for kick (green)
 	{if_else
 		$rbdrum
+			kPad_R1
+			kpad_R1}
+	{if_else
+		$rbdrum
+			4
+			4}
+; okay but use X for green if you use a pad
+	{if_else
+		$nodrum
 			kPad_X
 			kpad_X}
 	{if_else
-		$rbdrum
+		$nodrum
 			0
 			0}
+; use Circle for snare (red)
 	{if_else
 		$rbdrum
 			kPad_Square
@@ -225,6 +237,16 @@
 		$rbdrum
 			1
 			1}
+; okay but use L1 for red if you use a pad
+	{if_else
+		$nodrum
+			kPad_R2
+			kpad_Square}
+	{if_else
+		$nodrum
+			1
+			1}
+; use Tri for ride? (yellow)
 	{if_else
 		$rbdrum
 			kPad_Tri
@@ -233,6 +255,16 @@
 		$rbdrum
 			2
 			2}
+; okay but use R1 for yellow if you use a pad
+	{if_else
+		$nodrum
+			kPad_R1
+			kpad_Tri}
+	{if_else
+		$nodrum
+			2
+			2}
+; use Square for tom (blue)
 	{if_else
 		$rbdrum
 			kPad_Circle
@@ -241,12 +273,31 @@
 		$rbdrum
 			3
 			3}
+; okay but use R2 for blue if you use a pad
+	{if_else
+		$nodrum
+			kPad_L1
+			kpad_Ciircle}
+	{if_else
+		$nodrum
+			3
+			3}
+; use Square for crash (orange)
 	{if_else
 		$rbdrum
 			kPad_L1
 			kpad_L2}
 	{if_else
 		$rbdrum
+			4
+			4}
+; okay but use X for orange if you use a pad
+	{if_else
+		$nodrum
+			kPad_L2
+			kpad_L1}
+	{if_else
+		$nodrum
 			4
 			4}
 	   ) ; Don't forget to close parenth
