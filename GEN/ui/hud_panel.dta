@@ -185,10 +185,26 @@
 				{set $do_streak FALSE}} ;if any above conditions are true, skip all streak script
 		{$this setup_streak}} ;otherwise initialize streak counters
 
-;	{script_task
-;		(units kTaskSeconds)
-;		(script
-;			{score_slide_in.tnm animate (period 0.5) (units kTaskSeconds)})}
+	{script_task
+		(units kTaskSeconds)
+		(script
+			{score_slide_in.tnm animate (period 0.5) (units kTaskSeconds)})}
+
+	{script_task
+		(units kTaskSeconds)
+		(script
+			{score_slide_in1.tnm animate (period 0.5) (units kTaskSeconds)})}
+
+	{script_task
+		(units kTaskSeconds)
+		(script
+			{score_slide_in2.tnm animate (period 0.5) (units kTaskSeconds)})}
+
+	{script_task
+		(units kTaskSeconds)
+		(script
+			{score_slide_in3.tnm animate (period 0.5) (units kTaskSeconds)})}
+			
 	)
 
 	(setup_streak
@@ -209,7 +225,7 @@
 
 		{stk_campaign_line_vs2p1.lbl set_showing FALSE} ;vs p2 FC label
 		{stk_campaign_line_vs2p2.lbl set_showing FALSE} ;vs p2 non-FC label
-
+		
 		{switch
 			{gamecfg get mode}
 				(career
