@@ -730,10 +730,6 @@
       "")
    (orig_sync 0)
    (enter
-	  ;disable change skin button if in gh1 demo
-		#ifdef GH1RX
-		{$this disable game80s.btn}
-		#endif
       {lefty1.chk
          set_check
          {options get_lefty 0}}
@@ -819,9 +815,9 @@
                {lefty2.chk get_check}})
          (game80s.btn
 			{if_else
-				$game80s
-					{set $game80s FALSE}
-					{set $game80s TRUE}}
+				$rbdrum
+					{set $rbdrum FALSE}
+					{set $rbdrum TRUE}}
             {meta_loading_nosave_goto splash_screen})
          (calibrate_lag.btn
             {lag_panel set from_panel $this}
