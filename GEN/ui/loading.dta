@@ -1,14 +1,15 @@
 {new
    UIPanel
    loading_panel
-   #ifndef GH1RX
+   #ifdef GH1RX
+	(file loading_gh1.milo)
+	#else
    (file
 	{if_else
       $game80s
       loading_80s.milo
       loading.milo})
-	#else
-	(file loading_gh1.milo)
+	#endif
    (enter
       {tip.lbl
          set_localized_text
@@ -19,15 +20,15 @@
       {script_task
          (units kTaskUISeconds)
          (script
-			#ifndef GH1RX
-            {animate_forever_30fps $this flyingtape2.grp}
-            {animate_forever_30fps $this loading_word.grp}
-			#else
+			#ifdef GH1RX
             {animate_forever_30fps $this flyingtape2.grp}
 			{loading_word.mnm
 				animate
 				(period 1.75)
 				(units kTaskUISeconds)}
+			#else
+            {animate_forever_30fps $this flyingtape2.grp}
+            {animate_forever_30fps $this loading_word.grp}
 			#endif
 			)})} ;dont forget to close parenth
 {new
