@@ -4,6 +4,8 @@
 OPT=GH2DX
 OPT=ENCORE_DX
 OPT=MEGA_DX
+OPT=DRUM_DX
+OPT=GH1_REDUX
 OPT=DX_DEBUG
 OPT=ENCORE_DEBUG
 OPT=CUSTOMS
@@ -89,6 +91,50 @@ PAD_SELECT=Activate Star Power
 INT_SPLASH1=This flavor of Deluxe meshes the II and 80's campaigns into a big, 14-tier rock marathon. Exercise caution; this setlist is quite endless.
 INT_SPLASH1_TYPE=TEXT
 INT_SPLASH1_TIME=8
+
+
+
+*x:DRUM_DX
+FILE=cdrom0:\DRUMDX.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
+
+*0:DRUM_DX
+LONGTITLE=Drum Hero II Deluxe
+SHORTTITLE=Drum Deluxe
+PAD_L2=First fret/Kick
+PAD_L1=Second fret/Snare
+PAD_R1=Third fret/Hi-hat
+PAD_R2=Fourth fret/Tom
+PAD_CROSS=Fifth fret/Cymbal
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
+INT_SPLASH1=This flavor of Deluxe features only the 30 songs that have drum charts, tiered out according to drum difficulty rather than guitar difficulty.<p>Guitar and bass are still available, of course. This just makes finding the drum songs more convenient.
+INT_SPLASH1_TYPE=TEXT
+INT_SPLASH1_TIME=12
+
+
+
+*x:GH1_REDUX
+FILE=cdrom0:\GH1RDX.ELF
+FILETYPE=EXECUTABLE
+FLASH=300
+TYPE=GAME
+
+*0:GH1_REDUX
+LONGTITLE=Guitar Hero Redux
+SHORTTITLE=GH1 Redux
+PAD_L2=First fret/Kick
+PAD_L1=Second fret/Snare
+PAD_R1=Third fret/Hi-hat
+PAD_R2=Fourth fret/Tom
+PAD_CROSS=Fifth fret/Cymbal
+PAD_LSTICK=Whammy
+PAD_SELECT=Activate Star Power
+INT_SPLASH1=This is a demo of GH1 Redux, an ongoing effort to port the characters and enhance the songs from the first Guitar Hero game for play in GH2 Deluxe.<p>Be forewarned that this demo only works on an emulator, and will freeze on selecting a song on hardware. If you're playing on a real PS2, you might as well reboot your console now.
+INT_SPLASH1_TYPE=TEXT
+INT_SPLASH1_TIME=15
 
 
 
