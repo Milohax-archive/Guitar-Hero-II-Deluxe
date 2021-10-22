@@ -2954,17 +2954,29 @@
    (caption performed_by)
    (song
       (name songs/thunderhorse/thunderhorse)
-      (tracks
-         ((guitar
-               (2 3))
-            (bass 4)
-			(fake 0)))
+      (
+         'tracks'
+         (
+            (
+               'guitar'
+               (2)
+            )
+            (
+               'bass'
+               (3)
+            )
+            (
+               'drum'
+               (4 5)
+            )
+         )
+      )
       (pans
-         (-1.0 1.0 -1.0 1.0 0.0))
+         (-1.0 1.0 0.0 0.0 -1.0 1.0))
       (vols
-         (-3.0 -3.0 -3.0 -3.0 0.0))
+         (0.0 0.0 0.0 0.0 0.0 0.0))
       (cores
-         (-1 -1 1 1 -1))
+         (-1 -1 1 -1 -1 -1))
       (midi_file songs/thunderhorse/thunderhorse.mid)
       (hopo_threshold 250))
    (anim_tempo kTempoFast)
