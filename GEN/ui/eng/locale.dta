@@ -230,62 +230,72 @@
    "E3 SINGLE PLAYER")
 (E3_MULTI_COOP
    "E3 MULTI CO-OP")
+#ifdef GH1RX
 (big
-{$if_else $gamegh1
-   "Red Octane"
-   "RedOctane Club"})
+   "Red Octane")
 (arena
-{$if_else $gamegh1
-   "The Garden"
-   "The Arena"})
+   "The Garden")
 (fest
-{$if_else $gamegh1
-   "Toxic Summer Tour"
-   "Vans Warped Tour"})
+   "Toxic Summer Tour")
 (theatre
-{$if_else $gamegh1
-   "Republik Theater"
-   "Rock City Theater"})
-(stone
-   "Stonehenge")
+   "Republik Theater")
 (small1
-{$if_else $gamegh1
-   "Freak Pit"
-   "The Rat Cellar"})
+   "Freak Pit")
 (small2
    "The Blackout Bar")
 (battle
    "Battle of the Bands")
 (arena2
-{$if_else $gamegh1
-   "The Garden"
-   "The Arena"})
+   "The Garden")
 (fest2
-{$if_else $gamegh1
-   "Toxic Summer Tour"
-   "Vans Warped Tour"})
+   "Toxic Summer Tour")
 (theatre2
-{$if_else $gamegh1
-   "Republik Theater"
-   "Rock City Theater"})
-(stone2
-   "Stonehenge")
+   "Republik Theater")
 (small3
-{$if_else $gamegh1
    "Freak Pit"
-   "The Rat Cellar"})
+   "The Rat Cellar")
 (small4
    "The Blackout Bar")
 (battle2
    "Battle of the Bands")
+#else
+(big
+   "RedOctane Club")
+(arena
+   "The Arena")
+(fest
+   "Vans Warped Tour")
+(theatre
+   "Rock City Theater")
+(stone
+   "Stonehenge")
+(small1
+   "The Rat Cellar")
+(small2
+   "The Blackout Bar")
+(battle
+   "Battle of the Bands")
+(arena2
+   "The Arena")
+(fest2
+   "Vans Warped Tour")
+(theatre2
+   "Rock City Theater")
+(stone2
+   "Stonehenge")
+(small3
+   "The Rat Cellar")
+(small4
+   "The Blackout Bar")
+(battle2
+   "Battle of the Bands")
+#endif
 (battle_address
-{$if_else $gamegh1
    "34 Winship St"
-   "Nilbog High"})
+   "Nilbog High")
 (battle2_address
-{$if_else $gamegh1
    "34 Winship St"
-   "Nilbog High"})
+   "Nilbog High")
 (small1_address
    "675 Mass Ave")
 (small2_address
