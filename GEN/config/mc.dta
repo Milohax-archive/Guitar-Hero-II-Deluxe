@@ -23,6 +23,11 @@
    "BAGHCE-11111")
 #endif
 
+#ifdef _DRUM
+(base_dir
+   "BAGHCE-12123")
+#endif
+
 #ifdef 2DBUG
 (base_dir
 	“BAGHCE-01001”)
@@ -112,6 +117,7 @@
 (testing FALSE)
 #endif
 
+#ifndef _DRUM
 #ifdef _ENCO
 (ps2_icon
    (file
@@ -132,6 +138,7 @@
       (0.7 0.7 0.7))
    (ambient 0.7 0.7 0.7))
 (testing FALSE)
+#endif
 #endif
 
 #ifdef _MEGA
@@ -166,6 +173,28 @@
       (0 0 0)
       (160 69 69)
       (160 69 69))
+   (lit_dirs
+      (0.2 1 0)
+      (1 0 1)
+      (1 -1 0))
+   (lit_colors
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7)
+      (0.7 0.7 0.7))
+   (ambient 0.7 0.7 0.7))
+(testing FALSE)
+#endif
+
+#ifdef _DRUM
+(ps2_icon
+   (file
+      "80sdx.icn")
+   (bg_transparency 128)
+   (bg_colors
+      (255 255 0)
+      (0 191 255)
+      (255 105 180)
+      (0 238 2))
    (lit_dirs
       (0.2 1 0)
       (1 0 1)
