@@ -158,6 +158,10 @@
       {track_panel intro_start_msg}
       {mtv_overlay_panel show_overlay FALSE}
       {streak_overlay_panel show_overlay FALSE}
+	  {switch
+	     {gamecfg get mode}
+		 (multi_vs {set $songtitle FALSE})
+		 (multi_fo {set $songtitle FALSE})}
       {if
          $encore
          {do
