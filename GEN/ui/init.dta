@@ -39,6 +39,8 @@
 {set $interval_p0 50}
 {set $interval_p1 50}
 {set $interval_p2 50}
+{set $rbdrum FALSE}
+{set $nodrum TRUE}
 #ifdef _SHIP
 		 {set $game80s FALSE}
 #endif

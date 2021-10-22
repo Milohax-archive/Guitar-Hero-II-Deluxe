@@ -1,14 +1,255 @@
 (controller  ; originally from config/beatmatch_controller.dta
    (joypad
-      (slots kPad_L2 0 kPad_L1 1 kPad_R1 2 kPad_R2 3 kPad_X 4)
+      (slots
+; use r1 for kick (green)
+	{if_else
+		$rbdrum
+			kPad_R1
+			kpad_R1}
+	{if_else
+		$rbdrum
+			0
+			0}
+; use L1 for kick (green)
+	{if_else
+		$rbdrum
+			kPad_L1
+			kpad_L2}
+	{if_else
+		$rbdrum
+			0
+			0}
+; okay but use L2 for green if you use a pad
+	{if_else
+		$nodrum
+			kPad_L2
+			kpad_L1}
+	{if_else
+		$nodrum
+			0
+			0}
+; use Circle for snare (red)
+	{if_else
+		$rbdrum
+			kPad_Circle
+			kpad_L1}
+	{if_else
+		$rbdrum
+			1
+			1}
+; okay but use L1 for red if you use a pad
+	{if_else
+		$nodrum
+			kPad_L1
+			kpad_Circle}
+	{if_else
+		$nodrum
+			1
+			1}
+; use Tri for ride? (yellow)
+	{if_else
+		$rbdrum
+			kPad_Tri
+			kpad_R1}
+	{if_else
+		$rbdrum
+			2
+			2}
+; okay but use R1 for yellow if you use a pad
+	{if_else
+		$nodrum
+			kPad_R1
+			kpad_Tri}
+	{if_else
+		$nodrum
+			2
+			2}
+; use Square for tom (blue)
+	{if_else
+		$rbdrum
+			kPad_Square
+			kpad_R2}
+	{if_else
+		$rbdrum
+			3
+			3}
+; okay but use R2 for blue if you use a pad
+	{if_else
+		$nodrum
+			kPad_R2
+			kpad_Square}
+	{if_else
+		$nodrum
+			3
+			3}
+; use Square for crash (orange)
+	{if_else
+		$rbdrum
+			kPad_X
+			kpad_X}
+	{if_else
+		$rbdrum
+			4
+			4}
+; okay but use X for orange if you use a pad
+	{if_else
+		$nodrum
+			kPad_X
+			kpad_X}
+	{if_else
+		$nodrum
+			4
+			4}
+	   ) ; Don't forget to close parenth
       (force_mercury kPad_Select)
       (dpad_for_navigation FALSE))
    (joypad_guitar
-      (slots kPad_L2 0 kPad_L1 1 kPad_R1 2 kPad_R2 3 kPad_X 4)
+      (slots
+; use r1 for kick (green)
+	{if_else
+		$rbdrum
+			kPad_R1
+			kpad_R1}
+	{if_else
+		$rbdrum
+			0
+			0}
+; use L1 for kick (green)
+	{if_else
+		$rbdrum
+			kPad_L1
+			kpad_L2}
+	{if_else
+		$rbdrum
+			0
+			0}
+; okay but use L2 for green if you use a pad
+	{if_else
+		$nodrum
+			kPad_L2
+			kpad_L1}
+	{if_else
+		$nodrum
+			0
+			0}
+; use Circle for snare (red)
+	{if_else
+		$rbdrum
+			kPad_Circle
+			kpad_L1}
+	{if_else
+		$rbdrum
+			1
+			1}
+; okay but use L1 for red if you use a pad
+	{if_else
+		$nodrum
+			kPad_L1
+			kpad_Circle}
+	{if_else
+		$nodrum
+			1
+			1}
+; use Tri for ride? (yellow)
+	{if_else
+		$rbdrum
+			kPad_Tri
+			kpad_R1}
+	{if_else
+		$rbdrum
+			2
+			2}
+; okay but use R1 for yellow if you use a pad
+	{if_else
+		$nodrum
+			kPad_R1
+			kpad_Tri}
+	{if_else
+		$nodrum
+			2
+			2}
+; use Square for tom (blue)
+	{if_else
+		$rbdrum
+			kPad_Square
+			kpad_R2}
+	{if_else
+		$rbdrum
+			3
+			3}
+; okay but use R2 for blue if you use a pad
+	{if_else
+		$nodrum
+			kPad_R2
+			kpad_Square}
+	{if_else
+		$nodrum
+			3
+			3}
+; use X for crash (orange)
+	{if_else
+		$rbdrum
+			kPad_X
+			kpad_X}
+	{if_else
+		$rbdrum
+			4
+			4}
+; okay but use X for orange if you use a pad
+	{if_else
+		$nodrum
+			kPad_X
+			kpad_X}
+	{if_else
+		$nodrum
+			4
+			4}
+	   ) ; Don't forget to close parenth
       (force_mercury kPad_Select)
       (dpad_for_navigation FALSE))
    (lefty_joypad_guitar
-      (slots kPad_X 0 kPad_R2 1 kPad_R1 2 kPad_L1 3 kPad_L2 4)
+      (slots
+	{if_else
+		$rbdrum
+			kPad_X
+			kpad_X}
+	{if_else
+		$rbdrum
+			0
+			0}
+	{if_else
+		$rbdrum
+			kPad_Square
+			kpad_R2}
+	{if_else
+		$rbdrum
+			1
+			1}
+	{if_else
+		$rbdrum
+			kPad_Tri
+			kpad_R1}
+	{if_else
+		$rbdrum
+			2
+			2}
+	{if_else
+		$rbdrum
+			kPad_Circle
+			kpad_L1}
+	{if_else
+		$rbdrum
+			3
+			3}
+	{if_else
+		$rbdrum
+			kPad_L1
+			kpad_L2}
+	{if_else
+		$rbdrum
+			4
+			4}
+	   ) ; Don't forget to close parenth
       (force_mercury kPad_Select)
       (dpad_for_navigation FALSE))
    (guitar
