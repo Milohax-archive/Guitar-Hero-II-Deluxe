@@ -227,14 +227,14 @@
          (units kTaskSeconds)
          (script
             {handle
-			   (streak_overlay_panel show_overlay $do_streak)
                ($this slide_meter_in)})}
       {script_task
          (delay 2)
          (units kTaskSeconds)
          (script
             {handle
-               ($this intro_end)})}
+               ($this intro_end)
+			   (streak_overlay_panel show_overlay $do_streak)})}
       {set
          [intro_complete]
          TRUE})
