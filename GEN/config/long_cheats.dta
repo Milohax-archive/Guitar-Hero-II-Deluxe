@@ -81,7 +81,7 @@
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
-				  {set $game80s FALSE}
+				  {set $game80s TRUE}
 				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
@@ -140,7 +140,7 @@
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
-				  {set $game80s FALSE}
+				  {set $game80s TRUE}
 				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
@@ -199,7 +199,7 @@
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
-				  {set $game80s FALSE}
+				  {set $game80s TRUE}
 				  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
