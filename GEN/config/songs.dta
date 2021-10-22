@@ -3082,14 +3082,14 @@
       (tracks
          ((guitar
                (2 3))
-            (bass
-               (4 5))))
+            (bass 4)
+			(fake 0)))
       (pans
-         (-1.0 1.0 -1.0 1.0))
+         (-1.0 1.0 -1.0 1.0 0.0))
       (vols
-         (0.9 0.9 0.8 0.8))
+         (0.0 0.0 0.0 0.0 0.0))
       (cores
-         (-1 -1 1 1))
+         (-1 -1 1 1 -1))
       (midi_file songs/allofthis/allofthis.mid))
    (anim_tempo kTempoFast)
    (preview 42213 70000)
@@ -3108,8 +3108,8 @@
       (tracks
          ((guitar
                (2 3))
-            (bass
-               (4))))
+            (bass 4)
+			(fake 0)))
       (pans
          (-1.0 1.0 -1.0 1.0 0.0))
       (vols
@@ -3134,7 +3134,8 @@
       (tracks
          ((guitar
                (2 3))
-            (bass 4)))
+            (bass 4)
+			(fake 0)))
       (pans
          (-1.0 1.0 -1.0 1.0 0.0))
       (vols
@@ -3155,18 +3156,19 @@
       "Andrew Buch")
    (caption performed_by)
    (song
-      (name songs/speedtest/speedtest)
+      (name songs/trippolette/trippolette)
       (tracks
          ((guitar
                (2 3))
-            (bass 4)))
+            (bass 4)
+			(fake 0)))
       (pans
          (-1.0 1.0 -1.0 1.0 0.0))
       (vols
-         (1.0 1.0 0.0 0.0 -1.0))
+         (0.0 0.0 0.0 0.0 0.0))
       (cores
          (-1 -1 1 1 -1))
-      (midi_file songs/speedtest/speedtest.mid))
+      (midi_file songs/trippolette/trippolette.mid))
    (anim_tempo kTempoFast)
    (preview 44854 67277)
    (quickplay
@@ -3188,7 +3190,7 @@
       (pans
          (-1.0 1.0 -1.0 1.0))
       (vols
-         (1.0 1.0 1.0 1.0))
+         (0.0 0.0 0.0 0.0))
       (cores
          (-1 -1 1 1))
    (midi_file songs/spanishcastlemagic/spanishcastlemagic.mid))
@@ -3200,7 +3202,7 @@
       (venue theatre)))
 (thunderkiss65
    (name
-      "Thunder Kiss 65")
+      "Thunder Kiss '65")
    (artist
       "White Zombie")
    (song
@@ -3208,14 +3210,14 @@
       (tracks
          ((guitar
                (2 3))
-            (bass
-               (4))))
+            (bass 4)
+			(fake 0)))
       (pans
          (-1.0 1.0 -1.0 1.0 0.0))
       (vols
          (0.0 0.0 0.0 0.0 0.0))
       (cores
-         (-1 -1 1 1 1))
+         (-1 -1 1 1 -1))
    (midi_file songs/thunderkiss65/thunderkiss65.mid))
    (anim_tempo kTempoMedium)
    (preview 34644 66343)
