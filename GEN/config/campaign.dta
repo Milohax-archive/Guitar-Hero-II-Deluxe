@@ -148,7 +148,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if 80s Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifndef _drum
+#ifdef _drum
 (order
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
    (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)

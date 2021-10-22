@@ -3,9 +3,11 @@
    "BAGHCE-00020")
 #endif
 
+#ifndef _DRUM
 #ifdef _ENCO
 (base_dir
    "BAGHCE-00080")
+#endif
 #endif
 
 #ifdef _MEGA
