@@ -59,7 +59,7 @@
 (bootup_create_save_check_ps2
 	{if_else
       $gamegh1
-	  "No Guitar Hero Redux save data present on memory card (8MB)(for PlayStation®2) in MEMORY CARD slot {SLOT}. Guitar Hero Encore Deluxe uses an Autosave feature. {REQ_SPACE} of free space is required to save game data. Do you want to create a save file now?"
+	  "No Guitar Hero Redux save data present on memory card (8MB)(for PlayStation®2) in MEMORY CARD slot {SLOT}. Guitar Hero Redux uses an Autosave feature. {REQ_SPACE} of free space is required to save game data. Do you want to create a save file now?"
 	{if_else
       $game80s
    "No Guitar Hero Encore Deluxe save data present on memory card (8MB)(for PlayStation®2) in MEMORY CARD slot {SLOT}. Guitar Hero Encore Deluxe uses an Autosave feature. {REQ_SPACE} of free space is required to save game data. Do you want to create a save file now?"
@@ -151,7 +151,7 @@
 (mc_nocard_error_ps2
 	{if_else
       $gamegh1
-   "No memory card (8MB)(for PlayStation®2) inserted in MEMORY CARD slot {SLOT}. Do you wish to insert a memory card (8MB)(for PlayStation®2) containing Guitar Hero II Deluxe data and try loading again?"
+   "No memory card (8MB)(for PlayStation®2) inserted in MEMORY CARD slot {SLOT}. Do you wish to insert a memory card (8MB)(for PlayStation®2) containing Guitar Hero Redux data and try loading again?"
 	{if_else
       $game80s
    "No memory card (8MB)(for PlayStation®2) inserted in MEMORY CARD slot {SLOT}. Do you wish to insert a memory card (8MB)(for PlayStation®2) containing Guitar Hero Encore Deluxe data and try loading again?"
