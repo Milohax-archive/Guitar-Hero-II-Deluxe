@@ -204,6 +204,10 @@
 			(script
 				{score_slide_in3.tnm animate (period 0.5) (units kTaskSeconds)})})
 
+	(streak_lastframe
+		{stk_campaign_song_id.view set_frame METER_END_FRAME}
+	)
+
 	(setup_streak
 		{set $do_streak TRUE} ;if this is true, run all streak script
 		{stk_campaign_song_id.view set_showing FALSE} ;single player streak view
@@ -410,6 +414,7 @@
 	(intro_skip
 		{$this reset}
 		{meters_slide_in.view set_frame METER_END_FRAME}
+		{streak_overlay_panel streak_lastframe}
 		{$this set_meters_showing TRUE})
 
 	(slide_meter_in

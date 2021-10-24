@@ -19,7 +19,7 @@
             {== $modifier_exit multi_coop_selsong_screen}
             {== $modifier_exit multi_fo_selsong_screen}}
          {gs_sfx.sld set_num_steps 31}
-         {gs_sfx.sld set_num_steps 41}})
+         {gs_sfx.sld set_num_steps 31}});was 41 steps, dropped to 31 when disallowing <100%
    (slider_changed
       {'||'
          {!=
@@ -31,24 +31,11 @@
    (enter
       {gs_guitar.sld
          set_current
-         {int
-            {'+'
-               0.5
-               {/
-                  {'+'
-                     {- $trackspd 1}
-                     0.5}
-                  0.1}}}}
+         {int {+ 0.5 {/ {+ {- $trackspd 1} 0.5} 0.1}}}}
       {gs_sfx.sld
          set_current
-         {int
-            {'+'
-               0.5
-               {/
-                  {'+'
-                     {- $speedmod 1}
-                     0.5}
-                  5.0e-2}}}}
+;         {int {+ 0.5 {/ {+ {- $speedmod 1} 0.5} 0.05}}}} ;original formula with <100% possible
+         {int {+ 0.5 {/ {- $speedmod 1} 0.05}}}} ;new formula that should undercap at 100%, removed addition of 0.5 directly to $speedmod
       {stereo.chk set_check $focusmode}
       {$this display_speed_msg $trackspd $speedmod})
    (poll
@@ -62,36 +49,19 @@
          set_localized_text
          {sprintf
             {localize speed_msg}
-            {int
-               {'+'
-                  0.5
-                  {'*' $tspd 100}}}
-            {int
-               {'+'
-                  0.5
-                  {'*' $mspd 100}}}}})
+            {int {+ 0.5 {* $tspd 100}}}
+            {int {+ 0.5 {* $mspd 100}}}}})
    (set_speeds
       {if
          {$this slider_changed}
          {do
             {set
                $trackspd
-               {-
-                  {'+'
-                     1
-                     {'*'
-                        {gs_guitar.sld current}
-                        0.1}}
-                  0.5}}
+               {- {+ 1 {* {gs_guitar.sld current} 0.1}} 0.5}}
             {set
                $speedmod
-               {-
-                  {'+'
-                     1
-                     {'*'
-                        {gs_sfx.sld current}
-                        5.0e-2}}
-                  0.5}}
+;               {- {+ 1 {* {gs_sfx.sld current} 0.05}} 0.5}} ;original formula with <100% possible
+               {+ 1 {* {gs_sfx.sld current} 0.05}}} ;new formula that should undercap at 100%, removed subtraction of 0.5
             {$this display_speed_msg $trackspd $speedmod}}})
    (slider_select_cancel
       ($component)
