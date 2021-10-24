@@ -172,6 +172,7 @@
       {if_else
          {! $fast}
          {do
+            {if $do_streak {streak_overlay_panel setup_streak}}
             {script_task
                (delay 1)
                (units kTaskSeconds)
@@ -183,6 +184,7 @@
                (script
                   {mtv_overlay_panel show_overlay $songtitle})}}
          {do
+            {if $do_streak {streak_overlay_panel setup_streak}}
             {script_task
                (delay 1)
                (units kTaskSeconds)
