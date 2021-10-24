@@ -1,57 +1,28 @@
-; Chose what main menu to display based off egg screen
-;main.milo - GH2DX
-;main_egg0.milo - GH2DXCE
-;main_egg1.milo - GH1
-;main_egg2.milo - GH80SDX
-;main_egg3.milo - GH3
-;main_egg_final.milo - ???????
+; Chose what main menu to display based off egg screen. Custom Edition and standard gh2dx screen are swapped based on elf usage.
+;main.milo - GH2DX | main_egg0.milo - GH2DXCE | main_egg1.milo - GH1 | main_egg2.milo - GH80SDX | main_egg3.milo - GH3 | main_egg_final.milo - ???????
 {new
    GHPanel
    main_panel
-   (file
-	{if_else
-      $egg5
-      main_egg_final.milo
-		{if_else
-			$egg4
-			main_egg3.milo
-			{if_else
-				$egg3
-				main_egg2.milo
-				{if_else
-					$egg2
-					main_egg1.milo
-					{if_else
-						$egg1
-						#ifndef _ONYX
-						main_egg0.milo
-						#else
-						main.milo
-						#endif
-							{if_else
-								$game80s
-								main_egg2.milo
-								#ifndef _ONYX
-								main.milo
-								#else
-								main_egg0.milo
-								#endif}}}}}})
+	(file
+		{if_else $egg5 main_egg_final.milo
+			{if_else $egg4 main_egg3.milo
+				{if_else $egg3 main_egg2.milo
+					{if_else $egg2 main_egg1.milo
+						{if_else $egg1 #ifndef _ONYX main_egg0.milo #else main.milo #endif
+							{if_else $game80s main_egg2.milo #ifndef _ONYX main.milo #else main_egg0.milo #endif}}}}}})
    (focus main_quickspin.btn)
    (msg_last_frame 0)
    (already_entered FALSE)
    (memcard_flow_entered FALSE)
    (retain_last_focus FALSE)
-   (enter
-#ifndef _ONYX
-      {set $main_entered TRUE}
-#else
+   (enter #ifndef _ONYX {set $main_entered TRUE}
+	#else
       {set $main_entered TRUE}
       {$this disable main_career.btn}
       {set $cheat_enabled_unlock_all 1}
       {campaign set_all_access 1}
       {set $disable_save 1}
-      {set $disable_career 1}
-#endif
+      {set $disable_career 1} #endif
       {$this reset_player_settings}
       {if
          {!
@@ -102,68 +73,52 @@
       {{game get_player_config 0}
          set_difficulty
          kDifficultyExpert}
-;;;;;;;;if gh2 retail Elf
+;if gh2 retail Elf
 #ifdef _SHIP
       {game set_venue fest}
       {game set_song_index 0}
       {game set_character 
-   	  	{if_else
-			$game80s
-				metalencore
-				metal1}
-				TRUE}
-#endif
-;;;;;;;;if 80's retail Elf
+      {if_else $game80s metalencore metal1} TRUE}
+	  #endif
+;if 80's retail Elf
 #ifdef _ENCO
       {game set_venue fest2}
       {game set_song_index 0}
       {game set_character 
-   	  	{if_else
-			$game80s
-				metalencore
-				metal1}
-				TRUE}
-#endif
-;;;;;;;;if Mega Elf
+      {if_else $game80s metalencore metal1} TRUE}
+	  #endif
+;if Mega Elf
 #ifdef _MEGA
       {game set_venue fest}
       {game set_song_index 0}
       {game set_character 
-   	  	{if_else
-			$game80s
-				metalencore
-				metal1}
-				TRUE}
-#endif
-;;;;;;;;if ONYX Elf
+      {if_else $game80s metalencore metal1} TRUE}
+	  #endif
+;if ONYX Elf
 #ifdef _ONYX
       {game set_venue fest}
       {game set_song_index 0}
       {game set_character 
-   	  	{if_else
-			$game80s
-				metalencore
-				metal1}
-				TRUE}
-#endif
-;;;;;;;;if gh1 redux demo
+      {if_else $game80s metalencore metal1} TRUE}
+	  #endif
+;if gh1 redux demo
 #ifdef GH1RX
       {game set_venue fest}
       {game set_song_index 0}
       {game set_character punkgh1 TRUE}
-#endif
-;;;;;;;;if 80's debug Elf
+	  #endif
+;if 80's debug Elf
 #ifdef 8DBUG
       {game set_venue fest2}
       {game set_song_index 0}
       {game set_character metal1 TRUE}
-#endif
-;;;;;;;;if gh2dbug Elf
+	  #endif
+;if gh2dbug Elf
 #ifdef _2DBUG
       {game set_venue fest}
       {game set_song_index 0}
       {game set_character metal1 TRUE}
-#endif
+	  #endif
       {game set_guitar_index 1}
       {do
          ($player2_config
