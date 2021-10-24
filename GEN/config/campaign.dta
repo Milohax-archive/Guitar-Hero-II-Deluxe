@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if GH2 Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Normal DX campaign
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
@@ -35,9 +35,8 @@
 #endif
 #endif
 #endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if 80s Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Encore campaign
 #ifndef _SHIP
 #ifndef _MEGA
 #ifndef _ONYX
@@ -74,9 +73,8 @@
 #endif
 #endif
 #endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if mega Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Mega campaign
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
@@ -121,9 +119,8 @@
 #endif
 #endif
 #endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if ONYX Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Customs Edition "campaign"
 #ifdef _ONYX
 (order
    (battle speedtest))
@@ -145,9 +142,8 @@
       (kDifficultyHard 0 0)
       (kDifficultyExpert 0 0)))
 #endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if 80s Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Drum campaign
 #ifdef _drum
 (order
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
@@ -175,9 +171,7 @@
       (kDifficultyExpert 1700 1900 2700 3250 3700 500000 0)))
 #endif
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;if GH1 Elf;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; GH1 Redux campaign
 #ifdef GH1RX
 (order
    (battle allofthis behindthemask thunderkiss65 graveyardshift spanishcastlemagic)
@@ -204,10 +198,6 @@
       (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
       (kDifficultyExpert 1500000 1900 2700 3250 3700 500000 0)))
 #endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifdef 8DBUG
-(unlock_song becauseitsmidnite)
-#endif
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(unlock_game_modes multi_fo)
 
+#ifdef 8DBUG (unlock_song becauseitsmidnite) #endif ; Only used for 80s debug
+(unlock_game_modes multi_fo)
