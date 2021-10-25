@@ -458,5 +458,5 @@
 (tips
    #include tips.dta)
 (version
-   "Build: 210404") ; originally from config/gh2_version.dta
+   "Build: 211107") ; originally from config/gh2_version.dta
 #merge ../../../system/run/config/default.dta
