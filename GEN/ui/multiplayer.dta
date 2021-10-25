@@ -1164,9 +1164,8 @@
          set_localized_text
          {sprint
             {band score}}}
-      {me_stars.lbl
-         set_text
-         {band star_rating}}
+      {me_stars.lbl set_text {band star_rating}} ;original stars font
+      {me_stars_fc.lbl set_text {band star_rating}} ;new starsfc font
       {me_streak_data2.lbl
          set_localized_text
          {sprintf
@@ -1178,6 +1177,13 @@
       {me_diff_data2.lbl
          set_text
          {game get_difficulty_sym 1}}
+      {if_else $player2_fc
+	     {do
+		    {me_stars.lbl set_showing FALSE}
+			{me_stars_fc.lbl set_showing TRUE}} ;if both players FC, use new label
+		 {do
+		    {me_stars_fc.lbl set_showing FALSE}
+			{me_stars.lbl set_showing TRUE}}} ;if both players didn't FC, use old label
       {$this set_focus me_continue.btn})
    (next_screen
       {if_else

@@ -387,10 +387,7 @@
 {new
    EndGamePanel
    endgame_panel
-   (file 
-   {if_else $gamegh1
-   endgame.milo
-   endgame.milo})
+   (file endgame.milo) 
    (focus me_continue.btn)
    (reset_focus TRUE)
    HEADLINE_HANDLERS
@@ -425,19 +422,16 @@
             set_localized_text
             {sprint
                {$player longest_streak}}}
-         {endgame_percent_data.lbl
-            set_localized_text
-            {sprintf
-               {localize eg_percent_format}
-               {$player percent_hit}}}
+         {if_else $player0_fc
+            {endgame_percent_data.lbl set_localized_text {sprint {localize fullcombo}}}
+            {endgame_percent_data.lbl set_localized_text {sprintf {localize eg_percent_format} {$player percent_hit}}}}
          {endgame_streak_data.lbl
             set_localized_text
             {sprintf
                {localize eg_streak_format}
                {$player longest_streak}}}
-         {endgame_review_data.lbl
-            set_text
-            {$player star_rating}}
+		 {endgame_review_data.lbl set_text {$player star_rating}} ;original stars font
+         {endgame_review_data_fc.lbl set_text {$player star_rating}} ;new starsfc font
          {percentbar_p1.mesh
             set_local_scale
             {/
@@ -445,6 +439,13 @@
                100.0}
             1
             1}}
+		 {if_else $player0_fc
+		    {do
+			   {endgame_review_data.lbl set_showing FALSE}
+			   {endgame_review_data_fc.lbl set_showing TRUE}} ;if P0 FC, use new label
+			{do
+			   {endgame_review_data_fc.lbl set_showing FALSE}
+			   {endgame_review_data.lbl set_showing TRUE}}} ;if P0 didn't FC, use old label
       {$this set_headline endgame_headline.lbl})
    (SELECT_START_MSG
       {switch

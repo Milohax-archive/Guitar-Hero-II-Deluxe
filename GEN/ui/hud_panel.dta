@@ -227,6 +227,10 @@
 		{stk_campaign_line_vs2p1.lbl set_showing FALSE} ;vs p2 FC label
 		{stk_campaign_line_vs2p2.lbl set_showing FALSE} ;vs p2 non-FC label
 		
+		{set $player0_fc FALSE} ;pre-clear all FC flags so only the ones in use actually get set
+		{set $player1_fc FALSE}
+		{set $player2_fc FALSE}
+		
 		{switch
 			{gamecfg get mode}
 				(career
@@ -235,6 +239,7 @@
 						{set $stk_prefix_p0 "stk_campaign_line"} ;set which labels to use for P1
 						{set $stk_view_p1 ""} ;set which view to use for P2, if any
 						{set $stk_prefix_p1 ""} ;set which labels to use for P2, if any
+						{set $player0_fc TRUE} ;single player, so only set P0 FC flag
 					}
 				)
 				(quickplay
@@ -243,6 +248,7 @@
 						{set $stk_prefix_p0 "stk_campaign_line"}
 						{set $stk_view_p1 ""}
 						{set $stk_prefix_p1 ""}
+						{set $player0_fc TRUE}
 					}
 				)
 				(multi_coop
@@ -251,6 +257,7 @@
 						{set $stk_prefix_p0 "stk_campaign_line_coop"}
 						{set $stk_view_p1 ""}
 						{set $stk_prefix_p1 ""}
+						{set $player2_fc TRUE} ;coop, so only set P2 FC flag
 					}
 				)
 				(multi_vs
@@ -259,6 +266,8 @@
 						{set $stk_prefix_p0 "stk_campaign_line_vers"}
 						{set $stk_view_p1 "stk_campaign_song_id_vs2p.view"}
 						{set $stk_prefix_p1 "stk_campaign_line_vs2p"}
+						{set $player0_fc TRUE} ;multiplayer, so set both P0 and P1 FC flags
+						{set $player1_fc TRUE}
 					}
 				)
 				(multi_fo
@@ -267,6 +276,8 @@
 						{set $stk_prefix_p0 "stk_campaign_line_vers"}
 						{set $stk_view_p1 "stk_campaign_song_id_vs2p.view"}
 						{set $stk_prefix_p1 "stk_campaign_line_vs2p"}
+						{set $player0_fc TRUE} ;same as for multi_vs
+						{set $player1_fc TRUE}
 					}
 				)
 				(practice
@@ -275,6 +286,7 @@
 						{set $stk_prefix_p0 "stk_campaign_line"}
 						{set $stk_view_p1 ""}
 						{set $stk_prefix_p1 ""}}
+						{set $player0_fc TRUE} ;practice, so treat like single-player
 				)
 		}
 		{set $streakline_p0 1} ;we're initially on an FC run, so use FC line
@@ -299,9 +311,9 @@
 
 		{set $beforefirstnote_p0 TRUE} ;if set, ignore misses for the purpose of switching lines
 		{set $beforefirstnote_p1 TRUE} ;same for P1
-		{set $player0_fc TRUE} ;player0 is FCing
-		{set $player1_fc TRUE} ;player1 is FCing
-		{set $player2_fc TRUE} ;coop and both players are FCing
+;		{set $player0_fc TRUE} ;player0 is FCing
+;		{set $player1_fc TRUE} ;player1 is FCing
+;		{set $player2_fc TRUE} ;coop and both players are FCing
 
 ;		{{sprint $stk_prefix_p0 "1.lbl"} set_wrap_width 200} ;not sure if this is absolutely needed but I've been doing it, so I'm still doing it lol
 ;		{{sprint $stk_prefix_p0 "2.lbl"} set_wrap_width 200}
