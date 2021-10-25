@@ -1,64 +1,58 @@
 #include macros.dta
 (mem ; originally from config/mem.dta
    (heaps
-      (main
-         (size 19730000))
+      (main (size 19730000))
       (rnd
          (size 5900000)
          (handle TRUE)))
    (pool
       (big_hunk 3100000)
       (small_hunk 50000)))
+
 (system
-   (init
-      #include system_script.dta)
-   (language
-      (force eng))
+   (init #include system_script.dta)
+   (language (force eng))
    (iop_modules
       (iop/scrtchpd.irx)
       (iop/sio2man.irx)
       (iop/mcman.irx)
       (iop/mcserv.irx)
-      #ifdef _SHIP
+#ifdef _SHIP
       (iop/usbd.irx FALSE)
       (iop/usbkb.irx FALSE)
-      #else
+#else
       (iop/usbd.irx)
       (iop/usbkb.irx
          "keybd=1"
          "debug=0")
-      #endif
+#endif
       (iop/padman.irx)
       (iop/msifrpc.irx)
-      #ifdef _SHIP
+#ifdef _SHIP
       (iop/mtapman.irx FALSE)
-      #else
+#else
       (iop/mtapman.irx)
-      #endif
+#endif
       (iop/libsd.irx)
       (iop/sdrdrv.irx)
       (iop/cdvdstm.irx))
-   #ifdef _SHIP
-   (keyboard
-      (disable TRUE))
-   (multitap
-      (disable TRUE))
-   #endif
-   (xbox_map_file
-      "gh2_%s.map"))
-(synth
-   #include synth.dta)
+#ifdef _SHIP
+   (keyboard (disable TRUE))
+   (multitap (disable TRUE))
+#endif
+   (xbox_map_file "gh2_%s.map"))
+
+(synth #include synth.dta)
 (joypad
    (ignore)
    (hold_ms 1000)
    (repeat_ms 80))
 (spew) ; include to config/spew.dta removed
-#define NON_GAME_TIMERS
-(world hud track file_read end_draw tasks)
+#define NON_GAME_TIMERS (world hud track file_read end_draw tasks)
 (timer NON_GAME_TIMERS game cpu gs)
+
 (rnd
-   (title
-      "Guitar Hero 2")
+   (title "Guitar Hero 2")
    (show_timers FALSE)
    (overlays
       (time
@@ -107,21 +101,10 @@
    (timer_script
       {do
          ($tot 0)
-         {foreach
-            $t
-            (NON_GAME_TIMERS)
-            {set
-               $tot
-               {'+'
-                  $tot
-                  {timer_ms $t}}}}
-         {set_timer_ms
-            game
-            {-
-               {timer_ms cpu}
-               $tot}}}))
-(ui
-   #include ../ui/ui.dta)
+         {foreach $t (NON_GAME_TIMERS)
+            {set $tot {'+' $tot {timer_ms $t}}}}
+         {set_timer_ms game {- {timer_ms cpu} $tot}}}))
+(ui #include ../ui/ui.dta)
 (objects  ; block originally from config/objects.dta
    #include ../char/char_objects.dta
    #include ../world/world_objects.dta
@@ -135,94 +118,62 @@
 ../ui/eng/locale_loading_gh80s.dta ../ui/eng/locale_mc.dta ../ui/eng/locale_newspaper.dta
 ../ui/eng/locale_sections.dta ../ui/eng/locale_sections_rb1.dta ../ui/eng/locale_sections_rb2.dta
 ../ui/eng/locale_sections_rb3.dta ../ui/eng/locale_shop.dta ../ui/eng/locale_tiers.dta
-../ui/eng/locale_tutorials.dta )
-#ifdef _SHIP
-(venues battle small1 small2 big theatre fest arena stone)
-#endif
-#ifdef 2DBUG
-(venues battle small1 small2 big theatre fest arena stone)
-#endif
-#ifdef _ENCO
-(venues battle2 small3 small4 theatre2 fest2 arena2)
-#endif
-#ifdef 8DBUG
-(venues battle2 small3 small4 theatre2 fest2 arena2)
-#endif
-#ifdef _MEGA
-(venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
-#endif
-#ifdef _ONYX
-(venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone)
-#endif
-#ifdef GH1RX
-(venues battle small1 small2 big theatre fest arena stone)
-#endif
+../ui/eng/locale_tutorials.dta)
+
+#ifdef _SHIP (venues battle small1 small2 big theatre fest arena stone) #endif
+#ifdef 2DBUG (venues battle small1 small2 big theatre fest arena stone) #endif
+#ifdef _ENCO (venues battle2 small3 small4 theatre2 fest2 arena2) #endif
+#ifdef 8DBUG (venues battle2 small3 small4 theatre2 fest2 arena2) #endif
+#ifdef _MEGA (venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone) #endif
+#ifdef _ONYX (venues battle battle2 small1 small3 small2 small4 big theatre theatre2 fest fest2 arena arena2 stone) #endif
+#ifdef GH1RX (venues battle small1 small2 big theatre fest arena stone) #endif
+
 (default_band metal_singer metal_bass metal_drummer)
-(quick_cheats
-   #include debug_binds.dta)
-(long_cheats
-   #include long_cheats.dta)
-(beatmatcher
-   #include beatmatcher.dta)
+(quick_cheats #include debug_binds.dta)
+(long_cheats #include long_cheats.dta)
+(beatmatcher #include beatmatcher.dta)
+
 (beatmatch ; block originally from config/beatmatch.dta
    (player_matcher_handlers
       (hit
          ($slot $star $hopoable $hopoed $player_num)
-         {if
-            $star
+         {if $star
             {play_game_sequence_player sp_gemhit sp_gemhit $player_num}})
-      (hopo
-         {handle
-            ($this hopo_callback)})
-      (swingAtHopo
-         {handle
-            ($this swingAtHopo_callback)})
+      (hopo {handle ($this hopo_callback)})
+      (swingAtHopo {handle ($this swingAtHopo_callback)})
       (miss
-         ($player_num)
+          ($player_num)
          {do
             ($seq
-               {switch
-                  {game get_track_type $player_num}
+               {switch {game get_track_type $player_num}
                   (kTrackBass miss_bass)
                   miss_gtr})
             {play_game_sequence_player $seq $seq $player_num}})
       (swing))
    (solo_handlers
-      (pick_done
-         {print
-            "pick_done\n"})
-      (all_done
-         {print
-            "all_done\n"})))
-(modes
-   #include modes.dta)
+      (pick_done {print "pick_done\n"})
+      (all_done {print "all_done\n"})))
+
+(modes #include modes.dta)
+
 (player ; block originally from config/player.dta
    (handlers
       (end_streak)
-      (whammy_start
-         {handle
-            ($this whammy_start_callback)})
-      (whammy_end
-         {handle
-            ($this whammy_end_callback)})
-      (star_gem_hit
-         {handle
-            ($this star_gem_hit_callback)})
+      (whammy_start {handle ($this whammy_start_callback)})
+      (whammy_end {handle ($this whammy_end_callback)})
+      (star_gem_hit {handle ($this star_gem_hit_callback)})
       (phrase_captured
          ($player_num)
          {script_task
             (delay 0.2)
-            (script
-               {play_game_sequence_player sp_awarded sp_awarded_multi $player_num})}
-         {handle
-            ($this star_phrase_captured_callback)})
+            (script {play_game_sequence_player sp_awarded sp_awarded_multi $player_num})}
+         {handle ($this star_phrase_captured_callback)})
       (phrase_miss
          ($gem_id)
          {{$this track}
             on_miss_phrase
             $gem_id}
-         {handle
-            ($this star_phrase_miss_callback)})
+         {handle ($this star_phrase_miss_callback)})
       (start_using
          ($player_num)
          {{{$this track}
@@ -230,37 +181,25 @@
             animate
             (range 2000 2025)
             (period 0.8)}
-         {{$this player_matcher}
-            on_start_starpower}
+         {{$this player_matcher} on_start_starpower}
          {play_game_sfx_player sp_deployed sp_deployed_multi $player_num}
-         {handle
-            (world stop_sfx crowd_upto_good)}
-         {handle
-            (world play_sfx crowd_upto_good)}
-         {{$this track}
-            set_bonus_gems
-            TRUE}
-         {handle
-            (game star_power_start $player_num)})
+         {handle (world stop_sfx crowd_upto_good)}
+         {handle (world play_sfx crowd_upto_good)}
+         {{$this track} set_bonus_gems TRUE}
+         {handle (game star_power_start $player_num)})
       (stop_using
          ($player_num)
          {play_game_sfx_player sp_depleted sp_depleted_multi $player_num}
-         {{$this player_matcher}
-            on_stop_starpower}
-         {{$this track}
-            set_bonus_gems
-            FALSE}
-         {handle
-            (game star_power_stop $player_num)})
+         {{$this player_matcher} on_stop_starpower}
+         {{$this track} set_bonus_gems FALSE}
+         {handle (game star_power_stop $player_num)})
       (depleted)))
-(track
-   (handlers)) ; originally from config/track.dta
-(scoring
-   #include scoring.dta)
-(track_graphics
-   #include track_graphics.dta)
-(songs
-   #include songs.dta)
+
+(track (handlers)) ; originally from config/track.dta
+(scoring #include scoring.dta)
+(track_graphics #include track_graphics.dta)
+(songs #include songs.dta)
+
 (sound ; block originally from config/sound.dta
    (banks
       (game sfx/ingame_bank)
@@ -273,15 +212,12 @@
       (streaming_vo
          (volume 0.0)
          (dir tutorial/streams)
-         (events
-            #include ../tutorial/tutorial_vo.dta)))
+         (events #include ../tutorial/tutorial_vo.dta)))
    (master_volume -1.5)
    (master_volume_mono -4.0)
-   (options_screen
-      (slider -96 -28 -24 -20 -16 -12 -10 -8 -6 -4 -2 0))
+   (options_screen (slider -96 -28 -24 -20 -16 -12 -10 -8 -6 -4 -2 0))
    (practice_mode
-      (default_speeds
-         (100 90 80 60))
+      (default_speeds (100 90 80 60))
       (pitch_correct
          (slice_frames 3)
          (attack_ms 5)
@@ -298,57 +234,48 @@
    (message_show_time 3)
    (sp_deploy_msg_delay 1.5)
    (sp_deploy_repeat_delay 7))
-(guitars
-   #include guitars.dta)
+(guitars #include guitars.dta)
+
+; DX/Encore characters
 #ifndef 2DBUG
 #ifndef 8DBUG
 #ifndef GH1RX
 (characters
-   ({if_else
-      $game80s
+   ({if_else $game80s
       punkencore
       punkencore}
-      ({if_else
-      $game80s
+   ({if_else $game80s
       punkencore
       punk1})
-      (punk2))
-   ({if_else
-      $game80s
+   (punk2))
+   ({if_else $game80s
       alternaencore
       alternaencore}
-      ({if_else
-      $game80s
+   ({if_else $game80s
       alternaencore
       alterna1})
-      (alterna2))
-   ({if_else
-      $game80s
+   (alterna2))
+   ({if_else $game80s
       glamencore
       glamencore}
-      ({if_else
-      $game80s
+   ({if_else $game80s
       glamencore
       glam1})
-      (glam2))
-   ({if_else
-      $game80s
+   (glam2))
+   ({if_else $game80s
       gothencore
       gothencore}
-      ({if_else
-      $game80s
+   ({if_else $game80s
       gothencore
       goth2})
-      (goth1))
-   ({if_else
-      $game80s
+   (goth1))
+   ({if_else $game80s
       metalencore
       metalencore}
-      ({if_else
-      $game80s
+   ({if_else $game80s
       metalencore
       metal1})
-      (metal2))
+   (metal2))
    (rockabill
       (rockabill1)
       (rockabill2))
@@ -362,18 +289,17 @@
       (classic))
    (funk1
       (funk1))
-   ({if_else
-      $game80s
+   ({if_else $game80s
       grimencore
       grimencore}
-      ({if_else
-      $game80s
+   ({if_else $game80s
       grimencore
       grim})))
 #endif
 #endif
 #endif
-;;;;;;;;;;;;;;; if debug
+
+; Debug characters
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
@@ -404,18 +330,16 @@
    (deathmetal
       (deathmetal1)
       (deathmetal2))
-   (classic
-      (classic))
-   (funk1
-      (funk1))
-   (grim
-      (grim)))
+   (classic (classic))
+   (funk1 (funk1))
+   (grim (grim)))
 #endif
 #endif
 #endif
 #endif
 #endif
-;;;;;;;;;;;;;;; if gh1 demo
+
+; GH1 Redux characters
 #ifdef GH1RX
 (characters
    (punkgh1
@@ -444,19 +368,13 @@
       (deathmetal2))
    (classicgh1
       (classicgh1))
-   (funkgh1
-      (funkgh1))
-   (grim
-      (grim)))
+   (funkgh1 (funkgh1))
+   (grim (grim)))
 #endif
-(mc
-   #include mc.dta)
-(store
-   #include store.dta)
-(campaign
-   #include campaign.dta)
-(tips
-   #include tips.dta)
-(version
-   "Build: 211107") ; originally from config/gh2_version.dta
+
+(mc #include mc.dta)
+(store #include store.dta)
+(campaign #include campaign.dta)
+(tips #include tips.dta)
+(version "Build: 211107") ; originally from config/gh2_version.dta
 #merge ../../../system/run/config/default.dta
