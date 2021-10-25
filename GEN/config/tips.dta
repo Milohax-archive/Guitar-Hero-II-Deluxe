@@ -56,32 +56,19 @@
    (comedy_tip_gh2_13)
    (comedy_tip_gh2_14)
    (comedy_tip_gh2_15)
-   (easy_tip1
-      (diff kDifficultyEasy))
-   (easy_tip2
-      (diff kDifficultyEasy))
-   (easy_tip3
-      (diff kDifficultyEasy))
-   (advanced_tip1
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip2
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip3
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip4
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip5
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip6
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip7
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip8
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip9
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip10
-      (diff kDifficultyMedium kDifficultyHard kDifficultyExpert)))
+   (easy_tip1 (diff kDifficultyEasy))
+   (easy_tip2 (diff kDifficultyEasy))
+   (easy_tip3 (diff kDifficultyEasy))
+   (advanced_tip1 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip2 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip3 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip4 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip5 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip6 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip7 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip8 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip9 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+   (advanced_tip10 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert)))
 (tips_multi_coop
    (multi_coop_tip1)
    (multi_coop_tip2)
