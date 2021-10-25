@@ -18,7 +18,7 @@
          {ui
             goto_screen
             {gamecfg get game_screen}}}}}
-{func game_restart_fast 
+{func game_restart_fast
    {game set fast_intro TRUE}
    {game_restart}}
 {func set_all_hud_showing
