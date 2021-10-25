@@ -986,11 +986,9 @@
             {player0 percent_hit}
             50}
          {do
-            {me_percent_data1.lbl
-               set_localized_text
-               {sprintf
-                  {localize me_percent_format}
-                  {player0 percent_hit}}}
+            {if_else $player0_fc ;if P0 FC, set 100% FC text, otherwise set normal percentage
+			   {me_percent_data1.lbl set_localized_text {sprint {localize fullcombo}}}
+			   {me_percent_data1.lbl set_localized_text {sprintf {localize me_percent_format} {player0 percent_hit}}}}
             {me_percent_data1b.lbl
                set_localized_text
                ""}}
@@ -1008,11 +1006,9 @@
             {player1 percent_hit}
             50}
          {do
-            {me_percent_data2.lbl
-               set_localized_text
-               {sprintf
-                  {localize me_percent_format}
-                  {player1 percent_hit}}}
+		    {if_else $player1_fc ;if P1 FC, set 100% FC text, otherwise set normal percentage
+               {me_percent_data2.lbl set_localized_text {sprint {localize fullcombo}}}
+			   {me_percent_data2.lbl set_localized_text {sprintf {localize me_percent_format} {player1 percent_hit}}}}
             {me_percent_data2b.lbl
                set_localized_text
                ""}}

@@ -52,7 +52,9 @@
 			{if_else {== {gamecfg get mode} multi_coop}
 				{do
 					{if {&& {! $beforefirstnote_p0} $player2_fc}
-						{streak_overlay_panel not_an_fc 2}}
+						{do
+							{streak_overlay_panel not_an_fc 2}
+							{set $player0_fc FALSE}}}
 						{set $player2_streak 0}
 						{set $interval_p2 50}
 						{streak_overlay_panel zero_streak 2}
@@ -80,7 +82,8 @@
 					{do
 						{if $player2_fc
 							{do
-								{streak_overlay_panel not_an_fc 2}}}
+								{streak_overlay_panel not_an_fc 2}
+								{set $player0_fc FALSE}}}
 						{set $player2_streak 0}
 						{set $interval_p2 50}
 						{streak_overlay_panel zero_streak 2}
@@ -118,7 +121,9 @@
 			{if_else {== {gamecfg get mode} multi_coop}
 				{do
 					{if {&& {! $beforefirstnote_p1} $player2_fc}
-						{streak_overlay_panel not_an_fc 2}}
+						{do
+							{streak_overlay_panel not_an_fc 2}
+							{set $player2_fc FALSE}}}
 					{set $player2_streak 0}
 					{set $interval_p2 50}
 					{streak_overlay_panel zero_streak 2}
@@ -144,7 +149,9 @@
 			{if_else {== {gamecfg get mode} multi_coop}
 				{do
 					{if $player2_fc
-						{streak_overlay_panel not_an_fc 2}}
+						{do
+							{streak_overlay_panel not_an_fc 2}
+							{set $player2_fc FALSE}}}
 					{set $player2_streak 0}
 					{set $interval_p2 50}
 					{streak_overlay_panel zero_streak 2}
@@ -257,7 +264,9 @@
 						{set $stk_prefix_p0 "stk_campaign_line_coop"}
 						{set $stk_view_p1 ""}
 						{set $stk_prefix_p1 ""}
-						{set $player2_fc TRUE} ;coop, so only set P2 FC flag
+						{set $player0_fc TRUE} ;coop, so only set all FC flags
+						{set $player1_fc TRUE}
+						{set $player2_fc TRUE}
 					}
 				)
 				(multi_vs
