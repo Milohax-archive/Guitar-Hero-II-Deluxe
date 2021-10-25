@@ -98,8 +98,7 @@
 #ifdef _ONYX
       {game set_venue fest}
       {game set_song_index 0}
-      {game set_character 
-      {if_else $game80s metalencore metal1} TRUE}
+      {game set_character streamer TRUE}
 	  #endif
 ;if gh1 redux demo
 #ifdef GH1RX

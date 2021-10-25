@@ -166,17 +166,7 @@
             {ui goto_screen qp_selpart_screen}}}
       kDataUnhandled)
    (SELECT_START_MSG
-      {if_else
-         $focusmode
-         {do
-            {if_else
-               {campaign new_campaign}
-               {game set_character metal1 TRUE}
                {do
-                  {game set_career}
-                  {campaign get_character_info}
-                  {ui goto_screen manage_gig_screen}}}
-            {ui goto_screen manage_gig_screen}}
          {ui goto_screen manage_gig_screen}}
       kDataUnhandled)}
 {new
