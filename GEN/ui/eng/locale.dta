@@ -555,8 +555,13 @@
    "Exit")
 (select_song
    "Select a Song")
+#ifdef _ONYX
+(song_quickplay
+   " ")
+#else
 (song_quickplay
    "Play Career Mode to get more songs")
+#endif
 (encore_song_listing
    "Encore: Play Career Mode to unlock")
 (encore_song_career_listing
