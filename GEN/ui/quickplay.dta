@@ -175,18 +175,18 @@
                {do
                   {game set_career}
                   {campaign get_character_info}
-                  {ui goto_screen practice_sel_speed_screen_qp}}}
-            {ui goto_screen practice_sel_speed_screen_qp}}
-         {ui goto_screen practice_sel_speed_screen_qp}}
+                  {ui goto_screen manage_gig_screen}}}
+            {ui goto_screen manage_gig_screen}}
+         {ui goto_screen manage_gig_screen}}
       kDataUnhandled)}
 {new
    GHPanel
-   sel_speed_panel_qp
+   manage_gig_panel
    (file
 	{if_else
       $game80s
-      sel_speed_qp_80s.milo
-      sel_speed_qp.milo})
+      manage_gig_80s.milo
+      manage_gig.milo})
    (focus speed0.btn)
    (set_button_text
 	{if_else $focusmode
@@ -213,9 +213,9 @@
             {ui goto_screen video_settings_gig_screen})})}
 {new
    GHScreen
-   practice_sel_speed_screen_qp
-   (panels meta sel_speed_panel_qp helpbar)
-   (focus sel_speed_panel_qp)
+   manage_gig_screen
+   (panels meta manage_gig_panel helpbar)
+   (focus manage_gig_panel)
    (enter
 	  {$this set_button_text})
    (helpbar
@@ -383,7 +383,7 @@
          {== $button kPad_Tri}
          {$this backwards_anim}
          {synth play_sequence button_back.cue}
-         {ui goto_screen practice_sel_speed_screen_qp}}
+         {ui goto_screen manage_gig_screen}}
       kDataUnhandled)}
 {new
    GHPanel
@@ -695,15 +695,15 @@
 {new
    GHScreen
    sel_character_new_screen_qp
-   (done_screen practice_sel_speed_screen_qp)
-   (back_screen practice_sel_speed_screen_qp)
+   (done_screen manage_gig_screen)
+   (back_screen manage_gig_screen)
    SEL_CHARACTER_COMMON_QP
    (SELECT_START_MSG SEL_CHARACTER_SELECT_HANDLER_QP kDataUnhandled)}
 {new
    GHScreen
    sel_character_edit_screen_qp
-   (done_screen practice_sel_speed_screen_qp)
-   (back_screen practice_sel_speed_screen_qp)
+   (done_screen manage_gig_screen)
+   (back_screen manage_gig_screen)
    SEL_CHARACTER_COMMON_QP
    (SELECT_START_MSG SEL_CHARACTER_SELECT_HANDLER_QP kDataUnhandled)}
 {new
@@ -824,7 +824,7 @@
          set_guitar
          {sel_guitar_panel_qp get_selected_guitar 0}
          {sel_guitar_panel_qp get_selected_skin 0}}
-      {ui goto_screen practice_sel_speed_screen_qp})
+      {ui goto_screen manage_gig_screen})
    (BUTTON_DOWN_MSG
       {switch
          $button
@@ -842,7 +842,7 @@
                set_guitar
                {sel_guitar_panel_qp get_selected_guitar 0}
                {sel_guitar_panel_qp get_selected_skin 0}}
-            {ui goto_screen practice_sel_speed_screen_qp}
+            {ui goto_screen manage_gig_screen}
             TRUE}
          FALSE})
    (guitar_selected
@@ -873,7 +873,7 @@
    (go_back
       {$this backwards_anim}
       {synth play_sequence button_back.cue}
-      {ui goto_screen practice_sel_speed_screen_qp})}
+      {ui goto_screen manage_gig_screen})}
 {new
    GHScreen
    sel_guitar_edit_screen_qp
@@ -881,7 +881,7 @@
    (go_back
       {$this backwards_anim}
       {synth play_sequence button_back.cue}
-      {ui goto_screen practice_sel_speed_screen_qp})}
+      {ui goto_screen manage_gig_screen})}
 #define SEL_VENUE_SCREEN_HANDLERS_QP
 ((panels meta sel_venue_panel_qp helpbar)
    (focus sel_venue_panel_qp)
@@ -1112,7 +1112,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; DONT MISS THIS, THIS HAS NO IFDEF
    (SELECT_START_MSG
       {game set_career}
-      {ui goto_screen practice_sel_speed_screen_qp}
+      {ui goto_screen manage_gig_screen}
       kDataUnhandled))
 {new
    GHPanel
@@ -1168,12 +1168,12 @@
    GHScreen
    sel_venue_screen_qp
    (allow_back FALSE)
-   (next_screen practice_sel_speed_screen_qp)
+   (next_screen manage_gig_screen)
    SEL_VENUE_SCREEN_HANDLERS
    (BUTTON_DOWN_MSG
       {cond
          ({== $button kPad_Tri}
             {$this backwards_anim}
             {synth play_sequence button_back.cue}
-            {ui goto_screen practice_sel_speed_screen_qp})}
+            {ui goto_screen manage_gig_screen})}
       kDataUnhandled)}

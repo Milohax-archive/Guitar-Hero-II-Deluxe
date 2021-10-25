@@ -134,17 +134,17 @@
    "YOU FOUND ALL THE EGGS")
 (finaleggtxt3
    "Thank you so much for playing our special version of\nGuitar Hero II.")
-(sel_sqped
+(manage_gig
    " ")
-(speed_label4
+(gig_play
    "PLAY SHOW")
-(speed_label5
+(gig_character
    "CHARACTER")
-(speed_label6
+(gig_guitar
    "GUITAR")
-(speed_label7
+(gig_venue
    "VENUE")
-(speed_label8
+(gig_extras
    "EXTRAS")
 (CAHNGE_SEPED
    "CHANGE SPEED")
