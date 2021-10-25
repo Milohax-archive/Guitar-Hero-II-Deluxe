@@ -123,7 +123,20 @@
 ; Customs Edition "campaign"
 #ifdef _ONYX
 (order
-   (battle speedtest))
+   (battle speedtest)
+   (battle2)
+   (small1)
+   (small3)
+   (small2)
+   (small4)
+   (big)
+   (theatre)
+   (theatre2)
+   (fest)
+   (fest2)
+   (arena)
+   (arena2)
+   (stone))
 (required_songs
    (kDifficultyEasy 1 1)
    (kDifficultyMedium 1 1)
