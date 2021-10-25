@@ -1,147 +1,98 @@
-;;;;;;;;if 8 tiers (gh2)
+; Eight tiers (DX)
 #ifndef _ENCO
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 8DBUG
 #ifndef GH1RX
-(song_header_battle
-   "1. Opening Licks")
-(song_header_small1
-   "2. Amp-Warmers")
-(song_header_small2
-   "3. String Snappers")
-(song_header_big
-   "4. Thrash and Burn")
-(song_header_theatre
-   "5. Return of the Shred")
-(song_header_fest
-   "6. Relentless Riffs")
-(song_header_arena
-   "7. Furious Fretwork")
-(song_header_stone
-   "8. Face-Melters")
-(song_header_store
-   "Bonus Tracks")
+(song_header_battle "1. Opening Licks")
+(song_header_small1 "2. Amp-Warmers")
+(song_header_small2 "3. String Snappers")
+(song_header_big "4. Thrash and Burn")
+(song_header_theatre "5. Return of the Shred")
+(song_header_fest "6. Relentless Riffs")
+(song_header_arena "7. Furious Fretwork")
+(song_header_stone "8. Face-Melters")
+(song_header_store "Bonus Tracks")
 #endif
 #endif
 #endif
 #endif
 #endif
-;;;;;;;;if 6 tiers (gh80s)
+
+; Six tiers (Encore)
 #ifndef _SHIP
 #ifndef _MEGA
 #ifndef _ONYX
 #ifndef 2DBUG
 #ifndef GH1RX
-(song_header_battle2
-   "1. Opening Licks")
-(song_header_small3
-   "2. Amp-Warmers")
-(song_header_small4
-   "3. String Snappers")
-(song_header_theatre2
-   "4. Return of the Shred")
-(song_header_fest2
-   "5. Relentless Riffs")
-(song_header_arena2
-   "6. Furious Fretwork")
-(song_header_store
-   "Bonus Tracks")
+(song_header_battle2 "1. The New Wave of New Wave")
+(song_header_small3 "2. Leaden Legato")
+(song_header_small4 "3. Vicious Vibrato")
+(song_header_theatre2 "4. Divebombs to Deafen")
+(song_header_fest2 "5. Swells of the Doomed")
+(song_header_arena2 "6. Killer Evil Tracks")
+(song_header_store "Bonus Tracks")
 #endif
 #endif
 #endif
 #endif
 #endif
-;;;;;;;;if 14 tiers (mega)
+
+; 14 tiers (Mega)
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
 #ifndef 2DBUG
 #ifndef 8DBUG
 #ifndef GH1RX
-(song_header_battle
-   "1. GH2 Opening Licks")
-(song_header_battle2
-   "2. 80s Opening Licks")
-(song_header_small1
-   "3. GH2 Amp-Warmers")
-(song_header_small3
-   "4. 80s Amp-Warmers")
-(song_header_small2
-   "5. GH2 String Snappers")
-(song_header_small4
-   "6. 80s String Snappers")
-(song_header_big
-   "7. GH2 Thrash and Burn")
-(song_header_theatre
-   "8. GH2 Return of the Shred")
-(song_header_theatre2
-   "9. 80s Return of the Shred")
-(song_header_fest
-   "10. GH2 Relentless Riffs")
-(song_header_fest2
-   "11. 80s Relentless Riffs")
-(song_header_arena
-   "12. GH2 Furious Fretwork")
-(song_header_arena2
-   "13. 80s Furious Fretwork")
-(song_header_stone
-   "14. Face-Melters")
-(song_header_store
-   "Bonus Tracks")
+(song_header_battle "1. Opening Licks")
+(song_header_battle2 "2. The New Wave of New Wave")
+(song_header_small1 "3. Amp-Warmers")
+(song_header_small3 "4. Leaden Legato")
+(song_header_small2 "5. String Snappers")
+(song_header_small4 "6. Vicious Vibrato")
+(song_header_big "7. Thrash and Burn")
+(song_header_theatre "8. Return of the Shred")
+(song_header_theatre2 "9. Divebombs to Deafen")
+(song_header_fest "10. Relentless Riffs")
+(song_header_fest2 "11. Swells of the Doomed")
+(song_header_arena "12. Furious Fretwork")
+(song_header_arena2 "13. Killer Evil Tracks")
+(song_header_stone "14. Face-Melters")
+(song_header_store "Bonus Tracks")
 #endif
 #endif
 #endif
 #endif
 #endif
 #endif
-;;;;;;;;if onyx Elf
+
+; Customs Edition (which are all empty :steve:)
 #ifdef _ONYX
-(song_header_battle
-   " ")
-(song_header_battle2
-   " ")
-(song_header_small1
-   " ")
-(song_header_small3
-   " ")
-(song_header_small2
-   " ")
-(song_header_small4
-   " ")
-(song_header_big
-   " ")
-(song_header_theatre
-   " ")
-(song_header_theatre2
-   " ")
-(song_header_fest
-   " ")
-(song_header_fest2
-   " ")
-(song_header_arena
-   " ")
-(song_header_arena2
-   " ")
-(song_header_stone
-   " ")
-(song_header_store
-   "Custom Songs")
+(song_header_battle " ")
+(song_header_battle2 " ")
+(song_header_small1 " ")
+(song_header_small3 " ")
+(song_header_small2 " ")
+(song_header_small4 " ")
+(song_header_big " ")
+(song_header_theatre " ")
+(song_header_theatre2 " ")
+(song_header_fest " ")
+(song_header_fest2 " ")
+(song_header_arena " ")
+(song_header_arena2 " ")
+(song_header_stone " ")
+(song_header_store "Custom Songs")
 #endif
-;;;;;;;;if 6 tiers (gh1)
+
+; GH1 Redux
 #ifdef GH1RX
-(song_header_battle
-   "Guitar Hero Redux Demo")
-(song_header_small1
-   " ")
-(song_header_small2
-   " ")
-(song_header_theatre
-   " ")
-(song_header_fest
-   " ")
-(song_header_arena
-   " ")
-(song_header_store
-   "Bonus Tracks")
+(song_header_battle "Guitar Hero Redux Demo")
+(song_header_small1 " ")
+(song_header_small2 " ")
+(song_header_theatre " ")
+(song_header_fest " ")
+(song_header_arena " ")
+(song_header_store "Bonus Tracks")
 #endif
