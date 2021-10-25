@@ -123,7 +123,7 @@
 					{if {&& {! $beforefirstnote_p1} $player2_fc}
 						{do
 							{streak_overlay_panel not_an_fc 2}
-							{set $player2_fc FALSE}}}
+							{set $player1_fc FALSE}}}
 					{set $player2_streak 0}
 					{set $interval_p2 50}
 					{streak_overlay_panel zero_streak 2}
@@ -151,7 +151,7 @@
 					{if $player2_fc
 						{do
 							{streak_overlay_panel not_an_fc 2}
-							{set $player2_fc FALSE}}}
+							{set $player1_fc FALSE}}}
 					{set $player2_streak 0}
 					{set $interval_p2 50}
 					{streak_overlay_panel zero_streak 2}
