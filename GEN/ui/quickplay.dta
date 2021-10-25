@@ -190,9 +190,6 @@
    (focus speed0.btn)
    (set_button_text
 	{if_else $focusmode
-		{speed1.btn set_state kDisabled}
-		{speed1.btn set_showing TRUE}}
-	{if_else $focusmode
 		{speed2.btn set_state kDisabled}
 		{speed2.btn set_showing TRUE}}
 	{if_else $focusmode
