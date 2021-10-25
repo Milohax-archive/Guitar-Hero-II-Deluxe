@@ -157,7 +157,7 @@
 ;;;;;if not debug
 #ifndef 8DBUG
 #ifndef 2DBUG
-		 MULTCHARACTERS
+{if_else $game80s 80SMULTCHARACTERS MULTCHARACTERS}
 #endif
 #endif
 ;;;;;if debug
@@ -203,7 +203,7 @@
 ;;;;;if not debug
 #ifndef 8DBUG
 #ifndef 2DBUG
-		 MULTCHARACTERS
+{if_else $game80s 80SMULTCHARACTERS MULTCHARACTERS}
 #endif
 #endif
 ;;;;;if debug
@@ -227,10 +227,7 @@
 ;;;;;if not debug
 #ifndef 8DBUG
 #ifndef 2DBUG
-   (load_order 
-   {if_else $game80s
-   80SMULT_LOAD_CHARACTERS
-   MULT_LOAD_CHARACTERS})
+   (load_order {if_else $game80s 80SMULT_LOAD_CHARACTERS MULT_LOAD_CHARACTERS})
 #endif
 #endif
 ;;;;;if debug

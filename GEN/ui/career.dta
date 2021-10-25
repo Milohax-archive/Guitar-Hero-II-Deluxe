@@ -263,17 +263,13 @@
 {new
    GHPanel
    sel_character_panel
-;;;;;if not debug
+;if not debug
 #ifndef 8DBUG
 #ifndef 2DBUG
-   (file
-	{if_else
-      $game80s
-      sel_character_80s.milo
-      sel_character.milo})
+   (file {if_else $game80s sel_character_80s.milo sel_character.milo})
 #endif
 #endif
-;;;;;if debug
+;if debug
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _MEGA
