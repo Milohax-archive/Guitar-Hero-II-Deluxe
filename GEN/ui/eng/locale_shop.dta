@@ -130,7 +130,7 @@
 (battleaxe_reward_locked_desc
    {if_else $egg5
       "Beat EXPERT. You have to. Because this thing is so freakin' righteous."
-	  "Exclusively Legendary Expert tour players only."})
+	  "Exclusively Legendary EXPERT tour players only."})
 (log_reward_locked_desc
    {if_else $egg5
       "If you take the time to get five stars on every song on EXPERT, this guitar will make up for the fact that you've lost all your friends."
