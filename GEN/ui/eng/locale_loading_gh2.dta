@@ -68,10 +68,7 @@
 (loading_tip_arterialblack "Guitarist Marcus Henderson contributed another tune for Guitar Hero II before splitting Drist to play lead guitar for the Grim Ripper.")
 (loading_tip_collide "When Anarchy Club isn't breaking things or fighting rival Kung Fu gangs, frontman Keith Smith smashes guitars for the HMX QA team. Adam Buhler prefers the darkness of the Anar-Cave, except when the moon is full...")
 (loading_tip_drinkup "OUNCE of SELF is one of the most original bands out of L.A.'s heavy music scene. \qDrink Up\q has become the anthem for the messed-up masses.")
-(loading_tip_elephantbones
-   {if_else $egg5
-      "Inflatable mattress, afloat in scattered paper, paddling pens past distractions, stranded on my island screaming at passersby, so far away it sounds like music...gOdFoRbId...That Handsome Devil."
-      "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal. That Handsome Devil."})
+(loading_tip_elephantbones "Dizzy from the fumes, white knuckled, holding the wheel hostage. A dirty old Cadillac barrels toward hell, with a brick on the gas pedal. That Handsome Devil."})
 (loading_tip_fallofpangea "Valient Thorr is from the planet Venus. Their message is your tool to further the knowledgement of the human consciousness.")
 (loading_tip_ftk "Boston-based VAGIANT plays loud, fast, and sloppy. If they weren't so busy starting fights and smashing things, these girls would probably take over the world.")
 (loading_tip_gemini "Brian Kahanek says, \qPlay it from the bottom of your heart to the tips of your toes - every time.\q")
