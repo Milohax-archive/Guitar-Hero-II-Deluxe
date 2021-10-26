@@ -1,186 +1,100 @@
+; Streak popups/newspaper streak counts
 (note_streak_popup_p0
-   {if_else
-      $egg5
-      {sprint
-         $player0_streak
-         " NOTES IN A ROW!"}
-      {sprint
-         $player0_streak
-         " NOTE STREAK!"}})
+   {if_else $egg5
+      {sprint $player0_streak " NOTES IN A ROW!"}
+      {sprint $player0_streak " NOTE STREAK!"}})
 (note_streak_popup_p1
-   {if_else
-      $egg5
-      {sprint
-         $player1_streak
-         " NOTES IN A ROW!"}
-      {sprint
-         $player1_streak
-         " NOTE STREAK!"}})
+   {if_else $egg5
+      {sprint $player1_streak " NOTES IN A ROW!"}
+      {sprint $player1_streak " NOTE STREAK!"}})
 (note_streak_popup_p2
-   {if_else
-      $egg5
-      {sprint
-         $player2_streak
-         " NOTES IN A ROW!"}
-      {sprint
-         $player2_streak
-         " NOTE STREAK!"}})
+   {if_else $egg5
+      {sprint $player2_streak " NOTES IN A ROW!"}
+      {sprint $player2_streak " NOTE STREAK!"}})
 (eg_streak_format
-   {if_else
-      {==
-         {gamecfg get mode}
-         quickplay}
-      {switch
-         {game get_track_type 0}
-         (kTrackBass
-            "%i Bass Streak!")
-         (kTrackRhythm
-            "%i Rhythm Streak!")
-         (kTrackDrum
-            "%i Drum Streak!")
+   {if_else {== {gamecfg get mode} quickplay}
+      {switch {game get_track_type 0}
+         (kTrackBass "%i Bass Streak!")
+         (kTrackRhythm "%i Rhythm Streak!")
+         (kTrackDrum "%i Drum Streak!")
          "%i Note Streak!"}
-   {if_else
-      {==
-         {gamecfg get mode}
-         career}
-      {switch
-         {game get_track_type 0}
-         (kTrackBass
-            "%i Bass Streak!")
-         (kTrackRhythm
-            "%i Rhythm Streak!")
-         (kTrackDrum
-            "%i Drum Streak!")
-         "%i Note Streak!"}
-      "%i Note Streak!"}})
+      {if_else {== {gamecfg get mode} career}
+         {switch {game get_track_type 0}
+            (kTrackBass "%i Bass Streak!")
+            (kTrackRhythm "%i Rhythm Streak!")
+            (kTrackDrum "%i Drum Streak!")
+            "%i Note Streak!"}
+         "%i Note Streak!"}})
 (stk_format_0 {sprint $player0_streak})
 (stk_format_1 {sprint $player1_streak})
 (stk_format_2 {sprint $player2_streak})
 (stk_zero "0")
+
 (blank_message "")
-(cheat_focusmode
-   "Focus Mode")
-(cheat_neckless
-   "Neckless Mode")
-(speed_msg
-   "NOTES: %d%%  SONG: %d%%")
-(gm_tspd
-   "UNUSED")
-(gm_sngspd
-   "NOTE SPEED")
-(gm_unusedsl
-   "SONG SPEED")
-(GM_BLACK_BACKGD
-   "FOCUS MODE")
-(GAME_MODIFIER
-   "GAME MODIFIERS")
-(help_adjspd
-   "ADJUST SPEED")
-(conceived_by
-   "as diabolically conceived by")
-(cheat_mtv_overlay
-   "Song Title Always")
-(cheat_awesomeness
-   "Cheats moved to Extras menu")
-(cheat_barf
-   "Roxbury Mode")
-(EASTER_EGG1
-   "MiloHax Community")
-(EASTER_EGG3
-   "DISCORD, INTERNET")
-(EASTER_EGGa
-   "\qFriends Don't Let Friends Clon\q")
-(EASTER_EGGb
-   "\qCALL ATTENDANT\q")
-(EASTER_EGGc
-   "\qlord help my poor soul\q")
-(EASTER_EGGd
-   "\qweekly old man psa\q")
-(unlockeasteregg1_1
-   "Dear Valued GH2 Deluxe Player,")
-(unlockeasteregg1_2
-   "GUESS WHAT?")
-(unlockeasteregg1_3
-   "You have unlocked an EASTER EGG!")
-(unlockeasteregg1_4
-   "\nHyperspeed as you know it no longer exists in GH2 Deluxe. Instead, ADJUSTABLE HYPERSPEED can be set exactly to your tastes by pressing SELECT, SELECT on any setlist screen!\n\nWhile you're here though, did we mention there's other easter eggs to find? Try the hyperspeed code on other menus if you're brave enough. Here's a hint: Progressive scan...\n\nHave fun,\nThe GH2 Deluxe Team")
-(unlockeasteregg2_1
-   "Dear Valued GH2 Deluxe Player,")
-(unlockeasteregg2_2
-   "EASTER EGG!")
-(unlockeasteregg2_3
-   "You found another one! Hell yeah!")
-(unlockeasteregg2_4
-   "\nThat was the easy one, but you should've already started to see and hear some things shift here and there, yeah? There's a lot more, trust me.\n\nHere's your next hint: it's got four and only four options on it. There's a couple menus like that.\n\nHappy hunting,\nThe GH2 Deluxe Team")
-(unlockeasteregg3_1
-   "Dear Valued GH2 Deluxe Player,")
-(unlockeasteregg3_2
-   "EASTER EGG!")
-(unlockeasteregg3_3
-   "Free Play did it! Another found!")
-(unlockeasteregg3_4
-   "\nCheck that MAIN MENU! But you're not done yet. (Remember, you're trying the hyperspeed code on other menus that aren't the main menu. Stay focused.)\n\nNext hint: where band disputes are remediated. And occasionally where bands break up.\n\nGame on,\nThe GH2 Deluxe Team")
-(unlockeasteregg4_1
-   "Dear Valued GH2 Deluxe Player,")
-(unlockeasteregg4_2
-   "EASTER EGG!")
-(unlockeasteregg4_3
-   "How many more are there?")
-(unlockeasteregg4_4
-   "\nYou're at the home stretch. You're seeing what not a lot of people have seen before. But you are. Not. Done. Yet.\n\nHere's your very final hint: you've never gone on this screen before. And if you have, never more than once. (R.I.P. our egos.)\n\nGot that? (And once you find it, send us a picture in MiloHax and gloat.)\n\nGood luck, The GH2 Deluxe Team")
-(finaleggtxt1
-   "CONGRATULATIONS")
-(finaleggtxt2
-   "YOU FOUND ALL THE EGGS")
-(finaleggtxt3
-   "Thank you so much for playing our special version of\nGuitar Hero II.")
-(manage_gig
-   " ")
-(gig_play
-   "PLAY SHOW")
-(gig_character
-   "CHARACTER")
-(gig_guitar
-   "GUITAR")
-(gig_venue
-   "VENUE")
-(gig_extras
-   "EXTRAS")
-(CAHNGE_SEPED
-   "CHANGE SPEED")
-(CHANGE_SEPED
-   "CHANGE SPEED")
-(CAHNGE_SECTION
-   "VIDEO SETTINGS")
-(NWE_SONG
-   "PRACTICE")
-(ADUIO_SETTINGS
-   "AUDIO SETTINGS")
-(LEFT_PAYYER_1
-   "SONG TITLE ALWAYS")
-(LEFT_PAYYER_2
-   "HORSE HEAD")
-(LEFT_PAYYER_3
-   "ROXBURY MODE")
-(LEFT_PAYYER_4
-   "PERFORMANCE MODE")
-(LEFT_PAYYER_5
-   "NO FAIL MODE")
-(LEFT_PAYYER_6
-   "EYEBALL CROWD")
-(LEFT_PAYYER_7
-   "MONKEY CROWD")
-(LEFT_PAYYER_8
-   "GRYBO GEMS")
-(vs_titty
-   "EXTRAS")
-(vs_bag
-   "SET BLACK HIGHWAY")
-(vs_bscan
-   "FLAMING HEAD")
-(vs_wodescreen
-   "NECKLESS MODE")
-(tutgh2als
-   "Guitar Hero 2")
-(prgh80se
-   "Guitar Hero 80s")
+(cheat_focusmode "Focus Mode")
+(cheat_neckless "Neckless Mode")
+(speed_msg "NOTES: %d%%  SONG: %d%%")
+(gm_tspd "UNUSED")
+(gm_sngspd "NOTE SPEED")
+(gm_unusedsl "SONG SPEED")
+(GM_BLACK_BACKGD "FOCUS MODE")
+(GAME_MODIFIER "GAME MODIFIERS")
+(help_adjspd "ADJUST SPEED")
+(conceived_by "as diabolically conceived by")
+(cheat_mtv_overlay "Song Title Always")
+(cheat_awesomeness "Cheats moved to Extras menu")
+(cheat_barf "Roxbury Mode")
+
+; Easter eggs (don't tell anyone)
+(EASTER_EGG1 "MiloHax Community")
+(EASTER_EGG3 "DISCORD, INTERNET")
+(EASTER_EGGa "\qFriends Don't Let Friends Clon\q")
+(EASTER_EGGb "\qCALL ATTENDANT\q")
+(EASTER_EGGc "\qlord help my poor soul\q")
+(EASTER_EGGd "\qweekly old man psa\q")
+(unlockeasteregg1_1 "Dear Valued GH2 Deluxe Player,")
+(unlockeasteregg1_2 "GUESS WHAT?")
+(unlockeasteregg1_3 "You have unlocked an EASTER EGG!")
+(unlockeasteregg1_4 "\nHyperspeed as you know it no longer exists in GH2 Deluxe. Instead, ADJUSTABLE HYPERSPEED can be set exactly to your tastes by pressing SELECT, SELECT on any setlist screen!\n\nWhile you're here though, did we mention there's other easter eggs to find? Try the hyperspeed code on other menus if you're brave enough. Here's a hint: Progressive scan...\n\nHave fun,\nThe GH2 Deluxe Team")
+(unlockeasteregg2_1 "Dear Valued GH2 Deluxe Player,")
+(unlockeasteregg2_2 "EASTER EGG!")
+(unlockeasteregg2_3 "You found another one! Hell yeah!")
+(unlockeasteregg2_4 "\nThat was the easy one, but you should've already started to see and hear some things shift here and there, yeah? There's a lot more, trust me.\n\nHere's your next hint: it's got four and only four options on it. There's a couple menus like that.\n\nHappy hunting,\nThe GH2 Deluxe Team")
+(unlockeasteregg3_1 "Dear Valued GH2 Deluxe Player,")
+(unlockeasteregg3_2 "EASTER EGG!")
+(unlockeasteregg3_3 "Free Play did it! Another found!")
+(unlockeasteregg3_4 "\nCheck that MAIN MENU! But you're not done yet. (Remember, you're trying the hyperspeed code on other menus that aren't the main menu. Stay focused.)\n\nNext hint: where band disputes are remediated. And occasionally where bands break up.\n\nGame on,\nThe GH2 Deluxe Team")
+(unlockeasteregg4_1 "Dear Valued GH2 Deluxe Player,")
+(unlockeasteregg4_2 "EASTER EGG!")
+(unlockeasteregg4_3 "How many more are there?")
+(unlockeasteregg4_4 "\nYou're at the home stretch. You're seeing what not a lot of people have seen before. But you are. Not. Done. Yet.\n\nHere's your very final hint: you've never gone on this screen before. And if you have, never more than once. (R.I.P. our egos.)\n\nGot that? (And once you find it, send us a picture in MiloHax and gloat.)\n\nGood luck, The GH2 Deluxe Team")
+(finaleggtxt1 "CONGRATULATIONS")
+(finaleggtxt2 "YOU FOUND ALL THE EGGS")
+(finaleggtxt3 "Thank you so much for playing our special version of\nGuitar Hero II.")
+
+; Manage Gig/Extras menu
+(manage_gig " ")
+(gig_play "PLAY SHOW")
+(gig_character "CHARACTER")
+(gig_guitar "GUITAR")
+(gig_venue "VENUE")
+(gig_extras "EXTRAS")
+(CAHNGE_SEPED "CHANGE SPEED")
+(CHANGE_SEPED "CHANGE SPEED")
+(CAHNGE_SECTION "VIDEO SETTINGS")
+(NWE_SONG "PRACTICE")
+(ADUIO_SETTINGS "AUDIO SETTINGS")
+(LEFT_PAYYER_1 "SONG TITLE ALWAYS")
+(LEFT_PAYYER_2 "HORSE HEAD")
+(LEFT_PAYYER_3 "ROXBURY MODE")
+(LEFT_PAYYER_4 "PERFORMANCE MODE")
+(LEFT_PAYYER_5 "NO FAIL MODE")
+(LEFT_PAYYER_6 "EYEBALL CROWD")
+(LEFT_PAYYER_7 "MONKEY CROWD")
+(LEFT_PAYYER_8 "GRYBO GEMS")
+(vs_titty "EXTRAS")
+(vs_bag "SET BLACK HIGHWAY")
+(vs_bscan "FLAMING HEAD")
+(vs_wodescreen "NECKLESS MODE")
+(tutgh2als "Guitar Hero 2")
+(prgh80se "Guitar Hero 80s")

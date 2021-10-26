@@ -1,8 +1,3 @@
-;; -----------------------------------------------
-;; Practice Section Names
-
-(full_song "Full Song")
-
 (intro "Intro")
 (intro_a "Intro a")
 (intro_b "Intro b")
