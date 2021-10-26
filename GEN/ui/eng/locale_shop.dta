@@ -73,7 +73,7 @@
 (fb_leopard_shop_desc
    {if_else $egg5
       "Did someone call Spike Lee? Because this Leopard-finish Firebird's got jungle fever. Reowrr! This kitten's got claws, my friend. Saucer of milk - table three! Um...point made? Good."
-	  "Reowrr! This little kitten's got claws, my friend. Saucer of milk - table three! Um...point made? Good."})
+      "Reowrr! This little kitten's got claws, my friend. Saucer of milk - table three! Um...point made? Good."})
 (fb_hippie_shop_desc "Trade in your hard earned cash for this crazy cool custom finish on this Gibson Firebird.")
 (coronet_cherry_shop_desc "In 1959, Epiphone began shipping the Coronet in cherry red with a P-90 pickup. These \qbudget\q offerings now regularly fetch top dollar amongst vintage collectors.")
 (coronet_burst_shop_desc "Featuring gold hardware, two high output humbuckers, and a more traditional 6-on-a-side headstock, this model proves that the Coronet cleans up real nice.")
@@ -106,35 +106,35 @@
 (fish_reward_locked_desc
    {if_else $egg5
       "Beat the game on EASY first, champ. Then you can buy this bad boy."
-	  "This guitar is only for those who have finished the EASY tour."})
+      "This guitar is only for those who have finished the EASY tour."})
 (usa_reward_locked_desc
    {if_else $egg5
       "Get five stars on every song on EASY first and then we'll talk deal."
-	  "Get all five-star reviews on EASY, and you can buy this guitar."})
+      "Get all five-star reviews on EASY, and you can buy this guitar."})
 (coffin_reward_locked_desc
    {if_else $egg5
       "Yeah, you gotta beat the game on MEDIUM before we'll sell you this one. Sorry."
-	  "So you've finished your MEDIUM tour, huh?"})
+      "So you've finished your MEDIUM tour, huh?"})
 (viking_reward_locked_desc
    {if_else $egg5
       "If you can get five stars on every song on MEDIUM, you might be worthy of this guitar."
-	  "So you got perfect reviews on your MEDIUM tour, huh?"})
+      "So you got perfect reviews on your MEDIUM tour, huh?"})
 (snaketapus_reward_locked_desc
    {if_else $egg5
       "Oh man. You SO want to beat the game on HARD for this one. For serious."
-	  "This status symbol doesn't go to just anyone, you know? Beat HARD and we'll talk."})
+      "This status symbol doesn't go to just anyone, you know? Beat HARD and we'll talk."})
 (eyeball_reward_locked_desc
    {if_else $egg5
       "Get five stars on every song on HARD. I know, it's scary. You can do it, cap'n."
-	  "Nail HARD, and we'll think about letting you buy one."})
+      "Nail HARD, and we'll think about letting you buy one."})
 (battleaxe_reward_locked_desc
    {if_else $egg5
       "Beat EXPERT. You have to. Because this thing is so freakin' righteous."
-	  "Exclusively Legendary EXPERT tour players only."})
+      "Exclusively Legendary EXPERT tour players only."})
 (log_reward_locked_desc
    {if_else $egg5
       "If you take the time to get five stars on every song on EXPERT, this guitar will make up for the fact that you've lost all your friends."
-	  "Five Stars. EXPERT. Everything."})
+      "Five Stars. EXPERT. Everything."})
 
 ; Controller descriptions
 (redoctane_shop_desc "This 3/4 scale SG replica - one you might very well recognize - was initially featured in the first Guitar Hero by way of a cheat code. Harmonix thankfully thought to leave the files on-disc for the second game so we could sell it to you proper.")
@@ -217,7 +217,7 @@
 (punkencore_shop_desc
    {if_else $game80s
       "A fiend for surf punk and rapid downstrokes, Johnny Napalm spends as much time thrashing onstage as he does gettin' hassled by the 5-0. Fully chaotic and hella toxic, Johnny's all-ages shows are totally legendary."
-	  "Johnny embodies the true spirit of punk rock with his signature stomp and swagger. Released from lockup for \qalmost tolerable behavior,\q Johnny lurches back into the spotlight, rough and ready for action."})
+      "Johnny embodies the true spirit of punk rock with his signature stomp and swagger. Released from lockup for \qalmost tolerable behavior,\q Johnny lurches back into the spotlight, rough and ready for action."})
 (alternaencore_shop_desc
    {if_else $game80s
       "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board."
@@ -253,24 +253,24 @@
 (glam2_shop_desc
    {if_else $egg5
       "Not everybody can pull off a top hat and feather boa. Hair is not afraid to subvert the dominant paradigm in this ultra-glam ensemble."
-	  "Not everybody can pull off a top hat and feather boa. Izzy is not afraid to subvert the dominant paradigm in this ultra-glam ensemble."})
+      "Not everybody can pull off a top hat and feather boa. Izzy is not afraid to subvert the dominant paradigm in this ultra-glam ensemble."})
 (goth1_shop_desc
    {if_else $egg5
       "Feathers and facepaint? Only Pandora could pull that off."
-	  "The consummate chameleon, Pandora is admired almost as much for her unique and ever-changing personal style as for her incomparable shredding skills."})
+      "The consummate chameleon, Pandora is admired almost as much for her unique and ever-changing personal style as for her incomparable shredding skills."})
 (metal2_shop_desc
    {if_else $egg5
       "Having spent most of his life stuck in one place or another, Hazzard loves nothing more than to hit the open road. Some people hate to tour. Hazzard lives for it." 
-	  "Since they don't make you play better and you can't drink 'em, Axel has zero interest in clothes. But even Axel needs a change once in awhile."})
+      "Since they don't make you play better and you can't drink 'em, Axel has zero interest in clothes. But even Axel needs a change once in awhile."})
 (rockabill2_shop_desc
    {if_else $egg5
       "Dax Deville is one cat who ain't afraid to look his best. As long as his hair is in place, he's as comfortable in old jeans as he is in these swanky duds."
-	  "Eddie Knox is one cat who ain't afraid to look his best. As long as his hair is in place, he's as comfortable in old jeans as he is in these swanky duds."})
+      "Eddie Knox is one cat who ain't afraid to look his best. As long as his hair is in place, he's as comfortable in old jeans as he is in these swanky duds."})
 (rock1_shop_desc
    {if_else $egg5
       "Gina's look is designed for backbreaking life on the road; if she can't pass out in the van wearing it, she's not interested."
-	  "Casey's look is designed for backbreaking life on the road; if she can't pass out in the van wearing it, she's not interested."})
+      "Casey's look is designed for backbreaking life on the road; if she can't pass out in the van wearing it, she's not interested."})
 (deathmetal2_shop_desc
    {if_else $egg5
       "The Norse shredding master keeps this in the back of his closet for when he really needs to command an audience."
-	  "Asked about his gauntlets-to-gargoyles style, Lars responds, \qLARS HAS A REPUTATION OF STRENGTH OF WHICH HE NEEDS TO BE DOING THE UPHOLDING!\q"})
+      "Asked about his gauntlets-to-gargoyles style, Lars responds, \qLARS HAS A REPUTATION OF STRENGTH OF WHICH HE NEEDS TO BE DOING THE UPHOLDING!\q"})
