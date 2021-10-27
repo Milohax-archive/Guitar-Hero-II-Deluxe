@@ -3533,3 +3533,34 @@
       (guitar sg)
       (venue small2))
    (validate_ignore TRUE))
+
+; Drum Hero-exclusive songs
+(chopsuey
+   (name "Chop Suey!")
+   (artist "System of a Down")
+   (caption performed_by)
+   (song
+      (name songs/chopsuey/chopsuey)
+      (tracks
+         ((guitar (2))
+          (bass (3))
+          (drum (4 5))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/chopsuey/chopsuey.mid))
+   (song_vs
+      (name songs/chopsuey/chopsuey)
+      (tracks
+         ((guitar (2))
+          (bass (3))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/chopsuey/chopsuey.mid))
+   (anim_tempo kTempoMedium)
+   (preview 41000 65500)
+   (quickplay
+      (character_outfit punk1)
+      (guitar sg)
+      (venue big)))

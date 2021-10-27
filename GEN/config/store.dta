@@ -87,6 +87,7 @@
 #ifndef _ONYX
 #ifndef 8DBUG
 #ifndef GH1RX
+#ifndef _DRUM
    (speedtest (price 500000))
    (rawdog (price 550))
    (arterialblack (price 550))
@@ -118,6 +119,7 @@
 #endif
 #endif
 #endif
+#endif
 
    ; Encore store
 #ifndef _SHIP
@@ -125,8 +127,10 @@
 #ifndef _ONYX
 #ifndef 2DBUG
 #ifndef GH1RX
+#ifndef _DRUM
    (becauseitsmidnite (price 550))
    (speedtest (price 500000))
+#endif
 #endif
 #endif
 #endif

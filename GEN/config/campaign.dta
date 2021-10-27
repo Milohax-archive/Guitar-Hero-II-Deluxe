@@ -159,17 +159,17 @@
 ; Drum campaign
 #ifdef _DRUM
 (order
-   (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
-   (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
-   (small4 bangyourhead turningjapanese holdonloosely thewarrior iwannarock)
-   (theatre2 whatilikeaboutyou synchronicity2 ballroomblitz onlyalad roundandround)
-   (fest2 aintnothinbut lonelyisthenight bathroomwall losangeles wrathchild)
-   (arena2 electriceye policetruck seventeen caughtinamosh playwithme))
+   (battle2 wegotthebeat policetruck chopsuey)
+   (small3)
+   (small4)
+   (theatre2)
+   (fest2)
+   (arena2))
 (required_songs
-   (kDifficultyEasy 3 4)
-   (kDifficultyMedium 4 5)
-   (kDifficultyHard 5 5)
-   (kDifficultyExpert 5 5))
+   (kDifficultyEasy 3 3)
+   (kDifficultyMedium 3 3)
+   (kDifficultyHard 3 3)
+   (kDifficultyExpert 3 3))
 (cash
    (starting 250)
    (star_awards

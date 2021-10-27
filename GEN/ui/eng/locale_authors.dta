@@ -76,7 +76,7 @@
 (youreallygotme_author "Harmonix")
 (yyz_author "Harmonix")
 
-;;; Encore authors
+; Encore authors
 (18andlife_author "Harmonix")
 (aintnothinbut_author "Harmonix")
 (ballroomblitz_author "Harmonix")
@@ -109,10 +109,13 @@
 (whatilikeaboutyou_author "Harmonix")
 (wrathchild_author "Harmonix")
 
-;;; GH1 Redux Authors
+; GH1 Redux authors
 (allofthis_author "Harmonix, mariteaux")
 (behindthemask_author "Harmonix, mariteaux")
 (spanishcastlemagic_author "Harmonix, mariteaux")
 (thunderkiss65_author "Harmonix, mariteaux")
 (trippolette_author "Harmonix, mariteaux")
 (graveyardshift_author "Harmonix, mariteaux")
+
+; Drum Hero authors
+(chopsuey_author "Harmonix")
