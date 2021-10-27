@@ -2,7 +2,7 @@
 (sc_select_outfit "SELECT YOUR OUTFIT")
 (select_character "Select a Character")
 
-; Character names
+; DX names
 (alterna "Judy Nails")
 (alterna2 "Judy Nails")
 (classic "Clive Winston")
@@ -47,6 +47,7 @@
       "Dax Deville"
       "Eddie Knox"})
 
+; Encore names
 (punkencore "Johnny Napalm")
 (alternaencore "Judy Nails")
 (glamencore
@@ -59,6 +60,8 @@
       "Hazzard"
       "Axel Steel"})
 (grimencore "Grim Ripper")
+
+; Redux names
 (alternagh1 "Judy Nails")
 (gothgh1 "Pandora")
 (punkgh1 "Johnny Napalm")
@@ -123,13 +126,13 @@
       "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board."
       {if_else $egg5
          "A fan of roller derby and distorted feedback, Judy Nails has been a pioneer of alternative rock since her first tour at age 17. Known for her diverse collection of LP's, Nails brings an experimental twist to heavy guitar riffs with a sly smirk."
-         "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage."})
+         "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage."}})
 (glamencore_blurb
    {if_else $game80s
       "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses."
       {if_else $egg5
          "A real crowd pleaser, Hair thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Hair's fan base is even bigger than his hair."
-         "A real crowd pleaser, Izzy thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Izzy's fan base is even bigger than his hair."})
+         "A real crowd pleaser, Izzy thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Izzy's fan base is even bigger than his hair."}})
 (gothencore_blurb
    {if_else $game80s
       "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q"
@@ -139,25 +142,31 @@
       "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse."
       {if_else $egg5
          "Famous for his driving riffs and up-front attitude, Hazzard first picked up a guitar in an attempt to quell his boredom during suspension from elementary school. The rest is history. Metal history."
-         "Famous for his driving riffs and up-front attitude, Axel Steel first picked up a guitar in an attempt to quell his boredom during suspension from elementary school. The rest is history. Metal history."})
+         "Famous for his driving riffs and up-front attitude, Axel Steel first picked up a guitar in an attempt to quell his boredom during suspension from elementary school. The rest is history. Metal history."}})
 (grimencore_blurb
    {if_else $game80s
       "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills."
       {if_else $egg5
          "This rock star is bad to the bone. Grim's riffs are so huge, fans are lucky just to leave the show with their souls intact. At his latest killer performance, an awestruck fan gushed, \qThe curtains flew, then he appeared!\q"
-         "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."})
+         "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."}})
 
-;;; GH1 Redux blurbs
-(metalgh1_blurb "No frills, no fluff. Axel Steel is a shredder from the old school. He was put on this planet for two things, to drink beer and to play some Rock N' Roll. Looks like he's almost out of beer.")
+; GH1 Redux blurbs
+(metalgh1_blurb
+   {if_else $egg5
+      "No frills, no fluff. Hazzard is a shredder from the old school. He was put on this planet for two things, to drink beer and to play some Rock N' Roll. Looks like he's almost out of beer."
+      "No frills, no fluff. Axel Steel is a shredder from the old school. He was put on this planet for two things, to drink beer and to play some Rock N' Roll. Looks like he's almost out of beer."})
 (gothgh1_blurb "The Girl Scouts didn't want her, the ballet school couldn't handle her, but the world can't get enough of Pandora's awesome guitar! She plays fast and wild, and UberSound Magazine recently dubbed her the Dark Princess of Rock.")
 (punkgh1_blurb "Raw is the word that describes Johnny Napalm best. That goes for his guitar playing and his abuse of the English language.  His energy onstage is unmatched. He's the true successor to the Punk Era and an awesome talent.")
 (classicgh1_blurb "Inspired by the 70s British guitar gods, Clive Winston is a precious session commodity - everything he plays on goes gold. He's got a unique and virtuosic guitar style and knows just how far you can bend a string before it breaks.")
-(glamgh1_blurb "A wild man on and off the stage, Izzy is famous for his guitar playing and infamous for his hard partying ways. The press can't get enough of this bad boy, who never leaves a crowd unhappy or a hotel room un-trashed.")
+(glamgh1_blurb
+   {if_else $egg5
+      "A wild man on and off the stage, Hair is famous for his guitar playing and infamous for his hard partying ways. The press can't get enough of this bad boy, who never leaves a crowd unhappy or a hotel room un-trashed."
+      "A wild man on and off the stage, Izzy is famous for his guitar playing and infamous for his hard partying ways. The press can't get enough of this bad boy, who never leaves a crowd unhappy or a hotel room un-trashed."})
 (alternagh1_blurb "Known for her experiments with unconventional guitar tunings and stunning solos, Judy Nails has been touring since she was 17. She claims that Alternative Rock \qsaved her life\q, and she hopes to return the favor some day.")
 (funkgh1_blurb "A musical prodigy, Xavier Stone's time in Egypt exposed him to African and Middle Eastern techniques which he weaves into his sound. In a recent interview he claimed to rock so hard \qthere's nothing left of a guitar when I'm done with it.\q")
 (grimgh1_blurb "Tearing it up from the beyond, Grim is a full-on rocker. Grim has abandoned the stealing of souls for the rush of stealing the show and now tours the world laying down monster riffs.")
 
-;;; Outfit blurbs
+; Outfit blurbs
 (alterna_outfit_blurb "Likes: Perfect spelling, boast-worthy bruises, strawberries\n\nDislikes: Rudeness, fake strawberry-flavored things")
 (deathmetal_outfit_blurb "Likes: mortality, blood explosions, the reckoning, abrupt tempo changes\n\nDislikes:  Big dogs")
 (goth_outfit_blurb "Likes: make-up, hailstorms, leather\n\nDislikes: Small talk, the beach")
@@ -172,7 +181,7 @@
 (gothencore_outfit_blurb "Likes: make-up, hailstorms, leather\n\nDislikes: Small talk, the beach")
 (metalencore_outfit_blurb "Likes: Metal\n\nDislikes: Un-metal")
 
-;;; Outfit Names
+; Outfit Names
 (alterna1_outfit "SKULLS")
 (alterna2_outfit "SNAKES")
 (deathmetal1_outfit "GAUNTLETS")

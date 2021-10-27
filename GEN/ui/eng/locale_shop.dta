@@ -105,36 +105,36 @@
 ; Locked guitar descriptions
 (fish_reward_locked_desc
    {if_else $egg5
-      "Beat the game on EASY first, champ. Then you can buy this bad boy."
-      "This guitar is only for those who have finished the EASY tour."})
+      "This guitar is only for those who have finished the EASY tour."
+      "Beat the game on EASY first, champ. Then you can buy this bad boy."})
 (usa_reward_locked_desc
    {if_else $egg5
-      "Get five stars on every song on EASY first and then we'll talk deal."
-      "Get all five-star reviews on EASY, and you can buy this guitar."})
+      "Get all five-star reviews on EASY, and you can buy this guitar."
+      "Get five stars on every song on EASY first and then we'll talk deal."})
 (coffin_reward_locked_desc
    {if_else $egg5
-      "Yeah, you gotta beat the game on MEDIUM before we'll sell you this one. Sorry."
-      "So you've finished your MEDIUM tour, huh?"})
+      "So you've finished your MEDIUM tour, huh?"
+      "Yeah, you gotta beat the game on MEDIUM before we'll sell you this one. Sorry."})
 (viking_reward_locked_desc
    {if_else $egg5
-      "If you can get five stars on every song on MEDIUM, you might be worthy of this guitar."
-      "So you got perfect reviews on your MEDIUM tour, huh?"})
+      "So you got perfect reviews on your MEDIUM tour, huh?"
+      "If you can get five stars on every song on MEDIUM, you might be worthy of this guitar."})
 (snaketapus_reward_locked_desc
    {if_else $egg5
-      "Oh man. You SO want to beat the game on HARD for this one. For serious."
-      "This status symbol doesn't go to just anyone, you know? Beat HARD and we'll talk."})
+      "This status symbol doesn't go to just anyone, you know? Beat HARD and we'll talk."
+      "Oh man. You SO want to beat the game on HARD for this one. For serious."})
 (eyeball_reward_locked_desc
    {if_else $egg5
-      "Get five stars on every song on HARD. I know, it's scary. You can do it, cap'n."
-      "Nail HARD, and we'll think about letting you buy one."})
+      "Nail HARD, and we'll think about letting you buy one."
+      "Get five stars on every song on HARD. I know, it's scary. You can do it, cap'n."})
 (battleaxe_reward_locked_desc
    {if_else $egg5
-      "Beat EXPERT. You have to. Because this thing is so freakin' righteous."
-      "Exclusively Legendary EXPERT tour players only."})
+      "Exclusively Legendary EXPERT tour players only."
+      "Beat EXPERT. You have to. Because this thing is so freakin' righteous."})
 (log_reward_locked_desc
    {if_else $egg5
-      "If you take the time to get five stars on every song on EXPERT, this guitar will make up for the fact that you've lost all your friends."
-      "Five Stars. EXPERT. Everything."})
+      "Five Stars. EXPERT. Everything."
+      "If you take the time to get five stars on every song on EXPERT, this guitar will make up for the fact that you've lost all your friends."})
 
 ; Controller descriptions
 (redoctane_shop_desc "This 3/4 scale SG replica - one you might very well recognize - was initially featured in the first Guitar Hero by way of a cheat code. Harmonix thankfully thought to leave the files on-disc for the second game so we could sell it to you proper.")
@@ -223,13 +223,13 @@
       "Judy Nails might look sweet onstage, but this alterna-girl is rumored to be a wild child in the wings. Having toured her teen years away, Judy is a rock and roll lifer and princess of the pedal board."
       {if_else $egg5
          "A fan of roller derby and distorted feedback, Judy Nails has been a pioneer of alternative rock since her first tour at age 17. Known for her diverse collection of LP's, Nails brings an experimental twist to heavy guitar riffs with a sly smirk."
-         "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage."})
+         "A fan of distorted feedback and roller derby, Judy Nails has been a pioneer of alt-rock since her first tour at age 17. Known for her huge collection of vinyl, Judy brings a smile, and a lot of pedals, to the stage."}})
 (glamencore_shop_desc
    {if_else $game80s
       "Media darling and pop culture icon, Izzy Sparks is living the rock and roll dream and every mother's nightmare. With his love of legato and leopard skin, Izzy brings metal to the mainstream masses."
       {if_else $egg5
          "A real crowd pleaser, Hair thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Hair's fan base is even bigger than his hair."
-         "A real crowd pleaser, Izzy thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Izzy's fan base is even bigger than his hair."})
+         "A real crowd pleaser, Izzy thrills all with his energetic onstage showmanship while delighting the media with his offstage debauchery. Izzy's fan base is even bigger than his hair."}})
 (gothencore_shop_desc
    {if_else $game80s
       "Enigmatic and experimental, Pandora is a true trendsetter. Asked about her incomparable new-wave guitar style, Pandora explains that her solos are \qtributes to the radness of robots and plastic.\q"
@@ -239,13 +239,13 @@
       "Just a city boy, born and raised in South Peoria, Axel Steel is a fan of arena rock and partyin' in the parking lot. King of the stadium show and master of the tailgate, Axel Steel is a hard-riffin' powerhouse."
       {if_else $egg5
          "Famous for his driving riffs and up-front attitude, Hazzard first picked up a guitar in an attempt to quell his boredom during suspension from elementary school. The rest is history. Metal history."
-         "Famous for his driving riffs and up-front attitude, Axel Steel first picked up a guitar in an attempt to quell his boredom during suspension from elementary school. The rest is history. Metal history."})
+         "Famous for his driving riffs and up-front attitude, Axel Steel first picked up a guitar in an attempt to quell his boredom during suspension from elementary school. The rest is history. Metal history."}})
 (grimencore_shop_desc
    {if_else $game80s
       "Dudes? It just doesn't get more gnarly than Grim. With his unholy skill and blood-curdling licks, it's no wonder 40,000 are coming to see him at every show. Grim, like, totally kills."
       {if_else $egg5
          "This rock star is bad to the bone. Grim's riffs are so huge, fans are lucky just to leave the show with their souls intact. At his latest killer performance, an awestruck fan gushed, \qThe curtains flew, then he appeared!\q"
-         "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."})
+         "This rock star is bad to the bone. Grim's riffs are so killer, fans are lucky just to leave the show with their souls intact. Grim's supernatural licks always knock 'em dead. 'Cause he's...you know...right."}})
 
 ; Outfit descriptions
 (punk2_shop_desc "Johnny has a couple of different looks, but neither of them involves bathing. With liberty spikes and a bullet belt, Johnny makes sordid, degenerate behavior look pretty good.")
