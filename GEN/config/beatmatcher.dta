@@ -3,28 +3,18 @@
       #ifndef 2DBUG
       #ifndef 8DBUG
       (slots
-         {if_else $rbdrum kPad_R1 kpad_R1} ; use r1 for kick (green)
+         {if_else $rbdrum kPad_R1 kPad_R1} ; use r1 for kick (green)
          {if_else $rbdrum 0 0}
-         {if_else $rbdrum kPad_L1 kpad_L2} ; use L1 for kick (green)
+         {if_else $rbdrum kPad_L1 kPad_L2} ; use L1 for kick (green)
          {if_else $rbdrum 0 0}
-         {if_else $nodrum kPad_L2 kpad_L1} ; okay but use L2 for green if you use a pad
-         {if_else $nodrum 0 0}
-         {if_else $rbdrum kPad_Circle kpad_L1} ; use Circle for snare (red)
+         {if_else $rbdrum kPad_Circle kPad_L1} ; use Circle for snare (red)
          {if_else $rbdrum 1 1}
-         {if_else $nodrum kPad_L1 kpad_Circle} ; okay but use L1 for red if you use a pad
-         {if_else $nodrum 1 1}
-         {if_else $rbdrum kPad_Tri kpad_R1} ; use Tri for ride? (yellow)
+         {if_else $rbdrum kPad_Tri kPad_R1} ; use Tri for ride? (yellow)
          {if_else $rbdrum 2 2}
-         {if_else $nodrum kPad_R1 kpad_Tri} ; okay but use R1 for yellow if you use a pad
-         {if_else $nodrum 2 2}
-         {if_else $rbdrum kPad_Square kpad_R2} ; use Square for tom (blue)
+         {if_else $rbdrum kPad_Square kPad_R2} ; use Square for tom (blue)
          {if_else $rbdrum 3 3}
-         {if_else $nodrum kPad_R2 kpad_Square} ; okay but use R2 for blue if you use a pad
-         {if_else $nodrum 3 3}
-         {if_else $rbdrum kPad_X kpad_X} ; use Square for crash (orange)
-         {if_else $rbdrum 4 4}
-         {if_else $nodrum kPad_X kpad_X} ; okay but use X for orange if you use a pad
-         {if_else $nodrum 4 4})
+         {if_else $rbdrum kPad_X kPad_X} ; use Square for crash (orange)
+         {if_else $rbdrum 4 4})
       #endif
       #endif
       #ifdef 2DBUG (slots kPad_L2 0 kPad_L1 1 kPad_R1 2 kPad_R2 3 kPad_X 4) #endif
@@ -35,28 +25,18 @@
       #ifndef 2DBUG
       #ifndef 8DBUG
       (slots
-         {if_else $rbdrum kPad_R1 kpad_R1} ; use r1 for kick (green)
+         {if_else $rbdrum kPad_R1 kPad_R1} ; use r1 for kick (green)
          {if_else $rbdrum 0 0}
-         {if_else $rbdrum kPad_L1 kpad_L2} ; use L1 for kick (green)
+         {if_else $rbdrum kPad_L1 kPad_L2} ; use L1 for kick (green)
          {if_else $rbdrum 0 0}
-         {if_else $nodrum kPad_L2 kpad_L1} ; okay but use L2 for green if you use a pad
-         {if_else $nodrum 0 0}
-         {if_else $rbdrum kPad_Circle kpad_L1} ; use Circle for snare (red)
+         {if_else $rbdrum kPad_Circle kPad_L1} ; use Circle for snare (red)
          {if_else $rbdrum 1 1}
-         {if_else $nodrum kPad_L1 kpad_Circle} ; okay but use L1 for red if you use a pad
-         {if_else $nodrum 1 1}
-         {if_else $rbdrum kPad_Tri kpad_R1} ; use Tri for ride? (yellow)
+         {if_else $rbdrum kPad_Tri kPad_R1} ; use Tri for ride? (yellow)
          {if_else $rbdrum 2 2}
-         {if_else $nodrum kPad_R1 kpad_Tri} ; okay but use R1 for yellow if you use a pad
-         {if_else $nodrum 2 2}
-         {if_else $rbdrum kPad_Square kpad_R2} ; use Square for tom (blue)
+         {if_else $rbdrum kPad_Square kPad_R2} ; use Square for tom (blue)
          {if_else $rbdrum 3 3}
-         {if_else $nodrum kPad_R2 kpad_Square} ; okay but use R2 for blue if you use a pad
-         {if_else $nodrum 3 3}
-         {if_else $rbdrum kPad_X kpad_X} ; use X for crash (orange)
-         {if_else $rbdrum 4 4}
-         {if_else $nodrum kPad_X kpad_X} ; okay but use X for orange if you use a pad
-         {if_else $nodrum 4 4})
+         {if_else $rbdrum kPad_X kPad_X} ; use X for crash (orange)
+         {if_else $rbdrum 4 4})
       #endif
       #endif
       #ifdef 2DBUG (slots kPad_L2 0 kPad_L1 1 kPad_R1 2 kPad_R2 3 kPad_X 4) #endif
@@ -67,26 +47,16 @@
       #ifndef 2DBUG
       #ifndef 8DBUG
       (slots ; comments are wrong. it's the same thing as above but flipped fuck you
-         {if_else $rbdrum kPad_R1 kpad_R1} ; use r1 for kick (green)
+         {if_else $rbdrum kPad_R1 kPad_R1} ; use r1 for kick (green)
          {if_else $rbdrum 4 4}
-         {if_else $nodrum kPad_X kpad_X} ; okay but use X for green if you use a pad
-         {if_else $nodrum 0 0}
-         {if_else $rbdrum kPad_Square kpad_R2} ; use Circle for snare (red)
+         {if_else $rbdrum kPad_Square kPad_R2} ; use Circle for snare (red)
          {if_else $rbdrum 1 1}
-         {if_else $nodrum kPad_R2 kpad_Square} ; okay but use L1 for red if you use a pad
-         {if_else $nodrum 1 1}
-         {if_else $rbdrum kPad_Tri kpad_R1} ; use Tri for ride? (yellow)
+         {if_else $rbdrum kPad_Tri kPad_R1} ; use Tri for ride? (yellow)
          {if_else $rbdrum 2 2}
-         {if_else $nodrum kPad_R1 kpad_Tri} ; okay but use R1 for yellow if you use a pad
-         {if_else $nodrum 2 2}
-         {if_else $rbdrum kPad_Circle kpad_L1} ; use Square for tom (blue)
+         {if_else $rbdrum kPad_Circle kPad_L1} ; use Square for tom (blue)
          {if_else $rbdrum 3 3}
-         {if_else $nodrum kPad_L1 kpad_Circle} ; okay but use R2 for blue if you use a pad
-         {if_else $nodrum 3 3}
-         {if_else $rbdrum kPad_L1 kpad_L2} ; use Square for crash (orange)
-         {if_else $rbdrum 4 4}
-         {if_else $nodrum kPad_L2 kpad_L1} ; okay but use X for orange if you use a pad
-         {if_else $nodrum 4 4})
+         {if_else $rbdrum kPad_L1 kPad_L2} ; use Square for crash (orange)
+         {if_else $rbdrum 4 4})
       #endif
       #endif
       #ifdef 2DBUG (slots kPad_X 0 kPad_R2 1 kPad_R1 2 kPad_L1 3 kPad_L2 4) #endif
