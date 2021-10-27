@@ -1,7 +1,7 @@
 {new
    GHPanel
-   training_panel_boot
-   (file training_boot.milo)
+   boot_theme_select
+   (file theme_select.milo)
    (focus tutorials.btn)
    (SELECT_START_MSG
       {switch
@@ -68,8 +68,8 @@
 #endif
 #endif
 #endif
-   (panels meta training_panel_boot helpbar)
-   (focus training_panel_boot)
+   (panels meta boot_theme_select helpbar)
+   (focus boot_theme_select)
    (helpbar
       (default
          ((fret1 help_continue)
