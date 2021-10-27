@@ -157,7 +157,7 @@
 #endif
 
 ; Drum campaign
-#ifdef _drum
+#ifdef _DRUM
 (order
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
    (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
