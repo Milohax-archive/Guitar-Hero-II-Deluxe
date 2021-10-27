@@ -26,7 +26,7 @@
 (comedy_tip_80s_10 "Beware: country bands, too, wear fringed jackets.")
 (comedy_tip_80s_11
    {if_else $egg5
-      "When your past 50,000 points that means your in the clear so try not to\nmiss alot of notes."
+      "When your past 50,000 points that means your in the clear so try not to miss alot of notes."
 	  "Before the internet existed, people expressed their love for heavy metal in the bathroom stall."})
 (comedy_tip_80s_12 "It's okay for the drummer to buy, like, the hugest kit ever. No one wants to see his bad make-up anyway.")
 (comedy_tip_80s_13 "A proper modern hard rock solo requires 3 whammies per note. Minimum.")

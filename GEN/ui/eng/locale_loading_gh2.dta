@@ -38,7 +38,7 @@
 (comedy_tip_gh2_10 "A band is the dysfunctional family you choose.")
 (comedy_tip_gh2_11
    {if_else $egg5
-      "When your past 50,000 points that means your in the clear so try not to\nmiss alot of notes."
+      "When your past 50,000 points that means your in the clear so try not to miss alot of notes."
       "If you call your new song a \qRock Anthem,\q you'd better be damn sure."})
 (comedy_tip_gh2_12 "It's customary to try to be the loudest during practice.")
 (comedy_tip_gh2_13 "Dropping your pants onstage does not deploy Star Power.")
