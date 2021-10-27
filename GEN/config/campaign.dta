@@ -159,7 +159,7 @@
 ; Drum campaign
 #ifdef _DRUM
 (order
-   (battle2 wegotthebeat policetruck maps chopsuey)
+   (battle2 wegotthebeat policetruck maps debaser chopsuey)
    (small3)
    (small4)
    (theatre2)
