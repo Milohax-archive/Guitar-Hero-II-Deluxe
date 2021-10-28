@@ -446,7 +446,17 @@
 			{do
 			   {endgame_review_data_fc.lbl set_showing FALSE}
 			   {endgame_review_data.lbl set_showing TRUE}}} ;if P0 didn't FC, use old label
-      {$this set_headline endgame_headline.lbl})
+      {$this set_headline endgame_headline.lbl}
+      {if {player_matcher0 auto_play} ;check for autoplay on player 1
+        {do
+          {endgame_headline.lbl set_text auto_headline} ;NICE BOT RUN, YA FUCKIN' CHUMP!
+          {endgame_diff_data.lbl set_text auto_label} ;difficulty to CHEATER
+          {endgame_streak_data.lbl set_text auto_label} ;photo caption to CHEATER
+          {endgame_score_data.lbl set_text auto_label} ;score to CHEATER
+          {endgame_percent_data.lbl set_text auto_label} ;percentage to CHEATER
+          {endgame_review_data_fc.lbl set_showing FALSE} ;hide FC stars
+          {endgame_review_data.lbl set_showing TRUE} ;show non-FC stars
+        }})
    (SELECT_START_MSG
       {switch
          $component

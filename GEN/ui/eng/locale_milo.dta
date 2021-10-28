@@ -94,3 +94,7 @@
 ; Select theme menu
 (gh2_title "Guitar Hero 2")
 (gh80s_title "Guitar Hero 80s")
+
+; Autoplay fun stuff
+(auto_headline "NICE BOT RUN,\nYA FUCKIN' CHUMP!")
+(auto_label "CHEATER")
