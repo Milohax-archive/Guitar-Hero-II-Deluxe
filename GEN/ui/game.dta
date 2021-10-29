@@ -608,4 +608,4 @@
          show
          "Reloading track..."}
       {game_restart_fast})}
-#include hud_budget.dta
+; #include hud_budget.dta (commented because it's otherwise unused)
