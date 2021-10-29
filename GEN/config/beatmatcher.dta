@@ -1,4 +1,9 @@
-(controller ; originally from config/beatmatch_controller.dta, then butchered by jnack
+; This file defines which buttons go to each smasher. joypad is DualShock,
+; joypad_guitar is guitar, lefty_joypad_guitar is guitar in Lefty Flip.
+; 
+; A lot of our work was done redefining button mappings if in drum mode.
+; Debug has no drums, so they get the default smasher configuration.
+(controller ; originally from config/beatmatch_controller.dta
    (joypad
       #ifndef 2DBUG
       #ifndef 8DBUG
@@ -46,16 +51,16 @@
    (lefty_joypad_guitar
       #ifndef 2DBUG
       #ifndef 8DBUG
-      (slots ; comments are wrong. it's the same thing as above but flipped fuck you
+      (slots
          {if_else $rbdrum kPad_R1 kPad_R1} ; use r1 for kick (green)
          {if_else $rbdrum 4 4}
-         {if_else $rbdrum kPad_Square kPad_R2} ; use Circle for snare (red)
+         {if_else $rbdrum kPad_Square kPad_R2} ; use Square for snare (red)
          {if_else $rbdrum 1 1}
          {if_else $rbdrum kPad_Tri kPad_R1} ; use Tri for ride? (yellow)
          {if_else $rbdrum 2 2}
-         {if_else $rbdrum kPad_Circle kPad_L1} ; use Square for tom (blue)
+         {if_else $rbdrum kPad_Circle kPad_L1} ; use Circle for tom (blue)
          {if_else $rbdrum 3 3}
-         {if_else $rbdrum kPad_L1 kPad_L2} ; use Square for crash (orange)
+         {if_else $rbdrum kPad_L1 kPad_L2} ; use L1 for crash (orange)
          {if_else $rbdrum 4 4})
       #endif
       #endif
@@ -70,17 +75,16 @@
       (slots kPad_X 0 kPad_Tri 1 kPad_Square 2 kPad_Circle 3 kPad_L1 4)
       (force_mercury kPad_Select)
       (mercury_switch kPad_RStickUp)))
-(midi_parsers
-   #include midi_parsers.dta)
+(midi_parsers #include midi_parsers.dta)
 (watcher
-   (slop 100)
+   (slop 100) ; In ms, how much you can be off by and still hit the note
    (cheat_error 0)
    (pitch_bend_range 1)
    (ms_to_full_pitch_bend 1000))
 
 ; originally from ../../../system/run/config/beatmatch.dta
 (parser
-   (hopo_threshold 170)
+   (hopo_threshold 170) ; Where the default hopo_threshold is set!
    (track_mapping
       (GUITAR guitar)
       (RHYTHM rhythm)

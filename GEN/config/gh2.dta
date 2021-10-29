@@ -1,3 +1,5 @@
+; All the low-level includes and definitions are in here! Pray you never
+; have to edit the vast majority of it.
 #include macros.dta
 (mem ; originally from config/mem.dta
    (heaps

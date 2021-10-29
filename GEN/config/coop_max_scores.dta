@@ -1,3 +1,11 @@
+; The scores of each difficulty's player 1 and player 2 part added together.
+; Easy, Medium, Hard, Expert.
+; Onyx has a calculator for this and it gets pretty close to HMX's values.
+; 
+; This isn't strictly needed, but debug will throw a warning if a song
+; doesn't have specified coop_max_scores when playing co-op, so I like to
+; include it. We think the game falls back to calculating it on the fly if
+; it's not specified, and it's used for calculating star totals.
 ; DX songs
 (badreputation (30243 48406 74261 95811))
 (beastandtheharlot (76573 93765 139324 176400))

@@ -1,5 +1,7 @@
-; File originally named cheats_funcs.dta
-; Renamed for clarity
+; File originally named cheats_funcs.dta and renamed for clarity
+;
+; These are the functions that go to the binds in debug_binds.dta. Messy
+; internal engine stuff, by and large. Do not want.
 {new
    Object
    cheat_display

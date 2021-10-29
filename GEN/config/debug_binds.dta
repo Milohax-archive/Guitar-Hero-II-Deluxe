@@ -1,4 +1,8 @@
 ; File originally named cheats.dta and renamed for clarity
+;
+; These only work in the debug executables, obviously. Not all these binds
+; work (I know 0 and r don't), but USB keyboard binds were left as-is for
+; completeness. I totally rebound the controller stuff though.
 (keyboard
    (KB_F1 {fake_player1_cheat 0})
    (KB_F2 {fake_player1_cheat 1})

@@ -1,3 +1,8 @@
+; New guitars go here! outfit refers to the guitar's milo_ps2 file and mat
+; refers to the texture name inside the Mat "folder" in that milo.
+; 
+; If you don't also specify a guitar in store.dta, it will be unlocked from
+; the start. This also goes for skins, characters, and outfits.
 (lespaul
    (type guitar)
    (skins

@@ -4,25 +4,24 @@
    (separate_parts TRUE)
    (num_players 1)
    (competitive FALSE)
-   (force_autoplay FALSE)
-   (blown_streak_feedback TRUE)
+   (force_autoplay FALSE) ; How we turned on autoplay back in my day
+   (blown_streak_feedback TRUE) ; The fretboard "stumbling" on lost combo
    (score_config default_config)
-   (song_block song)
+   (song_block song) ; Which song data in songs.dta to use for that mode
    (midi_suffix '')
    (game_over_sequence TRUE)
-   (skip_intro FALSE)
+   (skip_intro FALSE) ; Fly-in intro on songs in venues
    (show_hud TRUE)
    (show_track TRUE)
    (encore_fx FALSE)
    (track_surface_override '')
    (crowd_audio TRUE)
    (star_power_disable
-    {switch
-     {game get_track_sym 0}
-     (bass 'FALSE')
-     (drum 'TRUE')
-     (rhythm 'FALSE')
-     (guitar 'FALSE')})
+      {switch {game get_track_sym 0}
+         (bass 'FALSE')
+         (drum 'TRUE') ; No fills to activate SP, no SP for drums
+         (rhythm 'FALSE')
+         (guitar 'FALSE')})
    (shared_star_meter FALSE)
    (main_screen main_screen)
    (continue_screen qp_selsong_screen)
@@ -32,8 +31,7 @@
    (game_screen game_screen)
    (win_preload_panel '')
    (practice_speed 0)
-   (practice_sections
-      (0 0)))
+   (practice_sections (0 0)))
 (attract
    (star_power_disable TRUE)
    (show_hud FALSE)
@@ -49,40 +47,33 @@
    (continue_screen main_screen)
    (loading_screen practice_loading_screen)
    (game_screen practice_game_screen)
-   (track_surface_override
-      {if_else $focusmode streamer rosewood})
+   ; Can't set characters in practice, so make sure focus folks always get
+   ; the off-black fretboard
+   (track_surface_override {if_else $focusmode streamer rosewood})
    (song_block
-      {if_else
-         {gamecfg pre_processed_audio}
-         {switch
-            {gamecfg get practice_speed}
-            (0
-               {gamecfg full_speed_block})
+      ; If the game detects that a song has custom practice audio, it'll use
+	  ; the song block of the speed set by the player, full, slow, slower, or
+	  ; slowest. Otherwise, it just uses the full speed block and does crappy
+	  ; "old-style" practice pitch correction for the slower speeds.
+      {if_else {gamecfg pre_processed_audio}
+         {switch {gamecfg get practice_speed}
+            (0 {gamecfg full_speed_block})
             (1 song_practice_1)
             (2 song_practice_2)
             (3 song_practice_3)}
          {gamecfg full_speed_block}})
    (midi_suffix
-      {if_else
-         {==
-            {gamecfg get_track_type 0}
-            kTrackGuitar}
+      ; Make sure to use the co-op MIDI if practicing rhythm
+      {if_else {== {gamecfg get_track_type 0} kTrackGuitar}
          ''
          COOP})
    (full_speed_block
-      {if_else
-         {==
-            {gamecfg get_track_type 0}
-            kTrackGuitar}
+      ; Make sure to use the co-op audio too
+      {if_else {== {gamecfg get_track_type 0} kTrackGuitar}
          song
          song_coop})
    (pre_processed_audio
-      {!=
-         {find_exists
-            $syscfg
-            songs
-            {gamecfg get_song}
-            practice_speeds}
+      {!= {find_exists $syscfg songs {gamecfg get_song} practice_speeds}
          kDataUnhandled}))
 (quickplay
    (continue_screen qp_selsong_screen)
@@ -102,7 +93,7 @@
    (win_preload_panel multi_compete_panel)
    (hud_file hud_vs.milo)
    (song_block song_vs)
-   (midi_suffix VS))
+   (midi_suffix VS)) ; Per-mode MIDIs are set in songs.dta, not here, I feel
 (multi_fo
    (num_players 2)
    (competitive TRUE)
@@ -110,6 +101,11 @@
    (win_screen multi_compete_fo_screen)
    (win_preload_panel multi_compete_fo_panel)
    (separate_parts FALSE)
+   ; Normally, Pro Face-Off doesn't use a custom song_block, but after
+   ; discovering a bug with using our fake track (which is a nonexistent
+   ; audio channel to keep the game from crashing on non-drum songs),
+   ; we set it to use song_vs (normal Face-Off's), and gave every song
+   ; two song definitions. Check in songs.dta for that mess.
    (song_block song_vs)
    (hud_file hud_vs.milo))
 (multi_coop
@@ -125,8 +121,7 @@
    (midi_suffix COOP)
    (sp_engage
       ($player $state)
-      {if_else
-         $state
+      {if_else $state
          {play_game_sfx_player sp_deploystart.cue sp_deploystart.cue $player}
          {stop_sfx sp_deploystart.cue}}
       kDataUnhandled))
@@ -139,5 +134,4 @@
    (loading_screen tut_loading_screen)
    (blown_streak_feedback FALSE)
    (hud_file hud_sp.milo)
-   (track_surface_override
-      {if_else $focusmode streamer rosewood}))
+   (track_surface_override {if_else $focusmode streamer rosewood}))

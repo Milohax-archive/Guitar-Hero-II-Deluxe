@@ -1,18 +1,40 @@
+; All the information needed to load songs and play them. If you have a crash
+; on the setlist, it's probably something that went wrong in here.
+; 
 ; GH2 songs
 (badreputation
    (name "Bad Reputation")
    (artist "Thin Lizzy")
+   ; caption array can be set to give a custom caption on the "MTV overlay"
+   ; at the start of a song. By default, it's "As made famous by", and for
+   ; masters, it's "As performed by". This can be set to any valid string
+   ; shortname and the game will use that instead, however.
+   ; 
+   ; (This one's commented because it's an example, not a real master)
+   ; (caption performed_by)
    (song
+      ; name: which VGS and VOC the game will try to load.
       (name songs/badreputation/badreputation)
       (tracks
+	     ; tracks: map instruments to channels in the VGS. These start on 0.
+		 ; For a traditional five-channel VGS, 0 and 1 are usually the
+		 ; stereo band stem, 2 and 3 are stereo guitar, and 4 is mono bass.
+		 ; the fake track is a hack to keep non-drum songs from crashing.
          ((guitar (2 3))
           (bass 4)
           (fake 0)))
+      ; pans: -1.0 is left only, 1.0 is right only, 0.0 is in both channels.
       (pans (-1.0 1.0 -1.0 1.0 0.0))
+	  ; vols: Can only attenuate; positive values do nothing.
       (vols (-3.5 -3.5 -3.0 -3.0 0.0))
+	  ; cores: which tracks will get treated with reverb when activating SP.
+	  ; This is pretty much always guitar, and lead guitar if that.
       (cores (-1 -1 1 1 -1))
       (midi_file songs/badreputation/badreputation.mid))
    (song_vs
+      ; We need to set a separate vs song block because our way of making
+	  ; non-drum songs work with a fake track causes the right channel of
+	  ; the guitar in Face-Off and PFO to not work. GH2, everybody.
       (name songs/badreputation/badreputation)
       (tracks
          ((guitar (2 3))
@@ -21,9 +43,15 @@
       (vols (-3.5 -3.5 -3.0 -3.0 0.0))
       (cores (-1 -1 1 1 -1))
       (midi_file songs/badreputation/badreputation.mid))
+   ; only two anim_tempo values work, kTempoMedium and kTempoFast (other
+   ; HMX games like Karaoke Revolution and Rock Band have other values like
+   ; kTempoSlow). You'll mostly see this in how hard the drummer bangs the
+   ; drums, but there may be other differences. Set based on tempo.
    (anim_tempo kTempoFast)
-   (preview 11400 32000)
+   (preview 11400 32000) ; Setlist preview, start to finish, in ms
    (quickplay
+      ; These are still used by attract mode, so even though we have Free
+	  ; Play, you should still set these
       (character_outfit funk1)
       (guitar flying_v)
       (venue fest)))

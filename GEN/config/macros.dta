@@ -1,8 +1,15 @@
+; Macros are the way the game assigns a friendly, readable name to a value
+; so it can be used more comfortably elsewhere in the scripts. They don't
+; need to be defined in this file or in dotdot's macros.dta, but many are.
+; 
+; Macros are case-sensitive; kTempoMedium is not the same as ktempomedium.
+; I don't see a particular rhyme or reason for camel case versus uppercase
+; and underscore separated, so use what you like.
 #ifdef APP_MACROS_DTA
 #else
 #define APP_MACROS_DTA (1)
 
-; originally from config/sfx.macros.dta
+; originally from config/sfx.dta
 #define CLAP_SEQUENCE (claps)
 #define CLAP_DELAY_BEATS (0.9)
 #define TRACK_EXTEND_SFX (track_unfurl)

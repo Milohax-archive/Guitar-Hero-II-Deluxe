@@ -1,3 +1,8 @@
+; Empty array = empty line
+; Array with one value = header with spiky font
+; Array with two values = Center-justified two values (usually name-role)
+; Array with three values = Centered text in the two values font (be sure
+; to set the middle value! not sure what happens when you fill all three)
 ()
 ()
 ()

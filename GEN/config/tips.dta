@@ -1,3 +1,12 @@
+; The string shortnames the game will try to load on loading screens.
+; Each pool is separate. You will never get general tips during encores
+; or tutorials, for example.
+; tips_general = freeplay, career, competitive, practice
+; tips_multi_coop = cooperative
+; tips_tutorial = tutorials
+; tips_encore = career encores
+; tips_freebird = Free Bird only
+; tips_playwithme = Play With Me only
 (tips_general
    (milo_tip1)
    (milo_tip2)

@@ -1,3 +1,11 @@
+; This is one of the most powerful scripts in the game. It's the bridge
+; between MIDI pitches and running script. Anything you can do in DTA, you
+; can give a pitch and call when the game's running and a song is playing.
+; 
+; You can also set new animation events in here, for giving the guitarist
+; far more intricate animation capabilities. We've specified some new
+; StrumMaps and HandMaps for open strums and for letting the bassist use a
+; pick, among other things.
 #define GUITARSTRUMMAPPINGS
 ((idle_event strum_open)
    (idle_length 3.52)

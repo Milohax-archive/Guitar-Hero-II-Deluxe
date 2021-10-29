@@ -1,3 +1,6 @@
+; base_dir is the directory on your memory card where the game saves to.
+; You should always change this for custom discs so as to not conflict with
+; normal (or other custom discs') saves.
 #ifdef _SHIP (base_dir "BAGHCE-00020") #endif
 #ifdef _MEGA (base_dir "BAGHCE-08008") #endif
 #ifdef _ONYX (base_dir "BAGHCE-68878") #endif
@@ -22,6 +25,7 @@
 #endif
 #endif
 
+; I'm not sure elf_name is too important? But can't hurt.
 #ifdef _SHIP (elf_name "GH2DX.ELF") #endif
 
 #ifndef _SHIP
@@ -48,19 +52,30 @@
 #ifdef 8DBUG (elf_name "80SDEBUG.ELF") #endif
 
 #ifdef _SHIP
+
 (ps2_icon
-   (file "2dx.icn")
+   (file "2dx.icn") ; it always looks for this in mc/ in the ark
+   ; bg_transparency sets the opacity of the background colors for each save
+   ; when you select it in the BIOS. 255 is opaque, 0 is invisibly clear.
    (bg_transparency 128)
    (bg_colors
-      (0 0 0)
-      (0 0 0)
-      (119 102 163)
-      (119 102 163))
+      (0 0 0) ; top left
+      (0 0 0) ; top right
+      (119 102 163) ; bottom left
+      (119 102 163)) ; bottom right
    (lit_dirs
-      (0.2 1 0)
-      (1 0 1)
-      (1 -1 0))
+   ; Three lights, positions as floats. These are annoying but my best
+   ; guesses...
+   ; First value, -1 is far left of the model, 1 is far right of the model
+   ; Second value, -1 is back of the model, 1 is front of the model
+   ; Third value, -1 is underneath, 1 is above
+      (0.2 1 0) ; XYZ, light one (default 0.2 1 0)
+      (1 0 1) ; XYZ, light two (default 1 0 1)
+      (1 -1 0)) ; XYZ, light three (default 1 -1 0)
    (lit_colors
+      ; Light colors as RGB floats. Same goes for ambient.
+	  ; Just set it all to white (the same value) unless you like your icon
+	  ; being tinged horribly. White always just multiplies the albedo.
       (0.7 0.7 0.7)
       (0.7 0.7 0.7)
       (0.7 0.7 0.7))

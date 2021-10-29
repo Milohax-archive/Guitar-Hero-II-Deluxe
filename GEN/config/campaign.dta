@@ -14,11 +14,22 @@
    (arena madhouse trooper rockthistown laidtorest psychobilly yyz)
    (stone beastandtheharlot carrymehome institutionalized misirlou hangar18 freebird))
 (required_songs
+   ; First digit is the number of required songs in all venues other than the
+   ; final venue, second is the number of required in the last venue only.
    (kDifficultyEasy 4 5)
    (kDifficultyMedium 5 6)
    (kDifficultyHard 6 6)
    (kDifficultyExpert 6 6))
 (cash
+   ; Cash is horrifically confusing, so to explain quick...
+   ; starting is what you get when you first select that difficulty in career
+   ; star_awards get added together, all lower difficulties and all lower
+   ; ratings, meaning for an Expert five-star in DX:
+   ; 100 + 150 + 250 + 150 + 200 + 250 + 200 + 250 + 350 = $1,900
+   ; status_awards are sponsorships and stack for all lower difficulties
+   ; Those values get added onto the award for the encore.
+   ; Five-star Expert encore in small1:
+   ; 1900 + 200 + 300 + 700 = $3,100
    (starting 50)
    (star_awards
       (kDifficultyEasy 0 0 0)

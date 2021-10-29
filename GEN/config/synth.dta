@@ -1,3 +1,8 @@
+; Mostly, you'll need to poke in here for menu music, which should go in
+; sfx/streams in the ark.
+; 
+; Enjoy the nastiest script in the entire game (and no, you can't if_else
+; these arrays, so we need to if_else the stuff IN the arrays):
 (iop
    (max_streams 15)
    (spu_buffers 60)

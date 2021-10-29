@@ -1,3 +1,11 @@
+; "Long cheats" is what the actual game cheats (as opposed to debug functions
+; with the DualShock or keyboard) are called. To confuse people less, we
+; renamed the debug scripts and left this one as-is.
+; 
+; Most of the vanilla cheats were moved to the Extras menu. This serves two
+; important functions though, defining the combinations for the Modifiers
+; menu (yes, long cheats work in places other than the main menu!) and easter
+; egg screens.
 #define CHEATS_ALLOWED
 ({&&
       {exists ui}
