@@ -70,7 +70,7 @@
                (focused "normal.font")
                (disabled "disabled.font"))))))
 (UIList
-   (description "Component for displaying 1- or 2-dimensional lists of data.\nCan be oriented horizontally or vertically, can scroll normally or\ncircularly, and can have any number of visible elements (even just\none, a.k.a. a spin button).")
+   (description "Component for displaying 1- or 2-dimensional lists of data. Can be oriented horizontally or vertically, can scroll normally or circularly, and can have any number of visible elements (even just one, a.k.a. a spin button).")
    (superclasses UIComponent)
    (allowed_dirs PanelDir)
    (ext lst)
@@ -145,7 +145,7 @@
          (mesh "picture.mesh")
          (tex_file "image/picture_keep.png"))))
 (UIProxy
-   (description "A UIProxy object allows artists to position dynamically\nloaded resources (e.g. a character) in Milo. The app will then load\nthe appropriate resources into it.")
+   (description "A UIProxy object allows artists to position dynamically loaded resources (e.g. a character) in Milo. The app will then load the appropriate resources into it.")
    (superclasses UIComponent)
    (allowed_dirs PanelDir)
    (init (type default))
@@ -153,7 +153,7 @@
       (default
          (file "proxy.milo"))))
 (UISlider
-   (description "A component with animatable whose frames correspond to a\nrange of values. The resources don't have to look like a slider;\nthey could easily be a knob, dial, etc.")
+   (description "A component with animatable whose frames correspond to a range of values. The resources don't have to look like a slider; they could easily be a knob, dial, etc.")
    (superclasses UIComponent)
    (allowed_dirs PanelDir)
    (ext sld)
@@ -192,4 +192,4 @@
    (types)
    (editor
       (tex_path file
-         (help "File containing the screenshot to display.  This file will only be loaded in Milo, not in game."))))
+         (help "File containing the screenshot to display. This file will only be loaded in Milo, not in game."))))

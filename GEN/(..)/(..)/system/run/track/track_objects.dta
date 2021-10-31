@@ -1,5 +1,5 @@
 (TrackDir
-   (description "Base class for track system. Contains configuration for\ntrack speed, length, slot positions. Manages TrackWidget instances.")
+   (description "Base class for track system. Contains configuration for track speed, length, slot positions. Manages TrackWidget instances.")
    (superclasses PanelDir)
    (allowed_dirs)
    (editor
@@ -44,7 +44,7 @@
                (label "toggle")))))
    (types))
 (TrackWidget
-   (description "Any object that is placed on the track and scrolls towards the\nplayer. Can have any number of meshes and an environment. Drawn efficiently\nand pruned automatically by TrackDir.")
+   (description "Any object that is placed on the track and scrolls towards the player. Can have any number of meshes and an environment. Drawn efficiently and pruned automatically by TrackDir.")
    (superclasses Draw)
    (allowed_dirs RndDir)
    (types)

@@ -1,5 +1,5 @@
 (Object
-   (description "The Object class is the root of the class hierarchy. Every\nclass has Object as a superclass.")
+   (description "The Object class is the root of the class hierarchy. Every class has Object as a superclass.")
    (allowed_dirs)
    (types))
 (ObjectDir

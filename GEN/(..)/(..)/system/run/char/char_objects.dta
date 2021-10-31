@@ -1,7 +1,7 @@
 #define BEAT_HIDE ((hide {! [CharacterTesting edit_beat_track]}))
 #define NON_BEAT_HIDE ((hide [CharacterTesting edit_beat_track]))
 (Character
-   (description "Base class for Character objects. Contains Geometry,\nOutfit Loaders, and LOD + Sphere concepts.")
+   (description "Base class for Character objects. Contains Geometry, Outfit Loaders, and LOD + Sphere concepts.")
    (allowed_dirs Character)
    (superclasses RndDir)
    (types (dancer))
@@ -172,7 +172,7 @@
             (class Object))
          (help "List of graphically displayed objects"))))
 (CharBlendBone
-   (description "Sets a dest bone by a weighted average of a bunch of bones.\nIdeally this would be created from within Max at Export time and\nautomatically exported, since changing the geometry will wreck this.")
+   (description "Sets a dest bone by a weighted average of a bunch of bones. Ideally this would be created from within Max at Export time and automatically exported, since changing the geometry will wreck this.")
    (allowed_dirs Character)
    (superclasses CharPollable)
    (ext blendbone)
@@ -193,7 +193,7 @@
          (help "Blend position as well as orientation")))
    (types))
 (CharClip
-   (description "A clip of animation that you can play. We expect subclasses\nfor stuff like compression.")
+   (description "A clip of animation that you can play. We expect subclasses for stuff like compression.")
    (allowed_dirs)
    (editor
       (start_frame float
@@ -335,7 +335,7 @@
                (read_only TRUE)
                (help "scale"))))))
 (CharClipSamples
-   (description "This is the simple but inefficient format that just stores\nsamples and interpolates. Data is grouped by time, not channel, for\nbetter storage, interpolation, etc.")
+   (description "This is the simple but inefficient format that just stores samples and interpolates. Data is grouped by time, not channel, for better storage, interpolation, etc.")
    (allowed_dirs CharClipSet)
    (superclasses CharClip)
    (editor
@@ -462,7 +462,7 @@
          (help "the right eyelid bone")))
    (types))
 (CharForeTwist
-   (description "Does all interpolation for the forearm. Assumes: <ul>\n<li>foretwist1 and forearm are under upperarm.</li>\n<li>foretwist2 is under foretwist1 and that hand is under forearm.</li>\n<li>on the left hand offset rotation is usually 90 on the left, and -90 on the right.</li>\n</ul>\nFeeds the bones when executed.")
+   (description "Does all interpolation for the forearm. Assumes: <ul> <li>foretwist1 and forearm are under upperarm.</li> <li>foretwist2 is under foretwist1 and that hand is under forearm.</li> <li>on the left hand offset rotation is usually 90 on the left, and -90 on the right.</li> </ul> Feeds the bones when executed.")
    (allowed_dirs Character)
    (superclasses CharPollable)
    (ext ftwist)
@@ -589,7 +589,7 @@
          (no_test)))
    (types))
 (CharIKRod
-   (description "<p>Rigs a bone between two other bones and sets the\norientation from that.</p>\n<p>When you set up all the bone pointers, the rig xfm will be\ncomputed, an inverse from that to the dst bone will be computed,\nand everything will come from that. So the dst bone will maintain\nthe exact same position in that pose. That makes it easy to author\nthe bones.</p>")
+   (description "<p>Rigs a bone between two other bones and sets the orientation from that.</p> <p>When you set up all the bone pointers, the rig xfm will be computed, an inverse from that to the dst bone will be computed, and everything will come from that. So the dst bone will maintain the exact same position in that pose. That makes it easy to author the bones.</p>")
    (allowed_dirs Character)
    (superclasses CharPollable)
    (ext ikrod)
@@ -647,7 +647,7 @@
          (no_test)))
    (types))
 (CharMirror
-   (description "Duplicates or mirrors another character's motions, given\nthe matching bone servo.")
+   (description "Duplicates or mirrors another character's motions, given the matching bone servo.")
    (allowed_dirs Character)
    (superclasses CharWeightable CharPollable)
    (ext mirr)
@@ -695,7 +695,7 @@
          (no_test)))
    (types))
 (CharUpperTwist
-   (description "<p>Does all interpolation for the upperarm, assuming\nupperArm, upperTwist1 and 2 are under clavicle. Rotation about x is\nevenly distributed from clavicle->twist1->twist2->upperarm</p>\nFeeds the bones when executed.")
+   (description "<p>Does all interpolation for the upperarm, assuming upperArm, upperTwist1 and 2 are under clavicle. Rotation about x is evenly distributed from clavicle->twist1->twist2->upperarm</p> Feeds the bones when executed.")
    (allowed_dirs Character)
    (superclasses CharPollable)
    (ext utwist)
@@ -711,14 +711,14 @@
          (help "The upper arm twist2 bone")))
    (types))
 (CharWalk
-   (description "Given a set of turns, walks, and stops, makes a character\nwalk along waypoints, finishing up with a certain facing. There\nmust be looping transitions for the walks, and transitions from\nturns to walks. Transitions from walks to stops are not needed as\nyou may have to stop on a dime anyway. Instead the beat track is\nused to align walks and stops, so both have to be beat aligned to\n2 beats, and the right foot needs to fall on the even beats.")
+   (description "Given a set of turns, walks, and stops, makes a character walk along waypoints, finishing up with a certain facing. There must be looping transitions for the walks, and transitions from turns to walks. Transitions from walks to stops are not needed as you may have to stop on a dime anyway. Instead the beat track is used to align walks and stops, so both have to be beat aligned to 2 beats, and the right foot needs to fall on the even beats.")
    (allowed_dirs Character)
    (superclasses CharPollable)
    (ext walk)
    (editor)
    (types))
 (CharWeightable
-   (description "Base class for any object that can have weight set on it,\nor have a Weightable parent from which it gets that state.")
+   (description "Base class for any object that can have weight set on it, or have a Weightable parent from which it gets that state.")
    (allowed_dirs)
    (editor
       (weight float
@@ -729,7 +729,7 @@
          (no_test)))
    (types))
 (CharWeightSetter
-   (description "Sets its own weight by pushing flags through a driver to\nsee what fraction of them it has.")
+   (description "Sets its own weight by pushing flags through a driver to see what fraction of them it has.")
    (allowed_dirs Character)
    (superclasses CharWeightable CharPollable)
    (ext weight)
@@ -818,7 +818,7 @@
          (no_test)))
    (types))
 (Waypoint
-   (description "A waypoint for character movement. Characters walk to\nthese, start themselves out from these, etc.")
+   (description "A waypoint for character movement. Characters walk to these, start themselves out from these, etc.")
    (allowed_dirs ObjectDir)
    (superclasses Trans Draw)
    (ext way)
