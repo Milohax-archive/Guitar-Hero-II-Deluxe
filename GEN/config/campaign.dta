@@ -170,17 +170,17 @@
 ; Drum campaign
 #ifdef _DRUM
 (order
-   (battle2 wegotthebeat policetruck maps debaser chopsuey)
+   (battle2 electriceye wegotthebeat policetruck maps debaser chopsuey)
    (small3)
    (small4)
    (theatre2)
    (fest2)
    (arena2))
 (required_songs
-   (kDifficultyEasy 4 4)
-   (kDifficultyMedium 4 4)
-   (kDifficultyHard 4 4)
-   (kDifficultyExpert 4 4))
+   (kDifficultyEasy 5 5)
+   (kDifficultyMedium 5 5)
+   (kDifficultyHard 5 5)
+   (kDifficultyExpert 5 5))
 (cash
    (starting 250)
    (star_awards
