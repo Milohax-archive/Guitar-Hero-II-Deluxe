@@ -32,15 +32,11 @@
       {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_ORANGE G_BLUE G_ORANGE G_YELLOW G_ORANGE G_BLUE G_ORANGE G_YELLOW)
    {if {exists ui}
