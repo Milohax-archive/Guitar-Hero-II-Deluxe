@@ -5,39 +5,23 @@
          (sound
             (bank fest_bank)
             (crowd
-               (intro
-                  -8.0
-                  crowd_v5_0intro
+               (intro -8.0 crowd_v5_0intro
                   (pan 1))
                (levels
-                  (kExcitementBoot
-                     -12.0
-                     crowd_v5_1danger
+                  (kExcitementBoot -12.0 crowd_v5_1danger
                      (pan 3))
-                  (kExcitementBad
-                     -12.0
-                     crowd_v5_2poor
+                  (kExcitementBad -12.0 crowd_v5_2poor
                      (pan 3))
-                  (kExcitementOkay
-                     -12.0
-                     crowd_v5_3norm
+                  (kExcitementOkay -12.0 crowd_v5_3norm
                      (pan 3))
-                  (kExcitementGreat
-                     -9.0
-                     crowd_v5_4good
+                  (kExcitementGreat -9.0 crowd_v5_4good
                      (pan 3))
-                  (kExcitementPeak
-                     -8.0
-                     crowd_v5_4good
+                  (kExcitementPeak -8.0 crowd_v5_4good
                      (pan 3)))
-               (encore_outro
-                  0.0
-                  encore_v6_outro
+               (encore_outro 0.0 encore_v6_outro
                   (pan 1)
                   (loop_ms 11470 27167))
-               (encore_intro
-                  0.0
-                  encore_v6_intro
+               (encore_intro 0.0 encore_v6_intro
                   (pan 1))))
          (song_movie fest_1)
          (reduced_crowd_shots

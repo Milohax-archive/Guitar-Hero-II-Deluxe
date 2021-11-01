@@ -5,39 +5,23 @@
          (sound
             (bank big_bank)
             (crowd
-               (intro
-                  -8.0
-                  crowd_v3_0intro
+               (intro -8.0 crowd_v3_0intro
                   (pan 1))
                (levels
-                  (kExcitementBoot
-                     -10.5
-                     crowd_v3_1danger
+                  (kExcitementBoot -10.5 crowd_v3_1danger
                      (pan 3))
-                  (kExcitementBad
-                     -10.5
-                     crowd_v3_2poor
+                  (kExcitementBad -10.5 crowd_v3_2poor
                      (pan 3))
-                  (kExcitementOkay
-                     -14.0
-                     crowd_v3_3norm
+                  (kExcitementOkay -14.0 crowd_v3_3norm
                      (pan 3))
-                  (kExcitementGreat
-                     -10.5
-                     crowd_v3_4good
+                  (kExcitementGreat -10.5 crowd_v3_4good
                      (pan 3))
-                  (kExcitementPeak
-                     -8.0
-                     crowd_v3_4good
+                  (kExcitementPeak -8.0 crowd_v3_4good
                      (pan 3)))
-               (encore_outro
-                  0.0
-                  encore_v4_outro
+               (encore_outro 0.0 encore_v4_outro
                   (pan 1)
                   (loop_ms 22105 40867))
-               (encore_intro
-                  0.0
-                  encore_v4_intro
+               (encore_intro 0.0 encore_v4_intro
                   (pan 1))))
          (camera_durations
             ((kExcitementBoot 3 4)

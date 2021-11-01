@@ -5,39 +5,23 @@
          (sound
             (bank small2_bank)
             (crowd
-               (intro
-                  -0.0
-                  crowd_s2_0intro
+               (intro -0.0 crowd_s2_0intro
                   (pan 1))
                (levels
-                  (kExcitementBoot
-                     -10.5
-                     crowd_s2_1danger
+                  (kExcitementBoot -10.5 crowd_s2_1danger
                      (pan 3))
-                  (kExcitementBad
-                     -8.5
-                     crowd_s2_2poor
+                  (kExcitementBad -8.5 crowd_s2_2poor
                      (pan 3))
-                  (kExcitementOkay
-                     -12.0
-                     crowd_s2_3norm
+                  (kExcitementOkay -12.0 crowd_s2_3norm
                      (pan 3))
-                  (kExcitementGreat
-                     -8.5
-                     crowd_s2_4good
+                  (kExcitementGreat -8.5 crowd_s2_4good
                      (pan 3))
-                  (kExcitementPeak
-                     -7.0
-                     crowd_s2_4good
+                  (kExcitementPeak -7.0 crowd_s2_4good
                      (pan 3)))
-               (encore_outro
-                  0.0
-                  encore_v3_outro
+               (encore_outro 0.0 encore_v3_outro
                   (pan 1)
                   (loop_ms 19342 40007))
-               (encore_intro
-                  0.0
-                  encore_v3_intro
+               (encore_intro 0.0 encore_v3_intro
                   (pan 1))))
          (camera_durations
             ((kExcitementBoot 3 6)
@@ -56,669 +40,378 @@
    (dest 0)
    (period 0.25))
 #define NEON_ON
-({[env1]
-      ENV_ON}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_ON}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_ON}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_ON}
+({[env1] ENV_ON}
+   {[env2] ENV_ON}
+   {[env3] ENV_ON}
+   {[env4] ENV_ON}
+   {[env5] ENV_ON}
+   {[env6] ENV_ON}
+   {[env7] ENV_ON}
+   {[env8] ENV_ON}
+   {[env9] ENV_ON}
    {$task sleep 4})
 #define NEON_OFF
-({[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+({[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 4})
 #define NEON_HALF_ON
-({[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_OFF}
+({[env1] ENV_OFF}
+   {[env2] ENV_ON}
+   {[env3] ENV_OFF}
+   {[env4] ENV_ON}
+   {[env5] ENV_OFF}
+   {[env6] ENV_ON}
+   {[env7] ENV_OFF}
+   {[env8] ENV_ON}
+   {[env9] ENV_OFF}
    {$task sleep 4})
 #define NEON_BAD_BLUE
-({[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_OFF}
+({[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_ON}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_ON}
+   {[env9] ENV_OFF}
    {$task sleep 4})
 #define NEON_BLINK
-({[env1]
-      ENV_ON}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_ON}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_ON}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_ON}
+({[env1] ENV_ON}
+   {[env2] ENV_ON}
+   {[env3] ENV_ON}
+   {[env4] ENV_ON}
+   {[env5] ENV_ON}
+   {[env6] ENV_ON}
+   {[env7] ENV_ON}
+   {[env8] ENV_ON}
+   {[env9] ENV_ON}
    {$task sleep 0.25}
-   {[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+   {[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 0.25})
 #define NEON_OFFSET_SWEEPUP
-({[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+({[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 0.1}
-   {[env5]
-      ENV_ON}
+   {[env5] ENV_ON}
    {$task sleep 0.1}
-   {[env6]
-      ENV_ON}
-   {[env5]
-      ENV_OFF}
+   {[env6] ENV_ON}
+   {[env5] ENV_OFF}
    {$task sleep 0.1}
-   {[env7]
-      ENV_ON}
-   {[env6]
-      ENV_OFF}
+   {[env7] ENV_ON}
+   {[env6] ENV_OFF}
    {$task sleep 0.1}
-   {[env8]
-      ENV_ON}
-   {[env7]
-      ENV_OFF}
+   {[env8] ENV_ON}
+   {[env7] ENV_OFF}
    {$task sleep 0.1}
-   {[env9]
-      ENV_ON}
-   {[env8]
-      ENV_OFF}
+   {[env9] ENV_ON}
+   {[env8] ENV_OFF}
    {$task sleep 0.1}
-   {[env9]
-      ENV_OFF}
-   {[env1]
-      ENV_ON}
+   {[env9] ENV_OFF}
+   {[env1] ENV_ON}
    {$task sleep 0.1}
-   {[env2]
-      ENV_ON}
-   {[env1]
-      ENV_OFF}
+   {[env2] ENV_ON}
+   {[env1] ENV_OFF}
    {$task sleep 0.1}
-   {[env3]
-      ENV_ON}
-   {[env2]
-      ENV_OFF}
+   {[env3] ENV_ON}
+   {[env2] ENV_OFF}
    {$task sleep 0.1}
-   {[env4]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
+   {[env4] ENV_ON}
+   {[env3] ENV_OFF}
    {$task sleep 0.1})
 #define NEON_SWEEP_UP
-({[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+({[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 0.1}
-   {[env1]
-      ENV_ON}
+   {[env1] ENV_ON}
    {$task sleep 0.1}
-   {[env2]
-      ENV_ON}
-   {[env1]
-      ENV_OFF}
+   {[env2] ENV_ON}
+   {[env1] ENV_OFF}
    {$task sleep 0.1}
-   {[env3]
-      ENV_ON}
-   {[env2]
-      ENV_OFF}
+   {[env3] ENV_ON}
+   {[env2] ENV_OFF}
    {$task sleep 0.1}
-   {[env4]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
+   {[env4] ENV_ON}
+   {[env3] ENV_OFF}
    {$task sleep 0.1}
-   {[env5]
-      ENV_ON}
-   {[env4]
-      ENV_OFF}
+   {[env5] ENV_ON}
+   {[env4] ENV_OFF}
    {$task sleep 0.1}
-   {[env6]
-      ENV_ON}
-   {[env5]
-      ENV_OFF}
+   {[env6] ENV_ON}
+   {[env5] ENV_OFF}
    {$task sleep 0.1}
-   {[env7]
-      ENV_ON}
-   {[env6]
-      ENV_OFF}
+   {[env7] ENV_ON}
+   {[env6] ENV_OFF}
    {$task sleep 0.1}
-   {[env8]
-      ENV_ON}
-   {[env7]
-      ENV_OFF}
+   {[env8] ENV_ON}
+   {[env7] ENV_OFF}
    {$task sleep 0.1}
-   {[env9]
-      ENV_ON}
-   {[env8]
-      ENV_OFF}
+   {[env9] ENV_ON}
+   {[env8] ENV_OFF}
    {$task sleep 0.1})
 #define NEON_SWEEP_DOWN
-({[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
-   {[env1]
-      ENV_OFF}
+({[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
+   {[env1] ENV_OFF}
    {$task sleep 0.1}
-   {[env9]
-      ENV_ON}
-   {[env1]
-      ENV_OFF}
+   {[env9] ENV_ON}
+   {[env1] ENV_OFF}
    {$task sleep 0.1}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_OFF}
+   {[env8] ENV_ON}
+   {[env9] ENV_OFF}
    {$task sleep 0.1}
-   {[env7]
-      ENV_ON}
-   {[env8]
-      ENV_OFF}
+   {[env7] ENV_ON}
+   {[env8] ENV_OFF}
    {$task sleep 0.1}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_OFF}
+   {[env6] ENV_ON}
+   {[env7] ENV_OFF}
    {$task sleep 0.1}
-   {[env5]
-      ENV_ON}
-   {[env6]
-      ENV_OFF}
+   {[env5] ENV_ON}
+   {[env6] ENV_OFF}
    {$task sleep 0.1}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_OFF}
+   {[env4] ENV_ON}
+   {[env5] ENV_OFF}
    {$task sleep 0.1}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_OFF}
+   {[env3] ENV_ON}
+   {[env4] ENV_OFF}
    {$task sleep 0.1}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
+   {[env2] ENV_ON}
+   {[env3] ENV_OFF}
    {$task sleep 0.1}
-   {[env2]
-      ENV_OFF}
-   {[env1]
-      ENV_ON}
+   {[env2] ENV_OFF}
+   {[env1] ENV_ON}
    {$task sleep 0.1})
 #define NEON_RANDOM
-({[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+({[env1] ENV_OFF}
+   {[env2] ENV_ON}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 0.25}
-   {[env8]
-      ENV_ON}
-   {[env2]
-      ENV_OFF}
+   {[env8] ENV_ON}
+   {[env2] ENV_OFF}
    {$task sleep 0.25}
-   {[env4]
-      ENV_ON}
-   {[env8]
-      ENV_OFF}
+   {[env4] ENV_ON}
+   {[env8] ENV_OFF}
    {$task sleep 0.25}
-   {[env9]
-      ENV_ON}
-   {[env4]
-      ENV_OFF}
+   {[env9] ENV_ON}
+   {[env4] ENV_OFF}
    {$task sleep 0.25}
-   {[env3]
-      ENV_ON}
-   {[env9]
-      ENV_OFF}
+   {[env3] ENV_ON}
+   {[env9] ENV_OFF}
    {$task sleep 0.25}
-   {[env7]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
+   {[env7] ENV_ON}
+   {[env3] ENV_OFF}
    {$task sleep 0.25}
-   {[env5]
-      ENV_ON}
-   {[env7]
-      ENV_OFF}
+   {[env5] ENV_ON}
+   {[env7] ENV_OFF}
    {$task sleep 0.25}
-   {[env1]
-      ENV_ON}
-   {[env5]
-      ENV_OFF}
+   {[env1] ENV_ON}
+   {[env5] ENV_OFF}
    {$task sleep 0.25}
-   {[env4]
-      ENV_ON}
-   {[env1]
-      ENV_OFF})
+   {[env4] ENV_ON}
+   {[env1] ENV_OFF})
 #define NEON_TRIPLE_SWEEP_UP
-({[env1]
-      ENV_ON}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_ON}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+({[env1] ENV_ON}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_ON}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_ON}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 0.3333333}
-   {[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_ON}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_OFF}
+   {[env1] ENV_OFF}
+   {[env2] ENV_ON}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_ON}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_ON}
+   {[env9] ENV_OFF}
    {$task sleep 0.3333333}
-   {[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_ON}
+   {[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_ON}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_ON}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_ON}
    {$task sleep 0.33333334})
 #define NEON_TRIPLE_SWEEP_DOWN
-({[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_ON}
+({[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_ON}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_ON}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_ON}
    {$task sleep 0.3333333}
-   {[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_ON}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_OFF}
+   {[env1] ENV_OFF}
+   {[env2] ENV_ON}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_ON}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_ON}
+   {[env9] ENV_OFF}
    {$task sleep 0.33333334}
-   {[env1]
-      ENV_ON}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_ON}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+   {[env1] ENV_ON}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_ON}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_ON}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 0.33333334})
 #define NEON_BLINK
-({[env1]
-      ENV_ON}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_ON}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_ON}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_ON}
+({[env1] ENV_ON}
+   {[env2] ENV_ON}
+   {[env3] ENV_ON}
+   {[env4] ENV_ON}
+   {[env5] ENV_ON}
+   {[env6] ENV_ON}
+   {[env7] ENV_ON}
+   {[env8] ENV_ON}
+   {[env9] ENV_ON}
    {$task sleep 1}
-   {[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+   {[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 1})
 #define NEON_FAST_BLINK
-({[env1]
-      ENV_ON}
-   {[env2]
-      ENV_ON}
-   {[env3]
-      ENV_ON}
-   {[env4]
-      ENV_ON}
-   {[env5]
-      ENV_ON}
-   {[env6]
-      ENV_ON}
-   {[env7]
-      ENV_ON}
-   {[env8]
-      ENV_ON}
-   {[env9]
-      ENV_ON}
+({[env1] ENV_ON}
+   {[env2] ENV_ON}
+   {[env3] ENV_ON}
+   {[env4] ENV_ON}
+   {[env5] ENV_ON}
+   {[env6] ENV_ON}
+   {[env7] ENV_ON}
+   {[env8] ENV_ON}
+   {[env9] ENV_ON}
    {$task sleep 0.5}
-   {[env1]
-      ENV_OFF}
-   {[env2]
-      ENV_OFF}
-   {[env3]
-      ENV_OFF}
-   {[env4]
-      ENV_OFF}
-   {[env5]
-      ENV_OFF}
-   {[env6]
-      ENV_OFF}
-   {[env7]
-      ENV_OFF}
-   {[env8]
-      ENV_OFF}
-   {[env9]
-      ENV_OFF}
+   {[env1] ENV_OFF}
+   {[env2] ENV_OFF}
+   {[env3] ENV_OFF}
+   {[env4] ENV_OFF}
+   {[env5] ENV_OFF}
+   {[env6] ENV_OFF}
+   {[env7] ENV_OFF}
+   {[env8] ENV_OFF}
+   {[env9] ENV_OFF}
    {$task sleep 0.5})
 #define DELETE_TASK
-({if
-      {exists neon_task}
-      {delete neon_task}})
+({if {exists neon_task}
+   {delete neon_task}})
 (ObjectDir
    (types
       (neon_controller
          (editor
-            (env1
-               object
+            (env1 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env2
-               object
+               (dir {$this dir}))
+            (env2 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env3
-               object
+               (dir {$this dir}))
+            (env3 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env4
-               object
+               (dir {$this dir}))
+            (env4 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env5
-               object
+               (dir {$this dir}))
+            (env5 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env6
-               object
+               (dir {$this dir}))
+            (env6 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env7
-               object
+               (dir {$this dir}))
+            (env7 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env8
-               object
+               (dir {$this dir}))
+            (env8 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (env9
-               object
+               (dir {$this dir}))
+            (env9 object
                (class EnvAnim)
-               (dir
-                  {$this dir}))
-            (all_on
-               script
-               (script
-                  {$this all_on}))
-            (all_off
-               script
-               (script
-                  {$this all_off}))
-            (half_on
-               script
-               (script
-                  {$this half_on}))
-            (sweepdown
-               script
-               (script
-                  {$this sweepdown}))
-            (sweepup
-               script
-               (script
-                  {$this sweepup}))
-            (random
-               script
-               (script
-                  {$this random}))
-            (triple_sweep_up
-               script
-               (script
-                  {$this triple_sweep_up}))
-            (triple_sweep_down
-               script
-               (script
-                  {$this triple_sweep_down}))
-            (blink
-               script
-               (script
-                  {$this blink}))
-            (fast_blink
-               script
-               (script
-                  {$this fast_blink}))
-            (offset_sweepup
-               script
-               (script
-                  {$this offset_sweepup}))
-            (bad_blue
-               script
-               (script
-                  {$this bad_blue})))
+               (dir {$this dir}))
+            (all_on script
+               (script {$this all_on}))
+            (all_off script
+               (script {$this all_off}))
+            (half_on script
+               (script {$this half_on}))
+            (sweepdown script
+               (script {$this sweepdown}))
+            (sweepup script
+               (script {$this sweepup}))
+            (random script
+               (script {$this random}))
+            (triple_sweep_up script
+               (script {$this triple_sweep_up}))
+            (triple_sweep_down script
+               (script {$this triple_sweep_down}))
+            (blink script
+               (script {$this blink}))
+            (fast_blink script
+               (script {$this fast_blink}))
+            (offset_sweepup script
+               (script {$this offset_sweepup}))
+            (bad_blue script
+               (script {$this bad_blue})))
          (env1
             "")
          (env2
@@ -740,28 +433,24 @@
          (all_on
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script NEON_ON)})
          (all_off
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script NEON_OFF)})
          (half_on
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script NEON_HALF_ON)})
          (sweepup
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -770,7 +459,6 @@
          (sweepdown
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -779,7 +467,6 @@
          (random
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -788,7 +475,6 @@
          (triple_sweep_up
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -808,7 +494,6 @@
          (triple_sweep_down
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -828,7 +513,6 @@
          (blink
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -837,7 +521,6 @@
          (fast_blink
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -846,7 +529,6 @@
          (offset_sweepup
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script
@@ -855,7 +537,6 @@
          (bad_blue
             DELETE_TASK
             {thread_task
-               (preserve)
                (name neon_task)
                (units kTaskBeats)
                (script NEON_BAD_BLUE)}))))
