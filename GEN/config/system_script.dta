@@ -1,3 +1,9 @@
+; This is all just a bunch of "mid-level" (lower-level than content, like
+; songs or colors, but higher-level than graphical/sound routines and
+; initialization) functions the game calls in various scripts. As an
+; example, "animate_forever_30fps" is used for the loading screen, at least
+; in the vanilla game, to animate the cassette with wings. Doubt you'd need
+; anything in here.
 #include ../../../system/run/config/system_init.dta
 #define FOREVER_PERIOD (604800)
 #define FOREVER_30FPS (18144000)

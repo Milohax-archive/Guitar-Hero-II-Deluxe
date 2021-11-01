@@ -6,433 +6,302 @@
 ; important functions though, defining the combinations for the Modifiers
 ; menu (yes, long cheats work in places other than the main menu!) and easter
 ; egg screens.
+
+; Hoo! This is a nice, big eyeful of DTA conditional structure. To explain,
+; && returns true if all conditions match. What this is saying is that if
+; the UI object exists (meaning you're in the menus and not in a song), that
+; UI is not currently in between two screens, and we're on the main menu, the
+; cheat can be performed.
+; We only use this for the vanilla cheats. Long cheats can be performed in
+; most menus, so we leave this off so people can access the Modifiers menu
+; or access the eggs on other menus.
 #define CHEATS_ALLOWED
 ({&&
-      {exists ui}
-      {!
-         {ui in_transition}}
-      {'||'
-         {==
-            {ui current_screen}
-            main_screen}
-         {==
-            {ui current_screen}
-            main_screen}}})
-#define G_GREEN
-(kPad_R2)
-#define G_RED
-(kPad_Circle)
-#define G_YELLOW
-(kPad_Tri)
-#define G_BLUE
-(kPad_X)
-#define G_ORANGE
-(kPad_Square)
+   {exists ui}
+   {! {ui in_transition}}
+   {== {ui current_screen} main_screen}}})
+
+#define G_GREEN (kPad_R2)
+#define G_RED (kPad_Circle)
+#define G_YELLOW (kPad_Tri)
+#define G_BLUE (kPad_X)
+#define G_ORANGE (kPad_Square)
+
 ((G_YELLOW G_BLUE G_ORANGE G_YELLOW G_BLUE G_ORANGE G_YELLOW G_BLUE G_ORANGE)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
+            {if_else $egg5
                {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
                {main_screen display_cheat_msg cheat_awesomeness FALSE}}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
+            {if_else $egg5
                {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
                {main_screen display_cheat_msg cheat_awesomeness FALSE}}
             {play_sfx cheat_off}}}})
 ((G_ORANGE G_BLUE G_ORANGE G_YELLOW G_ORANGE G_BLUE G_ORANGE G_YELLOW)
-   {if
-      {exists ui}
+   {if {exists ui}
       {do
-         {if
-            {!
-               {'||'
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen1}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen2}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen3}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen4}
-                  {==
-                     {ui current_screen}
-                     final_egg_screen}}}
-            {set
-               $egg_back
-               {ui current_screen}}}
-         {switch
-            $egg_back
+         ; More conditional goodness. ! means "if not", '||' means "if any of
+         ; them". So if we're on any of the egg screens already, don't go to
+         ; them again. (This fixes a crash in 1.0, actually.) If we're not on
+         ; those screens, keep the current screen handy so people can return
+         ; to it, then move to one of the egg screens and set its
+         ; corresponding variable.
+         {if {! {'||'
+            {== {ui current_screen} easter_egg_screen1}
+            {== {ui current_screen} easter_egg_screen2}
+            {== {ui current_screen} easter_egg_screen3}
+            {== {ui current_screen} easter_egg_screen4}
+            {== {ui current_screen} final_egg_screen}}}
+            {set $egg_back {ui current_screen}}}
+         {switch $egg_back
+            ; Yes, here are the egg locations. Don't tell anyone.
             (main_screen
                {do
                   {set $egg1 TRUE}
                   {set $game80s FALSE}
-				  {set $gamegh1 FALSE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen1}})
             (video_settings_screen
                {do
                   {set $egg2 TRUE}
                   {set $game80s FALSE}
-				  {set $gamegh1 TRUE}
+                  {set $gamegh1 TRUE}
                   {ui goto_screen easter_egg_screen2}})
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
-				  {set $game80s TRUE}
-				  {set $gamegh1 FALSE}
+                  {set $game80s TRUE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
                {do
                   {set $egg4 TRUE}
-				  {set $game80s FALSE}
-				  {set $gamegh1 FALSE}
+                  {set $game80s FALSE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen4}})
             (credits_screen
-               {if
-                  {&& $egg1 $egg2 $egg3 $egg4}
+               {if {&& $egg1 $egg2 $egg3 $egg4}
                   {do
                      {set $egg5 TRUE}
-					 {set $game80s FALSE}
-					 {set $gamegh1 FALSE}
+                     {set $game80s FALSE}
+                     {set $gamegh1 FALSE}
                      {ui goto_screen final_egg_screen}}})}}})
+; We allow people to perform the egg cheats with all known flavors of the
+; hyperspeed code, to make localization easier (read: letting other parts of
+; the world use their version's hyperspeed code). I think the 80's code is in
+; here too, but I don't remember it offhand.
 ((G_YELLOW G_ORANGE G_BLUE G_ORANGE G_YELLOW G_ORANGE G_BLUE G_ORANGE)
-   {if
-      {exists ui}
+   {if {exists ui}
       {do
-         {if
-            {!
-               {'||'
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen1}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen2}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen3}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen4}
-                  {==
-                     {ui current_screen}
-                     final_egg_screen}}}
-            {set
-               $egg_back
-               {ui current_screen}}}
-         {switch
-            $egg_back
+         {if {! {'||'
+            {== {ui current_screen} easter_egg_screen1}
+            {== {ui current_screen} easter_egg_screen2}
+            {== {ui current_screen} easter_egg_screen3}
+            {== {ui current_screen} easter_egg_screen4}
+            {== {ui current_screen} final_egg_screen}}}
+            {set $egg_back {ui current_screen}}}
+         {switch $egg_back
             (main_screen
                {do
                   {set $egg1 TRUE}
                   {set $game80s FALSE}
-				  {set $gamegh1 FALSE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen1}})
             (video_settings_screen
                {do
                   {set $egg2 TRUE}
                   {set $game80s FALSE}
-				  {set $gamegh1 TRUE}
+                  {set $gamegh1 TRUE}
                   {ui goto_screen easter_egg_screen2}})
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
-				  {set $game80s TRUE}
-				  {set $gamegh1 FALSE}
+                  {set $game80s TRUE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
                {do
                   {set $egg4 TRUE}
-				  {set $game80s FALSE}
-				  {set $gamegh1 FALSE}
+                  {set $game80s FALSE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen4}})
             (credits_screen
-               {if
-                  {&& $egg1 $egg2 $egg3 $egg4}
+               {if {&& $egg1 $egg2 $egg3 $egg4}
                   {do
                      {set $egg5 TRUE}
-					 {set $game80s FALSE}
-					 {set $gamegh1 FALSE}
+                     {set $game80s FALSE}
+                     {set $gamegh1 FALSE}
                      {ui goto_screen final_egg_screen}}})}}})
 ((G_BLUE G_ORANGE G_YELLOW G_ORANGE G_BLUE G_ORANGE G_YELLOW G_YELLOW)
-   {if
-      {exists ui}
+   {if {exists ui}
       {do
-         {if
-            {!
-               {'||'
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen1}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen2}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen3}
-                  {==
-                     {ui current_screen}
-                     easter_egg_screen4}
-                  {==
-                     {ui current_screen}
-                     final_egg_screen}}}
-            {set
-               $egg_back
-               {ui current_screen}}}
-         {switch
-            $egg_back
+         {if {! {'||'
+            {== {ui current_screen} easter_egg_screen1}
+            {== {ui current_screen} easter_egg_screen2}
+            {== {ui current_screen} easter_egg_screen3}
+            {== {ui current_screen} easter_egg_screen4}
+            {== {ui current_screen} final_egg_screen}}}
+            {set $egg_back {ui current_screen}}}
+         {switch $egg_back
             (main_screen
                {do
                   {set $egg1 TRUE}
                   {set $game80s FALSE}
-				  {set $gamegh1 FALSE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen1}})
             (video_settings_screen
                {do
                   {set $egg2 TRUE}
                   {set $game80s FALSE}
-				  {set $gamegh1 TRUE}
+                  {set $gamegh1 TRUE}
                   {ui goto_screen easter_egg_screen2}})
             (qp_diff_screen
                {do
                   {set $egg3 TRUE}
-				  {set $game80s TRUE}
-				  {set $gamegh1 FALSE}
+                  {set $game80s TRUE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen3}})
             (options_chooseprof_screen
                {do
                   {set $egg4 TRUE}
-				  {set $game80s FALSE}
-				  {set $gamegh1 FALSE}
+                  {set $game80s FALSE}
+                  {set $gamegh1 FALSE}
                   {ui goto_screen easter_egg_screen4}})
             (credits_screen
-               {if
-                  {&& $egg1 $egg2 $egg3 $egg4}
+               {if {&& $egg1 $egg2 $egg3 $egg4}
                   {do
                      {set $egg5 TRUE}
-					 {set $game80s FALSE}
-					 {set $gamegh1 FALSE}
+                     {set $game80s FALSE}
+                     {set $gamegh1 FALSE}
                      {ui goto_screen final_egg_screen}}})}}})
+
+; If we're on a setlist and we're not transitioning to another screen, move
+; to the Modifiers menu, saving the previous screen so we can go back to it
+; afterwards.
 ((kPad_Select kPad_Select)
-   {if
-      {&&
-         {exists ui}
-         {!
-            {ui in_transition}}
-         {'||'
-            {==
-               {ui current_screen}
-               sel_song_screen}
-            {==
-               {ui current_screen}
-               qp_selsong_screen}
-            {==
-               {ui current_screen}
-               multi_vs_selsong_screen}
-            {==
-               {ui current_screen}
-               multi_coop_selsong_screen}
-            {==
-               {ui current_screen}
-               multi_fo_selsong_screen}}}
-      {set
-         $modifier_exit
-         {ui current_screen}}
+   {if {&& {exists ui} {! {ui in_transition}}
+      {'||'
+         {== {ui current_screen} sel_song_screen}
+         {== {ui current_screen} qp_selsong_screen}
+         {== {ui current_screen} multi_vs_selsong_screen}
+         {== {ui current_screen} multi_coop_selsong_screen}
+         {== {ui current_screen} multi_fo_selsong_screen}}}
+      {set $modifier_exit {ui current_screen}}
       {synth play_sequence button_select}
       {ui goto_screen modifiers_screen}})
 ((G_YELLOW G_ORANGE G_RED G_YELLOW G_ORANGE G_RED)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
+
+; Unlock all
 ((G_BLUE G_YELLOW G_ORANGE G_RED G_ORANGE G_YELLOW G_RED G_YELLOW G_RED G_YELLOW G_RED G_YELLOW G_RED G_YELLOW G_RED G_YELLOW)
-   {if
-      {&&
-         CHEATS_ALLOWED
-         {! $cheat_enabled_unlock_all}}
+   {if {&& CHEATS_ALLOWED {! $cheat_enabled_unlock_all}}
       {set $cheat_enabled_unlock_all 1}
       {campaign set_all_access 1}
       {set $disable_save 1}
       {set $disable_career 1}
-      {if_else
-         $egg5
-         {main_screen_egg display_cheat_msg cheat_unlock_all TRUE}
-         {main_screen display_cheat_msg cheat_unlock_all TRUE}}
+      {main_screen display_cheat_msg cheat_unlock_all TRUE}
       {play_sfx cheat}})
+
+; I don't even remember what any of these are :omegalul:
 ((G_YELLOW G_YELLOW G_BLUE G_ORANGE G_YELLOW G_BLUE)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_YELLOW G_YELLOW G_BLUE G_YELLOW G_YELLOW G_ORANGE G_YELLOW G_YELLOW)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_YELLOW G_RED G_RED G_YELLOW)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_BLUE G_ORANGE G_ORANGE G_BLUE G_ORANGE G_ORANGE G_BLUE G_ORANGE G_ORANGE G_BLUE)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_ORANGE G_YELLOW G_ORANGE G_ORANGE G_YELLOW G_ORANGE G_YELLOW G_YELLOW)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_BLUE G_ORANGE G_YELLOW G_ORANGE G_YELLOW G_ORANGE G_BLUE)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_ORANGE G_BLUE G_YELLOW G_YELLOW G_ORANGE G_BLUE G_YELLOW G_YELLOW)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
 ((G_ORANGE G_RED G_ORANGE G_RED G_ORANGE G_BLUE)
-   {if
-      CHEATS_ALLOWED
-      {if_else
-         $awesomeness
+   {if CHEATS_ALLOWED
+      {if_else $awesomeness
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}
          {do
             {set $awesomeness FALSE}
-            {if_else
-               $egg5
-               {main_screen_egg display_cheat_msg cheat_awesomeness FALSE}
-               {main_screen display_cheat_msg cheat_awesomeness FALSE}}
+            {main_screen display_cheat_msg cheat_awesomeness FALSE}
             {play_sfx cheat_off}}}})
