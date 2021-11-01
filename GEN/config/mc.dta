@@ -52,7 +52,6 @@
 #ifdef 8DBUG (elf_name "80SDEBUG.ELF") #endif
 
 #ifdef _SHIP
-
 (ps2_icon
    (file "2dx.icn") ; it always looks for this in mc/ in the ark
    ; bg_transparency sets the opacity of the background colors for each save
@@ -82,6 +81,7 @@
    (ambient 0.7 0.7 0.7))
 #endif
 
+; Customs Edition (but you'll never see this :tim:)
 #ifdef _ONYX
 (ps2_icon
    (file "2dx.icn")
@@ -102,6 +102,7 @@
    (ambient 0.7 0.7 0.7))
 #endif
 
+; Encore DX
 #ifdef _ENCO
 (ps2_icon
    (file "80sdx.icn")
@@ -122,6 +123,7 @@
    (ambient 0.7 0.7 0.7))
 #endif
 
+; Mega DX
 #ifdef _MEGA
 (ps2_icon
    (file "mega.icn")
@@ -142,15 +144,16 @@
    (ambient 0.7 0.7 0.7))
 #endif
 
+; GH1 Redux
 #ifdef GH1RX
 (ps2_icon
-   (file "debug.icn")
+   (file "redux.icn")
    (bg_transparency 128)
    (bg_colors
+      (180 180 180)
+      (180 180 180)
       (0 0 0)
-      (0 0 0)
-      (160 69 69)
-      (160 69 69))
+      (0 0 0))
    (lit_dirs
       (0.2 1 0)
       (1 0 1)
@@ -162,6 +165,7 @@
    (ambient 0.7 0.7 0.7))
 #endif
 
+; Debug executables
 #ifndef _SHIP
 #ifndef _ENCO
 #ifndef _ONYX
