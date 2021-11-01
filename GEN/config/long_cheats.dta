@@ -19,7 +19,7 @@
 ({&&
    {exists ui}
    {! {ui in_transition}}
-   {== {ui current_screen} main_screen}}})
+   {== {ui current_screen} main_screen}})
 
 #define G_GREEN (kPad_R2)
 #define G_RED (kPad_Circle)
