@@ -30,7 +30,6 @@
 (stk_format_2 {sprint $player2_streak})
 (stk_zero "0")
 
-(mtv_chart_authr "Author: Harmonix")
 (blank_message "")
 (cheat_focusmode "Focus Mode")
 (cheat_neckless "Neckless Mode")

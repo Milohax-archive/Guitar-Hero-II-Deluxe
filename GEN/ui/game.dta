@@ -51,23 +51,31 @@
                         "%)"}}}
                {$this set_line $prefix 1 $song_text}}
             {$this set_line $prefix 2 $song_caption}
-            #ifndef 2DBUG
-            #ifndef 8DBUG
-            {if_else {!= "" {localize {sprint $song "_author"}}}
-               {$this set_line $prefix 3 {sprint $artist_text "\nAuthor: " {localize {sprint $song "_author"}}}
-                  {$this set_line $prefix 4 {localize blank_message}}}
-               {$this set_line $prefix 3 {sprint $artist_text "\n" {localize mtv_chart_authr}}
-                  {$this set_line $prefix 4 {localize blank_message}}}}
-            #endif
-            #endif
-            #ifdef 2DBUG
-			   {$this set_line $prefix 3 $artist_text}
-			   {$this set_line $prefix 4 {localize blank_message}}
-			#endif
-            #ifdef 8DBUG
-			   {$this set_line $prefix 3 $artist_text}
-			   {$this set_line $prefix 4 {localize blank_message}}
-			#endif
+            {$this set_line $prefix 3 $artist_text}
+            {mtv_campaign_line4.lbl set_wrap_width 540}
+            {mtv_campaign_line4_shadow.lbl set_wrap_width 540}
+            {if_else
+               {!=
+                  ""
+                  {localize
+                     {sprint
+                        $song
+                        "_author"}}}
+               {$this
+                  set_line
+                  $prefix
+                  4
+                  {sprint
+                     "Author: "
+                     {localize
+                        {sprint
+                           $song
+                           "_author"}}}}
+               {$this
+                  set_line
+                  $prefix
+                  4
+                  {localize mtv_chart_authr}}}
    }})
    (set_line
       ($prefix $i $text)
@@ -150,10 +158,10 @@
       {track_panel intro_start_msg}
       {mtv_overlay_panel show_overlay FALSE}
       {streak_overlay_panel show_overlay FALSE}
-      {switch
-         {gamecfg get mode}
-         (multi_vs {set $songtitle FALSE})
-         (multi_fo {set $songtitle FALSE})}
+	  {switch
+	     {gamecfg get mode}
+		 (multi_vs {set $songtitle FALSE})
+		 (multi_fo {set $songtitle FALSE})}
       {if
          $encore
          {do
@@ -193,7 +201,7 @@
       kDataUnhandled)
    (intro_skip
       {track_panel intro_skip}
-      {if $do_streak {streak_overlay_panel setup_streak}}
+	  {if $do_streak {streak_overlay_panel setup_streak}}
       kDataUnhandled)
    (extend_track
       {set $encorefocus FALSE}
@@ -204,8 +212,8 @@
          $focusmode
          {world do_force_shot lighter}}
       {if {&&
-      $focusmode
-      {||
+	  $focusmode
+	  {||
          {== {gamecfg get mode} career}
          {== {gamecfg get mode} quickplay}
          {== {gamecfg get mode} multi_coop}}}
@@ -217,7 +225,7 @@
             {! $cheat_enabled_performance_mode}}
          {track_panel do_extend_sequence}}
       {beatmatch set_music_speed $speedmod}
-      {script_task
+	  {script_task
          (delay 1.8)
          (units kTaskSeconds)
          (script
@@ -229,7 +237,7 @@
          (script
             {handle
                ($this intro_end)
-               (streak_overlay_panel show_overlay $do_streak)})}
+			   (streak_overlay_panel show_overlay $do_streak)})}
       {set
          [intro_complete]
          TRUE})
@@ -256,10 +264,10 @@
                $p
                {if
                   {$p in_star_mode}
-            {if_else
-                $focusmode
+			{if_else
+				$focusmode
                   {set $clap FALSE}
-                  {set $clap TRUE}}}}
+				  {set $clap TRUE}}}}
             {if
                $clap
                {script_task
@@ -288,8 +296,8 @@
    (game_won_msg
       ($encore)
       {if {&&
-      $focusmode
-      {||
+	  $focusmode
+	  {||
          {== {gamecfg get mode} career}
          {== {gamecfg get mode} quickplay}
          {== {gamecfg get mode} multi_coop}}}
@@ -328,8 +336,8 @@
          0})
    (game_lost
       {if {&&
-      $focusmode
-      {||
+	  $focusmode
+	  {||
          {== {gamecfg get mode} career}
          {== {gamecfg get mode} quickplay}
          {== {gamecfg get mode} multi_coop}}}
@@ -464,7 +472,7 @@
          world
          main})
    (enter
-      {if $focusmode {crowd_audio set_enabled FALSE}}
+	  {if $focusmode {crowd_audio set_enabled FALSE}}
       {if_else
          {game multiplayer}
          {handle
