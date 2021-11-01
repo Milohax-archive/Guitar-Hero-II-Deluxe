@@ -51,31 +51,11 @@
                         "%)"}}}
                {$this set_line $prefix 1 $song_text}}
             {$this set_line $prefix 2 $song_caption}
-            {$this set_line $prefix 3 $artist_text}
-            {mtv_campaign_line4.lbl set_wrap_width 540}
-            {mtv_campaign_line4_shadow.lbl set_wrap_width 540}
-            {if_else
-               {!=
-                  ""
-                  {localize
-                     {sprint
-                        $song
-                        "_author"}}}
-               {$this
-                  set_line
-                  $prefix
-                  4
-                  {sprint
-                     "Author: "
-                     {localize
-                        {sprint
-                           $song
-                           "_author"}}}}
-               {$this
-                  set_line
-                  $prefix
-                  4
-                  {localize mtv_chart_authr}}}
+            {if_else {exists {sprint $song "_author"}} ;check for author string
+               {$this set_line $prefix 3 {sprint $artist_text "\nAuthor: " {localize {sprint $song "_author"}}}} ;if present, add newline to line 3 followed by author
+               {$this set_line $prefix 3 {sprint $artist_text "\nAuthor: Unknown"}}} ;if not, put unknown
+            {mtv_campaign_line4.lbl set_showing FALSE} ;hide line 4, no longer needed
+            {mtv_campaign_line4_shadow.lbl set_showing FALSE} ;same with shadow
    }})
    (set_line
       ($prefix $i $text)
