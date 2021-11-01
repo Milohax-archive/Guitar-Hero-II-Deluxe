@@ -180,8 +180,36 @@
 (((win_vs_noun_c_1 win_vs_noun_c_2)
       (win_vs_noun_b_1 win_vs_noun_b_2)
       (win_vs_noun_a_1 win_vs_noun_a_2)))
-#define HEADLINE_HANDLERS
-((gen_headline_tour_1
+
+#define TOOGLE_HEAD_QP ((toogle_headline_qp_1 toogle_headline_qp_2 toogle_headline_qp_3 toogle_headline_qp_4)) ;macros for autoplay headline generation
+#define TOOGLE_HEAD_CA ((toogle_headline_ca_1 toogle_headline_ca_2 toogle_headline_ca_3 toogle_headline_ca_4))
+#define TOOGLE_HEAD_VSP1 ((toogle_headline_vsp1_1 toogle_headline_vsp1_2 toogle_headline_vsp1_3 toogle_headline_vsp1_4))
+#define TOOGLE_HEAD_VSP2 ((toogle_headline_vsp2_1 toogle_headline_vsp2_2 toogle_headline_vsp2_3 toogle_headline_vsp2_4))
+#define TOOGLE_HEAD_VS ((toogle_headline_vs_1 toogle_headline_vs_2 toogle_headline_vs_3 toogle_headline_vs_4))
+#define TOOGLE_HEAD_COP1 ((toogle_headline_cop1_1 toogle_headline_cop1_2 toogle_headline_cop1_3 toogle_headline_cop1_4))
+#define TOOGLE_HEAD_COP2 ((toogle_headline_cop2_1 toogle_headline_cop2_2 toogle_headline_cop2_3 toogle_headline_cop2_4))
+#define TOOGLE_HEAD_CO ((toogle_headline_co_1 toogle_headline_co_2 toogle_headline_co_3 toogle_headline_co_4))
+
+
+#define HEADLINE_HANDLERS ;added handlers for all game modes and p1/p2/both possibilities
+(
+    (gen_toogle_head_qp
+        {$this generate_headline {random_elem TOOGLE_HEAD_QP}})
+    (gen_toogle_head_ca
+        {$this generate_headline {random_elem TOOGLE_HEAD_CA}})
+    (gen_toogle_head_vsp1
+        {$this generate_headline {random_elem TOOGLE_HEAD_VSP1}})
+    (gen_toogle_head_vsp2
+        {$this generate_headline {random_elem TOOGLE_HEAD_VSP2}})
+    (gen_toogle_head_vs
+        {$this generate_headline {random_elem TOOGLE_HEAD_VS}})
+    (gen_toogle_head_cop1
+        {$this generate_headline {random_elem TOOGLE_HEAD_COP1}})
+    (gen_toogle_head_cop2
+        {$this generate_headline {random_elem TOOGLE_HEAD_COP2}})
+    (gen_toogle_head_co
+        {$this generate_headline {random_elem TOOGLE_HEAD_CO}})
+    (gen_headline_tour_1
       {do
          ($index
             {-
@@ -326,9 +354,9 @@
                   {localize
                      {random_elem
                         {elem WIN_VS_CONCERT $spread}}})}}})
-   (set_headline
-      ($label)
-      {$label
+    (set_headline
+        ($label)
+        {$label
          set_localized_text
          {$this
             {cond
@@ -383,7 +411,36 @@
                      {==
                         multi_fo
                         {gamecfg get mode}}}
-                  gen_versus_headline)}}}))
+                  gen_versus_headline)}}}
+
+        ;Handle setting headline for the various autoplay combos
+        {switch
+            {gamecfg get mode}
+                (career {if {player_matcher0 auto_play} {$label set_localized_text {gen_toogle_head_ca}}})
+                (quickplay {if {player_matcher0 auto_play} {$label set_localized_text {gen_toogle_head_qp}}})
+                (multi_vs
+                    {if {&& {player_matcher0 auto_play} {player_matcher1 auto_play}} ;if both auto
+                        {$label set_localized_text {$this gen_toogle_head_vs}}}
+                    {if {&& {player_matcher0 auto_play} {! {player_matcher1 auto_play}}} ;if p1 auto
+                        {$label set_localized_text {$this gen_toogle_head_vsp1}}}
+                    {if {&& {! {player_matcher0 auto_play}} {player_matcher1 auto_play}} ;if p2 auto
+                        {$label set_localized_text {$this gen_toogle_head_vsp2}}})
+                (multi_fo
+                    {if {&& {player_matcher0 auto_play} {player_matcher1 auto_play}} ;if both auto
+                        {$label set_localized_text {$this gen_toogle_head_vs}}}
+                    {if {&& {player_matcher0 auto_play} {! {player_matcher1 auto_play}}} ;if p1 auto
+                        {$label set_localized_text {$this gen_toogle_head_vsp1}}}
+                    {if {&& {! {player_matcher0 auto_play}} {player_matcher1 auto_play}} ;if p2 auto
+                        {$label set_localized_text {$this gen_toogle_head_vsp2}}})
+                (multi_coop
+                    {if {&& {player_matcher0 auto_play} {player_matcher1 auto_play}} ;if both auto
+                        {$label set_localized_text {$this gen_toogle_head_co}}}
+                    {if {&& {player_matcher0 auto_play} {! {player_matcher1 auto_play}}} ;if p1 auto
+                        {$label set_localized_text {$this gen_toogle_head_cop1}}}
+                    {if {&& {! {player_matcher0 auto_play}} {player_matcher1 auto_play}} ;if p2 auto
+                        {$label set_localized_text {$this gen_toogle_head_cop2}}})
+        }
+))
 {new
    EndGamePanel
    endgame_panel
@@ -430,7 +487,7 @@
             {sprintf
                {localize eg_streak_format}
                {$player longest_streak}}}
-		 {endgame_review_data.lbl set_text {$player star_rating}} ;original stars font
+         {endgame_review_data.lbl set_text {$player star_rating}} ;original stars font
          {endgame_review_data_fc.lbl set_text {$player star_rating}} ;new starsfc font
          {percentbar_p1.mesh
             set_local_scale
@@ -439,21 +496,21 @@
                100.0}
             1
             1}}
-		 {if_else $player0_fc
-		    {do
-			   {endgame_review_data.lbl set_showing FALSE}
-			   {endgame_review_data_fc.lbl set_showing TRUE}} ;if P0 FC, use new label
-			{do
-			   {endgame_review_data_fc.lbl set_showing FALSE}
-			   {endgame_review_data.lbl set_showing TRUE}}} ;if P0 didn't FC, use old label
+         {if_else $player0_fc
+            {do
+               {endgame_review_data.lbl set_showing FALSE}
+               {endgame_review_data_fc.lbl set_showing TRUE}} ;if P0 FC, use new label
+            {do
+               {endgame_review_data_fc.lbl set_showing FALSE}
+               {endgame_review_data.lbl set_showing TRUE}}} ;if P0 didn't FC, use old label
       {$this set_headline endgame_headline.lbl}
       {if {player_matcher0 auto_play} ;check for autoplay on player 1
         {do
-          {endgame_headline.lbl set_text auto_headline} ;NICE BOT RUN, YA FUCKIN' CHUMP!
-          {endgame_diff_data.lbl set_text auto_label} ;difficulty to CHEATER
-          {endgame_streak_data.lbl set_text auto_label} ;photo caption to CHEATER
-          {endgame_score_data.lbl set_text auto_label} ;score to CHEATER
-          {endgame_percent_data.lbl set_text auto_label} ;percentage to CHEATER
+          ;{endgame_headline.lbl set_text toogle_headline_qp1} ;NICE BOT RUN, YA FUCKIN' CHUMP!
+          {endgame_diff_data.lbl set_text toogle_label} ;difficulty to CHEATER
+          {endgame_streak_data.lbl set_text toogle_label} ;photo caption to CHEATER
+          {endgame_score_data.lbl set_text toogle_label} ;score to CHEATER
+          {endgame_percent_data.lbl set_text toogle_label} ;percentage to CHEATER
           {endgame_review_data_fc.lbl set_showing FALSE} ;hide FC stars
           {endgame_review_data.lbl set_showing TRUE} ;show non-FC stars
         }})
