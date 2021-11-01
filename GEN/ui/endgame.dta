@@ -416,8 +416,8 @@
         ;Handle setting headline for the various autoplay combos
         {switch
             {gamecfg get mode}
-                (career {if {player_matcher0 auto_play} {$label set_localized_text {gen_toogle_head_ca}}})
-                (quickplay {if {player_matcher0 auto_play} {$label set_localized_text {gen_toogle_head_qp}}})
+                (career {if {player_matcher0 auto_play} {$label set_localized_text {$this gen_toogle_head_ca}}})
+                (quickplay {if {player_matcher0 auto_play} {$label set_localized_text {$this gen_toogle_head_qp}}})
                 (multi_vs
                     {if {&& {player_matcher0 auto_play} {player_matcher1 auto_play}} ;if both auto
                         {$label set_localized_text {$this gen_toogle_head_vs}}}
