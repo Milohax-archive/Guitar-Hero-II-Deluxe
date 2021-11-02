@@ -108,7 +108,7 @@
 
 (toogle_headline_vsp1_1 {sprint {localize {{gamecfg get_player_config 0} get_character}} " DISQUALIFIED DUE TO PERFORMANCE ENHANCERS"}) ;vs/fo, p1 autoplay
 (toogle_headline_vsp1_2 {sprint {localize {{gamecfg get_player_config 0} get_character}} " WORSE THAN MILLI VANILLI"})
-(toogle_headline_vsp1_3 "CROWD AT {GH_VENUE} WANTS A DO-OVER, THANKS PLAYER 1")
+(toogle_headline_vsp1_3 {sprint "CROWD AT {GH_VENUE} WANTS A DO-OVER, THANKS " {localize {{gamecfg get_player_config 0} get_character}}})
 (toogle_headline_vsp1_4 {sprint {localize {{gamecfg get_player_config 1} get_character}} " LAUDED AS \qREAL MUSICIAN\q"})
 
 (toogle_headline_vsp2_1 {sprint {localize {{gamecfg get_player_config 1} get_character}} " CAUGHT MIMICKING ON STAGE"}) ;vs/fo, p2 autoplay
