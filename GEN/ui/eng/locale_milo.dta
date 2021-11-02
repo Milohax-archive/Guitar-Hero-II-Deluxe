@@ -132,11 +132,11 @@
 (toogle_headline_cop2_4 {sprint "CD PLAYER FOUND HOOKED INTO {GH_VENUE} SOUND SYSTEM, " {localize {{gamecfg get_player_config 1} get_character}} " BLAMED"})
 
 (toogle_headline_co_1 "LOCAL BAND PLAYS TO BACKING TRACK - DRUMMER CONFIRMED ROBOT?") ;coop, both autoplay
-(toogle_headline_co_2 "CROWD GOES MILE AT MIMED BAND PERFORMANCE")
+(toogle_headline_co_2 "CROWD GOES MILD AT MIMED BAND PERFORMANCE")
 (toogle_headline_co_3 "THIS IS WHY ROCK MUSIC IS DEAD, FOLKS")
 (toogle_headline_co_4 "\qTHIS JUST ISN'T MY BAND ANYMORE\q SAYS FORMER SINGER")
 
-(toogle_label "CHEATER")
-(toogle_vsp1_label {sprint {localize {{gamecfg get_player_config 0} get_character}} " CHEATED!"})
-(toogle_vsp2_label {sprint {localize {{gamecfg get_player_config 1} get_character}} " CHEATED!"})
-(toogle_vs_label "BOTH PLAYERS CHEATED!")
+(toogle_label "AUTOPLAY")
+;(toogle_vsp1_label {sprint {localize {{gamecfg get_player_config 0} get_character}} " CHEATED!"})
+;(toogle_vsp2_label {sprint {localize {{gamecfg get_player_config 1} get_character}} " CHEATED!"})
+;(toogle_vs_label "BOTH PLAYERS CHEATED!")

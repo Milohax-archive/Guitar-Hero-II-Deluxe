@@ -1091,16 +1091,16 @@
             set_localized_text
             {sprint
                {player1 longest_streak}}}
-         {if {player_matcher0 auto_play}
-            {me_score_data1.lbl set_text toogle_label} ;if P1 autoplay, change percent
-            {me_caption.lbl set_text toogle_vsp1_label} ;if P1 autoplay, change caption
+;         {if {player_matcher0 auto_play}
+;            {me_score_data1.lbl set_text toogle_label} ;if P1 autoplay, change score
+;            {me_caption.lbl set_text toogle_vsp1_label} ;if P1 autoplay, change caption
+;         }
+;         {if {player_matcher1 auto_play}
+;            {me_score_data2.lbl set_text toogle_label} ;if P2 autoplay, change score
+;            {me_caption.lbl set_text toogle_vsp2_label} ;if P2 autoplay, change caption
          }
-         {if {player_matcher1 auto_play}
-            {me_score_data2.lbl set_text toogle_label} ;if P2 autoplay, change percent
-            {me_caption.lbl set_text toogle_vsp2_label} ;if P2 autoplay, change caption
-         }
-         {if {&& {player_matcher0 auto_play} {player_matcher1 auto_play}}
-            {me_caption.lbl set_text toogle_vs_label}} ;if both autoplay, change caption
+;         {if {&& {player_matcher0 auto_play} {player_matcher1 auto_play}}
+;            {me_caption.lbl set_text toogle_vs_label}} ;if both autoplay, change caption
          {me_stars1.lbl
             set_text
             {player0 star_rating}}

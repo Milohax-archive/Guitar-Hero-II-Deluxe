@@ -507,9 +507,9 @@
       {if {player_matcher0 auto_play} ;check for autoplay on player 1
         {do
           ;{endgame_headline.lbl set_text toogle_headline_qp1} ;NICE BOT RUN, YA FUCKIN' CHUMP!
-          {endgame_diff_data.lbl set_text toogle_label} ;difficulty to CHEATER
-          {endgame_streak_data.lbl set_text toogle_label} ;photo caption to CHEATER
-          {endgame_score_data.lbl set_text toogle_label} ;score to CHEATER
+;          {endgame_diff_data.lbl set_text toogle_label} ;difficulty to CHEATER
+;          {endgame_streak_data.lbl set_text toogle_label} ;photo caption to CHEATER
+;          {endgame_score_data.lbl set_text toogle_label} ;score to CHEATER
           {endgame_percent_data.lbl set_text toogle_label} ;percentage to CHEATER
           {endgame_review_data_fc.lbl set_showing FALSE} ;hide FC stars
           {endgame_review_data.lbl set_showing TRUE} ;show non-FC stars
