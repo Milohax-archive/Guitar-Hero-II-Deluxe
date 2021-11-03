@@ -22,9 +22,22 @@
          (script
 			#ifdef GH1RX
             {animate_forever_30fps $this flyingtape2.grp}
+			{loading_word.mnm set_frame 1}
+			{loading_word2.mnm set_frame 1}
+			{loading_word3.mnm set_frame 1}
 			{loading_word.mnm
 				animate
-				(period 1.75)
+				(period 2.75)
+				(units kTaskUISeconds)}
+			{loading_word2.mnm
+				animate
+				(delay 2.75)
+				(period 2.75)
+				(units kTaskUISeconds)}
+			{loading_word3.mnm
+				animate
+				(delay 5.5)
+				(period 2.75)
 				(units kTaskUISeconds)}
 			#else
             {animate_forever_30fps $this flyingtape2.grp}
