@@ -53,7 +53,7 @@
             {$this set_line $prefix 2 $song_caption}
             #ifndef 2DBUG
             #ifndef 8DBUG ;check for either debug ELF
-                {if_else {!= {localize {sprint {gamecfg get_song} "_author"}}} ;if not debug, check for author string
+                {if_else {!= "" {localize {sprint {gamecfg get_song} "_author"}}} ;if not debug, check for author string
                     {$this set_line $prefix 3 {sprint $artist_text "\nAuthor: " {localize {sprint $song "_author"}}}} ;if present, add newline to line 3 followed by author
                     {$this set_line $prefix 3 {sprint $artist_text "\nAuthor: Unknown"}}} ;if not, put unknown
             #endif
