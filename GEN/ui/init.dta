@@ -22,11 +22,17 @@
    (pause_panel pause_controller_panel tut_pause_panel pract_pause_panel tut_pause_controller_panel lose_panel helpbar)
    {$p load}}
 {meta set_defaults}
-#ifdef _ONYX
-{set $first_screen main_screen}
-#else
-{set $first_screen bootup_load}
+
+; Set all discs but Onyx and expansion to boot to the initial memory card
+; screens. Onyx and expansion go right to the main menu.
+#ifndef _ONYX
+#ifndef _DRUM
+   {set $first_screen bootup_load}
 #endif
+#endif
+#ifdef _DRUM {set $first_screen main_screen} #endif
+#ifdef _ONYX {set $first_screen main_screen} #endif
+
 {ui my_init}
 {do
    ($cfg)
