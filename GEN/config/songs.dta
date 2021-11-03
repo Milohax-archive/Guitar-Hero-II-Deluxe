@@ -3680,3 +3680,31 @@
       (guitar sg)
       (venue small2))
    (band metal_bass metal_drummer female_singer))
+(tomsawyer
+   (name "Tom Sawyer")
+   (artist "Rush")
+   (song
+      (name songs/tomsawyer/tomsawyer)
+      (tracks
+         ((guitar (2))
+          (bass (3))
+          (drum (4 5))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/tomsawyer/tomsawyer.mid))
+   (song_vs
+      (name songs/tomsawyer/tomsawyer)
+      (tracks
+         ((guitar (2))
+          (bass (3))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/tomsawyer/tomsawyer.mid))
+   (anim_tempo kTempoMedium)
+   (preview 27300 68470)
+   (quickplay
+      (character_outfit classic)
+      (guitar flying_v)
+      (venue fest)))
