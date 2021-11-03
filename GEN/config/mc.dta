@@ -3,7 +3,7 @@
 ; normal (or other custom discs') saves.
 #ifdef _SHIP (base_dir "BAGHCE-00020") #endif
 #ifdef _MEGA (base_dir "BAGHCE-08008") #endif
-#ifdef _ONYX (base_dir "BAGHCE-68878") #endif
+#ifdef _ENCO (base_dir "BAGHCE-00080") #endif
 #ifdef GH1RX (base_dir "BAGHCE-11111") #endif
 #ifdef _DRUM (base_dir "BAGHCE-12123") #endif
 #ifdef 2DBUG (base_dir "BAGHCE-01001") #endif
@@ -11,12 +11,12 @@
 
 #ifndef _SHIP
 #ifndef _DRUM
-#ifndef _ONYX
+#ifndef _ENCO
 #ifndef _MEGA
 #ifndef GH1RX
 #ifndef 8DBUG
 #ifndef 2DBUG
-(base_dir "BAGHCE-00080")
+(base_dir "BAGHCE-68878")
 #endif
 #endif
 #endif
@@ -35,7 +35,7 @@
 #ifndef GH1RX
 #ifndef 8DBUG
 #ifndef 2DBUG
-(elf_name "GH80SDX.ELF")
+(elf_name "CUSTOMDX.ELF")
 #endif
 #endif
 #endif
@@ -45,8 +45,8 @@
 #endif
 
 #ifdef _MEGA (elf_name "GHMEGADX.ELF") #endif
-#ifdef _ONYX (elf_name "CUSTOMDX.ELF") #endif
-#ifdef _DRUM (elf_name "DRUMDX.ELF") #endif
+#ifdef _ENCO (elf_name "GH80SDX.ELF") #endif
+#ifdef _DRUM (elf_name "GHEXTRA.ELF") #endif
 #ifdef GH1RX (elf_name "GH1RDX.ELF") #endif
 #ifdef 2DBUG (elf_name "GH2DEBUG.ELF") #endif
 #ifdef 8DBUG (elf_name "80SDEBUG.ELF") #endif

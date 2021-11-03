@@ -48,12 +48,7 @@
 #endif
 
 ; Encore campaign
-#ifndef _SHIP
-#ifndef _MEGA
-#ifndef _ONYX
-#ifndef _DRUM
-#ifndef 2DBUG
-#ifndef GH1RX
+#ifdef _ENCO
 (order
    (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
    (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
@@ -78,11 +73,6 @@
       (kDifficultyMedium 500 600 700 800 900 1000 0)
       (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
       (kDifficultyExpert 1700 1900 2700 3250 3700 500000 0)))
-#endif
-#endif
-#endif
-#endif
-#endif
 #endif
 
 ; Mega campaign
@@ -132,7 +122,12 @@
 #endif
 
 ; Customs Edition "campaign"
-#ifdef _ONYX
+#ifndef _SHIP
+#ifndef _MEGA
+#ifndef _ENCO
+#ifndef _DRUM
+#ifndef 2DBUG
+#ifndef GH1RX
 (order
    (battle speedtest)
    (battle2)
@@ -165,6 +160,11 @@
       (kDifficultyMedium 0 0)
       (kDifficultyHard 0 0)
       (kDifficultyExpert 0 0)))
+#endif
+#endif
+#endif
+#endif
+#endif
 #endif
 
 ; Drum campaign
