@@ -281,48 +281,36 @@
 		 (mat guitar_lespaul_burst.mat))))
 (fish_reward
    (type guitar)
-   (require tour_passed)
-   (difficulty kDifficultyEasy)
    (skins
       (fish
          (outfit fish)
          (mat fish.mat))))
 (usa_reward
    (type guitar)
-   (require tour_5_star)
-   (difficulty kDifficultyEasy)
    (skins
       (usa
          (outfit usa)
          (mat usa.mat))))
 (coffin_reward
    (type guitar)
-   (require tour_passed)
-   (difficulty kDifficultyMedium)
    (skins
       (coffin
          (outfit coffin)
          (mat coffin.mat))))
 (viking_reward
    (type guitar)
-   (require tour_5_star)
-   (difficulty kDifficultyMedium)
    (skins
       (viking
          (outfit viking)
          (mat viking.mat))))
 (snaketapus_reward
    (type guitar)
-   (require tour_passed)
-   (difficulty kDifficultyHard)
    (skins
       (snaketapus
          (outfit snaketapus)
          (mat snaketapus.mat))))
 (eyeball_reward
    (type guitar)
-   (require tour_5_star)
-   (difficulty kDifficultyHard)
    (skins
       (eyeball
          (outfit eyeball)
