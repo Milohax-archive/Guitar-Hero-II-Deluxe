@@ -3562,7 +3562,7 @@
       (venue small2))
    (validate_ignore TRUE))
 
-; Drum Hero-exclusive songs
+; Expansion exclusive songs
 (chopsuey
    (name "Chop Suey!")
    (artist "System of a Down")
@@ -3592,6 +3592,64 @@
       (character_outfit punk1)
       (guitar sg)
       (venue big)))
+(crawl
+   (name "Crawl")
+   (artist "Kings of Leon")
+   (caption performed_by)
+   (song
+      (name songs/crawl/crawl)
+      (tracks
+         ((guitar (2))
+          (bass (3))
+          (drum (4 5))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/crawl/crawl.mid))
+   (song_vs
+      (name songs/crawl/crawl)
+      (tracks
+         ((guitar (2))
+          (bass (3))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/crawl/crawl.mid))
+   (anim_tempo kTempoMedium)
+   (preview 24900 59100)
+   (quickplay
+      (character_outfit rock2)
+      (guitar lespaul)
+      (venue small2)))
+(debaser
+   (name "Debaser")
+   (artist "Pixies")
+   (caption performed_by)
+   (song
+      (name songs/debaser/debaser)
+      (tracks
+         ((guitar (2))
+          (bass (3))
+          (drum (4 5))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/debaser/debaser.mid))
+   (song_vs
+      (name songs/debaser/debaser)
+      (tracks
+         ((guitar (2))
+          (bass (3))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/debaser/debaser.mid))
+   (anim_tempo kTempoMedium)
+   (preview 24900 59100)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar lespaul)
+      (venue theatre)))
 (maps
    (name "Maps")
    (artist "Yeah Yeah Yeahs")
@@ -3622,32 +3680,3 @@
       (guitar sg)
       (venue small2))
    (band metal_bass metal_drummer female_singer))
-(debaser
-   (name "Debaser")
-   (artist "Pixies")
-   (caption performed_by)
-   (song
-      (name songs/debaser/debaser)
-      (tracks
-         ((guitar (2))
-          (bass (3))
-          (drum (4 5))))
-      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
-      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
-      (cores (-1 -1 1 -1 -1 -1))
-      (midi_file songs/debaser/debaser.mid))
-   (song_vs
-      (name songs/debaser/debaser)
-      (tracks
-         ((guitar (2))
-          (bass (3))))
-      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
-      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
-      (cores (-1 -1 1 -1 -1 -1))
-      (midi_file songs/debaser/debaser.mid))
-   (anim_tempo kTempoMedium)
-   (preview 24900 59100)
-   (quickplay
-      (character_outfit alterna1)
-      (guitar lespaul)
-      (venue theatre)))

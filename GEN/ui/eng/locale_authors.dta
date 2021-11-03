@@ -117,7 +117,8 @@
 (trippolette_author "Harmonix, mariteaux")
 (graveyardshift_author "Harmonix, mariteaux")
 
-; Drum Hero authors
+; Expansion authors
 (chopsuey_author "Harmonix")
-(maps_author "Harmonix")
+(crawl_author "Harmonix")
 (debaser_author "Harmonix")
+(maps_author "Harmonix")
