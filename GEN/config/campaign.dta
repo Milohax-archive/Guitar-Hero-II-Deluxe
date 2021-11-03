@@ -167,10 +167,10 @@
 #endif
 #endif
 
-; Drum campaign
+; Expansion disc
 #ifdef _DRUM
 (order
-   (battle2 tomsawyer crawl yyz electriceye wegotthebeat policetruck maps debaser chopsuey)
+   (battle2 tomsawyer crawl yyz electriceye maps debaser chopsuey wegotthebeat policetruck iwannarock ladylightning lesstalkmorerokk warpigs possum collide)
    (small3)
    (small4)
    (theatre2)
