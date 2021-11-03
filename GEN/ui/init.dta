@@ -25,12 +25,7 @@
 
 ; Set all discs but Onyx and expansion to boot to the initial memory card
 ; screens. Onyx and expansion go right to the main menu.
-#ifndef _ONYX
-#ifndef _DRUM
-   {set $first_screen bootup_load}
-#endif
-#endif
-#ifdef _DRUM {set $first_screen main_screen} #endif
+#ifndef _ONYX {set $first_screen bootup_load} #endif
 #ifdef _ONYX {set $first_screen main_screen} #endif
 
 {ui my_init}

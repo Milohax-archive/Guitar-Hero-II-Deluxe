@@ -25,13 +25,6 @@
       {set $disable_save 1}
       {set $disable_career 1}
 #endif
-#ifdef _DRUM
-      {$this disable main_career.btn}
-      {set $cheat_enabled_unlock_all 1}
-      {campaign set_all_access 1}
-      {set $disable_save 1}
-      {set $disable_career 1}
-#endif
       {$this reset_player_settings}
       {if
          {!
