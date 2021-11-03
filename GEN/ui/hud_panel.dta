@@ -425,7 +425,8 @@
 	(on_reset
 		{$this set_showing {&& {gamecfg get show_hud} {! $cheat_enabled_performance_mode}}}
 		{$this set_meters_showing TRUE}
-		{$this set_win_showing FALSE})
+		{$this set_win_showing FALSE}
+	)
 
 	(intro_start_msg
 		{$this reset}
@@ -440,6 +441,14 @@
 
 	(slide_meter_in
 		{$this set_meters_showing TRUE}
+;        {if {== {game get_track_sym 0} guitar} ;check for drums and hide SP meter
+;          {do
+;            {{hud find star_meter.view} set_showing FALSE} ;hud_sp.milo brings these in by referencing ;star_meter.milo through BandStarMeterDir
+;            {{hud find star_meter_ready.view} set_showing FALSE}
+;            {{hud find star_meter_fill.view} set_showing FALSE}
+;            {{hud find lightning.view} set_showing FALSE}
+;          }
+;        }
 		{streak_overlay_panel animate_streak}
 		{meters_slide_in.view animate (period 0.5) (units kTaskSeconds)}
 		{if {!= {gamecfg get mode} attract}
