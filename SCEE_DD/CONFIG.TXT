@@ -4,7 +4,7 @@
 OPT=GH2DX
 OPT=ENCORE_DX
 OPT=MEGA_DX
-OPT=DRUM_DX
+OPT=EXPANSION
 OPT=GH1_REDUX
 OPT=DX_DEBUG
 OPT=ENCORE_DEBUG
@@ -93,15 +93,15 @@ INT_SPLASH1_TIME=8
 
 
 
-*x:DRUM_DX
-FILE=cdrom0:\DRUMDX.ELF
+*x:EXPANSION
+FILE=cdrom0:\GHEXTRA.ELF
 FILETYPE=EXECUTABLE
 FLASH=300
 TYPE=GAME
 
-*0:DRUM_DX
-LONGTITLE=Drum Hero II Deluxe
-SHORTTITLE=Drum Deluxe
+*0:EXPANSION
+LONGTITLE=Deluxe: Expansion
+SHORTTITLE=Expansion
 PAD_L2=First fret/Kick
 PAD_L1=Second fret/Snare
 PAD_R1=Third fret/Hi-hat
@@ -109,9 +109,9 @@ PAD_R2=Fourth fret/Tom
 PAD_CROSS=Fifth fret/Cymbal
 PAD_LSTICK=Whammy
 PAD_SELECT=Activate Star Power
-INT_SPLASH1=This flavor of Deluxe features only the 30 songs that have drum charts, tiered out according to drum difficulty rather than guitar difficulty.<p>Guitar and bass are still available, of course. This just makes finding the drum songs more convenient.
+INT_SPLASH1=This flavor of Deluxe is a demonstration of many of DX's new gameplay features with plenty of exclusive songs. All songs and characters are unlocked from the start, all songs have drum charts, some break the strum limit, and many have fun, noteworthy bass parts to play in singleplayer (or co-op, of course).
 INT_SPLASH1_TYPE=TEXT
-INT_SPLASH1_TIME=12
+INT_SPLASH1_TIME=15
 
 
 
