@@ -14,7 +14,10 @@
 (loading_tip_gh2_11 "Visit Practice Mode from the Training menu to really nail those tough sections.")
 
 ; Comedy tips
-(comedy_tip_gh2_1 "Life is hard for musicians, but for drummers it's nearly impossible.")
+(comedy_tip_gh2_1
+   {if_else $egg5
+      "[Open box before eating pizza.]"
+      "Life is hard for musicians, but for drummers it's nearly impossible."})
 (comedy_tip_gh2_2
    {if_else $egg5
       "If you see Deluxe for sale, it's not us. But you should join MiloHax and tell us anyway so we can laugh about it."
