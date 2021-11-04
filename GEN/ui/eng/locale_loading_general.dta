@@ -59,3 +59,7 @@
 (multi_coop_tip7 "We aren't responsible if you end up hating each other.")
 (multi_coop_tip8 "Shouting \qSTAR POWER!\q is as good a method as any.")
 (multi_coop_tip9 "When someone calls a \qBand Meeting\q it's usually not a good thing.")
+
+; New song tips
+(loading_tip_greengrass "If you've got what it takes, FC this song (with Focus Mode off!) and send a video in MiloHax. Conquer the strum limit. Don't let this port be in vain :marfpeek:")
+(loading_tip_speedtest "\qwhy speed test\q\n - ExileLord, 2021")
