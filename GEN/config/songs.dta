@@ -3563,6 +3563,35 @@
    (validate_ignore TRUE))
 
 ; Expansion exclusive songs
+(alloveryou
+   (name "All Over You")
+   (artist "Live")
+   (caption performed_by)
+   (song
+      (name songs/alloveryou/alloveryou)
+      (tracks
+         ((guitar (2))
+          (bass (3))
+          (drum (4 5))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/alloveryou/alloveryou.mid))
+   (song_vs
+      (name songs/alloveryou/alloveryou)
+      (tracks
+         ((guitar (2))
+          (bass (3))))
+      (pans (-1.0 1.0 0.0 0.0 -1.0 1.0))
+      (vols (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores (-1 -1 1 -1 -1 -1))
+      (midi_file songs/alloveryou/alloveryou.mid))
+   (anim_tempo kTempoMedium)
+   (preview 19800 68490)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue fest)))
 (chopsuey
    (name "Chop Suey!")
    (artist "System of a Down")
@@ -3673,7 +3702,7 @@
       (cores (-1 -1 1 -1 -1 -1))
       (midi_file songs/greengrass/greengrass.mid))
    (anim_tempo kTempoMedium)
-   (preview 24900 59100)
+   (preview 100650 142570)
    (quickplay
       (character_outfit rockabill1)
       (guitar lespaul)

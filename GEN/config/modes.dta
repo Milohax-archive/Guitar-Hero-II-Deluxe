@@ -4,7 +4,7 @@
    (separate_parts TRUE)
    (num_players 1)
    (competitive FALSE)
-   (force_autoplay FALSE) ; How we turned on autoplay back in my day
+   (force_autoplay TRUE) ; How we turned on autoplay back in my day
    (blown_streak_feedback TRUE) ; The fretboard "stumbling" on lost combo
    (score_config default_config)
    (song_block song) ; Which song data in songs.dta to use for that mode
