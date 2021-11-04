@@ -143,7 +143,7 @@
             ({campaign num_guitar_awards}
                unlock_guitar_screen)
             (TRUE complete_screen)}
-         highscore_screen}}}
+             {if_else $disable_save complete_screen highscore_screen}}}}
 #define ADJS
 (((adj_c_1 adj_c_2 adj_c_3 adj_c_4 adj_c_5 adj_c_6 adj_c_7 adj_c_8 adj_c_9)
       (adj_b_1 adj_b_2 adj_b_3 adj_b_4 adj_b_5 adj_b_6 adj_b_7 adj_b_8 adj_b_9 adj_b_10)
