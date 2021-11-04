@@ -28,41 +28,45 @@
 #ifndef _ONYX {set $first_screen bootup_load} #endif
 #ifdef _ONYX {set $first_screen main_screen} #endif
 
-{ui my_init}
+{ui my_init} ;Set various defaults on startup, including elf specific bootups
 {do
    ($cfg)
    {if
       {option_str budget_config $cfg}
       {track_budget setup $cfg}
       {set $first_screen track_budget}}}
-{set $speedmod 1.0}
-{set $trackspd 1.0}
-{set $interval_p0 50}
+{set $speedmod 1.0}             ;set up default value for song speed in gameplay.
+{set $trackspd 1.0}             ;set up default value for note speed in gameplay.
+{set $interval_p0 50}           ;set up default values for streak popups in gameplay.
 {set $interval_p1 50}
 {set $interval_p2 50}
-{set $rbdrum FALSE}
-{set $nodrum TRUE}
+{set $rbdrum FALSE}             ;make sure pademu drum input mapping is defaulted off.
+
 #ifdef _SHIP
-		 {set $game80s FALSE}
+		 {set $game80s FALSE}   ;ensure gh2 elfs never boot in 80s mode
 #endif
 #ifdef _ENCO
-		 {set $game80s TRUE}
-#endif
-#ifdef GH1RX
-		 {set $egg2 TRUE}
-		 {set $gamegh1 GH1}
+		 {set $game80s TRUE}    ;ensure 80s elfs always boot in 80s mode
 #endif
 #ifdef 8DBUG
-		 {set $game80s TRUE}
+		 {set $game80s TRUE}    ;ensure 80s elfs always boot in 80s mode 
+#endif
+#ifdef GH1RX
+		 {set $egg2 TRUE}       ;egg2 hooks to gh1 redux ui for the main menu specifically
+		 {set $gamegh1 GH1}     ;gamegh1 also hooks to gh1 redux ui
 #endif
 #ifdef _ONYX
-		 {set $game80s FALSE}
-		 {set $nofail TRUE}
-		 {set $focusmode TRUE}
+		 {set $game80s FALSE}   ;ensure custom edition always boot in gh2 mode 
+		 {set $nofail TRUE}     ;custom edition no fail on by default
+#endif
+#ifndef _DRUM
+#ifdef _ONYX
+		 {set $focusmode TRUE}  ;make sure custom edition, but not the packed in...
+#endif                          ;..expansion disc has focus mode enabled by default
 #endif
 #ifndef _ONYX
-		 {set $songtitle FALSE}
-#else
-		 {set $songtitle TRUE}
+		 {set $songtitle FALSE} ;everything that is not custom edition should not..
+#else                           ;...have song title modifier enabled by default...
+		 {set $songtitle TRUE}  ;...only custom edition defaults it on.
 #endif
-{ui goto_screen $first_screen}
+{ui goto_screen $first_screen}  ;in mega, the first screen is the select theme.
