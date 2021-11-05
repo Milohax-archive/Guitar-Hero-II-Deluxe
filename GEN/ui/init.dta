@@ -62,7 +62,7 @@
 ; menu and the latter for everything else.
 #ifdef GH1RX
  {set $egg2 TRUE}
- {set $gamegh1 TRYE}
+ {set $gamegh1 TRUE}
 #endif
 
 ; Customs Edition always boots in GH2 mode and has $nofail on by default.
