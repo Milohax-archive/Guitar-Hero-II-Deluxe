@@ -1,32 +1,24 @@
-#define TRACK_END_FRAME
-(1920)
-{new
-   TrackPanel
-   track_panel
-   (file 
-    {switch
-     {game get_track_sym 0}
-     (bass '../track/track.milo')
-     (drum '../track/track_drum.milo')
-     (rhythm '../track/track.milo')
-     (guitar '../track/track.milo')})
+#define TRACK_END_FRAME (1920)
+{new TrackPanel track_panel
+   (file
+      {switch {game get_track_sym 0}
+         (bass '../track/track.milo')
+         (drum '../track/track_drum.milo')
+         (rhythm '../track/track.milo')
+         (guitar '../track/track.milo')})
    (set_track_out
       {$this set_frame TRACK_END_FRAME})
    (set_track_in
       {$this set_frame 0})
    (animate_track
       ($start $end $period $units)
-      {$this
-         animate
+      {$this animate
          (units $units)
          (range $start $end)
          (period $period)})
    (play_track_sfx
       ($sfx)
-      {if
-         {!=
-            {gamecfg get mode}
-            attract}
+      {if {!= {gamecfg get mode} attract}
          {play_game_sfx $sfx}})
    (animate_track_out
       {$this play_track_sfx TRACK_EXTEND_SFX}
@@ -40,8 +32,7 @@
       {$this set_track_out})
    (intro_start_msg
       {$this reset}
-      {$this
-         set_showing
+      {$this set_showing
          {&&
             {gamecfg get show_track}
             {&&
@@ -51,8 +42,7 @@
    (intro_skip
       {$this reset}
       {$this sync_to_time}
-      {$this
-         set_showing
+      {$this set_showing
          {&&
             {gamecfg get show_track}
             {&&
@@ -61,9 +51,8 @@
       {$this set_track_out})
    (enter
       {game add_sink $this blow_streak}
-	  {$this set_smasher_glowing 0 TRUE})
-   (exit
-      {game remove_sink $this})
+      {$this set_smasher_glowing 0 TRUE})
+   (exit {game remove_sink $this})
    (do_extend_sequence
       {$this animate_track_out}
       {script_task
@@ -104,14 +93,11 @@
       {script_task
          (delay 2)
          (units kTaskSeconds)
-         (script
-            {$this pop_smasher -1})}
+         (script {$this pop_smasher -1})}
       {script_task
          (delay 2.5)
          (units kTaskSeconds)
          (script
-            {game
-               foreach_player_matcher
-               $m
+            {game foreach_player_matcher $m
                {$m refresh_track_buttons}})})}
 {new TrackMaskPanel track_mask}
