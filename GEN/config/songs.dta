@@ -90,7 +90,8 @@
       (name songs/billiondollar/billiondollar)
       (tracks
          ((guitar (2 3))
-          (bass 4)))
+          (bass 4)
+          (fake 0)))
       (pans (-1.0 1.0 -1.0 1.0 0.0))
       (vols (-1.5 -1.5 -2.0 -2.0 -0.5))
       (cores (-1 -1 1 1 -1))
@@ -99,8 +100,7 @@
       (name songs/billiondollar/billiondollar)
       (tracks
          ((guitar (2 3))
-          (bass 4)
-          (fake 0)))
+          (bass 4)))
       (pans (-1.0 1.0 -1.0 1.0 0.0))
       (vols (-1.5 -1.5 -2.0 -2.0 -0.5))
       (cores (-1 -1 1 1 -1))
@@ -118,7 +118,8 @@
       (name songs/cantyouhearme/cantyouhearme)
       (tracks
          ((guitar (2 3))
-          (rhythm (4 5))))
+          (rhythm (4 5))
+		  (fake 0)))
       (pans (-1.0 1.0 -1.0 1.0 -1.0 1.0))
       (vols (-2.0 -2.0 -2.0 -2.0 -2.0 -2.0))
       (cores (-1 -1 1 1 -1 -1))
@@ -385,8 +386,7 @@
       (name songs/girlfriend/girlfriend_coop)
       (tracks
          ((guitar 2)
-          (rhythm 3)
-          (fake 0)))
+          (rhythm 3)))
       (pans (-1.0 1.0 0.0 0.0))
       (vols (-3.0 -3.0 -2.5 -2.5))
       (cores (-1 -1 1 -1))
@@ -779,8 +779,7 @@
       (name songs/misirlou/misirlou)
       (tracks
          ((guitar 2)
-          (bass 3)
-          (fake 0)))
+          (bass 3)))
       (pans (-1.0 1.0 0.0 0.0))
       (vols (-3.0 -3.0 -2.0 0.0))
       (cores (-1 -1 1 -1))
@@ -3262,7 +3261,8 @@
       (name songs/behindthemask/behindthemask)
       (tracks
          ((guitar (2 3))
-          (bass 4)))
+          (bass 4)
+          (fake 0)))
       (pans (-1.0 1.0 -1.0 1.0 0.0))
       (vols (0.0 0.0 0.0 0.0 0.0))
       (cores (-1 -1 1 1 1))
@@ -3271,8 +3271,7 @@
       (name songs/behindthemask/behindthemask)
       (tracks
          ((guitar (2 3))
-          (bass 4)
-          (fake 0)))
+          (bass 4)))
       (pans (-1.0 1.0 -1.0 1.0 0.0))
       (vols (0.0 0.0 0.0 0.0 0.0))
       (cores (-1 -1 1 1 1))
