@@ -170,12 +170,20 @@
 ; Expansion disc
 #ifdef _DRUM
 (order
-   (battle2 alloveryou greengrass tomsawyer crawl yyz electriceye iran maps debaser chopsuey wegotthebeat policetruck thunderhorse iwannarock ladylightning lesstalkmorerokk warpigs possum collide)
+   (battle johnthefisherman alloveryou greengrass tomsawyer crawl yyz electriceye iran maps debaser chopsuey wegotthebeat policetruck thunderhorse iwannarock ladylightning lesstalkmorerokk warpigs possum collide)
+   (battle2)
+   (small1)
    (small3)
+   (small2)
    (small4)
+   (big)
+   (theatre)
    (theatre2)
+   (fest)
    (fest2)
-   (arena2))
+   (arena)
+   (arena2)
+   (stone))
 (required_songs
    (kDifficultyEasy 5 5)
    (kDifficultyMedium 5 5)
@@ -185,14 +193,14 @@
    (starting 250)
    (star_awards
       (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 100 150 300)
-      (kDifficultyHard 150 200 350)
-      (kDifficultyExpert 200 250 500))
+      (kDifficultyMedium 0 0 0)
+      (kDifficultyHard 0 0 0)
+      (kDifficultyExpert 0 0 0))
    (status_awards
-      (kDifficultyEasy 0 0 0 0 0 0)
-      (kDifficultyMedium 500 600 700 800 900 1000 0)
-      (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
-      (kDifficultyExpert 1700 1900 2700 3250 3700 500000 0)))
+      (kDifficultyEasy 0 0)
+      (kDifficultyMedium 0 0)
+      (kDifficultyHard 0 0)
+      (kDifficultyExpert 0 0)))
 #endif
 
 ; GH1 Redux campaign
