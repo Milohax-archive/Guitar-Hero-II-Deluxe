@@ -8,8 +8,8 @@
       #ifndef 2DBUG
       #ifndef 8DBUG
       (slots
-         {if_else $rbdrum kPad_R1 kPad_R1} ; use r1 for kick (green)
-         {if_else $rbdrum 0 0}
+         {if $rbdrum kPad_R1} ; use r1 for kick (green)
+         {if $rbdrum 0}
          {if_else $rbdrum kPad_L1 kPad_L2} ; use L1 for kick (green)
          {if_else $rbdrum 0 0}
          {if_else $rbdrum kPad_Circle kPad_L1} ; use Circle for snare (red)
@@ -30,8 +30,8 @@
       #ifndef 2DBUG
       #ifndef 8DBUG
       (slots
-         {if_else $rbdrum kPad_R1 kPad_R1} ; use r1 for kick (green)
-         {if_else $rbdrum 0 0}
+         {if $rbdrum kPad_R1} ; use r1 for kick (green)
+         {if $rbdrum 0}
          {if_else $rbdrum kPad_L1 kPad_L2} ; use L1 for kick (green)
          {if_else $rbdrum 0 0}
          {if_else $rbdrum kPad_Circle kPad_L1} ; use Circle for snare (red)
@@ -52,8 +52,10 @@
       #ifndef 2DBUG
       #ifndef 8DBUG
       (slots
-         {if_else $rbdrum kPad_R1 kPad_R1} ; use r1 for kick (green)
-         {if_else $rbdrum 4 4}
+         {if $rbdrum kPad_R1} ; use r1 for kick (green)
+         {if $rbdrum 4}
+         {if_else $rbdrum kPad_X kPad_X} ; use X for crash (orange)
+         {if_else $rbdrum 0 0}
          {if_else $rbdrum kPad_Square kPad_R2} ; use Square for snare (red)
          {if_else $rbdrum 1 1}
          {if_else $rbdrum kPad_Tri kPad_R1} ; use Tri for ride? (yellow)
