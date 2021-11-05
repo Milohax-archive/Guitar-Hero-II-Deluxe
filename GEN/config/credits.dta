@@ -53,7 +53,7 @@
    "GenericMadScientist")
 ("DTA Scripting"
    "LocalH")
-("Milo Hacking + Graphics"
+("Milo Hacking + Graphics + DTA Scripting"
    "jnack")
 ("MIDI Authoring"
    "mariteaux")
@@ -153,48 +153,12 @@
 ()
 ()
 ()
-("JNACK SEZ")
+("JNACK SAYS")
 ()
 (""
-   "Thank you to DWITT and Ryan Lesser for working on the"
+   "Okay but just wait for Rock Band 2 Deluxe"
    "")
-(""
-   "original games and for continuing to make inspiring art that"
-   "")
-(""
-   "still feels at home in Guitar Hero II. Refreshing the menus"
-   "")
-(""
-   "with true to style artwork was a love letter to the impact"
-   "")
-(""
-   "this game still leaves on us today."
-   "")
-()
-(""
-   "Thank you to Local H for his unrivaled knowledge and"
-   "")
-(""
-   "dedication to this project. I joined MiloHax a few months"
-   "")
-(""
-   "before GH2DX happened from one of his YouTube videos. Working"
-   "")
-(""
-   "with H my knowledge grew from only GHEx, to moving ui and"
-   "")
-(""
-   "solving bugs in menu flow. H was always there to provide"
-   "")
-(""
-   "insight and spread his knowledge anywhere he could. It was"
-   "")
-(""
-   "incredible working with him to bring this disc to where"
-   "")
-(""
-   "it is now. Thanks H."
-   "")
+
 ()
 ()
 ()
