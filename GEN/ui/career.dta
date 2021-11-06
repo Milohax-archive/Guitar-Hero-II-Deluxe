@@ -1620,7 +1620,7 @@
    career_selpart_panel
    (file
 	{if_else
-      $egg5
+      $game80s
       practice_selpart_80s.milo
       practice_selpart.milo})
    (focus part0.btn)
