@@ -539,6 +539,9 @@
          (practice_snare practice_kick practice_hat)
          {$sfx add_fader music_fader}})
    (intro_skip
+      {set $do_streak TRUE}
+      {streak_overlay_panel streak_lastframe} ;should force streak overlay to appear in practice even after a run
+      {streak_overlay_panel show_overlay TRUE}
       {mtv_overlay_panel show_overlay TRUE}
       {script_task
          (delay 3)
@@ -604,6 +607,9 @@
          (practice_snare practice_kick practice_hat)
          {$sfx add_fader music_fader}})
    (intro_skip
+      {set $do_streak TRUE}
+      {streak_overlay_panel streak_lastframe} ;should force streak overlay to appear in practice even after a run
+      {streak_overlay_panel show_overlay TRUE}
       {mtv_overlay_panel show_overlay TRUE}
       {script_task
          (delay 3)
