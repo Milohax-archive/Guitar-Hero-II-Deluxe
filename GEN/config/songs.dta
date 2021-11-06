@@ -56,7 +56,7 @@
       (guitar flying_v)
       (venue fest)))
 (beastandtheharlot
-   (name "Beast And the Harlot")
+   (name "Beast and the Harlot")
    (artist "Avenged Sevenfold")
    (song
       (name songs/beastandtheharlot/beastandtheharlot)
@@ -262,10 +262,8 @@
       (venue fest))
    (band metal_bass metal_drummer female_singer))
 (dead
-   (name
-    "Dead!")
-   (artist
-    "My Chemical Romance")
+   (name "Dead!")
+   (artist "My Chemical Romance")
    (caption performed_by)
    (song
       (name songs/dead/dead)
@@ -605,7 +603,7 @@
       (guitar sg)
       (venue small2)))
 (laidtorest
-   (name "Laid To Rest")
+   (name "Laid to Rest")
    (artist "Lamb of God")
    (song
       (name songs/laidtorest/laidtorest)
@@ -1028,7 +1026,7 @@
       (guitar sg)
       (venue small2)))
 (shoutatthedevil
-   (name "Shout At The Devil")
+   (name "Shout at the Devil")
    (artist "Mötley Crüe")
    (song
       (name songs/shoutatthedevil/shoutatthedevil)
@@ -1056,7 +1054,7 @@
       (guitar flying_v)
       (venue arena)))
 (stop
-   (name "Stop")
+   (name "Stop!")
    (artist "Jane's Addiction")
    (caption performed_by)
    (song
@@ -3232,6 +3230,7 @@
 (allofthis
    (name "All of This")
    (artist "Shaimus")
+   (caption performed_by)
    (song
       (name songs/allofthis/allofthis)
       (tracks
