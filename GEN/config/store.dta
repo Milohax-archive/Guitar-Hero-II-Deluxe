@@ -138,6 +138,9 @@
 
    ; GH1 Redux store only
    #ifdef GH1RX (trippolette (price 500000)) #endif
+
+   ; Expansion "store" only
+   #ifdef _DRUM (alloveryou (price 550)) #endif
 )
 (character
    (classic (price 5000))

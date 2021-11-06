@@ -170,10 +170,10 @@
 ; Expansion disc
 #ifdef _DRUM
 (order
-   (battle johnthefisherman alloveryou greengrass tomsawyer crawl yyz electriceye iran maps debaser chopsuey wegotthebeat policetruck thunderhorse iwannarock ladylightning lesstalkmorerokk warpigs possum collide)
-   (battle2)
-   (small1)
-   (small3)
+   (battle iran maps possum wegotthebeat collide)
+   (battle2 crawl chopsuey debaser lesstalkmorerokk warpigs)
+   (small1 ladylightning johnthefisherman policetruck iwannarock tomsawyer)
+   (small3 thunderhorse electriceye imtheone yyz greengrass)
    (small2)
    (small4)
    (big)

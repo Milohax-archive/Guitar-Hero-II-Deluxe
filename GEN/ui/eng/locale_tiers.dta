@@ -68,6 +68,7 @@
 #endif
 
 ; Customs Edition (which are all empty :steve:)
+#ifndef _DRUM
 #ifdef _ONYX
 (song_header_battle " ")
 (song_header_battle2 " ")
@@ -84,6 +85,26 @@
 (song_header_arena2 " ")
 (song_header_stone " ")
 (song_header_store "Custom Songs")
+#endif
+#endif
+
+; Expansion
+#ifdef _DRUM
+(song_header_battle "Hot Licks (no problem)")
+(song_header_battle2 "Sizzling Songs (ok, I can do this)")
+(song_header_small1 "Blistering Tracks (practice these)")
+(song_header_small3 "Face Melting Riffs (these kick my ass)")
+(song_header_small2 " ")
+(song_header_small4 " ")
+(song_header_big " ")
+(song_header_theatre " ")
+(song_header_theatre2 " ")
+(song_header_fest " ")
+(song_header_fest2 " ")
+(song_header_arena " ")
+(song_header_arena2 " ")
+(song_header_stone " ")
+(song_header_store "Wassat? RB4? :steve:")
 #endif
 
 ; GH1 Redux
