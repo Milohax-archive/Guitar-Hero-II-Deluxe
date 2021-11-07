@@ -170,166 +170,28 @@
       {tut_box_ur.mesh set_local_pos {- {/ $width 2} {/ CORNER_WIDTH 2}} 0 {- {/ $height 2} {/ CORNER_WIDTH 2}}}
       {tut_box_rp.mesh set_local_pos {- {/ $width 2} {/ CORNER_WIDTH 2}} 0 0}
       {tut_box_rp.mesh set_local_scale 1 1 {/ {- $height {'*' 2 CORNER_WIDTH}} PIECE_WIDTH}}
-      {tut_box_bl.mesh set_local_pos {- {/ CORNER_WIDTH 2}
-            {/ $width 2}}
-         0
-         {-
-            {/ CORNER_WIDTH 2}
-            {/ $height 2}}}
-      {tut_box_lp.mesh
-         set_local_pos
-         {-
-            {/ CORNER_WIDTH 2}
-            {/ $width 2}}
-         0
-         0}
-      {tut_box_lp.mesh
-         set_local_scale
-         1
-         1
-         {/
-            {-
-               $height
-               {'*' 2 CORNER_WIDTH}}
-            PIECE_WIDTH}}
-      {tut_box_br.mesh
-         set_local_pos
-         {-
-            {/ $width 2}
-            {/ CORNER_WIDTH 2}}
-         0
-         {-
-            {/ CORNER_WIDTH 2}
-            {/ $height 2}}}
-      {tut_box_mp.mesh
-         set_local_scale
-         {/
-            {-
-               $width
-               {'*' 2 CORNER_WIDTH}}
-            FILLER_WIDTH}
-         1
-         {/ $height FILLER_WIDTH}}
-      {tut_box_left.view
-         set_local_pos
-         {-
-            {/ $width 2}
-            308}
-         0
-         {-
-            227
-            {/ $height 2}}})
+      {tut_box_bl.mesh set_local_pos {- {/ CORNER_WIDTH 2} {/ $width 2}} 0 {- {/ CORNER_WIDTH 2} {/ $height 2}}}
+      {tut_box_lp.mesh set_local_pos {- {/ CORNER_WIDTH 2} {/ $width 2}} 0 0}
+      {tut_box_lp.mesh set_local_scale 1 1 {/ {- $height {'*' 2 CORNER_WIDTH}} PIECE_WIDTH}}
+      {tut_box_br.mesh set_local_pos {- {/ $width 2} {/ CORNER_WIDTH 2}} 0 {- {/ CORNER_WIDTH 2} {/ $height 2}}}
+      {tut_box_mp.mesh set_local_scale {/ {- $width {'*' 2 CORNER_WIDTH}} FILLER_WIDTH} 1 {/ $height FILLER_WIDTH}}
+      {tut_box_left.view set_local_pos {- {/ $width 2} 308} 0 {- 227 {/ $height 2}}})
    (size_right_box
       ($width $height $score)
-      {if_else
-         $score
+      {if_else $score
          {set $height_shift HEIGHT_SHIFT}
          {set $height_shift 0}}
-      {tut_box_ul1.mesh
-         set_local_pos
-         {-
-            {/ CORNER_WIDTH 2}
-            {/ $width 2}}
-         0
-         {-
-            {/
-               {'+' $height $height_shift}
-               2}
-            {/ CORNER_WIDTH 2}}}
-      {tut_box_ur1.mesh
-         set_local_pos
-         {-
-            {/ $width 2}
-            {/ CORNER_WIDTH 2}}
-         0
-         {-
-            {/
-               {'+' $height $height_shift}
-               2}
-            {/ CORNER_WIDTH 2}}}
-      {tut_box_rp1.mesh
-         set_local_pos
-         {-
-            {/ $width 2}
-            {/ CORNER_WIDTH 2}}
-         0
-         0}
-      {tut_box_rp1.mesh
-         set_local_scale
-         1
-         1
-         {/
-            {-
-               {'+' $height $height_shift}
-               {'*' 2 CORNER_WIDTH}}
-            PIECE_WIDTH}}
-      {tut_box_bl1.mesh
-         set_local_pos
-         {-
-            {/ CORNER_WIDTH 2}
-            {/ $width 2}}
-         0
-         {-
-            {/ CORNER_WIDTH 2}
-            {/
-               {'+' $height $height_shift}
-               2}}}
-      {tut_box_lp1.mesh
-         set_local_pos
-         {-
-            {/ CORNER_WIDTH 2}
-            {/ $width 2}}
-         0
-         0}
-      {tut_box_lp1.mesh
-         set_local_scale
-         1
-         1
-         {/
-            {-
-               {'+' $height $height_shift}
-               {'*' 2 CORNER_WIDTH}}
-            PIECE_WIDTH}}
-      {tut_box_br1.mesh
-         set_local_pos
-         {-
-            {/ $width 2}
-            {/ CORNER_WIDTH 2}}
-         0
-         {-
-            {/ CORNER_WIDTH 2}
-            {/
-               {'+' $height $height_shift}
-               2}}}
-      {tut_box_mp1.mesh
-         set_local_scale
-         {/
-            {-
-               $width
-               {'*' 2 CORNER_WIDTH}}
-            FILLER_WIDTH}
-         1
-         {/
-            {'+' $height $height_shift}
-            FILLER_WIDTH}}
-      {tut_box_right.view
-         set_local_pos
-         {-
-            307
-            {/ $width 2}}
-         0
-         {-
-            226
-            {/
-               {'+' $height $height_shift}
-               2}}}
-      {tut_score.lbl
-         set_local_pos
-         {-
-            307
-            {/ $width 2}}
-         0
-         {- 220 $height}})
+      {tut_box_ul1.mesh set_local_pos {- {/ CORNER_WIDTH 2} {/ $width 2}} 0 {- {/ {'+' $height $height_shift} 2} {/ CORNER_WIDTH 2}}}
+      {tut_box_ur1.mesh set_local_pos {- {/ $width 2} {/ CORNER_WIDTH 2}} 0 {- {/ {'+' $height $height_shift} 2} {/ CORNER_WIDTH 2}}}
+      {tut_box_rp1.mesh set_local_pos {- {/ $width 2} {/ CORNER_WIDTH 2}} 0 0}
+      {tut_box_rp1.mesh set_local_scale 1 1 {/ {- {'+' $height $height_shift} {'*' 2 CORNER_WIDTH}} PIECE_WIDTH}}
+      {tut_box_bl1.mesh set_local_pos {- {/ CORNER_WIDTH 2} {/ $width 2}} 0 {- {/ CORNER_WIDTH 2} {/ {'+' $height $height_shift} 2}}}
+      {tut_box_lp1.mesh set_local_pos {- {/ CORNER_WIDTH 2} {/ $width 2}} 0 0}
+      {tut_box_lp1.mesh set_local_scale 1 1 {/ {- {'+' $height $height_shift} {'*' 2 CORNER_WIDTH}} PIECE_WIDTH}}
+      {tut_box_br1.mesh set_local_pos {- {/ $width 2} {/ CORNER_WIDTH 2}} 0 {- {/ CORNER_WIDTH 2} {/ {'+' $height $height_shift} 2}}}
+      {tut_box_mp1.mesh set_local_scale {/ {- $width {'*' 2 CORNER_WIDTH}} FILLER_WIDTH} 1 {/ {'+' $height $height_shift} FILLER_WIDTH}}
+      {tut_box_right.view set_local_pos {- 307 {/ $width 2}} 0 {- 226 {/ {'+' $height $height_shift} 2}}}
+      {tut_score.lbl set_local_pos {- 307 {/ $width 2}} 0 {- 220 $height}})
    (set_beatmatch_muting
       ($mute)
       {beatmatch
@@ -337,29 +199,23 @@
          {if_else $mute kDbSilence 0}}
       {options set_mute_fx $mute})
    (state intro)}
-{new
-   UIPanel
-   tutorials_panel
-   (file 
-   {if_else $gamegh1
-   tutorials_gh1.milo
-   tutorials.milo})
+{new UIPanel tutorials_panel
+   (file
+      {if_else $gamegh1
+         tutorials_gh1.milo
+         tutorials.milo})
    (enter
       {gamecfg set mode tutorial}
       {$this set_focus tut_1.btn}
       {do
          ($done
             {campaign tutorials_done})
-         {tut_2.btn
-            set_state
-            {if_else
-               {>= $done 1}
+         {tut_2.btn set_state
+            {if_else {>= $done 1}
                kNormal
                kDisabled}}
-         {tut_3.btn
-            set_state
-            {if_else
-               {>= $done 2}
+         {tut_3.btn set_state
+            {if_else {>= $done 2}
                kNormal
                kDisabled}}})
    (FOCUS_MSG
@@ -375,28 +231,16 @@
       {switch
          $component
          (tut_1.btn
-            {set
-               [start_state]
-               intro}
-            {set
-               [tut_song]
-               tutorial102}
+            {set [start_state] intro}
+            {set [tut_song] tutorial102}
             {campaign do_tutorial 1})
          (tut_2.btn
-            {set
-               [start_state]
-               star_intro}
-            {set
-               [tut_song]
-               tutorial202}
+            {set [start_state] star_intro}
+            {set [tut_song] tutorial202}
             {campaign do_tutorial 2})
          (tut_3.btn
-            {set
-               [start_state]
-               freestyle}
-            {set
-               [tut_song]
-               tutorial205}
+            {set [start_state] freestyle}
+            {set [tut_song] tutorial205}
             {campaign do_tutorial 3})}
       {ui goto_screen tut_loading_screen}
       kDataUnhandled)
@@ -505,7 +349,6 @@
    (game_paused FALSE)
    (track_paused FALSE)
    (paused FALSE))
-
 {new GHScreen tut_pause_screen
    (panels tut_pause_panel)
    (focus tut_pause_panel)
