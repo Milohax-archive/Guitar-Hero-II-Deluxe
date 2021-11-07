@@ -1,0 +1,348 @@
+           ____       _ _               _   _                  ___ ___
+          / ___|_   _(_) |_ __ _ _ __  | | | | ___ _ __ ___   |_ _|_ _|
+         | |  _| | | | | __/ _` | '__| | |_| |/ _ \ '__/ _ \   | | | |
+         | |_| | |_| | | || (_| | |    |  _  |  __/ | | (_) |  | | | |
+          \____|\__,_|_|\__\__,_|_|    |_| |_|\___|_|  \___/  |___|___|
+                        ____  _____ _    _   ___  _______
+                       |  _ \| ____| |  | | | \ \/ / ____|
+                       | | | |  _| | |  | | | |\  /|  _|
+                       | |_| | |___| |__| |_| |/  \| |___
+                       |____/|_____|_____\___//_/\_\_____|
+
+                                 2.0 Changelog
+===============================================================================
+
+BUGFIXES
+========
+- Maximum amount of setlist entries bumped again, to roughly 200 entries
+	- This does not mean 200 songs will necessarily fit on a disc! 4GB is
+	still the maximum ARK size the game can recognize
+	- If you manage to fit that many songs on a disc, however, they'll all
+	appear on setlists now
+- Lead/rhythm songs have been given a full remix to sound their absolute best
+	- Rhythm songs now feature a unique singleplayer rhythm chart made from
+	the unused (in normal singleplayer) parts of the lead and rhythm charts
+	- Try "Last Child" if you're looking for a good one to get an idea of
+	what I'm talking about
+- The multiplier symbol in the score display now appears on emulator
+- Camera will no longer switch in Focus Mode
+	- Fixes the DOF effects randomly getting applied to the on-screen text
+- Original-length tips have been restored
+- The game's innards are now much, much cleaner
+	- All unused scripts (over half of them) stripped out
+	- Smaller scripts are consolidated into where they were merged in
+- Bass and rhythm guitar will now use the animations set in those tracks
+instead of using the guitar/lead guitar's animations
+- L1+L2+Select on the controller in debug no longer crashes the game
+
+ADDED FEATURES
+==============
+- Drums:
+	- Drums are selectable as an instrument on 21 songs, all of which are
+	available in the Deluxe: Expansion executable
+		- Some of these are newly charted and mixed GH2 songs, while others
+		are ports of Rock Band favorites
+	- No Star Power for drums (as there are no fills like in Rock Band)
+		- As such, no Star Power meter when playing drums
+	- You'll need some way of mapping your drumkit to a DualShock's inputs,
+	using PCSX2 or a custom pademu like only jnack currently has
+	- Can be charted using the normal guitar pitches on the PART DRUM track
+	- Our traditional channel mapping is stereo band on 0 and 1, mono guitar
+	on 2, mono bass on 3, and stereo drums on 4 and 5
+	- Drums are disabled in debug
+		- Even though the retail executable handles them just fine, even on
+		hardware, debug refuses to work with us on them /shrug
+- Separate campaigns:
+	- GH2, 80's, Mega, Expansion
+	- 80's features all 80's venues and characters
+	- Mega includes both GH2 and 80's songs for a total of 14 tiers
+	- Expansion is a Free Play-only set of 21 songs picked for their drum
+	charts, strum limit-testing guitar charts, and fun bass parts
+		- Some songs are upgraded GH2 and 80's songs, others have been ported
+		from Rock Band
+	- These are selectable prior to game boot using a customized loader
+		- This loader also enables debug GH2 and GH:80's to be used without
+		having to rebuild the entire disc
+	- All use their own saves, so no worries about corrupt saves here
+		- Expansion does not save, as it's Custom Edition-based and features
+		all songs unlocked at boot
+- Combined note streak display/FC indicator
+	- Text appears orange on FC runs and turns white on combo break
+	- Works in all modes, including shared streak in co-op
+- Newspaper gets real froggy on FC runs
+	- "100% FC" note percentage (as opposed to "100%" on overstrum runs)
+	- Stars turn into pentagrams because you need to be possessed in order to
+	FC anything :marf:
+- Bass, rhythm, and drums in Career
+- Quit to Practice in the Pause menu
+- Manage Gig menu in Free Play
+	- This condenses the old Free Play flow of Difficulty > Character >
+	Guitar > Venue into a single menu where any, all, or none of these can
+	be changed before a song
+	- Character, guitar, and venue will be greyed out when Focus Mode is
+	active
+- Extras menu in Manage Gig menu
+	- Cheat codes are no longer functional (aside from Unlock All and
+	Hyperspeed :tim:), and cheats are now set in the Extras menu
+	- You can't trick the game into using conflicting cheats (say, Horse
+	Head and Flaming Head), they'll unset one another
+- Author names
+	- Appear at the start of each song in the "MTV overlay"
+	- Can be set for any custom by adding a "[shortname]_author" string to
+	the locale files (a locale_authors.dta is provided for convenience)
+	- Onyx will set one from available metadata if using that program
+	- Author names do not appear in debug to prevent a potential crash if
+	a song's author field is missing
+- Streamer-friendly black highway
+	- Enabled in the Extras menu
+	- Replaces the fretboard backing with an off-black color, making keying
+	out the background in Focus Mode using streaming software much easier
+- "Cheater" callouts on the newspaper screen if using autoplay
+- Select to restart Practice, like in Clone Hero
+- Split and sorted locale files
+	- The gigantic locale.dta in ui/eng/ has now been split into numerous
+	locale files to make it easier to change specific strings
+- Additional StrumMap and HandMap events available to charters
+	- HandMaps:
+		- Index, Middle, Ring, Pinky, and matching Index_Hi, Middle_Hi, etc.
+		(forces certain fretting fingers down)
+		- Octave and Octave2 (creates an octave shape on guitar)
+	- StrumMaps:
+		- Open (fingerstyle, but all strings open)
+		- SlapBassOpen (slap technique, but all strings open)
+		- Pick (allows bassists to pick, alongside fingerstyle and slap
+		styles)
+		- PickOpen (as above, but all strings open)
+- New cheats (again, set in Extras Menu):
+	- Roxbury Mode
+	- No Fail
+	- GRYBO (original order) smashers and gems
+
+RESTORED AND PORTED CONTENT
+===========================
+- Pretty much the entirety of 80's is now in Deluxe...
+	- "I Want Candy" restored from the 80's Deluge demo
+	- "Ballroom Blitz" uses the much less unfair Deluge demo chart for Expert
+	- "Bang Your Head (Metal Health)" features the cut solo and additional
+	fixes in animations, lighting, and undercharting
+	- "I Wanna Rock" ported from GH: Smash Hits to take advantage of its drum
+	chart and lack of fadeout
+	- "The Warrior" restored from the original multitracks to fix its fadeout
+	- "Because, It's Midnite" purchasable in the store
+- GH1 Redux:
+	- GH1 menu music, many of the menus, flavor text
+	- All GH1 characters now (mostly) work in GH2
+	- Six GH1 songs have been brought over with bass charts and stems
+	- GH1 Redux WILL NOT WORK on hardware; this demo is emulator-only
+- GH3 main menu and menu music also ported, just because we can
+	- How do you find it? I sure hope you were planning on egg hunting :tim:
+- Remastered HUD to match and improve the 360 HUD
+	- Notes shimmer, smashers have nice, big, detailed holes now
+	- A seventh digit has been added to the score display
+- Drum gems from the GH2 OPM demo are used for drums, including the kick bar
+- Songs that later appeared in Rock Band backported for drum charts
+	- "Collide", "War Pigs", "Possum Kingdom", "Less Talk More Rokk", "Push
+	Push (Lady Lightning)", "I Ran (So Far Away)", "Electric Eye"
+	- These have also received custom mixes and light shows to go with them
+- Section names from all Rock Band titles
+	- Except that one :marf:
+	- Onyx ports from Rock Band games will now show proper sections names on
+	the More Stats screen
+- 80's and international cheats are now functional in Deluxe (yes, even if
+they're cheats set on the Extras menu now)
+	- This should help our Brazilian friends go egg hunting before they steal
+	our GH3 menu from the game files :marf:
+
+NEW CONTENT
+===========
+- Red Star Power
+	- Because red Star Power
+- Easier-to-distinguish HO/PO notes with full white tops
+- Additional smasher colors able to be set when modding track_graphics.dta
+	- Purple, Black, Gold, Silver, Pink
+- Gold notes after all five eggs have been found
+	- This is, of course, the biggest reason to go egg hunting :steve:
+- A "speed metal" version of "Speed Test", accessible in GH:80's
+	- Shoutout to HalfDuck for being a legend and providing stems
+- A brand new bootloader and menu for selecting the various campaigns
+	- For the curious: this menu is based off the Europe-only pack-in PS2
+	demo disc, disc ID PBPX_95205
+	- The loader has been patched to display on NTSC televisions and the
+	normal left-right controls have been inverted to up-down so as to work
+	with your guitars
+		- You'll still need to use Blue to select things, however
+	- Menu video and music have been switched out for a more custom finish
+- Recolored menus just as quickly and lazily done as HMX's for 80's :steve:
+- Redone intro video for 80's to match 2's
+- Each campaign uses its own, custom-colored memory card save and icon
+- "I Want Candy" now plays as menu music in 80's mode
+- New text:
+    - New loading tips (and more than you might see normally, hint hint)
+    - New Career end letters
+	- New easter egg menu text (with hints to find the rest now)
+	- Names for all 80's outfits
+
+TWEAKS
+======
+- The demo loading screen has been reconfigured to display much longer tips
+- Expert is now the default difficulty in the difficulty select menus
+- Free Play defaults:
+	- Axel Steel
+	- Red SG
+	- Warped Tour (which we've determined runs the best overall)
+- Separate Practice audio has been removed and disabled
+	- The Modifiers menu will now appear after you've selected a song, and
+	you can slow the song down by 5% increments using the Song Speed modifier
+		- You can only slow a song to under 100% in practice, not in normal
+		gameplay
+	- This is mostly for space reasons
+- Guitar tweaks:
+	- Scythe is purchasable in the store and usable by anyone
+	- Air Guitar (formerly a cheat) has been turned into an unlock
+	- All lower difficulty unlock guitars (Fish, USA, Coffin, Viking,
+	Eyeball, Snaketapus) are simply store guitars now
+		- The Axe and the Log are still coveted Expert prizes, no worries
+- Controller "quick cheats" in debug have been completely remapped
+	- Some more temperamental functions are now keyboard-only
+	- Some more fun keyboard-only functions can be done on controller too
+- Custom Edition boots straight to the main menu
+- If saving is disabled (say, for Custom Edition), the high score screen
+after runs is skipped
+
+                                 1.0 Changelog
+===============================================================================
+
+BUGFIXES
+========
+- Strum limit patched out; game will now accept strums up to the framerate
+- HOPO quick-restart bug fixed, all HOPOs hittable 100% of the time
+- Too few setlist entries bug officially patched, 75 entries now, from 64
+- Charts improved by later revisions of the game backported
+- Vaguely incorrect song names corrected:
+    - "Can't You Hear Me Knocking"
+    - "Rock and Roll, Hoochie Koo"
+    - "The X-Stream"
+    - "Thunderhorse" (only affected in the Store)
+- "Stongbad" in "Trogdor"'s loading tip restored (yes, it was in vanilla GH2)
+- Store rebalanced to leave you with $0 on buying everything
+
+ADDED FEATURES
+==============
+- Modifiers menu, featuring:
+    - Adjustable hyperspeed ("note speed")
+    - Speedups ("song speed")
+        - Speedups affect not only the speed and pitch of the audio and
+        chart, but also the hit window, which gets tighter at faster speeds
+        - Speed percentage appears on song load and on the newspaper screen
+    - Black background toggle ("focus mode")
+- Note streak popups, at 50, 100, 200, etc.
+- Quickplay redubbed "Free Play", with the following additions:
+    - Part select (guitar/bass or guitar/rhythm)
+        - "Note streak" on the newspaper replaced with "Bass streak" or
+        "Rhythm streak", depending on part played
+    - Instrument select
+        - All basses unlocked from beginning, guitars unlocked through the
+        Career store like normal
+    - Guitarist select
+        - All unlocked characters and outfits selectable
+    - Venue select
+        - All unlocked venues selectable
+- Reordered strikeline and notes to annoy entitled internet people
+- New cheats:
+    - Always visible song title
+    - Neckless mode
+    - Awesomeness Detection
+
+RESTORED AND PORTED CONTENT
+===========================
+- 360 on-disc exclusive tracks ported:
+    - "Possum Kingdom" by Toadies [tier one]
+    - "Salvation" by Rancid [tier one]
+    - "Life Wasted" by Pearl Jam [tier two]
+    - "Billion Dollar Babies" by Alice Cooper [tier three]
+    - "Hush" by Deep Purple [tier four]
+    - "Rock and Roll, Hoochie Koo" by Rick Derringer [tier five]
+    - "Dead!" by My Chemical Romance [tier six]
+    - "The Trooper" by Iron Maiden [tier seven]
+    - "Drink Up" By Ounce of Self [bonus]
+    - "Kicked to the Curb" by Noble Rot [bonus]
+- Setlist reordered to follow the 360 version
+- Demo screens ported to final:
+    - Harmonix startup logo
+    - Loading screen
+    - Pause menu
+- Demo highways ported to final:
+    - Johnny Napalm
+    - Grim
+    - Axel Steel (Remastered)
+    - Judy Nails (Remastered)
+    - Izzy Sparks (Remastered)
+- GH1's leftover guitar skins, many still in the files, made functional:
+    - Ebony Standard Les Paul
+    - Goldtop Standard Les Paul
+    - Ebony Standard SG
+    - Cracked Blue Flying V
+    - Copper Firebird
+    - Psychedelic Firebird
+    - Cherry Double Cutaway Les Paul
+    - Green Lightning Custom Double Cutaway Les Paul
+    - Ebony Moderne
+    - Night Dragon Custom Moderne
+    - Alpine White Corvus
+    - Custom Snakeskin Corvus
+    - Ebony ES-335
+- "guitar_redoctane" (the GH controller guitar) restored and buyable in store
+- "Thunderhorse" and "Trogdor" now have store art
+- The retail demo versions of "Laid to Rest" (uncensored) and "Killing in the
+  Name" (with the alternate singer) are used instead of the final ones
+- "You Really Got Me" and "Arterial Black" menu music from the demos restored
+- Eddie Knox and Judy Nails newspaper portraits from the demos restored
+
+NEW CONTENT
+===========
+- New art from DWITT, one of GH2's original menu artists:
+    - Save screen
+    - Training menu
+    - Modifiers menu
+    - Part select in both Free Play and Practice
+    - Difficulty select in both Free Play and Practice
+    - Section select in Practice
+    - Speed select in Practice
+    - Options menu (Ryan Lesser)
+- New guitar skins:
+    - Ibanez Buckethead Custom Flying V (thanks again, HellsAn631)
+    - The Discount Code Les Paul
+    - Cherry Standard Harmonix Signature SG
+    - Yellow E3 Harmonix Signature SG
+    - Green E3 Harmonix Signature SG
+    - Pink Harmonix Signature SG
+    - Walnut Harmonix Signature SG
+    - Target® Special Harmonix Signature SG
+    - LocalH V3 Custom Harmonix Signature SG
+    - jnack Special Harmonix Signature SG
+- New text:
+    - Rewritten newspaper headlines
+    - New descriptions for all basses
+    - New descriptions for the new guitar skins
+    - Credits with the words of the team, dedications to Maxton, and the
+	extra credits for the 360 songs and "Speed Test"
+    - New loading tips (and more than you might see normally, hint hint)
+    - And other loading tips rewritten to fit on the new loading screen
+    - New Career end letters
+    - "GH2DX Practice" after section finish in Practice
+    - New "Cheater Table" cheat sheet in Band Select
+- "Speed Test" by ExileLord ported and overhauled as a bonus song:
+    - Audio remixed from the original FL Studio project for full stems
+    - Lower difficulties for guitar authored
+    - Bass (all difficulties) authored for co-op play
+    - Stage animations and lighting, of course
+    - A custom caption on song load, just for "Speed Test"
+- Recolored splash screen and main menu art
+- Newspaper redubbed "The Deluxe Dose", with gem added for good measure
+- Hazzard appears on the TV screens in The Rat Cellar
+- Free Play high score placeholder names changed
+- MiloHax logo on startup and on the shutters of the store
+- "Trogdor" is now one of the randomly selected menu songs
+- Redone intro video
+- Custom save icon and name in the PS2 BIOS (check on your console!)
+- Easter eggs? (Oh boy, oh boy...)
