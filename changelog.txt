@@ -79,7 +79,7 @@ ADDED FEATURES
 	- This condenses the old Free Play flow of Difficulty > Character >
 	Guitar > Venue into a single menu where any, all, or none of these can
 	be changed before a song
-	- Character, guitar, and venue will be greyed out when Focus Mode is
+	- Guitar, and venue will be greyed out when Focus Mode is
 	active
 - Extras menu in Manage Gig menu
 	- Cheat codes are no longer functional (aside from Unlock All and
