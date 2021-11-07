@@ -1,0 +1,160 @@
+           ____       _ _               _   _                  ___ ___
+          / ___|_   _(_) |_ __ _ _ __  | | | | ___ _ __ ___   |_ _|_ _|
+         | |  _| | | | | __/ _` | '__| | |_| |/ _ \ '__/ _ \   | | | |
+         | |_| | |_| | | || (_| | |    |  _  |  __/ | | (_) |  | | | |
+          \____|\__,_|_|\__\__,_|_|    |_| |_|\___|_|  \___/  |___|___|
+                        ____  _____ _    _   ___  _______
+                       |  _ \| ____| |  | | | \ \/ / ____|
+                       | | | |  _| | |  | | | |\  /|  _|
+                       | |_| | |___| |__| |_| |/  \| |___
+                       |____/|_____|_____\___//_/\_\_____|
+
+                                 Modding Guide
+===============================================================================
+
+One of the aims of Guitar Hero II Deluxe was to create a new, definitive base
+for future modding projects on the GH2 version of the Milo engine. We've
+already fielded questions about how to get custom charts and (more amusingly)
+how to change the colors of the strikeline back. (It's a cheat now, lads! No
+worries about editing your game files.)
+
+This file aims to be a decent little explanation for common file formats and
+tools you need to have for modding Deluxe. Choose your own adventure:
+
+I JUST WANT TO PLAY CUSTOMS
+===========================
+If you're simply wanting to get Clone Hero songs into Deluxe, check
+gh2-deluxe.neocities.org for Custom Edition, which is a minimalist base you
+can use to put new songs into GH2 without worry about making sure the Career
+works or anything.
+
+You'll also want to grab the Onyx Music Game Toolkit, which can read in Clone
+Hero-format songs (select the song.ini when loading a song!) and throw them
+into a GH2 ARK, taking care of all the messy stuff for you with a nice GUI as
+opposed to any Command Prompt junk. It can even batch convert songs!
+
+https://github.com/mtolly/onyxite-customs
+
+Onyx can also import drums from Rock Band or Clone Hero format charts into
+Deluxe 2.0, as well as the chart author names, which will appear at the start
+of songs in every version of Deluxe except for the two debug executables
+(to protect against them crashing for missing author names).
+
+I WANT TO DO MORE THAN PLAY CUSTOMS
+===================================
+Let's talk toolchain then! To be clear, Guitar Hero Explorer (or GHEx) WILL
+NOT WORK with GH2:DX. GHEx is old, busted, finicky, likely to crash, and
+ridiculously picky with what what you put in it. The GH2:DX ARK will simply
+be rejected if you try to load it into GHEx. As such, you'll have to upgrade
+your tools if you'd like to play with our disc.
+
+FILE FORMATS
+============
+Here's the big file formats you'll be working with and what they contain:
+
+- File container: GH2 stores all of its files in an ARK container, which is a
+  bit like a tarball and gets around the filename limitations on a DVD.
+  You'll have to get inside it, either by way of an ARK disassembler like ARK
+  Expander or ArkHelper or an ARK editor like ArkTool, to poke at the files.
+  Once you get inside, just rip stuff out, replace it, and see what happens.
+
+- Models, menus, and textures: Milo, Milo, Milo. MiloExplorer or superfreq
+  can both get inside them (though one's a lot better than the other).
+
+- Scripts: The game's scripts are stored in DTB files, which are actually
+  tokenized DTA files. DTA stands for Data Array, which is the custom in-
+  house language Harmonix wrote the high-level functions of the engine (song
+  definitions, menu flow, guitars and finishes, etc.) in. DTA is plain text,
+  and once you're used to it, it's a very fun language to write and decode.
+  dtab will convert back and forth between the two formats as necessary.
+
+- Audio: Game audio is merely standard PS2 ADPCM files encoded in a weird,
+  interleaved format with (generally) 4-6 channels, called VGS. Menu music
+  and sound effects are also stored in VGS, though as stereo tracks.
+  RockAudio is what you want to build these and to convert them back to
+  standard WAV files if needed.
+
+- Charts: Plain ol' MIDI. Get out your favorite MIDI editor, whether that be
+  REAPER, Cakewalk, hell, Anvil, I guess? (But also, Anvil sucks.)
+
+TOOLS
+=====
+For all the old-school tools (most of which are still useful in one capacity
+or another), I have an archive on my site, at:
+
+http://mariteaux.somnolescent.net/guitar-hero/
+
+In particular, you'll find FeedBack, good for GH2-specific charting,
+RockAudio, the aforementioned audio building tool, and CD/DVD Generator and
+Apache3, which are the proper way of making ISOs. Those are just the old
+tools though, and the community's been hard at work on a few more now. Fair
+warning, a few of these are command-line programs, so make sure you know how
+the Command Prompt works before you dive in. Believe me though--worth it.
+
+https://github.com/PikminGuts92/Mackiloha (ArkHelper and superfreq)
+https://github.com/mtolly/dtab/ (dtab)
+https://github.com/mtolly/onyxite-customs (Onyx Music Game Toolkit, which
+can be used to import drums from Rock Band and Clone Hero charts)
+
+With Deluxe 2.0's new loader, you can boot debug off the same disc as the
+main game. You'll want to use debug for any modding projects, as you can see
+exactly what the game doesn't like when it crashes (90% of the time), which
+was basically the only reason Deluxe was possible. 2 Deluxe and Encore Deluxe
+use the exact same files, so which one you should pick isn't important. Your
+changes will appear in both versions of the game.
+
+TUTORIALS
+=========
+Documentation is admittedly a little sparse on the ground, but all is not
+lost. I've been working on building up a little repository of tutorials for
+various modding tasks, anything from opening up an ARK to building separate
+audio for Practice. I'm always on the cusp of adding more, so here:
+
+https://mariteaux.somnolescent.net/guitar-hero/tutorials/
+
+BASIC MODS TO GET YOU STARTED
+=============================
+But hey, you're probably still lost. Don't worry, this isn't an easy game
+to mod and crashes are inevitable. Scott (LocalH) has been at this for over
+a decade now; me, seven years and counting. So if you're looking for some
+easy, quick starter mods to let you know you're doing this whole modding
+and rebuilding the ISO thing correctly, here's some ideas:
+
+CHANGING THE TEXT IN THE GAME:
+ui/eng/. This folder contains our split locales. Vanilla GH2 and 1.0 both
+contained all the game's strings in a single file, which made editing them
+a pain. We've sorted them into named locale files for your convenience.
+Change some text in any of the files and see what happens. Unlike other mods,
+you thankfully don't need to worry about your game crashing if you make a
+"wrong" edit. (Make sure you keep locales encoded as ANSI and not UTF-8, or
+else you'll get strange, but otherwise harmless, foreign characters.)
+
+CHANGING SONG NAMES/ARTIST NAMES/PREVIEW TIMES/QUICKPLAY CHARACTERS:
+config/songs.dta. One notable exception to the above about locale is song
+information. The game stores what VGS and MIDI files it loads, plus the names
+of songs, artists, and what guitar, venue, and guitarist is used for
+quickplay in another file altogether. Change some song names or something--or
+define new songs altogether! Just mind your parentheses--dtab will refuse to
+build if you have an extra left or right brace anywhere in your script.
+
+MAKING EASY AND MEDIUM USE THE SAME TRACK SPEED AS HARD/EXPERT:
+config/track_graphics.dta. An easy "functional" mod in this file. You can set
+the two lower difficulties to run at the same visual speed at Hard and Expert,
+which should make them a bit less tedious to play. Look for the track_speed
+array a bit down in the file and change the values to whatever you like (even
+something ridiculous, if you want). You also get a good look at how bizarre
+Data Array arithmetic can look. (Operands come first, like in Lisp.)
+
+ASKING FOR HELP
+===============
+If you're stuck, or frankly if you just wanna talk to some people up to the
+same stuff you seem to have taken an interest in, the MiloHax Discord is
+always open. We don't bite. All that much, anyway. If you've got a good sense
+of humor, a bit of patience, and a willingness to learn, you'll do just fine.
+Here's the invite:
+
+https://discord.gg/TPycZbVeqY
+
+Beyond that, happy modding!
+
+- marf, on behalf of the GH2 Deluxe Team
