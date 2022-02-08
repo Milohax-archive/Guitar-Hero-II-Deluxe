@@ -72,10 +72,13 @@
             {!= {gamecfg get mode} tutorial}
             {campaign is_encore_song {gamecfg get_song}}}}
       {print "encore song is " [encore_song] "\n"}
-      {if {==
+      {if_else
+         {== {gamecfg get mode} practice}
+		 0
+	  {if {==
       {gamecfg get_song} tonightimgonna}
       {{{world_panel loaded_dir} find drummer}
-            show_drummer}})
+            show_drummer}}})
    (intro_start_msg
       ($fast $encore)
       {track_panel intro_start_msg}
@@ -187,6 +190,9 @@
          {if {exists world}
             {world toggle_pick_shot}}}
       {world_panel set_showing TRUE}
+	  {if_else
+         {== {gamecfg get mode} practice}
+		 0
       {if_else
          {gamecfg get game_over_sequence}
          {do
@@ -207,7 +213,7 @@
                $encore
                {encore_stream play}}
             kDataUnhandled}
-         0})
+		 0}})
    (game_lost
       {if {&&
       $focusmode
