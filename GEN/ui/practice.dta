@@ -56,56 +56,16 @@
             {part0.btn
                set_text
                "sg_lead"}}
-;;;;;;;;if not debug Elf
-#ifndef 2DBUG
-#ifndef 8DBUG
-      {if_else
-            {==
-               {song_provider get_instrument $song 2}
-               "drum"}
-            {part2.btn
-               set_text
-               "sg_drum"}
-				{part2.btn set_state kDisabled}}
-      {if_else
-            {==
-               {song_provider get_instrument $song 2}
-               "drum"}
-            {part2.btn
-               set_text
-               "sg_drum"}
-               {part2.btn set_showing FALSE}}
-#endif
-#endif
-;;;;;;;;if debug Elf
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-#ifndef GH1RX
             {part2.btn
                set_state
                kDisabled}
             {part2.btn
                set_showing
                FALSE}
-#endif
-#endif
-#endif
-#endif
-#endif
 })
    (enter
-      {do
-         ($song
-            {gamecfg get_song})
-         {switch
-            {song_provider get_instrument $song 1}
-            (bass
-               {gamecfg set_track_type bass})
-            (rhythm
-               {gamecfg set_track_type rhythm})}
-         {$this set_button_text}})
+      {gamecfg set_track_type rhythm}
+      {$this set_button_text})
    (SELECT_START_MSG
       {if
          {== $component part0.btn}
