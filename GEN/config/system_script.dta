@@ -77,4 +77,37 @@
          $seq
          (volume {options get_fx_volume})
          (pan {player_pan $player})}}}
+{func
+   get_text_entry_help_text
+   ($ten $back)
+   {do
+      ($array
+         ())
+      {resize $array 0}
+      {if
+         {$ten user_can_scroll}
+         {push_back
+            $array
+            (fret1 help_nextletter)}}
+      {if_else
+         {$ten user_can_scroll}
+         {if_else
+            {$ten no_text_entered}
+            {if
+               $back
+               {push_back
+                  $array
+                  (fret2 help_back)}}
+            {push_back
+               $array
+               (fret2 help_deleteletter)}}
+         {push_back
+            $array
+            (fret2 help_deleteletter)}}
+      {if
+         {$ten user_can_scroll}
+         {push_back
+            $array
+            (strum help_updown)}}
+      {eval $array}}}
 #include debug_funcs.dta

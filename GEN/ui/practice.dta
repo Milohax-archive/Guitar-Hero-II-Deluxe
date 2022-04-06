@@ -81,7 +81,7 @@
 {new
    GHScreen
    practice_selpart_screen
-   (panels meta selpart_bg_panel practice_selpart_panel helpbar)
+   (panels meta practice_selpart_panel helpbar)
    (focus practice_selpart_panel)
    (back_screen practice_selsong_screen)
    (career_mode FALSE)
@@ -148,7 +148,8 @@
       {$this play_preview})
    (exit
       {song_preview ''}
-      {meta_music start})
+      {meta_music start}
+#ifdef HX_XBOX {profilemgr enable_xmp} #endif)
    (SELECT_START_MSG
       {do
          ($idx
@@ -516,6 +517,7 @@
             {gamecfg get practice_speed}
             0}
          {beatmatch set_music_speed $speedmod}})
+#ifdef HX_EE
    (update
       {click_parser remove_sink $this}
       {if
@@ -530,6 +532,25 @@
       {set
          [keep_section_text]
          FALSE})
+#else
+(update
+      {click_parser remove_sink $this}
+      {if
+         {&&
+            {!=
+               {gamecfg get practice_speed}
+               0}
+            {! $stretch_bg}}
+         {click_parser add_sink $this}}
+      {beatmatch update_practice_speed}
+      {if
+         {!
+            [keep_section_text]}
+         {section.lbl set_text ''}}
+      {set
+         [keep_section_text]
+         FALSE})
+#endif
    (exit
       {click_parser remove_sink $this}
       {events_parser remove_sink $this}
@@ -584,6 +605,7 @@
             {gamecfg get practice_speed}
             0}
          {beatmatch set_music_speed $speedmod}})
+#ifdef HX_EE
    (update
       {click_parser remove_sink $this}
       {if
@@ -598,6 +620,25 @@
       {set
          [keep_section_text]
          FALSE})
+#else
+(update
+      {click_parser remove_sink $this}
+      {if
+         {&&
+            {!=
+               {gamecfg get practice_speed}
+               0}
+            {! $stretch_bg}}
+         {click_parser add_sink $this}}
+      {beatmatch update_practice_speed}
+      {if
+         {!
+            [keep_section_text]}
+         {section.lbl set_text ''}}
+      {set
+         [keep_section_text]
+         FALSE})
+#endif
    (exit
       {click_parser remove_sink $this}
       {events_parser remove_sink $this}
@@ -726,7 +767,16 @@
             {! $career}}
          {$this
             set_focus
-            {if_else $career restart_career.btn restart.btn}}})
+            {if_else $career restart_career.btn restart.btn}}}
+#ifdef HX_XBOX
+{if
+         {campaign
+            check_practice_achievement
+            {gamecfg get_song}}
+         {gamecfg set allow_achievements TRUE}
+         {achievements submit practice}
+         {gamecfg set allow_achievements FALSE}}
+#endif)
    (SELECT_START_MSG
       {switch
          $component
@@ -791,6 +841,8 @@
          ((fret1 help_continue)
             (fret2 help_back)
             (strum help_updown))))
+(enter
+      {mtv_overlay_panel set_showing FALSE})
    (SELECT_START_MSG
       {game_restart}
       kDataUnhandled)

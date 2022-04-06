@@ -1,3 +1,4 @@
+#ifdef HX_EE
 ; Use these characters for debug ELFs (ifndef = if not def)
 #ifndef _SHIP
 #ifndef _ENCO
@@ -107,6 +108,16 @@
    #define 80SMULT_LOAD_CHARACTERS ((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classicgh1 funkgh1 grim))
    #define MULT_LOAD_CHARACTERS ((punkgh1 punk2 alternagh1 alterna2 glamgh1 glam2 gothgh1 goth1 metalgh1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classicgh1 funkgh1 grim))
 #endif
+#endif
+
+#ifdef HX_XBOX
+#define CHARACTERS
+((punk alterna glam goth metal rockabill rock deathmetal classic funk1 grim))
+#define LOAD_CHARACTERS
+((punk1 punk2 alterna1 alterna2 glam1 glam2 goth2 goth1 metal1 metal2 rockabill1 rockabill2 rock2 rock1 deathmetal1 deathmetal2 classic funk1 grim))
+#define STORE_CHARACTERS
+(classic funk1 grim)
+#endif
 
 #define STORE_OUTFITS (punk2 alterna2 glam2 goth1 metal2 rockabill2 rock1 deathmetal2)
 #define SKIN_ANIM_TIME (0.4)
@@ -145,6 +156,14 @@
       {play_sfx button_error}}
    kDataUnhandled)
 (SCREEN_BACK_MSG
+   {if {meta is_up}
+      {synth play_sequence button_back.cue}}
+   kDataUnhandled)
+(CHAR_ADDED_MSG
+   {if {meta is_up}
+      {synth play_sequence button_select}}
+   kDataUnhandled)
+(CHAR_REMOVED_MSG
    {if {meta is_up}
       {synth play_sequence button_back.cue}}
    kDataUnhandled)

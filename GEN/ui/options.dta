@@ -74,9 +74,11 @@
       {gs_sfx.sld
          set_current
          {options get fx_volume_idx}}
+#ifndef HX_XBOX
       {stereo.chk
          set_check
-         {options get_stereo}})
+         {options get_stereo}}
+#endif)
    (set_volumes
       {if
          {$this slider_changed}
@@ -124,6 +126,7 @@
             ((fret1 help_confirm)
                (fret2 help_cancel)
                (strum help_adjvol))}
+#ifndef HX_XBOX
          {do
             {if_else
                {==
@@ -138,7 +141,14 @@
                   set_display
                   ((fret1 help_select)
                      (fret2 help_back)
-                     (strum help_updown))}}}})
+                     (strum help_updown))}}}}
+#else
+          {helpbar
+            set_display
+            ((fret1 help_select)
+               (fret2 help_back)
+               (strum help_updown))}
+#endif)
    (slider_start_msg
       ($component)
       {do
@@ -281,15 +291,30 @@
             {set
                $autosave
                {{mem_card_panel find autosave.chk}
-                  get_check}})
-         (save_bands.btn
+                  get_check}}
+#ifdef HX_XBOX
+{if
+               $autosave
+               {set $mc_return_screen $this}
+               {ui goto_screen enable_autosave_screen}}
+#endif)
+#ifdef HX_XBOX
+(save_bands.btn
+            {set $mc_return_screen $this}
+            {ui goto_screen normal_save_screen})
+         (load_bands.btn
+            {set $mc_return_screen $this}
+            {goto_load})
+#else
+(save_bands.btn
             {set $mc_save_success_screen $this}
             {set $mc_save_failed_screen $this}
             {ui goto_screen memcard_save_confirm})
          (load_bands.btn
             {set $mc_post_load_screen $this}
             {set $mc_load_failed_screen $this}
-            {ui goto_screen memcard_load_confirm})}
+            {ui goto_screen memcard_load_confirm})
+#endif}
       kDataUnhandled)}
 {new
    GHPanel
@@ -384,9 +409,11 @@
    credits_panel
    (file credits.milo)
    (enter
-      {meta_music stop})
+      {meta_music stop}
+#ifdef HX_XBOX {profilemgr disable_xmp} #endif)
    (exit
-      {meta_music start})}
+      {meta_music start}
+#ifdef HX_XBOX {profilemgr disable_xmp} #endif)}
 {new
    GHScreen
    credits_screen
@@ -404,6 +431,7 @@
             {==
                {'+' 1 $new_scroll_pos}
                {$this num_lines}}
+#ifdef HX_XBOX {achievements submit credits} #endif
             {$this go_back}}}
       kDataUnhandled)
    (go_back
@@ -736,12 +764,14 @@
       {lefty2.chk
          set_check
          {options get_lefty 1}}
+#ifndef HX_XBOX
       {widescreen.chk
          set_check
          {options get_widescreen}}
       {p_scan.chk
          set_check
          {options get_pscan}}
+#endif
       {$this update_help_display}
       {if
          {==
@@ -813,12 +843,14 @@
                set_lefty
                1
                {lefty2.chk get_check}})
+#ifndef HX_XBOX
          (game80s.btn
 			{if_else
 				$rbdrum
 					{set $rbdrum FALSE}
 					{set $rbdrum TRUE}}
             {meta_loading_nosave_goto splash_screen})
+#endif
          (calibrate_lag.btn
             {lag_panel set from_panel $this}
             {if_else
@@ -836,7 +868,7 @@
       video_settings_80s.milo
       video_settings.milo})
    VIDEO_SETTINGS_PANEL_HANDLERS
-   (pscan_warning pscan_warning_screen)}
+   #ifndef HX_XBOX (pscan_warning pscan_warning_screen) #endif}
 {new
    GHScreen
    video_settings_screen
@@ -989,7 +1021,7 @@
    pause_video_settings_gh1.milo
    pause_video_settings.milo})
    VIDEO_SETTINGS_PANEL_HANDLERS
-   (pscan_warning pause_pscan_warning_screen)}
+   #ifndef HX_XBOX (pscan_warning pause_pscan_warning_screen) #endif}
 {new
    GHScreen
    pause_video_settings_screen

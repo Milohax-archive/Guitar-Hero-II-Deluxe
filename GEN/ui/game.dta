@@ -61,6 +61,9 @@
       {set $player0_streak 0}
       {set $player1_streak 0}
       {set $player2_streak 0}
+	  #ifdef HX_XBOX
+      {rnd suspend}
+      #endif
       {set_loader_period 5}
       {set [encore_unlock_check]
          {&& {==
@@ -181,6 +184,7 @@
       kDataUnhandled)
    (game_won_msg
       ($encore)
+      {mtv_overlay_panel show_overlay FALSE}
       {if {&&
       $focusmode
       {||
@@ -314,7 +318,10 @@
          {handle ($this multi_player)}
          {handle ($this single_player)}}
       {$this set_showing {! $focusmode}}
-      {$this set_paused FALSE})}
+      {$this set_paused FALSE})
+      #ifdef HX_XBOX
+   (unload {rnd suspend})
+   #endif}
 #define ATTRACT_LENGTH_SEC (120)
 #define FADE_LENGTH_SEC (2)
 {new FadePanel fade_panel
