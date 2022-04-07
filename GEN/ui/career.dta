@@ -264,7 +264,7 @@
 {new
    GHPanel
    sel_character_panel
-#ifdef HX_EE
+#ifndef HX_XBOX
 ;if not debug
 #ifndef 8DBUG
 #ifndef 2DBUG
@@ -1305,7 +1305,7 @@
          (dest $frame)
          (period VENUE_MAP_SCROLL_SEC)
          (units kTaskUISeconds)})
-#ifdef HX_EE
+#ifndef HX_XBOX
 ;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
 #ifndef _ENCO
@@ -1514,7 +1514,7 @@
    GHPanel
    sel_venue_panel
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifdef HX_EE
+#ifndef HX_XBOX
 ;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
 #ifndef _ENCO
@@ -1580,16 +1580,17 @@
 {new
    GHPanel
    sel_song_panel
-   (file
-      {switch
-         {gamecfg get mode}
-         ((career multi_coop)
-		 {if_else $gamegh1
-            sel_song_gh1.milo
-            sel_song.milo})
-			{if_else $gamegh1
-         sel_song_quickplay_gh1.milo
-         sel_song_quickplay.milo}})
+(file
+      {do
+         ($cfg
+            {gamecfg get mode})
+         {cond
+            ($leaderboards_mode sel_song_leaderboards.milo)
+            ({'||'
+                  {== career $cfg}
+                  {== multi_coop $cfg}}
+               {if_else $gamegh1 sel_song_gh1.milo sel_song.milo})
+            (TRUE {if_else $gamegh1 sel_song_quickplay_gh1.milo sel_song_quickplay.milo})}})
    (metamusic_on_exit TRUE)
    (focus ss_song.lst)
    (joypad
@@ -1621,13 +1622,8 @@
    (update_song_info
       {if
          {==
-#ifdef HX_XBOX
             kSongsCareer
-            {song_provider get_mode}
-#else
-            0
-            {song_provider get_quickplay}
-#endif}
+            {song_provider get_mode}}
          {game set_career_song}}
       {ss_song.lst
          set_selected
@@ -1650,7 +1646,7 @@
       {set
          [metamusic_on_exit]
          TRUE}
-      #ifdef HX_EE
+      #ifndef HX_XBOX
       {song_provider set_quickplay FALSE}
       #else
       {song_provider set_mode kSongsCareer}
@@ -1704,7 +1700,6 @@
                get_symbol
                {ss_song.lst selected_pos}}}
          {$this refresh}})
-#ifdef HX_XBOX
 (refresh
       {song_provider
          set_mode
@@ -1721,22 +1716,7 @@
                {game get_song_index}
                -1}}
          {game set_song_index 0}}
-      {$this update_song_info})
-#else
-   (refresh
-      {if
-         {!
-            {{ui current_screen}
-               sel_song_career}}
-         {song_provider set_quickplay TRUE}}
-      {ss_song.lst set_provider song_provider}
-      {if
-         {==
-            {game get_song_index}
-            -1}
-         {game set_song_index 0}}
-      {$this update_song_info})
-#endif}
+      {$this update_song_info})}
 {new
    GHScreen
    sel_song_screen
@@ -1801,44 +1781,15 @@
             {part0.btn
                set_text
                "sg_lead"}}
-;;;;;;;;if not debug Elf
-#ifndef 2DBUG
-#ifndef 8DBUG
-      {if_else
-            {==
-               {song_provider get_instrument $song 2}
-               "drum"}
-            {part2.btn
-               set_text
-               "sg_drum"}
-				{part2.btn set_state kDisabled}}
-      {if_else
-            {==
-               {song_provider get_instrument $song 2}
-               "drum"}
-            {part2.btn
-               set_text
-               "sg_drum"}
-               {part2.btn set_showing FALSE}}
-#endif
-#endif
-;;;;;;;;if debug Elf
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-#ifndef GH1RX
-            {part2.btn
-               set_state
-               kDisabled}
-            {part2.btn
-               set_showing
-               FALSE}
-#endif
-#endif
-#endif
-#endif
-#endif
+{if $drumenabled
+   {if_else
+         {== {song_provider get_instrument $song 2} "drum"}
+            {part2.btn set_text "sg_drum"}
+			{part2.btn set_state kDisabled}}
+   {if_else {== {song_provider get_instrument $song 2} "drum"}
+            {part2.btn set_text "sg_drum"}
+            {part2.btn set_showing FALSE}}}
+{if {! $drumenabled} {part2.btn set_state kDisabled} {part2.btn set_showing FALSE}}
 })
    (enter
       {do
