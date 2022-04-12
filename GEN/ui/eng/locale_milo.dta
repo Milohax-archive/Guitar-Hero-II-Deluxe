@@ -35,6 +35,7 @@
 (cheat_neckless "Neckless Mode")
 (speed_msg "NOTES: %d%%  SONG: %d%%\n FPS: %dFPS")
 (gm_tspd "FPS")
+(gm_trackwidth "TRACK WIDTH")
 (gm_sngspd "NOTE SPEED")
 (gm_unusedsl "SONG SPEED")
 (GM_BLACK_BACKGD "FOCUS MODE")
