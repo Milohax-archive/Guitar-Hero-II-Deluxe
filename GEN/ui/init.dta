@@ -51,6 +51,8 @@
 {set $rbdrum FALSE}
 {set $emulatefps 60}
 {set $drumenabled FALSE}
+{set $trackbeatx 0.6}
+{set $trackcamx 1.6}
 #ifndef HX_XBOX
 ; GH2 ELFs never boot in 80s mode.
 #ifdef _SHIP

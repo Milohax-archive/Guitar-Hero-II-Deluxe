@@ -45,7 +45,6 @@
       {$this set_showing FALSE}
       {$this set_track_out})
    (intro_start_msg
-   {set $firsttrackentry FALSE}
       {$this reset}
       {$this set_showing
          {&&
@@ -115,10 +114,6 @@
          (script
             {game foreach_player_matcher $m
                {$m refresh_track_buttons}}
-			   {if {! $firsttrackentry}
-			   {set $firsttrackentry TRUE}
-			   {set $trackbeatx 0.6}
-			   {set $trackcamx 1.6}}
 #ifndef HX_XBOX
 {if_else $noflames
 {{track_panel loaded_dir} iterate ParticleSys $m {$m set_showing FALSE}}
