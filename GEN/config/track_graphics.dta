@@ -97,8 +97,8 @@
       (tail_glow 'tail_glow_%s')
       (star 'gem_starpower_%s')
       (dot 'dot_top_hopo2_%s'))
-   (tail_glow_width 1.5)
-   (tail_glow_tight_width 0.7)
+   (tail_glow_width 0)
+   (tail_glow_tight_width 0)
    (sparkle_len 1.0)
    (parts
       ((gem
