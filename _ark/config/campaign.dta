@@ -83,52 +83,6 @@
 #endif
 #endif
 
-; Mega campaign
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef 2DBUG
-#ifndef 8DBUG
-#ifndef GH1RX
-(order
-   (battle surrender possum heartshapedbox salvation strutter shoutatthedevil)
-   (battle2 iwantcandy wegotthebeat iran ballstothewall 18andlife)
-   (small1 mother lifewasted cherrypie woman youreallygotme tonightimgonna)
-   (small3 noonelikeyou shakin heatofthemoment radarlove holydiver)
-   (small2 carryonwayward searchanddestroy messageinabottle billiondollar thembones warpigs)
-   (small4 bangyourhead turningjapanese holdonloosely thewarrior iwannarock)
-   (big monkeywrench hush girlfriend whowasinmyroom cantyouhearme sweetchild)
-   (theatre rockandroll tattooedloveboys johnthefisherman jessica badreputation lastchild)
-   (theatre2 whatilikeaboutyou synchronicity2 ballroomblitz onlyalad roundandround)
-   (fest crazyonyou trippinonahole dead killinginthenameof freya stop)
-   (fest2 aintnothinbut lonelyisthenight bathroomwall losangeles wrathchild)
-   (arena madhouse trooper rockthistown laidtorest psychobilly yyz)
-   (arena2 electriceye policetruck seventeen caughtinamosh playwithme)
-   (stone beastandtheharlot carrymehome institutionalized misirlou hangar18 freebird))
-(required_songs
-   (kDifficultyEasy 4 5)
-   (kDifficultyMedium 5 6)
-   (kDifficultyHard 5 6)
-(kDifficultyExpert 5 6))
-(cash
-   (starting 500)
-   (star_awards
-      (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 0 50 100)
-      (kDifficultyHard 0 100 150)
-      (kDifficultyExpert 100 150 250))
-   (status_awards
-      (kDifficultyEasy 0 0 0 0 0 0 0 0 0 0 0 0 0 0)
-      (kDifficultyMedium 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 0)
-      (kDifficultyHard 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 0)
-      (kDifficultyExpert 460 560 660 760 860 800 900 1000 1100 1200 1300 1400 1500 500000 0)))
-#endif
-#endif
-#endif
-#endif
-#endif
-#endif
-
 ; Customs Edition "campaign"
 #ifndef _SHIP
 #ifndef _MEGA
@@ -175,70 +129,6 @@
 #endif
 #endif
 #endif
-#endif
-
-; Expansion disc
-#ifdef _DRUM
-(order
-   (battle iran maps possum wegotthebeat collide)
-   (battle2 crawl chopsuey debaser lesstalkmorerokk warpigs)
-   (small1 ladylightning johnthefisherman policetruck iwannarock tomsawyer)
-   (small3 thunderhorse electriceye imtheone yyz greengrass)
-   (small2)
-   (small4)
-   (big)
-   (theatre)
-   (theatre2)
-   (fest)
-   (fest2)
-   (arena)
-   (arena2)
-   (stone))
-(required_songs
-   (kDifficultyEasy 5 5)
-   (kDifficultyMedium 5 5)
-   (kDifficultyHard 5 5)
-   (kDifficultyExpert 5 5))
-(cash
-   (starting 250)
-   (star_awards
-      (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 0 0 0)
-      (kDifficultyHard 0 0 0)
-      (kDifficultyExpert 0 0 0))
-   (status_awards
-      (kDifficultyEasy 0 0)
-      (kDifficultyMedium 0 0)
-      (kDifficultyHard 0 0)
-      (kDifficultyExpert 0 0)))
-#endif
-
-; GH1 Redux campaign
-#ifdef GH1RX
-(order
-   (battle allofthis behindthemask thunderkiss65 graveyardshift spanishcastlemagic)
-   (small1)
-   (small2)
-   (theatre)
-   (fest)
-   (arena))
-(required_songs
-   (kDifficultyEasy 3 4)
-   (kDifficultyMedium 4 5)
-   (kDifficultyHard 5 5)
-   (kDifficultyExpert 5 5))
-(cash
-   (starting 250)
-   (star_awards
-      (kDifficultyEasy 0 0 0)
-      (kDifficultyMedium 100 150 300)
-      (kDifficultyHard 150 200 350)
-      (kDifficultyExpert 200 250 500))
-   (status_awards
-      (kDifficultyEasy 0 0 0 0 0 0)
-      (kDifficultyMedium 500 600 700 800 900 1000 0)
-      (kDifficultyHard 800 1000 1200 1400 1600 1800 0)
-      (kDifficultyExpert 1500000 1900 2700 3250 3700 500000 0)))
 #endif
 
 #ifdef 8DBUG (unlock_song becauseitsmidnite) #endif ; Only used for 80s debug
