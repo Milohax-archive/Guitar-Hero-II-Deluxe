@@ -169,19 +169,19 @@ jobs:
           rm -rf _ark/songs/alloveryou
           rm -rf _ark/songs/maps
           rm -rf _ark/songs/greengrass
-          rm _ark/config/songs.dta
+          rm -rf _ark/config/songs.dta
           mv _ark/config/songs_ce.dta _ark/config/songs.dta
-          rm _ark/config/store.dta
+          rm -rf _ark/config/store.dta
           mv _ark/config/store_ce.dta _ark/config/store.dta
-          rm _ark/ui/eng/locale_tiers.dta
+          rm -rf _ark/ui/eng/locale_tiers.dta
           mv _ark/ui/eng/locale_tiers_ce.dta _ark/ui/eng/locale_tiers.dta
-          sed -i -e "s/BOOT2 = cdrom0:\GHCE_000.01;1/BOOT2 = cdrom0:\CUSTOMDX.ELF;1/" SYSTEM.CNF
+          sed -i -e "s/GHCE_000.01/CUSTOMDX.ELF/" SYSTEM.CNF
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
         uses: actions/upload-artifact@v2
         with:
-          name: GH2DX-CustomEdtion-PS2-standalone
+          name: GH2DX-CustomEditon-PS2-standalone
           path: |
             GEN
             IOP
