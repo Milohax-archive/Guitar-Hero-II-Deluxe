@@ -1,0 +1,30 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build_gh2dx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build ARK
+        run: |
+          chmod +x dependencies/arkhelper
+          chmod +x dependencies/dtab
+          chmod +x dependencies/superfreq
+          dependencies/arkhelper dir2ark ./_ark ./gen -n MAIN -s 4073741823
+      
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: GH2DX-1.0-PS2
+          path: |
+            GEN
+            IOP
+            VIDEOS
+            DBUG_000.01
+            GHCE_000.01
+            SLES_666.66
+            SYSTEM.CNF
