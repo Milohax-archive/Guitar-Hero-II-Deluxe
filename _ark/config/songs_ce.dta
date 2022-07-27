@@ -1,0 +1,265 @@
+(speedtest
+   (name
+      {if_else
+         $game80s
+         "Speed Test (HalfDuck Cover)"
+         "Speed Test"})
+   (artist
+      "ExileLord")
+   (caption conceived_by)
+   (song
+      (name
+         {if_else $game80s songs/speedtesthalfduck/speedtesthalfduck songs/speedtest/speedtest})
+      (tracks
+         ((guitar
+               (2 3))
+            (bass
+               (4 5))
+            (fake 0)))
+      (pans
+         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+      (vols
+         (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores
+         (-1 -1 1 1 -1 -1))
+      (midi_file
+         {if_else $game80s songs/speedtesthalfduck/speedtesthalfduck.mid songs/speedtest/speedtest.mid}))
+   (song_vs
+      (name
+         {if_else $game80s songs/speedtesthalfduck/speedtesthalfduck songs/speedtest/speedtest})
+      (tracks
+         ((guitar
+               (2 3))
+            (bass
+               (4 5))))
+      (pans
+         (-1.0 1.0 -1.0 1.0 -1.0 1.0))
+      (vols
+         (0.0 0.0 0.0 0.0 0.0 0.0))
+      (cores
+         (-1 -1 1 1 -1 -1))
+      (midi_file
+         {if_else $game80s songs/speedtesthalfduck/speedtesthalfduck.mid songs/speedtest/speedtest.mid}))
+   (anim_tempo kTempoFast)
+   (preview 58886 77105)
+   (quickplay
+      (character_outfit metal1)
+      (guitar sg)
+      (venue fest))
+   (band metal_bass metal_drummer metal_keyboard))
+(tutorial102
+   (name
+      "Basic 2 Playing Notes")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial102)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial102.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial103
+   (name
+      "Basic 3 Different Notes")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial103)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial103.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial104
+   (name
+      "Basic 4 Durations")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial104)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial104.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial105
+   (name
+      "Basic 5 Chords")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial105)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial105.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial202
+   (name
+      "StarPower 2 Combos")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial202)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial202.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial203
+   (name
+      "StarPower 3 Whammy Bar")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial203)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial203.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial204
+   (name
+      "StarPower 4 Wail")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial204)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial204.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial205
+   (name
+      "StarPower 5 Hammer-Ons")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial205)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial205.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))
+(tutorial206
+   (name
+      "StarPower 6 Pull-Offs")
+   (artist
+      "You")
+   (song
+      (name tutorial/tutorial206)
+      (tracks
+         ((guitar
+               (2 3))))
+      (pans
+         (-1.0 1.0 -1.0 1.0))
+      (vols
+         (-6.0 -6.0 -6.0 -6.0))
+      (cores
+         (-1 -1 1 1))
+      (midi_file tutorial/tutorial206.mid))
+   (anim_tempo kTempoMedium)
+   (preview 11981 35990)
+   (quickplay
+      (character_outfit alterna1)
+      (guitar sg)
+      (venue small2))
+   (validate_ignore TRUE))

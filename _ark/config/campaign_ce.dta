@@ -1,0 +1,33 @@
+(order
+   (battle speedtest)
+   (battle2)
+   (small1)
+   (small3)
+   (small2)
+   (small4)
+   (big)
+   (theatre)
+   (theatre2)
+   (fest)
+   (fest2)
+   (arena)
+   (arena2)
+   (stone))
+(required_songs
+   (kDifficultyEasy 1 1)
+   (kDifficultyMedium 1 1)
+   (kDifficultyHard 1 1)
+   (kDifficultyExpert 1 1))
+(cash
+   (starting 0)
+   (star_awards
+      (kDifficultyEasy 0 0 0)
+      (kDifficultyMedium 0 0 0)
+      (kDifficultyHard 0 0 0)
+      (kDifficultyExpert 0 0 0))
+   (status_awards
+      (kDifficultyEasy 0 0)
+      (kDifficultyMedium 0 0)
+      (kDifficultyHard 0 0)
+      (kDifficultyExpert 0 0)))
+(unlock_game_modes multi_fo)
