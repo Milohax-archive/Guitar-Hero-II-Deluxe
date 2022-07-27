@@ -248,8 +248,7 @@
             (fret2 help_back)
             (strum help_updown))))
    (enter
-      {$this turn_off_ambient}
-#ifdef HX_XBOX {content_mgr start_enumeration} #endif)
+      {$this turn_off_ambient})
    (resume_from_practice
       {practice_sel_section_screen set career_mode FALSE}
       {gamecfg set mode career}
@@ -264,7 +263,6 @@
 {new
    GHPanel
    sel_character_panel
-#ifndef HX_XBOX
 ;if not debug
 #ifndef 8DBUG
 #ifndef 2DBUG
@@ -282,9 +280,6 @@
 #endif
 #endif
 #endif
-#endif
-#else
-(file sel_character.milo)
 #endif
    (char_focus rockabill)
    (char_outfit rockabill1)
@@ -504,7 +499,6 @@
 ((panels meta sel_character_panel char_single helpbar)
    (focus sel_character_panel)
    (allow_back FALSE)
-#ifdef HX_XBOX (alt_cam_anim TRUE) #endif
    (helpbar
       (default
          ((fret1 help_continue)
@@ -652,7 +646,6 @@
 #define SEL_GUITAR_COMMON
 ((panels meta sel_guitar_panel helpbar guitar_display_panel char_single)
    (focus sel_guitar_panel)
-#ifdef HX_XBOX (alt_cam_anim TRUE) #endif
    (helpbar
       (default
          ((fret1 help_continue)
@@ -923,23 +916,6 @@
             "ui/image/og/us_poster_"
             [category]
             "_keep.png"}}
-#ifdef HX_XBOX
-{if_else
-         {==
-            [category]
-            downloads}
-         {st_costrange.lbl set_text store_downloads_costrange}
-         {st_costrange.lbl
-            set_localized_text
-            {sprintf
-               {localize category_cost}
-               {store_panel
-                  low_cost
-                  [category]}
-               {store_panel
-                  high_cost
-                  [category]}}}}
-#else
       {st_costrange.lbl
          set_localized_text
          {sprintf
@@ -950,7 +926,6 @@
             {store_panel
                high_cost
                [category]}}}
-#endif
       {st_cat_name.lbl
          set_text
          {sprint
@@ -987,13 +962,6 @@
             (strum help_updown)}
          {helpbar set_display $array}})
    (enter
-      {$this set_focus st_guitars.btn}
-      #ifdef HX_XBOX
-      {if_else
-         {profilemgr is_active_pad_signed_in}
-         {$this enable st_downloads.btn}
-         {$this disable st_downloads.btn}}
-      #endif
       {$this set_store_mode TRUE}
       {$this show_store_screen_1}
       {$this update_store_category_desc}
@@ -1019,18 +987,6 @@
    (exit
       {$this set_store_mode FALSE}
       {cash.view set_showing FALSE})
-#ifdef HX_XBOX
-(poll
-      {st_loading.lbl
-         set_showing
-         {&&
-            {st_screen2.view showing}
-            {==
-               [category]
-               character}
-            {!
-               {char_store are_chars_loaded}}}})
-#else
    (poll
       {if
          {st_screen2.view showing}
@@ -1042,14 +998,7 @@
                   character}
                {!
                   {char_store are_chars_loaded}}}}})
-#endif
    (SELECT_START_MSG
-#ifdef HX_XBOX
-{if_else
-         {== $component st_downloads.btn}
-         {profilemgr show_marketplace}
-         {do
-#endif
       {set
          [item_provider]
          store_item_provider}
@@ -1070,7 +1019,6 @@
             {store_guitar_display_panel set_showing TRUE})
          (st_songs.btn
             {meta_music stop}
-#ifdef HX_XBOX {profilemgr disable_xmp} #endif
             {song_logos.pic set_showing TRUE})
          (st_characters.btn
             {char_store set_placer 0 char_store.placer}
@@ -1105,8 +1053,7 @@
       {$this update_store_item_desc}
       {$this update_store_item_display}
       {$this update_store_item_sold}
-      kDataUnhandled
-      #ifdef HX_XBOX }} #endif)
+      kDataUnhandled)
    (update_index
       ($dir)
       {set
@@ -1129,7 +1076,6 @@
    (hide_models
       {song_preview ''}
       {meta_music start}
-#ifdef HX_XBOX {profilemgr enable_xmp} #endif
       {st_question.lbl set_showing FALSE}
       {char_store.placer set_showing FALSE}
       {char_store set_placer 0}
@@ -1146,11 +1092,7 @@
                (st_songs.btn song)
                (st_characters.btn character)
                (st_outfits.btn outfit)
-               (st_videos.btn video)
-               #ifdef HX_XBOX
-               (st_downloads.btn downloads)
-               kDataUnhandled
-               #endif})
+               (st_videos.btn video)})
          {if
             {!= $new_cat kDataUnhandled}
             {set
@@ -1194,23 +1136,16 @@
             {if_else
                {store_panel can_buy_item}
                {do
-                  ($cat
-                     {store_panel get category})
                   {campaign
                      buy_item
                      {store_panel get item_name}
                      {store_panel get_item_price}}
-#ifdef HX_XBOX
-                  {if
-                     {>=
-                        {campaign cash_spent}
-                        10000}
-                     {achievements submit money}}
-#endif
                   {store_panel update_store_item_sold}
                   {store_panel update_total_cash_display}
                   {if
-                     {== $cat guitar}
+                     {==
+                        {store_panel get category}
+                        guitar}
                      {store_skin_provider init_data}}
                   {ui push_screen store_bought_screen}
                   {play_sfx cash_register}}
@@ -1305,7 +1240,6 @@
          (dest $frame)
          (period VENUE_MAP_SCROLL_SEC)
          (units kTaskUISeconds)})
-#ifndef HX_XBOX
 ;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
 #ifndef _ENCO
@@ -1471,38 +1405,6 @@
      {$this set_venue_map_frame 7}
      {game set_venue arena})}})
 #endif
-#else
-   (FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle})
-            (sv_small1.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small1})
-            (sv_small2.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small2})
-            (sv_big.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue big})
-            (sv_theatre.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre})
-            (sv_fest.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest})
-            (sv_arena.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena})
-            (sv_stone.btn
-               {$this set_venue_map_frame 8}
-               {game set_venue stone})}})
-#endif
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; DONT MISS THIS, THIS HAS NO IFDEF
    (SELECT_START_MSG
@@ -1514,7 +1416,7 @@
    GHPanel
    sel_venue_panel
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifndef HX_XBOX
+
 ;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
 #ifndef _ENCO
@@ -1559,10 +1461,6 @@
    (file sel_venue_gh1.milo)
    (focus sv_battle.btn)
 #endif
-#else
-(file sel_venue.milo)
-   (focus sv_battle.btn)
-#endif
 }
 {new
    GHScreen
@@ -1580,30 +1478,21 @@
 {new
    GHPanel
    sel_song_panel
-(file
-      {do
-         ($cfg
-            {gamecfg get mode})
-         {cond
-            ($leaderboards_mode sel_song_leaderboards.milo)
-            ({'||'
-                  {== career $cfg}
-                  {== multi_coop $cfg}}
-               {if_else $gamegh1 sel_song_gh1.milo sel_song.milo})
-            (TRUE {if_else $gamegh1 sel_song_quickplay_gh1.milo sel_song_quickplay.milo})}})
+   (file
+      {switch
+         {gamecfg get mode}
+         ((career multi_coop)
+		 {if_else $gamegh1
+            sel_song_gh1.milo
+            sel_song.milo})
+			{if_else $gamegh1
+         sel_song_quickplay_gh1.milo
+         sel_song_quickplay.milo}})
    (metamusic_on_exit TRUE)
    (focus ss_song.lst)
    (joypad
       (hold_ms 500)
       (repeat_ms 80))
-#ifdef HX_XBOX
-   (load
-      {profilemgr add_sink $this storage_changed}
-      {content_mgr start_enumeration})
-   (storage_changed
-      {$this clear_cache}
-      {ui goto_screen storage_changed_screen})
-#endif
    (enter
       {{ui current_screen}
          turn_off_ambient}
@@ -1622,39 +1511,23 @@
    (update_song_info
       {if
          {==
-            kSongsCareer
-            {song_provider get_mode}}
+            0
+            {song_provider get_quickplay}}
          {game set_career_song}}
       {ss_song.lst
          set_selected
          {game get_song_index}}
-#ifdef HX_XBOX
-       {if
-         {! $leaderboards_mode}
-         {meta_music stop}
-         {profilemgr disable_xmp}}
-#else
       {meta_music stop}
-#endif
       {$this update_pos})
    (exit
       {song_preview ''}
       {if
          [metamusic_on_exit]
-         {meta_music start}
-         #ifdef HX_XBOX {profilemgr enable_xmp} #endif}
+         {meta_music start}}
       {set
          [metamusic_on_exit]
          TRUE}
-      #ifndef HX_XBOX
-      {song_provider set_quickplay FALSE}
-      #else
-      {song_provider set_mode kSongsCareer}
-      #endif)
-#ifdef HX_XBOX
-(unload
-      {profilemgr remove_sink $this storage_changed})
-#endif
+      {song_provider set_quickplay FALSE})
    (SCROLL_MSG
       {$this update_pos})
    (update_pos
@@ -1666,7 +1539,6 @@
                $pos
                {song_provider num_headers $pos}})
          {game set_song_index $pos}
-#ifdef HX_XBOX {$this cache_song} #endif
          {song_preview
             {game get_song}}
          {sel_song.view set_frame $frame}})
@@ -1700,21 +1572,17 @@
                get_symbol
                {ss_song.lst selected_pos}}}
          {$this refresh}})
-(refresh
-      {song_provider
-         set_mode
-         {switch
-            {ui current_screen}
-            (leaderboards_song_screen kSongsLeaderboards)
-            (sel_song_screen kSongsCareer)
-            kSongsQuickplay}}
+   (refresh
+      {if
+         {!
+            {{ui current_screen}
+               sel_song_career}}
+         {song_provider set_quickplay TRUE}}
       {ss_song.lst set_provider song_provider}
       {if
-         {&&
-            {! $leaderboards_mode}
-            {==
-               {game get_song_index}
-               -1}}
+         {==
+            {game get_song_index}
+            -1}
          {game set_song_index 0}}
       {$this update_song_info})}
 {new
@@ -1781,15 +1649,44 @@
             {part0.btn
                set_text
                "sg_lead"}}
-{if $drumenabled
-   {if_else
-         {== {song_provider get_instrument $song 2} "drum"}
-            {part2.btn set_text "sg_drum"}
-			{part2.btn set_state kDisabled}}
-   {if_else {== {song_provider get_instrument $song 2} "drum"}
-            {part2.btn set_text "sg_drum"}
-            {part2.btn set_showing FALSE}}}
-{if {! $drumenabled} {part2.btn set_state kDisabled} {part2.btn set_showing FALSE}}
+;;;;;;;;if not debug Elf
+#ifndef 2DBUG
+#ifndef 8DBUG
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+				{part2.btn set_state kDisabled}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+               {part2.btn set_showing FALSE}}
+#endif
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _ONYX
+#ifndef _MEGA
+#ifndef GH1RX
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+#endif
+#endif
+#endif
+#endif
 })
    (enter
       {do
@@ -1817,18 +1714,10 @@
 {new
    GHScreen
    career_selpart_screen
-   (panels meta career_selpart_panel helpbar)
+   (panels meta career_selpart_bg_panel career_selpart_panel helpbar)
    (focus career_selpart_panel)
    (helpbar
       (default
          ((fret1 help_continue)
             (fret2 help_back)
             (strum help_updown))))}
-{new
-   GHScreen
-   storage_changed_screen
-   DIALOG_SCREEN
-   (enter
-      {dialog setup mc_continue '' button1 mc_storage_changed mc_title_error})
-   (SELECT_START_MSG
-      {ui goto_screen main_screen})}

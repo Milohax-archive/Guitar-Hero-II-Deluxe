@@ -48,7 +48,6 @@
 
    (gem_miss_callback
       ($slot_hit $real_slot $timing_error)
-	  
       {if_else $do_streak
          {if_else {== {gamecfg get mode} multi_coop}
             {do
@@ -76,7 +75,6 @@
                {set $interval_p1 50}}}})
 
    (gem_pass_callback
-   
       {if $do_streak
          {do
             {set $beforefirstnote_p0 FALSE}
@@ -105,7 +103,6 @@
    note_streak_callback_p1
    (gem_hit_callback
       ($slot $hopoable $hopoed)
-	  
       {switch
          {gamecfg get mode}
             (multi_vs {note_streak_p1})
@@ -120,7 +117,6 @@
 
    (gem_miss_callback
       ($slot_hit $real_slot $timing_error)
-	  
       {if_else $do_streak
          {if_else {== {gamecfg get mode} multi_coop}
             {do
@@ -149,7 +145,6 @@
 
    (gem_pass_callback
       {set $beforefirstnote_p1 FALSE}
-	  
       {if $do_streak
          {if_else {== {gamecfg get mode} multi_coop}
             {do

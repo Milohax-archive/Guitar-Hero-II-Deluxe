@@ -1489,9 +1489,8 @@
 ()
 ()
 ()
-(""
-   "No pitchers were harmed in the making of this game."
-   "")
+()
+("" "No drummers were harmed in the making of this game." "")
 ()
 ()
 ()
@@ -1501,22 +1500,13 @@
 ()
 ()
 ()
-(""
-   "Except for one."
-   "")
+("" "Except for that one." "")
+()
+()
+("" "He had it coming." "")
 ()
 ()
 ()
-()
-()
-(""
-   "Joel Zumaya."
-   "")
-()
-()
-(""
-   "He had it coming."
-   "")
 ()
 ()
 ()

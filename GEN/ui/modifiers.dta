@@ -8,9 +8,7 @@
    (reset_focus TRUE)
    (orig_vol 0)
    (finish_load
-      {gs_band.sld set_num_steps 60}
       {gs_guitar.sld set_num_steps 21}
-	  {gs_trackwidth.sld set_num_steps 21}
       {if_else {'||'
       {== $modifier_exit multi_vs_selsong_screen}
       {== $modifier_exit multi_coop_selsong_screen}
@@ -20,31 +18,25 @@
    (slider_changed {'||'
       {!=
          {options get band_volume_idx}
-         {gs_trackwidth.sld current}}
-	  {!=
-         {options get band_volume_idx}
          {gs_guitar.sld current}}
       {!=
          {options get guitar_volume_idx}
-         {gs_sfx.sld current}}
-      {!=
-         {options get guitar_volume_idx}
-         {gs_band.sld current}}})
+         {gs_sfx.sld current}}})
    (enter
       {gs_guitar.sld set_current {int {+ 0.5 {/ {+ {- $trackspd 1} 0.5} 0.1}}}}
-	  {gs_trackwidth.sld set_current {int {+ 0.5 {/ {+ {- $trackspd 1} 0.5} 0.1}}}}
       {gs_sfx.sld set_current
          {int {+ 0.5 {/ {- $speedmod 1} 0.05}}}}
          ; {int {+ 0.5 {/ {+ {- $speedmod 1} 0.5} 0.05}}}} ; Original formula with <100% possible
-      {gs_band.sld set_current
-         {int {- $emulatefps 1}}}
       {stereo.chk set_check $focusmode}
-      {$this display_speed_msg $trackspd $speedmod $emulatefps})
+      {$this display_speed_msg $trackspd $speedmod})
+   (poll
+      {gs_band.sld set_state kDisabled}
+      {gs_band.sld set_showing FALSE})
    (reset_gm_title
       {gs_title.lbl set_localized_text GAME_MODIFIER})
    (display_speed_msg
-      ($tspd $mspd $fps)
-      {gs_title.lbl set_localized_text {sprintf {localize speed_msg} {int {+ 0.5 {* $tspd 100}}} {int {+ 0.5 {* $mspd 100}}} {int $fps}}})
+      ($tspd $mspd)
+      {gs_title.lbl set_localized_text {sprintf {localize speed_msg} {int {+ 0.5 {* $tspd 100}}} {int {+ 0.5 {* $mspd 100}}}}})
    (set_speeds
       {if {$this slider_changed}
          {do
@@ -52,17 +44,15 @@
             {set $speedmod
                {+ 1 {* {gs_sfx.sld current} 0.05}}}
                ; {- {+ 1 {* {gs_sfx.sld current} 0.05}} 0.5}} ; Original formula with <100% possible
-            {set $emulatefps {+ 1 {gs_band.sld current}}}
-            {$this display_speed_msg $trackspd $speedmod $emulatefps}}})
+            {$this display_speed_msg $trackspd $speedmod}}})
    (slider_select_cancel
       ($component)
       {switch $component
          (gs_guitar.sld {$component set_current [orig_vol]})
-         (gs_sfx.sld {$component set_current [orig_vol]})
-         (gs_band.sld {$component set_current [orig_vol]})}
+         (gs_sfx.sld {$component set_current [orig_vol]})}
       {$this update_help_display}
       {$this set_speeds}
-      {$this display_speed_msg $trackspd $speedmod $emulatefps}
+      {$this display_speed_msg $trackspd $speedmod}
       kDataUnhandled)
    (FOCUS_MSG
       {$this set focus_component {$new_focus name}}
@@ -91,31 +81,21 @@
                {do
                   {play_sfx button_error (volume 1) (stop TRUE)}
                   {$this set_speeds}})
-			(gs_trackwidth.sld
-               {do
-                  {play_sfx button_error (volume 1) (stop TRUE)}
-                  {$this set_speeds}})
             (gs_sfx.sld
-               {do
-                  {play_sfx button_error (volume 1) (stop TRUE)}
-                  {$this set_speeds}})
-            (gs_band.sld
                {do
                   {play_sfx button_error (volume 1) (stop TRUE)}
                   {$this set_speeds}})}})
    (SELECT_START_MSG
       {switch $component
          (gs_guitar.sld {$this set orig_vol {gs_guitar.sld current}})
-		 (gs_trackwidth.sld {$this set orig_vol {gs_trackwidth.sld current}})
          (gs_sfx.sld {$this set orig_vol {gs_sfx.sld current}})
-         (gs_band.sld {$this set orig_vol {gs_band.sld current}})
          (gs_stereo.btn
             {stereo.chk toggle}
             {set $focusmode {stereo.chk get_check}})
          kDataUnhandled}
       {$this update_help_display}
       {$this set_speeds}
-      {$this display_speed_msg $trackspd $speedmod $emulatefps})}
+      {$this display_speed_msg $trackspd $speedmod})}
 {new GHScreen modifiers_screen
    (panels meta modifiers_panel helpbar)
    (focus modifiers_panel)

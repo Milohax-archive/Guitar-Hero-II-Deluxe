@@ -35,9 +35,7 @@
       {main_msg.view set_showing FALSE}
       {set
          [msg_last_frame]
-         0}
-#ifdef HX_XBOX {gamecfg set_player 0 {profilemgr active_padnum}}
-               {content_mgr start_enumeration} #endif)
+         0})
    (SELECT_START_MSG
       {switch
          $component
@@ -61,21 +59,6 @@
             {ui goto_screen multi_screen})
          (main_tutorial.btn
             {ui goto_screen training_screen})
-#ifdef HX_XBOX
-         (main_leaderboards.btn
-            {if_else
-               {profilemgr is_active_pad_signed_in_live}
-               {do
-                  {gamecfg set mode quickplay}
-                  {leaderboards_song_screen set list_index 0}
-                  {set $leaderboards_mode TRUE}
-                  {ui goto_screen leaderboards_song_screen}}
-               {do
-                  {helpbar
-                     set_display
-                     ((fret1 help_continue))}
-                  {ui push_screen main_not_logged_in_screen}}})
-#endif
          (main_options.btn
             {ui goto_screen options_screen})})
    (poll
@@ -92,7 +75,6 @@
       {{game get_player_config 0}
          set_difficulty
          kDifficultyExpert}
-#ifndef HX_XBOX
 ;if gh2 retail Elf
 #ifdef _SHIP
       {game set_venue fest}
@@ -137,12 +119,7 @@
       {game set_venue fest}
       {game set_song_index 0}
       {game set_character metal1 TRUE}
-#endif
-#else
-      {game set_venue fest}
-      {game set_song_index 0}
-      {game set_character metal1 TRUE}
-#endif
+	  #endif
       {game set_guitar_index 1}
       {do
          ($player2_config
@@ -177,21 +154,3 @@
       {main_panel reset_player_settings})
    (enter
       {$this turn_off_ambient})}
-{new
-   GHPanel
-   main_not_logged_in_panel
-   (file not_signed_in.milo)
-   (focus continue.btn)}
-{new
-   GHScreen
-   main_not_logged_in_screen
-   (panels main_not_logged_in_panel)
-   (focus main_not_logged_in_panel)
-   (allow_back FALSE)
-   (animate_transition FALSE)
-   (SELECT_START_MSG
-      {switch
-         $component
-         (continue.btn
-            {ui pop_screen})})}
-#include overshell.dta

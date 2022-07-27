@@ -1,7 +1,6 @@
 ; Rainbow toggle!
 ; This is a nice microcosm of the mess going on in synth.dta, where we have
 ; to if_else the items in the array instead of the array itself.
-#ifndef HX_XBOX
 (slot_colors
    {if_else $egg5
       gold
@@ -28,9 +27,6 @@
    {if_else $roygb
       orange
       blue}})
-#else
-(slot_colors green red yellow blue orange)
-#endif
 (smasher
    (mats
       (normal gem_smasher)
@@ -50,7 +46,6 @@
       (bonus 20)))
 
 ; Same goes for the sustain tails, which the game calls "strings".
-#ifndef HX_XBOX
 #define STRING_SET
 ((gems
    ({if_else $egg5
@@ -78,17 +73,9 @@
      {if_else $roygb
         orange
         blue}})))
-#else
-#define STRING_SET
-((gems (green red yellow blue orange)))
-#endif
+
 ; Drums are always GRYBO.
-#ifndef HX_XBOX
 #define DRUM_SET ((gems (kick4 snare_red tom_yellow tom_blue tom_orange)))
-#else
-#define DRUM_SET
-((gems (green red yellow blue orange)))
-#endif
 (gem
    (fps 30)
    (mat_formats
@@ -97,8 +84,8 @@
       (tail_glow 'tail_glow_%s')
       (star 'gem_starpower_%s')
       (dot 'dot_top_hopo2_%s'))
-   (tail_glow_width 0)
-   (tail_glow_tight_width 0)
+   (tail_glow_width 1.5)
+   (tail_glow_tight_width 0.7)
    (sparkle_len 1.0)
    (parts
       ((gem

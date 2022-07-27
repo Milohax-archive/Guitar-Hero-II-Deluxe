@@ -61,15 +61,44 @@
             {part0.btn
                set_text
                "sg_lead"}}
-{if $drumenabled
-   {if_else
-         {== {song_provider get_instrument $song 2} "drum"}
-            {part2.btn set_text "sg_drum"}
-			{part2.btn set_state kDisabled}}
-   {if_else {== {song_provider get_instrument $song 2} "drum"}
-            {part2.btn set_text "sg_drum"}
-            {part2.btn set_showing FALSE}}}
-{if {! $drumenabled} {part2.btn set_state kDisabled} {part2.btn set_showing FALSE}}
+;;;;;;;;if not debug Elf
+#ifndef 2DBUG
+#ifndef 8DBUG
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+				{part2.btn set_state kDisabled}}
+      {if_else
+            {==
+               {song_provider get_instrument $song 2}
+               "drum"}
+            {part2.btn
+               set_text
+               "sg_drum"}
+               {part2.btn set_showing FALSE}}
+#endif
+#endif
+;;;;;;;;if debug Elf
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _ONYX
+#ifndef _MEGA
+#ifndef GH1RX
+            {part2.btn
+               set_state
+               kDisabled}
+            {part2.btn
+               set_showing
+               FALSE}
+#endif
+#endif
+#endif
+#endif
+#endif
 })
    (enter
       {do
@@ -97,7 +126,7 @@
 {new
    GHScreen
    qp_selpart_screen
-   (panels meta qp_selpart_panel helpbar)
+   (panels meta qp_selpart_bg_panel qp_selpart_panel helpbar)
    (focus qp_selpart_panel)
    (helpbar
       (default
@@ -195,7 +224,7 @@
    (orig_sync 0)
 (enter
       {lefty1.chk set_check $songtitle}
-      {fuck.chk set_check #ifndef HX_XBOX $cheat_enabled_horse_head_mode #else $drumenabled #endif}
+      {fuck.chk set_check $cheat_enabled_horse_head_mode}
       {lefty3.chk set_check $barf_cheat}
       {lefty4.chk set_check $cheat_enabled_performance_mode}
       {lefty5.chk set_check $nofail}
@@ -250,11 +279,7 @@
                {do
                   {set $cheat_enabled_flaming_head TRUE}
                   {fuck.chk set_check FALSE}
-                  #ifndef HX_XBOX
-                  {set $cheat_enabled_horse_head_mode FALSE}
-                  #else
-                  {set $drumenabled FALSE}
-                  #endif}
+                  {set $cheat_enabled_horse_head_mode FALSE}}
                {set $cheat_enabled_flaming_head FALSE}})
 
          (widescreen.btn
@@ -274,18 +299,10 @@
             {fuck.chk toggle}
             {if_else {fuck.chk get_check}
                {do
-                  #ifndef HX_XBOX
                   {set $cheat_enabled_horse_head_mode TRUE}
-                  #else
-                  {set $drumenabled TRUE}
-                  #endif
                   {p_scan.chk set_check FALSE}
                   {set $cheat_enabled_flaming_head FALSE}}
-                  #ifndef HX_XBOX
-                  {set $cheat_enabled_horse_head_mode FALSE}
-                  #else
-                  {set $drumenabled FALSE}
-                  #endif})
+               {set $cheat_enabled_horse_head_mode FALSE}})
 
          (gs_left_p3.btn
             {lefty3.chk toggle}
@@ -354,7 +371,6 @@
 {new
    GHPanel
    sel_character_panel_qp
-#ifndef HX_XBOX
 ;;;;;if not debug
 #ifndef 8DBUG
 #ifndef 2DBUG
@@ -376,10 +392,6 @@
 #endif
 #endif
 #endif
-#endif
-#else
-   (file
-      sel_character.milo)
 #endif
    (char_focus rockabill)
    (char_outfit rockabill1)
@@ -914,7 +926,6 @@
          (dest $frame)
          (period VENUE_MAP_SCROLL_SEC)
          (units kTaskUISeconds)})
-#ifndef HX_XBOX
 ;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
 #ifndef _ENCO
@@ -1080,40 +1091,7 @@
      {$this set_venue_map_frame 7}
      {game set_venue arena})}})
 #endif
-#endif
 
-#ifdef HX_XBOX
-(FOCUS_MSG
-      {if
-         {!
-            {ui in_transition}}
-         {switch
-            $new_focus
-            (sv_battle.btn
-               {$this set_venue_map_frame 1}
-               {game set_venue battle})
-            (sv_small1.btn
-               {$this set_venue_map_frame 2}
-               {game set_venue small1})
-            (sv_small2.btn
-               {$this set_venue_map_frame 3}
-               {game set_venue small2})
-            (sv_big.btn
-               {$this set_venue_map_frame 4}
-               {game set_venue big})
-            (sv_theatre.btn
-               {$this set_venue_map_frame 5}
-               {game set_venue theatre})
-            (sv_fest.btn
-               {$this set_venue_map_frame 6}
-               {game set_venue fest})
-            (sv_arena.btn
-               {$this set_venue_map_frame 7}
-               {game set_venue arena})
-            (sv_stone.btn
-               {$this set_venue_map_frame 8}
-               {game set_venue stone})}})
-#endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; DONT MISS THIS, THIS HAS NO IFDEF
    (SELECT_START_MSG
       {game set_career}
@@ -1123,11 +1101,7 @@
    GHPanel
    sel_venue_panel_qp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#ifdef HX_XBOX
-   (file sel_venue_gh2.milo)
-   (focus sv_battle.btn)
-#endif
-#ifndef HX_XBOX
+
 ;;;;;if 8 tiers (gh2/gh2debug)
 #ifndef 8DBUG
 #ifndef _ENCO
@@ -1171,7 +1145,6 @@
 #ifdef GH1RX
    (file sel_venue_gh1.milo)
    (focus sv_battle.btn)
-#endif
 #endif
 }
 {new

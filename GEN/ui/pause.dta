@@ -145,14 +145,7 @@
    (next_screen main_screen)
    (TRANSITION_COMPLETE_MSG
       {{game get_bank_loader} reset}
-      {if_else
-            #ifdef HX_XBOX
-            {&&
-            [autosave]
-            {! $signin_changed_notification}}
-            #else
-            [autosave]
-            #endif
+      {if_else [autosave]
          {autosave_goto [next_screen]}
          {do
             {set [autosave] TRUE}

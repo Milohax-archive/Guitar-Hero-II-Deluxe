@@ -2,7 +2,10 @@
    GHPanel
    multi_panel
    (file
-      {if_else $game80s multi_80s.milo multi.milo})
+    {if_else
+      $game80s
+      multi_80s.milo
+      multi.milo})
    (focus coop.btn)
    (enter
       {if_else
@@ -108,26 +111,27 @@
 {new
    MultiCharSelPanel
    multi_sel_character_panel
-#ifndef HX_XBOX
-   #ifndef 8DBUG
-   #ifndef 2DBUG
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
    (file
-      {if_else $game80s multi_sel_character80s.milo multi_sel_character.milo})
-   #endif
-   #endif
-   #ifndef _SHIP
-   #ifndef _ENCO
-   #ifndef _MEGA
-   #ifndef _ONYX
-   #ifndef GH1RX
+    {if_else
+      $game80s
+      multi_sel_character80s.milo
+      multi_sel_character.milo})
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef GH1RX
    (file multi_sel_character_debug.milo)
-   #endif
-   #endif
-   #endif
-   #endif
-   #endif
-#else
-   (file multi_sel_character.milo)
+#endif
+#endif
+#endif
+#endif
 #endif
    (skin_select1 FALSE)
    (skin_select2 FALSE)
@@ -150,26 +154,24 @@
          (units kTaskUISeconds)}
       {foreach
          $c
-         #ifndef HX_XBOX
-         #ifndef 8DBUG
-         #ifndef 2DBUG
-         {if_else $game80s 80SMULTCHARACTERS MULTCHARACTERS}
-         #endif
-         #endif
-         #ifndef _SHIP
-         #ifndef _ENCO
-         #ifndef _MEGA
-         #ifndef _ONYX
-         #ifndef GH1RX
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
+{if_else $game80s 80SMULTCHARACTERS MULTCHARACTERS}
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef GH1RX
          CHARACTERS
-         #endif
-         #endif
-         #endif
-         #endif
-         #endif
-         #else
-         CHARACTERS
-         #endif
+#endif
+#endif
+#endif
+#endif
+#endif
          {do
             ($mesh
                {sprint
@@ -198,52 +200,48 @@
                [skin_select2]
                TRUE}}})
    (char_navigator
-      #ifndef HX_XBOX
-      #ifndef 8DBUG
-      #ifndef 2DBUG
-      {if_else $game80s 80SMULTCHARACTERS MULTCHARACTERS}
-      #endif
-      #endif
-      #ifndef _SHIP
-      #ifndef _ENCO
-      #ifndef _MEGA
-      #ifndef _ONYX
-      #ifndef _ONYX
-      CHARACTERS
-      #endif
-      #endif
-      #endif
-      #endif
-      #endif
-      #else
-      CHARACTERS
-      #endif)}
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
+{if_else $game80s 80SMULTCHARACTERS MULTCHARACTERS}
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef _ONYX
+         CHARACTERS
+#endif
+#endif
+#endif
+#endif
+#endif
+)} ; Don't forget to close parenth
 {new
    CharsysPanel
    char_multi
    (file char_multi.milo)
    (num_placers 2)
-   #ifndef HX_XBOX
-   #ifndef 8DBUG
-   #ifndef 2DBUG
-   (load_order
-      {if_else $game80s 80SMULT_LOAD_CHARACTERS MULT_LOAD_CHARACTERS})
-   #endif
-   #endif
-   #ifndef _SHIP
-   #ifndef _ENCO
-   #ifndef _MEGA
-   #ifndef _ONYX
-   #ifndef GH1RX
+;;;;;if not debug
+#ifndef 8DBUG
+#ifndef 2DBUG
+   (load_order {if_else $game80s 80SMULT_LOAD_CHARACTERS MULT_LOAD_CHARACTERS})
+#endif
+#endif
+;;;;;if debug
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef GH1RX
    (load_order LOAD_CHARACTERS)
-   #endif
-   #endif
-   #endif
-   #endif
-   #endif
-   #else
-   (load_order LOAD_CHARACTERS)
-   #endif
+#endif
+#endif
+#endif
+#endif
+#endif
    (enter
       {$this
          show_char
@@ -268,7 +266,6 @@
             (fret2 help_back)
             (strum help_updown))))
    (exclusive FALSE)
-#ifdef HX_XBOX (alt_cam_anim TRUE) #endif
    (get_selection
       ($player)
       {if_else
@@ -608,7 +605,6 @@
             (fret2 help_back)
             (strum help_updown))))
    (focus multi_sel_guitar_panel)
-#ifdef HX_XBOX (alt_cam_anim TRUE) #endif
    (enter
       {multi_sel_guitar_panel
          set_select_done
@@ -751,12 +747,18 @@
    UIPanel
    seldiff_bg_panel
    (file
-      {if_else $game80s seldiff_bg_80s.milo seldiff_bg.milo})}
+    {if_else
+      $game80s
+      seldiff_bg_80s.milo
+      seldiff_bg.milo})}
 {new
    MultiSelectPanel
    seldiff0
-   (file
-      {if_else $game80s seldiff0_80s.milo seldiff0.milo})
+(file 
+    {if_else
+      $game80s
+      seldiff0_80s.milo
+      seldiff0.milo})
    (player_num 0)
    (ready_label
       "ready.lbl")
@@ -765,8 +767,11 @@
 {new
    MultiSelectPanel
    seldiff1
-   (file
-      {if_else $game80s seldiff1_80s.milo seldiff1.milo})
+(file 
+    {if_else
+      $game80s
+      seldiff1_80s.milo
+      seldiff1.milo})
    (player_num 1)
    (ready_label
       "ready.lbl")
@@ -834,8 +839,11 @@
 {new
    MultiSelectPanel
    selpart0
-   (file
-      {if_else $game80s selpart0_80s.milo selpart0.milo})
+(file 
+    {if_else
+      $game80s
+      selpart0_80s.milo
+      selpart0.milo})
    (player_num 0)
    (ready_label
       "ready.lbl")
@@ -845,8 +853,11 @@
 {new
    MultiSelectPanel
    selpart1
-   (file
-      {if_else $game80s selpart1_80s.milo selpart1.milo})
+(file 
+    {if_else
+      $game80s
+      selpart1_80s.milo
+      selpart1.milo})
    (player_num 1)
    (ready_label
       "ready.lbl")
@@ -857,7 +868,10 @@
    UIPanel
    mp_selpart_bg_panel
    (file
-      {if_else $game80s selpart_bg_80s.milo selpart_bg.milo})}
+    {if_else
+      $game80s
+      selpart_bg_80s.milo
+      selpart_bg.milo})}
 {new
    MultiSelectScreen
    selpart_screen
@@ -972,17 +986,9 @@
             {player0 percent_hit}
             50}
          {do
-            {if_else
-               $player0_fc
-               {me_percent_data1.lbl
-                  set_localized_text
-                  {sprint
-                     {localize fullcombo}}}
-               {me_percent_data1.lbl
-                  set_localized_text
-                  {sprintf
-                     {localize me_percent_format}
-                     {player0 percent_hit}}}}
+            {if_else $player0_fc ;if P0 FC, set 100% FC text, otherwise set normal percentage
+               {me_percent_data1.lbl set_localized_text {sprint {localize fullcombo}}}
+               {me_percent_data1.lbl set_localized_text {sprintf {localize me_percent_format} {player0 percent_hit}}}}
             {me_percent_data1b.lbl
                set_localized_text
                ""}}
@@ -1000,17 +1006,9 @@
             {player1 percent_hit}
             50}
          {do
-            {if_else
-               $player1_fc
-               {me_percent_data2.lbl
-                  set_localized_text
-                  {sprint
-                     {localize fullcombo}}}
-               {me_percent_data2.lbl
-                  set_localized_text
-                  {sprintf
-                     {localize me_percent_format}
-                     {player1 percent_hit}}}}
+            {if_else $player1_fc ;if P1 FC, set 100% FC text, otherwise set normal percentage
+               {me_percent_data2.lbl set_localized_text {sprint {localize fullcombo}}}
+               {me_percent_data2.lbl set_localized_text {sprintf {localize me_percent_format} {player1 percent_hit}}}}
             {me_percent_data2b.lbl
                set_localized_text
                ""}}
@@ -1023,12 +1021,10 @@
                {sprintf
                   {localize me_percent_format}
                   {player1 percent_hit}}}}}
-      {if
-         {player_matcher0 auto_play}
-         {me_percent_data1.lbl set_text toogle_label}}
-      {if
-         {player_matcher1 auto_play}
-         {me_percent_data2.lbl set_text toogle_label}}
+      {if {player_matcher0 auto_play}
+         {me_percent_data1.lbl set_text toogle_label}} ;if P1 autoplay, change percent
+      {if {player_matcher1 auto_play}
+         {me_percent_data2.lbl set_text toogle_label}} ;if P2 autoplay, change percent
       {percentbar_p1.mesh
          set_local_scale
          {/
@@ -1095,6 +1091,16 @@
             set_localized_text
             {sprint
                {player1 longest_streak}}}
+;         {if {player_matcher0 auto_play}
+;            {me_score_data1.lbl set_text toogle_label} ;if P1 autoplay, change score
+;            {me_caption.lbl set_text toogle_vsp1_label} ;if P1 autoplay, change caption
+;         }
+;         {if {player_matcher1 auto_play}
+;            {me_score_data2.lbl set_text toogle_label} ;if P2 autoplay, change score
+;            {me_caption.lbl set_text toogle_vsp2_label} ;if P2 autoplay, change caption
+;         }
+;         {if {&& {player_matcher0 auto_play} {player_matcher1 auto_play}}
+;            {me_caption.lbl set_text toogle_vs_label}} ;if both autoplay, change caption
          {me_stars1.lbl
             set_text
             {player0 star_rating}}
@@ -1168,12 +1174,8 @@
          set_localized_text
          {sprint
             {band score}}}
-      {me_stars.lbl
-         set_text
-         {band star_rating}}
-      {me_stars_fc.lbl
-         set_text
-         {band star_rating}}
+      {me_stars.lbl set_text {band star_rating}} ;original stars font
+      {me_stars_fc.lbl set_text {band star_rating}} ;new starsfc font
       {me_streak_data2.lbl
          set_localized_text
          {sprintf
@@ -1185,21 +1187,17 @@
       {me_diff_data2.lbl
          set_text
          {game get_difficulty_sym 1}}
-      {if_else
-         $player2_fc
+      {if_else $player2_fc
          {do
             {me_stars.lbl set_showing FALSE}
-            {me_stars_fc.lbl set_showing TRUE}}
+            {me_stars_fc.lbl set_showing TRUE}} ;if both players FC, use new label
          {do
             {me_stars_fc.lbl set_showing FALSE}
-            {me_stars.lbl set_showing TRUE}}}
-      {if
-         {'||'
-            {player_matcher0 auto_play}
-            {player_matcher1 auto_play}}
+            {me_stars.lbl set_showing TRUE}}} ;if both players didn't FC, use old label
+      {if {|| {player_matcher0 auto_play} {player_matcher1 auto_play}}
          {do
             {me_stars_fc.lbl set_showing FALSE}
-            {me_stars.lbl set_showing TRUE}}}
+            {me_stars.lbl set_showing TRUE}}} ;if either player was autoplay, use old label
       {$this set_focus me_continue.btn})
    (next_screen
       {if_else
@@ -1332,324 +1330,3 @@
             (strum help_updown))))
    (enter
       {world_panel set_showing FALSE})}
-#define kPosP1
-(1)
-#define kPosCenter
-(2)
-#define kPosP2
-(3)
-#define PLAYER_NUMS
-((0 1 2 3))
-{func
-   is_player_using_guitar
-   ($player_num)
-   {do
-      ($type
-         {joypad_controller_type $player_num})
-      {'||'
-         {== $type ro_guitar}
-         {== $type ro_guitar_xbox}}}}
-{new
-   GHPanel
-   multi_controller_select_panel
-   (file select_controller.milo)
-   (done 0)
-   (p1_padnum -1)
-   (p2_padnum -1)
-   (pad_pos
-      (kPosCenter kPosCenter kPosCenter kPosCenter))
-   (controller_mesh_info
-      ((controller1.mesh controller1.mat)
-         (controller2.mesh controller2.mat)
-         (controller3.mesh controller3.mat)
-         (controller4.mesh controller4.mat)
-         (controllerP1.mesh controllerP1.mat)
-         (controllerP2.mesh controllerP2.mat)))
-   (get_player_mesh
-      ($num)
-      {elem
-         {elem
-            [controller_mesh_info]
-            {'+' 4 $num}}
-         0})
-   (get_player_mat
-      ($num)
-      {elem
-         {elem
-            [controller_mesh_info]
-            {'+' 4 $num}}
-         1})
-   (get_pad_mesh
-      ($num)
-      {elem
-         {elem
-            [controller_mesh_info]
-            $num}
-         0})
-   (get_pad_mat
-      ($num)
-      {elem
-         {elem
-            [controller_mesh_info]
-            $num}
-         1})
-   (input_devices_changed
-      {if
-         {!
-            [done]}
-         {$this reset_to_center}})
-   (enter
-      {$this reset_to_center}
-      {set
-         [done]
-         0})
-   (reset_to_center
-      {gamecfg set_player 0 0}
-      {gamecfg set_player 1 1}
-      {set
-         [p1_padnum]
-         -1}
-      {set
-         [p2_padnum]
-         -1}
-      {foreach
-         $player_num
-         PLAYER_NUMS
-         {set_elem
-            [pad_pos]
-            $player_num
-            kPosCenter}}
-      {$this update_controllers})
-   (update_controller_mesh
-      ($mesh $mat $num $selected)
-      {$mat
-         set
-         diffuse_tex
-         {if_else
-            {is_player_using_guitar $num}
-            {if_else $selected guitar_selected.tex guitar.tex}
-            {if_else $selected gamepad_selected.tex gamepad.tex}}}
-      {$mesh set_showing TRUE})
-   (player_num_from_pos
-      ($pos)
-      {do
-         ($ret -1)
-         {foreach
-            $player_num
-            PLAYER_NUMS
-            {if
-               {==
-                  {elem
-                     [pad_pos]
-                     $player_num}
-                  $pos}
-               {set $ret $player_num}}}
-         $ret})
-   (update_controllers
-      {{$this get_player_mesh 0}
-         set_showing
-         FALSE}
-      {{$this get_player_mesh 1}
-         set_showing
-         FALSE}
-      {{$this get_pad_mesh 0}
-         set_showing
-         FALSE}
-      {{$this get_pad_mesh 1}
-         set_showing
-         FALSE}
-      {{$this get_pad_mesh 2}
-         set_showing
-         FALSE}
-      {{$this get_pad_mesh 3}
-         set_showing
-         FALSE}
-      {set
-         $tmp
-         {$this player_num_from_pos kPosP1}}
-      {if
-         {!= $tmp -1}
-         {$this
-            update_controller_mesh
-            {$this get_player_mesh 0}
-            {$this get_player_mat 0}
-            $tmp
-            {!=
-               [p1_padnum]
-               -1}}}
-      {set
-         $tmp
-         {$this player_num_from_pos kPosP2}}
-      {if
-         {!= $tmp -1}
-         {$this
-            update_controller_mesh
-            {$this get_player_mesh 1}
-            {$this get_player_mat 1}
-            $tmp
-            {!=
-               [p2_padnum]
-               -1}}}
-      {foreach
-         $num
-         PLAYER_NUMS
-         {if
-            {&&
-               {joypad_is_connected $num}
-               {==
-                  {elem
-                     [pad_pos]
-                     $num}
-                  kPosCenter}}
-            {$this
-               update_controller_mesh
-               {$this get_pad_mesh $num}
-               {$this get_pad_mat $num}
-               $num
-               0}}})
-   (is_pad_pos_available
-      ($pos)
-      {==
-         {$this player_num_from_pos $pos}
-         -1})
-   (on_complete
-      {set
-         [done]
-         1}
-      {gamecfg
-         set_player
-         0
-         [p1_padnum]}
-      {gamecfg
-         set_player
-         1
-         [p2_padnum]}
-      {ui goto_screen multi_screen})
-   (on_back
-      {multi_controller_select_screen backwards_anim}
-      {ui goto_screen main_screen})
-   (BUTTON_DOWN_MSG
-      {switch
-         $button
-         (kPad_X
-            {do
-               ($pos
-                  {elem
-                     [pad_pos]
-                     $player_num})
-               {switch
-                  $pos
-                  (kPosP1
-                     {synth play_sequence button_select}
-                     {set
-                        [p1_padnum]
-                        $player_num})
-                  (kPosP2
-                     {synth play_sequence button_select}
-                     {set
-                        [p2_padnum]
-                        $player_num})}}
-            {$this update_controllers}
-            {if
-               {&&
-                  {!=
-                     [p1_padnum]
-                     -1}
-                  {!=
-                     [p2_padnum]
-                     -1}}
-               {$this on_complete}})
-         (kPad_Tri
-            {synth play_sequence button_back.cue}
-            {if_else
-               {'||'
-                  {==
-                     [p1_padnum]
-                     $player_num}
-                  {==
-                     [p2_padnum]
-                     $player_num}}
-               {do
-                  {if_else
-                     {==
-                        [p1_padnum]
-                        $player_num}
-                     {set
-                        [p1_padnum]
-                        -1}
-                     {set
-                        [p2_padnum]
-                        -1}}
-                  {$this update_controllers}}
-               {$this on_back}})
-         ((kPad_DUp kPad_DLeft)
-            {if
-               {&&
-                  {!=
-                     [p1_padnum]
-                     $player_num}
-                  {!=
-                     [p2_padnum]
-                     $player_num}}
-               {set
-                  $tmp
-                  {elem
-                     [pad_pos]
-                     $player_num}}
-               {switch
-                  $tmp
-                  (kPosCenter
-                     {if
-                        {$this is_pad_pos_available kPosP1}
-                        {synth play_sequence button_toggle}
-                        {set $tmp kPosP1}})
-                  (kPosP2
-                     {synth play_sequence button_toggle}
-                     {set $tmp kPosCenter})}
-               {set_elem
-                  [pad_pos]
-                  $player_num
-                  $tmp}
-               {$this update_controllers}})
-         ((kPad_DDown kPad_DRight)
-            {if
-               {&&
-                  {!=
-                     [p1_padnum]
-                     $player_num}
-                  {!=
-                     [p2_padnum]
-                     $player_num}}
-               {set
-                  $tmp
-                  {elem
-                     [pad_pos]
-                     $player_num}}
-               {switch
-                  $tmp
-                  (kPosP1
-                     {synth play_sequence button_toggle}
-                     {set $tmp kPosCenter})
-                  (kPosCenter
-                     {if
-                        {$this is_pad_pos_available kPosP2}
-                        {synth play_sequence button_toggle}
-                        {set $tmp kPosP2}})}
-               {set_elem
-                  [pad_pos]
-                  $player_num
-                  $tmp}
-               {$this update_controllers}})})}
-{new
-   GHScreen
-   multi_controller_select_screen
-   (panels meta multi_controller_select_panel helpbar)
-   (focus multi_controller_select_panel)
-   (allow_all_controllers TRUE)
-   (enter
-      {gamecfg set mode multi_coop})
-   (helpbar
-      (default
-         ((fret1 help_select)
-            (fret2 help_back)
-            (strum help_updown))))}
