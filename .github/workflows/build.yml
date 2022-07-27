@@ -25,6 +25,8 @@ jobs:
             IOP
             SCEE_DD
             VIDEOS
+            modding.txt
+            readme.txt
             80SDEBUG.ELF
             CUSTOMDX.ELF
             GH1RDX.ELF
