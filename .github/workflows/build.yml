@@ -155,6 +155,20 @@ jobs:
           rm -rf _ark/songs/trogdor
           rm -rf _ark/songs/xstream
           rm -rf _ark/songs/yeswecan
+          rm -rf _ark/songs/spanishcastlemagic
+          rm -rf _ark/songs/graveyardshift
+          rm -rf _ark/songs/tomsawyer
+          rm -rf _ark/songs/behindthemask
+          rm -rf _ark/songs/crawl
+          rm -rf _ark/songs/thunderkiss65
+          rm -rf _ark/songs/debaser
+          rm -rf _ark/songs/imtheone
+          rm -rf _ark/songs/chopsuey
+          rm -rf _ark/songs/trippolette
+          rm -rf _ark/songs/allofthis
+          rm -rf _ark/songs/alloveryou
+          rm -rf _ark/songs/maps
+          rm -rf _ark/songs/greengrass
           rm _ark/config/songs.dta
           mv _ark/config/songs_ce.dta _ark/config/songs.dta
           rm _ark/config/store.dta
