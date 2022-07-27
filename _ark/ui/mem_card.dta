@@ -1,0 +1,896 @@
+{new
+   GHPanel
+   boot_theme_select
+   (file theme_select.milo)
+   (focus tutorials.btn)
+   (SELECT_START_MSG
+      {switch
+         $component
+         (tutorials.btn
+		 {set $game80s FALSE}
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {ui goto_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {ui goto_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+)
+         (practice.btn
+		 {set $game80s TRUE}
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {ui goto_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {ui goto_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
+{new
+   GHScreen
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+   bootup_load_new
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+   bootup_load
+#endif
+#endif
+#endif
+#endif
+#endif
+   (panels meta boot_theme_select helpbar)
+   (focus boot_theme_select)
+   (helpbar
+      (default
+         ((fret1 help_continue)
+            (fret2 help_back)
+            (strum help_updown))))}
+#define kMCNoError
+(0)
+#define kMCNoCard
+(-101)
+#define kMCNotFormatted
+(-102)
+#define kMCDifferentCard
+(-103)
+#define kMCReadWriteFailed
+(-104)
+#define kMCCorrupt
+(-105)
+#define kMCNotEnoughSpace
+(-106)
+#define kMCGeneralError
+(-110)
+#define kMCFileExists
+(-120)
+#define kMCAlreadyFormatted
+(-121)
+#define MEMCARD_RESULT_MSG
+(memcard_result
+   ($result $space_free))
+#define DIALOG_SCREEN
+((panels meta dialog helpbar)
+   (focus dialog)
+   (allow_back FALSE)
+   (animate_transition FALSE))
+{new
+   UIPanel
+   dialog
+   (file
+    {if_else
+	  $gamegh1
+	  dialog_gh1.milo
+	{if_else
+      $game80s
+      dialog_80s.milo
+      dialog.milo}})
+   (force_exit TRUE)
+   (enter
+      {{ui current_screen}
+         reset_ambient})
+   (get_button
+      ($button_name)
+      {sprintf 'dl_%s.btn' $button_name})
+   (set_button_text
+      ($button $text)
+      {$button set_showing TRUE}
+      {$button set_state kNormal}
+      {$button set_text $text})
+   (set_button_focus
+      ($button)
+      {$this set_focus $button}
+      {$button set_state kFocused})
+   (hide_button
+      ($button)
+      {$button set_showing FALSE}
+      {$button set_state kDisabled})
+   (setup
+      ($btn1_text $btn2_text $default $msg $title)
+      {do
+         ($b1
+            {$this get_button button1})
+         ($b2
+            {$this get_button button2})
+         {if_else
+            {!= $btn1_text ''}
+            {$this set_button_text $b1 $btn1_text}
+            {$this hide_button $b1}}
+         {if_else
+            {!= $btn2_text ''}
+            {$this set_button_text $b2 $btn2_text}
+            {$this hide_button $b2}}
+         {switch
+            $default
+            (button1
+               {$this set_button_focus $b1})
+            (button2
+               {$this set_button_focus $b2})
+            (none 0)
+            {fail
+               "Expected button1/button2/none, got: "
+               $default}}}
+      {$this set_message $msg}
+      {dl_title.lbl set_text $title}
+      {helpbar
+         set_display
+         {$this
+            get_help_text
+            ()}})
+   (set_message
+      ($token)
+      {dl_message.lbl
+         set_localized_text
+         {memcard localize $token}})
+   (get_help_text
+      ($array)
+      {resize $array 0}
+      {if
+         {dl_button1.btn showing}
+         {push_back
+            $array
+            (fret1 help_select)}}
+      {if
+         {dl_button2.btn showing}
+         {push_back
+            $array
+            (strum help_updown)}}
+      {eval $array})
+   (message
+      ($msg $title)
+      {$this setup '' '' none $msg $title})}
+{new
+   GHScreen
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+   bootup_load
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+   bootup_load_new
+#endif
+#endif
+#endif
+#endif
+#endif
+   DIALOG_SCREEN
+   (enter
+      {set $autosave TRUE}
+      {dialog message mc_checking mc_title_loading}
+      {switch
+         {memcard get_info}
+         (kMCNoCard
+            {ui goto_screen bootup_nocard})
+         {script_task
+            (delay 1)
+            (units kTaskUISeconds)
+            (script
+               {dialog set_message load_loading}
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+               {memcard load_data bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+               {memcard load_data bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+)}})
+   (MEMCARD_RESULT_MSG
+      {switch
+         $result
+         (kMCNoError
+            {set $mc_overwrite TRUE}
+            {script_task
+               (delay 1)
+               (units kTaskUISeconds)
+               (script
+                  {ui goto_screen cut_scene_screen})})
+         (kMCNoCard
+            {ui goto_screen bootup_nocard})
+         (kMCCorrupt
+            {set $mc_overwrite TRUE}
+            {ui goto_screen bootup_corrupt_data})
+         (kMCNotFormatted
+            {ui goto_screen bootup_create_save_check})
+         {set $mc_overwrite FALSE}
+         {if_else
+            {<
+               {memcard space_available}
+               {memcard space_needed}}
+            {ui goto_screen bootup_create_save_no_space}
+            {ui goto_screen bootup_create_save_check}}})}
+{new
+   GHScreen
+   bootup_create_save_no_space
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button1 bootup_create_save_no_space mc_title_nosave})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen bootup_caution})
+         (dl_button2.btn
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {ui goto_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {ui goto_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
+{new
+   GHScreen
+   bootup_create_save_check
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button1 bootup_create_save_check mc_title_nosave})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen bootup_create_save})
+         (dl_button2.btn
+            {ui goto_screen bootup_caution})})}
+{new
+   GHScreen
+   bootup_create_save
+   DIALOG_SCREEN
+   (enter
+      {dialog message mc_checking mc_title_saving}
+      {script_task
+         (delay 1)
+         (units kTaskUISeconds)
+         (script
+            {dialog set_message bootup_create_save}
+            {memcard save_data $this $mc_overwrite})})
+   (MEMCARD_RESULT_MSG
+      {set $mc_overwrite FALSE}
+      {switch
+         $result
+         (kMCNoError
+            {set $mc_overwrite TRUE}
+            {campaign save_complete}
+            {dialog message bootup_create_success mc_title_saving}
+            {script_task
+               (delay 1)
+               (units kTaskUISeconds)
+               (script
+                  {ui goto_screen cut_scene_screen})})
+         (kMCNoCard
+            {ui goto_screen bootup_save_nocard})
+         (kMCNotEnoughSpace
+            {ui goto_screen bootup_nospace})
+         (kMCFileExists
+            {set $mc_replace_screen $this}
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {set $mc_load_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {set $mc_load_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+            {ui goto_screen bootup_replace_save_check})
+         (kMCNotFormatted
+            {set $nfw_retry_screen $this}
+            {set $nfw_continue_screen bootup_caution_format_cancelled}
+            {set $mc_format_done bootup_create_save}
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {set $mc_save_failed_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {set $mc_save_failed_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+            {set $mc_no_screen bootup_caution_format_cancelled}
+            {set $mc_yes_screen mc_format}
+            {ui goto_screen bootup_format_check})
+         (kMCDifferentCard
+            {ui goto_screen bootup_different_card})
+         {set $mc_retry_screen $this}
+         {set $mc_continue_screen bootup_caution}
+         {set $mc_retry_continue_text save_error}
+         {ui goto_screen retry_continue}})}
+{new
+   GHScreen
+   bootup_different_card
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button1 different_card mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen bootup_create_save})
+         (dl_button2.btn
+            {ui goto_screen bootup_caution})})}
+{new
+   GHScreen
+   bootup_nocard
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 bootup_nocard mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen autosave_disable_check})
+         (dl_button2.btn
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {ui goto_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {ui goto_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
+{new
+   GHScreen
+   bootup_save_nocard
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 bootup_nocard mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen autosave_disable_check})
+         (dl_button2.btn
+            {ui goto_screen bootup_create_save})})}
+{new
+   GHScreen
+   bootup_nospace
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 bootup_nospace mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen bootup_caution})
+         (dl_button2.btn
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {ui goto_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {ui goto_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
+{new
+   GHScreen
+   bootup_corrupt_data
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button1 bootup_corrupt_data mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen bootup_create_save})
+         (dl_button2.btn
+            {ui goto_screen bootup_caution})})}
+{new
+   GHScreen
+   bootup_replace_save_check
+   DIALOG_SCREEN
+   (enter
+      {dialog setup load replace button1 bootup_replace_save_check mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {set $mc_overwrite FALSE}
+            {ui goto_screen $mc_load_screen})
+         (dl_button2.btn
+            {set $mc_overwrite TRUE}
+            {ui goto_screen $mc_replace_screen})})}
+{new
+   GHScreen
+   bootup_caution
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 bootup_caution mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen autosave_disable_check})
+         (dl_button2.btn
+;;;;;if gh2 or 80s standalone or debugs
+#ifndef _MEGA
+#ifndef _ONYX
+            {ui goto_screen bootup_load}
+#endif
+#endif
+;;;;;if mega or onyx
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef 8DBUG
+#ifndef 2DBUG
+#ifndef GH1RX
+            {ui goto_screen bootup_load_new}
+#endif
+#endif
+#endif
+#endif
+#endif
+)})}
+{new
+   GHScreen
+   autosave_disable_check
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button1 autosave_disable_check mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {set $autosave FALSE})
+         (dl_button2.btn
+            {set $autosave TRUE})}
+      {ui goto_screen cut_scene_screen})}
+{new
+   GHScreen
+   bootup_format_check
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 unformatted_card mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen $mc_yes_screen})
+         (dl_button2.btn
+            {ui goto_screen $mc_no_screen})})}
+{new
+   GHScreen
+   bootup_caution_format_cancelled
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 bootup_caution_format_cancelled mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen bootup_caution})
+         (dl_button2.btn
+            {set $mc_overwrite FALSE}
+            {ui goto_screen bootup_create_save})})}
+{new
+   GHScreen
+   mc_format
+   DIALOG_SCREEN
+   (enter
+      {dialog message mc_checking mc_title_caution}
+      {script_task
+         (delay 1)
+         (units kTaskUISeconds)
+         (script
+            {dialog set_message format_card}
+            {memcard format $this})})
+   (MEMCARD_RESULT_MSG
+      {switch
+         $result
+         (kMCNoError
+            {ui goto_screen $mc_format_done})
+         (kMCDifferentCard
+            {memcard format $this})
+         (kMCNoCard
+            {set $mc_retry_screen $this}
+            {set $mc_cancel_screen $mc_save_failed_screen}
+            {set $mc_retry_cancel_text format_no_card_error}
+            {ui goto_screen retry_cancel})
+         (kMCAlreadyFormatted
+            {set $mc_retry_screen $this}
+            {set $mc_cancel_screen $mc_save_failed_screen}
+            {set $mc_retry_cancel_text already_formatted_error}
+            {ui goto_screen retry_cancel})
+         (kMCDamaged
+            {set $mc_overwrite FALSE}
+            {set $mc_retry_screen $this}
+            {set $mc_cancel_screen $mc_save_failed_screen}
+            {set $mc_retry_cancel_text card_damaged_error}
+            {ui goto_screen retry_cancel})
+         {set $mc_retry_screen $this}
+         {set $mc_cancel_screen mc_no_format_warn}
+         {set $mc_retry_cancel_text format_card_error}
+         {ui goto_screen retry_cancel}})}
+{new
+   GHScreen
+   retry_cancel
+   DIALOG_SCREEN
+   (enter
+      {dialog setup retry cancel button2 $mc_retry_cancel_text mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen $mc_retry_screen})
+         (dl_button2.btn
+            {ui goto_screen $mc_cancel_screen})})}
+{new
+   GHScreen
+   retry_continue
+   DIALOG_SCREEN
+   (enter
+      {dialog setup continue retry button1 $mc_retry_continue_text mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen $mc_continue_screen})
+         (dl_button2.btn
+            {ui goto_screen $mc_retry_screen})})}
+{new
+   GHScreen
+   autosave
+   DIALOG_SCREEN
+   (enter
+      {dialog message mc_checking mc_title_saving}
+      {script_task
+         (delay 1)
+         (units kTaskUISeconds)
+         (script
+            {dialog set_message save_saving}
+            {memcard save_data $this $mc_overwrite})})
+   (MEMCARD_RESULT_MSG
+      {set $mc_overwrite FALSE}
+      {switch
+         $result
+         (kMCNoError
+            {dialog message save_success mc_title_saving}
+            {campaign save_complete}
+            {set $mc_overwrite TRUE}
+            {script_task
+               (delay 1)
+               (units kTaskUISeconds)
+               (script
+                  {ui goto_screen $mc_save_success_screen})})
+         (kMCDifferentCard
+            {ui goto_screen save_different_card})
+         (kMCNoCard
+            {set $mc_no_screen $this}
+            {set $mc_yes_screen $mc_save_failed_screen}
+            {ui goto_screen save_nocard})
+         (kMCNotEnoughSpace
+            {set $mc_no_screen $this}
+            {set $mc_yes_screen $mc_save_failed_screen}
+            {ui goto_screen save_nospace})
+         (kMCFileExists
+            {set $mc_no_screen $mc_save_failed_screen}
+            {set $mc_yes_screen $this}
+            {ui goto_screen replace_save_check})
+         (kMCNotFormatted
+            {set $nfw_retry_screen $this}
+            {set $nfw_continue_screen $mc_save_failed_screen}
+            {set $mc_format_done $this}
+            {set $mc_no_screen mc_no_format_warn}
+            {set $mc_yes_screen mc_format}
+            {ui goto_screen save_unformatted})
+         {set $mc_retry_screen $this}
+         {set $mc_continue_screen $mc_save_failed_screen}
+         {set $mc_retry_continue_text save_error}
+         {ui goto_screen retry_continue}})}
+{new
+   GHScreen
+   save_different_card
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button1 different_card mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen autosave})
+         (dl_button2.btn
+            {ui goto_screen $mc_save_failed_screen})})}
+{new
+   GHScreen
+   save_nocard
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 no_card_error mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen $mc_yes_screen})
+         (dl_button2.btn
+            {ui goto_screen $mc_no_screen})})}
+{new
+   GHScreen
+   save_nospace
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button1 no_space_error mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen $mc_yes_screen})
+         (dl_button2.btn
+            {ui goto_screen $mc_no_screen})})}
+{new
+   GHScreen
+   replace_save_check
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 file_exists_error mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {set $mc_overwrite TRUE}
+            {ui goto_screen $mc_yes_screen})
+         (dl_button2.btn
+            {set $mc_overwrite FALSE}
+            {ui goto_screen $mc_no_screen})})}
+{new
+   GHScreen
+   save_unformatted
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 unformatted_card mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen $mc_yes_screen})
+         (dl_button2.btn
+            {ui goto_screen $mc_no_screen})})}
+{new
+   GHScreen
+   mc_no_format_warn
+   DIALOG_SCREEN
+   (enter
+      {dialog setup continue retry button2 no_format_warn mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen $nfw_continue_screen})
+         (dl_button2.btn
+            {ui goto_screen $nfw_retry_screen})})}
+{new
+   GHScreen
+   memcard_load_error
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 $mc_load_text mc_title_error})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen memcard_load})
+         (dl_button2.btn
+            {ui goto_screen $mc_load_failed_screen})})}
+{new
+   GHScreen
+   memcard_save_confirm
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 mc_save_confirm mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {set $mc_overwrite TRUE}
+            {ui goto_screen autosave})
+         (dl_button2.btn
+            {ui goto_screen $mc_save_failed_screen})})}
+{new
+   GHScreen
+   memcard_load_confirm
+   DIALOG_SCREEN
+   (enter
+      {dialog setup continue cancel button2 mc_load_confirm mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {ui goto_screen memcard_load})
+         (dl_button2.btn
+            {ui goto_screen $mc_load_failed_screen})})}
+{new
+   GHScreen
+   memcard_load
+   DIALOG_SCREEN
+   (enter
+      {dialog message mc_checking mc_title_loading}
+      {switch
+         {memcard get_info}
+         (kMCNoCard
+            {set $mc_load_text mc_nocard_error}
+            {ui goto_screen memcard_load_error})
+         {script_task
+            (delay 1)
+            (units kTaskUISeconds)
+            (script
+               {dialog set_message load_loading}
+               {memcard load_data $this})}})
+   (MEMCARD_RESULT_MSG
+      {switch
+         $result
+         (kMCNoError
+            {dialog message load_success mc_title_loading}
+            {set $mc_overwrite TRUE}
+            {script_task
+               (delay 1)
+               (units kTaskUISeconds)
+               (script
+                  {ui goto_screen $mc_post_load_screen})})
+         (kMCNoCard
+            {set $mc_load_text mc_card_removed_error}
+            {ui goto_screen memcard_load_error})
+         (kMCCorrupt
+            {set $mc_load_text mc_corrupt_error}
+            {ui goto_screen memcard_load_error})
+         (kMCDifferentCard
+            {memcard load_data $this})
+         (kMCDamaged
+            {set $mc_retry_screen $this}
+            {set $mc_continue_screen $mc_load_failed_screen}
+            {set $mc_retry_continue_text card_damaged_error_load}
+            {ui goto_screen retry_continue})
+         {set $mc_load_text mc_nodata_error}
+         {ui goto_screen memcard_load_error}})}
+{new
+   GHScreen
+   delete_confirm
+   (selected_slot 0)
+   DIALOG_SCREEN
+   (enter
+      {dialog setup yes no button2 delete_confirm mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {campaign
+               delete_slot
+               [selected_slot]}
+            {autosave_goto options_screen})
+         (dl_button2.btn
+            {ui goto_screen manage_band_screen})})}
+{func
+   goto_nameprof_for_new_profile
+   {nameprof_screen set back_screen manage_band_screen}
+   {nameprof_screen set is_editing FALSE}
+   {nameprof_screen
+      set
+      profile_slot
+      {campaign empty_slot}}
+   {ui goto_screen nameprof_screen}}
+{new
+   GHScreen
+   new_profile_warning
+   DIALOG_SCREEN
+   (enter
+      {dialog setup continue cancel button2 mc_new_profile_warning mc_title_caution})
+   (SELECT_START_MSG
+      {switch
+         $component
+         (dl_button1.btn
+            {goto_nameprof_for_new_profile})
+         (dl_button2.btn
+            {ui goto_screen options_chooseprof_screen})})}
