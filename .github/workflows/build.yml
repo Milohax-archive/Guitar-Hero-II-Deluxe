@@ -1,4 +1,4 @@
-name: Build GHIIDX 1.0
+name: CI
 
 on: [push, pull_request]
 
