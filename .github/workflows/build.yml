@@ -257,6 +257,8 @@ jobs:
             GEN
             IOP
             VIDEOS
+            modding.txt
+            readme.txt
             GH2DEBUG.ELF
             GH2DX.ELF
             SYSTEM.CNF
@@ -370,6 +372,8 @@ jobs:
             GEN
             IOP
             VIDEOS
+            modding.txt
+            readme.txt
             80SDEBUG.ELF
             GH80SDX.ELF
             SYSTEM.CNF
