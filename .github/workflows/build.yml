@@ -190,3 +190,186 @@ jobs:
             80SDEBUG.ELF
             CUSTOMDX.ELF
             SYSTEM.CNF
+
+  build_gh2dx_standalone_ps2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build ARK
+        run: |
+          chmod +x dependencies/arkhelper
+          chmod +x dependencies/dtab
+          chmod +x dependencies/superfreq
+          rm -rf _ark/songs/18andlife
+          rm -rf _ark/songs/aintnothinbut
+          rm -rf _ark/songs/ballstothewall
+          rm -rf _ark/songs/ballroomblitz
+          rm -rf _ark/songs/bangyourhead
+          rm -rf _ark/songs/bathroomwall
+          rm -rf _ark/songs/caughtinamosh
+          rm -rf _ark/songs/electriceye
+          rm -rf _ark/songs/heatofthemoment
+          rm -rf _ark/songs/holdonloosely
+          rm -rf _ark/songs/holydiver
+          rm -rf _ark/songs/iran
+          rm -rf _ark/songs/iwantcandy
+          rm -rf _ark/songs/iwannarock
+          rm -rf _ark/songs/lonelyisthenight
+          rm -rf _ark/songs/losangeles
+          rm -rf _ark/songs/noonelikeyou
+          rm -rf _ark/songs/onlyalad
+          rm -rf _ark/songs/playwithme
+          rm -rf _ark/songs/policetruck
+          rm -rf _ark/songs/radarlove
+          rm -rf _ark/songs/roundandround
+          rm -rf _ark/songs/seventeen
+          rm -rf _ark/songs/shakin
+          rm -rf _ark/songs/synchronicity2
+          rm -rf _ark/songs/turningjapanese
+          rm -rf _ark/songs/thewarrior
+          rm -rf _ark/songs/wegotthebeat
+          rm -rf _ark/songs/whatilikeaboutyou
+          rm -rf _ark/songs/wrathchild
+          rm -rf _ark/songs/becauseitsmidnite
+          rm -rf _ark/songs/spanishcastlemagic
+          rm -rf _ark/songs/graveyardshift
+          rm -rf _ark/songs/tomsawyer
+          rm -rf _ark/songs/behindthemask
+          rm -rf _ark/songs/crawl
+          rm -rf _ark/songs/thunderkiss65
+          rm -rf _ark/songs/debaser
+          rm -rf _ark/songs/imtheone
+          rm -rf _ark/songs/chopsuey
+          rm -rf _ark/songs/trippolette
+          rm -rf _ark/songs/allofthis
+          rm -rf _ark/songs/alloveryou
+          rm -rf _ark/songs/maps
+          rm -rf _ark/songs/greengrass
+          dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
+      
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: GH2DX-2.0-PS2-standalone
+          path: |
+            GEN
+            IOP
+            VIDEOS
+            GH2DEBUG.ELF
+            GH2DX.ELF
+            SYSTEM.CNF
+  build_gh80sdx_standalone_ps2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build ARK
+        run: |
+          chmod +x dependencies/arkhelper
+          chmod +x dependencies/dtab
+          chmod +x dependencies/superfreq
+          rm -rf _ark/songs/badreputation
+          rm -rf _ark/songs/beastandtheharlot
+          rm -rf _ark/songs/billiondollar
+          rm -rf _ark/songs/cantyouhearme
+          rm -rf _ark/songs/carrymehome
+          rm -rf _ark/songs/carryonwayward
+          rm -rf _ark/songs/cherrypie
+          rm -rf _ark/songs/crazyonyou
+          rm -rf _ark/songs/dead
+          rm -rf _ark/songs/freebird
+          rm -rf _ark/songs/freya
+          rm -rf _ark/songs/girlfriend
+          rm -rf _ark/songs/hangar18
+          rm -rf _ark/songs/heartshapedbox
+          rm -rf _ark/songs/hush
+          rm -rf _ark/songs/institutionalized
+          rm -rf _ark/songs/jessica
+          rm -rf _ark/songs/johnthefisherman
+          rm -rf _ark/songs/killinginthenameof
+          rm -rf _ark/songs/laidtorest
+          rm -rf _ark/songs/lastchild
+          rm -rf _ark/songs/lifewasted
+          rm -rf _ark/songs/madhouse
+          rm -rf _ark/songs/messageinabottle
+          rm -rf _ark/songs/misirlou
+          rm -rf _ark/songs/mother
+          rm -rf _ark/songs/monkeywrench
+          rm -rf _ark/songs/possum
+          rm -rf _ark/songs/psychobilly
+          rm -rf _ark/songs/rockandroll
+          rm -rf _ark/songs/rockthistown
+          rm -rf _ark/songs/salvation
+          rm -rf _ark/songs/searchanddestroy
+          rm -rf _ark/songs/shoutatthedevil
+          rm -rf _ark/songs/stop
+          rm -rf _ark/songs/strutter
+          rm -rf _ark/songs/surrender
+          rm -rf _ark/songs/sweetchild
+          rm -rf _ark/songs/tattooedloveboys
+          rm -rf _ark/songs/thembones
+          rm -rf _ark/songs/tonightimgonna
+          rm -rf _ark/songs/trippinonahole
+          rm -rf _ark/songs/trooper
+          rm -rf _ark/songs/warpigs
+          rm -rf _ark/songs/whowasinmyroom
+          rm -rf _ark/songs/woman
+          rm -rf _ark/songs/youreallygotme
+          rm -rf _ark/songs/yyz
+          rm -rf _ark/songs/arterialblack
+          rm -rf _ark/songs/collide
+          rm -rf _ark/songs/drinkup
+          rm -rf _ark/songs/elephantbones
+          rm -rf _ark/songs/fallofpangea
+          rm -rf _ark/songs/ftk
+          rm -rf _ark/songs/gemini
+          rm -rf _ark/songs/jordan
+          rm -rf _ark/songs/kicked
+          rm -rf _ark/songs/ladylightning
+          rm -rf _ark/songs/laughtrack
+          rm -rf _ark/songs/lesstalkmorerokk
+          rm -rf _ark/songs/mrfixit
+          rm -rf _ark/songs/newblack
+          rm -rf _ark/songs/onefortheroad
+          rm -rf _ark/songs/parasite
+          rm -rf _ark/songs/radiumeyes
+          rm -rf _ark/songs/redlottery
+          rm -rf _ark/songs/rawdog
+          rm -rf _ark/songs/six
+          rm -rf _ark/songs/soybomb
+          rm -rf _ark/songs/thelightthatblinds
+          rm -rf _ark/songs/thunderhorse
+          rm -rf _ark/songs/trogdor
+          rm -rf _ark/songs/xstream
+          rm -rf _ark/songs/yeswecan
+          rm -rf _ark/songs/spanishcastlemagic
+          rm -rf _ark/songs/graveyardshift
+          rm -rf _ark/songs/tomsawyer
+          rm -rf _ark/songs/behindthemask
+          rm -rf _ark/songs/crawl
+          rm -rf _ark/songs/thunderkiss65
+          rm -rf _ark/songs/debaser
+          rm -rf _ark/songs/imtheone
+          rm -rf _ark/songs/chopsuey
+          rm -rf _ark/songs/trippolette
+          rm -rf _ark/songs/allofthis
+          rm -rf _ark/songs/alloveryou
+          rm -rf _ark/songs/maps
+          rm -rf _ark/songs/greengrass
+          sed -i -e "s/BOOT2 = cdrom0:\GH2DX.ELF;1/BOOT2 = cdrom0:\GH80SDX.ELF;1/" SYSTEM.CNF
+          dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
+      
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: GH80SDX-2.0-PS2-standalone
+          path: |
+            GEN
+            IOP
+            VIDEOS
+            80SDEBUG.ELF
+            GH80SDX.ELF
+            SYSTEM.CNF
