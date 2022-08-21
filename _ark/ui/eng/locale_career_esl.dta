@@ -1,0 +1,234 @@
+(select_career "`SELECCIONAR CARRERA")
+(easy "FÁCIL")
+(medium "MEDIO")
+(hard "DIFÍCIL")
+(expert "EXPERTO")
+(EASY_STATUS "(X DE X CACIONES)")
+(MED_STATUS "(X DE X CACIONES)")
+(HARD_STATUS "(X DE X CACIONES)")
+(EXPERT_STATUS "(X DE X CACIONES)")
+(status_0 "EL NOVATO")
+(status_1 "ROCKERO")
+(status_2 "PISTOLERO")
+(status_3 "EL NOTAS")
+(status_4 "DESTROZACUERDAS")
+(status_5 "PRO")
+(status_6 "GURÚ")
+(status_7 "GUITAR LEGEND")
+(status_8 "GUITAR HERO")
+(status_9 "GUITAR GOD")
+(status_progress "(%i DE %i CANCIONES)")
+(no_progress " ")
+(CM_PLAY_LIVE_SHOW "TOCAR SHOW EN DIRECTO")
+(CM_SELECT_CHARACTER "CAMBIAR PERSONAJE")
+(CM_SEL_GUITAR "INSTRUMENTO")
+(CM_UNLOCK_SHOP "LA TIENDA")
+(CM_BAND_TITLE "BANDA:")
+(CM_CAREER_TITLE "CARRERA:")
+(CM_STATUS_TITLE "ESTADO:")
+(CM_SCORE_TITLE "PUNTOS DE CARRERA:")
+(CM_CASH_TITLE "PASTA:")
+(cm_char_title "GUITARRISTA:")
+(cm_guitar_title "INSTRUMENTO:")
+(career_cash_format "$%d")
+(career_score_format "%d")
+(SELECT_VENUE "SELECCIONAR ESCENARIO")
+(3_star "***__")
+(4_star "****_")
+(5_star "*****")
+(song_old_venue "Toca en el escenario más reciente para continuar la carrera")
+
+; Six-song tiers (DX)
+#ifndef 8DBUG
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+(song_current_venue "Toca %i/5 canciones para continuar")
+#endif
+#endif
+#endif
+#endif
+
+; Five-song tiers (Encore)
+#ifndef _SHIP
+#ifndef 2DBUG
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef GH1RX
+(song_current_venue "Toca %i/4 canciones para continuar")
+#endif
+#endif
+#endif
+#endif
+#endif
+
+; Mega tiers
+#ifdef _MEGA
+(song_current_venue "Toca %i canciones para continuar")
+#endif
+
+; CE tiers (nothing)
+#ifdef _ONYX
+(song_current_venue " ")
+#endif
+
+(song_current_venue_encore "Toca el bis para continuar")
+(song_win_easy "Toca %i/%i canciones para ganar")
+(song_win_other "Toca la canción final para ganar")
+(ca_reason "¡Enhorabuena por el espectáculo, te la has marcado! Aquí tienes tu parte.")
+(ca_blurb1 "Paga")
+(ca_deductions "menos las deducciones:")
+(ca_blurb2 "Milos, extraído")
+(ca_blurb3 "Racha de notas, perdida")
+(ca_blurb4 "Danny, lo hizo primero")
+(ca_blurb5 "GH Live, mencionado")
+(ca_blurb6 "Clon, instalado")
+(ca_blurb7 "Tiendas de segunda mano, vaciadas")
+(ca_blurb8 "Gergorge, bajado")
+(ca_blurb9 "Energía Estrella, exprimida")
+(ca_blurb10 "GH3, instalado")
+(ca_blurb11 "Loción, perdida")
+(ca_blurb12 "Barra de rasgueo, rakeada")
+(ca_blurb13 "Asistente, llamado")
+(ca_blurb14 "Activision, afiliado")
+(ca_blurb15 "Carpetas, robadas")
+(ca_blurb16 "Citación, 420")
+(ca_blurb17 "Medicación, artritis")
+(ca_blurb18 "Cirugía, muñeca")
+(ca_blurb19 "Juego, desencriptado")
+(ca_blurb20 "Debug ELF, leakeado")
+(ca_blurb21 "Hacks, por favor")
+(ca_blurb22 "Guitarras, estropeadas")
+(ca_blurb23 "Reinicios, utilizados")
+(ca_blurb24 "FC's, chokeados")
+(ca_blurb25 "GHEx, usado")
+(ca_blurb26 "G FUEL, rebajado")
+(ca_blurb27 "tittyfaff, solicitado")
+(ca_yourcut "TE LLEVAS:")
+(ca_spend "Gastate tu guita bien merecida en La Tienda.")
+(CASH_AWARD "DINERO DE LA ACTUACIÓN")
+(LETTERHEAD1
+   {if_else $egg5
+      "MiloHax Records"
+      "Amenaza de Muerte Records"})
+(LETTERHEAD2
+   {if_else
+      $egg5
+      "\qLos amigos no dejan que uses GHEx\q"
+      "\qEsta noche se da todo.\q"})
+(LETTERHEAD3 "LOS ANGELES, CALIFORNIA")
+(STATUS_UPGRADE_BONUS "STATUS_UPGRADE_BONUS")
+(CASH_AWARD_BLURB1 "Gástate la pasta en más guitarras, personajes, canciones y más en La Tienda")
+(CASH_AWARD_BLURB2 "Dinero Bonus recibido por:")
+(CASH_AWARD_BLURB3 "Mejora de Estado en la Carrera")
+(CASH_AWARD_BLURB4 "Conseguir 5 Estrellas")
+(CASH_AWARD_BLURB5 "Cada 1 Millón de Puntos de Carrera")
+(award_3_star "Buena reseña de 3 estrellas. Aquí tienes tu tajada. Recuerda - a mejor show, mejor paga.")
+(award_4_star "Bonita reseña de 4 estrellas. Aquí tienes tu parte. Buen trabajo.")
+(award_5_star
+   {if_else $egg5
+      "Increíble actuación, pero has dejado el escenario hecho trizas. Esto es lo que te costará."
+      "¿5 estrellas? De locos. Aquí tienes tu tajada. Cómprate algo bonito."})
+(award_3_star_status "Buena reseña de 3 estrellas. Aquí tienes tu tajada. Recuerda - a mejor show, mejor paga.")
+(award_4_star_status "Bonita reseña de 4 estrellas. Aquí tienes tu parte. Buen trabajo.")
+(award_5_star_status
+   {if_else $egg5
+      "Increíble actuación, pero has dejado el escenario hecho trizas. Esto es lo que te costará."
+      "¿5 estrellas? De locos. Aquí tienes tu tajada. Cómprate algo bonito."})
+(sponsor_title "¡TE HAN PATROCINADO!")
+(sponsor_sub1 "(Enhorabuena, ve y cuéntaselo a tus amigos.)")
+(sponsor_blurb1 "Ernie Ball cree que tienes algo especial, chaval. Te ofrecen un contrato de patrocinio y un pack premium de cuerdas para que empieces con buen pie.")
+(sponsor_sub2 "(Y tu papá decía que nunca ibas a sacar pasta con esto.)")
+(sponsor_blurb2 "Line 6 Amps cree que has bordado tu último show - ¡así que es hora de dar más caña! Te estás dando un contrato de patrocinio, y un bonito ampli de Line 6 para hacer aún más ruido.")
+(sponsor_sub3 "(¡Vive el sueño!)")
+(sponsor_blurb3 "Ese bis ha corrido la voz y Orange Amps la ha oído. Te ofrecen un contrato de patrocinio y un ampli Orange muy molón para que tus amigos lloren de la envidia.")
+(sponsor_sub4 "(Menos mal que te puedes permitir comprar una cartera más grande.)")
+(sponsor_blurb4 "El público te adora, y VHT Amps se ha dado cuenta. Te están dando un buen contrato de patrocinio, y un amplificador VHT de gama alta para volverlos locos.")
+(sponsor_sub5 "(¿Has considerado contratar un seguro para tu mano de las cuerdas?)")
+(sponsor_blurb5 "Krank Amps cree que estás a punto de subirte al tren de la fama, y quieren estar a bordo. Te ofrecen un contrato de patrocinio y un ampli Krank espectacular como tu ticket para subir.")
+(sponsor_sub6 "(¡Ve y date un baño en tu dinero!)")
+(sponsor_blurb6 "Pero bueno, mírate, acaparando la atención de los peces gordos. Mesa Boogie está muy impresionado con tu última actuación. Te están dando un contrato de patrocinio importante y un amplificador Mesa Boogie para que nadie pueda ignorarte.")
+(sponsor_sub7 "(Hora de empezar a esconderte de los paparazzi.)")
+(sponsor_blurb7 "Tienes renombre, nena, y a Randall Amps le gusta tu estilo. Te ofrecen un contrato de patrocinio tremendo y un ampli Randall para potenciar ese famoso sonido tuyo.)
+(sponsor_sub8 "(Intenta no olvidarte de la gente más pequeña.)")
+(sponsor_blurb8 "¿Ves como toda esa práctica ha merecido la pena? Boss Pedals también lo cree, y te están dando un contrato de patrocinio monstruoso, además de unos pedales Boss para personalizar tu sonido.")
+(sponsor_sub9 "(Ve y compra Speed Test. Te lo has ganado.)")
+(sponsor_blurb9 "Ernie Ball ha estado contigo desde el principio, y están muy orgullosos de tu éxito tremendo. Te ofrecen un contrato de patrocinio nunca visto y cuerdas gratis de por vida. Enhorabuena.")
+(sponsor_cash "Exprimes a tus patrocinadores y consigues:")
+(endgame_encore_title1
+   {if_else $egg5
+      "¡QUIEREN UN MALDITO"
+      "¿DARLE AL PÚBLICO UN"})
+(endgame_encore_title2
+   {if_else $egg5
+      "BIS!"
+      "BIS?"})
+(endgame_encore_score "%d puntos")
+(endgame_encore_review "%d estrellas")
+(endgame_encore_money "$%d conseguidos")
+
+(endgame_encore_letter3
+    {if_else $game80s
+    "Oh Dios mio, el público te está idolatrando. Tú, TIENES que tocar un bis o se van a MORIR. Puedes tocar una más, ¿verdad?"
+    "El público se está desmadrando, mejor que toques un bis. ¿Crees que puedes sacar fuerzas y darles lo que piden?"})
+(endgame_encore_letter4
+    {if_else $game80s
+    "Este es, sin duda, uno de los shows más cañeros DE LA HISTORIA. Tendrás la estamina suficiente para darles otra canción más, ¿no? ¿Por favor?"
+    "Tío, ¡te adoran! Hazle a tus fans un favor y sal ahí de nuevo. ¿Tienes energías para una más?"})
+(endgame_encore_letter5
+    {if_else $game80s
+    "Vaya, ¡el público NO deja de corear tu nombre! En serio, ¡tienes que tocar otro tema más! ¿Puedes aguantar lo suficiente para el gran final?"
+    "¡Están coreando de lo lindo! Piden una más. ¿Puedes aguantar lo suficiente para el gran final?"})
+(endgame_encore_letter6 "¡La gente se está volviendo loca! Vamos campeón, ¡dales lo que quieren! ¿Tienes tiempo para una más?")
+(endgame_encore_freebird1 "Parece que ha llegado la hora. Están pidiendo Free Bird. Sabías que algún día pasaría. ¿Quieres hacerlo?")
+(endgame_encore_finalsong1 "El público se está volviendo loco. Sabes lo que quieren oír: el MEJOR TEMA de punteo de toda la historia. ¿Estás listo?")
+(freebird_confirm1 "Espera, ¿de verdad vas a tocar Free Bird?")
+(freebird_confirm2 "¡Esto sólo lo puede hacer un VERDADERO héroe! \n¿Lo sigues queriendo hacer?")
+(freebird_confirm3 "Vale, última oportunidad... \n¿De verdad que quieres tocar Free Bird?")
+(finalsong_confirm1 "Esto no es apto para cobardes, colega. \n¿De verdad que quieres intentar esta canción?")
+(finalsong_confirm2 "En serio, es MUY JODIDA. \n¿Sigues queriendo intentarlo?")
+(finalsong_confirm3 "Vale, última oportunidad... \n¿De verdad que quieres darle caña a este tema?")
+
+(win_diff
+    {if_else $gamegh1
+       "Te has pasado Guitar Hero Redux en dificultad %s"
+    {if_else $game80s
+       "Te has pasado Guitar Hero Encore Deluxe en la dificultad %s"
+       "Te has pasado Guitar Hero II Deluxe en la dificultad %s"}})
+(win_congrats "¡Enhorabuena!")
+(win_legendary "Tu actuación legendaria será contada durante años.")
+(win_stardom "El Estrellato del Rock te llama...")
+(win_easy
+   {if_else $gamegh1
+      "Querido ______________________,\n\n¡Gracias por jugar a GH1 Redux! Después de todo el trabajo que ha llevado, y todos vosotros espectadores que queríais verlo - no os podíamos dejar colgados. Tal vez volvamos si averiguamos cómo funcionan los modelos. Pero por ahora, con esto basta.\n\nBesos,\nEl Equipo de GH2 Deluxe"
+      {if_else $game80s
+         "Querido ______________________,\n\n¡Buen trabajo completando Guitar Hero Encore Deluxe en Fácil, tío!\n\nLa diversión sólo acaba de empezar, ¿sabes? No te están pagando por esto - pero si juegas en MEDIO, DIFÍCIL o EXPERTO, lo hacen. Tener pasta significar tener guitarras molonas. ¡Es bastante obvio!\n\nEse botón azul puede complicarte las cosas un poquito, pero seguro que puedes con ello. Practica mucho, verás qué pasa.\n\nHasta luego,\nEl Equipo de GH2 Deluxe"
+         "Querido ______________________,\n\nEnhorabuena por pasarte Guitar Hero II Deluxe en Fácil. Muy guay, más canciones para jugar, ¿eh?\n\nDe todos modos, sólo acabas de empezar. Los jugadores en Fácil no reciben dinero - pero los de MEDIO, DIFÍCIL y EXPERTO sí. Y creo que ya sabes lo que puedes hacer con la pasta...\n\nPuede que tengas que entrenar ese meñique, pero seguro que lo harás bien. Usa el Modo Práctica a tu favor.\n\nBesos,\nEl Equipo de GH2 Deluxe"}})
+(win_medium
+   {if_else $gamegh1
+      "Querido ______________________,\n\n¡Gracias por jugar a GH1 Redux! Después de todo el trabajo que ha llevado, y todos vosotros espectadores que queríais verlo - no os podíamos dejar colgados. Tal vez volvamos si averiguamos cómo funcionan los modelos. Pero por ahora, con esto basta.\n\nBesitos,\nEl Equipo de GH2 Deluxe"
+      {if_else $game80s
+	     "Querido ______________________,\n\n¡Flipante! Te has pasado Guitar Hero Encore Deluxe en Medio.\n\nSi aún no estás cansado de triunfar en los escenarios (realmente, ¿quién lo está?), deberías subir las apuestas, a DIFÍCIL o EXPERTO. El público lo adora, a las chicas les mola, y te llevas más pasta. Aunque es muy, muy - digo, MUY duro empezar. Usar los cinco botones no es tarea fácil. ¿Pero la recompensa que te llevas? Es ESTELAR.\n\nDale duro,\nEl Equipo de GH2 Deluxe"
+		 "Querido ______________________,\n\nEnhorabuena por pasarte Guitar Hero II Deluxe en Medio. Ya vas avanzando.\n\nSi aún vas un poco corto de pasta (y sabemos que las estrellas del rock como tú siempre lo están), empieza a trabajar con esas dificultades DIFÍCIL y EXPERTO. ¡Tendrás un color más por el que preocuparte! Pero, si puedes con ello, habrá más cosas por desbloquear y más pasta de por medio.\n\nBesitos,\nEl Equipo de GH2 Deluxe"}})
+(win_hard
+   {if_else $gamegh1
+      "Querido ______________________,\n\n¡Gracias por jugar a GH1 Redux! Después de todo el trabajo que ha llevado, y todos vosotros espectadores que queríais verlo - no os podíamos dejar colgados. Tal vez volvamos si averiguamos cómo funcionan los modelos. Pero por ahora, con esto basta.\n\nUn abrazo,\nEl Equipo de GH2 Deluxe"
+      {if_else $game80s
+	     "Querido ______________________,\n\n¡Tío, eres la caña! ¡Te acabas de pasar Guitar Hero Encore Deluxe en Difícil!\n\n¡Vamos, tienes que probar con EXPERTO! Sé que da un poco de miedo, y que aparecen muchas más notas, pero el dinero y las nuevas guitarras y los derechos para fanfarronearte, son, LA HOSTIA. TUBULARES.\n\nAdemás, sólo un pringado pararía ahora. ¡Seguro que no lo eres!\n\nQue siga la fiesta,\nEl Equipo de GH2 Deluxe"
+		 "Querido ______________________,\n\nEnhorabuena, te has pasado Guitar Hero II Deluxe en Difícil. No está nada mal.\n\nSeguro que ya sabes lo que te espera. El EXPERTO. No hay nuevos colores, pero las notas te llegan más rápidas y furiosas que nunca antes. Es donde los pistoleros ascienden a DIOSES DEL ROCK. Y joder, créeme si merece la pena.\n\nMucha suerte, peregrino.\n\nUn abrazo\nEl Equipo de GH2 Deluxe"}})
+(win_expert
+   {if_else $gamegh1
+      "Querido ______________________,\n\n¡Gracias por jugar a GH1 Redux! Después de todo el trabajo que ha llevado, y todos vosotros espectadores que queríais verlo - no os podíamos dejar colgados. Tal vez volvamos si averiguamos cómo funcionan los modelos. Pero por ahora, con esto basta.\n\nMucho amor,\nEl Equipo de GH2 Deluxe"
+      {if_else $game80s
+	     "Querido ______________________,\n\n¡¿En serio?! ¡¿Te has pasado Guitar Hero Encore Deluxe en Experto?! Eres la hostia, chaval. La. Hostia.\n\nUna pregunta rápida: ¿has sacado CINCO ESTRELLAS en todo? Si lo has hecho, échale un vistazo a La Tienda. Te espera el tema MÁS CAÑERO de todos los temas de speed metal, \qSpeed Test\q. En serio, es la leche. Deberías estirar primero.\n\nAhora en serio, ha sido un show increíble. Eres una leyenda.\n\nMucho amor,\nEl Equipo de GH2 Deluxe"
+		 "Querido ______________________,\n\n¡Y se acabó! Guitar Hero II Deluxe en Experto DESTROZADO. Esa setlist expandida te llevará un poco más de tiempo, pero hay algunas joyitas en ella.\n\nAhora hablemos de la recompensa definitiva. Si consigues CINCO ESTRELLAS en todos los temas, deberías tener suficiente dinero para desbloquear el ultra cruel \qSpeed Test\q. ¡Y se llama así por alguna razón! Pondrá a prueba tu velocidad, tu aguante - y tu EXISTENCIA. Menos mal que hemos arreglado el límite de rasgueos, ¿eh?\n\nMucho amor,\nEl Equipo de GH2 Deluxe"}})
+(unlock_profaceoff1 "Querido ____________________,")
+(unlock_profaceoff2 "ENHORABUENA")
+(unlock_profaceoff3 "¡Has desbloqueado el Modo DUELO PRO!")
+(unlock_profaceoff4
+    {if_else $game80s
+       "Bueno, el Modo DUELO mola, hasta que tu amigo repelente suelta que estás tocando la parte más fácil y te llama tonto, y tú te quedas como, \q¿Que sí?\q y acaba en una somanta de palos. Ahora ya puedes relajarte porque TU habilidad No tiene rival y podrás demostrarlo en el Modo DUELO PRO, un duelo a muerte nota por nota que se encuentra en el menú Multijugador.\n\nDiviértete,\nLos Managers"
+       "¿Sabes como cada vez que jugáis en el Modo DUELO, tu colega se queja cómo te tocan las partes más fáciles y con menos notas y bla bla bla, y es un festival de los lloros? Pues eso se acabó, mi amigo cañero.\n\nPrueba el Modo DUELO PRO en el menú Multijugador ve nota por nota en el guitarrarmageddon definitivo.\n\nDiviértete,\nLos Managers"})
+(unlock_song1 "Enhorabuena")
+(unlock_song2 "Has desbloqueado:")
+(unlock_song3 "Este tema está ahora disponible en tu setlist.")

@@ -1,0 +1,119 @@
+; Eight tiers (DX)
+#ifndef _ENCO
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef 8DBUG
+#ifndef GH1RX
+(song_header_battle "1. Los Primeros Pasos")
+(song_header_small1 "2. Calentando Amplis")
+(song_header_small2 "3. Rompe-Cuerdas")
+(song_header_big "4. Destrozar y Quemar")
+(song_header_theatre "5. El Punteo Contraataca")
+(song_header_fest "6. Riffeando Sin Descanso")
+(song_header_arena "7. Escalando Escalas")
+(song_header_stone "8. Para Derretirse")
+(song_header_store "Temas Bonus")
+#endif
+#endif
+#endif
+#endif
+#endif
+
+; Six tiers (Encore)
+#ifndef _SHIP
+#ifndef _MEGA
+#ifndef _ONYX
+#ifndef 2DBUG
+#ifndef GH1RX
+(song_header_battle2 "1. La Nueva Ola del New Wave")
+(song_header_small3 "2. Ligados de Plomo")
+(song_header_small4 "3. Vibratos de Vicio")
+(song_header_theatre2 "4. Divebombs para Ensordecer")
+(song_header_fest2 "5. La Ola de los Condenados")
+(song_header_arena2 "6. Directos desde el Infierno")
+(song_header_store "Temas Bonus")
+#endif
+#endif
+#endif
+#endif
+#endif
+
+; 14 tiers (Mega)
+#ifndef _SHIP
+#ifndef _ENCO
+#ifndef _ONYX
+#ifndef 2DBUG
+#ifndef 8DBUG
+#ifndef GH1RX
+(song_header_battle "1. Los Primeros Pasos")
+(song_header_battle2 "2. La Nueva Ola del New Wave")
+(song_header_small1 "3. Calentando Amplis")
+(song_header_small3 "4. Ligados de Plomo")
+(song_header_small2 "5. Rompe-Cuerdas")
+(song_header_small4 "6. Vibratos de Vicio")
+(song_header_big "7. Destrozar y Quemar")
+(song_header_theatre "8. El Punteo Contraataca")
+(song_header_theatre2 "9. Divebombs para Ensordecer")
+(song_header_fest "10. Riffeando Sin Descanso")
+(song_header_fest2 "11. La Ola de los Condenados")
+(song_header_arena "12. Escalando Escalas")
+(song_header_arena2 "13. Directos desde el Infierno")
+(song_header_stone "14. Para Derretirse")
+(song_header_store "Temas Bonus")
+#endif
+#endif
+#endif
+#endif
+#endif
+#endif
+
+; Customs Edition (which are all empty :steve:)
+#ifndef _DRUM
+#ifdef _ONYX
+(song_header_battle " ")
+(song_header_battle2 " ")
+(song_header_small1 " ")
+(song_header_small3 " ")
+(song_header_small2 " ")
+(song_header_small4 " ")
+(song_header_big " ")
+(song_header_theatre " ")
+(song_header_theatre2 " ")
+(song_header_fest " ")
+(song_header_fest2 " ")
+(song_header_arena " ")
+(song_header_arena2 " ")
+(song_header_stone " ")
+(song_header_store "Temas Custom")
+#endif
+#endif
+
+; Expansion
+#ifdef _DRUM
+(song_header_battle "Licks Calientes (sin problema)")
+(song_header_battle2 "Canciones Candentes (vale, puedo hacerlo)")
+(song_header_small1 "Temas Abrasadores (practica estos)")
+(song_header_small3 "Riffs para Derretirse (me dejan en ridículo)")
+(song_header_small2 " ")
+(song_header_small4 " ")
+(song_header_big " ")
+(song_header_theatre " ")
+(song_header_theatre2 " ")
+(song_header_fest " ")
+(song_header_fest2 " ")
+(song_header_arena " ")
+(song_header_arena2 " ")
+(song_header_stone " ")
+(song_header_store "¿Qué es eso? ¿RB4? :steve:")
+#endif
+
+; GH1 Redux
+#ifdef GH1RX
+(song_header_battle "Guitar Hero Redux Demo")
+(song_header_small1 " ")
+(song_header_small2 " ")
+(song_header_theatre " ")
+(song_header_fest " ")
+(song_header_arena " ")
+(song_header_store "Temas Bonus")
+#endif
