@@ -1,0 +1,276 @@
+(store_shop "LA TIENDA")
+(GUITAR_STORE "BAZAR SIN DESCANSOS")
+(SELECT_ITEM "ELEGIR ARTÍCULO")
+(store_guitar "GUITARRAS")
+(store_skin "ACABADOS")
+(store_song "TEMAS")
+(store_character "PERSONAJES")
+(store_outfit "TRAJES")
+(store_video "VÍDEOS")
+(store_cash_format "DINERO: $%d")
+(category_cost "$%d - $%d")
+(category "CATEGORÍA")
+(guitar_shop_desc "Somos distribuidores Gibson Exclusivos. No puedes comprar la felicidad, pero te puedes acercar bastante.")
+(skin_shop_desc "Actualiza tu arsenal con un nuevo acabado que hará que tu hacha esté nueva y resplandeciente.")
+(song_shop_desc "Muchos más temas extra disponibles, ¡incluyendo el ganador de nuestro concurso, The Last Vegas!")
+(video_shop_desc "Es como tener un pase backstage, excepto que puedes seguir respetándote por la mañana.")
+(character_shop_desc "Iconos del rock, apartados en una esquina de la tienda para su compra. Es verdaderamente trágico. ¡Libéralos!")
+(outfit_shop_desc "A veces la fama conlleva llevar ropa muy rara. Ayuda a tus héroes con un nuevo look.")
+(guitar_bought_blurb "¡Gracias por tu compra!\n\nEsta guitarra está ahora disponible en la pantalla Cambiar Guitarra.")
+(skin_bought_blurb "¡Gracias por tu compra!\n\nEste acabado de guitarra está ahora disponible en la pantalla Cambiar Guitarra.")
+(song_bought_blurb "¡Gracias por tu compra!\n\nEste tema ha sido añadido a la Setlist en todos los modos de juego.")
+(character_bought_blurb "¡Enhorabuena por tu nuevo Guitar Hero!\n\n Este personaje está listo para subir al escenario y te está esperando en el menú Cambiar Personaje.")
+(outfit_bought_blurb "¡Gracias por tu compra! \n\nEste traje está ahora disponible en el menú Cambiar Personaje.")
+(video_bought_blurb "¡Gracias por tu compra!\n\nVe al menú de Opciones desde el Menú Principal para ver este vídeo.")
+(shop_locked_reward "???")
+(shop_locked_cost "$???")
+
+; Guitar descriptions
+(explorer_shop_desc "Junto con la V y la Moderne, la Explorer (su nombre original se cambió en 2002) fue parte de los tres diseños de guitarra progresivos de Gibson a finales de los 50.")
+(lespaul_doublecut_shop_desc "Apareciendo por primera vez en 1958 con un doble corte, esta versión de la Les Paul permite un fácil acceso a los 22 trastes, manteniendo cualidades clave como los legendarios sustains de una LP.")
+(firebird_shop_desc "Lanzada en 1963 como una versión \qrebajada\q de la (entonces) poco exitosa Explorer, la Firebird dispone de un mástil que atraviesa el cuerpo, pastillas humbucker, y un cabezal esculpido en dos tonos con clavijas de banjo.")
+(epiphone_coronet_shop_desc "Originalmente, esta guitarra para principiantes de una sola pastilla con doble corte estaba programada para ser lanzada como una Gibson, con el nombre \qModerne,\q aunque cuando apareció en 1958 fue misteriosamente renombrada y cambiada de marca.")
+(kramer_vanguard_shop_desc "Un hito del heavy metal, la guitarra Kramer con forma de V fue la favorita por los adictos a la velocidad desde su introducción, gracias a sus pastillas súper calientes y un mástil rápido y de acción baja.")
+(moderne_shop_desc "El hermano condenado de la Flying V y la Explorer, la Gibson Moderne es el Santo Grial de los coleccionistas de guitarras - incluso la existencia de un único modelo fabricado durante su producción está en duda.")
+(corvus_shop_desc "Aunque sin elegancia, el intento de estética New Wave de Gibson en los 80 ha conseguido seguidores leales entre los aficionados de las guitarras con un gusto para lo bizarro.")
+(es335_shop_desc "Este aclamado modelo semi acústico dispone de madera de arce arqueada trasera y delantera, un mástil fino y rápido ajustable, y pastillas dobles estilo humbuck con controles separados de volumen y tono, que pueden ser predefinidos por el intérprete.")
+(kramer_650_shop_desc "La locamente innovadora 650 de Kramer dispone de un cuerpo de arce-nogal, afinadores Sperzel, un traste cero, y - lo más significativo - un cuello de aluminio con un cabezal bifurcado. La inusual construcción del cuello produce un sustain extendido.")
+(eds_shop_desc "Gibson empezó a ofrecer mástil-dobles por encargo en 1958 - inicialmente como combos de 6 y 12 cuerdas y un combo de 6 cuerdas y una mandolina. Con una tapa curvada de abeto y cortes dobles Florentinos, recuerda al estilo de cuerpo de las SG.")
+(lespaul_doublecut_sticker_shop_desc "Las Melody Makers de doble corte empezaron como guitarras para principiantes, pero con el paso del tiempo y una cierta asociación con...(ahem) ciertas \qRunaways\q exitosas, las Melody Makers de los 60 se han vuelto muy codiciadas.")
+(lespaul_sonex_shop_desc "Lazada en 1980, el cuerpo de la Sonex Multi-phonic estaba compuesto por un material híbrido bautizado como \qResonwood\q (núcleo de madera, capa exterior de resina) y la guitarra disponía de muchas características de la Les Paul, pero a un precio más asequible.")
+(lespaul_marauder_shop_desc "La oferta \qbarata\q de Gibson en los 70 de cuerpo sólido, la Marauder era un amalgama de elementos de diseño, alardeando de un cuerpo de aliso \qestilo Les Paul\q, un cabezal de la serie V, y disponiendo tanto de una pastilla humbucker como de una single coil.")
+(epiphone_casino_shop_desc "Una de las guitarras favoritas de John Lennon, la Epiphone Casino tuvo un papel importante a la hora de dar forma a los sonidos de los 60.")
+(epiphone_sheraton_shop_desc "Una semi acústica más grande conocida por su tono cálido, la Sheraton de corte doble dispone de un cabezal incrustado, incrustaciones de traste con forma de bloques/triángulos, y una unión de cuello y cuerpo.")
+(chet_atkins_shop_desc "Lanzada en 1986 e inspirada en la semi acústica de Chet Atkins, este modelo se construyó en una estrecha colaboración con Atkins y dispone de un bloque de madera interior para un sustain mayor, un cordal Bigsby chapado en oro, y un reposabrazos de caparazón.")
+
+; Finish descriptions
+(lp_ebony_shop_desc "Esta Gibson Les Paul Standard clásica viene en un acabado de ébano. No es elegante, ¡pero mola!")
+(lp_cayenne_shop_desc "Dale un toque especial a la solidbody eléctrica por excelencia con este barniz especial rojo cayena para la Les Paul Standard.")
+(lp_gold_shop_desc "El acabado dorado se ofreció originalmente de 1952-1958, volviendo en 1968 y siguiendo con fuerza a día de hoy.")
+(lp_goddessburst_shop_desc "Con un perfil más fino y un peso más ligero, la estilosa apariencia de la Diosa - cortesía de acabados tales como Rose Burst sobre la tapa de arce, junto con pastillas translúcidas estilo humbuckers - atrae a músicos sin importar su género.")
+(lp_acai_shop_desc "La leyenda dice que esta guitarra te otorga la habilidad mágica de conseguir un 10% de descuento en tu siguiente pedido de GFUEL. ¡Sólo usa el Código de Descuento \qACAI\q y observa cómo surge la magia!")
+(lp_zakk_shop_desc "Basada en el diseño con forma de diana icónico de Zakk Wylde, este modelo signature combina elementos visuales audaces con modificaciones listas para \qdestrozar punteos\q, incluyendo dos pastillas EMG humbuckers y un cuello de arce sin refinar.")
+(sg_ebony_shop_desc "Esta Gibson SG de ébano tiene un cordal personalizado. Un hacha con estilo, esta guitarra no te decepcionará.")
+(sg_white_shop_desc "Guitarristas como Wayne Kramer, Eric Bloom, y Duane Allman han ayudado a convertir la Gibson SG en un icono con derecho. Únete a ellos, con este modelo consagrado Worn White.")
+(sg_gt_shop_desc "La serie GT está enfocada para guitarristas asiduos, con varias características para aguantar. Un cuello reforzado con doble armadura, y un conector Neutrik y doble cierre de correa que asegura que todo se quede bien conectado.")
+(sg_flames_shop_desc "Seguramente estés tocando una SG mientras conduces por la Highway to Hell - así que mejor que anticipes tu destino con este acabado personalizado.")
+(fv_v2_shop_desc "A finales de los 70, el uso de la Flying V por celebridades como Jimi Hendrix y Dave Davies ha causado varias reediciones de este modelo. La V2 de segunda generación disponía de dos pastillas con forma de Boomerang.")
+(fv_century_shop_desc "Toma el sol en el reflejo (literalmente) de la gloria de esta guitarra icónica, presentada en un estilo del nuevo milenio completo con un golpeador reflectante de cuerpo completo.")
+(fv_red_shop_desc "Hazles creer que llevas haciendo esto durante años, cortesía de este acabado muy \qdesgastado\q.")
+(fv_cracked_shop_desc "El taller personalizado de Harmonix vuelve a hacer su magia con este acabado blanco y azul de la Gibson Flying V.")
+(fv_buckethead_shop_desc "Una de las guitarras más icónicas de Buckethead, sólo por destrás de su signature Les Paul. No mejorará tus probabilidades de pasarte \qJordan\q.")
+(exp_white_shop_desc "Algunos de los ritmos más brutales del speed metal de los 80 se fabricaron en una Gibson Explorer blanca. Abrochate este bicho malo y Jump in the Fire, colega.")
+(exp_nat_shop_desc "Explorers como esta, con este acabado Natural han sido tocadas por Bob Mould, The Edge, y Allen Collins de Lynyrd Skynyrd, entre otros.")
+(exp_sun_shop_desc "Si no los puedes cegar con tus licks flameantes, prueba a cegarlos con esta Explorer con un acabado abrasador del Rising Sun.")
+(exp_swirl_shop_desc "Este llamativo acabado negro y rojo potencia uno de los diseños más reconocidos y atrevidos de Gibson.")
+(lp_dbl_red_shop_desc "Una guitarra clásica con un acabado cereza clásico.")
+(lp_dbl_yellow_shop_desc "Gracias a las perversas filigranas de Johnny Thunders, la TV Yellow de doble corte se ha convertido en la Gibson por excelencia del trash-punk.")
+(lp_dbl_green_shop_desc "El rayo golpea tres veces con este acabado personalizado para la Gibson Les Paul Special.")
+(lp_dbl_resin_shop_desc "Gibson se vuelve Jurásica con esta peculiar LP de resina con doble corte - con su mosquito prehistórico atrapado y todo.")
+(fb_ebony_shop_desc "Disponiendo de un cuello de encaje, en lugar del clásico cuello atravesado de la Firebird, la Firebird Studio ofrece un ligero giro a esta guitarra de referencia.")
+(fb_blue_shop_desc "La extraña forma del cuerpo de la Firebird se ha dicho que estaba \qdel revés,\q debido a que el cuerno del lado agudo está más alto y pronunciado que el otro - un perfil único de esta guitarra y la Explorer, de la cual la Firebird fue derivada.")
+(fb_copper_shop_desc "Este puro acabado de cobre hace juego con la forma poco convencional de la Gibson Firebird.")
+(fb_leopard_shop_desc
+   {if_else $egg5
+      "¿Alguien ha llamado a Spike Lee? Porque este acabado de Leopardo tiene la fiebre de la jungla. ¡Miauuuu! Esta gatita tiene garras, amigo mio. Bol de leche - ¡para la mesa tres! Ehmmm... ¿ha quedado claro? Bien."
+      "¡Miauuuu! Esta gatita tiene garras, amigo mio. Bol de leche - ¡para la mesa tres! Ehmmm... ¿ha quedado claro? Bien."})
+(fb_hippie_shop_desc "Gastate tu dinero ganado con esfuerzo por este acabado molón para la Gibson Firebird.")
+(coronet_cherry_shop_desc "En 1959, Epiphone emepzó a vender la Coronet en rojo cereza con una pastilla P-90. Estas opciones \qbaratas\q ahora alcanzan precios desorbitados entre los coleccionistas.")
+(coronet_burst_shop_desc "Con piezas de oro, dos pastillas humbuckers de alta potencia, y un cabezal más tradicional de 6 afinadores en un lado, este modelo es la prueba de que Coronet sigue siendo elegante.")
+(coronet_green_shop_desc "Maximiza el estilo retro molón de la Coronet con este acabado verde radiante.")
+(van_yellow_shop_desc "Desenfunda la gomina y vístete en spandex - esta Vanguard amarillo brillante te devuelve en el tiempo cuando el hair metal dominaba las lista, te gustase o no.")
+(mod_ebony_shop_desc "Haz una declaración de intenciones con la Gibson Moderne. El diseño postmoderno te hará el centro de atención.")
+(mod_cherry_shop_desc "Imitando el diseño angular y afilado de las aletas de los coches de los 50, este radical diseño de la misteriosa Moderne la habría convertido en una pieza muy demandada de la época, incluso si hubiese estado bien distribuida.")
+(mod_dragon_shop_desc "La innovadora forma de la Gibson Moderne toma el vuelo con este acabado Night Dragon. ¡Sólo el rock puede amansar a esta bestia!")
+(cor_white_shop_desc "Un estilo clásico para una guitarra que es de todo menos normal. La Gibson Corvus.")
+(cor_nat_shop_desc "La guitarra \qabre botellas\q, au naturel. La Corvus, con su corte en v descentrado, diapasón de palisandro, y un cuello atornillado de arce, se retiró del mercado en 1984.")
+(cor_snake_shop_desc "Un punto de vista diferente en una ya extraña guitarra, la Custom Snakeskin Gibson Corvus deja una impresión memorable.")
+(es_ebony_shop_desc "Tan elegantes como son, levantarás algunas cejas al tocar esta Ebony Gibson ES-335.")
+(es_cherry_shop_desc "Eric Clapton, Alvin Lee, y otro numerosos guitarristas iluminados han aprovechado al máximo el fino cuerpo de doble corte de la ES335 y su cuello rápido y de acción baja, fabricando algunas de las líneas de guitarra más memorables de la música popular.")
+(650_white_shop_desc "A veces los chicos buenos no van de blanco - bajo este rompedor acabado se encuentran algunas de las innovaciones más cañeras de finales de los 70, haciendo que la 650 siga siendo tope de gama a día de hoy.")
+(eds_white_shop_desc "La EDS-1275 ha sido tocada por una sorprendente variedad de guitarristas, incluyendo a James Hetfield, Alex Lifeson, Tom Morello, Don Felder, Pete Townshend, y Zakk Wylde.")
+
+; Unlock/specialty guitars
+(fish_reward_shop_desc "Esta guitarra tiene un diseño muy práctico y eficiente. Porque parece un pez.")
+(usa_reward_shop_desc "A veces la gente piensa que es buena idea hacer guitarras con formas raras. A veces la gente se bebe un vaso de vinagre pensando que es zumo de manzana. Esa cosas ocurren.")
+(coffin_reward_shop_desc "Los ataúdes son chulos de una forma un poco siniestra, propia de los Misfits. Las guitarras también son chulas. En principio debería de funcionar.")
+(viking_reward_shop_desc "Los Vikingos eran marineros Nórdicos conocidos por sus violentos saqueos a lo largo de las costas de Francia y las Islas Británicas entre los siglos 8 y 11. Toda esta historia culmina en una guitarra con forma de vikingo con una espada en su cabeza.")
+(snaketapus_reward_shop_desc "\q¿Que qué es una 'snaketapus'?\q Verás, es una calavera con serpientes saliendo de ella y...ehhhh...es una guitarra.")
+(eyeball_reward_shop_desc "Una vez un tío me dijo, \qGracias a Dios que nadie ha hecho una guitarra con forma de ojo humano.\q En algún lugar, ese hombre está llorando.")
+(battleaxe_reward_shop_desc "Es posible que alguno de los de Manowar toque una guitarra así, lo cual supongo que significa algo.")
+(log_reward_shop_desc "La primera Les Paul de cuerpo sólido, construida en 1941, se llamaba \qThe Log,\q por su peso impráctico y construcción tosca. Esta guitarra, por otro lado, es literalmente un tronco.")
+(scythe_shop_desc "Pensándolo mejor, en verdad deberías de tenerle miedo a la muerte. Preparada para puntear de muerte o dar muerte, esta 'hacha' es bastante peligrosa.")
+(air_guitar_shop_desc "Esta la metimos en la tienda porque necesitábamos más espacio en el menú de Extras. De verdad.")
+
+; Locked guitar descriptions
+(fish_reward_locked_desc
+   {if_else $egg5
+      "Esta guitarra es sólo para los que han completado la gira en FÁCIL."
+      "Pásate el juego en FÁCIL primero, campeón. Entonces podrás comprarte este bicho malo."})
+(usa_reward_locked_desc
+   {if_else $egg5
+      "Consigue 5 estrellas en todos los temas en FÁCIL, y podrás comprar esta guitarra."
+      "Consigue 5 estrellas en todos los temas en FÁCIL primero y luego negociaremos."})
+(coffin_reward_locked_desc
+   {if_else $egg5
+      "¿Has terminado la gira en MEDIO, o no?"
+      "Oye, te tienes que pasar el juego en MEDIO antes de que te podamos vender esta. Lo siento."})
+(viking_reward_locked_desc
+   {if_else $egg5
+      "¿Has conseguido 5 estrellas en tu gira en MEDIO, o no?"
+      "Si consigues 5 estrellas en todos los temas en MEDIO, serás digno de esta guitarra."})
+(snaketapus_reward_locked_desc
+   {if_else $egg5
+      "Este status symbol no lo puede utilizar cualquiera, ¿sabes? Pásate DIFÍCIL y hablamos."
+      "Oh tío. DE VERDAD que deberías pasarte el juego en DIFÍCIL para conseguir esta. En serio."})
+(eyeball_reward_locked_desc
+   {if_else $egg5
+      "Clava todos los temas en DIFÍCIL, y nos pensaremos si te dejamos comprar una."
+      "Consigue 5 estrellas en todos los temas en DIFÍCIL. Lo sé, da miedo. Pero puedes hacerlo, jefe."})
+(battleaxe_reward_locked_desc
+   {if_else $egg5
+      "Sólo para Jugadores Legendarios EXPERTOS que se han pasado la gira."
+      "Pásate EXPERTO. Tienes que hacerlo. Porque esta guitarra mola mazo."})
+(log_reward_locked_desc
+   {if_else $egg5
+      "Cinco estrellas. EXPERTO. En todo."
+      "Si te tomas tu tiempo para conseguir 5 estrellas en todos los temas en EXPERTO, esta guitarra compensará el hecho de que has perdido a todos tus amigos."})
+
+; Controller descriptions
+(redoctane_shop_desc "Esta réplica de la SG a escala 3/4 - una que seguramente reconocerás - fue introducida por primera vez en el primer Guitar Hero a través de un código de truco. Menos mal que a Harmonix se le olvidó quitar los archivos del segundo juego, por lo que aquí la traemos de vuelta.")
+(redoctane_white_shop_desc "Inicialmente, la Harmonix Signature SG venía en negro con un golpeador blanco, en lugar del negro sobre rojo de la SG tradicional. Esto resultó en un acabado con el sobrenombre de la guitarra \qtuxedo\q.")
+(redoctane_pink_shop_desc "Dónde o cuándo se puso en venta este acabado sigue siendo un debate. Se dice en raras ocasiones aparecen en subastas online.")
+(redoctane_target_shop_desc "Vendida exclusivamente en tiendas Target® como un pack de guitarra, comparte los colores de la tienda, rojo sobre blanco. También escapa de los adornos corporativos, siendo un acabado bastante limpio.")
+(redoctane_walnut_shop_desc "¿Quién dijo que solo las guitarras de verdad estaban hechas de madera? Vale, realmente no es madera de VERDAD - pero eh, se ve bastante fresca.")
+(redoctane_yellow_shop_desc "Una verdadera rareza, una Harmonix Signature SG amarilla se mostró en el salón de exposición del E3 2006. Sólo se ha avistado un único modelo, en un vídeo con mala calidad subido a YouTube ese mismo año.")
+(redoctane_green_shop_desc "La similarmente desafortunada hermana del acabado Yellow E3, hasta la fecha, ni una sola guitarra de las dos ha resurgido al público tras su presentación inicial.")
+(redoctane_scott_shop_desc "Un extraño híbrido de partes sacadas de otras guitarras de juguete, esta Signature SG completamente blanca es única en su especie - para bien o para mal.")
+(redoctane_jnack_shop_desc "Dice la leyenda que jnack se coló en la sala de descanso de Activision para robarles las guitarras, pero como Activision ya había matado a la saga dos veces, a nadie le parecía importarle.")
+
+; Songs
+(arterialblack "Arterial Black")
+(becauseitsmidnite "Because, It's Midnite")
+(collide "Collide")
+(drinkup "Drink Up")
+(elephantbones "Elephant Bones")
+(fallofpangea "Fall of Pangea")
+(ftk "FTK")
+(gemini "Gemini")
+(jordan "Jordan")
+(kicked "Kicked to the Curb")
+(laughtrack "Laughtrack")
+(lesstalkmorerokk "Less Talk More Rokk")
+(ladylightning "Push Push (Lady Lightning)")
+(mrfixit "Mr. Fix-It")
+(newblack "The New Black")
+(onefortheroad "One for the Road")
+(parasite "Parasite")
+(radiumeyes "Radium Eyes")
+(rawdog "Raw Dog")
+(redlottery "Red Lottery")
+(six "Six")
+(speedtest "Speed Test")
+(soybomb "Soy Bomb")
+(thelightthatblinds "The Light That Blinds")
+(thunderhorse "Thunderhorse")
+(trogdor "Trogdor")
+(xstream "The X-Stream")
+(yeswecan "Yes We Can")
+(arterialblack_shop_desc "Drist vuelve para ofrecernos una dosis doble de punteos voladores con Arterial Black.")
+(collide_shop_desc "Anarchy Club vuelve a Guitar Hero con \qCollide,\q su nueva canción de su próximo E.P. - \qA Single Drop of Red.\q ¿Quieres saber cómo suena una canción de amor para el apocalipsis? Pues así...")
+(drinkup_shop_desc "OUNCE of SELF está listo para destrozar con metal toda la faz de este planeta. Con sus tonos que hacen temblar la tierra, esta banda tiende a dejar huella en la escena del metal.")
+(elephantbones_shop_desc
+   {if_else $egg5
+      "Colchón inflable, flotando en papeles dispersos por el suelo, remando con bolígrafos más allá de las distracciones, náufrago en mi isla gritando a los transeúntes, tan lejos que parece música...gOdFoRbId...That Handsome Devil."
+      "That Handsome Devil: Nacidos de químicos y la chispa de un rayo, justo a tiempo para romperle los dientes al mundo."})
+(fallofpangea_shop_desc "Valient Thorr escribió esta canción sobre el principio de la Tierra, para explicar lo que realmente sucedió...cómo los dinosaurios murieron por el clima y cómo la Tierra fue colonizada por Venusianos en busca de un nuevo hogar.")
+(ftk_shop_desc "VAGIANT está compuesto por 3 malhechores de HMX (Elena, The Hellion, y Leeanne) y un baterista peleón (LoWreck). Cuando no escriben himnos muy editados como este, emplean su tiempo libre en odiar cosas.")
+(gemini_shop_desc "\qKahanek se deja llevar (en \qReal Life\q) con una vívida demostración tras otra del puro placer de tocar una guitarra eléctrica como si la vida te fuese en ello.\q\n- Jason Warburg\n- \qThe Daily Vault\q (no confundir con Jason Warburg de HMX)")
+(jordan_shop_desc "Buckethead escribió y grabó \qJordan\q específicamente para Guitar Hero II (¡en un gallinero, sin más!)")
+(kicked_shop_desc "Noble Rot es puro rock 'n' roll Americano con una guarnición extra de FIESTA. Fundados en 2006, si primer album debuta el 7 de diciembre (en el momento que salió el juego original).")
+(laughtrack_shop_desc "En un intento de forzar a los oyentes a mirar más allá del estilo boy-band mono y bien peinados que les hizo famosos, The Acro-brats de Boston no se han afeitado o duchado desde 2005.")
+(lesstalkmorerokk_shop_desc "¡Deja de hablar, empieza a rockear! Freezepop está de vuelta con teclados distorsionados y las llaves para el Eliminator que conseguimos baratas de la Cima.")
+(ladylightning_shop_desc "Bang Camaro está lentamente transformando Boston en el nuevo Sunset Strip. Esconded a vuestras novias.")
+(mrfixit_shop_desc "Bajo tu capucha, el lacayo de HMX y cantante de Crowns Jason Kendall es un tío multi usos.")
+(newblack_shop_desc "\qSi la única cosa importante que tu banda tiene en su agenda es tocar en la feria del condado o en el estadio de la liga menor de béisbol, es hora de colgar las botas.\q\n- Keith Buckley\n- Every Time I Die")
+(onefortheroad_shop_desc "Breaking Wheel (antes conocidos como Artillery) es un trío de Boston que se pasa los límites del metal por el forro. Se es heavy, lo tocarán.")
+(parasite_shop_desc "Las leyendas de Boston, The Neighborhoods fueron los pioneros del sonido garage-rock que sigue dominando la música local de hoy en día.")
+(radiumeyes_shop_desc "Una canción interesante, pegadiza, y tocable, escrita sólo para Guitar Hero II por Count Zero, una banda de Boston conocida por sus peculiaridades. Y sus coqueteos. Y sus absurdidades. Y sus batiburrillos de conjuros.")
+(rawdog_shop_desc "Rock a toda pastilla que nunca frena. Una gran mezcla de rock, garage y post-punk. Los ganadores del concurso, The Last Vegas, tienen lo que hay que tener - América nunca sabrá lo que les golpeó. Conseguid su nuevo disco \qSEAL THE DEAL.\q")
+(redlottery_shop_desc "Como un poder salvaje, derritiendo el hielo negro bajo sus pezuñas de acero, el MEGASUS acarrea cuentos de aflicción sobre su ceño fruncido.")
+(six_shop_desc "Presentando la magia guitarrística de Oli Herbert y Mike Martin, All That Remains es metal moderno con duetos que recuerdan a Iron Maiden. \qSix\q es parte de su album \qThe Fall of Ideals.\q")
+(soybomb_shop_desc "Honest Bob and the Factory-to-Dealer Incentives se adentran el la secuela surfeando sobre la ola de la jubilación.")
+(speedtest_shop_desc "La prueba perfecta para comprobar si el límite de rasgueos está arreglado.\n\n¿Crees que puedes rakear con precisión en este motor?\n\nTE JODES")
+(thelightthatblinds_shop_desc "Con 5 álbumes bajo su cinturón, una nominación a los Grammy y con una presentación en primera plana en el Ozzfest, los héroes internacionales del metal Shadows Fall no parece que vayan a parar nunca.")
+(thunderhorse_shop_desc "La banda de METAL extremo DETHKLOK - \qel mayor espectáculo del universo\q - nos trae el metal definitivo Armageddon. Prepárate para ser aplastado. En \nHBO Max.")
+(trogdor_shop_desc "El tema Trogdor del Strong Bad Email \qdragon\q fue una adición de último momento. Mike había terminado de ver los dibujos y Matt de repente empezó a gritar el coro mientras hacía huevos.")
+(xstream_shop_desc "Este tema es parte del altamente anticipado decimocuarto album de Voivod, llamado \qKatorz\q on The End Records.")
+(yeswecan_shop_desc "Made In Mexico se formó en Providence, Rhode Island mientras comían almejas rellenas. El estado más pequeño de la nación realmente tiene más de 6400Km de costa oceánica, y todos los isleños de Rhode Island viven a 12 minutos conduciendo del Atlántico.")
+(becauseitsmidnite_shop_desc "Durante la gira, Limozeen solía pedir sábanas de cuero en los hoteles que se hospedaban hasta que los sarpullidos y los activistas de derechos animales se convirtieron en un problema.")
+
+; Character descriptions
+(classic_shop_desc "Habiendo abandonado su fascinación por el sitar (un interés desarrollado durante un \qretiro meditacional\q ordenado por un juez), Clive vuelve al primer plano del rock clásico con sus trucos de guitarra y sus estatus icónico.")
+(funk1_shop_desc "Criado en los suburbios de Connecticut, Xavier Stone escapó su educación mimada tras darse cuenta de que prefería los clubs de rock a los clubs de campo. Cubierto con el suave estilo de los 70 y surcos gruesos, Xavier lo hace bien siempre.")
+(grim_shop_desc "Esta estrella del rock es mala hasta los huesos. Los riffs de Grim son tan de muerte, que sus fans tienen suerte de salir de los shows con sus almas intactas. Los sobrenaturales licks de Grims siempre los deja muertos. Porque él es...ya sabes...eso.")
+
+; Encore character descriptions
+(punkencore_shop_desc
+   {if_else $game80s
+      "Un demonio por el surf punk y frenéticos rasgueos hacia abajo, Johnny Napalm pasa la misma cantidad de tiempo destrozando escenarios como siendo parado por la policía. Totalmente caótico y muy tóxico, los shows de Johnny son absolutamente legendarios."
+      "Johnny es la personificación del verdadero espíritu del punk rock con su simbólico andar y estilo. Recién salido de prisión por \qcomportamiento decente,\q Johnny vuelve tambaleándose al escenario, un poco tocado y listo para la acción."})
+(alternaencore_shop_desc
+   {if_else $game80s
+      "Judy Nails puede parecer inocente sobre el escenario, pero se rumorea que esta chica alterna es una salvaje descontrolada. Habiendo pasado su adolescencia de gira, Judy es una vividora del rock and roll y una princesa de los pedales de efectos."
+      {if_else $egg5
+         "Una fan del roller derby y los ruidos distorsionados, Judy Nails ha sido una pionera del rock alternativo desde su primera gira a los 17 años. Conocida por su variada colección de LPs, Nails trae un giro experimental a los riffs heavys de guitarra con una sonrisita astuta."
+         "Una fan del roller derby y los ruidos distorsionados, Judy Nails ha sido una pionera del rock alternativo desde su primera gira a los 17 años. Conocida por su variada colección de vinilos, Judy trae una sonrisa, y muchos pedales al escenario."}})
+(glamencore_shop_desc
+   {if_else $game80s
+      "Querido por los medios y un icono de la cultura pop, Izzy Sparks vive el sueño del rock and roll y la pesadilla de todas las madres. Con su amor por los ligados y la piel de leopardo, Izzy trae el metal al mainstream."
+      {if_else $egg5
+         "Un verdadero placer para la multitud, Hair los emociona a todos con su actuación enérgica sobre el escenario mientras deleita a los medios con sus locuras detrás del telón. La fan base de Hair es incluso más grande que su pelo."
+         "Un verdadero placer para la multitud, Izzy los emociona a todos con su actuación enérgica sobre el escenario mientras deleita a los medios con sus locuras detrás del telón. La fan base de Izzy's es incluso más grande que su pelo."}})
+(gothencore_shop_desc
+   {if_else $game80s
+      "Enigmática y experimental, Pandora siempre marca tendencia. Cuando le preguntan por su incomparable estilo new-wave, Pandora responde que sus solos son \qtributos a lo que molan los robots y el plástico.\q"
+      "La juventud de Pandora está envuelta en misterio. Algunos dicen que nació en una dimensión de pura oscuridad. Otros dicen que fue criada en un dúplex cerca de Boise. Con sus abrasadores solos y caóticas melodías, Pandora es la Princesa Oscura del Rock."})
+(metalencore_shop_desc
+   {if_else $game80s
+      "Un simple chico de ciudad, nacido y criado en South Peoria, Axel Steel es un fan del arena rock y hacer fiestas en aparcamientos. Rey de los shows de estadio y maestro del portón, Axel Steel es una máquina de hacer riffs."
+      {if_else $egg5
+         "Famoso por sus riffs vertiginosos y actitud honesta, Hazzard cogió una guitarra por primera vez en un intento de sofocar su aburrimiento durante una expulsión de su escuela primaria. El resto es historia. Historia del metal."
+         "Famoso por sus riffs vertiginosos y actitud honesta, Axel Steel cogió una guitarra por primera vez en un intento de sofocar su aburrimiento durante una expulsión de su escuela primaria. El resto es historia. Historia del metal."}})
+(grimencore_shop_desc
+   {if_else $game80s
+      "¿Tíos? No se puede ser más retorcido que Grim. Con sus habilidades impuras y licks espeluznantes, no es extraño que 40.000 personas vayan a verle en cada show. Grim, los deja muertos."
+      {if_else $egg5
+         "Esta estrella del rock es mala hasta los huesos. Los riffs de Grim son tan de muerte, que sus fans tienen suerte de salir de los shows con sus almas intactas. En su última actuación, un fan alucinado dijo, \qThe curtains flew, then he appeared!\q"
+         "Esta estrella del rock es mala hasta los huesos. Los riffs de Grim son tan de muerte, que sus fans tienen suerte de salir de los shows con sus almas intactas. Los sobrenaturales licks de Grims siempre los deja muertos. Porque él es...ya sabes...eso."}})
+
+; Outfit descriptions
+(punk2_shop_desc "Johnny tiene un par de estilos diferentes, pero ninguno de ellos involucra bañarse. Con su pelo pincho y cinturón de balas, Johnny hace que el comportamiento sórdido y degenerado parezca bastante molón.")
+(alterna2_shop_desc "La reina del rock alternativo, de cabo a rabo, Judy siempre va a la última. Vístete al último grito con este lindo traje.")
+(glam2_shop_desc
+   {if_else $egg5
+      "A no todo el mundo le queda bien un sombrero de copa y una boa de plumas. Pero Hair no tiene miedo de subvertir el paradigma dominante con este conjunto ultra-glam."
+      "A no todo el mundo le queda bien un sombrero de copa y una boa de plumas. Pero Izzy no tiene miedo de subvertir el paradigma dominante con este conjunto ultra-glam."})
+(goth1_shop_desc
+   {if_else $egg5
+      "¿Plumas y maquillaje? Sólo Pandora podría llevarlos a la perfección."
+      "El camaleón consumado, Pandora es admirada casi tanto por su siempre cambiante estilo personal como por sus incomparables habilidades con la guitarra."})
+(metal2_shop_desc
+   {if_else $egg5
+      "Habiendo empleado la mayor parte de su vida atrapado en un sitio u otro, lo que Hazzard más ama es salir a la carretera. Algunos odian hacer la gira. Hazzard vive para ello." 
+      "Debido a que no te hacen tocar mejor y no te las puedes beber, Axel tiene un interés nulo por la ropa. Pero incluso Axel necesita cambiarse de vez en cuando."})
+(rockabill2_shop_desc
+   {if_else $egg5
+      "Dax Deville es un gato que no le tiene miedo a verse mejor que nunca. Mientras que su pelo esté en su sitio, está igual de cómodo en sus vaqueros viejos como en estos harapos ostentosos."
+      "Eddie Knox es un gato que no le tiene miedo a verse mejor que nunca. Mientras que su pelo esté en su sitio, está igual de cómodo en sus vaqueros viejos como en estos harapos ostentosos."})
+(rock1_shop_desc
+   {if_else $egg5
+      "El estilo de Gina está diseñado para la dura vida en la carretera; si no se puede desmayar en la caravana llevándolo, no está interesada."
+      "El estilo de Casey está diseñado para la dura vida en la carretera; si no se puede desmayar en la caravana llevándolo, no está interesada."})
+(deathmetal2_shop_desc
+   {if_else $egg5
+      "El maestro del shred Nórdico guarda esto en el fondo de su armario para cuando de verdad necesita comandar al público."
+      "Cuando le preguntan por sus estilo basado en guanteletes y gárgolas, Lars responde, \q¡LARS TENER REPUTACIÓN DE FUERZA QUE ÉL TENER QUE MANTENER!\q"})

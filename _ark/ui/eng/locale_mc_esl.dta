@@ -1,0 +1,161 @@
+(mc_title_loading "cargando...")
+(mc_title_saving "guardando...")
+(mc_title_deleting "borrando...")
+(mc_title_caution "aviso")
+(mc_title_error "error de memory card")
+(mc_title_nosave "guardado no encontrado")
+(mc_title_fileerror "error en el guardado")
+(load "cargar")
+(replace "sustituir")
+(yes "sí")
+(no "no")
+(cancel "cancelar")
+(continue "continuar")
+(already_formatted_error_ps2 "ERROR DE FORMATEO: ¡La memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD ya ha sido formateada! Por favor reinserte una memory card sin formatear y seleccione reintentar.")
+(autosave_disable_check_ps2 "¿Quiere desactivar la función de Autoguardado?")
+(bootup_caution_ps2
+   {if_else $gamegh1
+      "¡Aviso! Guitar Hero Redux usa una función de Autoguardado. Insertar una memory card (8MB)(para PlayStation®2) más allá de este punto puede causar que los datos se sobrescriban. ¿Continuar sin guardar?"
+      {if_else $game80s
+         "¡Aviso! Guitar Hero Encore Deluxe usa una función de Autoguardado. Insertar una memory card (8MB)(para PlayStation®2) más allá de este punto puede causar que los datos se sobrescriban. ¿Continuar sin guardar?"
+         "¡Aviso! Guitar Hero II Deluxe usa una función de Autoguardado. Insertar una memory card (8MB)(para PlayStation®2) más allá de este punto puede causar que los datos se sobrescriban. ¿Continuar sin guardar?"}})
+(bootup_caution_format_cancelled_ps2 "Formateo Cancelado. ¿Continuar sin guardar?")
+(bootup_caution_nodata_ps2
+   {if_else $gamegh1
+      "¡Aviso! No se han encontrado datos de guardado de Guitar Hero Redux en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 207KB de espacio libre para guardar. ¿Continuar sin guardar?"
+      {if_else $game80s
+         "¡Aviso! No se han encontrado datos de guardado de Guitar Hero Encore Deluxe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 212KB de espacio libre para guardar. ¿Continuar sin guardar?"
+         "¡Aviso! No se han encontrado datos de guardado de Guitar Hero II Deluxe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 175KB de espacio libre para guardar. ¿Continuar sin guardar?"}})
+(bootup_corrupt_data_ps2
+   {if_else $gamegh1
+      "Se han detectado datos corruptos en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 207KB de espacio libre para guardar. ¿Reemplazar el archivo corrupto y crear un nuevo archivo de guardado?"
+      {if_else $game80s
+         "Se han detectado datos corruptos en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 212KB de espacio libre para guardar. ¿Reemplazar el archivo corrupto y crear un nuevo archivo de guardado?"
+         "Se han detectado datos corruptos en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 175KB de espacio libre para guardar. ¿Reemplazar el archivo corrupto y crear un nuevo archivo de guardado?"}})
+(bootup_create_save_ps2
+   {if_else $gamegh1
+      "Creando archivo de guardado para Guitar Hero Redux. No extraiga la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."
+      {if_else $game80s
+         "Creando archivo de guardado para Guitar Hero Encore Deluxe. No extraiga la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."
+         "Creando archivo de guardado para Guitar Hero II Deluxe. No extraiga la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."}})
+(bootup_create_save_check_ps2
+   {if_else $gamegh1
+      "No se han encontrado datos de guardado de Guitar Hero Redux en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Guitar Hero Redux usa una función de Autoguardado. Se necesitan 207KB de espacio libre para guardar. ¿Quieres crear un archivo de guardado?"
+      {if_else $game80s
+         "No se han encontrado datos de guardado de Guitar Hero Encore Deluxe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Guitar Hero Encore Deluxe usa una función de Autoguardado. Se necesitan 212KB de espacio libre para guardar. ¿Quieres crear un archivo de guardado?"
+         "No se han encontrado datos de guardado de Guitar Hero II Deluxe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Guitar Hero II Deluxe usa una función de Autoguardado. Se necesitan 175KB de espacio libre para guardar. ¿Quieres crear un archivo de guardado?"}})
+(bootup_create_save_no_space_ps2
+   {if_else $gamegh1
+      "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Inserta una memory card con al menos 207KB de espacio libre, o haz hueco usando el navegador de la consola. ¿Continuar sin guardar?"
+      {if_else $game80s
+         "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Inserta una memory card con al menos 212KB de espacio libre, o haz hueco usando el navegador de la consola. ¿Continuar sin guardar?"
+         "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Inserta una memory card con al menos 175KB de espacio libre, o haz hueco usando el navegador de la consola. ¿Continuar sin guardar?"}})
+(bootup_create_success_ps2
+   {if_else $gamegh1
+      "Datos de Guitar Hero Redux creados con éxito."
+      {if_else $game80s
+         "Datos de Guitar Hero Encore Deluxe creados con éxito."
+         "Datos de Guitar Hero II Deluxe creados con éxito."}})
+(bootup_nocard_ps2
+   {if_else $gamegh1
+      "No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Guitar Hero Redux usa una función de Autoguardado. Se necesitan 207KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"
+      {if_else $game80s
+         "No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Guitar Hero Encore Deluxe usa una función de Autoguardado. Se necesitan 212KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"
+         "No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Guitar Hero II Deluxe usa una función de Autoguardado. Se necesitan 175KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"}})
+(bootup_nospace_ps2
+   {if_else $gamegh1
+      "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Inserta una memory card con al menos 207KB de espacio libre, o haz hueco usando el navegador de la consola. ¿Continuar sin guardar?"
+      {if_else $game80s
+         "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Inserta una memory card con al menos 212KB de espacio libre, o haz hueco usando el navegador de la consola. ¿Continuar sin guardar?"
+         "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Inserta una memory card con al menos 175KB de espacio libre, o haz hueco usando el navegador de la consola. ¿Continuar sin guardar?"}})
+(bootup_replace_save_check_ps2
+   {if_else $gamegh1
+      "ERROR DE GUARDADO: Un partida guardada de Guitar Hero Redux ya existe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Elige REEMPLAZAR para crear una nueva partida, o CARGAR para usar los datos guardados."
+      {if_else $game80s
+         "ERROR DE GUARDADO: Un partida guardada de Guitar Hero Encore Deluxe ya existe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Elige REEMPLAZAR para crear una nueva partida, o CARGAR para usar los datos guardados."
+         "ERROR DE GUARDADO: Un partida guardada de Guitar Hero II Deluxe ya existe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Elige REEMPLAZAR para crear una nueva partida, o CARGAR para usar los datos guardados."}})
+(bootup_save_card_removed_ps2
+   {if_else $gamegh1
+      "No hay una memory card (8MB)(para PlayStation®2) insertada en la ranura {SLOT} de MEMORY CARD. Guitar Hero Redux usa una función de Autoguardado. Se necesitan 207KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"
+      {if_else $game80s
+         "No hay una memory card (8MB)(para PlayStation®2) insertada en la ranura {SLOT} de MEMORY CARD. Guitar Hero Encore Deluxe usa una función de Autoguardado. Se necesitan 207KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"
+         "No hay una memory card (8MB)(para PlayStation®2) insertada en la ranura {SLOT} de MEMORY CARD. Guitar Hero II Deluxe usa una función de Autoguardado. Se necesitan 207KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"}})
+(bootup_space_check_failed_ps2
+   {if_else $gamegh1
+      "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 207KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"
+      {if_else $game80s
+         "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 212KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"
+         "Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 175KB de espacio libre para guardar los datos. ¿Quieres empezar el juego sin guardar?"}})
+(delete_confirm_ps2 "¿Estás seguro de que quieres borrar permanentemente esta banda?")
+(different_card_ps2 "El estado de la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD ha cambiado. Puede que se sobrescriban datos. ¿Quieres guardar de todos modos?")
+(file_exists_error_ps2
+   {if_else $gamegh1
+      "ERROR DE GUARDADO: Un partida guardada de Guitar Hero Redux ya existe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Sobrescribir los datos guardados?"
+      {if_else $game80s
+         "ERROR DE GUARDADO: Un partida guardada de Guitar Hero Encore Deluxe ya existe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Sobrescribir los datos guardados?"
+         "ERROR DE GUARDADO: Un partida guardada de Guitar Hero II Deluxe ya existe en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Sobrescribir los datos guardados?"}})
+(format_card_ps2 "Formateando la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. No extraiga la memory card, reinicie, o apague la consola.")
+(format_card_error_ps2 "ERROR DE FORMATEO: Ha ocurrido un error mientras se formateaba la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Reintentar formateo?")
+(format_no_card_error_ps2 "ERROR DE FORMATEO: No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Por favor reinserte la memory card (8MB)(para PlayStation®2) y seleccione reintentar para reanudar el formateo.")
+(load_loading_ps2
+   {if_else $gamegh1
+      "Cargando datos de Guitar Hero Redux. No extraiga la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."
+      {if_else $game80s
+         "Cargando datos de Guitar Hero Encore Deluxe. No extraiga la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."
+         "Cargando Guitar Hero II Deluxe. No extraiga la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."}})
+(load_success_ps2
+    {if_else $gamegh1
+       "Datos de Guitar Hero Redux cargados con éxito."
+       {if_else $game80s "Datos de Guitar Hero Encore Deluxe cargados con éxito."
+          "Datos de Guitar Hero II Deluxe cargados con éxito."}})
+(mc_card_removed_error_ps2
+    {if_else $gamegh1
+       "CARGA FALLIDA:  No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card que contenga datos de Guitar Hero Redux y reintentar la carga?"
+       {if_else $game80s
+          "CARGA FALLIDA:  No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card que contenga datos de Guitar Hero Encore Deluxe y reintentar la carga?"
+          "CARGA FALLIDA:  No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card que contenga datos de Guitar Hero II Deluxe y reintentar la carga?"}})
+(mc_checking_ps2 "Comprobando estado de la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. No extraiga la memory card, reinicie, o apague la consola.")
+(mc_corrupt_error_ps2 "CARGA FALLIDA: Se han detectado datos corruptos en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Reintentar carga?")
+(mc_nocard_error_ps2
+   {if_else $gamegh1
+      "No hay ninguna memory card (8MB)(para PlayStation®2) insertada en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card (8MB)(para PlayStation®2) que contenga datos de Guitar Hero Redux y reintentar la carga?"
+      {if_else $game80s
+         "No hay ninguna memory card (8MB)(para PlayStation®2) insertada en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card (8MB)(para PlayStation®2) que contenga datos de Guitar Hero Encore Deluxe y reintentar la carga?"
+         "No hay ninguna memory card (8MB)(para PlayStation®2) insertada en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card (8MB)(para PlayStation®2) que contenga datos de Guitar Hero II Deluxe y reintentar la carga?"}})
+(mc_nodata_error_ps2
+   {if_else $gamegh1
+      "No hay datos de guardado de Guitar Hero Redux en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card (8MB)(para PlayStation®2) que contenga datos de Guitar Hero Redux y reintentar la carga?"
+      {if_else $game80s
+         "No hay datos de guardado de Guitar Hero Redux en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card (8MB)(para PlayStation®2) que contenga datos de Guitar Hero Encore Deluxe y reintentar la carga?"
+         "No hay datos de guardado de Guitar Hero Redux en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Desea insertar una memory card (8MB)(para PlayStation®2) que contenga datos de Guitar Hero II Deluxe y reintentar la carga?"}})
+(mc_load_confirm_ps2 "AVISO: \nSi cargas datos desde la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD, perderás tu progreso actual del juego. ¿Continuar con la carga?")
+(mc_save_confirm_ps2
+   {if_else $gamegh1
+      "AVISO: Guardar sobrescribirá cualquier partida existente de Guitar Hero Redux en la memory card (8MB)(para PlayStation®2) de la ranura {SLOT} de MEMORY CARD}. ¿Seguro de que quieres guardar?"
+      {if_else $game80s
+         "AVISO: Guardar sobrescribirá cualquier partida existente de Guitar Hero Encore Deluxe en la memory card (8MB)(para PlayStation®2) de la ranura {SLOT} de MEMORY CARD}. ¿Seguro de que quieres guardar?"
+         "AVISO: Guardar sobrescribirá cualquier partida existente de Guitar Hero II Deluxe en la memory card (8MB)(para PlayStation®2) de la ranura {SLOT} de MEMORY CARD}. ¿Seguro de que quieres guardar?"}})
+(no_card_error_ps2 "ERROR DE GUARDADO: No se ha detectado ninguna memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Desea continuar el juego sin guardar?")
+(no_format_warn_ps2 "ERROR DE GUARDADO: No se ha podido guardar datos en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD sin formatear.  ¿Reintentar o continuar sin guardar?")
+(no_space_error_ps2
+   {if_else $gamegh1
+      "ERROR DE GUARDADO: Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 207KB de espacio libre para guardar la partida. ¿Quiere continuar sin guardar?"
+      {if_else $game80s
+         "ERROR DE GUARDADO: Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 212KB de espacio libre para guardar la partida. ¿Quiere continuar sin guardar?"
+         "ERROR DE GUARDADO: Espacio insuficiente en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. Se necesitan 175KB de espacio libre para guardar la partida. ¿Quiere continuar sin guardar?"}})
+(pre_delete_confirm_ps2
+   {if_else $gamegh1
+      "Antes de borrar una banda, tus progresos se deben de guardar a una memory card (8MB)(para PlayStation®2). Cualquier partida existente de Guitar Hero Redux será sobrescrita."
+      {if_else $game80s
+         "Antes de borrar una banda, tus progresos se deben de guardar a una memory card (8MB)(para PlayStation®2). Cualquier partida existente de Guitar Hero Encore Deluxe será sobrescrita."
+         "Antes de borrar una banda, tus progresos se deben de guardar a una memory card (8MB)(para PlayStation®2). Cualquier partida existente de Guitar Hero II Deluxe será sobrescrita."}})
+(save_error_ps2 "ERROR DE GUARDADO: No se ha podido guardar la partida en la memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD. ¿Reintentar o Continuar sin guardar?")
+(save_saving_ps2
+   {if_else $gamegh1
+      "Guardando datos de Guitar Hero Redux. No extraiga la memory card (8MB)(para PlayStation®2) de la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."
+      {if_else $game80s
+         "Guardando datos de Guitar Hero Encore Deluxe. No extraiga la memory card (8MB)(para PlayStation®2) de la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."
+         "Guardando datos de Guitar Hero II Deluxe. No extraiga la memory card (8MB)(para PlayStation®2) de la ranura {SLOT} de MEMORY CARD, reinicie, o apague la consola."}})
+(save_success_ps2 "Guardado exitoso")
+(unformatted_card_ps2 "La memory card (8MB)(para PlayStation®2) en la ranura {SLOT} de MEMORY CARD no está formateada. Debes formatear esta memory card para guardar datos. ¿Desea formatear la memory card de la ranura {SLOT} de MEMORY CARD?")
+(mc_new_profile_warning_ps2 "AVISO: Tiene datos sin guardar. Si continua perderá el progreso.")
