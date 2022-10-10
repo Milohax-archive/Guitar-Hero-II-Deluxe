@@ -28,8 +28,8 @@
 #ifndef 2DBUG
 #ifndef 8DBUG
             {if_else {!= "" {localize {sprint {gamecfg get_song} "_author"}}} ; If not debug, check for author string
-               {$this set_line $prefix 3 {sprint $artist_text "\nAuthor: " {localize {sprint $song "_author"}}}} ; If present, add newline to line 3 followed by author
-               {$this set_line $prefix 3 {sprint $artist_text "\nAuthor: Unknown"}}} ; If not, put unknown
+               {$this set_line $prefix 3 {sprint $artist_text "\n" {localize authortext} {localize {sprint $song "_author"}}}} ; If present, add newline to line 3 followed by author
+               {$this set_line $prefix 3 {sprint $artist_text "\n" {localize authortext} {localize unknowntext}}}} ; If not, put unknown
 #endif
 #endif
 ; If debug, just put artist text
