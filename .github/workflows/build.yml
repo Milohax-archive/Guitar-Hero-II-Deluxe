@@ -377,3 +377,47 @@ jobs:
             80SDEBUG.ELF
             GH80SDX.ELF
             SYSTEM.CNF
+
+  build_gh1redux_ps2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build ARK
+        run: |
+          chmod +x dependencies/arkhelper
+          chmod +x dependencies/dtab
+          chmod +x dependencies/superfreq
+          mv _ark/songs/_blinktrack/_blinktrack.voc _ark/blinktrack.voc
+          mv _ark/songs/speedtest/speedtest.mid _ark/speedtest.mid
+          mv _ark/songs/speedtest/speedtest.vgs _ark/speedtest.vgs
+          rm -rf _ark/songs
+          pip install gitpython
+          python dependencies/download_gh1_songs.py
+          rm -rf _ark/config/songs.dta
+          mv gh1dx-songs/GHIDX/config/songs.dta _ark/config/songs.dta
+          rm -rf _ark/config/store.dta
+          mv _ark/config/store_ce.dta _ark/config/store.dta
+          rm -rf _ark/config/campaign.dta
+          mv _ark/config/campaign_ce.dta _ark/config/campaign.dta
+          mkdir _ark/songs/_blinktrack
+          mkdir _ark/songs/speedtest
+          mv _ark/blinktrack.voc _ark/songs/_blinktrack/_blinktrack.voc
+          mv _ark/speedtest.mid _ark/songs/speedtest/speedtest.mid
+          mv _ark/speedtest.vgs _ark/songs/speedtest/speedtest.vgs
+          sed -i -e "s/GHCE_000.01/GH1RDX.ELF/" SYSTEM.CNF
+          dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
+      
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: GH1REDUX-PS2-standalone
+          path: |
+            GEN
+            IOP
+            modding.txt
+            readme.txt
+            GH1RDX.ELF
+            GH1RDX.ELF
+            SYSTEM.CNF
