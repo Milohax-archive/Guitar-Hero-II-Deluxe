@@ -1,3 +1,4 @@
+;#define FORCE_PAD (1)
 ; Macros are the way the game assigns a friendly, readable name to a value
 ; so it can be used more comfortably elsewhere in the scripts. They don't
 ; need to be defined in this file or in dotdot's macros.dta, but many are.
