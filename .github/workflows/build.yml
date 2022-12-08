@@ -39,11 +39,6 @@ jobs:
             SLES_666.66
             SYSTEM.CNF
 
-name: CI
-
-on: [push, pull_request]
-
-jobs:
   build_gh2dx_force_guitar_ps2:
     runs-on: ubuntu-latest
 
@@ -80,7 +75,6 @@ jobs:
             GHMEGADX.ELF
             SLES_666.66
             SYSTEM.CNF
-
 
   build_gh2dx_ce_ps2:
     runs-on: ubuntu-latest
