@@ -798,7 +798,7 @@ jobs:
             GH1RDX.ELF
             SYSTEM.CNF
 
-  build_gh1redux_ps2:
+  build_gh1redux_force_pad_ps2:
     runs-on: ubuntu-latest
 
     steps:
