@@ -109,11 +109,11 @@
 
 ; GH1 Redux
 #ifdef GH1RX
-(song_header_battle "Guitar Hero Redux Demo")
-(song_header_small1 " ")
-(song_header_small2 " ")
-(song_header_theatre " ")
-(song_header_fest " ")
-(song_header_arena " ")
+(song_header_battle "1. Opening Licks")
+(song_header_small1 "2. Axe-Grinders")
+(song_header_small2 "3. Thrash and Burn")
+(song_header_theatre "4. Return of the Shred")
+(song_header_fest "5. Fret-Burners")
+(song_header_arena "6. Face-Melters")
 (song_header_store "Bonus Tracks")
 #endif
