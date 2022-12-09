@@ -779,10 +779,11 @@ jobs:
           rm -rf _ark/config/campaign.dta
           mv gh1dx-songs/GHIDX/config/campaign.dta _ark/config/campaign.dta
           rm -rf _ark/config/store.dta
-          mv _ark/config/store_ce.dta _ark/config/store.dta
+          mv gh1dx-songs/GHIDX/config/store.dta _ark/config/store.dta
           mkdir _ark/songs/_blinktrack
           mv _ark/blinktrack.voc _ark/songs/_blinktrack/_blinktrack.voc
           sed -i -e "s/GHCE_000.01/GH1RDX.ELF/" SYSTEM.CNF
+          sed -i -e "s/GH1RX (base_dir "BAGHCE-11111")/GH1RX (base_dir "BAGHCE-12922")/" _ark/config/mc.dta
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
@@ -818,11 +819,12 @@ jobs:
           rm -rf _ark/config/campaign.dta
           mv gh1dx-songs/GHIDX/config/campaign.dta _ark/config/campaign.dta
           rm -rf _ark/config/store.dta
-          mv _ark/config/store_ce.dta _ark/config/store.dta
+          mv gh1dx-songs/GHIDX/config/store.dta _ark/config/store.dta
           mkdir _ark/songs/_blinktrack
           mv _ark/blinktrack.voc _ark/songs/_blinktrack/_blinktrack.voc
           sed -i -e "s/GHCE_000.01/GH1RDX.ELF/" SYSTEM.CNF
           sed -i -e "s/;#define FORCE_PAD (1)/#define FORCE_PAD (1)/" _ark/config/macros.dta
+          sed -i -e "s/GH1RX (base_dir "BAGHCE-11111")/GH1RX (base_dir "BAGHCE-12922")/" _ark/config/mc.dta
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
