@@ -212,7 +212,8 @@ jobs:
           mv _ark/config/store_ce.dta _ark/config/store.dta
           rm -rf _ark/ui/eng/locale_tiers.dta
           mv _ark/ui/eng/locale_tiers_ce.dta _ark/ui/eng/locale_tiers.dta
-          sed -i -e "s/GHCE_000.01/CUSTOMDX.ELF/" SYSTEM.CNF
+          sed -i -e "s/GHCE_000.01/GHCE_000.03/" SYSTEM.CNF
+          mv CUSTOMDX.ELF GHCE_000.03
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
@@ -225,7 +226,7 @@ jobs:
             modding.txt
             readme.txt
             80SDEBUG.ELF
-            CUSTOMDX.ELF
+            GHCE_000.03
             SYSTEM.CNF
 
   build_gh2dx_ce_force_guitar_ps2:
@@ -364,7 +365,8 @@ jobs:
           mv _ark/config/store_ce.dta _ark/config/store.dta
           rm -rf _ark/ui/eng/locale_tiers.dta
           mv _ark/ui/eng/locale_tiers_ce.dta _ark/ui/eng/locale_tiers.dta
-          sed -i -e "s/GHCE_000.01/CUSTOMDX.ELF/" SYSTEM.CNF
+          sed -i -e "s/GHCE_000.01/GHCE_000.03/" SYSTEM.CNF
+          mv CUSTOMDX.ELF GHCE_000.03
           sed -i -e "s/;#define FORCE_PAD (1)/#define FORCE_PAD (1)/" _ark/config/macros.dta
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
@@ -378,7 +380,7 @@ jobs:
             modding.txt
             readme.txt
             80SDEBUG.ELF
-            CUSTOMDX.ELF
+            GHCE_000.03
             SYSTEM.CNF
 
   build_gh2dx_standalone_ps2:
@@ -437,6 +439,8 @@ jobs:
           rm -rf _ark/songs/alloveryou
           rm -rf _ark/songs/maps
           rm -rf _ark/songs/greengrass
+          sed -i -e "s/GHCE_000.01/GHCE_000.02/" SYSTEM.CNF
+          mv GH2DX.ELF GHCE_000.02
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
@@ -450,7 +454,7 @@ jobs:
             modding.txt
             readme.txt
             GH2DEBUG.ELF
-            GH2DX.ELF
+            GHCE_000.02
             SYSTEM.CNF
 
   build_gh2dx_force_guitar_standalone_ps2:
@@ -509,6 +513,8 @@ jobs:
           rm -rf _ark/songs/alloveryou
           rm -rf _ark/songs/maps
           rm -rf _ark/songs/greengrass
+          sed -i -e "s/GHCE_000.01/GHCE_000.02/" SYSTEM.CNF
+          mv GH2DX.ELF GHCE_000.02
           sed -i -e "s/;#define FORCE_PAD (1)/#define FORCE_PAD (1)/" _ark/config/macros.dta
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
@@ -523,7 +529,7 @@ jobs:
             modding.txt
             readme.txt
             GH2DEBUG.ELF
-            GH2DX.ELF
+            GHCE_000.02
             SYSTEM.CNF
 
   build_gh80sdx_standalone_ps2:
@@ -625,7 +631,8 @@ jobs:
           rm -rf _ark/songs/alloveryou
           rm -rf _ark/songs/maps
           rm -rf _ark/songs/greengrass
-          sed -i -e "s/BOOT2 = cdrom0:\GH2DX.ELF;1/BOOT2 = cdrom0:\GH80SDX.ELF;1/" SYSTEM.CNF
+          sed -i -e "s/GHCE_000.01/GHCE_000.03/" SYSTEM.CNF
+          mv GH80SDX.ELF GHCE_000.03
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
@@ -639,7 +646,7 @@ jobs:
             modding.txt
             readme.txt
             80SDEBUG.ELF
-            GH80SDX.ELF
+            GHCE_000.03
             SYSTEM.CNF
 
   build_gh80sdx_force_guitar_standalone_ps2:
@@ -742,7 +749,8 @@ jobs:
           rm -rf _ark/songs/maps
           rm -rf _ark/songs/greengrass
           sed -i -e "s/;#define FORCE_PAD (1)/#define FORCE_PAD (1)/" _ark/config/macros.dta
-          sed -i -e "s/BOOT2 = cdrom0:\GH2DX.ELF;1/BOOT2 = cdrom0:\GH80SDX.ELF;1/" SYSTEM.CNF
+          sed -i -e "s/GHCE_000.01/GHCE_000.03/" SYSTEM.CNF
+          mv GH80SDX.ELF GHCE_000.03
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
@@ -756,7 +764,7 @@ jobs:
             modding.txt
             readme.txt
             80SDEBUG.ELF
-            GH80SDX.ELF
+            GHCE_000.03
             SYSTEM.CNF
 
   build_gh1redux_ps2:
@@ -782,7 +790,8 @@ jobs:
           mv gh1dx-songs/GHIDX/config/store.dta _ark/config/store.dta
           mkdir _ark/songs/_blinktrack
           mv _ark/blinktrack.voc _ark/songs/_blinktrack/_blinktrack.voc
-          sed -i -e "s/GHCE_000.01/GH1RDX.ELF/" SYSTEM.CNF
+          sed -i -e "s/GHCE_000.01/GHCE_000.04/" SYSTEM.CNF
+          mv GH1RDX.ELF GHCE_000.04
           sed -i -e "s/GH1RX (base_dir "BAGHCE-11111")/GH1RX (base_dir "BAGHCE-12922")/" _ark/config/mc.dta
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
@@ -795,8 +804,7 @@ jobs:
             IOP
             modding.txt
             readme.txt
-            GH1RDX.ELF
-            GH1RDX.ELF
+            GHCE_000.04
             SYSTEM.CNF
 
   build_gh1redux_force_guitar_ps2:
@@ -822,7 +830,8 @@ jobs:
           mv gh1dx-songs/GHIDX/config/store.dta _ark/config/store.dta
           mkdir _ark/songs/_blinktrack
           mv _ark/blinktrack.voc _ark/songs/_blinktrack/_blinktrack.voc
-          sed -i -e "s/GHCE_000.01/GH1RDX.ELF/" SYSTEM.CNF
+          sed -i -e "s/GHCE_000.01/GHCE_000.04/" SYSTEM.CNF
+          mv GH1RDX.ELF GHCE_000.04
           sed -i -e "s/;#define FORCE_PAD (1)/#define FORCE_PAD (1)/" _ark/config/macros.dta
           sed -i -e "s/GH1RX (base_dir "BAGHCE-11111")/GH1RX (base_dir "BAGHCE-12922")/" _ark/config/mc.dta
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
@@ -836,6 +845,5 @@ jobs:
             IOP
             modding.txt
             readme.txt
-            GH1RDX.ELF
-            GH1RDX.ELF
+            GHCE_000.04
             SYSTEM.CNF
