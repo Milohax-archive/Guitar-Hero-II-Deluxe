@@ -186,7 +186,7 @@ Q: What's the long and short of what GH2:DX changes?
 
    2.0 adds GH80's and GH1 in as separate campaigns, adds drums as a
    playable instrument, adds a streak meter and FC indicator, and overhauls
-   the UI for that real slick shine.
+   the UI for that real slick shine. Go play 3.0 on Xbox 360.
 
 Q: What's a "strum limit"?
 A: In short, the game has a cooldown timer every time the player strums.
