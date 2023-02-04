@@ -24,7 +24,7 @@ tools you need to have for modding Deluxe. Choose your own adventure:
 I JUST WANT TO PLAY CUSTOMS
 ===========================
 If you're simply wanting to get Clone Hero songs into Deluxe, check
-gh2-deluxe.neocities.org for Custom Edition, which is a minimalist base you
+gh2.neocities.org for Custom Edition, which is a minimalist base you
 can use to put new songs into GH2 without worry about making sure the Career
 works or anything.
 
