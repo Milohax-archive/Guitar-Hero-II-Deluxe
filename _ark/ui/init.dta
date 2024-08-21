@@ -20,7 +20,7 @@
 {foreach $p (pause_panel pause_controller_panel tut_pause_panel pract_pause_panel tut_pause_controller_panel lose_panel helpbar)
    {$p load}}
 {meta set_defaults}
-{set $roygb FALSE}
+{set $roygb TRUE}
 ; Set all discs but Onyx and expansion to boot to the initial memory card
 ; screens. Onyx and expansion go right to the main menu.
 #ifndef _ONYX {set $first_screen bootup_load} #endif
