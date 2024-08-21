@@ -75,8 +75,7 @@
          {gamecfg set_track 0 1}}
       {if
          {== $component part2.btn}
-         {gamecfg set_track 0 2}
-		 {set $roygb TRUE}}
+         {gamecfg set_track 0 2}}
       {ui goto_screen practice_diff_screen})}
 {new
    GHScreen
