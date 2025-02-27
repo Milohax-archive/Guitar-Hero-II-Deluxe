@@ -1,9 +1,19 @@
-(headline1 "Los asistentes de {GH_VENUE} están {GH_VERB_PAST} el {GH_NOUN} {GH_ADJ}")
-(headline2 "Los fans de {GH_BAND} {GH_VERB} el {GH_NOUN} de esta noche en {GH_VENUE}")
+(headline1
+   "Los asistentes de {GH_VENUE} están {GH_VERB_PAST} el {GH_NOUN} {GH_ADJ}"
+)
+(headline2
+   "Los fans de {GH_BAND} {GH_VERB} el {GH_NOUN} de esta noche en {GH_VENUE}"
+)
 (headline3 "{GH_BAND} {GH_VERB} {GH_NOUN} de los fans en {GH_VENUE}")
-(headline_battle "Battle of the Bands presencia cómo {GH_BAND} {GH_WIN_PHRASE}")
-(headline_perfect "Los patrones de {GH_VENUE} asombrados con el show perfecto de {GH_BAND}")
-(headline_perfect_coop "Los patrones de {GH_VENUE} se vuelven locos con un set perfecto")
+(headline_battle
+   "Battle of the Bands presencia cómo {GH_BAND} {GH_WIN_PHRASE}"
+)
+(headline_perfect
+   "Los patrones de {GH_VENUE} asombrados con el show perfecto de {GH_BAND}"
+)
+(headline_perfect_coop
+   "Los patrones de {GH_VENUE} se vuelven locos con un set perfecto"
+)
 (headline_quick_coop1 "{GH_VENUE} {GH_VERB} {GH_NOUN} {GH_ADJ}")
 (headline_quick_coop2 "{GH_VENUE} {GH_VERB_PAST} {GH_NOUN} {GH_ADJ}")
 (headline_vs "El jugador {GH_NUM} {GH_VS_VERB} {GH_VS_NOUN}")

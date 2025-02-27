@@ -17,11 +17,11 @@
    (chet_atkins (price 850))
    (redoctane (price 700))
    (air_guitar (price 300))
-#ifndef 2DBUG
-#ifndef 8DBUG
-   (scythe (price 7000))
-#endif
-#endif
+   #ifndef 2DBUG
+      #ifndef 8DBUG
+      (scythe (price 7000))
+      #endif
+   #endif
    (fish_reward (price 500))
    (usa_reward (price 1000))
    (coffin_reward (price 1000))
@@ -29,7 +29,8 @@
    (snaketapus_reward (price 2000))
    (eyeball_reward (price 5000))
    (battleaxe_reward (price 5600))
-   (log_reward (price 8000)))
+   (log_reward (price 8000))
+)
 (skin
    (lp_ebony (price 200))
    (lp_cayenne (price 200))
@@ -80,82 +81,89 @@
    (redoctane_yellow (price 450))
    (redoctane_green (price 450))
    (redoctane_scott (price 550))
-   (redoctane_jnack (price 550)))
+   (redoctane_jnack (price 550))
+)
 (song
-; GH2 AND mega stores
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef 8DBUG
-#ifndef GH1RX
-   (speedtest (price 500000))
-   (rawdog (price 550))
-   (arterialblack (price 550))
-   (collide (price 550))
-   (drinkup (price 550))
-   (elephantbones (price 550))
-   (fallofpangea (price 550))
-   (ftk (price 550))
-   (gemini (price 550))
-   (kicked (price 550))
-   (ladylightning (price 550))
-   (laughtrack (price 550))
-   (lesstalkmorerokk (price 550))
-   (jordan (price 550))
-   (mrfixit (price 550))
-   (newblack (price 550))
-   (onefortheroad (price 550))
-   (parasite (price 550))
-   (radiumeyes (price 550))
-   (redlottery (price 550))
-   (six (price 550))
-   (soybomb (price 550))
-   (thelightthatblinds (price 550))
-   (thunderhorse (price 550))
-   (trogdor (price 550))
-   (xstream (price 550))
-   (yeswecan (price 550))
-#endif
-#endif
-#endif
-#endif
+   ; GH2 AND mega stores
+   #ifndef _ENCO
+      #ifndef _ONYX
+         #ifndef 8DBUG
+            #ifndef GH1RX
+            (speedtest (price 500000))
+            (rawdog (price 550))
+            (arterialblack (price 550))
+            (collide (price 550))
+            (drinkup (price 550))
+            (elephantbones (price 550))
+            (fallofpangea (price 550))
+            (ftk (price 550))
+            (gemini (price 550))
+            (kicked (price 550))
+            (ladylightning (price 550))
+            (laughtrack (price 550))
+            (lesstalkmorerokk (price 550))
+            (jordan (price 550))
+            (mrfixit (price 550))
+            (newblack (price 550))
+            (onefortheroad (price 550))
+            (parasite (price 550))
+            (radiumeyes (price 550))
+            (redlottery (price 550))
+            (six (price 550))
+            (soybomb (price 550))
+            (thelightthatblinds (price 550))
+            (thunderhorse (price 550))
+            (trogdor (price 550))
+            (xstream (price 550))
+            (yeswecan (price 550))
+            #endif
+         #endif
+      #endif
+   #endif
 
    ; Encore store
-#ifndef _SHIP
-#ifndef _MEGA
-#ifndef _ONYX
-#ifndef 2DBUG
-#ifndef GH1RX
-   (becauseitsmidnite (price 550))
-   (speedtest (price 500000))
-#endif
-#endif
-#endif
-#endif
-#endif
+   #ifndef _SHIP
+      #ifndef _MEGA
+         #ifndef _ONYX
+            #ifndef 2DBUG
+               #ifndef GH1RX
+               (becauseitsmidnite (price 550))
+               (speedtest (price 500000))
+               #endif
+            #endif
+         #endif
+      #endif
+   #endif
 
    ; Mega store only
-   #ifdef _MEGA (becauseitsmidnite (price 550)) #endif
+   #ifdef _MEGA
+   (becauseitsmidnite (price 550))
+   #endif
 
    ; GH1 Redux store only
-   #ifdef GH1RX (trippolette (price 500000)) #endif
+   #ifdef GH1RX
+   (trippolette (price 500000))
+   #endif
 
    ; Expansion "store" only
-   #ifdef _DRUM (alloveryou (price 550)) #endif
+   #ifdef _DRUM
+   (alloveryou (price 550))
+   #endif
 )
 (character
    (classic (price 5000))
    (funk1 (price 5000))
-#ifndef _SHIP
-#ifndef _ENCO
-#ifndef _ONYX
-#ifndef _MEGA
-#ifndef GH1RX
-   (grim (price 7000))
-#endif
-#endif
-#endif
-#endif
-#endif
+   #ifndef _SHIP
+      #ifndef _ENCO
+         #ifndef _ONYX
+            #ifndef _MEGA
+               #ifndef GH1RX
+               (grim (price 7000))
+               #endif
+            #endif
+         #endif
+      #endif
+   #endif
 )
 (outfit
    (punk2 (price 2000))
@@ -165,7 +173,15 @@
    (metal2 (price 2000))
    (rockabill2 (price 2000))
    (rock1 (price 2000))
-   (deathmetal2 (price 2000)))
+   (deathmetal2 (price 2000))
+)
 (video
-   (video3 (file hmx.pss) (price 900))
-   (video2 (file wg.pss) (price 900)))
+   (video3
+      (file hmx.pss)
+      (price 900)
+   )
+   (video2
+      (file wg.pss)
+      (price 900)
+   )
+)

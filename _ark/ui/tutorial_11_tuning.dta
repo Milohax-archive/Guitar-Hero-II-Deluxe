@@ -42,32 +42,29 @@ SHORT_VO_GAP
 {$this play_vo intro_2}
 {t1_highlights.view animate
    (loop 0 {t1_highlights.view end_frame})
-   (units kTaskTutorialSeconds)}
+   (units kTaskTutorialSeconds)
+}
 {t1_fret_highlight.view set_showing TRUE}
 {t1_frets.view set_showing FALSE}
 {t1_demo_2.mnm set_frame 1}
 {t1_demo_3.mnm animate
    (units kTaskTutorialSeconds)
    (period 2.5)
-   (range 0 5)}
+   (range 0 5)
+}
 {$task sleep 2.5}
 {t1_demo_3.mnm animate
    (units kTaskTutorialSeconds)
    (period 2.5)
-   (range 1 5)}
+   (range 1 5)
+}
 WAIT_FOR_VO
 LONG_VO_GAP
 {$this play_vo intro_3}
 {t1_strum_highlight.view set_showing TRUE}
-{t1_demo_1.mnm animate
-   (units kTaskTutorialSeconds)
-   (period 1)
-   (range 0 1)}
+{t1_demo_1.mnm animate (units kTaskTutorialSeconds) (period 1) (range 0 1)}
 {$task sleep 2.5}
-{t1_demo_1.mnm animate
-   (units kTaskTutorialSeconds)
-   (period 2)
-   (range 0 5)}
+{t1_demo_1.mnm animate (units kTaskTutorialSeconds) (period 2) (range 0 5)}
 WAIT_FOR_VO
 LONG_VO_GAP
 {t1_fret_highlight.view set_showing FALSE}
@@ -91,10 +88,12 @@ SHORT_VO_GAP
 {t1_guitar_zoom.tnm animate
    (units kTaskTutorialSeconds)
    (period GUITAR_ZOOM_SECS)
-   (range 0 30)}
+   (range 0 30)
+}
 {$this play_vo intro_5}
 WAIT_FOR_VO
-{new Object fret_callback
+{new Object
+   fret_callback
    (fret_played
       ($fret_num)
       {do
@@ -104,11 +103,17 @@ WAIT_FOR_VO
                (2 t1_frethit2.view)
                (3 t1_frethit3.view)
                (4 t1_frethit4.view)
-               (5 t1_frethit5.view)})
+               (5 t1_frethit5.view)
+            }
+         )
          {$fret_anim animate
             (units kTaskTutorialSeconds)
             (period 0.3)
-            (range 0 100)}})}
+            (range 0 100)
+         }
+      }
+   )
+}
 {$this start_tuning_mode fret_callback}
 {stop_sfx bkgd_music}
 {$this size_right_box TUT1_1_TASK}
@@ -118,17 +123,24 @@ WAIT_FOR_VO
 {tut_task.lbl set_showing TRUE}
 {$task wait_timeout {$this is_tuning} 60 $timeout}
 {if $timeout
-   {$this end_tuning_mode}}
+   {$this end_tuning_mode}
+}
 {$task sleep 2}
 {t1_guitar.view set_showing FALSE}
 {tut_top_text.view set_showing FALSE}
 {if_else $timeout
    {tut_banner.lbl set_text tut1_1_timeout}
-   {tut_banner.lbl set_text tut1_1_done}}
+   {tut_banner.lbl set_text tut1_1_done}
+}
 {tut_banner.lbl set_showing TRUE}
 {play_sfx tuning_complete}
 {$task sleep 0.6}
-{$this play_vo {if_else $timeout timeout_vo all_frets_tuned}}
+{$this play_vo
+   {if_else $timeout
+      timeout_vo
+      all_frets_tuned
+   }
+}
 WAIT_FOR_VO
 {$task sleep 1}
 {play_sfx bkgd_music}

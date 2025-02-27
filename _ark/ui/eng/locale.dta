@@ -2,11 +2,16 @@
 (splash_legal
    {if_else $gamegh1
       "Guitar Hero Redux. 2021. Port by jnack. Modifications @ MiloHax.\nBig thanks to mariteaux for charts and diy stems. Also shout out to Local H the OG.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc."
-	  {if_else $game80s
-	     "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
-		 "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."}})
+      {if_else $game80s
+         "Guitar Hero Encore Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
+         "Guitar Hero II Deluxe © 2006 RedOctane, Inc.\nModifications © 2021 MiloHax. See credits for all contributors.\nOriginal game code © 2005-2006 Harmonix Music Systems, Inc. Developed by Harmonix Music Systems."
+      }
+   }
+)
 (guitar_help_using "USING THE GUITAR CONTROLLER")
-(guitar_help_plugin "Plug the Guitar into controller port 1 and attach the guitar strap.")
+(guitar_help_plugin
+   "Plug the Guitar into controller port 1 and attach the guitar strap."
+)
 (guitar_help_continue1 "Continue")
 (guitar_help_continue2 "(Green Button)")
 (guitar_help_step1 "1")
@@ -43,9 +48,15 @@
 (lag_setting "Current Lag Offset is %d ms")
 (lag_measured "Your new Lag Offset is %d ms")
 (lag_measuring "Calibrating...")
-(lag_info_why "Some HDTV's have an audio/video delay that makes playing difficult.  If you're ready to blame your TV, try calibrating.")
-(lag_info_howto "Calibrate by strumming your guitar to the beat of the notes crossing the target.")
-(lag_info_failure "We couldn't get a good reading for calibration.  Let's do another take.")
+(lag_info_why
+   "Some HDTV's have an audio/video delay that makes playing difficult.  If you're ready to blame your TV, try calibrating."
+)
+(lag_info_howto
+   "Calibrate by strumming your guitar to the beat of the notes crossing the target."
+)
+(lag_info_failure
+   "We couldn't get a good reading for calibration.  Let's do another take."
+)
 (lag_success "Calibration Successful")
 (lag_3 "3")
 (lag_2 "2")
@@ -54,16 +65,24 @@
 (name_band "NAME YOUR BAND")
 (BAND_NAME_EXPLAIN "This is also your SAVE GAME name")
 (HOW_TO_END "Press START button to accept name and continue")
-(HOW_TO_EDIT "You can edit this name later from Manage Band in the Options menu")
+(HOW_TO_EDIT
+   "You can edit this name later from Manage Band in the Options menu"
+)
 (choose_band "CHOOSE BAND")
 (no_profile "NO BAND")
 (no_profile_msg "Please enter a BAND NAME.")
 (duplicate_profile "DUPLICATE BAND")
-(duplicate_profile_msg "The BAND NAME you entered already exists. Please enter a different BAND NAME.")
+(duplicate_profile_msg
+   "The BAND NAME you entered already exists. Please enter a different BAND NAME."
+)
 (max_profile "NO FREE BANDS")
-(max_profile_msg "There are no free band slots.  You must delete one or more band slots to create a new profile.")
+(max_profile_msg
+   "There are no free band slots.  You must delete one or more band slots to create a new profile."
+)
 (cant_delete_profile "CAN'T DELETE BAND")
-(cant_delete_profile_msg "The currently selected band cannot be deleted. To delete this band, first choose a different band using LOAD BAND or NEW BAND.")
+(cant_delete_profile_msg
+   "The currently selected band cannot be deleted. To delete this band, first choose a different band using LOAD BAND or NEW BAND."
+)
 (op_bonus_material "Bonus Videos")
 (op_credits "Credits")
 (op_data_settings "Manage Band ")
@@ -103,15 +122,25 @@
 (vs_80s "DRUM PADEMU")
 (vs_lag "CALIBRATE LAG")
 (warning "WARNING")
-(pscan_warning "Progressive Mode may not work on all televisions. If it doesn't work on yours, please wait 15 seconds and we'll automatically switch back.")
-(pscan_switching "You are now in Progressive Mode. Do you want to keep this display mode?")
+(pscan_warning
+   "Progressive Mode may not work on all televisions. If it doesn't work on yours, please wait 15 seconds and we'll automatically switch back."
+)
+(pscan_switching
+   "You are now in Progressive Mode. Do you want to keep this display mode?"
+)
 (BUY_BONUS "buy these at The Store")
 (video1 "Gibson USA: A Tour")
 (video2 "Guitar Hero II: Making of Songs")
 (video3 "Guitar Hero II: Behind the Scenes")
-(video1_shop_desc "Ever dreamed of taking an all-access tour of the Gibson USA factory? This is your chance.")
-(video2_shop_desc "Check out an exclusive behind-the-scenes video of the recording of the Guitar Hero II songs.")
-(video3_shop_desc "The Guitar Hero II development team takes you backstage to see what life is REALLY like at Harmonix.")
+(video1_shop_desc
+   "Ever dreamed of taking an all-access tour of the Gibson USA factory? This is your chance."
+)
+(video2_shop_desc
+   "Check out an exclusive behind-the-scenes video of the recording of the Guitar Hero II songs."
+)
+(video3_shop_desc
+   "The Guitar Hero II development team takes you backstage to see what life is REALLY like at Harmonix."
+)
 (QUICK_PLAY "FREE PLAY")
 (QP_SELSONG "SELECT SONG")
 (E3_SINGLE_PLAYER "E3 SINGLE PLAYER")
@@ -141,15 +170,21 @@
 (mtv_made_famous
    {if_else $egg5
       "as not actually performed by"
-	  "as made famous by"})
+      "as made famous by"
+   }
+)
 (performed_by
    {if_else $egg5
       "as actually performed by"
-	  "as performed by"})
+      "as performed by"
+   }
+)
 (press_any_button
    {if_else $egg5
       "PRESS ANY BUTTON TO JAM"
-	  "PRESS ANY BUTTON TO ROCK"})
+      "PRESS ANY BUTTON TO ROCK"
+   }
+)
 (pausetitle "PAUSED")
 (pause_resume "RESUME")
 (pause_restart "RESTART")
@@ -168,18 +203,30 @@
 (DRAW
    {if_else $egg5
       "TIED!"
-	  "DRAW!"})
+      "DRAW!"
+   }
+)
 (CONTINUE "CONTINUE")
 (MORE_STATS "MORE STATS")
-(lefty_flip_changed "To change the lefty flip setting, this song must be restarted. OK to restart?")
+(lefty_flip_changed
+   "To change the lefty flip setting, this song must be restarted. OK to restart?"
+)
 (RESET "RESET")
 (CONTROLLER_LOSS
    {if_else $egg5
       "YOU PULLED IT OUT"
-	  "YOU ARE ROCKING OUT A BIT TOO HARD"})
-(controller_loss_msg "Please ensure a Guitar Controller is connected to controller port 1")
-(controller_loss_msg_multi "Please ensure Guitar Controllers are connected to controller ports 1 and 2")
-(tut_guitar_loss_msg "Please ensure a Guitar Controller is connected to controller port 1")
+      "YOU ARE ROCKING OUT A BIT TOO HARD"
+   }
+)
+(controller_loss_msg
+   "Please ensure a Guitar Controller is connected to controller port 1"
+)
+(controller_loss_msg_multi
+   "Please ensure Guitar Controllers are connected to controller ports 1 and 2"
+)
+(tut_guitar_loss_msg
+   "Please ensure a Guitar Controller is connected to controller port 1"
+)
 (ug_congrats "Congratulations!")
 (ug_blurb1 " ")
 (ug_blurb2 "Go buy it in The Store.")
@@ -238,7 +285,9 @@
 (sd_help_practice "select your difficulty")
 (MULTIPLAYER_MODE_SELECT "MULTIPLAYER MODE SELECT")
 (MULTI_COMPETE "COMPETITION")
-(multi_compete_desc "Head-to-head guitar battle. Score more points than the other player to win.")
+(multi_compete_desc
+   "Head-to-head guitar battle. Score more points than the other player to win."
+)
 (PLAYER_1 "PLAYER 1")
 (PLAYER_2 "PLAYER 2")
 (MULTI_SELECT_YOUR_HERO "SELECT YOUR HERO")

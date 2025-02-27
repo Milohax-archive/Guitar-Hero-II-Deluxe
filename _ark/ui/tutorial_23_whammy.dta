@@ -15,21 +15,24 @@
 {t2_whammy.view animate
    (units kTaskTutorialSeconds)
    (period WHAMMY_ZOOM_SEC)
-   (range 0 30)}
+   (range 0 30)
+}
 WAIT_FOR_VO
 SHORT_VO_GAP
 {$this play_vo whammy_2}
 {t2_whammy_wrong.mnm animate
    (units kTaskTutorialSeconds)
    (period 7)
-   (range 0 14)}
+   (range 0 14)
+}
 WAIT_FOR_VO
 LONG_VO_GAP
 {$this play_vo whammy_3}
 {t2_whammy_right.mnm animate
    (units kTaskTutorialSeconds)
    (period 9)
-   (range 0 18)}
+   (range 0 18)
+}
 WAIT_FOR_VO
 LONG_VO_GAP
 {t2_whammy.view set_showing FALSE}
@@ -52,53 +55,62 @@ WAIT_FOR_VO
 {tut_task.lbl set_text tut2_3_task}
 {tut_task.lbl set_showing TRUE}
 {player0 set_star_power_phrase_boost 0.0}
-{new Object tut_23_callback
-   (whammy_start_callback
-      {set [whammied] TRUE})
+{new Object
+   tut_23_callback
+   (whammy_start_callback {set [whammied] TRUE})
    (whammy_end_callback
       {if {! [feedback_keepmoving_played]}
          {tutorial play_vo whammy_keepmoving}
-         {set [feedback_keepmoving_played] TRUE}})
+         {set [feedback_keepmoving_played] TRUE}
+      }
+   )
    (held_note_released_callback
       ($fraction)
       {cond
          ({== $fraction 1}
-            {if {&&
-                  {! [whammied]}
-                  {! [feedback_1_played]}}
+            {if {&& {! [whammied]} {! [feedback_1_played]}}
                {tutorial play_vo whammy_no_whammy}
-               {set [feedback_1_played] TRUE}})
+               {set [feedback_1_played] TRUE}
+            }
+         )
          (TRUE
-            {if {&&
-                  {! {player0 star_power_ready}}
-                  {! [feedback_2_played]}}
+            {if {&& {! {player0 star_power_ready}} {! [feedback_2_played]}}
                {tutorial play_vo whammy_let_go}
-               {set [feedback_2_played] TRUE}})}
-      {set [whammied] FALSE})
+               {set [feedback_2_played] TRUE}
+            }
+         )
+      }
+      {set [whammied] FALSE}
+   )
    (gem_hit_callback
       ($slot $hopoable $hopoed)
-      {set [whammied] FALSE})
+      {set [whammied] FALSE}
+   )
    (gem_miss_callback
       ($slot_hit $real_slot $timing_error)
-      {set [whammied] FALSE})
-   (gem_pass_callback
-      {set [whammied] FALSE})
-   (lesson_running {&&
+      {set [whammied] FALSE}
+   )
+   (gem_pass_callback {set [whammied] FALSE})
+   (lesson_running
+      {&&
          {! {player0 star_power_ready}}
-         {< {player0 percent_complete}
-            END_OF_SONG_PERCENT}})
+         {< {player0 percent_complete} END_OF_SONG_PERCENT}
+      }
+   )
    (failed {! {player0 star_power_ready}})
    (whammied FALSE)
    (feedback_keepmoving_played FALSE)
    (feedback_1_played FALSE)
-   (feedback_2_played FALSE)}
+   (feedback_2_played FALSE)
+}
 {player0 add_sink tut_23_callback}
 {player0 set_mercuryswitchenabled FALSE}
 {beatmatch set_paused FALSE}
 {$task wait {tut_23_callback lesson_running}}
 {track_panel animate_track_in_fast}
 {if {! {tut_23_callback failed}}
-   {$task sleep 1}}
+   {$task sleep 1}
+}
 {game set_paused TRUE}
 {tut_top_text.view set_showing FALSE}
 {hud set_showing FALSE}
@@ -106,11 +118,14 @@ WAIT_FOR_VO
    ({tut_23_callback failed}
       {tut_banner.lbl set_text tut_timeout}
       {tut_banner.lbl set_showing TRUE}
-      {$this play_vo timeout_vo})
+      {$this play_vo timeout_vo}
+   )
    (TRUE
       {tut_banner.lbl set_text tut2_3_done}
       {tut_banner.lbl set_showing TRUE}
-      {$this play_vo whammy_done})}
+      {$this play_vo whammy_done}
+   )
+}
 {play_sfx bkgd_music}
 WAIT_FOR_VO
 {player0 remove_sink tut_23_callback}

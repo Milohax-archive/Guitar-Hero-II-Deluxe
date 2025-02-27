@@ -3,7 +3,9 @@
 (headline3 "{GH_BAND} {GH_VERB} the {GH_NOUN} of fans at {GH_VENUE}")
 (headline_battle "Battle of the Bands sees {GH_BAND} {GH_WIN_PHRASE}")
 (headline_perfect "{GH_VENUE} patrons in awe of {GH_BAND}'s flawless show")
-(headline_perfect_coop "{GH_VENUE} patrons go wild at flawless, legendary set")
+(headline_perfect_coop
+   "{GH_VENUE} patrons go wild at flawless, legendary set"
+)
 (headline_quick_coop1 "{GH_VENUE} {GH_VERB} {GH_ADJ} {GH_NOUN}")
 (headline_quick_coop2 "{GH_VENUE} {GH_VERB_PAST} {GH_ADJ} {GH_NOUN}")
 (headline_vs "Player {GH_NUM} {GH_VS_VERB} {GH_VS_NOUN}")

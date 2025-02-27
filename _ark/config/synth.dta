@@ -6,7 +6,8 @@
 (iop
    (max_streams 15)
    (spu_buffers 60)
-   (max_slip 300))
+   (max_slip 300)
+)
 (metamusic
    (volume -6.0)
    (fade_rate 1.0)
@@ -23,7 +24,13 @@
                      metaloop_voivod
                      {if_else $game80s
                         metaloop_shakin
-                        metaloop_voivod}}}}}}
+                        metaloop_voivod
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop_rawdog
          {if_else $egg4
@@ -36,7 +43,13 @@
                      metaloop_rawdog
                      {if_else $game80s
                         metaloop_iran
-                        metaloop_rawdog}}}}}}
+                        metaloop_rawdog
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop_hoods
          {if_else $egg4
@@ -49,7 +62,13 @@
                      metaloop_hoods
                      {if_else $game80s
                         metaloop_bangyourhead
-                        metaloop_hoods}}}}}}
+                        metaloop_hoods
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop_ftk
          {if_else $egg4
@@ -62,7 +81,13 @@
                      metaloop_ftk
                      {if_else $game80s
                         metaloop_holydiver
-                        metaloop_ftk}}}}}}
+                        metaloop_ftk
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop_crowns
          {if_else $egg4
@@ -75,7 +100,13 @@
                      metaloop_crowns
                      {if_else $game80s
                         metaloop_wegotthebeat
-                        metaloop_crowns}}}}}}
+                        metaloop_crowns
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop_artillery
          {if_else $egg4
@@ -88,7 +119,13 @@
                      metaloop_artillery
                      {if_else $game80s
                         metaloop_iwantcandy
-                        metaloop_artillery}}}}}}
+                        metaloop_artillery
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop6_trogdor
          {if_else $egg4
@@ -101,7 +138,13 @@
                      metaloop6_trogdor
                      {if_else $game80s
                         metaloop_shakin
-                        metaloop6_trogdor}}}}}}
+                        metaloop6_trogdor
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop5_arterial
          {if_else $egg4
@@ -114,7 +157,13 @@
                      metaloop5_arterial
                      {if_else $game80s
                         metaloop_radarlove
-                        metaloop5_arterial}}}}}}
+                        metaloop5_arterial
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop4_youreally
          {if_else $egg4
@@ -127,7 +176,13 @@
                      metaloop4_youreally
                      {if_else $game80s
                         metaloop_noonelikeyou
-                        metaloop4_youreally}}}}}}
+                        metaloop4_youreally
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop3_whowas
          {if_else $egg4
@@ -140,7 +195,13 @@
                      metaloop3_whowas
                      {if_else $game80s
                         metaloop_iran
-                        metaloop3_whowas}}}}}}
+                        metaloop3_whowas
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop2_psycho
          {if_else $egg4
@@ -153,7 +214,13 @@
                      metaloop2_psycho
                      {if_else $game80s
                         metaloop_holydiver
-                        metaloop2_psycho}}}}}}
+                        metaloop2_psycho
+                     }
+                  }
+               }
+            }
+         }
+      }
       {if_else $egg5
          metaloop1_warpigs
          {if_else $egg4
@@ -166,22 +233,34 @@
                      metaloop1_warpigs
                      {if_else $game80s
                         metaloop_bangyourhead
-                        metaloop1_warpigs}}}}}})
+                        metaloop1_warpigs
+                     }
+                  }
+               }
+            }
+         }
+      }
+   )
    (background_sfx
       (sequence meta_people)
       (min_delay_sec 10)
-      (max_delay_sec 20))
+      (max_delay_sec 20)
+   )
    (play_from_memory TRUE)
-   (use_rnd_heap FALSE))
+   (use_rnd_heap FALSE)
+)
 (fx
    (chain FALSE)
    (core_0
       (mode kFXModeEcho)
       (volume -9.0)
       (delay 0.5)
-      (feedback -96))
+      (feedback -96)
+   )
    (core_1
       (mode kFXModeLargeStudio)
       (volume -8.5)
       (delay 0.0)
-      (feedback -96)))
+      (feedback -96)
+   )
+)

@@ -7,7 +7,8 @@
 {t1_stamps.view set_showing FALSE}
 {t1_highlights.view animate
    (loop 0 {t1_highlights.view end_frame})
-   (units kTaskTutorialSeconds)}
+   (units kTaskTutorialSeconds)
+}
 {tut_task.lbl set_showing FALSE}
 {tut_score.lbl set_showing FALSE}
 {tut_info.lbl set_showing FALSE}

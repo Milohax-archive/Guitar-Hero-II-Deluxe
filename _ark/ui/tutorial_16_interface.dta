@@ -20,7 +20,8 @@ LONG_VO_GAP
 {hud set_showing TRUE}
 {t1_highlights.view animate
    (loop 0 {t1_highlights.view end_frame})
-   (units kTaskTutorialSeconds)}
+   (units kTaskTutorialSeconds)
+}
 {tut_rock_highlight.view set_showing TRUE}
 {$this play_vo interface_rock_meter}
 WAIT_FOR_VO

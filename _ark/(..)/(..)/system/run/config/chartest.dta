@@ -2,18 +2,22 @@
 (mem
    (heaps
       (main 22470000)
-      (rnd 4450000 TRUE)))
-(handlers
-   (start_game {next_character 0}))
+      (rnd 4450000 TRUE)
+   )
+)
+(handlers (start_game {next_character 0}))
 (spew)
 (rnd
    (show_timers FALSE)
    (overlays
       (chartest
          (lines 1)
-         (showing TRUE)))
+         (showing TRUE)
+      )
+   )
    (console_trycatch FALSE)
-   (title "AnimTest"))
+   (title "AnimTest")
+)
 (beat_graph_restrict {< $node.b_start 2})
 (quick_cheats
    (right
@@ -23,7 +27,8 @@
       (kPad_DLeft {inc -1})
       (kPad_L1 {inc_variant 1})
       (kPad_L2 {next_character -1})
-      (kPad_X {cam_head}))
+      (kPad_X {cam_head})
+   )
    (keyboard
       (n {next_character 1})
       (N {next_character -1})
@@ -57,6 +62,8 @@
       (6 {play 6})
       (7 {play 7})
       (8 {play 8})
-      (9 {play 9})))
+      (9 {play 9})
+   )
+)
 (timer cpu gs scale_down pose_bones)
 #merge default.dta

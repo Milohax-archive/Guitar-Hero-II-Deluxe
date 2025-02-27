@@ -1,4 +1,5 @@
 #ifdef TRUE
+
 #else
 #define FALSE (0)
 #define TRUE (1)
@@ -23,30 +24,19 @@
 #define kTaskBeats (1)
 #define kTaskUISeconds (2)
 #define kTaskTutorialSeconds (3)
-#define TASK_UNITS
-   (("kTaskSeconds"
-     "kTaskBeats"
-     "kTaskUISeconds"
-     "kTaskTutorialSeconds"))
+#define TASK_UNITS (("kTaskSeconds" "kTaskBeats" "kTaskUISeconds" "kTaskTutorialSeconds"))
 #define kSquareAspect (0)
 #define kRegularAspect (1)
 #define kWidescreenAspect (2)
 #define kAnimRange (0)
 #define kAnimLoop (1)
 #define kAnimShuttle (2)
-#define ANIM_ENUM
-   (("kAnimRange"
-     "kAnimLoop"
-     "kAnimShuttle"))
+#define ANIM_ENUM (("kAnimRange" "kAnimLoop" "kAnimShuttle"))
 #define k30_fps (0)
 #define k480_fpb (1)
 #define k30_fps_ui (2)
 #define k1_fpb (3)
-#define RATE_ENUM
-   (("k30_fps"
-     "k480_fpb"
-     "k30_fps_ui"
-     "k1_fpb"))
+#define RATE_ENUM (("k30_fps" "k480_fpb" "k30_fps_ui" "k1_fpb"))
 #define PI (3.1415927)
 #define kFirstFit (0)
 #define kBestFit (1)
@@ -238,43 +228,50 @@
 #define kBlendSrcAlphaAdd (4)
 #define kBlendSubtract (5)
 #define kBlendMultiply (6)
-#define BLEND_ENUM
-   (("kBlendDest"
-     "kBlendSrc"
-     "kBlendAdd"
-     "kBlendSrcAlpha"
-     "kBlendSrcAlphaAdd"
-     "kBlendSubtract"
-     "kBlendMultiply"))
+#define BLEND_ENUM (
+   (
+      "kBlendDest"
+      "kBlendSrc"
+      "kBlendAdd"
+      "kBlendSrcAlpha"
+      "kBlendSrcAlphaAdd"
+      "kBlendSubtract"
+      "kBlendMultiply"
+   )
+)
 #define kZModeDisable (0)
 #define kZModeNormal (1)
 #define kZModeTransparent (2)
 #define kZModeForce (3)
 #define kZModeDecal (4)
-#define ZMODE_ENUM
-   (("kZModeDisable"
-     "kZModeNormal"
-     "kZModeTransparent"
-     "kZModeForce"
-     "kZModeDecal"))
+#define ZMODE_ENUM (
+   (
+      "kZModeDisable"
+      "kZModeNormal"
+      "kZModeTransparent"
+      "kZModeForce"
+      "kZModeDecal"
+   )
+)
 #define kTexWrapClamp (0)
 #define kTexWrapRepeat (1)
-#define TEXWRAP_ENUM
-   (("kTexWrapClamp"
-     "kTexWrapRepeat"))
+#define TEXWRAP_ENUM (("kTexWrapClamp" "kTexWrapRepeat"))
 #define kTexGenNone (0)
 #define kTexGenXfm (1)
 #define kTexGenSphere (2)
 #define kTexGenProjected (3)
 #define kTexGenXfmOrigin (4)
 #define kTexGenEnviron (5)
-#define TEXGEN_ENUM
-   (("kTexGenNone"
-     "kTexGenXfm"
-     "kTexGenSphere"
-     "kTexGenProjected"
-     "kTexGenXfmOrigin"
-     "kTexGenEnviron"))
+#define TEXGEN_ENUM (
+   (
+      "kTexGenNone"
+      "kTexGenXfm"
+      "kTexGenSphere"
+      "kTexGenProjected"
+      "kTexGenXfmOrigin"
+      "kTexGenEnviron"
+   )
+)
 #define kRecordRegular (0)
 #define kRecordCreated (1)
 #define kRecordDeleted (2)
@@ -317,26 +314,35 @@
 #define kPlayBeatAlign8 (32768)
 #define kPlayNoDefault (0)
 #define kPlayBeatTime (0)
-#define PLAY_BLEND_FLAGS
-   (("kPlayNoDefault"
-     "kPlayNow"
-     "kPlayDirty"
-     "kPlayNoBlend"
-     "kPlayFirst"
-     "kPlayLast"))
-#define PLAY_LOOP_FLAGS
-   (("kPlayNoDefault"
-     "kPlayNoLoop"
-     "kPlayLoop"
-     "kPlayGraphLoop"
-     "kPlayNodeLoop"))
-#define PLAY_TIME_FLAGS
-   (("kPlayBeatTime"
-     "kPlayRealTime"
-     "kPlayBeatAlign1"
-     "kPlayBeatAlign2"
-     "kPlayBeatAlign4"
-     "kPlayBeatAlign8"))
+#define PLAY_BLEND_FLAGS (
+   (
+      "kPlayNoDefault"
+      "kPlayNow"
+      "kPlayDirty"
+      "kPlayNoBlend"
+      "kPlayFirst"
+      "kPlayLast"
+   )
+)
+#define PLAY_LOOP_FLAGS (
+   (
+      "kPlayNoDefault"
+      "kPlayNoLoop"
+      "kPlayLoop"
+      "kPlayGraphLoop"
+      "kPlayNodeLoop"
+   )
+)
+#define PLAY_TIME_FLAGS (
+   (
+      "kPlayBeatTime"
+      "kPlayRealTime"
+      "kPlayBeatAlign1"
+      "kPlayBeatAlign2"
+      "kPlayBeatAlign4"
+      "kPlayBeatAlign8"
+   )
+)
 #define kRotNone (9)
 #define kRotFull (2)
 #define kRotX (3)
@@ -349,25 +355,39 @@
 #define kFaceFxLipSyncRotX (0)
 #define kFaceFxLipSyncRotY (1)
 #define kFaceFxLipSyncRotZ (2)
-#define FACE_FX_LIP_SYNC_OPS
-   (("kFaceFxLipSyncRotX"
-     "kFaceFxLipSyncRotY"
-     "kFaceFxLipSyncRotZ"))
+#define FACE_FX_LIP_SYNC_OPS (("kFaceFxLipSyncRotX" "kFaceFxLipSyncRotY" "kFaceFxLipSyncRotZ"))
 #define kDbSilence (-96.0)
 #define STD_EXTS (.dtb .dtx .seq .mid .bin .acp .acs .acg .fac .voc)
 #define PS2_EXTS (.milo_ps2 .ipu .vgs .icn)
 #define XBOX_EXTS (.milo_xbox .xbv .mogg .fx .fx_xbox)
 #define STD_SKIP_DIRS (CVS iop test tools)
-#define SYSTEM_SUBDIRS
-   ("../../system/run/char"
-    "../../system/run/config"
-    "../../system/run/milo"
-    "../../system/run/shaders"
-    "../../system/run/track"
-    "../../system/run/ui"
-    "../../system/run/world")
+#define SYSTEM_SUBDIRS (
+   "../../system/run/char"
+   "../../system/run/config"
+   "../../system/run/milo"
+   "../../system/run/shaders"
+   "../../system/run/track"
+   "../../system/run/ui"
+   "../../system/run/world"
+)
 #define SYSTEM_DIRS ("." SYSTEM_SUBDIRS)
-#define XBOX_HD_EXTS (.dta .seq .mid .bin .milo .xnse .xbnk .xbv .mogg .png .png_xbox .bmp .ltf .acs .acg)
+#define XBOX_HD_EXTS (
+   .dta
+   .seq
+   .mid
+   .bin
+   .milo
+   .xnse
+   .xbnk
+   .xbv
+   .mogg
+   .png
+   .png_xbox
+   .bmp
+   .ltf
+   .acs
+   .acg
+)
 #define kTriggerNone (0)
 #define kTriggerShow (1)
 #define kTriggerHide (2)
@@ -375,7 +395,15 @@
 #define kTriggerDisable (4)
 #define SYSTEMWORLDEVENTS ('' start)
 #define WORLDEVENTS ((SYSTEMWORLDEVENTS))
-#define SYSTEMUIEVENTS (ui_enter ui_enter_forward ui_enter_back ui_exit ui_exit_forward ui_exit_back transition_complete)
+#define SYSTEMUIEVENTS (
+   ui_enter
+   ui_enter_forward
+   ui_enter_back
+   ui_exit
+   ui_exit_forward
+   ui_exit_back
+   transition_complete
+)
 #define UIEVENTS ((SYSTEMUIEVENTS))
 #define HIDE_IN_PROXY ((hide {!= $this {$this dir}}))
 #define LANGUAGES ((eng))

@@ -10,7 +10,8 @@
 {tut_screen_dim.view animate
    (units kTaskTutorialSeconds)
    (period SCREEN_DIM_SECS)
-   (range 0 30)}
+   (range 0 30)
+}
 {$task sleep 0.5}
 {stop_sfx bkgd_music}
 {tut_banner.lbl set_text tut1_complete}

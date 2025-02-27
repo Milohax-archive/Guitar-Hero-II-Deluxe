@@ -26,7 +26,7 @@
    (milo_tip16)
    (milo_tip17)
    (milo_tip18)
-#ifdef GH1RX
+   #ifdef GH1RX
    (loading_tip_gh1_8)
    (loading_tip_gh1_9)
    (loading_tip_gh1_10)
@@ -37,7 +37,7 @@
    (loading_tip_gh1_16)
    (loading_tip_gh1_17)
    (loading_tip_gh1_26)
-#else
+   #else
    (loading_tip_gh2_1)
    (loading_tip_gh2_2)
    (loading_tip_gh2_3)
@@ -49,7 +49,7 @@
    (loading_tip_gh2_9)
    (loading_tip_gh2_10)
    (loading_tip_gh2_11)
-#endif
+   #endif
    (comedy_tip_gh2_1)
    (comedy_tip_gh2_2)
    (comedy_tip_gh2_3)
@@ -77,7 +77,8 @@
    (advanced_tip7 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
    (advanced_tip8 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
    (advanced_tip9 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
-   (advanced_tip10 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert)))
+   (advanced_tip10 (diff kDifficultyMedium kDifficultyHard kDifficultyExpert))
+)
 (tips_multi_coop
    (multi_coop_tip1)
    (multi_coop_tip2)
@@ -92,7 +93,8 @@
    (comedy_tip_gh2_6)
    (comedy_tip_gh2_9)
    (comedy_tip_gh2_10)
-   (comedy_tip_gh2_12))
+   (comedy_tip_gh2_12)
+)
 (tips_tutorial
    (loading_tip_gh2_3)
    (loading_tip_gh2_8)
@@ -108,25 +110,29 @@
    (comedy_tip_gh2_12)
    (comedy_tip_gh2_13)
    (comedy_tip_gh2_14)
-   (comedy_tip_gh2_15))
+   (comedy_tip_gh2_15)
+)
 (tips_encore
    (encore_tip_gh2_1)
    (encore_tip_gh2_2)
    (encore_tip_gh2_3)
    (encore_tip_gh2_4)
    (encore_tip_gh2_5)
-   (encore_tip_gh2_6))
+   (encore_tip_gh2_6)
+)
 (tips_freebird
    (freebird_tip1)
    (freebird_tip2)
    (freebird_tip3)
    (freebird_tip4)
    (freebird_tip5)
-   (freebird_tip6))
+   (freebird_tip6)
+)
 (tips_playwithme
    (playwithme_tip1)
    (playwithme_tip2)
    (playwithme_tip3)
    (playwithme_tip4)
    (playwithme_tip5)
-   (playwithme_tip6))
+   (playwithme_tip6)
+)

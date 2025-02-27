@@ -11,8 +11,11 @@
    {if_else $gamegh1
       "GH1DX PRACTICE"
       {if_else $game80s
-	     "GH80SDX PRACTICE"
-		 "GH2DX PRACTICE"}})
+         "GH80SDX PRACTICE"
+         "GH2DX PRACTICE"
+      }
+   }
+)
 (CHANGE_SECTION "CHANGE SECTION")
 (CHANGE_SPEED "CHANGE SPEED")
 (NEW_SONG "NEW SONG")
@@ -24,7 +27,9 @@
 (TUTORIAL_2 "Star Power Lessons")
 (TUTORIAL_3 "Advanced Techniques")
 (TUT_1_BLURB "Just the basics you need to begin playing.")
-(TUT_2_BLURB "The secret of Star Power: how to boost it and how to use it.")
+(TUT_2_BLURB
+   "The secret of Star Power: how to boost it and how to use it."
+)
 (TUT_3_BLURB "For experts with hours of practice already.")
 (tut_description "Lesson Description")
 (tut_letsrock "LET'S ROCK!")
@@ -33,7 +38,9 @@
 (tut_timeout "LESSON TIMED OUT!")
 (tut1_title "GUITAR HERO BASICS TUTORIAL")
 (tut1_1_part "LESSON 1: GUITAR TUNING")
-(tut1_1_info "Tune your guitar:\n1. HOLD Fret Button to CHOOSE note\n2. PRESS Strum Bar up or down to PLAY note")
+(tut1_1_info
+   "Tune your guitar:\n1. HOLD Fret Button to CHOOSE note\n2. PRESS Strum Bar up or down to PLAY note"
+)
 (tut1_1_task "Play each note 3 times to continue")
 (tut1_1_done "GUITAR TUNING LESSON COMPLETE!")
 (tut1_1_timeout "LESSON TIMED OUT!")
@@ -48,7 +55,9 @@
 (tut1_3_score "Notes Hit:")
 (tut1_3_done "DIFFERENT NOTES LESSON COMPLETE!")
 (tut1_4_part "LESSON 4: LONG NOTES")
-(tut1_4_intro "1. Hold fret button down\n2. Strum\n3 Keep fret button down until the whole note has played")
+(tut1_4_intro
+   "1. Hold fret button down\n2. Strum\n3 Keep fret button down until the whole note has played"
+)
 (tut1_4_task "Play 6 Long notes to continue")
 (tut1_4_score "Notes Sustained:")
 (tut1_4_done "LONG NOTE LESSON COMPLETE!")
@@ -72,12 +81,16 @@
 (tut2_2_task "Nail the Star Combo to continue")
 (tut2_2_done "STAR COMBO LESSON COMPLETE!")
 (tut2_3_part "LESSON 2: WHAMMY BAR")
-(tut2_3_intro "After playing a note, move the whammy bar in and out to extract Star Power.")
+(tut2_3_intro
+   "After playing a note, move the whammy bar in and out to extract Star Power."
+)
 (tut2_3_task "Boost the Star Power Meter to continue")
 (tut2_3_done "WHAMMY BAR LESSON COMPLETE!")
 (tut2_4_part "LESSON 3: Tilt for Star Power")
 (tut2_4_1 "")
-(tut2_4_2 "Tilt the guitar upright to activate Star Power.\nOnce it is activated you can drop the guitar back down\n")
+(tut2_4_2
+   "Tilt the guitar upright to activate Star Power.\nOnce it is activated you can drop the guitar back down\n"
+)
 (tut2_4_3 "")
 (tut2_4_task "Tilt for Star Power and hit 8 notes to continue")
 (tut2_4_score "Notes Hit:")
@@ -85,7 +98,9 @@
 (tut3_title "HAMMER-ON AND PULL-OFF TUTORIAL")
 (tut3_1_part "LESSON 1: STRING BASICS")
 (tut3_2_part "LESSON 2: HAMMER-ON FINGERING")
-(tut3_2_info "1. Play Green normally (strum)\n2. Hammer-on Red (no strum)\n3. Hammer-on Yellow (no strum)")
+(tut3_2_info
+   "1. Play Green normally (strum)\n2. Hammer-on Red (no strum)\n3. Hammer-on Yellow (no strum)"
+)
 (tut3_2_task "Hit 3 hammer-on sequences to continue")
 (tut3_2_score "Sequences Hit:")
 (tut3_2_done "HAMMER-ON FINGERING LESSON COMPLETE!")
@@ -95,7 +110,9 @@
 (tut3_3_score "Notes Hit:")
 (tut3_3_done "HAMMER-ON LESSON COMPLETE!")
 (tut3_4_part "LESSON 4: PULL-OFFS")
-(tut3_4_info "1. Play Yellow normally (strum)\n2. Pull-off Yellow (no strum)\n3. Pull-off Red (no strum)")
+(tut3_4_info
+   "1. Play Yellow normally (strum)\n2. Pull-off Yellow (no strum)\n3. Pull-off Red (no strum)"
+)
 (tut3_4_task "Hit 3 pull-off sequences to continue")
 (tut3_4_score "Sequences Hit:")
 (tut3_4_done "PULL-OFF FINGERING LESSON COMPLETE!")

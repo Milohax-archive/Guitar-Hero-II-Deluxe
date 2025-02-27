@@ -62,7 +62,8 @@ LONG_VO_GAP
 {tut_part.lbl set_showing TRUE}
 {t1_highlights.view animate
    (loop 0 {t1_highlights.view end_frame})
-   (units kTaskTutorialSeconds)}
+   (units kTaskTutorialSeconds)
+}
 {tut_banner.lbl set_showing FALSE}
 LONG_VO_GAP
 {t1_guitar.view set_showing TRUE}
@@ -103,7 +104,8 @@ LONG_VO_GAP
 {t1_guitar.view animate
    (units kTaskTutorialSeconds)
    (period GUITAR_ZOOM_SECS)
-   (range 0 30)}
+   (range 0 30)
+}
 #define HOPOS_TO_HIT (3)
 {set $hopos_hit 0}
 {stop_sfx bkgd_music}
@@ -112,10 +114,10 @@ LONG_VO_GAP
 {tut_header.lbl set_showing TRUE}
 {tut_score.lbl set_showing TRUE}
 {tut_task.lbl set_text tut3_2_task}
-{$this update_tut_score
-   {localize tut3_2_score} 0 HOPOS_TO_HIT}
+{$this update_tut_score {localize tut3_2_score} 0 HOPOS_TO_HIT}
 {tut_task.lbl set_showing TRUE}
-{new Object tut_31_callback
+{new Object
+   tut_31_callback
    (fret_played
       ($fret_num)
       {{switch $fret_num
@@ -123,21 +125,28 @@ LONG_VO_GAP
             (2 t1_frethit2.view)
             (3 t1_frethit3.view)
             (4 t1_frethit4.view)
-            (5 t1_frethit5.view)}
-         animate
+            (5 t1_frethit5.view)} animate
          (units kTaskTutorialSeconds)
          (period 0.3)
-         (range 0 100)})
+         (range 0 100)
+      }
+   )
    (hopo_hit
       {set [hopos_hit] {'+' [hopos_hit] 1}}
       {tutorial play_vo hit_vo}
       {tutorial update_tut_score
-         {localize tut3_2_score} [hopos_hit] HOPOS_TO_HIT}
+         {localize tut3_2_score}
+         [hopos_hit]
+         HOPOS_TO_HIT
+      }
       {tut_score.tnm animate
          (units kTaskTutorialSeconds)
          (period 0.15)
-         (range 0 2)})
-   (hopos_hit 0)}
+         (range 0 2)
+      }
+   )
+   (hopos_hit 0)
+}
 {$this start_hopo_train kHammerOnTutorial tut_31_callback}
 {$task wait_timeout {$this is_hopo_training} 60 $timeout}
 {$task sleep 2}
@@ -150,13 +159,16 @@ LONG_VO_GAP
 {tut_top_text.view set_showing FALSE}
 {if_else $timeout
    {tut_banner.lbl set_text tut3_2_timeout}
-   {tut_banner.lbl set_text tut3_2_done}}
+   {tut_banner.lbl set_text tut3_2_done}
+}
 {$this end_hopo_train}
 {tut_banner.lbl set_showing TRUE}
 {$this play_vo
    {if_else $timeout
       timeout_vo
-	  hammeron_done}}
+      hammeron_done
+   }
+}
 WAIT_FOR_VO
 LONG_VO_GAP
 {play_sfx bkgd_music}

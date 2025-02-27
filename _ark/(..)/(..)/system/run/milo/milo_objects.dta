@@ -1,7 +1,10 @@
 (Object
-   (description "The Object class is the root of the class hierarchy. Every class has Object as a superclass.")
+   (description
+      "The Object class is the root of the class hierarchy. Every class has Object as a superclass."
+   )
    (allowed_dirs)
-   (types))
+   (types)
+)
 (ObjectDir
    (description "An ObjectDir keeps track of a set of Objects.")
    (types)
@@ -10,14 +13,15 @@
          (array file)
          (help "Subdirectories of objects")
          (post_sync {milo update_objects})
-         (hide {$this is_proxy}))
-      (proxy_file file
-         (hide {! {$this is_proxy}}))
-      (inline_proxy int
-         (list
-            ("kNoInline"
-               "kAlwaysInline"
-               "kPrecacheInline"))
-         (hide {! {$this is_proxy}}))))
+         (hide {$this is_proxy})
+      )
+      (proxy_file file (hide {! {$this is_proxy}}))
+      (inline_proxy
+         int
+         (list ("kNoInline" "kAlwaysInline" "kPrecacheInline"))
+         (hide {! {$this is_proxy}})
+      )
+   )
+)
 #include rnd_objects.dta
 #include synth_objects.dta

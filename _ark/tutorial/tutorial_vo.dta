@@ -89,7 +89,41 @@
 (pulloff_real_intro V30501)
 (pulloff_real_strum V30502)
 (pulloff_real_done V30503)
-(hit_vo Vgood1 Vgood2 Vgood3 Vgood4 Vgood5 Vgood6 Vgood7 Vgood8 Vgood9 Vgood10)
-(great_hit_vo Vgreat1 Vgreat2 Vgreat3 Vgreat4 Vgreat5 Vgreat6 Vgreat7 Vgreat8 Vgreat9 Vgreat10 Vgreat12 Vgreat13)
-(near_miss_vo Vmiss1 Vmiss2 Vmiss3 Vmiss4 Vmiss5 Vmiss6 Vmiss7 Vmiss8 Vmiss9)
+(hit_vo
+   Vgood1
+   Vgood2
+   Vgood3
+   Vgood4
+   Vgood5
+   Vgood6
+   Vgood7
+   Vgood8
+   Vgood9
+   Vgood10
+)
+(great_hit_vo
+   Vgreat1
+   Vgreat2
+   Vgreat3
+   Vgreat4
+   Vgreat5
+   Vgreat6
+   Vgreat7
+   Vgreat8
+   Vgreat9
+   Vgreat10
+   Vgreat12
+   Vgreat13
+)
+(near_miss_vo
+   Vmiss1
+   Vmiss2
+   Vmiss3
+   Vmiss4
+   Vmiss5
+   Vmiss6
+   Vmiss7
+   Vmiss8
+   Vmiss9
+)
 (timeout_vo Vtimeout1 Vtimeout2 Vtimeout3)

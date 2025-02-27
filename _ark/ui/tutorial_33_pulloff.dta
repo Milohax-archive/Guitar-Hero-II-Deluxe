@@ -18,10 +18,9 @@ LONG_VO_GAP
 {$this play_vo pulloff_intro_2}
 WAIT_FOR_VO
 {t1_highlights.view animate
-   (loop
-      0
-      {t1_highlights.view end_frame})
-   (units kTaskTutorialSeconds)}
+   (loop 0 {t1_highlights.view end_frame})
+   (units kTaskTutorialSeconds)
+}
 {t1_frets.view set_showing FALSE}
 {t1_guitar.view set_showing TRUE}
 {t1_guitar.view set_frame 0}
@@ -78,7 +77,8 @@ LONG_VO_GAP
 {t1_guitar.view animate
    (units kTaskTutorialSeconds)
    (period GUITAR_ZOOM_SECS)
-   (range 0 30)}
+   (range 0 30)
+}
 #define DEMOS_TO_HIT (3)
 {set $hopos_hit 0}
 {stop_sfx bkgd_music}
@@ -87,10 +87,10 @@ LONG_VO_GAP
 {tut_header.lbl set_showing TRUE}
 {tut_score.lbl set_showing TRUE}
 {tut_task.lbl set_text tut3_4_task}
-{$this update_tut_score
-   {localize tut3_4_score} $hopos_hit DEMOS_TO_HIT}
+{$this update_tut_score {localize tut3_4_score} $hopos_hit DEMOS_TO_HIT}
 {tut_task.lbl set_showing TRUE}
-{new Object tut_34_fret_callback
+{new Object
+   tut_34_fret_callback
    (fret_played
       ($fret_num)
       {{switch $fret_num
@@ -98,37 +98,48 @@ LONG_VO_GAP
             (2 t1_frethit2.view)
             (3 t1_frethit3.view)
             (4 t1_frethit4.view)
-            (5 t1_frethit5.view)}
-         animate
+            (5 t1_frethit5.view)} animate
          (units kTaskTutorialSeconds)
          (period 0.3)
-         (range 0 100)})
+         (range 0 100)
+      }
+   )
    (hopo_hit
       {set [hopos_hit] {'+' [hopos_hit] 1}}
       {tutorial play_vo hit_vo}
       {tutorial update_tut_score
-         {localize tut3_4_score} [hopos_hit] DEMOS_TO_HIT}
+         {localize tut3_4_score}
+         [hopos_hit]
+         DEMOS_TO_HIT
+      }
       {tut_score.tnm animate
          (units kTaskTutorialSeconds)
          (period 0.15)
-         (range 0 2)})
-   (hopos_hit 0)}
+         (range 0 2)
+      }
+   )
+   (hopos_hit 0)
+}
 {$this start_hopo_train kPullOffTutorial tut_34_fret_callback}
 {$task wait_timeout {$this is_hopo_training} 60 $timeout}
 {if $timeout
-   {$this end_hopo_train}}
+   {$this end_hopo_train}
+}
 {$task sleep 2}
 {t1_guitar.view set_showing FALSE}
 {tut_top_text.view set_showing FALSE}
 {if_else $timeout
    {tut_banner.lbl set_text tut3_4_timeout}
-   {tut_banner.lbl set_text tut3_4_done}}
+   {tut_banner.lbl set_text tut3_4_done}
+}
 {$this end_hopo_train}
 {tut_banner.lbl set_showing TRUE}
 {$this play_vo
    {if_else $timeout
       timeout_vo
-      pulloff_done}}
+      pulloff_done
+   }
+}
 WAIT_FOR_VO
 LONG_VO_GAP
 {play_sfx bkgd_music}
@@ -147,45 +158,57 @@ LONG_VO_GAP
 {tut_top_text.view set_showing TRUE}
 {tut_task.lbl set_text tut3_5_task}
 {tut_task.lbl set_showing TRUE}
-{$this update_tut_score
-   {localize tut3_5_score} 0 PULLOFFS_TO_HIT}
+{$this update_tut_score {localize tut3_5_score} 0 PULLOFFS_TO_HIT}
 {tut_score.lbl set_showing TRUE}
-{new Object tut_35_callback
-   (swingAtHopo_callback
-      {tutorial play_vo pulloff_real_strum})
+{new Object
+   tut_35_callback
+   (swingAtHopo_callback {tutorial play_vo pulloff_real_strum})
    (hopo_callback
       {set [pulloffs_hit] {'+' [pulloffs_hit] 1}}
       {if {<= [pulloffs_hit] HOPOS_TO_HIT}
          {tutorial play_vo hit_vo}
          {tutorial update_tut_score
-            {localize tut3_5_score} [pulloffs_hit] PULLOFFS_TO_HIT}
+            {localize tut3_5_score}
+            [pulloffs_hit]
+            PULLOFFS_TO_HIT
+         }
          {tut_score.tnm animate
             (units kTaskTutorialSeconds)
             (period 0.15)
-            (range 0 2)}})
+            (range 0 2)
+         }
+      }
+   )
    (lesson_running
       {&&
          {< [pulloffs_hit] PULLOFFS_TO_HIT}
-         {< {player0 percent_complete} END_OF_SONG_PERCENT}})
+         {< {player0 percent_complete} END_OF_SONG_PERCENT}
+      }
+   )
    (failed {< [pulloffs_hit] PULLOFFS_TO_HIT})
-   (pulloffs_hit 0)}
+   (pulloffs_hit 0)
+}
 {player_matcher0 add_sink tut_35_callback}
 {beatmatch set_paused FALSE}
 {$task wait {tut_35_callback lesson_running}}
 {track_panel animate_track_in_fast}
 {if {! {tut_35_callback failed}}
-   {$task sleep 1}}
+   {$task sleep 1}
+}
 {game set_paused TRUE}
 {tut_top_text.view set_showing FALSE}
 {cond
    ({tut_35_callback failed}
       {tut_banner.lbl set_text tut_timeout}
       {tut_banner.lbl set_showing TRUE}
-      {$this play_vo timeout_vo})
+      {$this play_vo timeout_vo}
+   )
    (TRUE
       {tut_banner.lbl set_text tut3_5_done}
       {tut_banner.lbl set_showing TRUE}
-      {$this play_vo pulloff_real_done})}
+      {$this play_vo pulloff_real_done}
+   )
+}
 {player_matcher0 remove_sink tut_35_callback}
 {play_sfx bkgd_music}
 {tut_banner.lbl set_text tut3_complete}
@@ -202,7 +225,8 @@ LONG_VO_GAP
 {tut_screen_dim.view animate
    (units kTaskTutorialSeconds)
    (period SCREEN_DIM_SECS)
-   (range 0 30)}
+   (range 0 30)
+}
 {$task sleep 0.5}
 {stop_sfx bkgd_music}
 {play_sfx s19901}

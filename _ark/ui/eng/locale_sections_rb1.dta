@@ -168,7 +168,6 @@
 (postchorus_4 "Post-chorus 4")
 (postchorus_5 "Post-chorus 5")
 
-
 (gtr_solo "Gtr solo")
 (gtr_solo_a "Gtr solo a")
 (gtr_solo_b "Gtr solo b")
@@ -231,24 +230,24 @@
 (gtr_solo_5b "Gtr solo 5b")
 (gtr_solo_5c "Gtr solo 5c")
 (gtr_solo_6 "Gtr solo 6")
-(gtr_solo_7 "Gtr solo 7!")  
+(gtr_solo_7 "Gtr solo 7!")
 (gtr_solo_8 "Gtr solo 8!!")
 (gtr_solo_9 "Gtr solo 9!!!")
 
-(slide_solo_1 "Slide solo 1") 
+(slide_solo_1 "Slide solo 1")
 (slide_solo_2 "Slide solo 2")
 (drum_solo "Drum solo")
 (drum_solo_a "Drum solo a")
 (drum_solo_b "Drum solo b")
 (drum_solo_c "Drum solo c")
-(drum_solo_1 "Drum solo 1")   
+(drum_solo_1 "Drum solo 1")
 (drum_solo_2 "Drum solo 2")
 (drum_solo_3 "Drum solo 3")
 (bass_solo "Bass solo")
 (bass_solo_a "Bass solo a")
 (bass_solo_b "Bass solo b")
 (bass_solo_c "Bass solo c")
-(bass_solo_1 "Bass solo 1")  
+(bass_solo_1 "Bass solo 1")
 (bass_solo_2 "Bass solo 2")
 (bass_solo_3 "Bass solo 3")
 (organ_solo "Organ solo")
@@ -292,10 +291,10 @@
 (wam-bam "Wam-Bam")
 
 (gtr_lead "Gtr lead")
-(gtr_lead_1 "Gtr lead 1")  
+(gtr_lead_1 "Gtr lead 1")
 (gtr_lead_2 "Gtr lead 2")
 (gtr_lead_3 "Gtr lead 3")
-(fast_picking "Fast picking")  
+(fast_picking "Fast picking")
 
 (bridge "Bridge")
 (bridge_a "Bridge a")
@@ -382,16 +381,15 @@
 (vocal_break_2 "Vocal break 2")
 (vocal_break_3 "Vocal break 3")
 
-
 (buildup "Build up")
-(speedup "Speed up") 
+(speedup "Speed up")
 (speedup_a "Speed up a")
 (speedup_b "Speed up b")
 (slow_part "Slow part")
 (slow_part_a "Slow part a")
 (slow_part_b "Slow part b")
-(noise_build "Noise build") 
-(release "Release")     
+(noise_build "Noise build")
+(release "Release")
 
 (melody_1 "Melody 1")
 (melody_2 "Melody 2")
@@ -429,7 +427,7 @@
 (gtr_riff "Gtr riff")
 (bass_riff "Bass riff")
 
-(big_riff_1 "Big riff 1")   
+(big_riff_1 "Big riff 1")
 (big_riff_2 "Big riff 2")
 (bigger_riff "Bigger riff")
 
@@ -438,7 +436,7 @@
 (swing_riff_3 "Swing riff 3")
 (swing_riff_4 "Swing riff 4")
 
-(chunky_riff_1 "Chunk riff 1") 
+(chunky_riff_1 "Chunk riff 1")
 (chunky_riff_2 "Chunk riff 2")
 
 (odd_riff_1 "Odd riff 1")
