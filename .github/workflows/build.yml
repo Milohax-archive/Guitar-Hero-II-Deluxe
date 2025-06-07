@@ -8,7 +8,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -44,7 +47,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -81,7 +87,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -234,7 +243,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -388,7 +400,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -462,7 +477,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -537,7 +555,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -654,7 +675,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -772,7 +796,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
@@ -812,7 +839,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      - name: Setup .NET 6.0 runtime
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: '6.0.x'
       - name: Build ARK
         run: |
           chmod +x dependencies/arkhelper
