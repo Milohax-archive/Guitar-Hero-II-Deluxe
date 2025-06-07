@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -17,7 +17,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH2DX-2.0-PS2
           path: |
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -54,7 +54,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH2DX-2.0-force-all-as-guitar-PS2
           path: |
@@ -80,7 +80,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -233,7 +233,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -371,7 +371,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH2DX-CustomEditon_force_all_as_guitar-PS2-standalone
           path: |
@@ -387,7 +387,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -444,7 +444,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH2DX-2.0-PS2-standalone
           path: |
@@ -461,7 +461,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -519,7 +519,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH2DX-2.0_force_all_as_guitar-PS2-standalone
           path: |
@@ -536,7 +536,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -636,7 +636,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH80SDX-2.0-PS2-standalone
           path: |
@@ -653,7 +653,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -754,7 +754,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH80SDX-2.0_force_all_as_guitar-PS2-standalone
           path: |
@@ -771,7 +771,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -796,7 +796,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH1REDUX-PS2-standalone
           path: |
@@ -811,7 +811,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Build ARK
         run: |
@@ -837,7 +837,7 @@ jobs:
           dependencies/arkhelper dir2ark ./_ark ./GEN -n MAIN -s 4073741823
       
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GH1REDUX_force_all_as_guitar-PS2-standalone
           path: |
