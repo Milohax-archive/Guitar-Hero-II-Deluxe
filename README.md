@@ -117,7 +117,7 @@ Well, if you saw it from Acai's tweet or Moose's tweet, those are a few samples 
 ### Contact
 Guitar Hero II Deluxe was brought to you by some of the folks at MiloHax, dedicated to cracking open Harmonix games and stirring up what's inside. If you'd like to get in touch with us, ask for help, tell us how fantastic the results of our way too many months of hard work are, or get to work modding this game yourself, you can join the Discord at:
 
-https://discord.gg/WWmsQvHSC6
+https://discord.gg/milohax
 
 Enjoy the disc!
 
