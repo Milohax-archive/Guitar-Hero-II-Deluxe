@@ -104,7 +104,7 @@ In March 2021, GenericMadScientist isolated and patched out the timer, killing t
 
 **Q: I've found a bug or crash in GH2DX! What do I do and how can I tell you?**
 
-Tell us in MiloHax (https://discord.gg/WWmsQvHSC6)! We distribute GH2DX through GitHub now, which means we're not bound to specific discs with specific release dates, so we can keep providing fixes should we see a need. Ideally, bring us a screenshot or photo of a stack trace if you can. You can get one of these by redoing what you did to cause the crash using the debug version of the game instead. (Check the startup loader for the debug versions.)
+Tell us in MiloHax (https://discord.gg/milohax)! We distribute GH2DX through GitHub now, which means we're not bound to specific discs with specific release dates, so we can keep providing fixes should we see a need. Ideally, bring us a screenshot or photo of a stack trace if you can. You can get one of these by redoing what you did to cause the crash using the debug version of the game instead. (Check the startup loader for the debug versions.)
 
 **Q: Why didn't you guys add the ability for me to use my Wiitar/set audio delay/[other code-only fixes]?**
 
