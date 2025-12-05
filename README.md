@@ -120,5 +120,4 @@ Guitar Hero II Deluxe was brought to you by some of the folks at MiloHax, dedica
 https://discord.gg/milohax
 
 Enjoy the disc!
-
 - The GH2 Deluxe Team
